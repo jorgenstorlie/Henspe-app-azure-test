@@ -109,6 +109,7 @@
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="InitialCardViewController.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -139,6 +140,14 @@
     <Compile Include="Util\ViewUtil.cs" />
     <Compile Include="..\..\SQLite.Implementation.cs">
       <Link>SQLite.Implementation.cs</Link>
+    </Compile>
+    <Compile Include="InitialViewController.cs" />
+    <Compile Include="InitialViewController.designer.cs">
+      <DependentUpon>InitialViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InitialCardViewController.cs" />
+    <Compile Include="InitialCardViewController.designer.cs">
+      <DependentUpon>InitialCardViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

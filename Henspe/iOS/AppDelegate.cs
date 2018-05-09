@@ -411,9 +411,9 @@ namespace Henspe.iOS
          */
         public void DoSyncIfLocalDataOld(bool isInBackgroundMode)
         {
-            // DOnt sync if not authenticated
-            if (UserUtil.Credentials.IsAuthenticated == false || UserUtil.Credentials.Key == 0)
-                return;
+            // Dont sync if not authenticated
+            //if (UserUtil.credentials.IsAuthenticated == false)
+            //    return;
 
             // Dont sync if sync already in progress
             if (AppDelegate.current.syncInProgress)
@@ -504,7 +504,7 @@ namespace Henspe.iOS
                 return;
             }
 
-            if (UserUtil.Credentials.IsAuthenticated == false)
+			if (UserUtil.credentials.instructionsFinished == false)
             {
                 // Not authenticated
                 SyncInProgress(false);
@@ -577,7 +577,7 @@ namespace Henspe.iOS
             }
             catch (TaskCanceledException e)
             {
-                BugtrackUtil.SendBugtrack("AppDelegate TaskCanceledException", e, "No json in this case", client, version, UserUtil.Credentials.Navn);
+                BugtrackUtil.SendBugtrack("AppDelegate TaskCanceledException", e, "No json in this case", client, version, "Henspe app user");
                 return;
             }
             catch (Exception e)
@@ -593,7 +593,7 @@ namespace Henspe.iOS
                         });
                     }
 
-                    BugtrackUtil.SendBugtrack("AppDelegate error", e, "No json in this case", client, version, UserUtil.Credentials.Navn);
+                    BugtrackUtil.SendBugtrack("AppDelegate error", e, "No json in this case", client, version, "Henspe app user");
                 }
             }
         }
