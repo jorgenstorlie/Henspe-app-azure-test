@@ -30,6 +30,71 @@
   <ItemGroup>
     <Compile Include="MyClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Communication\CallBugtrack.cs" />
+    <Compile Include="Communication\CallDebugInfo.cs" />
+    <Compile Include="Communication\CxHttpClient.cs" />
+    <Compile Include="Communication\ICredentials.cs" />
+    <Compile Include="Const\ModeConst.cs" />
+    <Compile Include="Const\NetworkStateConst.cs" />
+    <Compile Include="Model\BusinessEntityBase.cs" />
+    <Compile Include="Model\IBusinessEntity.cs" />
+    <Compile Include="Model\Dto\BrukerDto.cs" />
+    <Compile Include="Model\Dto\BugtrackResultDto.cs" />
+    <Compile Include="Storage\Repository.cs" />
+    <Compile Include="Storage\SQLite.cs" />
+    <Compile Include="Util\BugtrackUtil.cs" />
+    <Compile Include="Util\ConvertUtil.cs" />
+    <Compile Include="Util\DateUtil.cs" />
+    <Compile Include="Util\FileUtil.cs" />
+    <Compile Include="Util\JsonUtil.cs" />
+    <Compile Include="Util\NumberUtil.cs" />
+    <Compile Include="Util\SessionUtil.cs" />
+    <Compile Include="Util\StringUtil.cs" />
+    <Compile Include="Util\TimerUtil.cs" />
+    <Compile Include="Model\Dto\StructureDto.cs" />
+    <Compile Include="Model\Dto\StructureElementDto.cs" />
+    <Compile Include="Model\Dto\StructureSectionDto.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wpa81\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net45+win8+wpa81\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net45+win8+wpa81\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="ModernHttpClient">
+      <HintPath>..\packages\modernhttpclient.2.4.2\lib\Portable-Net45+WinRT45+WP8+WPA81\ModernHttpClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCL.raw">
+      <HintPath>..\packages\SQLitePCL.raw.0.9.2\lib\portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCL.raw.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCL.batteries">
+      <HintPath>..\packages\SQLitePCL.bundle_green.0.9.2\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCL.batteries.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite-net">
+      <HintPath>..\packages\sqlite-net-pcl.1.1.2\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLite-net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Communication\" />
+    <Folder Include="Const\" />
+    <Folder Include="Model\" />
+    <Folder Include="Model\Dto\" />
+    <Folder Include="Storage\" />
+    <Folder Include="Util\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
 </Project>

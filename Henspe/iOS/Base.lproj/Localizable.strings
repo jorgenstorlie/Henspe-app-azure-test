@@ -1,0 +1,234 @@
+﻿// Alert
+Alert.Title.Error = "En feil oppsto";
+Alert.OK = "OK";
+Alert.Yes = "Ja";
+Alert.No = "Nei";
+Alert.NewVersion.Title = "Ny versjon";
+Alert.NewVersion.Message1 = "En ny versjon";
+Alert.NewVersion.Message2 = "av eSTROKE appen er nyere enn den du bruker";
+Alert.NewVersion.Message3 = "Ønsker du å oppdatere til den nye versjonen?";
+Alert.NewVersion.Message4 = "Lukk denne appen og åpne den nye versjonen av eSTROKE når den nye versjonen er ferdig installert.";
+
+// Sync
+Menu.NavigationControl.Sync = "Synkroniser";
+Menu.NavigationControl.Syncing = "Synkroniserer";
+Menu.NavigationControl.WifiSyncing = "WiFi Synk";
+Menu.NavigationControl.MobileSyncing = "Mobil Synk";
+Menu.NavigationControl.ServerSilent = "Server er stille";
+
+// Errors
+Error.NoResponse = "Ingen respons fra serveren";
+Error.InvalidResultFromServer = "Server svarte uventet.";
+
+// Operations
+Operation.Cancel = "Avbryt";
+Operation.Choose = "Velg";
+
+// Spinner
+Spinner.PleaseWait = "Vennligst vent";
+
+// Settings
+Settings.heading = "Innstillinger";
+Settings.text = "Slett alle dataene ved neste start";
+
+// AppDelegate
+AppDelegate.Alert.DeleteAll.Title = "Slett alle data";
+AppDelegate.Alert.DeleteAll.Message = "Slett alle data ble satt i innstillingene. Er du sikker på at du ønsker å slette alle datene i denne appen?";
+
+// Navigation menu items
+Navigation.Menuitem.Back = "Tilbake";
+Navigation.Menuitem.Hjem = "Hjem";
+
+// Register
+Register.TextInput.MyPhonenumber = "Mitt mobilnummer";
+Register.Button.GetPinCode = "Motta kode";
+Register.Info = "Du må være registrert for å kunne bruke denne appen.";
+Register.RegisterError = "En feil oppsto under registrering.";
+Register.LoginError = "En feil oppsto under innlogging. Vennlist kontakt systemadministrator";
+
+// Enter Pin
+PinEnter.TextInput.ReceivedPin = "Mottatt kode";
+PinEnter.Button.Login = "Login";
+PinEnter.Info = "Legg inn koden du mottok på SMS. Hvis du ikke mottar en SMS med en kode innen et minutt, vennligst kontakt systemadministrator.";
+PinEnter.Link = "Send epost til support.";
+PinEnter.Spinner.WrongPin = "Feil kode.";
+
+// Main menu
+MainMenu.Button = "Ny undersøkelse";
+MainMenu.Barbutton = "Profil";
+
+// Examination Step
+ExaminationStep.WatchVideo = "Se video";
+ExaminationStep.Next = "NESTE";
+ExaminationStep.Right = "Høyre";
+ExaminationStep.Left = "Venstre";
+
+// IKTUS
+Iktus.Header = "IKTUS";
+Iktus.TopHeader = "Tidspunkt for symptomdebut (IKTUS)";
+Iktus.BottomHeader = "Om ukjent, sist sett uten symptom";
+Iktus.Next = "NESTE";
+
+// Medicine
+Medicine.Header = "Medikamenter";
+Medicine.InfoSingle = "Når ble medikamentet sist konsumert?";
+Medicine.InfoMultiple = "Når ble medikamentetene sist konsumert?";
+Medicine.Next = "NESTE";
+
+// 6 Structure 1a
+Structure.1a.Name = "Bevissthet"; 
+Structure.1a.Description = "Kontroller bevissthet";
+Structure.1a.AlternateDescription = "Lett stimulering betyr tilsnakk eller forsiktig berøring. Kraftigere/gjentatt stimulering betyr kraftig berøring eller smertestimulering.";
+Structure.1a.0.Description = "Våken";
+Structure.1a.1.Description = "Døsig, reagerer ved lett stimulering";
+Structure.1a.2.Description = "Døsig, reagerer først ved kraftigere/gjentatt stimulering";
+Structure.1a.3.Description = "Reagerer ikke, eller bare med ikke-målrettet bevegelse (komatøs)";
+
+// Structure 1ba
+Structure.1ba.Name = "Orientering - Måned"; 
+Structure.1ba.Description = "Spør om måned";
+Structure.1ba.AlternateDescription = "Spør om måneder. Bruk det første svaret. Svaret må være helt korrekt. Pasienter med alvorlig dysartri skårer 1. Afatiske/komatøse pasienter skårer 2.";
+Structure.1ba.0.Description = "Svarer riktig måned";
+Structure.1ba.1.Description = "Svarer ikke riktig på spørsmålet (komatøs)";
+
+// Structure 1bb
+Structure.1bb.Name = "Orientering - Alder"; 
+Structure.1bb.Description = "Spør om alder";
+Structure.1bb.AlternateDescription = "Spør om alder. Bruk det første svaret. Svaret må være helt korrekt. Pasienter med alvorlig dysartri skårer 1. Afatiske/komatøse pasienter skårer 2.";
+Structure.1bb.0.Description = "Svarer riktig alder";
+Structure.1bb.1.Description = "Svarer ikke riktig på spørsmålet (komatøs)";
+
+// Structure 9
+Structure.9.Name = "Språk og tale";
+Structure.9.Description = "(I.finner ikke ord, II.bruker feil ord, III.forstår ikke/meningsløs tale)";
+Structure.9.AlternateDescription = "Pasienten skal formelt skåres etter standardiserte bilder og (engelske) setninger. I praksis testes språket ved å vurdere spontan tale og taleforståelse. Leseforståelse testes ved å skrive med store bokstaver ‘lukk øynene’ på et papir og be pasienten gjøre hva som står på lappen. Benevning testes ved at pasienten sier navnet på forskjellige kjente gjenstander. Samlet språkvurdering går på om samtale er ‘mulig’ eller ‘svært vanskelig eller umulig’. Komatøse pasienter skårer 3 ";
+Structure.9.0.Description = "Normalt";
+Structure.9.1.Description = "Samtale mulig, men har problem med i, ii eller iii";
+Structure.9.2.Description = "Samtale svært vanskelig/umulig, pga i,ii eller iii";
+Structure.9.3.Description = "Ikke språk/snakker ikke (komatøs)";
+
+// Structure 10
+Structure.10.Name = "Snøvlete/utydelig tale"; 
+Structure.10.Description = "Pasienten skal formelt skåres etter standardiserte bilder og (engelske) setninger. I praksis testes tale gjennom samtale med pasienten. Pasienter som ikke har språk, som ikke kan forstås på en meningsfylt måte, eller er komatøs, skårer 2. Alle andre lettere grader av dysartri skårer 1. ";
+Structure.10.AlternateDescription = "";
+Structure.10.0.Description = "Normal";
+Structure.10.1.Description = "Lett-moderat snøvlete tale";
+Structure.10.2.Description = "Svært snøvlete tale (komatøs)";
+
+// Structure 1c
+Structure.1c.Name = "Respons på kommando"; 
+Structure.1c.Description = "Be pasienten lukke øyne + knyte hånd";
+Structure.1c.AlternateDescription = "Be pasienten åpne øynene og så lukke øynene; deretter knyte hånden og så åpne hånden. Første kommando brukes for å få øyne/hånd i standardisert testposisjon. Dersom pasienten gjør et entydig forsøk på å følge kommando, skåres dette som utført. Hvis pasienten ikke reagerer på kommando, kan ønsket respons demonstreres av undersøkeren.";
+Structure.1c.0.Description = "Utfører begge kommandoer korrekt";
+Structure.1c.1a.Description = "Utfører kun lukking av øyne korrekt";
+Structure.1c.1b.Description = "Utfører kun knytting av hånd korrekt";
+Structure.1c.2.Description = "Utfører ingen korrekt (komatøs)";
+
+// Structure N1
+Structure.N1.Name = "Lyse"; 
+Structure.N1.Description = "Lyse pasenten i øynene";
+Structure.N1.AlternateDescription = "Lys pasienten i et øye og fjern lykten for å se hvordan pupillen reagerer. Gjenta så med det andre øyet.";
+Structure.N1.0a.Description = "Normal lysreaksjon";
+Structure.N1.0b.Description = "Dilatert. Forstørret. Like store";
+Structure.N1.0c.Description = "Små lysstive";
+Structure.N1.0d.Description = "Ulik størrelse";
+
+// Structure 2
+Structure.2.Name = "Blikkbevegelse";
+Structure.2.Description = "Bevege fingre i ytre deler av synsfeltet på begge sider";
+Structure.2.AlternateDescription = "Test horisontale øyebevegelser, voluntært eller reflektorisk (oculocephal refleks). Unormale funn i ett (isolert øyemuskelparese) eller begge øyne skårer 1. En fiksert blikkdreining til siden (som ikke kan overvinnes ved oculocephal manøver) skårer 2. Kalorisk testing utføres ikke.";
+Structure.2.0.Description = "Normal";
+Structure.2.1a.Description = "Delvis innskrenket blikkbevegelse på ett øye";
+Structure.2.1b.Description = "Delvis innskrenket blikkbevegelse på begge øyne";
+Structure.2.2.Description = "Fiksert blikkposisjon (øynene står hele tiden i samme posisjon)";
+
+// Structure 3
+Structure.3.Name = "Synsfelt"; 
+Structure.3.Description = "Bevege fingre i ytre deler av synsfeltet på begge sider";
+Structure.3.AlternateDescription = "Test øvre og nedre laterale synsfelt ved hjelp av fingerbevegelse, fingertelling eller plutselige (truende) bevegelser inn fra siden i synsfeltet. Hvis pasienten ser mot den siden hvor fingrene beveges, skåret dette som 0 = normal. En entydig asymmetri i funnene skårer 1. Blindhet skårer 3. Test bilateralt simultan stimulering av syn – hvis pasinten har ”neglect”, skåres 1 og resultatet benyttes også til å besvare punkt 11.";
+Structure.3.0.Description = "Normalt";
+Structure.3.1.Description = "Ser delvis ikke til den ene siden";
+Structure.3.2.Description = "Ser ikke noe til den ene siden";
+Structure.3.3.Description = "Pasienten ser ikke på begge sider/ blind begge øyne (komatøs)";
+
+// Structure 4
+Structure.4.Name = "Ansikt"; 
+Structure.4.Description = "Vise tenner, knipe igjen øynene, løfte øyenbryn";
+Structure.4.AlternateDescription = "Instruer eller demonstrer å vise tenner, løfte øyenbrynene og lukke øynene. Hos stuporøse pasienter eller pasienter som ikke forstår instruksjonene, benyttes reaksjon/grimasering på smertestimuli som grunnlag for scoring. Komatøse pasienter skårer 3.";
+Structure.4.0.Description = "Normal";
+Structure.4.1.Description = "Mindre tydelig nese-munnvikfure en side, asymmetri ved smil";
+Structure.4.2.Description = "Betydelig lammelse i nedre ansiktshalvdel (munn og kinn en side)";
+Structure.4.3.Description = "Lammelse i halve ansiktet (både panne, øye, munn en side)(koma)";
+
+// Structure 5
+Structure.5.Name = "Kraft i arm"; 
+Structure.5.Description = "(Holde venstre/høyre arm utstrakt 45\U00b0 i 10 sekunder)";
+Structure.5.AlternateDescription = "Test hver arm for seg, først den friske armen. Hjelp pasienten til å holde armen utstrakt i 45\U00b0 vinkel med håndflaten ned, slipp armen og skår bevegelsen. Ved brudd/amputasjon skåres 0.";
+Structure.5.0.Description = "Normal";
+Structure.5.1.Description = "Drifter til lavere posisjon";
+Structure.5.2.Description = "Bevegelse mot tyngdekraften, men drifter helt ned";
+Structure.5.3.Description = "Sees muskelbevegelse, men løfter ikke opp fra underlaget";
+Structure.5.4.Description = "Ingen bevegelse (komatøs)";
+
+// Structure 6
+Structure.6.Name = "Kraft i ben"; 
+Structure.6.Description = "(Holde venstre/høyre benet utstrakt 30\U00b0 i 5 sekunder)";
+Structure.6.AlternateDescription = "Test hvert ben for seg, først det friske benet. Hjelp pasienten til å holde benet utstrakt i 30\U00b0 vinkel, slipp benet og skår bevegelsen. Ved brudd/amputasjon skåres 0.";
+Structure.6.0.Description = "Normal";
+Structure.6.1.Description = "Drifter til lavere posisjon";
+Structure.6.2.Description = "Bevegelse mot tyngdekraften, men drifter helt ned";
+Structure.6.3.Description = "Muskelbevegelser, men løfter ikke opp fra underlaget";
+Structure.6.4.Description = "Ingen bevegelse (komatøs)";
+
+// Structure 8a
+Structure.8a.Name = "Hudfølelse - arm"; 
+Structure.8a.Description = "(Følelse for berøring eller stikk i arm)";
+Structure.8a.AlternateDescription = "Test sensibilitet for stikk i arm (tannstikker). Test overarmer (men ikke hender på grunn av mulig polynevropati). Markert sensibilitetstap skåres kun når det er entydig til stede. Stuporøse og afatiske pasienter skåres vanligvis 0 eller 1. Pasienter med hjernestammeinfarkt og bilateralt sensibilitetstap, eller komatøse pasienter skåres 1.";
+Structure.8a.0.Description = "Normal";
+Structure.8a.1.Description = "Nedsatt følelse i arm (komatøs)";
+
+// Structure 8b
+Structure.8b.Name = "Hudfølelse - ben"; 
+Structure.8b.Description = "(Følelse for berøring eller stikk i ben)";
+Structure.8b.AlternateDescription = "Test sensibilitet for stikk i ben (tannstikker). Test lår (men ikke føtter på grunn av mulig polynevropati). Markert sensibilitetstap skåres kun når det er entydig til stede. Stuporøse og afatiske pasienter skåres vanligvis 0 eller 1. Pasienter med hjernestammeinfarkt og bilateralt sensibilitetstap, eller komatøse pasienter skåres 1.";
+Structure.8b.0.Description = "Normal";
+Structure.8b.1.Description = "Nedsatt følelse i ben (komatøs)";
+
+// Structure 7a
+Structure.7a.Name = "Ataksi / hakkete bevegelse - arm"; 
+Structure.7a.Description = "(Finger-nese-test)";
+Structure.7a.AlternateDescription = "Test finger – nese prøve på begge sider. Ataksi skåres kun dersom den er entydig til stede og mer uttalt enn den usikkerheten som følger av pasientens pareser. Ved paralyse eller hos pasienter som ikke klarer å følge instruksjonen, skåres 0 = normal.";
+Structure.7a.0.Description = "Normal (hvis ikke overbevisende hakkete/ataktisk) (komatøs)";
+Structure.7a.1.Description = "Hakkete bevegelse/ataksi i arm";
+
+// Structure 7b
+Structure.7b.Name = "Ataksi / hakkete bevegelse - ben"; 
+Structure.7b.Description = "(Hæl-kne-test)";
+Structure.7b.AlternateDescription = "Test hæl – kne prøve på begge sider. Ataksi skåres kun dersom den er entydig til stede og mer uttalt enn den usikkerheten som følger av pasientens pareser. Ved paralyse eller hos pasiente som ikke klarer å følge instruksjonen,  i 0 = normal.";
+Structure.7b.0.Description = "Normal (hvis ikke overbevisende hakkete/ataktisk) (komatøs)";
+Structure.7b.1.Description = "Hakkete bevegelse/ataksi i ben";
+
+// Structure 11a
+Structure.11a.Name = "Oppmerksomhet/Neglekt - syn"; 
+Structure.11a.Description = "(Teste syn høyre/venstre side samtidig)";
+Structure.11a.AlternateDescription = "Se punktene 3 og 8. Hvis pasienten er afatisk, men har oppmerksomhet mot begge sider, skåres 0 = normal. Pasienter som entydig neglisjerer halvdelen av rommet (selv om de ikke har ekstinksjon ved visuell/ sensorisk testing) skåres 1. Komatøse pasienter skåres 1.";
+Structure.11a.0.Description = "Normal";
+Structure.11a.1.Description = "Nedsatt syn til en side";
+
+// Structure 11b
+Structure.11b.Name = "Oppmerksomhet/Neglekt - følelse"; 
+Structure.11b.Description = "(Teste følelse høyre/venstre side samtidig)";
+Structure.11b.AlternateDescription = "Se punktene 3 og 8. Hvis pasienten er afatisk skåres 0 = normal. Pasienter som entydig neglisjerer halvdelen av rommet selv om de ikke har ekstinksjon ved sensorisk testing) skåres 1. Komatøse pasienter skåres 1.";
+Structure.11b.0.Description = "Normal";
+Structure.11b.1.Description = "Nedsatt følelse på en side";
+
+// State
+State.Header = "Tilstand";
+State.BloodPressure = "Blodtrykk";
+State.BloodSugar = "Blodsukker";
+State.Temperature = "Temperatur";
+State.Pulse = "Puls";
+State.Mmoll = "mmol/l";
+State.Degrees = "\U00b0C";
+State.PerMin = "/ min";
+State.Next = "NESTE";
