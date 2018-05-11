@@ -100,125 +100,40 @@ namespace Henspe.iOS
             // Structure that all will be added to
             structure = new StructureDto();
 
-            // 1a - Bevissthet
-            StructureSectionDto structure1a = structure.AddStructureSection(StepType.schemeStep, "1a", Foundation.NSBundle.MainBundle.LocalizedString("Structure.1a.Name", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.1a.Description", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.1a.AlternateDescription", null), "video1a.mp4");
-            structure1a.AddStructureElement(StructureElementDto.ElementType.Single, "0", 0, "Bilde 6-0.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.1a.0.Description", null), null);
-            structure1a.AddStructureElement(StructureElementDto.ElementType.Single, "1", 1, "Bilde 6-1.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.1a.1.Description", null), null);
-            structure1a.AddStructureElement(StructureElementDto.ElementType.Single, "2", 2, "Bilde 6-2.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.1a.2.Description", null), null);
-            structure1a.AddStructureElement(StructureElementDto.ElementType.Single, "3", 3, "Bilde 6-3.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.1a.3.Description", null), null);
+            // Hendelse
+			StructureSectionDto structureHendelse = structure.AddStructureSection(Foundation.NSBundle.MainBundle.LocalizedString("Structure.Hendelse.Header", null), "ic_h.png");
+			structureHendelse.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Hendelse.Trafikk", null), "ic_h_trafikk.png");
+			structureHendelse.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Hendelse.Brann", null), "ic_h_brann.png");
 
-            // Iktus
-            StructureSectionDto iktus = structure.AddStructureSection(StepType.iktus, null, null, null, null, null);
+			// Eksakt posisjon
+			StructureSectionDto structureEksaktPosisjon = structure.AddStructureSection(Foundation.NSBundle.MainBundle.LocalizedString("Structure.EksaktPosisjon.Header", null), "ic_e.png");
+			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Position, Foundation.NSBundle.MainBundle.LocalizedString("Structure.EksaktPosisjon.Posisjon", null), "ic_e_posisjon.png");
+			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Address, Foundation.NSBundle.MainBundle.LocalizedString("Structure.EksaktPosisjon.Adresse", null), "ic_e_adresse.png");
+			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.EksaktPosisjon.Oppmotested", null), "ic_e_oppmotested.png");
+			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.EksaktPosisjon.Ankomst", null), "ic_e_ankomst.png");
+			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.EksaktPosisjon.Avreise", null), "ic_e_avreise.png");
 
-            // Medicines
-            StructureSectionDto medicines = structure.AddStructureSection(StepType.medicines, null, null, null, null, null);
+            // Nivå
+			StructureSectionDto structureNiva = structure.AddStructureSection(Foundation.NSBundle.MainBundle.LocalizedString("Structure.Niva.Header", null), "ic_n.png");
+			structureNiva.AddStructureElement(StructureElementDto.ElementType.Position, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Niva.Type", null), "ic_n_begrenset.png");
 
-            // 1ba - Orientering Måned
-            StructureSectionDto structure1ba = structure.AddStructureSection(StepType.schemeStep, "1ba", Foundation.NSBundle.MainBundle.LocalizedString("Structure.1ba.Name", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.1ba.Description", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.1ba.AlternateDescription", null), "video1ba.mp4");
-            structure1ba.AddStructureElement(StructureElementDto.ElementType.Single, "0", 0, "Bilde 9-0.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.1ba.0.Description", null), null);
-            structure1ba.AddStructureElement(StructureElementDto.ElementType.Single, "1", 1, "Bilde 9-1.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.1ba.1.Description", null), null);
+			// Sikkerhet
+			StructureSectionDto structureSikkerhet = structure.AddStructureSection(Foundation.NSBundle.MainBundle.LocalizedString("Structure.Sikkerhet.Header", null), "ic_s.png");
+			structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Sikkerhet.Farer", null), "ic_s_farer.png");
+			structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Sikkerhet.Brann", null), "ic_s_brann.png");
+			structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Sikkerhet.Sikkerhet", null), "ic_s_sikkerhet.png");
 
-            // 1bb - Orientering Alder
-            StructureSectionDto structure1bb = structure.AddStructureSection(StepType.schemeStep, "1bb", Foundation.NSBundle.MainBundle.LocalizedString("Structure.1bb.Name", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.1bb.Description", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.1bb.AlternateDescription", null), "video1bb.mp4");
-            structure1bb.AddStructureElement(StructureElementDto.ElementType.Single, "0", 0, "Bilde 10-0.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.1bb.0.Description", null), null);
-            structure1bb.AddStructureElement(StructureElementDto.ElementType.Single, "1", 1, "Bilde 10-1.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.1bb.1.Description", null), null);
+            // Pasienter
+			StructureSectionDto structurePasienter = structure.AddStructureSection(Foundation.NSBundle.MainBundle.LocalizedString("Structure.Pasienter.Header", null), "ic_p.png");
+			structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Pasienter.Antall", null), "ic_p_pasienter.png");
+			structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Pasienter.Type", null), "ic_p_type.png");
+			structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Pasienter.Omfang", null), "ic_p_skademekanikk.png");
 
-            // 9 - Språk og tale
-            StructureSectionDto structure9 = structure.AddStructureSection(StepType.schemeStep, "9", Foundation.NSBundle.MainBundle.LocalizedString("Structure.9.Name", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.9.Description", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.9.AlternateDescription", null), "video9.mp4");
-            structure9.AddStructureElement(StructureElementDto.ElementType.Single, "0", 0, "Bilde 11-0.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.9.0.Description", null), null);
-            structure9.AddStructureElement(StructureElementDto.ElementType.Single, "1", 1, "Bilde 11-1.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.9.1.Description", null), null);
-            structure9.AddStructureElement(StructureElementDto.ElementType.Single, "2", 2, "Bilde 11-2.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.9.2.Description", null), null);
-            structure9.AddStructureElement(StructureElementDto.ElementType.Single, "3", 3, "Bilde 11-3.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.9.3.Description", null), null);
-
-            // 10 - Snøvlete/utydelig tale
-            StructureSectionDto structure10 = structure.AddStructureSection(StepType.schemeStep, "10", Foundation.NSBundle.MainBundle.LocalizedString("Structure.10.Name", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.10.Description", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.10.AlternateDescription", null), "video10.mp4");
-            structure10.AddStructureElement(StructureElementDto.ElementType.Single, "0", 0, "Bilde 12-0.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.10.0.Description", null), null);
-            structure10.AddStructureElement(StructureElementDto.ElementType.Single, "1", 1, "Bilde 12-1.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.10.1.Description", null), null);
-            structure10.AddStructureElement(StructureElementDto.ElementType.Single, "2", 2, "Bilde 12-2.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.10.2.Description", null), null);
-
-            // 1c - Respons på kommando
-            StructureSectionDto structure1c = structure.AddStructureSection(StepType.schemeStep, "1c", Foundation.NSBundle.MainBundle.LocalizedString("Structure.1c.Name", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.1c.Description", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.1c.AlternateDescription", null), "video1c.mp4");
-            structure1c.AddStructureElement(StructureElementDto.ElementType.Single, "0", 0, "Bilde 13-0.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.1c.0.Description", null), null);
-            structure1c.AddStructureElement(StructureElementDto.ElementType.Single, "1a", 1, "Bilde 13-1a.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.1c.1a.Description", null), null);
-            structure1c.AddStructureElement(StructureElementDto.ElementType.Single, "1b", 1, "Bilde 13-1b.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.1c.1b.Description", null), null);
-            structure1c.AddStructureElement(StructureElementDto.ElementType.Single, "2", 2, "Bilde 13-2.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.1c.2.Description", null), null);
-
-            // N1 - Lyse
-            StructureSectionDto structureN1 = structure.AddStructureSection(StepType.schemeStep, "N1", Foundation.NSBundle.MainBundle.LocalizedString("Structure.N1.Name", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.N1.Description", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.N1.AlternateDescription", null), "videoN1.mp4");
-            structureN1.AddStructureElement(StructureElementDto.ElementType.Single, "0a", 0, "Bilde 14-0a.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.N1.0a.Description", null), null);
-            structureN1.AddStructureElement(StructureElementDto.ElementType.Single, "0b", 0, "Bilde 14-0b.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.N1.0b.Description", null), null);
-            structureN1.AddStructureElement(StructureElementDto.ElementType.Single, "0c", 0, "Bilde 14-0c.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.N1.0c.Description", null), null);
-            structureN1.AddStructureElement(StructureElementDto.ElementType.Single, "0d", 0, "Bilde 14-0d.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.N1.0d.Description", null), null);
-
-            // 2 - Blikkbevegelse
-            StructureSectionDto structure2 = structure.AddStructureSection(StepType.schemeStep, "2", Foundation.NSBundle.MainBundle.LocalizedString("Structure.2.Name", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.2.Description", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.2.AlternateDescription", null), "video2.mp4");
-            structure2.AddStructureElement(StructureElementDto.ElementType.Single, "0", 0, "Bilde 15-0.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.2.0.Description", null), null);
-            structure2.AddStructureElement(StructureElementDto.ElementType.LeftRight, "1a", 1, "Bilde 15-1ar.png", "Bilde 15-1al.png", Foundation.NSBundle.MainBundle.LocalizedString("Structure.2.1a.Description", null), null);
-            structure2.AddStructureElement(StructureElementDto.ElementType.Single, "1b", 1, "Bilde 15-1b.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.2.1b.Description", null), null);
-            structure2.AddStructureElement(StructureElementDto.ElementType.Single, "2", 2, "Bilde 15-2.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.2.2.Description", null), null);
-
-            // 3 - Synsfelt
-            StructureSectionDto structure3 = structure.AddStructureSection(StepType.schemeStep, "3", Foundation.NSBundle.MainBundle.LocalizedString("Structure.3.Name", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.3.Description", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.3.AlternateDescription", null), "video3.mp4");
-            structure3.AddStructureElement(StructureElementDto.ElementType.Single, "0", 0, "Bilde 16-0.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.3.0.Description", null), null);
-            structure3.AddStructureElement(StructureElementDto.ElementType.LeftRight, "1", 1, "Bilde 16-1r.png", "Bilde 16-1l.png", Foundation.NSBundle.MainBundle.LocalizedString("Structure.3.1.Description", null), null);
-            structure3.AddStructureElement(StructureElementDto.ElementType.LeftRight, "2", 2, "Bilde 16-2r.png", "Bilde 16-2l.png", Foundation.NSBundle.MainBundle.LocalizedString("Structure.3.2.Description", null), null);
-            structure3.AddStructureElement(StructureElementDto.ElementType.Single, "3", 3, "Bilde 16-3.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.3.3.Description", null), null);
-
-            // 4 - Ansikt
-            StructureSectionDto structure4 = structure.AddStructureSection(StepType.schemeStep, "4", Foundation.NSBundle.MainBundle.LocalizedString("Structure.4.Name", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.4.Description", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.4.AlternateDescription", null), "video4.mp4");
-            structure4.AddStructureElement(StructureElementDto.ElementType.Single, "0", 0, "Bilde 17-0.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.4.0.Description", null), null);
-            structure4.AddStructureElement(StructureElementDto.ElementType.LeftRight, "1", 1, "Bilde 17-1r.png", "Bilde 17-1l.png", Foundation.NSBundle.MainBundle.LocalizedString("Structure.4.1.Description", null), null);
-            structure4.AddStructureElement(StructureElementDto.ElementType.LeftRight, "2", 2, "Bilde 17-2r.png", "Bilde 17-2l.png", Foundation.NSBundle.MainBundle.LocalizedString("Structure.4.2.Description", null), null);
-            structure4.AddStructureElement(StructureElementDto.ElementType.LeftRight, "3", 3, "Bilde 17-3r.png", "Bilde 17-3l.png", Foundation.NSBundle.MainBundle.LocalizedString("Structure.4.3.Description", null), null);
-
-            // 5 - Kraft i arm
-            StructureSectionDto structure5 = structure.AddStructureSection(StepType.schemeStep, "5", Foundation.NSBundle.MainBundle.LocalizedString("Structure.5.Name", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.5.Description", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.5.AlternateDescription", null), "video5.mp4");
-            structure5.AddStructureElement(StructureElementDto.ElementType.LeftRight, "0", 0, "Bilde 18-0r.png", "Bilde 18-0l.png", Foundation.NSBundle.MainBundle.LocalizedString("Structure.5.0.Description", null), null);
-            structure5.AddStructureElement(StructureElementDto.ElementType.LeftRight, "1", 1, "Bilde 18-1r.png", "Bilde 18-1l.png", Foundation.NSBundle.MainBundle.LocalizedString("Structure.5.1.Description", null), null);
-            structure5.AddStructureElement(StructureElementDto.ElementType.LeftRight, "2", 2, "Bilde 18-2r.png", "Bilde 18-2l.png", Foundation.NSBundle.MainBundle.LocalizedString("Structure.5.2.Description", null), null);
-            structure5.AddStructureElement(StructureElementDto.ElementType.LeftRight, "3", 3, "Bilde 18-3r.png", "Bilde 18-3l.png", Foundation.NSBundle.MainBundle.LocalizedString("Structure.5.3.Description", null), null);
-            structure5.AddStructureElement(StructureElementDto.ElementType.Single, "4", 4, "Bilde 18-4.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.5.4.Description", null), null);
-
-            // 6 - Kraft i ben
-            StructureSectionDto structure6 = structure.AddStructureSection(StepType.schemeStep, "6", Foundation.NSBundle.MainBundle.LocalizedString("Structure.6.Name", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.6.Description", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.6.AlternateDescription", null), "video6.mp4");
-            structure6.AddStructureElement(StructureElementDto.ElementType.LeftRight, "0", 0, "Bilde 19-0r.png", "Bilde 19-0l.png", Foundation.NSBundle.MainBundle.LocalizedString("Structure.6.0.Description", null), null);
-            structure6.AddStructureElement(StructureElementDto.ElementType.LeftRight, "1", 1, "Bilde 19-1r.png", "Bilde 19-1l.png", Foundation.NSBundle.MainBundle.LocalizedString("Structure.6.1.Description", null), null);
-            structure6.AddStructureElement(StructureElementDto.ElementType.LeftRight, "2", 2, "Bilde 19-2r.png", "Bilde 19-2l.png", Foundation.NSBundle.MainBundle.LocalizedString("Structure.6.2.Description", null), null);
-            structure6.AddStructureElement(StructureElementDto.ElementType.LeftRight, "3", 3, "Bilde 19-3r.png", "Bilde 19-3l.png", Foundation.NSBundle.MainBundle.LocalizedString("Structure.6.3.Description", null), null);
-            structure6.AddStructureElement(StructureElementDto.ElementType.Single, "4", 4, "Bilde 19-4.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.6.4.Description", null), null);
-
-            // 8a - Hudfølelse arm
-            StructureSectionDto structure8a = structure.AddStructureSection(StepType.schemeStep, "8a", Foundation.NSBundle.MainBundle.LocalizedString("Structure.8a.Name", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.8a.Description", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.8a.AlternateDescription", null), "video8a.mp4");
-            structure8a.AddStructureElement(StructureElementDto.ElementType.Single, "0", 0, "Bilde 20-0.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.8a.0.Description", null), null);
-            structure8a.AddStructureElement(StructureElementDto.ElementType.Single, "1", 1, "Bilde 20-1.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.8a.1.Description", null), null);
-
-            // 8b - Hudfølelse ben
-            StructureSectionDto structure8b = structure.AddStructureSection(StepType.schemeStep, "8b", Foundation.NSBundle.MainBundle.LocalizedString("Structure.8b.Name", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.8b.Description", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.8b.AlternateDescription", null), "video8b.mp4");
-            structure8b.AddStructureElement(StructureElementDto.ElementType.Single, "0", 0, "Bilde 21-0.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.8b.0.Description", null), null);
-            structure8b.AddStructureElement(StructureElementDto.ElementType.Single, "1", 1, "Bilde 21-1.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.8b.1.Description", null), null);
-
-            // 7a - Ataksi / hakkete bevegelse - arm
-            StructureSectionDto structure7a = structure.AddStructureSection(StepType.schemeStep, "7a", Foundation.NSBundle.MainBundle.LocalizedString("Structure.7a.Name", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.7a.Description", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.7a.AlternateDescription", null), "video7a.mp4");
-            structure7a.AddStructureElement(StructureElementDto.ElementType.Single, "0", 0, "Bilde 22-0.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.7a.0.Description", null), null);
-            structure7a.AddStructureElement(StructureElementDto.ElementType.Single, "1", 1, "Bilde 22-1.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.7a.1.Description", null), null);
-
-            // 7b - Ataksi / hakkete bevegelse - ben
-            StructureSectionDto structure7b = structure.AddStructureSection(StepType.schemeStep, "7b", Foundation.NSBundle.MainBundle.LocalizedString("Structure.7b.Name", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.7b.Description", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.7b.AlternateDescription", null), "video7b.mp4");
-            structure7b.AddStructureElement(StructureElementDto.ElementType.Single, "0", 0, "Bilde 23-0.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.7b.0.Description", null), null);
-            structure7b.AddStructureElement(StructureElementDto.ElementType.Single, "1", 1, "Bilde 23-1.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.7b.1.Description", null), null);
-
-            // 11a - Oppmerksomhet/Neglekt - syn
-            StructureSectionDto structure11a = structure.AddStructureSection(StepType.schemeStep, "11a", Foundation.NSBundle.MainBundle.LocalizedString("Structure.11a.Name", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.11a.Description", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.11a.AlternateDescription", null), "video11a.mp4");
-            structure11a.AddStructureElement(StructureElementDto.ElementType.Single, "0", 0, "Bilde 24-0.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.11a.0.Description", null), null);
-            structure11a.AddStructureElement(StructureElementDto.ElementType.Single, "1", 1, "Bilde 24-1.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.11a.1.Description", null), null);
-
-            // 11b - Oppmerksomhet/Neglekt - følelse
-            StructureSectionDto structure11b = structure.AddStructureSection(StepType.schemeStep, "11b", Foundation.NSBundle.MainBundle.LocalizedString("Structure.11b.Name", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.11b.Description", null), Foundation.NSBundle.MainBundle.LocalizedString("Structure.11b.AlternateDescription", null), "video11b.mp4");
-            structure11b.AddStructureElement(StructureElementDto.ElementType.Single, "0", 0, "Bilde 25-0.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.11b.0.Description", null), null);
-            structure11b.AddStructureElement(StructureElementDto.ElementType.Single, "1", 1, "Bilde 25-1.png", null, Foundation.NSBundle.MainBundle.LocalizedString("Structure.11b.1.Description", null), null);
-
-            // Tilstand
-            StructureSectionDto tilstand = structure.AddStructureSection(StepType.state, null, null, null, null, null);
+            // Evakuering
+			StructureSectionDto structureEvakuering = structure.AddStructureSection(Foundation.NSBundle.MainBundle.LocalizedString("Structure.Evakuering.Header", null), "ic_e.png");
+			structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Evakuering.Flaskehalser", null), "ic_e_flaskehalser.png");
+			structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Evakuering.Kjeder", null), "ic_e_evakuering.png");
+			structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Evakuering.Rett", null), "ic_e_rett.png");
         }
 
         private void GetVersion()

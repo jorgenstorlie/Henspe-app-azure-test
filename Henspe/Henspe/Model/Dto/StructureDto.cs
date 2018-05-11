@@ -13,14 +13,15 @@ namespace Henspe.Core.Model.Dto
             structureSectionList = new List<StructureSectionDto>();
         }
 
-        public StructureSectionDto AddStructureSection(StructureSectionDto.StepType stepType, string id, string name, string description, string alternateDescription, string video)
+		public StructureSectionDto AddStructureSection(string description, string image)
         {
-            StructureSectionDto structureSectionDto = new StructureSectionDto(stepType, id, name, description, alternateDescription, video);
+			StructureSectionDto structureSectionDto = new StructureSectionDto(description, image);
             structureSectionDto.structureElementList = new List<StructureElementDto>();
             structureSectionList.Add(structureSectionDto);
             return structureSectionDto;
         }
 
+        /*
         public StructureSectionDto GetStructureSectionFromId(string id)
         {
             StructureSectionDto result = null;
@@ -36,6 +37,7 @@ namespace Henspe.Core.Model.Dto
 
             return result;
         }
+        */
 
         public StructureSectionDto GetStructureSection(int index)
         {
