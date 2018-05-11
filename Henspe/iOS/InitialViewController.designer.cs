@@ -1,15 +1,16 @@
 // WARNING
 //
-// This file has been generated automatically by Xamarin Studio to store outlets and
-// actions made in the UI designer. If it is removed, they will be lost.
-// Manual changes to this file may not be handled correctly.
+// This file has been generated automatically by Visual Studio from the outlets and
+// actions declared in your storyboard file.
+// Manual changes to this file will not be maintained.
 //
 using Foundation;
+using System;
 using System.CodeDom.Compiler;
 
 namespace Henspe.iOS
 {
-    [Register("InitialViewController")]
+    [Register ("InitialViewController")]
     partial class InitialViewController
     {
         [Outlet]
@@ -27,42 +28,37 @@ namespace Henspe.iOS
         [Outlet]
         UIKit.UIScrollView scrScrollView { get; set; }
 
-        [Action("OnNextClicked:")]
-        partial void OnNextClicked(Foundation.NSObject sender);
+        [Action ("OnNextClicked:")]
+        partial void OnNextClicked (Foundation.NSObject sender);
 
-        [Action("OnSkipClicked:")]
-        partial void OnSkipClicked(Foundation.NSObject sender);
+        [Action ("OnSkipClicked:")]
+        partial void OnSkipClicked (Foundation.NSObject sender);
 
-        void ReleaseDesignerOutlets()
+        void ReleaseDesignerOutlets ()
         {
-            if (btnNext != null)
-            {
-                btnNext.Dispose();
+            if (actActivityIndicator != null) {
+                actActivityIndicator.Dispose ();
+                actActivityIndicator = null;
+            }
+
+            if (btnNext != null) {
+                btnNext.Dispose ();
                 btnNext = null;
             }
 
-            if (btnSkip != null)
-            {
-                btnSkip.Dispose();
+            if (btnSkip != null) {
+                btnSkip.Dispose ();
                 btnSkip = null;
             }
 
-            if (pagPager != null)
-            {
-                pagPager.Dispose();
+            if (pagPager != null) {
+                pagPager.Dispose ();
                 pagPager = null;
             }
 
-            if (scrScrollView != null)
-            {
-                scrScrollView.Dispose();
+            if (scrScrollView != null) {
+                scrScrollView.Dispose ();
                 scrScrollView = null;
-            }
-
-            if (actActivityIndicator != null)
-            {
-                actActivityIndicator.Dispose();
-                actActivityIndicator = null;
             }
         }
     }

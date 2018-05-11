@@ -42,9 +42,9 @@ namespace Henspe.iOS
         public bool syncInProgress = false;
         public int networkState = NetworkStateConst.noNetwork;
 
-        //private SyncHallo syncHallo;
-        //private SyncBasis syncBasis;
-        //private SyncTelefonliste syncTelefonliste;
+		// Format
+        public int coordinateFormat = CoordinateUtil.ddm; // Default coordinate format
+
         private Timer syncTimer = null;
 
         // class-level declarations

@@ -13,19 +13,25 @@ namespace Henspe.iOS
 
         // Intro 1
         UIImageView img11ImageView;
-        CGPoint innerCircleImageViewOriginCenter;
+        CGPoint img11ViewOriginCenter;
         UIImageView img12ImageView;
-        CGPoint heartImageViewOriginCenter;
+        CGPoint img12ViewOriginCenter;
+		UIImageView img13ImageView;
+        CGPoint img13ViewOriginCenter;
 
         // Intro 2
         UIImageView img21ImageView;
-        CGPoint waterImageViewOriginCenter;
+		CGPoint img21ViewOriginCenter;
+		UIImageView img22ImageView;
+        CGPoint img22ViewOriginCenter;
+		UIImageView img23ImageView;
+        CGPoint img23ViewOriginCenter;
+		UIImageView img24ImageView;
+        CGPoint img24ViewOriginCenter;
 
         // Intro 3
         UIImageView img31ImageView;
-        CGPoint arrowRightImageViewOriginCenter;
-        UIImageView img32ImageView;
-        CGPoint arrowLeftImageViewOriginCenter;
+		CGPoint img31ViewOriginCenter;
 
         CGPoint imageOriginCenter;
 
@@ -94,24 +100,33 @@ namespace Henspe.iOS
 
             if (pageNumber == 1)
             {
-                img11ImageView = CreateImage("intro1innerCircle.png", 0.5f, 0.5f, 0.7f, 0.7f, 1.0f);
-                innerCircleImageViewOriginCenter = img11ImageView.Center;
+                img11ImageView = CreateImage("intro1-1.png", 0.08f, 0.5f, 0.15f, 0.15f, 1.0f);
+				img11ViewOriginCenter = img11ImageView.Center;
 
-                img12ImageView = CreateImage("intro1heart.png", 0.5f, 0.5f, 0.3f, 0.3f, 1.0f);
-                heartImageViewOriginCenter = img12ImageView.Center;
+                img12ImageView = CreateImage("intro1-2.png", 0.9f, 0.2f, 0.15f, 0.15f, 1.0f);
+				img12ViewOriginCenter = img12ImageView.Center;
+
+				img13ImageView = CreateImage("intro1-3.png", 0.9f, 1.0f, 0.15f, 0.15f, 1.0f);
+				img13ViewOriginCenter = img13ImageView.Center;
             }
             else if (pageNumber == 2)
             {
-                img21ImageView = CreateImage("intro2pie.png", 0.50f, 0.50f, 1.0f, 1.0f, 1.0f);
-                waterImageViewOriginCenter = img21ImageView.Center;
+				img21ImageView = CreateImage("intro2-1.png", 0.0f, 0.1f, 0.15f, 0.15f, 1.0f);
+                img21ViewOriginCenter = img21ImageView.Center;
+
+				img22ImageView = CreateImage("intro2-2.png", 1.0f, 0.1f, 0.15f, 0.15f, 1.0f);
+                img22ViewOriginCenter = img22ImageView.Center;
+
+				img23ImageView = CreateImage("intro2-3.png", 1.0f, 0.9f, 0.15f, 0.15f, 1.0f);
+                img23ViewOriginCenter = img23ImageView.Center;
+
+				img24ImageView = CreateImage("intro2-4.png", 0.0f, 0.9f, 0.15f, 0.15f, 1.0f);
+                img24ViewOriginCenter = img24ImageView.Center;
             }
             else if (pageNumber == 3)
             {
-                img31ImageView = CreateImage("intro3arrowRight.png", 0.05f, 0.5f, 0.25f, 0.25f, 1.0f);
-                arrowRightImageViewOriginCenter = img31ImageView.Center;
-
-                img32ImageView = CreateImage("intro3arrowLeft.png", 0.95f, 0.5f, 0.25f, 0.25f, 1.0f);
-                arrowLeftImageViewOriginCenter = img32ImageView.Center;
+				img31ImageView = CreateImage("intro3-1.png", 0.9f, 0.1f, 0.15f, 0.15f, 1.0f);
+				img31ViewOriginCenter = img31ImageView.Center;
             }
         }
 
@@ -125,17 +140,20 @@ namespace Henspe.iOS
 
             if (pageNumber == 1)
             {
-                MoveInX(img11ImageView, innerCircleImageViewOriginCenter, value * 0.9f);
-                MoveInX(img12ImageView, heartImageViewOriginCenter, value * 1.3f);
+                MoveInX(img11ImageView, img11ViewOriginCenter, value * 0.9f);
+                MoveInX(img12ImageView, img12ViewOriginCenter, value * 1.3f);
+				MoveInX(img13ImageView, img13ViewOriginCenter, value * 1.5f);
             }
             else if (pageNumber == 2)
             {
-                MoveInX(img21ImageView, waterImageViewOriginCenter, value * 1.3f);
+				MoveInX(img21ImageView, img21ViewOriginCenter, value * 0.9f);
+				MoveInX(img22ImageView, img22ViewOriginCenter, value * 1.3f);
+				MoveInX(img23ImageView, img23ViewOriginCenter, value * 1.5f);
+				MoveInX(img24ImageView, img24ViewOriginCenter, value * 1.9f);
             }
             else if (pageNumber == 3)
             {
-                MoveInX(img31ImageView, arrowRightImageViewOriginCenter, value * 1.4f);
-                MoveInX(img32ImageView, arrowLeftImageViewOriginCenter, value * 1.5f);
+				MoveInX(img31ImageView, img31ViewOriginCenter, value * 0.9f);
             }
         }
 
@@ -156,24 +174,11 @@ namespace Henspe.iOS
             width = (widthPercent * (float)imgImage.Frame.Width) / 1.0f;
             height = (heightPercent * (float)imgImage.Frame.Height) / 1.0f;
 
-            /*
-            if (Math.Abs(image.Size.Width - image.Size.Height) < 2)
-            {
-                width = image.Size.Width / 2.7f;
-                height = image.Size.Height / 2.7f;
-            }
-            else
-            {
-                width = image.Size.Width / 2.0f;
-                height = image.Size.Height / 2.0f; ;
-            }
-            */
-
             nfloat x = imgImage.Frame.X + (imgImage.Frame.Width * xpercent) - (width / 2);
             nfloat y = imgImage.Frame.Y + (imgImage.Frame.Height * ypercent) - (height / 2);
 
             UIImageView imageView = new UIImageView(image);
-            //imageView.ContentMode = UIViewContentMode.ScaleAspectFit;
+            imageView.ContentMode = UIViewContentMode.ScaleAspectFit;
             imageView.Frame = new CGRect(x, y, width, height);
 
             imageView.Alpha = alpha;

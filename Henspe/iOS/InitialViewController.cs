@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using CoreGraphics;
 using Foundation;
+using Henspe.iOS.Const;
 using Henspe.iOS.Util;
 using UIKit;
 
@@ -57,6 +58,9 @@ namespace Henspe.iOS
 
         void SetupView()
         {
+			pagPager.PageIndicatorTintColor = UIColor.White;
+			pagPager.CurrentPageIndicatorTintColor = ColorConst.themeSecondaryColor;
+
 			if (UserUtil.credentials.instructionsFinished == false)
             {
                 btnSkip.SetTitle(Foundation.NSBundle.MainBundle.LocalizedString("Initial.Skip", null), UIControlState.Normal);

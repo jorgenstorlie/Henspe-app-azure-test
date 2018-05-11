@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -36,15 +36,15 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uJ2-Vy-WZd">
-                    <rect key="frame" x="133" y="57" width="240" height="240"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uJ2-Vy-WZd">
+                    <rect key="frame" x="113" y="80" width="280" height="200"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="240" id="Nn4-zC-ZsB"/>
-                        <constraint firstAttribute="width" constant="240" id="l3m-bi-2eL"/>
+                        <constraint firstAttribute="height" constant="200" id="Nn4-zC-ZsB"/>
+                        <constraint firstAttribute="width" constant="280" id="l3m-bi-2eL"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDe-bT-w5g">
-                    <rect key="frame" x="20" y="303" width="467" height="97"/>
+                    <rect key="frame" x="20" y="286" width="467" height="114"/>
                     <fontDescription key="fontDescription" name="AdventPro-Light" family="Advent Pro" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
@@ -58,7 +58,7 @@
                 <constraint firstItem="EFI-RN-0Yw" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="20" id="ECq-UJ-sKj"/>
                 <constraint firstAttribute="trailing" secondItem="EFI-RN-0Yw" secondAttribute="trailing" constant="20" id="Lst-Sa-Dk8"/>
                 <constraint firstAttribute="trailing" secondItem="jDe-bT-w5g" secondAttribute="trailing" constant="20" id="T0S-Ca-L1y"/>
-                <constraint firstItem="uJ2-Vy-WZd" firstAttribute="top" secondItem="EFI-RN-0Yw" secondAttribute="bottom" constant="16" id="q2c-r4-zZJ"/>
+                <constraint firstItem="uJ2-Vy-WZd" firstAttribute="top" secondItem="EFI-RN-0Yw" secondAttribute="bottom" constant="39" id="q2c-r4-zZJ"/>
                 <constraint firstItem="EFI-RN-0Yw" firstAttribute="top" secondItem="2" secondAttribute="top" constant="20" id="shJ-9n-NwG"/>
                 <constraint firstItem="jDe-bT-w5g" firstAttribute="top" secondItem="uJ2-Vy-WZd" secondAttribute="bottom" constant="6" id="zMB-yq-b4V"/>
             </constraints>

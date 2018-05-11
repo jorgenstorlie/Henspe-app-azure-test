@@ -54,6 +54,9 @@
     <Compile Include="Model\Dto\StructureDto.cs" />
     <Compile Include="Model\Dto\StructureElementDto.cs" />
     <Compile Include="Model\Dto\StructureSectionDto.cs" />
+    <Compile Include="Util\CoordinateUtil.cs" />
+    <Compile Include="Communication\Dto\FormattedCoordinatesDto.cs" />
+    <Compile Include="Util\MathUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -94,6 +97,7 @@
     <Folder Include="Model\Dto\" />
     <Folder Include="Storage\" />
     <Folder Include="Util\" />
+    <Folder Include="Communication\Dto\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
