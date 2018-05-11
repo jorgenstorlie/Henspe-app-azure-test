@@ -21,24 +21,6 @@ namespace Henspe.Core.Model.Dto
             return structureSectionDto;
         }
 
-        /*
-        public StructureSectionDto GetStructureSectionFromId(string id)
-        {
-            StructureSectionDto result = null;
-
-            foreach(StructureSectionDto structureSectionDto in structureSectionList)
-            {
-                if(structureSectionDto.id == id)
-                {
-                    result = structureSectionDto;
-                    break;
-                }
-            }
-
-            return result;
-        }
-        */
-
         public StructureSectionDto GetStructureSection(int index)
         {
             if (structureSectionList != null && structureSectionList.Count > index)

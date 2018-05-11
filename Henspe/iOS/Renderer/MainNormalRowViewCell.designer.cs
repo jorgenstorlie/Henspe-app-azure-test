@@ -9,12 +9,26 @@ using System.CodeDom.Compiler;
 
 namespace Henspe.iOS
 {
-	[Register ("mainViewController")]
-	partial class mainViewController
+	[Register ("MainNormalRowViewCell")]
+	partial class MainNormalRowViewCell
 	{
+		[Outlet]
+		UIKit.UIImageView imgImage { get; set; }
+
+		[Outlet]
+		UIKit.UILabel labLabel { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (imgImage != null) {
+				imgImage.Dispose ();
+				imgImage = null;
+			}
+
+			if (labLabel != null) {
+				labLabel.Dispose ();
+				labLabel = null;
+			}
 		}
 	}
 }

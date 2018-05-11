@@ -150,9 +150,17 @@
       <DependentUpon>InitialCardViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="AppModel\GPSObject.cs" />
-    <Compile Include="mainViewController.cs" />
-    <Compile Include="mainViewController.designer.cs">
-      <DependentUpon>mainViewController.cs</DependentUpon>
+    <Compile Include="MainViewController.cs" />
+    <Compile Include="MainViewController.designer.cs">
+      <DependentUpon>MainViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Renderer\MainLocationRowViewCell.cs" />
+    <Compile Include="Renderer\MainLocationRowViewCell.designer.cs">
+      <DependentUpon>MainLocationRowViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Renderer\MainNormalRowViewCell.cs" />
+    <Compile Include="Renderer\MainNormalRowViewCell.designer.cs">
+      <DependentUpon>MainNormalRowViewCell.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -45,8 +45,6 @@ namespace Henspe.iOS
 		// Format
         public int coordinateFormat = CoordinateUtil.ddm; // Default coordinate format
 
-        private Timer syncTimer = null;
-
         // class-level declarations
         UIWindow window;
         public override UIWindow Window
@@ -115,7 +113,7 @@ namespace Henspe.iOS
 
             // Nivå
 			StructureSectionDto structureNiva = structure.AddStructureSection(Foundation.NSBundle.MainBundle.LocalizedString("Structure.Niva.Header", null), "ic_n.png");
-			structureNiva.AddStructureElement(StructureElementDto.ElementType.Position, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Niva.Type", null), "ic_n_begrenset.png");
+			structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Niva.Type", null), "ic_n_begrenset.png");
 
 			// Sikkerhet
 			StructureSectionDto structureSikkerhet = structure.AddStructureSection(Foundation.NSBundle.MainBundle.LocalizedString("Structure.Sikkerhet.Header", null), "ic_s.png");
@@ -248,44 +246,7 @@ namespace Henspe.iOS
                 alert.Show();
             }
         }
-
-        /*private void WaitShortTimeBeforeDoSync()
-        {
-            CheckNewAppVersionAvailable();
-
-            if (syncTimer != null)
-                syncTimer.Stop();
-
-            double delayInterval = 1000 * 3; // Seconds
-
-            syncTimer = new Timer(delayInterval);
-            syncTimer.Elapsed += OnTimerElapsed;
-            syncTimer.Start();
-        }
-
-        private void WaitBeforeDoSync()
-        {
-            CheckNewAppVersionAvailable();
-
-            if (syncTimer != null)
-                syncTimer.Stop();
-
-            int intervalMinutes = UserUtil.Credentials.Intervall;
-            if (intervalMinutes == 0)
-                intervalMinutes = 60;
-
-            double delayInterval = 1000 * 60 * intervalMinutes; // One hour
-
-            syncTimer = new Timer(delayInterval);
-            syncTimer.Elapsed += OnTimerElapsed;
-            syncTimer.Start();
-        }
-
-        private void OnTimerElapsed(object o, EventArgs e)
-        {
-            DoSyncIfLocalDataOld(false);
-        }*/
-
+        
         // This method is invoked when the application is about to move from active to inactive state.
         // OpenGL applications should use this method to pause.
         public override void OnResignActivation(UIApplication application)
