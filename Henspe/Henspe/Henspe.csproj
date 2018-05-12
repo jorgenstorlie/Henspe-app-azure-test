@@ -57,6 +57,10 @@
     <Compile Include="Util\CoordinateUtil.cs" />
     <Compile Include="Communication\Dto\FormattedCoordinatesDto.cs" />
     <Compile Include="Util\MathUtil.cs" />
+    <Compile Include="Const\POIConst.cs" />
+    <Compile Include="Const\GpsCoverageConst.cs" />
+    <Compile Include="Const\GpsCardinalDirectionConst.cs" />
+    <Compile Include="Const\AttributeTypeConst.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

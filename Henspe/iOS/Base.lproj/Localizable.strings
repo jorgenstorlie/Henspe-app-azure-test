@@ -1,5 +1,6 @@
 ﻿// Alert
 Alert.Title.Error = "En feil oppsto";
+Alert.Title.Warning = "Advarsel";
 Alert.OK = "OK";
 Alert.Yes = "Ja";
 Alert.No = "Nei";
@@ -8,6 +9,13 @@ Alert.NewVersion.Message1 = "En ny versjon";
 Alert.NewVersion.Message2 = "av eSTROKE appen er nyere enn den du bruker";
 Alert.NewVersion.Message3 = "Ønsker du å oppdatere til den nye versjonen?";
 Alert.NewVersion.Message4 = "Lukk denne appen og åpne den nye versjonen av eSTROKE når den nye versjonen er ferdig installert.";
+
+// GPS
+GPS.NoAccessToGPS.Message = "Fikk ikke tilgang til Sted. Velg tannhjulet øverst til høyre og velg tillat når appen er i bruk for Sted så appen skal kunne vise stedet du er.";
+GPS.UnknownAddress = "Ukjent adresse";
+GPS.UnknownPosition = "Ukjent posisjon";
+GPS.MyPosition = "Min posisjon er";
+GPS.Accuracy.Text = "Nøyaktighet";
 
 // Errors
 Error.NoResponse = "Ingen respons fra serveren";

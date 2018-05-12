@@ -3,9 +3,13 @@
 using System;
 using System.Collections.Generic;
 using CoreGraphics;
+using CoreLocation;
 using Foundation;
+using Henspe.Core.Const;
 using Henspe.Core.Model.Dto;
+using Henspe.iOS.AppModel;
 using Henspe.iOS.Const;
+using Henspe.iOS.Util;
 using UIKit;
 
 namespace Henspe.iOS
@@ -15,70 +19,482 @@ namespace Henspe.iOS
 		private MainListTableViewSource mainListTableViewSource = null;
 
 		// Events
-        NSObject observerActivatedOccured;
+		NSObject observerActivatedOccured;
 
-		public MainViewController (IntPtr handle) : base (handle)
+		// Flash text
+		private string lastNorthText = "";
+		private string lastEastText = "";
+		private string lastAccuracyLargeText = "";
+		private string lastAccuracySmallText = "";
+
+		// Glow timer
+		private System.Timers.Timer mobileTextGlowTimer;
+		private System.Timers.Timer settingsIconGlowTimer;
+
+		// GPS
+		public double highAndLowAccuracyDivider = 200;
+		public double gpsAccuracyRequirement = 200;
+		public double distanceToUpdateAddress = 200;
+		public bool gpsEventOccured = false;
+		public int gpsCoverage = GpsCoverageConst.none;
+		public int lastPositionType = PositionTypeConst.off;
+		public CLAuthorizationStatus gpsStatus;
+		public bool gpsStarted = false;
+		public CLLocationManager iPhoneLocationManager = null;
+		public CLLocation currentLocation = null;
+		public CLLocation lastLocation = null;
+		public CLGeocoder geocoder = null;
+		public bool gpsPosFound = false;
+		public CLLocation lastAddressLocation = null;
+		public GPSObject gpsCurrentPositionObject = new GPSObject();
+		public GPSObject gpsStoredPositionObject = new GPSObject();
+		private string lastAddressText = "";
+		public double desiredAccuracy = 10;
+		public double distanceFilter = 10;
+
+		// GPS Text
+		string myPositionText = "";
+		string myAddressText = "";
+
+		private UIStringAttributes redText = new UIStringAttributes
+		{
+			ForegroundColor = ColorConst.textRed,
+			Font = FontConst.fontMedium
+		};
+
+		private UIStringAttributes blackText = new UIStringAttributes
+		{
+			ForegroundColor = ColorConst.textGrayColor,
+			Font = FontConst.fontMedium
+		};
+
+		public MainViewController(IntPtr handle) : base(handle)
 		{
 		}
 
-        public override void ViewDidLoad()
-        {
-            base.ViewDidLoad();
+		public override void ViewDidLoad()
+		{
+			base.ViewDidLoad();
 
-            //this.Title = Foundation.NSBundle.MainBundle.LocalizedString("Kystvarsel.Title", null);
+			//this.Title = Foundation.NSBundle.MainBundle.LocalizedString("Kystvarsel.Title", null);
 
-            SetupView();
+			SetupView();
 
-            // Events
-            //observerActivatedOccured = NSNotificationCenter.DefaultCenter.AddObserver(new NSString(EventsConst.activatedOccured), HandleActivatedOccured);
-        }
+			// Events
+			//observerActivatedOccured = NSNotificationCenter.DefaultCenter.AddObserver(new NSString(EventsConst.activatedOccured), HandleActivatedOccured);
+		}
 
-        /*
+		/*
         public void HandleActivatedOccured(NSNotification notification)
         {
             DoCallKystvarsel();
         }
         */
 
-        public override void ViewDidUnload()
-        {
-            base.ViewDidUnload();
-        }
+		public override void ViewDidUnload()
+		{
+			base.ViewDidUnload();
+		}
 
-        public override void WillMoveToParentViewController(UIViewController parent)
-        {
-            base.WillMoveToParentViewController(parent);
-        }
+		public override void WillMoveToParentViewController(UIViewController parent)
+		{
+			base.WillMoveToParentViewController(parent);
+		}
 
-        public override void ViewWillAppear(bool animated)
-        {
-            base.ViewWillAppear(animated);
-        }
+		public override void ViewWillAppear(bool animated)
+		{
+			base.ViewWillAppear(animated);
+		}
 
-        public override void ViewDidAppear(bool animated)
-        {
-            base.ViewDidAppear(animated);
-        }
+		public override void ViewDidAppear(bool animated)
+		{
+			//base.ViewDidAppear(animated);
 
-        public override void ViewWillDisappear(bool animated)
-        {
-            base.ViewWillDisappear(animated);
-        }
+			StartGPSIfNotStartedAlreadyAfterActivated();
+			//SetupGlowTimers();
+		}
 
-        private void SetupView()
-        {
-            // Table setup
-            mainListTableViewSource = new MainListTableViewSource(this);
-            myTableView.Source = mainListTableViewSource;
-            myTableView.BackgroundColor = UIColor.Clear;
+		private void StartGPSIfNotStartedAlreadyAfterActivated()
+		{
+			gpsStatus = CLLocationManager.Status;
+
+			if (gpsStarted == false)
+			{
+				// GPG motor was not started. Restart it.
+				StartGPSTracking();
+			}
+		}
+
+		public override void ViewWillDisappear(bool animated)
+		{
+			base.ViewWillDisappear(animated);
+		}
+
+		private void SetupView()
+		{
+			ResetGPSVariables();
+
+			// Table setup
+			mainListTableViewSource = new MainListTableViewSource(this);
+			myTableView.Source = mainListTableViewSource;
+			myTableView.BackgroundColor = UIColor.Clear;
 			myTableView.SeparatorColor = UIColor.Clear;
-            this.AutomaticallyAdjustsScrollViewInsets = false;
+			this.AutomaticallyAdjustsScrollViewInsets = false;
 
 			mainListTableViewSource.sectionsWithRows = AppDelegate.current.structure;
 
-            myTableView.ReloadData();
-        }
-    }
+			myTableView.ReloadData();
+		}
+
+		private void ResetGPSVariables()
+		{
+			gpsPosFound = false;
+			currentLocation = null;
+			lastAddressLocation = null;
+			//PositionTextUnknown();
+		}
+
+		#region GPS
+		private void StartGPSTracking()
+		{
+			SetupPosition(PositionTypeConst.finding);
+
+			if (iPhoneLocationManager == null)
+			{
+				iPhoneLocationManager = new CLLocationManager
+				{
+					ActivityType = CLActivityType.OtherNavigation,
+				};
+			}
+			else
+			{
+				iPhoneLocationManager.StopUpdatingLocation();
+			}
+
+			iPhoneLocationManager.DesiredAccuracy = desiredAccuracy;
+			iPhoneLocationManager.DistanceFilter = distanceFilter;
+
+			if (UIDevice.CurrentDevice.CheckSystemVersion(6, 0))
+			{
+				iPhoneLocationManager.LocationsUpdated += HandleLocationsUpdated;
+			}
+			else
+			{
+				// This will not be called on iOS 6. Depricated
+			}
+
+			// iOS 8 requires you to manually request authorization
+			if (UIDevice.CurrentDevice.CheckSystemVersion(8, 0))
+			{
+				iPhoneLocationManager.RequestWhenInUseAuthorization();
+			}
+
+			gpsStatus = CLLocationManager.Status;
+
+			// start updating our location, et. al.
+			if (CLLocationManager.Status != CLAuthorizationStatus.NotDetermined &&
+				CLLocationManager.Status != CLAuthorizationStatus.Authorized &&
+				CLLocationManager.Status != CLAuthorizationStatus.AuthorizedAlways &&
+				CLLocationManager.Status != CLAuthorizationStatus.AuthorizedWhenInUse)
+			{
+				// Something is wrong with the GPS grant
+				SetupPosition(PositionTypeConst.error);
+
+				gpsStarted = false;
+
+				InvokeOnMainThread(delegate
+				{
+					UIAlertView alert = new UIAlertView(Foundation.NSBundle.MainBundle.LocalizedString("Alert.Title.Warning", null),
+					Foundation.NSBundle.MainBundle.LocalizedString("GPS.NoAccessToGPS.Message", null),
+					null,
+					Foundation.NSBundle.MainBundle.LocalizedString("Alert.OK", null),
+					null);
+
+					alert.Clicked += (s, b) =>
+					{
+						if (b.ButtonIndex == 0)
+						{
+							// Yes chosen. Stop 
+							iPhoneLocationManager.StopUpdatingLocation();
+						}
+					};
+
+					alert.Show();
+				});
+			}
+			else if (CLLocationManager.LocationServicesEnabled)
+			{
+				iPhoneLocationManager.StartUpdatingLocation();
+				gpsStarted = true;
+
+				//SetupGlowTimers();
+			}
+		}
+
+		private void SetupPosition(int positionType)
+		{
+			/*
+            if (positionType != AppDelegate.current.lastPositionType)
+            {
+                if (positionType == PositionTypeConst.error)
+                    imgLocationOff.Image = UIImage.FromFile("ic_pin_yellow_error.png");
+                else
+                    imgLocationOff.Image = UIImage.FromFile("ic_pin_yellow.png");
+                    
+                lastPositionType = positionType;
+
+				if (positionType == PositionTypeConst.off || positionType == PositionTypeConst.error)
+                {
+                    UIView.Animate(0.8f, 0, UIViewAnimationOptions.CurveEaseInOut,
+                        () =>
+                        {
+                            imgLocationOn.Alpha = 0.0f;
+                        },
+                        () =>
+                        {
+                            imgLocationOn.Alpha = 0.0f;
+                        });
+
+                    PositionTextUnknown();
+                }
+                else if (positionType == PositionTypeConst.finding)
+                {
+                    imgLocationOn.Alpha = 0.1f;
+                    UIView.Animate(0.8f, 0, UIViewAnimationOptions.Repeat | UIViewAnimationOptions.CurveEaseInOut | UIViewAnimationOptions.Autoreverse,
+                        () =>
+                        {
+                            imgLocationOn.Alpha = 0.5f;
+                        },
+                        null);
+
+                    imgLocationOn.AccessibilityLabel = NSBundle.MainBundle.LocalizedString("Hjelp113.iOS.MainViewController.Accessibility.Location.Finding", null);
+
+                    PositionTextUnknown();
+                }
+                else if (positionType == PositionTypeConst.found)
+                {
+                    UIView.Animate(0.8f, 0, UIViewAnimationOptions.CurveEaseInOut,
+                        () =>
+                        {
+                            imgLocationOn.Alpha = 1.0f;
+                        },
+                        () =>
+                        {
+                            imgLocationOn.Alpha = 1.0f;
+                        });
+
+                    imgLocationOn.AccessibilityLabel = NSBundle.MainBundle.LocalizedString("Hjelp113.iOS.MainViewController.Accessibility.Location.Found", null);
+                }
+                else
+                {
+                    Console.WriteLine("Error: Illegal PositionType entered in MainViewController");
+                    imgLocationOn.Alpha = 0.0f;
+                }
+            }
+			*/
+		}
+
+		private void HandleLocationsUpdated(object sender, CLLocationsUpdatedEventArgs e)
+		{
+			UpdateLocation(e);
+		}
+
+		private void UpdateLocation(CLLocationsUpdatedEventArgs e)
+		{
+			if (iPhoneLocationManager != null)
+			{
+				gpsPosFound = true;
+
+				currentLocation = e.Locations[e.Locations.Length - 1];
+
+				double roundedLatitude = Math.Floor(currentLocation.Coordinate.Latitude);
+				double roundedLongitude = Math.Floor(currentLocation.Coordinate.Longitude);
+
+				// If location is cupertino, we are in simulator. Lets set it to Norway to speed things up
+				if (roundedLatitude == POIConst.cupertinoLatitude && roundedLongitude == POIConst.cupertinoLongitude)
+				{
+					currentLocation = new CLLocation(POIConst.stabekkLatitude, POIConst.stabekkLongitude);
+				}
+
+				int previousGpsCoverage = gpsCoverage;
+				int newGpsCoverage = GpsCoverageConst.none;
+
+				newGpsCoverage = iOSMapUtil.GetAccuracyType(currentLocation.HorizontalAccuracy, highAndLowAccuracyDivider, GpsCoverageConst.low, GpsCoverageConst.high);
+
+				gpsCoverage = newGpsCoverage;
+
+				GPSObject gpsObject = new GPSObject();
+				gpsObject.accuracy = currentLocation.HorizontalAccuracy;
+				gpsObject.gpsCoordinates = currentLocation.Coordinate;
+				gpsObject.storedDateTime = DateTime.Now;
+				gpsCurrentPositionObject = gpsObject;
+
+				gpsEventOccured = true;
+
+				NSNotificationCenter.DefaultCenter.PostNotificationName(EventConst.gpsEvent, this);
+
+				if (currentLocation.HorizontalAccuracy <= gpsAccuracyRequirement)
+				{
+					SetupPosition(PositionTypeConst.found);
+				}
+				else
+				{
+					SetupPosition(PositionTypeConst.finding);
+				}
+
+				//Console.WriteLine ("Location updated");
+				bool positionSignificantlyChanged = UpdateGPSPositionAndAlsoAddressIfSignificantChange();
+			}
+			else
+			{
+				StartGPSTracking();
+			}
+		}
+
+		private bool UpdateGPSPositionAndAlsoAddressIfSignificantChange()
+		{
+			double lat1 = currentLocation.Coordinate.Latitude;
+			double lon1 = currentLocation.Coordinate.Longitude;
+			double lat2 = 0;
+			double lon2 = 0;
+
+			if (lastAddressLocation != null)
+			{
+				lat2 = lastAddressLocation.Coordinate.Latitude;
+				lon2 = lastAddressLocation.Coordinate.Longitude;
+			}
+
+			GPSCoordinatesTextWrite();
+
+			if (iOSMapUtil.Distance(lat1, lon1, lat2, lon2) > distanceToUpdateAddress || (lat2 == 0 && lon2 == 0))
+			{
+				lastAddressLocation = currentLocation;
+				UpdateAddress();
+
+				return true;
+			}
+
+			return false;
+		}
+
+		private void GPSCoordinatesTextWrite()
+		{
+			// ALT SKAL INN I DENNE VARIABLEN FOR Å VISES I TABELLEN ETTERPÅ
+			myPositionText = Foundation.NSBundle.MainBundle.LocalizedString("GPS.MyPosition", null);
+
+			string latitudeText = gpsCurrentPositionObject.latitudeDescription;
+			string longitudeText = gpsCurrentPositionObject.longitudeDescription;
+
+			string accuracySmall = Foundation.NSBundle.MainBundle.LocalizedString("", null) + ": " + gpsCurrentPositionObject.accuracy + " " + Foundation.NSBundle.MainBundle.LocalizedString("Location.Element.Meters.Text", null);
+
+            // Disse på være i tabelleb. Tre stk under hverandre. 
+			UILabel labLocationNorth = new UILabel();
+			UILabel labLocationEast = new UILabel();
+			UILabel labAccuracySmall = new UILabel();
+
+			// North and east text
+			lastNorthText = FlashTextUtil.FlashChangedText(lastNorthText, latitudeText, labLocationNorth);
+			lastEastText = FlashTextUtil.FlashChangedText(lastEastText, longitudeText, labLocationEast);
+
+			// Accuracy text
+			lastAccuracySmallText = FlashTextUtil.FlashChangedText(lastAccuracySmallText, accuracySmall, labAccuracySmall);
+		}
+
+		private void UpdateAddress()
+		{
+			if (gpsCurrentPositionObject == null || gpsCurrentPositionObject.latitudeDescription == null)
+			{
+				// No position
+				string text = Foundation.NSBundle.MainBundle.LocalizedString("GPS.UnknownAddress", null);
+				if (text != lastAddressText)
+				{
+					lastAddressText = text;
+					SetAddressText(text, false);
+				}
+			}
+			else
+			{
+				// Position known. Try to find address
+				if (geocoder == null)
+					geocoder = new CLGeocoder();
+
+				CLLocation location = new CLLocation(gpsCurrentPositionObject.gpsCoordinates.Latitude, gpsCurrentPositionObject.gpsCoordinates.Longitude);
+				geocoder.ReverseGeocodeLocation(location, GeocodeCompleteHandler);
+			}
+		}
+
+		void GeocodeCompleteHandler(CLPlacemark[] placemarks, NSError error)
+		{
+			if (placemarks != null && placemarks.Length > 0)
+			{
+				string text = "";
+
+				/*
+                Console.WriteLine ("GEO AdministrativeArea: " + placemarks [0].AdministrativeArea);
+                Console.WriteLine ("GEO Country: " + placemarks [0].Country);
+                Console.WriteLine ("GEO Locality: " + placemarks [0].Locality);
+                Console.WriteLine ("GEO Name: " + placemarks [0].Name);
+                Console.WriteLine ("GEO PostalCode: " + placemarks [0].PostalCode);
+                Console.WriteLine ("GEO SubAdministrativeArea: " + placemarks [0].SubAdministrativeArea);
+                Console.WriteLine ("GEO SubLocality: " + placemarks [0].SubLocality);
+                Console.WriteLine ("GEO SubThoroughfare: " + placemarks [0].SubThoroughfare);
+                Console.WriteLine ("GEO Thoroughfare: " + placemarks [0].Thoroughfare);
+                Console.WriteLine ("GEO Zone: " + placemarks [0].Zone);
+                //Console.WriteLine ("Test: " + placemarks [0].ToString ());
+                */
+
+				NSObject formattedAddressLines = placemarks[0].AddressDictionary["FormattedAddressLines"];
+				if (formattedAddressLines != null)
+				{
+					NSArray addressArrayLines = formattedAddressLines as NSArray;
+
+					if (addressArrayLines.Count == 0)
+					{
+						text = Foundation.NSBundle.MainBundle.LocalizedString("Hjelp113.iOS.MainViewController.UnknownPosition", null);
+					}
+					else
+					{
+						if (placemarks[0].Locality != null)
+							text = placemarks[0].Locality;
+					}
+				}
+				else
+				{
+					text = Foundation.NSBundle.MainBundle.LocalizedString("Hjelp113.iOS.MainViewController.UnknownPosition", null);
+				}
+
+				if (text != lastAddressText)
+				{
+					lastAddressText = text;
+					/*
+                    if(mapVisible == MapConst.initialView || mapVisible == MapConst.hide)
+                        text = lastAddressText + " " + AppDelegate.arrowDownUnicode; 
+                    else
+                        text = lastAddressText + " " + AppDelegate.arrowUpUnicode; 
+                    */
+
+					text = lastAddressText;
+
+					SetAddressText(text, true);
+				}
+			}
+		}
+
+		void SetAddressText(string text, bool enabled)
+		{
+			if (enabled)
+				myAddressText = text;
+			else
+				myAddressText = Foundation.NSBundle.MainBundle.LocalizedString("GPS.UnknownAddress", null);
+		}
+
+		private void PositionTextUnknown()
+		{
+			myPositionText = Foundation.NSBundle.MainBundle.LocalizedString("GPS.UnknownPosition", null);
+			myAddressText = Foundation.NSBundle.MainBundle.LocalizedString("GPS.UnknownAddress", null);
+		}
+        #endregion
+	}
 
     // Table view source
     public partial class MainListTableViewSource : UITableViewSource

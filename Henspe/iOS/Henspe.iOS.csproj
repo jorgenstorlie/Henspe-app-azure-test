@@ -162,6 +162,11 @@
     <Compile Include="Renderer\MainNormalRowViewCell.designer.cs">
       <DependentUpon>MainNormalRowViewCell.cs</DependentUpon>
     </Compile>
+    <Compile Include="Const\FontConst.cs" />
+    <Compile Include="Const\PositionTypeConst.cs" />
+    <Compile Include="Util\iOSMapUtil.cs" />
+    <Compile Include="Util\FlashTextUtil.cs" />
+    <Compile Include="Util\CloneUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Base.lproj\Localizable.strings" />
@@ -274,6 +279,9 @@
     <BundleResource Include="Resources\ic_logo_snla.png" />
     <BundleResource Include="Resources\ic_logo_snla%402x.png" />
     <BundleResource Include="Resources\ic_logo_snla%403x.png" />
+    <BundleResource Include="Resources\Montserrat-Light.ttf" />
+    <BundleResource Include="Resources\Montserrat-Medium.ttf" />
+    <BundleResource Include="Resources\Montserrat-Regular.ttf" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
