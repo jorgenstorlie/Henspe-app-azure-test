@@ -97,41 +97,41 @@ namespace Henspe.iOS
         {
             // Structure that all will be added to
             structure = new StructureDto();
-
+            
             // Hendelse
 			StructureSectionDto structureHendelse = structure.AddStructureSection(Foundation.NSBundle.MainBundle.LocalizedString("Structure.Hendelse.Header", null), "ic_h.png");
-			structureHendelse.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Hendelse.Trafikk", null), "ic_h_trafikk.png");
-			structureHendelse.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Hendelse.Brann", null), "ic_h_brann.png");
-
+			structureHendelse.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Hendelse.Trafikk", null), "ic_h_trafikk.png", 1.0f);
+			structureHendelse.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Hendelse.Brann", null), "ic_h_brann.png", 0.8f);
+            
 			// Eksakt posisjon
 			StructureSectionDto structureEksaktPosisjon = structure.AddStructureSection(Foundation.NSBundle.MainBundle.LocalizedString("Structure.EksaktPosisjon.Header", null), "ic_e.png");
-			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Position, Foundation.NSBundle.MainBundle.LocalizedString("Structure.EksaktPosisjon.Posisjon", null), "ic_e_posisjon.png");
-			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Address, Foundation.NSBundle.MainBundle.LocalizedString("Structure.EksaktPosisjon.Adresse", null), "ic_e_adresse.png");
-			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.EksaktPosisjon.Oppmotested", null), "ic_e_oppmotested.png");
-			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.EksaktPosisjon.Ankomst", null), "ic_e_ankomst.png");
-			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.EksaktPosisjon.Avreise", null), "ic_e_avreise.png");
+			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Position, Foundation.NSBundle.MainBundle.LocalizedString("Structure.EksaktPosisjon.Posisjon", null), "ic_e_posisjon.png", 0.8f);
+			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Address, Foundation.NSBundle.MainBundle.LocalizedString("Structure.EksaktPosisjon.Adresse", null), "ic_e_adresse.png", 0.8f);
+			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.EksaktPosisjon.Oppmotested", null), "ic_e_oppmotested.png", 1.0f);
+			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.EksaktPosisjon.Ankomst", null), "ic_e_ankomst.png", 0.6f);
+			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.EksaktPosisjon.Avreise", null), "ic_e_avreise.png", 0.6f);
 
             // Nivå
 			StructureSectionDto structureNiva = structure.AddStructureSection(Foundation.NSBundle.MainBundle.LocalizedString("Structure.Niva.Header", null), "ic_n.png");
-			structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Niva.Type", null), "ic_n_begrenset.png");
-
+			structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Niva.Type", null), "ic_n_begrenset.png", 0.5f);
+            
 			// Sikkerhet
 			StructureSectionDto structureSikkerhet = structure.AddStructureSection(Foundation.NSBundle.MainBundle.LocalizedString("Structure.Sikkerhet.Header", null), "ic_s.png");
-			structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Sikkerhet.Farer", null), "ic_s_farer.png");
-			structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Sikkerhet.Brann", null), "ic_s_brann.png");
-			structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Sikkerhet.Sikkerhet", null), "ic_s_sikkerhet.png");
+			structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Sikkerhet.Farer", null), "ic_s_farer.png", 0.8f);
+			structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Sikkerhet.Brann", null), "ic_s_brann.png", 0.8f);
+			structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Sikkerhet.Sikkerhet", null), "ic_s_sikkerhet.png", 0.8f);
 
             // Pasienter
 			StructureSectionDto structurePasienter = structure.AddStructureSection(Foundation.NSBundle.MainBundle.LocalizedString("Structure.Pasienter.Header", null), "ic_p.png");
-			structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Pasienter.Antall", null), "ic_p_pasienter.png");
-			structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Pasienter.Type", null), "ic_p_type.png");
-			structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Pasienter.Omfang", null), "ic_p_skademekanikk.png");
+			structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Pasienter.Antall", null), "ic_p_pasienter.png", 0.9f);
+			structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Pasienter.Type", null), "ic_p_type.png", 0.7f);
+			structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Pasienter.Omfang", null), "ic_p_skademekanikk.png", 0.8f);
 
             // Evakuering
 			StructureSectionDto structureEvakuering = structure.AddStructureSection(Foundation.NSBundle.MainBundle.LocalizedString("Structure.Evakuering.Header", null), "ic_e.png");
-			structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Evakuering.Flaskehalser", null), "ic_e_flaskehalser.png");
-			structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Evakuering.Kjeder", null), "ic_e_evakuering.png");
-			structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Evakuering.Rett", null), "ic_e_rett.png");
+			structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Evakuering.Flaskehalser", null), "ic_e_flaskehalser.png", 0.7f);
+			structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Evakuering.Kjeder", null), "ic_e_evakuering.png", 0.7f);
+			structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Evakuering.Rett", null), "ic_e_rett.png", 0.7f);
         }
 
         private void GetVersion()

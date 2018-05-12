@@ -83,7 +83,7 @@ namespace Henspe.iOS
     // Table view source
     public partial class MainListTableViewSource : UITableViewSource
     {
-		private int headerHeight = 25;
+		private int headerHeight = 70;
 		private WeakReference<MainViewController> _parent;
 
         public StructureDto sectionsWithRows;
@@ -164,19 +164,19 @@ namespace Henspe.iOS
             CGRect headerframe = new CGRect(0, 0, tableView.Bounds.Size.Width, headerHeight);
             UIView headerView = new UIView(headerframe);
 
-			headerView.BackgroundColor = UIColor.Clear;
+			headerView.BackgroundColor = UIColor.White;
 
 			// Image
-			CGRect imageFrame = new CGRect(15, 11, 40, 40);
+			CGRect imageFrame = new CGRect(15, headerHeight - 40 - 8, 40, 40);
 			UIImageView imageView = new UIImageView(imageFrame);
 			imageView.Image = UIImage.FromFile(structureSection.image);
 
 			headerView.AddSubview(imageView);
 
             // Label
-			CGRect labelFrame = new CGRect(13, 5, tableView.Bounds.Size.Width - 10, headerHeight - 9);
+			CGRect labelFrame = new CGRect(63, 12, tableView.Bounds.Size.Width - 10, headerHeight - 9);
             UILabel label = new UILabel(labelFrame);
-            label.Font = UIFont.SystemFontOfSize(13.0f, UIFontWeight.Medium);
+            label.Font = UIFont.SystemFontOfSize(17.0f, UIFontWeight.Medium);
 			label.TextColor = ColorConst.textColor;
 			label.Text = structureSection.description;
 
@@ -191,7 +191,7 @@ namespace Henspe.iOS
 
             return headerView;
         }
-
+        
         public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
         {
             const string cellIdentifier1 = "cellId1";
@@ -274,6 +274,13 @@ namespace Henspe.iOS
 
 				mainNormalRowViewCell.ImgImage.Image = UIImage.FromFile(structureElement.image);
 
+				nfloat width = mainNormalRowViewCell.ViewImage.Frame.Width * structureElement.percent;
+				nfloat height = mainNormalRowViewCell.ViewImage.Frame.Height * structureElement.percent;
+				nfloat x = (mainNormalRowViewCell.ViewImage.Frame.Width / 2) - (width / 2);
+				nfloat y = (mainNormalRowViewCell.ViewImage.Frame.Height / 2) - (height / 2);
+
+				mainNormalRowViewCell.ImgImage.Frame = new CGRect(x, y, width, height);
+
 				return mainNormalRowViewCell;
             }
             else
@@ -288,6 +295,13 @@ namespace Henspe.iOS
 				mainLocationRowViewCell.LabLabelBottom.Text = "Generert tekst her";
 
 				mainLocationRowViewCell.ImgImage.Image = UIImage.FromFile(structureElement.image);
+
+				nfloat width = mainLocationRowViewCell.ViewImage.Frame.Width * structureElement.percent;
+				nfloat height = mainLocationRowViewCell.ViewImage.Frame.Height * structureElement.percent;
+				nfloat x = (mainLocationRowViewCell.ViewImage.Frame.Width / 2) - (width / 2);
+				nfloat y = (mainLocationRowViewCell.ViewImage.Frame.Height / 2) - (height / 2);
+                                                
+				mainLocationRowViewCell.ImgImage.Frame = new CGRect(x, y, width, height);
 
 				return mainLocationRowViewCell;
             }

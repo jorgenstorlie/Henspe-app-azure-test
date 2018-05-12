@@ -17,9 +17,17 @@ namespace Henspe.iOS
 
 		[Outlet]
 		UIKit.UILabel labLabel { get; set; }
+
+		[Outlet]
+		UIKit.UIView viewImage { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (viewImage != null) {
+				viewImage.Dispose ();
+				viewImage = null;
+			}
+
 			if (imgImage != null) {
 				imgImage.Dispose ();
 				imgImage = null;

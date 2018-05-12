@@ -11,6 +11,7 @@ namespace Henspe.iOS
 	{
 		public UIKit.UIImageView ImgImage { get { return imgImage; } set { imgImage = value; } }
         public UIKit.UILabel LabLabel { get { return labLabel; } set { labLabel = value; } }
+		public UIKit.UIView ViewImage { get { return viewImage; } set { viewImage = value; } }
         
 		public MainNormalRowViewCell (IntPtr handle) : base (handle)
 		{

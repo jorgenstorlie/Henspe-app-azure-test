@@ -20,22 +20,30 @@ namespace Henspe.iOS
 
 		[Outlet]
 		UIKit.UILabel labLabelTop { get; set; }
+
+		[Outlet]
+		UIKit.UIView viewImage { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (viewImage != null) {
+				viewImage.Dispose ();
+				viewImage = null;
+			}
+
 			if (imgImage != null) {
 				imgImage.Dispose ();
 				imgImage = null;
 			}
 
-			if (labLabelTop != null) {
-				labLabelTop.Dispose ();
-				labLabelTop = null;
-			}
-
 			if (labLabelBottom != null) {
 				labLabelBottom.Dispose ();
 				labLabelBottom = null;
+			}
+
+			if (labLabelTop != null) {
+				labLabelTop.Dispose ();
+				labLabelTop = null;
 			}
 		}
 	}
