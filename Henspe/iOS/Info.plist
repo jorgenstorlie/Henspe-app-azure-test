@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleName</key>
-	<string>Henspe</string>
 	<key>CFBundleIdentifier</key>
 	<string>no.norskluftambulanse.testapp.Henspe</string>
 	<key>CFBundleShortVersionString</key>
@@ -32,8 +30,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -50,5 +46,7 @@
 		<string>Montserrat-Regular.ttf</string>
 		<string>Montserrat-Light.ttf</string>
 	</array>
+	<key>CFBundleName</key>
+	<string>HENSPE</string>
 </dict>
 </plist>

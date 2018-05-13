@@ -94,6 +94,19 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon1024.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon40.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon60.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon58.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon87.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon80.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon120.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon180.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon20.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon76.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon152.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon167.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -105,6 +118,7 @@
     <Folder Include="Renderer\" />
     <Folder Include="Settings.bundle\" />
     <Folder Include="Util\" />
+    <Folder Include="Settings.bundle\ Base.lproj\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -282,6 +296,7 @@
     <BundleResource Include="Resources\Montserrat-Light.ttf" />
     <BundleResource Include="Resources\Montserrat-Medium.ttf" />
     <BundleResource Include="Resources\Montserrat-Regular.ttf" />
+    <BundleResource Include="Settings.bundle\ Base.lproj\Root.strings" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

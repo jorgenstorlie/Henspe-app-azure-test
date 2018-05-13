@@ -213,38 +213,20 @@ namespace Henspe.iOS
             appActicatedOccured = true;
 
             NSNotificationCenter.DefaultCenter.PostNotificationName("appActivated", this);
-            CheckForDeleteAllSetting();
-            //WaitShortTimeBeforeDoSync();
+			CheckForAppSettings();
         }
 
-        private void CheckForDeleteAllSetting()
+		private void CheckForAppSettings()
         {
-            bool deleteAllDataValue = NSUserDefaults.StandardUserDefaults.BoolForKey("settingsDeleteAllData");
-            if (deleteAllDataValue)
+            InvokeOnMainThread(delegate
             {
-                // Delete all settings here
-                UIAlertView alert = new UIAlertView(Foundation.NSBundle.MainBundle.LocalizedString("AppDelegate.Alert.DeleteAll.Title", null),
-                    Foundation.NSBundle.MainBundle.LocalizedString("AppDelegate.Alert.DeleteAll.Message", null),
-                    null,
-                    Foundation.NSBundle.MainBundle.LocalizedString("Alert.Yes", null),
-                    new string[] { Foundation.NSBundle.MainBundle.LocalizedString("Alert.No", null) });
+                // Coordinate format
+                nint settingsUserDefinedFormat = NSUserDefaults.StandardUserDefaults.IntForKey("settings_user_defined_coordinate_format");
+                if (settingsUserDefinedFormat == CoordinateUtil.undefinedFormat)
+                    settingsUserDefinedFormat = CoordinateUtil.ddm; // Default coordinate format
 
-                alert.Clicked += (s, b) =>
-                {
-                    if (b.ButtonIndex == 0)
-                    {
-                        // Yes chosen
-                        AppDelegate.current.repository.DeleteAllTables(); // Deletes all data in database
-                        NSUserDefaults.StandardUserDefaults.SetBool(false, "settingsDeleteAllData");
-                        NSUserDefaults.StandardUserDefaults.Synchronize();
-                        UserUtil.Reset();
-
-                        AppDelegate.current.appResetOccured = true;
-                    }
-                };
-
-                alert.Show();
-            }
+                AppDelegate.current.coordinateFormat = Convert.ToInt32(settingsUserDefinedFormat);
+            });
         }
         
         // This method is invoked when the application is about to move from active to inactive state.

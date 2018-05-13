@@ -9,8 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="adventpro-light.ttf">
-            <string>AdventPro-Light</string>
+        <array key="Montserrat-Light.ttf">
+            <string>Montserrat-Light</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
         </array>
     </customFonts>
     <objects>
@@ -32,7 +35,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="uj9-7W-G5T"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="AdventPro-Light" family="Advent Pro" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -44,8 +47,11 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDe-bT-w5g">
-                    <rect key="frame" x="20" y="286" width="467" height="114"/>
-                    <fontDescription key="fontDescription" name="AdventPro-Light" family="Advent Pro" pointSize="17"/>
+                    <rect key="frame" x="20" y="319" width="467" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="yoV-VB-k74"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -53,14 +59,13 @@
             <color key="backgroundColor" red="0.20800885558128357" green="0.19990909099578857" blue="0.20395964384078979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="uJ2-Vy-WZd" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="2fX-UW-elq"/>
-                <constraint firstAttribute="bottom" secondItem="jDe-bT-w5g" secondAttribute="bottom" constant="8" id="82D-h4-rGd"/>
                 <constraint firstItem="jDe-bT-w5g" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="20" id="BId-Vs-4II"/>
                 <constraint firstItem="EFI-RN-0Yw" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="20" id="ECq-UJ-sKj"/>
                 <constraint firstAttribute="trailing" secondItem="EFI-RN-0Yw" secondAttribute="trailing" constant="20" id="Lst-Sa-Dk8"/>
                 <constraint firstAttribute="trailing" secondItem="jDe-bT-w5g" secondAttribute="trailing" constant="20" id="T0S-Ca-L1y"/>
                 <constraint firstItem="uJ2-Vy-WZd" firstAttribute="top" secondItem="EFI-RN-0Yw" secondAttribute="bottom" constant="39" id="q2c-r4-zZJ"/>
                 <constraint firstItem="EFI-RN-0Yw" firstAttribute="top" secondItem="2" secondAttribute="top" constant="20" id="shJ-9n-NwG"/>
-                <constraint firstItem="jDe-bT-w5g" firstAttribute="top" secondItem="uJ2-Vy-WZd" secondAttribute="bottom" constant="6" id="zMB-yq-b4V"/>
+                <constraint firstItem="jDe-bT-w5g" firstAttribute="top" secondItem="uJ2-Vy-WZd" secondAttribute="bottom" constant="39" id="zMB-yq-b4V"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="99.5" y="-76"/>

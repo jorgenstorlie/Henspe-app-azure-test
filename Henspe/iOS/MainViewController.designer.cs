@@ -14,6 +14,9 @@ namespace Henspe.iOS
 	{
 		[Outlet]
 		UIKit.UITableView myTableView { get; set; }
+
+		[Action ("OnSettingsClicked:")]
+		partial void OnSettingsClicked (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{

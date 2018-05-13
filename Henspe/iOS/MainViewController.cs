@@ -78,10 +78,30 @@ namespace Henspe.iOS
 
 			//this.Title = Foundation.NSBundle.MainBundle.LocalizedString("Kystvarsel.Title", null);
 
+			SetupNavigationBar();
 			SetupView();
 
 			// Events
 			//observerActivatedOccured = NSNotificationCenter.DefaultCenter.AddObserver(new NSString(EventsConst.activatedOccured), HandleActivatedOccured);
+		}
+
+		private void SetupNavigationBar()
+		{
+			// Transparent background
+			UIImage emptyImage = new UIImage();
+			this.NavigationController.NavigationBar.Translucent = true;
+			this.NavigationController.NavigationBar.SetBackgroundImage(emptyImage, UIBarMetrics.Default);
+			this.NavigationController.NavigationBar.ShadowImage = emptyImage;
+
+            // Logo
+			UIImage imgLogo = UIImage.FromFile("ic_snla.png");
+			UIImageView imgViewLogo = new UIImageView(imgLogo);
+			this.NavigationItem.TitleView = imgViewLogo;
+		}
+
+		partial void OnSettingsClicked(NSObject sender)
+		{
+			UIApplication.SharedApplication.OpenUrl(new NSUrl(UIApplication.OpenSettingsUrlString));
 		}
 
 		/*
@@ -592,7 +612,7 @@ namespace Henspe.iOS
             // Label
 			CGRect labelFrame = new CGRect(63, 12, tableView.Bounds.Size.Width - 10, headerHeight - 9);
             UILabel label = new UILabel(labelFrame);
-            label.Font = UIFont.SystemFontOfSize(17.0f, UIFontWeight.Medium);
+			label.Font = FontConst.fontHeading;
 			label.TextColor = ColorConst.textColor;
 			label.Text = structureSection.description;
 

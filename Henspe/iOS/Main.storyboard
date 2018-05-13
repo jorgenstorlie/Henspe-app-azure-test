@@ -9,6 +9,14 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Light.ttf">
+            <string>Montserrat-Light</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Main View Controller-->
         <scene sceneID="lLf-d9-Dvz">
@@ -38,7 +46,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="u7i-4k-008"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -83,7 +91,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="o93-Jb-oo5"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -92,7 +100,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="ZGj-oq-z7s"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
                                                     <color key="textColor" red="0.68627450980000004" green="0.68235294120000001" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -140,6 +148,13 @@
                             <constraint firstItem="cVL-JB-Q0Q" firstAttribute="leading" secondItem="O2c-55-EEQ" secondAttribute="leading" id="o6M-Gk-iMX"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="2gz-NO-E1J">
+                        <barButtonItem key="rightBarButtonItem" image="ic_settings.png" id="Gpd-uZ-SzE">
+                            <connections>
+                                <action selector="OnSettingsClicked:" destination="39h-0T-6KN" id="nU3-jx-zDM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="myTableView" destination="cVL-JB-Q0Q" id="liJ-Ve-Xh2"/>
@@ -147,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cSm-pF-HMG" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.91625615763547"/>
+            <point key="canvasLocation" x="908" y="138.91625615763547"/>
         </scene>
         <!--Initial View Controller-->
         <scene sceneID="FZU-qU-vpw">
@@ -167,7 +182,7 @@
                                     <constraint firstAttribute="height" constant="28" id="9JZ-FA-Hfu"/>
                                     <constraint firstAttribute="width" constant="117" id="zad-aP-VRd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.0" green="0.17254901960784313" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -181,7 +196,7 @@
                                     <constraint firstAttribute="height" constant="28" id="otC-2w-7JW"/>
                                     <constraint firstAttribute="width" constant="117" id="xUf-q9-br5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.0" green="0.17254901960784313" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -237,12 +252,32 @@
                         <outlet property="btnSkip" destination="7eI-B5-8dI" id="dpv-dg-EPQ"/>
                         <outlet property="pagPager" destination="SJH-hk-fxF" id="d8v-TS-DqS"/>
                         <outlet property="scrScrollView" destination="9dE-me-Z3m" id="akk-ZS-36h"/>
-                        <segue destination="39h-0T-6KN" kind="presentation" identifier="segueInitialized" id="GTY-Nq-JxO"/>
+                        <segue destination="gLB-ji-1B0" kind="presentation" identifier="segueInitialized" id="EMM-9T-6Qk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NKG-Cn-zbo" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-871" y="139"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CfQ-EH-O3I">
+            <objects>
+                <navigationController id="gLB-ji-1B0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cjc-Et-Ivb">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="39h-0T-6KN" kind="relationship" relationship="rootViewController" id="yOr-AA-UoZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYg-bM-hr3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12" y="139"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="ic_settings.png" width="26" height="26"/>
+    </resources>
+    <color key="tintColor" red="0.89803921568627454" green="0.10588235294117647" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

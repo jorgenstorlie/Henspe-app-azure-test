@@ -2,26 +2,42 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>StringsTable</key>
+	<string>Root</string>
 	<key>PreferenceSpecifiers</key>
 	<array>
 		<dict>
-			<key>Title</key>
-			<string>Innstillinger</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
+			<key>FooterText</key>
+			<string>FooterInfoText</string>
+			<key>Title</key>
+			<string>CustomSettingsTitle</string>
 		</dict>
 		<dict>
-			<key>Key</key>
-			<string>settingsDeleteAllData</string>
-			<key>Title</key>
-			<string>Slett alle data ved neste start</string>
-			<key>Type</key>
-			<string>PSToggleSwitchSpecifier</string>
 			<key>DefaultValue</key>
-			<false/>
+			<integer>2</integer>
+			<key>Key</key>
+			<string>settings_user_defined_coordinate_format</string>
+			<key>Title</key>
+			<string>UserDefCoordinateFormat</string>
+			<key>Titles</key>
+			<array>
+				<string>CoordinateFormatDD</string>
+				<string>CoordinateFormatDDM</string>
+				<string>CoordinateFormatDMS</string>
+				<string>CoordinateFormatUTM</string>
+			</array>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Values</key>
+			<array>
+				<integer>1</integer>
+				<integer>2</integer>
+				<integer>3</integer>
+				<integer>4</integer>
+			</array>
 		</dict>
 	</array>
-	<key>StringsTable</key>
-	<string>Root</string>
 </dict>
 </plist>
