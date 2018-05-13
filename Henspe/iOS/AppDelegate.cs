@@ -1,5 +1,6 @@
 ﻿using System;
 using UIKit;
+using CoreLocation;
 using Henspe.Core.Storage;
 using Foundation;
 using System.IO;
@@ -15,6 +16,7 @@ using Henspe.Core;
 using System.Threading.Tasks;
 using Henspe.iOS.Const;
 using Henspe.iOS.Communication;
+using Henspe.iOS.AppModel;
 using System.Collections.Generic;
 using Henspe.Core.Model.Dto;
 using static Henspe.Core.Model.Dto.StructureSectionDto;
@@ -44,6 +46,34 @@ namespace Henspe.iOS
 
 		// Format
         public int coordinateFormat = CoordinateUtil.ddm; // Default coordinate format
+
+		// Flash text
+        private string lastNorthText = "";
+        private string lastEastText = "";
+        private string lastAccuracyLargeText = "";
+        private string lastAccuracySmallText = "";
+
+        // GPS
+        public double highAndLowAccuracyDivider = 200;
+        public double gpsAccuracyRequirement = 200;
+        public double distanceToUpdateAddress = 200;
+        public bool gpsEventOccured = false;
+        public int gpsCoverage = GpsCoverageConst.none;
+        public int lastPositionType = PositionTypeConst.off;
+        public CLAuthorizationStatus gpsStatus;
+        public bool gpsStarted = false;
+        public CLLocationManager iPhoneLocationManager = null;
+        public CLLocation currentLocation = null;
+        public CLLocation lastLocation = null;
+        public CLGeocoder geocoder = null;
+        public bool gpsPosFound = false;
+        public CLLocation lastAddressLocation = null;
+        public GPSObject gpsCurrentPositionObject = new GPSObject();
+        public GPSObject gpsStoredPositionObject = new GPSObject();
+        public double desiredAccuracy = 10;
+        public double distanceFilter = 10;
+		public double roundedLatitude;
+		public double roundedLongitude;
 
         // class-level declarations
         UIWindow window;

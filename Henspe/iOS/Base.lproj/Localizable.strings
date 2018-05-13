@@ -77,7 +77,7 @@ Structure.Hendelse.Brann = "Brann";
 // Eksakt posisjon
 Structure.EksaktPosisjon.Header = "EKSAKT POSISJON"; 
 Structure.EksaktPosisjon.Posisjon = "Posisjon"; 
-Structure.EksaktPosisjon.Adresse = "Adresse";
+Structure.EksaktPosisjon.Adresse = "Nærmeste adresse";
 Structure.EksaktPosisjon.Oppmotested = "Oppmøtested";
 Structure.EksaktPosisjon.Ankomst = "Ankomst";
 Structure.EksaktPosisjon.Avreise = "Avreise";

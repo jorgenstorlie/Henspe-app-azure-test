@@ -31,14 +31,14 @@ namespace Henspe.iOS.AppModel
 			{
 				_gpsCoordinates = value;
 
-                string degrees = Foundation.NSBundle.MainBundle.LocalizedString("Hjelp113.iOS.Element.Degrees.Text", null);
-                string minutes = Foundation.NSBundle.MainBundle.LocalizedString("Hjelp113.iOS.Element.Minutes.Text", null);
-                string seconds = Foundation.NSBundle.MainBundle.LocalizedString("Hjelp113.iOS.Element.Seconds.Text", null);
+				string degrees = Foundation.NSBundle.MainBundle.LocalizedString("Location.Element.Degrees.Text", null);
+				string minutes = Foundation.NSBundle.MainBundle.LocalizedString("Location.Element.Minutes.Text", null);
+				string seconds = Foundation.NSBundle.MainBundle.LocalizedString("Location.Element.Seconds.Text", null);
 
-                string north = Foundation.NSBundle.MainBundle.LocalizedString("Hjelp113.iOS.Element.North.Text", null);
-                string east = Foundation.NSBundle.MainBundle.LocalizedString("Hjelp113.iOS.Element.East.Text", null);
-                string south = Foundation.NSBundle.MainBundle.LocalizedString("Hjelp113.iOS.Element.South.Text", null);
-                string west = Foundation.NSBundle.MainBundle.LocalizedString("Hjelp113.iOS.Element.West.Text", null);
+				string north = Foundation.NSBundle.MainBundle.LocalizedString("Location.Element.North.Text", null);
+				string east = Foundation.NSBundle.MainBundle.LocalizedString("Location.Element.East.Text", null);
+				string south = Foundation.NSBundle.MainBundle.LocalizedString("Location.Element.South.Text", null);
+				string west = Foundation.NSBundle.MainBundle.LocalizedString("Location.Element.West.Text", null);
 
                 if (AppDelegate.current.coordinateFormat == CoordinateUtil.undefinedFormat)
                     AppDelegate.current.coordinateFormat = CoordinateUtil.ddm; // Default value
