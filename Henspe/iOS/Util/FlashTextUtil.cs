@@ -12,25 +12,31 @@ namespace Henspe.iOS.Util
 {
 	public class FlashTextUtil
 	{
-		static private bool animationInProgress = false;
+		static private bool positionAnimationInProgress = false;
+		static private bool addressAnimationInProgress = false;
 		static private Timer checkTimer = null;
+
+		public enum Type
+        {
+            Position,
+            Address,
+        }
 
 		public FlashTextUtil ()
 		{
 		}
 			
-		static public string FlashChangedText (string lastText, string newText, UILabel labText)
+		static public string FlashChangedText (string lastText, string newText, UILabel labText, Type type)
 		{
             if (labText == null)
                 return ""; 
 
-            if (newText == null
-                || (newText != null && newText.Length == 0))
+            if (newText == null || (newText != null && newText.Length == 0))
             {
 				return lastText;
             }
 
-			if (animationInProgress == true)
+			if ((type == Type.Position && positionAnimationInProgress == true) && (type == Type.Address && addressAnimationInProgress == true))
             {
 				return newText;
             }
@@ -38,14 +44,13 @@ namespace Henspe.iOS.Util
 			if (lastText == newText || lastText.Length == 0)
             {
                 labText.Alpha = 1.0f;
-                //labText.Text = newText;
-                //labText.AccessibilityLabel = newText;
+				labText.Text = newText;
 
 				return newText;
             }
             
 			var attributedString = new NSMutableAttributedString (newText);
-			if ((lastText.Length > 0 && lastText != newText) || animationInProgress == true)
+			if ((lastText.Length > 0 && lastText != newText) || ((type == Type.Position && positionAnimationInProgress == true) || (type == Type.Address && addressAnimationInProgress == true)))
 			{
 				List<string> diff = GetWordDiffFor (newText, lastText);
 				foreach (string word in diff)
@@ -65,7 +70,7 @@ namespace Henspe.iOS.Util
 
 				lastText = newText;
 
-				FadeEnhancedText (labText, labEnhancedText, newText);
+				FadeEnhancedText (labText, labEnhancedText, newText, type);
 			}
 			else
 			{
@@ -87,18 +92,24 @@ namespace Henspe.iOS.Util
 			return diff;
 		}
 
-		private static void FadeEnhancedText(UILabel labText, UILabel labEnhancedText, string newText)
+		private static void FadeEnhancedText(UILabel labText, UILabel labEnhancedText, string newText, Type type)
 		{
-			//view.Layer.RemoveAllAnimations ();
-
-			animationInProgress = true;
+			if(type == Type.Position)
+				positionAnimationInProgress = true;
+			else if (type == Type.Address)
+				addressAnimationInProgress = true;
 
             StopCheckTimer();
 
 			double delayInterval = 1000 * 1; // 1 Second
 
 			checkTimer = new Timer (delayInterval);
-			checkTimer.Elapsed += OnTimerElapsed;
+
+			if (type == Type.Position)
+    			checkTimer.Elapsed += OnTimerPositionElapsed;
+			else if (type == Type.Address)
+				checkTimer.Elapsed += OnTimerAddressElapsed;
+			
 			checkTimer.Start ();
 
 			// Fading in text and out enhanced text 
@@ -132,11 +143,17 @@ namespace Henspe.iOS.Util
             }
         }
 
-		static void OnTimerElapsed (object sender, ElapsedEventArgs e)
+		static void OnTimerPositionElapsed (object sender, ElapsedEventArgs e)
 		{
             StopCheckTimer();
-			animationInProgress = false;
+			positionAnimationInProgress = false;
 		}
+
+		static void OnTimerAddressElapsed(object sender, ElapsedEventArgs e)
+        {
+            StopCheckTimer();
+            addressAnimationInProgress = false;
+        }
 
 		private static NSMutableAttributedString SetAttributeInString(NSMutableAttributedString attributedString, int fromPos, int len, int attributeType)
 		{

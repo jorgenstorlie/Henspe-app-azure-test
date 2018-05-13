@@ -626,7 +626,7 @@ namespace Henspe.iOS
 
                 string newPositionText = latitudeText + "\n" + longitudeText;
 
-                lastPositionText = FlashTextUtil.FlashChangedText(lastPositionText, newPositionText, labLabelBottom);
+				lastPositionText = FlashTextUtil.FlashChangedText(lastPositionText, newPositionText, labLabelBottom, FlashTextUtil.Type.Position);
             }
             else
             {
@@ -660,7 +660,7 @@ namespace Henspe.iOS
 
 				if (placemarks != null && placemarks.Length > 0)
                 {
-                    string text = "";
+                    string newAddressText = "";
 
                     /*
                     Console.WriteLine ("GEO AdministrativeArea: " + placemarks [0].AdministrativeArea);
@@ -683,43 +683,45 @@ namespace Henspe.iOS
 
                         if (addressArrayLines.Count == 0)
                         {
-							text = Foundation.NSBundle.MainBundle.LocalizedString("GPS.UnknownPosition", null);
+							newAddressText = Foundation.NSBundle.MainBundle.LocalizedString("GPS.UnknownPosition", null);
                         }
                         else
                         {
 							if (placemarks[0].Name != null)
 							{
-								text = text + placemarks[0].Name;
+								newAddressText = newAddressText + placemarks[0].Name;
                             }
 
 							if (placemarks[0].PostalCode != null)
 							{
-								if(text.Length > 0)
-									text = text + "\n" + placemarks[0].PostalCode;
+								if(newAddressText.Length > 0)
+									newAddressText = newAddressText + "\n" + placemarks[0].PostalCode;
 								else
-									text = text + placemarks[0].PostalCode;
+									newAddressText = newAddressText + placemarks[0].PostalCode;
 							}    
 
 							if (placemarks[0].Locality != null)
                             {
-                                if(text.Length > 0)
-									text = text + " " + placemarks[0].Locality;
+                                if(newAddressText.Length > 0)
+									newAddressText = newAddressText + " " + placemarks[0].Locality;
                                 else
-									text = text + placemarks[0].Locality;
+									newAddressText = newAddressText + placemarks[0].Locality;
                             }
                         }
                     }
                     else
                     {
-						text = Foundation.NSBundle.MainBundle.LocalizedString("GPS.UnknownPosition", null);
+						newAddressText = Foundation.NSBundle.MainBundle.LocalizedString("GPS.UnknownPosition", null);
                     }
 
-                    if (text != lastAddressText)
+					if (newAddressText != lastAddressText)
                     {
-                        lastAddressText = text;
-
-						labLabelBottom.Text = text;
+						lastAddressText = FlashTextUtil.FlashChangedText(lastAddressText, newAddressText, labLabelBottom, FlashTextUtil.Type.Address);
                     }
+					else
+					{
+						labLabelBottom.Text = lastAddressText;
+					}
                 }
                 else
                 {
