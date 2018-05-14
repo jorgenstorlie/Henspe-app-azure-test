@@ -47,8 +47,17 @@ namespace Henspe.iOS
 			SetupView();
 
 			// Events
-			//observerActivatedOccured = NSNotificationCenter.DefaultCenter.AddObserver(new NSString(EventsConst.activatedOccured), HandleActivatedOccured);
+			observerActivatedOccured = NSNotificationCenter.DefaultCenter.AddObserver(new NSString(EventConst.appActivated), HandleActivatedOccured);
 		}
+
+		public void HandleActivatedOccured(NSNotification notification)
+        {
+			if(AppDelegate.current.gpsCurrentPositionObject != null)
+				AppDelegate.current.gpsCurrentPositionObject.gpsCoordinates = AppDelegate.current.currentLocation.Coordinate;
+
+			RefreshPositionRow();
+            RefreshAddressRow();
+        }
 
 		private void SetupNavigationBar()
 		{
@@ -352,17 +361,24 @@ namespace Henspe.iOS
 			{
 				AppDelegate.current.lastAddressLocation = AppDelegate.current.currentLocation;
 
-				// Refresh position
-                RefreshTableRow(1, 0);
-
-                // Refresh address
-                RefreshTableRow(1, 1);
+				RefreshPositionRow();
+				RefreshAddressRow();
 
 				return true;
 			}
 
 			return false;
 		}
+
+        private void RefreshPositionRow()
+		{
+			RefreshTableRow(1, 0);
+		}
+
+		private void RefreshAddressRow()
+        {
+            RefreshTableRow(1, 1);
+        }
 
 		private void RefreshTableRow(int section, int row)
         {

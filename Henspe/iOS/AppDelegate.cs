@@ -242,8 +242,9 @@ namespace Henspe.iOS
             // Sync after sleep
             appActicatedOccured = true;
 
-            NSNotificationCenter.DefaultCenter.PostNotificationName("appActivated", this);
 			CheckForAppSettings();
+
+			NSNotificationCenter.DefaultCenter.PostNotificationName(EventConst.appActivated, this);
         }
 
 		private void CheckForAppSettings()

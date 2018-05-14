@@ -9,6 +9,7 @@ namespace Henspe.iOS.Const
         public const string stepElementSelectedEvent = "OnStepElementSelected";
         public const string stepElementClearAllEvent = "OnStepElementClearAll";
 		public const string gpsEvent = "OnGPSUpdated";
+		public const string appActivated = "OnAppActivated";
 
 		public EventConst ()
 		{
