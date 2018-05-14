@@ -196,6 +196,7 @@
     <Compile Include="Util\iOSMapUtil.cs" />
     <Compile Include="Util\FlashTextUtil.cs" />
     <Compile Include="Util\CloneUtil.cs" />
+    <Compile Include="Extension\StringExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Base.lproj\Localizable.strings" />

@@ -11,6 +11,8 @@ using Henspe.iOS.AppModel;
 using Henspe.iOS.Const;
 using Henspe.iOS.Util;
 using UIKit;
+using Henspe.iOS.Extension;
+using Henspe.Core.Util;
 
 namespace Henspe.iOS
 {
@@ -391,7 +393,7 @@ namespace Henspe.iOS
     // Table view source
     public partial class MainListTableViewSource : UITableViewSource
     {
-		private int headerHeight = 70;
+		private int headerHeight = 90;
 		private WeakReference<MainViewController> _parent;
 
 		private string lastPositionText = "";
@@ -485,7 +487,7 @@ namespace Henspe.iOS
 			headerView.AddSubview(imageView);
 
             // Label
-			CGRect labelFrame = new CGRect(63, 12, tableView.Bounds.Size.Width - 10, headerHeight - 9);
+			CGRect labelFrame = new CGRect(63, headerHeight - 69, tableView.Bounds.Size.Width - 10, headerHeight - 9);
             UILabel label = new UILabel(labelFrame);
 			label.Font = FontConst.fontHeading;
 			label.TextColor = ColorConst.textColor;
@@ -535,16 +537,13 @@ namespace Henspe.iOS
 			else
 			{
 				MainLocationRowViewCell mainLocationRowViewCell = tableView.DequeueReusableCell(cellIdentifier2) as MainLocationRowViewCell;
-
+                
 				if (mainLocationRowViewCell.LabLabelBottom.Text != null)
                 {
-					NSString cellText = new NSString(mainLocationRowViewCell.LabLabelBottom.Text);
-					UIFont font = mainLocationRowViewCell.LabLabelBottom.Font;
-                    float width = (float)tableView.Frame.Width - 63.0f - 15.0f;
+					nfloat width = tableView.Frame.Width - 63.0f - 15.0f;
+					nfloat height = mainLocationRowViewCell.LabLabelBottom.Text.StringHeight(mainLocationRowViewCell.LabLabelBottom.Font, width);
+					height = height + (78 - 21) + 20;
 
-                    CGSize constraintSize = new CGSize(width, float.MaxValue);
-                    CGSize labelSize = cellText.StringSize(font, constraintSize, UILineBreakMode.WordWrap);
-					nfloat height = labelSize.Height + (85 - 21);
 					return height;
                 }
 				else
@@ -602,9 +601,26 @@ namespace Henspe.iOS
                 MainLocationRowViewCell mainLocationRowViewCell = tableView.DequeueReusableCell(cellIdentifier2) as MainLocationRowViewCell;
 
 				mainLocationRowViewCell.LabLabelTop.TextColor = ColorConst.textColor;
-				mainLocationRowViewCell.LabLabelTop.Text = structureElement.description;
+
+				string formatDescription = "Feil format";
+
+				if(AppDelegate.current.coordinateFormat == CoordinateUtil.dd)
+					formatDescription = Foundation.NSBundle.MainBundle.LocalizedString("CoordinateFormatDD", null);
+				else if (AppDelegate.current.coordinateFormat == CoordinateUtil.ddm)
+					formatDescription = Foundation.NSBundle.MainBundle.LocalizedString("CoordinateFormatDDM", null);
+				else if (AppDelegate.current.coordinateFormat == CoordinateUtil.dms)
+					formatDescription = Foundation.NSBundle.MainBundle.LocalizedString("CoordinateFormatDMS", null);
+				else if (AppDelegate.current.coordinateFormat == CoordinateUtil.utm)
+					formatDescription = Foundation.NSBundle.MainBundle.LocalizedString("CoordinateFormatUTM", null);
+
+				mainLocationRowViewCell.LabLabelTop.Text = structureElement.description + " (" + formatDescription + ")";
 
 				mainLocationRowViewCell.LabLabelBottom.TextColor = ColorConst.textGrayColor;
+
+				if (row == 0 && DeviceUtil.isIpad() == false && AppDelegate.current.coordinateFormat == CoordinateUtil.dms)
+                    mainLocationRowViewCell.LabLabelBottom.Font = FontConst.fontMediumLight;
+                else
+                    mainLocationRowViewCell.LabLabelBottom.Font = FontConst.fontLarge;
 			
                 if(section == 1 && row == 0)
 				{

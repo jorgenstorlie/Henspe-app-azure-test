@@ -10,6 +10,12 @@ Alert.NewVersion.Message2 = "av eSTROKE appen er nyere enn den du bruker";
 Alert.NewVersion.Message3 = "Ønsker du å oppdatere til den nye versjonen?";
 Alert.NewVersion.Message4 = "Lukk denne appen og åpne den nye versjonen av eSTROKE når den nye versjonen er ferdig installert.";
 
+// Format
+CoordinateFormatDD = "Grader";
+CoordinateFormatDDM = "Grader og min";
+CoordinateFormatDMS = "Grader, min og sek";
+CoordinateFormatUTM = "UTM";
+
 // GPS
 GPS.NoAccessToGPS.Message = "Fikk ikke tilgang til Sted. Velg tannhjulet øverst til høyre og velg tillat når appen er i bruk for Sted så appen skal kunne vise stedet du er.";
 GPS.UnknownAddress = "Ukjent adresse";
