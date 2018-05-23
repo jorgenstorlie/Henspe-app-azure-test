@@ -244,7 +244,10 @@ namespace Henspe.iOS
 
 			CheckForAppSettings();
 
-			NSNotificationCenter.DefaultCenter.PostNotificationName(EventConst.appActivated, this);
+			InvokeOnMainThread(delegate
+            {
+        	    NSNotificationCenter.DefaultCenter.PostNotificationName(EventConst.appActivated, this);
+            });
         }
 
 		private void CheckForAppSettings()

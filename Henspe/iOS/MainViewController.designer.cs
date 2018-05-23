@@ -15,6 +15,9 @@ namespace Henspe.iOS
 		[Outlet]
 		UIKit.UITableView myTableView { get; set; }
 
+		[Action ("OnInfoClicked:")]
+		partial void OnInfoClicked (Foundation.NSObject sender);
+
 		[Action ("OnSettingsClicked:")]
 		partial void OnSettingsClicked (Foundation.NSObject sender);
 		

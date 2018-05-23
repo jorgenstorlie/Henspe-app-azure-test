@@ -10,19 +10,25 @@ using UIKit;
 
 namespace Henspe.iOS
 {
-    public partial class InitialViewController : UIViewController
-    {
-        int totalPages = 3;
-        int currentPage = 0;
-        private DateTime debugTime;
+	public partial class InitialViewController : UIViewController
+	{
+		int totalPages = 3;
+		int currentPage = 0;
+		private DateTime debugTime;
 
-        private double scrollTime = 0.2;
-        private float scrollViewBorder = 8;
-        private List<InitialCardViewController> initialCardViewControllerList = null;
+		private double scrollTime = 0.2;
+		private float scrollViewBorder = 8;
+		private List<InitialCardViewController> initialCardViewControllerList = null;
 
-        //private List<Category> categoryList = new List<Category>();
-        //private List<Speaker> speakerList = new List<Speaker>();
-        //private List<Location> locationList = new List<Location>();
+		//private List<Category> categoryList = new List<Category>();
+		//private List<Speaker> speakerList = new List<Speaker>();
+		//private List<Location> locationList = new List<Location>();
+
+		public enum NextType
+		{
+			Next,
+            Finished
+		}
 
         public InitialViewController(IntPtr handle) : base(handle)
         {
@@ -36,8 +42,6 @@ namespace Henspe.iOS
         public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
-
-            SetupView();
         }
 
         public override void ViewDidAppear(bool animated)
@@ -48,6 +52,8 @@ namespace Henspe.iOS
             {
                 scrScrollView.Scrolled += OnScrollViewEvent;
 
+                ClearAllBeforeDrawing();
+                SetupView();
                 DoPopulateInitalCardInScrollView();
             }
             else
@@ -56,7 +62,21 @@ namespace Henspe.iOS
             }
         }
 
-        void SetupView()
+		private void ClearAllBeforeDrawing()
+		{
+			currentPage = 0;
+
+			foreach(UIView view in scrScrollView.Subviews)
+			{
+				view.RemoveFromSuperview();
+			}
+
+			scrScrollView.ContentSize = new CGSize(0, 0);
+
+			initialCardViewControllerList = null;
+		}
+
+		void SetupView()
         {
 			pagPager.PageIndicatorTintColor = UIColor.White;
 			pagPager.CurrentPageIndicatorTintColor = ColorConst.themeSecondaryColor;
@@ -78,27 +98,20 @@ namespace Henspe.iOS
                 btnNext.Hidden = true;
             }
 
-            ShowActivityIndicatorForNext(false);
+			ShowActivityIndicatorForNext(NextType.Next);
         }
 
-        private void ShowActivityIndicatorForNext(bool show)
+		private void ShowActivityIndicatorForNext(NextType nextType)
         {
-			if (UserUtil.credentials.instructionsFinished == true)
+			btnNext.Hidden = false;
+
+			if (nextType == NextType.Next)
             {
-                btnNext.Hidden = true;
-                actActivityIndicator.Hidden = true;
+                btnNext.SetTitle(Foundation.NSBundle.MainBundle.LocalizedString("Initial.Next", null) + " >", UIControlState.Normal);
             }
-            else if (show)
+			else if(nextType == NextType.Finished)
             {
-                btnNext.Hidden = true;
-                actActivityIndicator.StartAnimating();
-                actActivityIndicator.Hidden = false;
-            }
-            else
-            {
-                btnNext.Hidden = false;
-                actActivityIndicator.Hidden = true;
-                actActivityIndicator.StopAnimating();
+				btnNext.SetTitle(Foundation.NSBundle.MainBundle.LocalizedString("Initial.Finished", null), UIControlState.Normal);
             }
         }
 
@@ -131,7 +144,7 @@ namespace Henspe.iOS
             viewRectangle.Y = 0 + scrollViewBorder;
             viewRectangle.Size = new SizeF((float)scrScrollView.Frame.Size.Width - (scrollViewBorder * 2), (float)scrScrollView.Frame.Size.Height);
 
-            InitialCardViewController initialCardViewController = new InitialCardViewController(i);
+			InitialCardViewController initialCardViewController = new InitialCardViewController(i);
             initialCardViewController.View.Frame = viewRectangle;
 
             return initialCardViewController;
@@ -139,14 +152,15 @@ namespace Henspe.iOS
 
         partial void OnSkipClicked(NSObject sender)
         {
-            GoToLoginFirstTime();
+            GoToMain();
         }
 
         partial void OnNextClicked(NSObject sender)
         {
             currentPage = currentPage + 1;
+
             if (currentPage == totalPages)
-                GoToLoginFirstTime();
+                GoToMain();
             else
                 GotoPage(currentPage);
         }
@@ -183,14 +197,9 @@ namespace Henspe.iOS
 			if (UserUtil.credentials.instructionsFinished == false)
             {
                 if (currentPage == 2)
-                {
-                    //if (btnSkip.Hidden == false)
-                    ShowActivityIndicatorForNext(false);
-                    //else
-                    //    ShowActivityIndicatorForNext(true);
-                }
+					ShowActivityIndicatorForNext(NextType.Finished);
                 else
-                    ShowActivityIndicatorForNext(false);
+					ShowActivityIndicatorForNext(NextType.Next);
             }
 
             foreach (InitialCardViewController initialCardViewController in initialCardViewControllerList)
@@ -217,9 +226,7 @@ namespace Henspe.iOS
             alert.Show();
         }
 
-        // GoToTabs();
-
-        private void GoToLoginFirstTime()
+		private void GoToMain()
         {
 			UserUtil.credentials.instructionsFinished = true;
 
@@ -241,6 +248,7 @@ namespace Henspe.iOS
         {
             if (segue.Identifier == "segueInitialized")
             {
+				ClearAllBeforeDrawing();
             }
         }
 
@@ -258,7 +266,7 @@ namespace Henspe.iOS
                 DoPopulateInitalCardInScrollView();
                 pagPager.Pages = totalPages;
                 currentPage = 0;
-                ShowActivityIndicatorForNext(false);
+				ShowActivityIndicatorForNext(NextType.Next);
 
                 CGPoint leftOffset = new CGPoint(0, 0);
                 scrScrollView.SetContentOffset(leftOffset, true);

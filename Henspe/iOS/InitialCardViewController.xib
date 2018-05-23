@@ -47,8 +47,10 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDe-bT-w5g">
-                    <rect key="frame" x="20" y="319" width="467" height="28"/>
+                    <rect key="frame" x="153.5" y="319" width="200" height="28"/>
                     <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="RK3-fi-C3n"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="460" id="V6O-4V-ZJ3"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="yoV-VB-k74"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
@@ -59,10 +61,11 @@
             <color key="backgroundColor" red="0.20800885558128357" green="0.19990909099578857" blue="0.20395964384078979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="uJ2-Vy-WZd" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="2fX-UW-elq"/>
-                <constraint firstItem="jDe-bT-w5g" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="20" id="BId-Vs-4II"/>
+                <constraint firstItem="jDe-bT-w5g" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="8Mh-4h-IHg"/>
+                <constraint firstItem="jDe-bT-w5g" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2" secondAttribute="leading" constant="20" id="BId-Vs-4II"/>
                 <constraint firstItem="EFI-RN-0Yw" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="20" id="ECq-UJ-sKj"/>
                 <constraint firstAttribute="trailing" secondItem="EFI-RN-0Yw" secondAttribute="trailing" constant="20" id="Lst-Sa-Dk8"/>
-                <constraint firstAttribute="trailing" secondItem="jDe-bT-w5g" secondAttribute="trailing" constant="20" id="T0S-Ca-L1y"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jDe-bT-w5g" secondAttribute="trailing" constant="20" id="T0S-Ca-L1y"/>
                 <constraint firstItem="uJ2-Vy-WZd" firstAttribute="top" secondItem="EFI-RN-0Yw" secondAttribute="bottom" constant="39" id="q2c-r4-zZJ"/>
                 <constraint firstItem="EFI-RN-0Yw" firstAttribute="top" secondItem="2" secondAttribute="top" constant="20" id="shJ-9n-NwG"/>
                 <constraint firstItem="jDe-bT-w5g" firstAttribute="top" secondItem="uJ2-Vy-WZd" secondAttribute="bottom" constant="39" id="zMB-yq-b4V"/>

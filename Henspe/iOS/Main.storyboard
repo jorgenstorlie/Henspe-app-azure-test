@@ -147,6 +147,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2gz-NO-E1J">
+                        <barButtonItem key="leftBarButtonItem" title="'" image="ic_info.png" id="rfW-Rs-Tw6">
+                            <connections>
+                                <action selector="OnInfoClicked:" destination="39h-0T-6KN" id="98r-Ph-eVh"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="ic_settings.png" id="Gpd-uZ-SzE">
                             <connections>
                                 <action selector="OnSettingsClicked:" destination="39h-0T-6KN" id="nU3-jx-zDM"/>
@@ -156,9 +161,11 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="myTableView" destination="cVL-JB-Q0Q" id="liJ-Ve-Xh2"/>
+                        <segue destination="OKo-4P-KxK" kind="unwind" identifier="segueInit" unwindAction="UnwindToInit:" id="7lG-vf-gEM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cSm-pF-HMG" sceneMemberID="firstResponder"/>
+                <exit id="OKo-4P-KxK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="908" y="138.91625615763547"/>
         </scene>
@@ -275,6 +282,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_info.png" width="26" height="26"/>
         <image name="ic_settings.png" width="26" height="26"/>
     </resources>
     <color key="tintColor" red="0.89803921568627454" green="0.10588235294117647" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

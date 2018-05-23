@@ -11,9 +11,10 @@ Alert.NewVersion.Message3 = "Ønsker du å oppdatere til den nye versjonen?";
 Alert.NewVersion.Message4 = "Lukk denne appen og åpne den nye versjonen av eSTROKE når den nye versjonen er ferdig installert.";
 
 // Format
+CoordinateFormatError = "Feil format";
 CoordinateFormatDD = "Grader";
-CoordinateFormatDDM = "Grader og min";
-CoordinateFormatDMS = "Grader, min og sek";
+CoordinateFormatDDM = "Grader og min.";
+CoordinateFormatDMS = "Grader, min. og sek.";
 CoordinateFormatUTM = "UTM";
 
 // GPS
@@ -49,6 +50,7 @@ Navigation.Menuitem.Hjem = "Hjem";
 // Initial
 Initial.Skip = "Hopp over";
 Initial.Next = "Neste";
+Initial.Finished = "Ferdig";
 Initial.PageOne.Header = "VELKOMMEN TIL HENSPE";
 Initial.PageOne.Text = "Appen er laget for å gi personell i nødetatene hjelp til å sende gode strukturerte tilbakemeldinger over sambandet ved ulike hendelser. ";
 Initial.PageTwo.Header = "DIGITAL VERSJON AV KORTET";

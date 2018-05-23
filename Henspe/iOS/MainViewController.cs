@@ -54,7 +54,7 @@ namespace Henspe.iOS
 
 		public void HandleActivatedOccured(NSNotification notification)
         {
-			if(AppDelegate.current.gpsCurrentPositionObject != null)
+			if(AppDelegate.current.gpsCurrentPositionObject != null && AppDelegate.current.currentLocation != null)
 				AppDelegate.current.gpsCurrentPositionObject.gpsCoordinates = AppDelegate.current.currentLocation.Coordinate;
 
 			RefreshPositionRow();
@@ -136,6 +136,9 @@ namespace Henspe.iOS
 			myTableView.BackgroundColor = UIColor.Clear;
 			myTableView.SeparatorColor = UIColor.Clear;
 			this.AutomaticallyAdjustsScrollViewInsets = false;
+
+			UIEdgeInsets insets = new UIEdgeInsets(0, 0, 100, 0);
+			myTableView.ContentInset = insets;
 
 			mainListTableViewSource.sectionsWithRows = AppDelegate.current.structure;
 
@@ -387,7 +390,24 @@ namespace Henspe.iOS
 			NSIndexPath[] indexPathList = new NSIndexPath[] { NSIndexPath.FromRowSection(row, section) };
 			myTableView.ReloadRows(indexPathList, UITableViewRowAnimation.Fade);
         }
-        #endregion
+		#endregion
+
+
+		partial void OnInfoClicked(NSObject sender)
+		{
+			InvokeOnMainThread(() =>
+            {
+                this.PerformSegue("segueInit", this);
+            });
+		}
+
+		public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
+        {
+			if (segue.Identifier == "segueInit")
+            {
+				UserUtil.credentials.instructionsFinished = false;
+            }
+        }
 	}
 
     // Table view source
@@ -490,7 +510,7 @@ namespace Henspe.iOS
 			CGRect labelFrame = new CGRect(63, headerHeight - 69, tableView.Bounds.Size.Width - 10, headerHeight - 9);
             UILabel label = new UILabel(labelFrame);
 			label.Font = FontConst.fontHeading;
-			label.TextColor = ColorConst.textColor;
+			label.TextColor = ColorConst.textRed;
 			label.Text = structureSection.description;
 
             headerView.AddSubview(label);
@@ -542,7 +562,7 @@ namespace Henspe.iOS
                 {
 					nfloat width = tableView.Frame.Width - 63.0f - 15.0f;
 					nfloat height = mainLocationRowViewCell.LabLabelBottom.Text.StringHeight(mainLocationRowViewCell.LabLabelBottom.Font, width);
-					height = height + (78 - 21) + 20;
+					height = height + (78 - 21) + 25;
 
 					return height;
                 }
@@ -602,18 +622,25 @@ namespace Henspe.iOS
 
 				mainLocationRowViewCell.LabLabelTop.TextColor = ColorConst.textColor;
 
-				string formatDescription = "Feil format";
-
-				if(AppDelegate.current.coordinateFormat == CoordinateUtil.dd)
-					formatDescription = Foundation.NSBundle.MainBundle.LocalizedString("CoordinateFormatDD", null);
-				else if (AppDelegate.current.coordinateFormat == CoordinateUtil.ddm)
-					formatDescription = Foundation.NSBundle.MainBundle.LocalizedString("CoordinateFormatDDM", null);
-				else if (AppDelegate.current.coordinateFormat == CoordinateUtil.dms)
-					formatDescription = Foundation.NSBundle.MainBundle.LocalizedString("CoordinateFormatDMS", null);
-				else if (AppDelegate.current.coordinateFormat == CoordinateUtil.utm)
-					formatDescription = Foundation.NSBundle.MainBundle.LocalizedString("CoordinateFormatUTM", null);
-
-				mainLocationRowViewCell.LabLabelTop.Text = structureElement.description + " (" + formatDescription + ")";
+                if(row == 0)
+				{
+					string formatDescription = Foundation.NSBundle.MainBundle.LocalizedString("CoordinateFormatError", null);
+					
+					if(AppDelegate.current.coordinateFormat == CoordinateUtil.dd)
+						formatDescription = Foundation.NSBundle.MainBundle.LocalizedString("CoordinateFormatDD", null);
+					else if (AppDelegate.current.coordinateFormat == CoordinateUtil.ddm)
+						formatDescription = Foundation.NSBundle.MainBundle.LocalizedString("CoordinateFormatDDM", null);
+					else if (AppDelegate.current.coordinateFormat == CoordinateUtil.dms)
+						formatDescription = Foundation.NSBundle.MainBundle.LocalizedString("CoordinateFormatDMS", null);
+					else if (AppDelegate.current.coordinateFormat == CoordinateUtil.utm)
+						formatDescription = Foundation.NSBundle.MainBundle.LocalizedString("CoordinateFormatUTM", null);
+					
+					mainLocationRowViewCell.LabLabelTop.Text = structureElement.description + " (" + formatDescription + ")";
+                }
+				else
+				{
+					mainLocationRowViewCell.LabLabelTop.Text = structureElement.description;
+				}
 
 				mainLocationRowViewCell.LabLabelBottom.TextColor = ColorConst.textGrayColor;
 
@@ -761,5 +788,5 @@ namespace Henspe.iOS
                 }
             }
         }
-    }
+	}
 }

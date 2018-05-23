@@ -28,6 +28,10 @@ namespace Henspe.iOS
         CGPoint img23ViewOriginCenter;
 		UIImageView img24ImageView;
         CGPoint img24ViewOriginCenter;
+		UIImageView img25ImageView;
+        CGPoint img25ViewOriginCenter;
+		UIImageView img26ImageView;
+        CGPoint img26ViewOriginCenter;
 
         // Intro 3
         UIImageView img31ImageView;
@@ -35,9 +39,9 @@ namespace Henspe.iOS
 
         CGPoint imageOriginCenter;
 
-        public InitialCardViewController(int inputPageNumber) : base("InitialCardViewController", null)
+        public InitialCardViewController(int pageNumber) : base("InitialCardViewController", null)
         {
-            pageNumber = inputPageNumber;
+			this.pageNumber = pageNumber;
         }
 
         public override void ViewDidLoad()
@@ -114,14 +118,20 @@ namespace Henspe.iOS
 				img21ImageView = CreateImage("intro2-1.png", 0.0f, 0.1f, 0.15f, 0.15f, 1.0f);
                 img21ViewOriginCenter = img21ImageView.Center;
 
-				img22ImageView = CreateImage("intro2-2.png", 1.0f, 0.1f, 0.15f, 0.15f, 1.0f);
+				img22ImageView = CreateImage("intro2-2.png", 0.0f, 0.5f, 0.15f, 0.15f, 1.0f);
                 img22ViewOriginCenter = img22ImageView.Center;
 
-				img23ImageView = CreateImage("intro2-3.png", 1.0f, 0.9f, 0.15f, 0.15f, 1.0f);
+				img23ImageView = CreateImage("intro2-3.png", 0.0f, 0.9f, 0.15f, 0.15f, 1.0f);
                 img23ViewOriginCenter = img23ImageView.Center;
 
-				img24ImageView = CreateImage("intro2-4.png", 0.0f, 0.9f, 0.15f, 0.15f, 1.0f);
+				img24ImageView = CreateImage("intro2-4.png", 1.0f, 0.1f, 0.15f, 0.15f, 1.0f);
                 img24ViewOriginCenter = img24ImageView.Center;
+
+				img25ImageView = CreateImage("intro2-5.png", 1.0f, 0.5f, 0.15f, 0.15f, 1.0f);
+                img25ViewOriginCenter = img25ImageView.Center;
+
+				img26ImageView = CreateImage("intro2-6.png", 1.0f, 0.9f, 0.15f, 0.15f, 1.0f);
+                img26ViewOriginCenter = img26ImageView.Center;
             }
             else if (pageNumber == 3)
             {
@@ -140,20 +150,22 @@ namespace Henspe.iOS
 
             if (pageNumber == 1)
             {
-                MoveInX(img11ImageView, img11ViewOriginCenter, value * 0.9f);
-                MoveInX(img12ImageView, img12ViewOriginCenter, value * 1.3f);
-				MoveInX(img13ImageView, img13ViewOriginCenter, value * 1.5f);
+                MoveInX(img11ImageView, img11ViewOriginCenter, value * 1.3f);
+                MoveInX(img12ImageView, img12ViewOriginCenter, value * 0.7f);
+				MoveInX(img13ImageView, img13ViewOriginCenter, value * 0.5f);
             }
             else if (pageNumber == 2)
             {
-				MoveInX(img21ImageView, img21ViewOriginCenter, value * 0.9f);
-				MoveInX(img22ImageView, img22ViewOriginCenter, value * 1.3f);
-				MoveInX(img23ImageView, img23ViewOriginCenter, value * 1.5f);
-				MoveInX(img24ImageView, img24ViewOriginCenter, value * 1.9f);
+				MoveInX(img21ImageView, img21ViewOriginCenter, value * 1.7f);
+				MoveInX(img22ImageView, img22ViewOriginCenter, value * 1.5f);
+				MoveInX(img23ImageView, img23ViewOriginCenter, value * 1.3f);
+				MoveInX(img24ImageView, img24ViewOriginCenter, value * 0.9f);
+				MoveInX(img25ImageView, img25ViewOriginCenter, value * 0.7f);
+				MoveInX(img26ImageView, img26ViewOriginCenter, value * 0.5f);
             }
             else if (pageNumber == 3)
             {
-				MoveInX(img31ImageView, img31ViewOriginCenter, value * 0.9f);
+				MoveInX(img31ImageView, img31ViewOriginCenter, value * 1.3f);
             }
         }
 
