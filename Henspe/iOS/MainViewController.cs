@@ -405,7 +405,7 @@ namespace Henspe.iOS
         {
 			if (segue.Identifier == "segueInit")
             {
-				UserUtil.credentials.instructionsFinished = false;
+				UserUtil.settings.instructionsFinished = false;
             }
         }
 	}

@@ -6,9 +6,9 @@ namespace Henspe.iOS.Util
 	{
 		private const string PrefInstructionsFinished = "is_instructions_finished";
 
-		public static ICredentials credentials = new iOSCredentials();
+		public static ISettings settings = new iOSSettings();
 
-		public class iOSCredentials:ICredentials
+		public class iOSSettings:ISettings
 		{
 			public bool instructionsFinished
 			{ 	get {return StoreUtil.loadBoolForKey (PrefInstructionsFinished);}
@@ -18,7 +18,7 @@ namespace Henspe.iOS.Util
 
 		public static void Reset()
 		{
-			credentials.instructionsFinished = false;
+			settings.instructionsFinished = false;
 		}
 	}
 }

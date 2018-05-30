@@ -1,6 +1,6 @@
 ﻿namespace Henspe.Core.Communication
 {
-    public interface ICredentials
+    public interface ISettings
     {
 		bool instructionsFinished { get; set; }
     }

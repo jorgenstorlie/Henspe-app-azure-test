@@ -33,7 +33,7 @@
     <Compile Include="Communication\CallBugtrack.cs" />
     <Compile Include="Communication\CallDebugInfo.cs" />
     <Compile Include="Communication\CxHttpClient.cs" />
-    <Compile Include="Communication\ICredentials.cs" />
+    <Compile Include="Communication\ISettings.cs" />
     <Compile Include="Const\ModeConst.cs" />
     <Compile Include="Const\NetworkStateConst.cs" />
     <Compile Include="Model\BusinessEntityBase.cs" />

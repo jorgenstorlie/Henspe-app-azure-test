@@ -323,6 +323,9 @@
     <BundleResource Include="Resources\intro2-6.png" />
     <BundleResource Include="Resources\intro2-6%402x.png" />
     <BundleResource Include="Resources\intro2-6%403x.png" />
+    <BundleResource Include="Resources\ic_n_quartro%403x.png" />
+    <BundleResource Include="Resources\ic_n_quartro.png" />
+    <BundleResource Include="Resources\ic_n_quartro%402x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

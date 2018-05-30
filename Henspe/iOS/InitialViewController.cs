@@ -48,7 +48,7 @@ namespace Henspe.iOS
         {
             base.ViewDidAppear(animated);
 
-			if (UserUtil.credentials.instructionsFinished == false)
+			if (UserUtil.settings.instructionsFinished == false)
             {
                 scrScrollView.Scrolled += OnScrollViewEvent;
 
@@ -81,7 +81,7 @@ namespace Henspe.iOS
 			pagPager.PageIndicatorTintColor = UIColor.White;
 			pagPager.CurrentPageIndicatorTintColor = ColorConst.themeSecondaryColor;
 
-			if (UserUtil.credentials.instructionsFinished == false)
+			if (UserUtil.settings.instructionsFinished == false)
             {
                 btnSkip.SetTitle(Foundation.NSBundle.MainBundle.LocalizedString("Initial.Skip", null), UIControlState.Normal);
                 btnSkip.Hidden = false;
@@ -194,7 +194,7 @@ namespace Henspe.iOS
             //InitialCardViewController currentInitialCardViewController = initialCardViewControllerList[currentPage];
             //currentInitialCardViewController.Setup();
 
-			if (UserUtil.credentials.instructionsFinished == false)
+			if (UserUtil.settings.instructionsFinished == false)
             {
                 if (currentPage == 2)
 					ShowActivityIndicatorForNext(NextType.Finished);
@@ -228,7 +228,7 @@ namespace Henspe.iOS
 
 		private void GoToMain()
         {
-			UserUtil.credentials.instructionsFinished = true;
+			UserUtil.settings.instructionsFinished = true;
 
             InvokeOnMainThread(() =>
             {

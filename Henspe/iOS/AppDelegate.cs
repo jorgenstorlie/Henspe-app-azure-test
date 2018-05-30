@@ -123,7 +123,7 @@ namespace Henspe.iOS
             structure.currentStructureSectionId = 0;
         }
 
-        void SetupSectionsWithElements()
+		void SetupSectionsWithElements()
         {
             // Structure that all will be added to
             structure = new StructureDto();
@@ -144,7 +144,8 @@ namespace Henspe.iOS
             // Nivå
 			StructureSectionDto structureNiva = structure.AddStructureSection(Foundation.NSBundle.MainBundle.LocalizedString("Structure.Niva.Header", null), "ic_n.png");
 			structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Niva.Type", null), "ic_n_begrenset.png", 0.5f);
-            
+			structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Niva.QuatroVarsling", null), "ic_n_quartro.png", 0.7f);
+
 			// Sikkerhet
 			StructureSectionDto structureSikkerhet = structure.AddStructureSection(Foundation.NSBundle.MainBundle.LocalizedString("Structure.Sikkerhet.Header", null), "ic_s.png");
 			structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Sikkerhet.Farer", null), "ic_s_farer.png", 0.8f);
@@ -396,7 +397,7 @@ namespace Henspe.iOS
                 return;
             }
 
-			if (UserUtil.credentials.instructionsFinished == false)
+			if (UserUtil.settings.instructionsFinished == false)
             {
                 // Not authenticated
                 SyncInProgress(false);

@@ -93,6 +93,7 @@ Structure.EksaktPosisjon.Avreise = "Avreise";
 // Nivå
 Structure.Niva.Header = "NIVÅ"; 
 Structure.Niva.Type = "Begrenset, stort, masseskade";
+Structure.Niva.QuatroVarsling = "Quatro varsling";
 
 // Sikkerhet
 Structure.Sikkerhet.Header = "SIKKERHET"; 
