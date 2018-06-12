@@ -2,22 +2,14 @@
 
 namespace Henspe.Core.Model.Dto
 {
-	public class StructureElementDto
+	public class HenspeRowModel
     {
-        public ElementType elementType;
+		public StructureElementDto.ElementType elementType;
         public string description { get; set; }
         public string image { get; set; }
         public float percent { get; set; }
-        public string sectionName { get; set; }
 
-        public enum ElementType
-        {
-            Normal,
-            Position,
-            Address
-        };
-
-        public StructureElementDto(ElementType elementType, string description, string image, float percent)
+		public HenspeRowModel(StructureElementDto.ElementType elementType, string description, string image, float percent)
         {
             this.elementType = elementType;
             this.description = description;

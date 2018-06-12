@@ -1,5 +1,132 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Hello World, Click Me!</string>
-    <string name="app_name">Henspe.Droid</string>
+    <string name="app_name">HENSPE</string>
+
+    <!-- Alert -->
+    <string name="ok" >OK</string>
+    
+    <!-- Fonts -->
+    <string name="fontFamily__roboto_medium">sans-serif-medium</string>
+    <string name="fontFamily__roboto_light">sans-serif-light</string>
+    <string name="fontFamily__roboto_black">sans-serif-black</string>
+    <string name="fontFamily__roboto_condensed">sans-serif-condensed</string>
+    <string name="fontFamily__roboto_condensed_light">sans-serif-condensed-light</string>
+
+    <!-- Initial -->
+    <string name="Initial_Loading" >Vennligst vent</string>
+    <string name="Initial_Skip">Hopp over</string>
+    <string name="Initial_Next">Neste ></string>
+    <string name="Initial_Finished">Ferdig</string>
+    <string name="Initial_PageOne_Header">VELKOMMEN TIL HENSPE</string>
+    <string name="Initial_PageOne_Text">Appen er laget for å gi personell i nødetatene hjelp til å sende gode strukturerte tilbakemeldinger over sambandet ved ulike hendelser.</string>
+    <string name="Initial_PageTwo_Header">DIGITAL VERSJON AV KORTET</string>
+    <string name="Initial_PageTwo_Text">Denne appen er en digital versjon av HENSPE kortet og vil også gi deg oppdatert informasjon om posisjonen der du er. </string>
+    <string name="Initial_PageThree_Header">APPEN VISER DIN POSISJON</string>
+    <string name="Initial_PageThree_Text">Du kan selv velge hvilket format du ønsker på posisjonen din i appen. Dette kan du endre fra innstillinger i appen. </string>
+
+    <!-- Permissions -->
+    <string name="no_location_detected">Ingen stedstjenester funnet. Sjekk at stedstjenester er aktivert på mobilen din.</string>
+    <string name="permission_rationale">Tilgang til stedstjenester er påkrevd for kjærnefunksjonaliteten.</string>
+    <string name="permission_denied_explanation">Fikk ikke tilgang til stedstjenester som er påkrevd for at appen skal vise stedet du er.</string>
+    <string name="settings">Innstillinger</string>
+    
+    <!--- Alert -->
+    <string name="alert_title_errorOccured">En feil har oppstått</string>
+    <string name="alert_yes">Ja</string>
+    <string name="alert_no">Nei</string> 
+    <string name="alert_title">Ny versjon</string>
+    <string name="alert_content">Det er en nyere versjon av HENSPE enn den du har. Ønsker du å opdatere til ny versjon?\nAppen vil oppdateres når den nye versjonen er nedlastet.</string>
+    
+    <!-- Format -->
+    <string name="CoordinateFormatError">Feil format</string>
+    <string name="CoordinateFormatDD">Grader</string>
+    <string name="CoordinateFormatDDM">Grader og min.</string>
+    <string name="CoordinateFormatDMS">Grader, min. og sek.</string>
+    <string name="CoordinateFormatUTM">UTM</string>
+
+    <!-- GPS -->
+    <string name="GPS_UnknownPosition">Ukjent posisjon</string>
+    <string name="GPS_MyPosition">Min posisjon er</string>
+    <string name="GPS_Accuracy_Text">Nøyaktighet</string>
+
+    <!-- Errors -->
+    <string name="Error_NoResponse">Ingen respons fra serveren</string>
+    <string name="Error_InvalidResultFromServer">Server svarte uventet.</string>
+
+    <!-- Operations -->
+    <string name="Operation_Cancel">Avbryt</string>
+    <string name="Operation_Choose">Velg</string>
+
+    <!-- Spinner -->
+    <string name="Spinner_PleaseWait">Vennligst vent</string>
+
+    <!-- Settings -->
+    <string name="Settings_heading">Innstillinger</string>
+    <string name="Settings_text">Slett alle dataene ved neste start</string>
+
+    <!-- AppDelegate -->
+    <string name="AppDelegate_Alert_DeleteAll_Title">Slett alle data</string>
+    <string name="AppDelegate_Alert_DeleteAll_Message">Slett alle data ble satt i innstillingene. Er du sikker på at du ønsker å slette alle datene i denne appen?</string>
+
+    <!-- Navigation menu items -->
+    <string name="Navigation_Menuitem_Back">Tilbake</string>
+    <string name="Navigation_Menuitem_Hjem">Hjem</string>
+
+    <!-- Location -->
+    <string name="Location_Element_Degrees_Text">grader</string>
+    <string name="Location_Element_Now_Text">nå</string>
+    <string name="Location_Element_Minute_Text">m</string>
+    <string name="Location_Element_Minutes_Text">minutter</string>
+    <string name="Location_Element_Seconds_Text">sekunder</string>
+    <string name="Location_Element_Second_Text">s</string>
+    <string name="Location_Element_Hour_Text">t</string>
+    <string name="Location_Element_Day_Text">d</string>
+    <string name="Location_Element_North_Large_Text">Nord</string>
+    <string name="Location_Element_North_Text">nord</string>
+    <string name="Location_Element_East_Text">øst</string>
+    <string name="Location_Element_East_Large_Text">Øst</string>
+    <string name="Location_Element_South_Text">sør</string>
+    <string name="Location_Element_West_Text">vest</string>
+    <string name="Location_Element_Meters_Short_Text">m</string>
+    <string name="Location_Element_For">for</string>
+    <string name="Location_unknown_coordinates_row1">Ukjente</string>
+    <string name="Location_unknown_coordinates_row2">Koordinater</string>
+    <string name="Location_unknown_address_row1">Ukjent</string>
+    <string name="Location_unknown_address_row2">Adresse</string>
+
+    <!-- Hendelse -->
+    <string name="Structure_Hendelse_Header">HENDELSE</string> 
+    <string name="Structure_Hendelse_Trafikk">Trafikk, fly, båt, industri, skred osv</string> 
+    <string name="Structure_Hendelse_Brann">Brann</string> 
+
+    <!-- Eksakt posisjon -->
+    <string name="Structure_EksaktPosisjon_Header">EKSAKT POSISJON</string> 
+    <string name="Structure_EksaktPosisjon_Posisjon">Posisjon</string> 
+    <string name="Structure_EksaktPosisjon_Adresse">Nærmeste adresse</string>
+    <string name="Structure_EksaktPosisjon_Oppmotested">Oppmøtested</string>
+    <string name="Structure_EksaktPosisjon_Ankomst">Ankomst</string>
+    <string name="Structure_EksaktPosisjon_Avreise">Avreise</string>
+
+    <!-- Nivå -->
+    <string name="Structure_Niva_Header">NIVÅ</string> 
+    <string name="Structure_Niva_Type">Begrenset, stort, masseskade</string>
+    <string name="Structure_Niva_QuatroVarsling">Quatro varsling</string>
+
+    <!-- Sikkerhet -->
+    <string name="Structure_Sikkerhet_Header">SIKKERHET</string> 
+    <string name="Structure_Sikkerhet_Farer">Mulige/reelle farer</string>
+    <string name="Structure_Sikkerhet_Brann">Brann</string>
+    <string name="Structure_Sikkerhet_Sikkerhet">Sikkerhet for involverte</string>
+
+    <!-- Pasienter -->
+    <string name="Structure_Pasienter_Header">PASIENTER</string> 
+    <string name="Structure_Pasienter_Antall">Ca antall pasienter</string>
+    <string name="Structure_Pasienter_Type">Type skader</string>
+    <string name="Structure_Pasienter_Omfang">Skademekanikk/omfang</string>
+
+    <!-- Evakuering -->
+    <string name="Structure_Evakuering_Header">EVAKUERING</string> 
+    <string name="Structure_Evakuering_Flaskehalser">Avklar flaskehalser</string>
+    <string name="Structure_Evakuering_Kjeder">Effektive evakueringskjeder</string>
+    <string name="Structure_Evakuering_Rett">Rett pasient til rett sykehus</string>
 </resources>

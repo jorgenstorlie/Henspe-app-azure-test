@@ -30,8 +30,8 @@ namespace Henspe.iOS
     {
         public string mode = ModeConst.test;
 
-        public string prodUrlString = "https://snla-apps.no/apps/sms/";
-        public string testUrlTest = "https://snla-apps.no/apps/smstest/";
+        public string prodUrlString = "https://snla-apps.no/apps/henspe/";
+        public string testUrlTest = "https://snla-apps.no/apps/henspetest/";
         public string plistFile = "Henspe.plist";
 
         private AppVersionData appVersionData = new AppVersionData();

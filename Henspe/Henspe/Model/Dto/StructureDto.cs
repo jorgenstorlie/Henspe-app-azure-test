@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Henspe.Core.Model.Dto
 {
     public class StructureDto
-	{
+    {
         public List<StructureSectionDto> structureSectionList { get; set; }
         public int currentStructureSectionId { get; set; }
 
@@ -13,9 +13,9 @@ namespace Henspe.Core.Model.Dto
             structureSectionList = new List<StructureSectionDto>();
         }
 
-		public StructureSectionDto AddStructureSection(string description, string image)
+        public StructureSectionDto AddStructureSection(string description, string image)
         {
-			StructureSectionDto structureSectionDto = new StructureSectionDto(description, image);
+            StructureSectionDto structureSectionDto = new StructureSectionDto(description, image);
             structureSectionDto.structureElementList = new List<StructureElementDto>();
             structureSectionList.Add(structureSectionDto);
             return structureSectionDto;
@@ -36,5 +36,5 @@ namespace Henspe.Core.Model.Dto
             else
                 return false;
         }
-	}
+    }
 }

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/background_nla_white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1.0">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:gravity="left">
+                <Button
+                    android:id="@+id/btnInfo"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/button_info"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="3dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:gravity="center_horizontal|center_vertical">
+                <ImageView
+                    android:layout_width="68.5dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/ic_snla"
+                    android:layout_weight="0.33"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="0dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:gravity="right">
+            <!--Button
+                    android:id="@+id/btnInfo"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="5dp"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/button_info" /-->
+            </RelativeLayout>
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/myList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_nla_white" />
+    </LinearLayout>
+</FrameLayout>
