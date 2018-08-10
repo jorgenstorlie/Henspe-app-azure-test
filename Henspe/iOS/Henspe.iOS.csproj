@@ -100,12 +100,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Henspe\Henspe.csproj">
-      <Project>{F73BD3C0-8127-4A85-9817-364C3DA20E8A}</Project>
-      <Name>Henspe</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Notification%402x.png" />
@@ -326,6 +320,12 @@
     <BundleResource Include="Resources\ic_n_quartro%403x.png" />
     <BundleResource Include="Resources\ic_n_quartro.png" />
     <BundleResource Include="Resources\ic_n_quartro%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Henspe.Core\Henspe.Core.csproj">
+      <Project>{537886BA-0199-482C-875E-16B5636BF78A}</Project>
+      <Name>Henspe.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

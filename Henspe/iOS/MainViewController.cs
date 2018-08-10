@@ -705,7 +705,7 @@ namespace Henspe.iOS
                 if (text != lastAddressText)
                 {
                     lastAddressText = text;
-					labLabelBottom.Text = Foundation.NSBundle.MainBundle.LocalizedString("GPS.UnknownAddress", null);
+                    labLabelBottom.Text = Foundation.NSBundle.MainBundle.LocalizedString("GPS.UnknownAddress", null);
                 }
             }
             else
@@ -715,7 +715,16 @@ namespace Henspe.iOS
                     AppDelegate.current.geocoder = new CLGeocoder();
 
                 CLLocation location = new CLLocation(AppDelegate.current.gpsCurrentPositionObject.gpsCoordinates.Latitude, AppDelegate.current.gpsCurrentPositionObject.gpsCoordinates.Longitude);
-				CLPlacemark[] placemarks = await AppDelegate.current.geocoder.ReverseGeocodeLocationAsync(location);
+                CLPlacemark[] placemarks = null;
+
+                try
+                {
+                    placemarks = await AppDelegate.current.geocoder.ReverseGeocodeLocationAsync(location);
+                }
+                catch (Exception e) 
+                {
+                    // Do nothing.
+                }
 
 				if (placemarks != null && placemarks.Length > 0)
                 {

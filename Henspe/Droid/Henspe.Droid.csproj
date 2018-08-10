@@ -140,12 +140,9 @@
     <Reference Include="Xamarin.GooglePlayServices.Maps">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Maps.60.1142.1\lib\MonoAndroid80\Xamarin.GooglePlayServices.Maps.dll</HintPath>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Henspe\Henspe.csproj">
-      <Project>{F73BD3C0-8127-4A85-9817-364C3DA20E8A}</Project>
-      <Name>Henspe</Name>
-    </ProjectReference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Henspe.cs" />
@@ -345,6 +342,12 @@
     <Folder Include="Resources\drawable\" />
     <Folder Include="Resources\animator\" />
     <Folder Include="Resources\font\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Henspe.Core\Henspe.Core.csproj">
+      <Project>{537886BA-0199-482C-875E-16B5636BF78A}</Project>
+      <Name>Henspe.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

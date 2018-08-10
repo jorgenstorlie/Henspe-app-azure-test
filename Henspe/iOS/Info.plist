@@ -5,7 +5,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>no.snla-system.henspe</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.01</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>New Entry</string>
 	<key>LSRequiresIPhoneOS</key>
