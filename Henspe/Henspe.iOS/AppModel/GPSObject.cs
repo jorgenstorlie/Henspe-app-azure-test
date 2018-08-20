@@ -2,6 +2,7 @@
 using CoreLocation;
 using Henspe.Core.Communication.Dto;
 using Henspe.Core.Util;
+using Henspe.iOS.Util;
 
 namespace Henspe.iOS.AppModel
 {
@@ -31,14 +32,14 @@ namespace Henspe.iOS.AppModel
 			{
 				_gpsCoordinates = value;
 
-				string degrees = Foundation.NSBundle.MainBundle.LocalizedString("Location.Element.Degrees.Text", null);
-				string minutes = Foundation.NSBundle.MainBundle.LocalizedString("Location.Element.Minutes.Text", null);
-				string seconds = Foundation.NSBundle.MainBundle.LocalizedString("Location.Element.Seconds.Text", null);
+				string degrees = LangUtil.Get("Location.Element.Degrees.Text");
+				string minutes = LangUtil.Get("Location.Element.Minutes.Text");
+				string seconds = LangUtil.Get("Location.Element.Seconds.Text");
 
-				string north = Foundation.NSBundle.MainBundle.LocalizedString("Location.Element.North.Text", null);
-				string east = Foundation.NSBundle.MainBundle.LocalizedString("Location.Element.East.Text", null);
-				string south = Foundation.NSBundle.MainBundle.LocalizedString("Location.Element.South.Text", null);
-				string west = Foundation.NSBundle.MainBundle.LocalizedString("Location.Element.West.Text", null);
+				string north = LangUtil.Get("Location.Element.North.Text");
+				string east = LangUtil.Get("Location.Element.East.Text");
+				string south = LangUtil.Get("Location.Element.South.Text");
+				string west = LangUtil.Get("Location.Element.West.Text");
 
                 if (AppDelegate.current.coordinateFormat == CoordinateUtil.undefinedFormat)
                     AppDelegate.current.coordinateFormat = CoordinateUtil.ddm; // Default value

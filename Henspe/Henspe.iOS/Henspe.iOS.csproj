@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProjectGuid>{58AE7EE9-E302-4A3F-B950-FEB77CC86C91}</ProjectGuid>
+    <ProjectGuid>{9903CDFF-F2A5-46AD-ACA6-F73F0568A951}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>Henspe.iOS</RootNamespace>
@@ -18,44 +18,46 @@
     <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
     <MtouchFastDev>true</MtouchFastDev>
-    <IOSDebuggerPort>45581</IOSDebuggerPort>
+    <IOSDebuggerPort>45357</IOSDebuggerPort>
     <MtouchLink>None</MtouchLink>
     <MtouchArch>x86_64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <PlatformTarget>x86</PlatformTarget>
-    <CodesignProvision>HENSPE InHouse</CodesignProvision>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+    <MtouchVerbosity></MtouchVerbosity>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhone\Release</OutputPath>
+    <DefineConstants></DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchFloat32>true</MtouchFloat32>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchArch>ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <PlatformTarget>x86</PlatformTarget>
-    <CodesignProvision>HENSPE InHouse</CodesignProvision>
+    <MtouchVerbosity></MtouchVerbosity>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <DefineConstants></DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Distribution</CodesignKey>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
     <MtouchLink>None</MtouchLink>
     <MtouchArch>x86_64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <PlatformTarget>x86</PlatformTarget>
+    <MtouchVerbosity></MtouchVerbosity>
+    <CodesignProvision>HenspeAppStore</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -72,20 +74,18 @@
     <MtouchFastDev>true</MtouchFastDev>
     <MtouchFloat32>true</MtouchFloat32>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <IOSDebuggerPort>33672</IOSDebuggerPort>
+    <IOSDebuggerPort>22403</IOSDebuggerPort>
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchArch>ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <PlatformTarget>x86</PlatformTarget>
+    <MtouchVerbosity></MtouchVerbosity>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
-    </Reference>
+    <Reference Include="MonoTouch.Dialog-1" />
     <Reference Include="Microsoft.Threading.Tasks">
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wpa81\Microsoft.Threading.Tasks.dll</HintPath>
     </Reference>
@@ -102,32 +102,31 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Notification%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Notification%403x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small%403x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-40%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-40%403x.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60%403x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Notification.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-40.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76%402x.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-83.5%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Notification.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Notification%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Notification%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-40%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small%403x.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iTunesArtwork%401x.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Util\" />
+    <Folder Include="Renderer\" />
     <Folder Include="AppModel\" />
     <Folder Include="Base.lproj\" />
     <Folder Include="Communication\" />
     <Folder Include="Const\" />
     <Folder Include="Extension\" />
-    <Folder Include="Renderer\" />
     <Folder Include="Settings.bundle\" />
-    <Folder Include="Util\" />
-    <Folder Include="Settings.bundle\ Base.lproj\" />
+    <Folder Include="Settings.bundle\Base.lproj\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -146,23 +145,31 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Communication\AppVersionData.cs" />
-    <Compile Include="Const\ColorConst.cs" />
-    <Compile Include="Const\EventConst.cs" />
-    <Compile Include="Extension\ViewExtensions.cs" />
+    <Compile Include="Util\CloneUtil.cs" />
     <Compile Include="Util\CryptoUtil.cs" />
     <Compile Include="Util\DebugUtil.cs" />
     <Compile Include="Util\DeviceUtil.cs" />
     <Compile Include="Util\ErrorUtil.cs" />
+    <Compile Include="Util\FlashTextUtil.cs" />
     <Compile Include="Util\iOSDateUtil.cs" />
+    <Compile Include="Util\iOSMapUtil.cs" />
     <Compile Include="Util\iOSUtil.cs" />
     <Compile Include="Util\LocalDateUtil.cs" />
     <Compile Include="Util\NetUtil.cs" />
     <Compile Include="Util\StoreUtil.cs" />
     <Compile Include="Util\UserUtil.cs" />
     <Compile Include="Util\ViewUtil.cs" />
-    <Compile Include="..\..\SQLite.Implementation.cs">
-      <Link>SQLite.Implementation.cs</Link>
+    <Compile Include="AppModel\GPSObject.cs" />
+    <Compile Include="Communication\AppVersionData.cs" />
+    <Compile Include="Const\ColorConst.cs" />
+    <Compile Include="Const\EventConst.cs" />
+    <Compile Include="Const\FontConst.cs" />
+    <Compile Include="Const\PositionTypeConst.cs" />
+    <Compile Include="Extension\StringExtensions.cs" />
+    <Compile Include="Extension\ViewExtensions.cs" />
+    <Compile Include="MainViewController.cs" />
+    <Compile Include="MainViewController.designer.cs">
+      <DependentUpon>MainViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="InitialViewController.cs" />
     <Compile Include="InitialViewController.designer.cs">
@@ -172,10 +179,8 @@
     <Compile Include="InitialCardViewController.designer.cs">
       <DependentUpon>InitialCardViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppModel\GPSObject.cs" />
-    <Compile Include="MainViewController.cs" />
-    <Compile Include="MainViewController.designer.cs">
-      <DependentUpon>MainViewController.cs</DependentUpon>
+    <Compile Include="..\Henspe.Core\SQLite.Implementation.cs">
+      <Link>SQLite.Implementation.cs</Link>
     </Compile>
     <Compile Include="Renderer\MainLocationRowViewCell.cs" />
     <Compile Include="Renderer\MainLocationRowViewCell.designer.cs">
@@ -185,16 +190,9 @@
     <Compile Include="Renderer\MainNormalRowViewCell.designer.cs">
       <DependentUpon>MainNormalRowViewCell.cs</DependentUpon>
     </Compile>
-    <Compile Include="Const\FontConst.cs" />
-    <Compile Include="Const\PositionTypeConst.cs" />
-    <Compile Include="Util\iOSMapUtil.cs" />
-    <Compile Include="Util\FlashTextUtil.cs" />
-    <Compile Include="Util\CloneUtil.cs" />
-    <Compile Include="Extension\StringExtensions.cs" />
+    <Compile Include="Util\LangUtil.cs" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Base.lproj\Localizable.strings" />
-    <BundleResource Include="Settings.bundle\Root.plist" />
     <BundleResource Include="Resources\ic_e_adresse.png" />
     <BundleResource Include="Resources\ic_e_adresse%402x.png" />
     <BundleResource Include="Resources\ic_e_adresse%403x.png" />
@@ -219,15 +217,33 @@
     <BundleResource Include="Resources\ic_e_rett.png" />
     <BundleResource Include="Resources\ic_e_rett%402x.png" />
     <BundleResource Include="Resources\ic_e_rett%403x.png" />
+    <BundleResource Include="Resources\ic_e.png" />
+    <BundleResource Include="Resources\ic_e%402x.png" />
+    <BundleResource Include="Resources\ic_e%403x.png" />
     <BundleResource Include="Resources\ic_h_brann.png" />
     <BundleResource Include="Resources\ic_h_brann%402x.png" />
     <BundleResource Include="Resources\ic_h_brann%403x.png" />
     <BundleResource Include="Resources\ic_h_trafikk.png" />
     <BundleResource Include="Resources\ic_h_trafikk%402x.png" />
     <BundleResource Include="Resources\ic_h_trafikk%403x.png" />
+    <BundleResource Include="Resources\ic_h.png" />
+    <BundleResource Include="Resources\ic_h%402x.png" />
+    <BundleResource Include="Resources\ic_h%403x.png" />
+    <BundleResource Include="Resources\ic_info.png" />
+    <BundleResource Include="Resources\ic_info%402x.png" />
+    <BundleResource Include="Resources\ic_info%403x.png" />
+    <BundleResource Include="Resources\ic_logo_snla.png" />
+    <BundleResource Include="Resources\ic_logo_snla%402x.png" />
+    <BundleResource Include="Resources\ic_logo_snla%403x.png" />
     <BundleResource Include="Resources\ic_n_begrenset.png" />
     <BundleResource Include="Resources\ic_n_begrenset%402x.png" />
     <BundleResource Include="Resources\ic_n_begrenset%403x.png" />
+    <BundleResource Include="Resources\ic_n_quartro.png" />
+    <BundleResource Include="Resources\ic_n_quartro%402x.png" />
+    <BundleResource Include="Resources\ic_n_quartro%403x.png" />
+    <BundleResource Include="Resources\ic_n.png" />
+    <BundleResource Include="Resources\ic_n%402x.png" />
+    <BundleResource Include="Resources\ic_n%403x.png" />
     <BundleResource Include="Resources\ic_p_pasienter.png" />
     <BundleResource Include="Resources\ic_p_pasienter%402x.png" />
     <BundleResource Include="Resources\ic_p_pasienter%403x.png" />
@@ -237,6 +253,9 @@
     <BundleResource Include="Resources\ic_p_type.png" />
     <BundleResource Include="Resources\ic_p_type%402x.png" />
     <BundleResource Include="Resources\ic_p_type%403x.png" />
+    <BundleResource Include="Resources\ic_p.png" />
+    <BundleResource Include="Resources\ic_p%402x.png" />
+    <BundleResource Include="Resources\ic_p%403x.png" />
     <BundleResource Include="Resources\ic_s_brann.png" />
     <BundleResource Include="Resources\ic_s_brann%402x.png" />
     <BundleResource Include="Resources\ic_s_brann%403x.png" />
@@ -246,6 +265,9 @@
     <BundleResource Include="Resources\ic_s_sikkerhet.png" />
     <BundleResource Include="Resources\ic_s_sikkerhet%402x.png" />
     <BundleResource Include="Resources\ic_s_sikkerhet%403x.png" />
+    <BundleResource Include="Resources\ic_s.png" />
+    <BundleResource Include="Resources\ic_s%402x.png" />
+    <BundleResource Include="Resources\ic_s%403x.png" />
     <BundleResource Include="Resources\ic_settings.png" />
     <BundleResource Include="Resources\ic_settings%402x.png" />
     <BundleResource Include="Resources\ic_settings%403x.png" />
@@ -264,41 +286,6 @@
     <BundleResource Include="Resources\intro1.png" />
     <BundleResource Include="Resources\intro1%402x.png" />
     <BundleResource Include="Resources\intro1%403x.png" />
-    <BundleResource Include="Resources\intro2.png" />
-    <BundleResource Include="Resources\intro2%402x.png" />
-    <BundleResource Include="Resources\intro2%403x.png" />
-    <BundleResource Include="Resources\intro3-1.png" />
-    <BundleResource Include="Resources\intro3-1%402x.png" />
-    <BundleResource Include="Resources\intro3-1%403x.png" />
-    <BundleResource Include="Resources\intro3.png" />
-    <BundleResource Include="Resources\intro3%402x.png" />
-    <BundleResource Include="Resources\intro3%403x.png" />
-    <BundleResource Include="Resources\ic_logo_snla.png" />
-    <BundleResource Include="Resources\ic_logo_snla%402x.png" />
-    <BundleResource Include="Resources\ic_logo_snla%403x.png" />
-    <BundleResource Include="Resources\Montserrat-Light.ttf" />
-    <BundleResource Include="Resources\Montserrat-Medium.ttf" />
-    <BundleResource Include="Resources\Montserrat-Regular.ttf" />
-    <BundleResource Include="Settings.bundle\ Base.lproj\Root.strings" />
-    <BundleResource Include="Base.lproj\InfoPlist.strings" />
-    <BundleResource Include="Resources\ic_info.png" />
-    <BundleResource Include="Resources\ic_info%403x.png" />
-    <BundleResource Include="Resources\ic_info%402x.png" />
-    <BundleResource Include="Resources\ic_e.png" />
-    <BundleResource Include="Resources\ic_e%402x.png" />
-    <BundleResource Include="Resources\ic_e%403x.png" />
-    <BundleResource Include="Resources\ic_h.png" />
-    <BundleResource Include="Resources\ic_h%402x.png" />
-    <BundleResource Include="Resources\ic_h%403x.png" />
-    <BundleResource Include="Resources\ic_n.png" />
-    <BundleResource Include="Resources\ic_n%402x.png" />
-    <BundleResource Include="Resources\ic_n%403x.png" />
-    <BundleResource Include="Resources\ic_p.png" />
-    <BundleResource Include="Resources\ic_p%402x.png" />
-    <BundleResource Include="Resources\ic_p%403x.png" />
-    <BundleResource Include="Resources\ic_s.png" />
-    <BundleResource Include="Resources\ic_s%402x.png" />
-    <BundleResource Include="Resources\ic_s%403x.png" />
     <BundleResource Include="Resources\intro2-1.png" />
     <BundleResource Include="Resources\intro2-1%402x.png" />
     <BundleResource Include="Resources\intro2-1%403x.png" />
@@ -317,9 +304,22 @@
     <BundleResource Include="Resources\intro2-6.png" />
     <BundleResource Include="Resources\intro2-6%402x.png" />
     <BundleResource Include="Resources\intro2-6%403x.png" />
-    <BundleResource Include="Resources\ic_n_quartro%403x.png" />
-    <BundleResource Include="Resources\ic_n_quartro.png" />
-    <BundleResource Include="Resources\ic_n_quartro%402x.png" />
+    <BundleResource Include="Resources\intro2.png" />
+    <BundleResource Include="Resources\intro2%402x.png" />
+    <BundleResource Include="Resources\intro2%403x.png" />
+    <BundleResource Include="Resources\intro3-1.png" />
+    <BundleResource Include="Resources\intro3-1%402x.png" />
+    <BundleResource Include="Resources\intro3-1%403x.png" />
+    <BundleResource Include="Resources\intro3.png" />
+    <BundleResource Include="Resources\intro3%402x.png" />
+    <BundleResource Include="Resources\intro3%403x.png" />
+    <BundleResource Include="Resources\Montserrat-Light.ttf" />
+    <BundleResource Include="Resources\Montserrat-Medium.ttf" />
+    <BundleResource Include="Resources\Montserrat-Regular.ttf" />
+    <BundleResource Include="Base.lproj\InfoPlist.strings" />
+    <BundleResource Include="Base.lproj\Localizable.strings" />
+    <BundleResource Include="Settings.bundle\Base.lproj\Root.strings" />
+    <BundleResource Include="Settings.bundle\Root.plist" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Henspe.Core\Henspe.Core.csproj">

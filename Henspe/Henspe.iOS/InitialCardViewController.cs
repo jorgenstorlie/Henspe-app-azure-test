@@ -2,6 +2,7 @@
 using CoreGraphics;
 using UIKit;
 using Henspe.iOS.Const;
+using Henspe.iOS.Util;
 
 namespace Henspe.iOS
 {
@@ -77,21 +78,21 @@ namespace Henspe.iOS
 
             if (pageNumber == 1)
             {
-                labHeader.Text = Foundation.NSBundle.MainBundle.LocalizedString("Initial.PageOne.Header", null);
+                labHeader.Text = LangUtil.Get("Initial.PageOne.Header");
                 imgImage.Image = UIImage.FromFile("intro1.png");
-                labText.Text = Foundation.NSBundle.MainBundle.LocalizedString("Initial.PageOne.Text", null);
+                labText.Text = LangUtil.Get("Initial.PageOne.Text");
             }
             else if (pageNumber == 2)
             {
-                labHeader.Text = Foundation.NSBundle.MainBundle.LocalizedString("Initial.PageTwo.Header", null);
+                labHeader.Text = LangUtil.Get("Initial.PageTwo.Header");
                 imgImage.Image = UIImage.FromFile("intro2.png");
-                labText.Text = Foundation.NSBundle.MainBundle.LocalizedString("Initial.PageTwo.Text", null);
+                labText.Text = LangUtil.Get("Initial.PageTwo.Text");
             }
             else if (pageNumber == 3)
             {
-                labHeader.Text = Foundation.NSBundle.MainBundle.LocalizedString("Initial.PageThree.Header", null);
+                labHeader.Text = LangUtil.Get("Initial.PageThree.Header");
                 imgImage.Image = UIImage.FromFile("intro3.png");
-                labText.Text = Foundation.NSBundle.MainBundle.LocalizedString("Initial.PageThree.Text", null);
+                labText.Text = LangUtil.Get("Initial.PageThree.Text");
             }
         }
 

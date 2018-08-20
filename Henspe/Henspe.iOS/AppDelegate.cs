@@ -23,7 +23,8 @@ using static Henspe.Core.Model.Dto.StructureSectionDto;
 
 namespace Henspe.iOS
 {
-    // Enterprise: no.snla-system.estroke
+    // AppStore: no.norskluftambulanse.henspe
+    // Enterprise: no.snla-system.henspe
     // Debug: com.norskluftambulanse.testapp
     [Register("AppDelegate")]
     public partial class AppDelegate : UIApplicationDelegate
@@ -129,40 +130,40 @@ namespace Henspe.iOS
             structure = new StructureDto();
             
             // Hendelse
-			StructureSectionDto structureHendelse = structure.AddStructureSection(Foundation.NSBundle.MainBundle.LocalizedString("Structure.Hendelse.Header", null), "ic_h.png");
-			structureHendelse.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Hendelse.Trafikk", null), "ic_h_trafikk.png", 1.0f);
-			structureHendelse.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Hendelse.Brann", null), "ic_h_brann.png", 0.8f);
+			StructureSectionDto structureHendelse = structure.AddStructureSection(LangUtil.Get("Structure.Hendelse.Header"), "ic_h.png");
+			structureHendelse.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Hendelse.Trafikk"), "ic_h_trafikk.png", 1.0f);
+			structureHendelse.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Hendelse.Brann"), "ic_h_brann.png", 0.8f);
             
 			// Eksakt posisjon
-			StructureSectionDto structureEksaktPosisjon = structure.AddStructureSection(Foundation.NSBundle.MainBundle.LocalizedString("Structure.EksaktPosisjon.Header", null), "ic_e.png");
-			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Position, Foundation.NSBundle.MainBundle.LocalizedString("Structure.EksaktPosisjon.Posisjon", null), "ic_e_posisjon.png", 0.8f);
-			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Address, Foundation.NSBundle.MainBundle.LocalizedString("Structure.EksaktPosisjon.Adresse", null), "ic_e_adresse.png", 0.8f);
-			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.EksaktPosisjon.Oppmotested", null), "ic_e_oppmotested.png", 1.0f);
-			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.EksaktPosisjon.Ankomst", null), "ic_e_ankomst.png", 0.6f);
-			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.EksaktPosisjon.Avreise", null), "ic_e_avreise.png", 0.6f);
+			StructureSectionDto structureEksaktPosisjon = structure.AddStructureSection(LangUtil.Get("Structure.EksaktPosisjon.Header"), "ic_e.png");
+			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Position, LangUtil.Get("Structure.EksaktPosisjon.Posisjon"), "ic_e_posisjon.png", 0.8f);
+			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Address, LangUtil.Get("Structure.EksaktPosisjon.Adresse"), "ic_e_adresse.png", 0.8f);
+			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.EksaktPosisjon.Oppmotested"), "ic_e_oppmotested.png", 1.0f);
+			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.EksaktPosisjon.Ankomst"), "ic_e_ankomst.png", 0.6f);
+			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.EksaktPosisjon.Avreise"), "ic_e_avreise.png", 0.6f);
 
             // Nivå
-			StructureSectionDto structureNiva = structure.AddStructureSection(Foundation.NSBundle.MainBundle.LocalizedString("Structure.Niva.Header", null), "ic_n.png");
-			structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Niva.Type", null), "ic_n_begrenset.png", 0.5f);
-			structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Niva.QuatroVarsling", null), "ic_n_quartro.png", 0.7f);
+			StructureSectionDto structureNiva = structure.AddStructureSection(LangUtil.Get("Structure.Niva.Header"), "ic_n.png");
+			structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Niva.Type"), "ic_n_begrenset.png", 0.5f);
+			structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Niva.QuatroVarsling"), "ic_n_quartro.png", 0.7f);
 
 			// Sikkerhet
-			StructureSectionDto structureSikkerhet = structure.AddStructureSection(Foundation.NSBundle.MainBundle.LocalizedString("Structure.Sikkerhet.Header", null), "ic_s.png");
-			structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Sikkerhet.Farer", null), "ic_s_farer.png", 0.8f);
-			structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Sikkerhet.Brann", null), "ic_s_brann.png", 0.8f);
-			structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Sikkerhet.Sikkerhet", null), "ic_s_sikkerhet.png", 0.8f);
+			StructureSectionDto structureSikkerhet = structure.AddStructureSection(LangUtil.Get("Structure.Sikkerhet.Header"), "ic_s.png");
+			structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Sikkerhet.Farer"), "ic_s_farer.png", 0.8f);
+			structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Sikkerhet.Brann"), "ic_s_brann.png", 0.8f);
+			structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Sikkerhet.Sikkerhet"), "ic_s_sikkerhet.png", 0.8f);
 
             // Pasienter
-			StructureSectionDto structurePasienter = structure.AddStructureSection(Foundation.NSBundle.MainBundle.LocalizedString("Structure.Pasienter.Header", null), "ic_p.png");
-			structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Pasienter.Antall", null), "ic_p_pasienter.png", 0.9f);
-			structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Pasienter.Type", null), "ic_p_type.png", 0.7f);
-			structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Pasienter.Omfang", null), "ic_p_skademekanikk.png", 0.8f);
+			StructureSectionDto structurePasienter = structure.AddStructureSection(LangUtil.Get("Structure.Pasienter.Header"), "ic_p.png");
+			structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Pasienter.Antall"), "ic_p_pasienter.png", 0.9f);
+			structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Pasienter.Type"), "ic_p_type.png", 0.7f);
+			structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Pasienter.Omfang"), "ic_p_skademekanikk.png", 0.8f);
 
             // Evakuering
-			StructureSectionDto structureEvakuering = structure.AddStructureSection(Foundation.NSBundle.MainBundle.LocalizedString("Structure.Evakuering.Header", null), "ic_e.png");
-			structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Evakuering.Flaskehalser", null), "ic_e_flaskehalser.png", 0.7f);
-			structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Evakuering.Kjeder", null), "ic_e_evakuering.png", 0.7f);
-			structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, Foundation.NSBundle.MainBundle.LocalizedString("Structure.Evakuering.Rett", null), "ic_e_rett.png", 0.7f);
+			StructureSectionDto structureEvakuering = structure.AddStructureSection(LangUtil.Get("Structure.Evakuering.Header"), "ic_e.png");
+			structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Evakuering.Flaskehalser"), "ic_e_flaskehalser.png", 0.7f);
+			structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Evakuering.Kjeder"), "ic_e_evakuering.png", 0.7f);
+			structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Evakuering.Rett"), "ic_e_rett.png", 0.7f);
         }
 
         private void GetVersion()
@@ -515,13 +516,13 @@ namespace Henspe.iOS
 
                 InvokeOnMainThread(delegate
                 {
-                    UIAlertView alert = new UIAlertView(Foundation.NSBundle.MainBundle.LocalizedString("Alert.NewVersion.Title", null),
-                        Foundation.NSBundle.MainBundle.LocalizedString("Alert.NewVersion.Message1", null) + " " +
-                        serverVersionNumberFloat + " " + Foundation.NSBundle.MainBundle.LocalizedString("Alert.NewVersion.Message2", null) + " " +
-                        version + ". " + Foundation.NSBundle.MainBundle.LocalizedString("Alert.NewVersion.Message3", null),
+                    UIAlertView alert = new UIAlertView(LangUtil.Get("Alert.NewVersion.Title"),
+                        LangUtil.Get("Alert.NewVersion.Message1") + " " +
+                        serverVersionNumberFloat + " " + LangUtil.Get("Alert.NewVersion.Message2") + " " +
+                        version + ". " + LangUtil.Get("Alert.NewVersion.Message3"),
                         null,
-                        Foundation.NSBundle.MainBundle.LocalizedString("Alert.Yes", null),
-                        new string[] { Foundation.NSBundle.MainBundle.LocalizedString("Alert.No", null) });
+                        LangUtil.Get("Alert.Yes"),
+                        new string[] { LangUtil.Get("Alert.No") });
 
                     alert.Clicked += (s, b) =>
                     {

@@ -12,10 +12,10 @@ namespace Henspe.iOS.Util
 		// Must be run on mainthread
 		public static void ShowError(string error) 
 		{
-			UIAlertView alert = new UIAlertView (Foundation.NSBundle.MainBundle.LocalizedString ("Alert.Title.Error", null), 
+            UIAlertView alert = new UIAlertView (LangUtil.Get("Alert.Title.Error"), 
 				error,
 				null,
-				Foundation.NSBundle.MainBundle.LocalizedString ("Alert.OK", null), 
+                LangUtil.Get ("Alert.OK"), 
 				null);
 
 			alert.Show ();
