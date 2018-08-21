@@ -1,13 +1,12 @@
 ﻿using System.Net;
-using Henspe.Core.Storage;
 using System.Threading.Tasks;
 using System;
 using System.IO;
 using System.Text;
 using Henspe.Core.Util;
-using Newtonsoft.Json;
 using System.Net.Http;
 using Henspe.Core.Model.Dto;
+using Newtonsoft.Json;
 
 namespace Henspe.Core.Communication
 {
@@ -45,7 +44,7 @@ namespace Henspe.Core.Communication
 			{
 				try
 				{
-					bugtrackResultDto = JsonConvert.DeserializeObject<BugtrackResultDto> (stringJson);
+                    bugtrackResultDto = JsonConvert.DeserializeObject<BugtrackResultDto> (stringJson);
 				}
 				catch(Exception e)
 				{

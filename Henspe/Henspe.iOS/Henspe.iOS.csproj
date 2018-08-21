@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProjectGuid>{9903CDFF-F2A5-46AD-ACA6-F73F0568A951}</ProjectGuid>
+    <ProjectGuid>{8A58421D-AED1-496D-BFE9-A5337BBC3401}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>Henspe.iOS</RootNamespace>
@@ -22,7 +22,7 @@
     <MtouchDebug>true</MtouchDebug>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
     <MtouchFastDev>true</MtouchFastDev>
-    <IOSDebuggerPort>45357</IOSDebuggerPort>
+    <IOSDebuggerPort>14096</IOSDebuggerPort>
     <MtouchLink>None</MtouchLink>
     <MtouchArch>x86_64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
@@ -37,9 +37,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodesignKey>iPhone Distribution</CodesignKey>
+    <MtouchFloat32>true</MtouchFloat32>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchLink>None</MtouchLink>
-    <MtouchArch>ARMv7, ARMv7s, ARM64</MtouchArch>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <MtouchVerbosity></MtouchVerbosity>
     <CodesignProvision>HenspeAppStore</CodesignProvision>
@@ -51,13 +52,12 @@
     <DefineConstants></DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
     <MtouchLink>None</MtouchLink>
     <MtouchArch>x86_64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <MtouchVerbosity></MtouchVerbosity>
-    <CodesignProvision>HenspeAppStore</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -74,7 +74,7 @@
     <MtouchFastDev>true</MtouchFastDev>
     <MtouchFloat32>true</MtouchFloat32>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <IOSDebuggerPort>22403</IOSDebuggerPort>
+    <IOSDebuggerPort>45815</IOSDebuggerPort>
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchArch>ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
@@ -85,48 +85,43 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
-    <Reference Include="MonoTouch.Dialog-1" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
     <Reference Include="Microsoft.Threading.Tasks">
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wpa81\Microsoft.Threading.Tasks.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Threading.Tasks.Extensions">
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="System.Net.Http.Extensions">
-      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\Xamarin.iOS10\System.Net.Http.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Http.Primitives">
-      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\Xamarin.iOS10\System.Net.Http.Primitives.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76%402x.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-83.5%402x.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Notification.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Notification%402x.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Notification%403x.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-40%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-40%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iTunesArtwork%401x.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small%402x.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small%403x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iTunesArtwork%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-40%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
-    <Folder Include="Util\" />
-    <Folder Include="Renderer\" />
     <Folder Include="AppModel\" />
-    <Folder Include="Base.lproj\" />
-    <Folder Include="Communication\" />
     <Folder Include="Const\" />
+    <Folder Include="Util\" />
+    <Folder Include="Communication\" />
+    <Folder Include="Renderer\" />
     <Folder Include="Extension\" />
-    <Folder Include="Settings.bundle\" />
-    <Folder Include="Settings.bundle\Base.lproj\" />
+    <Folder Include="Base.lproj\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -145,6 +140,13 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppModel\GPSObject.cs" />
+    <Compile Include="Const\ColorConst.cs" />
+    <Compile Include="Const\EventConst.cs" />
+    <Compile Include="Const\FontConst.cs" />
+    <Compile Include="Const\PositionTypeConst.cs" />
+    <Compile Include="Util\LangUtil.cs" />
+    <Compile Include="Communication\AppVersionData.cs" />
     <Compile Include="Util\CloneUtil.cs" />
     <Compile Include="Util\CryptoUtil.cs" />
     <Compile Include="Util\DebugUtil.cs" />
@@ -159,14 +161,6 @@
     <Compile Include="Util\StoreUtil.cs" />
     <Compile Include="Util\UserUtil.cs" />
     <Compile Include="Util\ViewUtil.cs" />
-    <Compile Include="AppModel\GPSObject.cs" />
-    <Compile Include="Communication\AppVersionData.cs" />
-    <Compile Include="Const\ColorConst.cs" />
-    <Compile Include="Const\EventConst.cs" />
-    <Compile Include="Const\FontConst.cs" />
-    <Compile Include="Const\PositionTypeConst.cs" />
-    <Compile Include="Extension\StringExtensions.cs" />
-    <Compile Include="Extension\ViewExtensions.cs" />
     <Compile Include="MainViewController.cs" />
     <Compile Include="MainViewController.designer.cs">
       <DependentUpon>MainViewController.cs</DependentUpon>
@@ -174,13 +168,6 @@
     <Compile Include="InitialViewController.cs" />
     <Compile Include="InitialViewController.designer.cs">
       <DependentUpon>InitialViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InitialCardViewController.cs" />
-    <Compile Include="InitialCardViewController.designer.cs">
-      <DependentUpon>InitialCardViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="..\Henspe.Core\SQLite.Implementation.cs">
-      <Link>SQLite.Implementation.cs</Link>
     </Compile>
     <Compile Include="Renderer\MainLocationRowViewCell.cs" />
     <Compile Include="Renderer\MainLocationRowViewCell.designer.cs">
@@ -190,7 +177,12 @@
     <Compile Include="Renderer\MainNormalRowViewCell.designer.cs">
       <DependentUpon>MainNormalRowViewCell.cs</DependentUpon>
     </Compile>
-    <Compile Include="Util\LangUtil.cs" />
+    <Compile Include="InitialCardViewController.cs" />
+    <Compile Include="InitialCardViewController.designer.cs">
+      <DependentUpon>InitialCardViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extension\StringExtensions.cs" />
+    <Compile Include="Extension\ViewExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ic_e_adresse.png" />
@@ -318,15 +310,8 @@
     <BundleResource Include="Resources\Montserrat-Regular.ttf" />
     <BundleResource Include="Base.lproj\InfoPlist.strings" />
     <BundleResource Include="Base.lproj\Localizable.strings" />
-    <BundleResource Include="Settings.bundle\Base.lproj\Root.strings" />
-    <BundleResource Include="Settings.bundle\Root.plist" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Henspe.Core\Henspe.Core.csproj">
-      <Project>{537886BA-0199-482C-875E-16B5636BF78A}</Project>
-      <Name>Henspe.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <Import Project="..\Henspe.Core\Henspe.Core.projitems" Label="Shared" Condition="Exists('..\Henspe.Core\Henspe.Core.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
 </Project>

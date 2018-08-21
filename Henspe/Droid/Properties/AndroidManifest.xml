@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" android:theme="@style/AppTheme" package="no.norskluftambulanse.henspe">
-	<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="27" />
+	<uses-sdk android:minSdkVersion="18" android:targetSdkVersion="27" />
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 	<uses-permission android:name="android.permission.CONTROL_LOCATION_UPDATES" />
@@ -10,5 +10,5 @@
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.DELETE_PACKAGES" />
 	<uses-permission android:name="android.permission.INSTALL_PACKAGES" />
-	<application android:label="Henspe"></application>
+	<application android:label="HENSPE"></application>
 </manifest>

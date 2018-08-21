@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using Newtonsoft.Json;
 
 namespace Henspe.Core.Model.Dto
 {
 	public class BrukerDto
 	{
-		[JsonProperty("id")]
-		public int key { get; set; }
 		public string mobilnr { get; set; }
 		public string navn { get; set; }
 		public string mail { get; set; }

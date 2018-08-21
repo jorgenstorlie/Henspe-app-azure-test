@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{11877264-A52B-494B-95CA-2BD618C3C35B}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Henspe.Core</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Communication\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Const\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Model\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Util\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Model\Dto\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Communication\Dto\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Util\BugtrackUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\ConvertUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\CoordinateUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\DateUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\FileUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\JsonUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\MathUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\NumberUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\SessionUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\StringUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\TimerUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Dto\BrukerDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Dto\BugtrackResultDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Dto\StructureDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Dto\StructureElementDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Dto\StructureSectionDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Const\AttributeTypeConst.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Const\GpsCardinalDirectionConst.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Const\GpsCoverageConst.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Const\ModeConst.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Const\NetworkStateConst.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Const\POIConst.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\CallBugtrack.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\CallDebugInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\CxHttpClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\Dto\FormattedCoordinatesDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\ISettings.cs" />
+  </ItemGroup>
+</Project>

@@ -1,7 +1,6 @@
 ﻿using System;
 using UIKit;
 using CoreLocation;
-using Henspe.Core.Storage;
 using Foundation;
 using System.IO;
 using Henspe.Core.Communication;
@@ -15,17 +14,17 @@ using Henspe.Core.Util;
 using Henspe.Core;
 using System.Threading.Tasks;
 using Henspe.iOS.Const;
-using Henspe.iOS.Communication;
 using Henspe.iOS.AppModel;
 using System.Collections.Generic;
 using Henspe.Core.Model.Dto;
 using static Henspe.Core.Model.Dto.StructureSectionDto;
+using Henspe.iOS.Communication;
 
 namespace Henspe.iOS
 {
     // AppStore: no.norskluftambulanse.henspe
     // Enterprise: no.snla-system.henspe
-    // Debug: com.norskluftambulanse.testapp
+    // Debug: no.norskluftambulanse.testapp
     [Register("AppDelegate")]
     public partial class AppDelegate : UIApplicationDelegate
     {
@@ -85,10 +84,10 @@ namespace Henspe.iOS
         }
 
         public static AppDelegate current { get; private set; }
-        public Repository repository { get; set; }
+        //public Repository repository { get; set; }
         public CxHttpClient client { get; private set; }
 
-        Connection conn;
+        //Connection conn;
 
         public static UIViewController initialViewController;
 
@@ -230,8 +229,8 @@ namespace Henspe.iOS
             string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal); // Documents folder
             string libraryPath = Path.Combine(documentsPath, "../Library/"); // Library folder
             var path = Path.Combine(libraryPath, sqliteFilename);
-            conn = new Connection(path);
-            repository = new Repository(conn);
+            //conn = new Connection(path);
+            //repository = new Repository(conn);
         }
 
         // Standard methods
