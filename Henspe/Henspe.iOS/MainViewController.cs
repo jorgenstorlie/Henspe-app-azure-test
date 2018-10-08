@@ -100,6 +100,10 @@ namespace Henspe.iOS
 		public override void ViewWillAppear(bool animated)
 		{
 			base.ViewWillAppear(animated);
+
+            btnHelpUs.Layer.BorderColor = btnHelpUs.TitleColor(UIControlState.Normal).CGColor;
+            btnHelpUs.Layer.BorderWidth = 1;
+            btnHelpUs.Layer.CornerRadius = 5.0f;
 		}
 
 		public override void ViewDidAppear(bool animated)
@@ -500,7 +504,7 @@ namespace Henspe.iOS
             CGRect headerframe = new CGRect(0, 0, tableView.Bounds.Size.Width, headerHeight);
             UIView headerView = new UIView(headerframe);
 
-			headerView.BackgroundColor = UIColor.White;
+            headerView.BackgroundColor = UIColor.LightGray;
 
 			// Image
 			CGRect imageFrame = new CGRect(15, headerHeight - 40 - 8, 40, 40);

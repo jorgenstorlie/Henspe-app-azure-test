@@ -13,6 +13,9 @@ namespace Henspe.iOS
 	partial class MainViewController
 	{
 		[Outlet]
+		UIKit.UIButton btnHelpUs { get; set; }
+
+		[Outlet]
 		UIKit.UITableView myTableView { get; set; }
 
 		[Action ("OnInfoClicked:")]
@@ -26,6 +29,11 @@ namespace Henspe.iOS
 			if (myTableView != null) {
 				myTableView.Dispose ();
 				myTableView = null;
+			}
+
+			if (btnHelpUs != null) {
+				btnHelpUs.Dispose ();
+				btnHelpUs = null;
 			}
 		}
 	}

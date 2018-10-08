@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rob-TG-3ex">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rob-TG-3ex">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -31,7 +30,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cVL-JB-Q0Q">
-                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                                <rect key="frame" x="0.0" y="144" width="375" height="668"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellId1" rowHeight="65" id="nnh-fk-MJD" customClass="MainNormalRowViewCell">
@@ -137,13 +136,28 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Gw-ik-NzD">
+                                <rect key="frame" x="15" y="96" width="345" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="efX-HX-LMW"/>
+                                </constraints>
+                                <state key="normal" title="Du er viktig. Bli med oss å hjelpe andre">
+                                    <color key="titleColor" red="0.089262411099999994" green="0.32050007990000001" blue="0.97797292469999997" alpha="0.90148758559999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="eA2-Uu-Kc4" kind="show" id="mO2-of-fGS"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="cVL-JB-Q0Q" firstAttribute="top" secondItem="8Aw-d8-zFd" secondAttribute="bottom" id="Pop-Rw-O7X"/>
+                            <constraint firstAttribute="trailing" secondItem="1Gw-ik-NzD" secondAttribute="trailing" constant="15" id="6wM-hY-0Zr"/>
                             <constraint firstAttribute="trailing" secondItem="cVL-JB-Q0Q" secondAttribute="trailing" id="Sol-M6-1Od"/>
+                            <constraint firstItem="1Gw-ik-NzD" firstAttribute="top" secondItem="8Aw-d8-zFd" secondAttribute="bottom" constant="8" id="cBf-lJ-EkH"/>
+                            <constraint firstItem="cVL-JB-Q0Q" firstAttribute="top" secondItem="1Gw-ik-NzD" secondAttribute="bottom" constant="8" id="cpV-FQ-Oyw"/>
                             <constraint firstAttribute="bottom" secondItem="cVL-JB-Q0Q" secondAttribute="bottom" id="hcO-xw-J3Z"/>
                             <constraint firstItem="cVL-JB-Q0Q" firstAttribute="leading" secondItem="O2c-55-EEQ" secondAttribute="leading" id="o6M-Gk-iMX"/>
+                            <constraint firstItem="1Gw-ik-NzD" firstAttribute="leading" secondItem="O2c-55-EEQ" secondAttribute="leading" constant="15" id="p6O-hG-3H7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2gz-NO-E1J">
@@ -160,6 +174,7 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="btnHelpUs" destination="1Gw-ik-NzD" id="gsU-fD-OBV"/>
                         <outlet property="myTableView" destination="cVL-JB-Q0Q" id="liJ-Ve-Xh2"/>
                         <segue destination="OKo-4P-KxK" kind="unwind" identifier="segueInit" unwindAction="UnwindToInit:" id="7lG-vf-gEM"/>
                     </connections>
@@ -168,6 +183,24 @@
                 <exit id="OKo-4P-KxK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="908" y="138.91625615763547"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tFU-Ve-Y4C">
+            <objects>
+                <viewController id="eA2-Uu-Kc4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kRV-A0-kNo"/>
+                        <viewControllerLayoutGuide type="bottom" id="U8q-DJ-XnY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2A8-8Y-ILa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NPl-lA-a9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1814" y="139"/>
         </scene>
         <!--Initial View Controller-->
         <scene sceneID="FZU-qU-vpw">
