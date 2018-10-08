@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{BC57D061-E00F-4B31-A329-43D8EE64728D}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/Resources/values/Styles.xml">
+    <Files>
+      <File FileName="Droid/InitialActivity.cs" Line="13" Column="6" />
+      <File FileName="Droid/OnBoardingActivity.cs" Line="83" Column="10" />
+      <File FileName="Droid/Resources/values/Colors.xml" Line="8" Column="47" />
+      <File FileName="Droid/Resources/values/Styles.xml" Line="92" Column="13" />
+      <File FileName="Droid/Resources/values/Strings.xml" Line="3" Column="27" />
+      <File FileName="Droid/OnBoardingItemFragment.cs" Line="20" Column="1" />
+      <File FileName="Droid/Resources/drawable/button_info.xml" Line="1" Column="1" />
+      <File FileName="Droid/View/Indicator/IPageIndicator.cs" Line="1" Column="1" />
+      <File FileName="Droid/View/Indicator/CirclePageIndicator.cs" Line="59" Column="74" />
+      <File FileName="Droid/Resources/Resource.designer.cs" Line="1791" Column="56" />
+      <File FileName="Droid/Resources/values/vpi__defaults.xml" Line="5" Column="82" />
+      <File FileName="Droid/Resources/values/vpi__styles.xml" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Henspe.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.6_0" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/jorgenstorlie/Apper/Henspe-app/Henspe/Droid/Resources/values/Styles.xml" relfile="Droid/Resources/values/Styles.xml" line="21" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
