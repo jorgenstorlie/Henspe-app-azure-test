@@ -3,19 +3,67 @@
 using System;
 
 using Foundation;
+using Henspe.Core.Model.Dto;
+using Henspe.Core.Util;
+using Henspe.iOS.Const;
+using Henspe.iOS.Util;
 using UIKit;
 
 namespace Henspe.iOS
 {
 	public partial class MainLocationRowViewCell : UITableViewCell
 	{
-		public UIKit.UIImageView ImgImage { get { return imgImage; } set { imgImage = value; } }
-		public UIKit.UILabel LabLabelTop { get { return labLabelTop; } set { labLabelTop = value; } }
-		public UIKit.UILabel LabLabelBottom { get { return labLabelBottom; } set { labLabelBottom = value; } }
-		public UIKit.UIView ViewImage { get { return viewImage; } set { viewImage = value; } }
-
 		public MainLocationRowViewCell (IntPtr handle) : base (handle)
 		{
 		}
-	}
+
+        internal void SetContent(StructureElementDto structureElement, bool currentAddress)
+        {
+            BackgroundColor = UIColor.Clear;
+
+            var textColor = UIColor.FromRGB(0, 45, 115);
+
+            if (!currentAddress)
+            {
+                textColor = UIColor.FromRGB(208, 2, 27);
+                SVGUtil.LoadSVGToImageView(imgImage, "ic_e_posisjon_given.svg", new System.Collections.Generic.Dictionary<string, string>());
+            }
+            else
+            {
+                SVGUtil.LoadSVGToImageView(imgImage, "ic_e_my_position.svg", new System.Collections.Generic.Dictionary<string, string>());
+            }
+
+            //string formatDescription = LangUtil.Get("CoordinateFormatError");
+
+            //if (AppDelegate.current.coordinateFormat == CoordinateUtil.dd)
+            //    formatDescription = LangUtil.Get("CoordinateFormatDD");
+            //else if (AppDelegate.current.coordinateFormat == CoordinateUtil.ddm)
+            //    formatDescription = LangUtil.Get("CoordinateFormatDDM");
+            //else if (AppDelegate.current.coordinateFormat == CoordinateUtil.dms)
+            //    formatDescription = LangUtil.Get("CoordinateFormatDMS");
+            //else if (AppDelegate.current.coordinateFormat == CoordinateUtil.utm)
+                //formatDescription = LangUtil.Get("CoordinateFormatUTM");
+
+            labLabelTop.TextColor = textColor;
+            labLabelBottom.TextColor = textColor;
+
+            labLabelTop.Font = FontConst.fontLarge;
+            labLabelBottom.Font = FontConst.fontLarge;
+
+            if (AppDelegate.current.currentLocation != null)
+            {
+                var loc = AppDelegate.current.gpsCurrentPositionObject;
+                labLabelTop.Text = loc.latitudeDescription;
+                labLabelBottom.Text = loc.longitudeDescription;
+                //var coords = AppDelegate.current.currentLocation.Coordinate;
+                //labLabelTop.Text = $"{coords.Latitude.ToString("F4")} grader nord";
+                //labLabelBottom.Text = $"{coords.Longitude.ToString("F4")} grader øst";
+            }
+            else
+            {
+                labLabelTop.Text = string.Empty;
+                labLabelTop.Text = string.Empty;
+            }
+        }
+    }
 }

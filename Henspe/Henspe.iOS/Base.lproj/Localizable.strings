@@ -78,12 +78,12 @@ Location.Element.Meters.Short.Text = "m";
 Location.Element.For = "for";
 
 // Hendelse
-Structure.Hendelse.Header = "HENDELSE"; 
+Structure.Hendelse.Header = "Hendelse"; 
 Structure.Hendelse.Trafikk = "Trafikk, fly, båt, industri, skred osv"; 
 Structure.Hendelse.Brann = "Brann"; 
 
 // Eksakt posisjon
-Structure.EksaktPosisjon.Header = "EKSAKT POSISJON"; 
+Structure.EksaktPosisjon.Header = "Eksakt posisjon"; 
 Structure.EksaktPosisjon.Posisjon = "Posisjon"; 
 Structure.EksaktPosisjon.Adresse = "Nærmeste adresse";
 Structure.EksaktPosisjon.Oppmotested = "Oppmøtested";
@@ -91,24 +91,24 @@ Structure.EksaktPosisjon.Ankomst = "Ankomst";
 Structure.EksaktPosisjon.Avreise = "Avreise";
 
 // Nivå
-Structure.Niva.Header = "NIVÅ"; 
+Structure.Niva.Header = "Nivå"; 
 Structure.Niva.Type = "Begrenset, stort, masseskade";
 Structure.Niva.QuatroVarsling = "Quatro varsling";
 
 // Sikkerhet
-Structure.Sikkerhet.Header = "SIKKERHET"; 
+Structure.Sikkerhet.Header = "Sikkerhet"; 
 Structure.Sikkerhet.Farer = "Mulige/reelle farer";
 Structure.Sikkerhet.Brann = "Brann";
 Structure.Sikkerhet.Sikkerhet = "Sikkerhet for involverte";
 
 // Pasienter
-Structure.Pasienter.Header = "PASIENTER"; 
+Structure.Pasienter.Header = "Pasienter"; 
 Structure.Pasienter.Antall = "Ca antall pasienter";
 Structure.Pasienter.Type = "Type skader";
 Structure.Pasienter.Omfang = "Skademekanikk/omfang";
 
 // Evakuering
-Structure.Evakuering.Header = "EVAKUERING"; 
+Structure.Evakuering.Header = "Evakuering"; 
 Structure.Evakuering.Flaskehalser = "Avklar flaskehalser";
 Structure.Evakuering.Kjeder = "Effektive evakueringskjeder";
 Structure.Evakuering.Rett = "Rett pasient til rett sykehus";

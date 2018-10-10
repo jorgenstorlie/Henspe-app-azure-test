@@ -95,6 +95,27 @@
     <Reference Include="Microsoft.Threading.Tasks.Extensions">
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="Lottie.iOS">
+      <HintPath>..\packages\Com.Airbnb.iOS.Lottie.2.5.4\lib\xamarinios10\Lottie.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp">
+      <HintPath>..\packages\SkiaSharp.1.60.0\lib\XamariniOS\SkiaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="WebP.Touch">
+      <HintPath>..\packages\WebP.Touch.1.0.8\lib\Xamarin.iOS10\WebP.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading">
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.4.3.840\lib\Xamarin.iOS10\FFImageLoading.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Platform">
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.4.3.840\lib\Xamarin.iOS10\FFImageLoading.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Svg.Platform">
+      <HintPath>..\packages\Xamarin.FFImageLoading.Svg.2.4.3.840\lib\Xamarin.iOS10\FFImageLoading.Svg.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Essentials">
+      <HintPath>..\packages\Xamarin.Essentials.0.10.0-preview\lib\xamarinios10\Xamarin.Essentials.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -183,133 +204,98 @@
     </Compile>
     <Compile Include="Extension\StringExtensions.cs" />
     <Compile Include="Extension\ViewExtensions.cs" />
+    <Compile Include="HeaderTableCell.cs" />
+    <Compile Include="HeaderTableCell.designer.cs">
+      <DependentUpon>HeaderTableCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainListTableViewSource.cs" />
+    <Compile Include="Util\SVGUtil.cs" />
+    <Compile Include="SegmentedCell.cs" />
+    <Compile Include="SegmentedCell.designer.cs">
+      <DependentUpon>SegmentedCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddressCell.cs" />
+    <Compile Include="AddressCell.designer.cs">
+      <DependentUpon>AddressCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButtonsCell.cs" />
+    <Compile Include="ButtonsCell.designer.cs">
+      <DependentUpon>ButtonsCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\ic_e_adresse.png" />
-    <BundleResource Include="Resources\ic_e_adresse%402x.png" />
-    <BundleResource Include="Resources\ic_e_adresse%403x.png" />
-    <BundleResource Include="Resources\ic_e_ankomst.png" />
-    <BundleResource Include="Resources\ic_e_ankomst%402x.png" />
-    <BundleResource Include="Resources\ic_e_ankomst%403x.png" />
-    <BundleResource Include="Resources\ic_e_avreise.png" />
-    <BundleResource Include="Resources\ic_e_avreise%402x.png" />
-    <BundleResource Include="Resources\ic_e_avreise%403x.png" />
-    <BundleResource Include="Resources\ic_e_evakuering.png" />
-    <BundleResource Include="Resources\ic_e_evakuering%402x.png" />
-    <BundleResource Include="Resources\ic_e_evakuering%403x.png" />
-    <BundleResource Include="Resources\ic_e_flaskehalser.png" />
-    <BundleResource Include="Resources\ic_e_flaskehalser%402x.png" />
-    <BundleResource Include="Resources\ic_e_flaskehalser%403x.png" />
-    <BundleResource Include="Resources\ic_e_oppmotested.png" />
-    <BundleResource Include="Resources\ic_e_oppmotested%402x.png" />
-    <BundleResource Include="Resources\ic_e_oppmotested%403x.png" />
-    <BundleResource Include="Resources\ic_e_posisjon.png" />
-    <BundleResource Include="Resources\ic_e_posisjon%402x.png" />
-    <BundleResource Include="Resources\ic_e_posisjon%403x.png" />
-    <BundleResource Include="Resources\ic_e_rett.png" />
-    <BundleResource Include="Resources\ic_e_rett%402x.png" />
-    <BundleResource Include="Resources\ic_e_rett%403x.png" />
-    <BundleResource Include="Resources\ic_e.png" />
-    <BundleResource Include="Resources\ic_e%402x.png" />
-    <BundleResource Include="Resources\ic_e%403x.png" />
-    <BundleResource Include="Resources\ic_h_brann.png" />
-    <BundleResource Include="Resources\ic_h_brann%402x.png" />
-    <BundleResource Include="Resources\ic_h_brann%403x.png" />
-    <BundleResource Include="Resources\ic_h_trafikk.png" />
-    <BundleResource Include="Resources\ic_h_trafikk%402x.png" />
-    <BundleResource Include="Resources\ic_h_trafikk%403x.png" />
-    <BundleResource Include="Resources\ic_h.png" />
-    <BundleResource Include="Resources\ic_h%402x.png" />
-    <BundleResource Include="Resources\ic_h%403x.png" />
     <BundleResource Include="Resources\ic_info.png" />
     <BundleResource Include="Resources\ic_info%402x.png" />
     <BundleResource Include="Resources\ic_info%403x.png" />
     <BundleResource Include="Resources\ic_logo_snla.png" />
     <BundleResource Include="Resources\ic_logo_snla%402x.png" />
     <BundleResource Include="Resources\ic_logo_snla%403x.png" />
-    <BundleResource Include="Resources\ic_n_begrenset.png" />
-    <BundleResource Include="Resources\ic_n_begrenset%402x.png" />
-    <BundleResource Include="Resources\ic_n_begrenset%403x.png" />
-    <BundleResource Include="Resources\ic_n_quartro.png" />
-    <BundleResource Include="Resources\ic_n_quartro%402x.png" />
-    <BundleResource Include="Resources\ic_n_quartro%403x.png" />
-    <BundleResource Include="Resources\ic_n.png" />
-    <BundleResource Include="Resources\ic_n%402x.png" />
-    <BundleResource Include="Resources\ic_n%403x.png" />
-    <BundleResource Include="Resources\ic_p_pasienter.png" />
-    <BundleResource Include="Resources\ic_p_pasienter%402x.png" />
-    <BundleResource Include="Resources\ic_p_pasienter%403x.png" />
-    <BundleResource Include="Resources\ic_p_skademekanikk.png" />
-    <BundleResource Include="Resources\ic_p_skademekanikk%402x.png" />
-    <BundleResource Include="Resources\ic_p_skademekanikk%403x.png" />
-    <BundleResource Include="Resources\ic_p_type.png" />
-    <BundleResource Include="Resources\ic_p_type%402x.png" />
-    <BundleResource Include="Resources\ic_p_type%403x.png" />
-    <BundleResource Include="Resources\ic_p.png" />
-    <BundleResource Include="Resources\ic_p%402x.png" />
-    <BundleResource Include="Resources\ic_p%403x.png" />
-    <BundleResource Include="Resources\ic_s_brann.png" />
-    <BundleResource Include="Resources\ic_s_brann%402x.png" />
-    <BundleResource Include="Resources\ic_s_brann%403x.png" />
-    <BundleResource Include="Resources\ic_s_farer.png" />
-    <BundleResource Include="Resources\ic_s_farer%402x.png" />
-    <BundleResource Include="Resources\ic_s_farer%403x.png" />
-    <BundleResource Include="Resources\ic_s_sikkerhet.png" />
-    <BundleResource Include="Resources\ic_s_sikkerhet%402x.png" />
-    <BundleResource Include="Resources\ic_s_sikkerhet%403x.png" />
-    <BundleResource Include="Resources\ic_s.png" />
-    <BundleResource Include="Resources\ic_s%402x.png" />
-    <BundleResource Include="Resources\ic_s%403x.png" />
     <BundleResource Include="Resources\ic_settings.png" />
     <BundleResource Include="Resources\ic_settings%402x.png" />
     <BundleResource Include="Resources\ic_settings%403x.png" />
     <BundleResource Include="Resources\ic_snla.png" />
     <BundleResource Include="Resources\ic_snla%402x.png" />
     <BundleResource Include="Resources\ic_snla%403x.png" />
-    <BundleResource Include="Resources\intro1-1.png" />
-    <BundleResource Include="Resources\intro1-1%402x.png" />
-    <BundleResource Include="Resources\intro1-1%403x.png" />
-    <BundleResource Include="Resources\intro1-2.png" />
-    <BundleResource Include="Resources\intro1-2%402x.png" />
-    <BundleResource Include="Resources\intro1-2%403x.png" />
-    <BundleResource Include="Resources\intro1-3.png" />
-    <BundleResource Include="Resources\intro1-3%402x.png" />
-    <BundleResource Include="Resources\intro1-3%403x.png" />
-    <BundleResource Include="Resources\intro1.png" />
-    <BundleResource Include="Resources\intro1%402x.png" />
-    <BundleResource Include="Resources\intro1%403x.png" />
-    <BundleResource Include="Resources\intro2-1.png" />
-    <BundleResource Include="Resources\intro2-1%402x.png" />
-    <BundleResource Include="Resources\intro2-1%403x.png" />
-    <BundleResource Include="Resources\intro2-2.png" />
-    <BundleResource Include="Resources\intro2-2%402x.png" />
-    <BundleResource Include="Resources\intro2-2%403x.png" />
-    <BundleResource Include="Resources\intro2-3.png" />
-    <BundleResource Include="Resources\intro2-3%402x.png" />
-    <BundleResource Include="Resources\intro2-3%403x.png" />
-    <BundleResource Include="Resources\intro2-4.png" />
-    <BundleResource Include="Resources\intro2-4%402x.png" />
-    <BundleResource Include="Resources\intro2-4%403x.png" />
-    <BundleResource Include="Resources\intro2-5.png" />
-    <BundleResource Include="Resources\intro2-5%402x.png" />
-    <BundleResource Include="Resources\intro2-5%403x.png" />
-    <BundleResource Include="Resources\intro2-6.png" />
-    <BundleResource Include="Resources\intro2-6%402x.png" />
-    <BundleResource Include="Resources\intro2-6%403x.png" />
-    <BundleResource Include="Resources\intro2.png" />
-    <BundleResource Include="Resources\intro2%402x.png" />
-    <BundleResource Include="Resources\intro2%403x.png" />
-    <BundleResource Include="Resources\intro3-1.png" />
-    <BundleResource Include="Resources\intro3-1%402x.png" />
-    <BundleResource Include="Resources\intro3-1%403x.png" />
-    <BundleResource Include="Resources\intro3.png" />
-    <BundleResource Include="Resources\intro3%402x.png" />
-    <BundleResource Include="Resources\intro3%403x.png" />
     <BundleResource Include="Resources\Montserrat-Light.ttf" />
     <BundleResource Include="Resources\Montserrat-Medium.ttf" />
     <BundleResource Include="Resources\Montserrat-Regular.ttf" />
     <BundleResource Include="Base.lproj\InfoPlist.strings" />
     <BundleResource Include="Base.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\HENSPEintropart1.json" />
+    <BundleResource Include="Resources\HENSPEintropart2.json" />
+    <BundleResource Include="Resources\HENSPEintropart3.json" />
+    <BundleResource Include="Resources\rocket.json" />
+    <BundleResource Include="Resources\ic_arrow_left_portrait.svg" />
+    <BundleResource Include="Resources\ic_arrow_right.svg" />
+    <BundleResource Include="Resources\ic_arrow_up.svg" />
+    <BundleResource Include="Resources\ic_btn_directions_down.svg" />
+    <BundleResource Include="Resources\ic_btn_directions.svg" />
+    <BundleResource Include="Resources\ic_btn_filled_down.svg" />
+    <BundleResource Include="Resources\ic_btn_filled_full_width_disabled.svg" />
+    <BundleResource Include="Resources\ic_btn_filled_full_width_down.svg" />
+    <BundleResource Include="Resources\ic_btn_filled_full_width_enabled.svg" />
+    <BundleResource Include="Resources\ic_btn_filled.svg" />
+    <BundleResource Include="Resources\ic_btn_map_center_down.svg" />
+    <BundleResource Include="Resources\ic_btn_map_center_up.svg" />
+    <BundleResource Include="Resources\ic_btn_map_toggle_down.svg" />
+    <BundleResource Include="Resources\ic_btn_map_toggle_up.svg" />
+    <BundleResource Include="Resources\ic_btn_rounded_outlined_down.svg" />
+    <BundleResource Include="Resources\ic_btn_rounded_outlined.svg" />
+    <BundleResource Include="Resources\ic_btn_set_position_down.svg" />
+    <BundleResource Include="Resources\ic_btn_set_position.svg" />
+    <BundleResource Include="Resources\ic_btn_traffic_down.svg" />
+    <BundleResource Include="Resources\ic_btn_traffic.svg" />
+    <BundleResource Include="Resources\ic_cluster.svg" />
+    <BundleResource Include="Resources\ic_e_adresse_given.svg" />
+    <BundleResource Include="Resources\ic_e_adresse_my.svg" />
+    <BundleResource Include="Resources\ic_e_ankomst.svg" />
+    <BundleResource Include="Resources\ic_e_avreise.svg" />
+    <BundleResource Include="Resources\ic_e_evakuering.svg" />
+    <BundleResource Include="Resources\ic_e_flaskehalser.svg" />
+    <BundleResource Include="Resources\ic_e_my_position.svg" />
+    <BundleResource Include="Resources\ic_e_oppmotested.svg" />
+    <BundleResource Include="Resources\ic_e_posisjon_given.svg" />
+    <BundleResource Include="Resources\ic_e_rett.svg" />
+    <BundleResource Include="Resources\ic_gear_down.svg" />
+    <BundleResource Include="Resources\ic_gear.svg" />
+    <BundleResource Include="Resources\ic_h_brann.svg" />
+    <BundleResource Include="Resources\ic_h_trafikk.svg" />
+    <BundleResource Include="Resources\ic_info_down.svg" />
+    <BundleResource Include="Resources\ic_info.svg" />
+    <BundleResource Include="Resources\ic_logo_color_simple.svg" />
+    <BundleResource Include="Resources\ic_n_begrenset.svg" />
+    <BundleResource Include="Resources\ic_n_quartro.svg" />
+    <BundleResource Include="Resources\ic_p_pasienter.svg" />
+    <BundleResource Include="Resources\ic_p_skademekanikk.svg" />
+    <BundleResource Include="Resources\ic_p_type.svg" />
+    <BundleResource Include="Resources\ic_poi_selected_position.svg" />
+    <BundleResource Include="Resources\ic_road_camera_down.svg" />
+    <BundleResource Include="Resources\ic_road_camera_up.svg" />
+    <BundleResource Include="Resources\ic_s_brann.svg" />
+    <BundleResource Include="Resources\ic_s_farer.svg" />
+    <BundleResource Include="Resources\ic_s_sikkerhet.svg" />
+    <BundleResource Include="Resources\ic_snla_logo_white.svg" />
+    <BundleResource Include="Resources\ic_text_henspe.svg" />
   </ItemGroup>
   <Import Project="..\Henspe.Core\Henspe.Core.projitems" Label="Shared" Condition="Exists('..\Henspe.Core\Henspe.Core.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

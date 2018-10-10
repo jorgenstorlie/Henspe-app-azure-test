@@ -26,14 +26,14 @@ namespace Henspe.iOS
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (myTableView != null) {
-				myTableView.Dispose ();
-				myTableView = null;
-			}
-
 			if (btnHelpUs != null) {
 				btnHelpUs.Dispose ();
 				btnHelpUs = null;
+			}
+
+			if (myTableView != null) {
+				myTableView.Dispose ();
+				myTableView = null;
 			}
 		}
 	}

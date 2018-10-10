@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="24px" viewBox="0 0 23 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_n_begrenset</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.668573289">
+        <g id="Hovedskjerm-Copy-37" transform="translate(-12.000000, -1024.000000)" fill="#4A4A4A">
+            <g id="ic_n_begrenset" transform="translate(12.500000, 1024.625000)">
+                <polygon id="Rectangle-4" points="0 12.5454545 4 12.5454545 4 23 0 23"></polygon>
+                <rect id="Rectangle-4" x="6" y="8.36363636" width="4" height="14.6363636"></rect>
+                <rect id="Rectangle-4" x="12" y="4.18181818" width="4" height="18.8181818"></rect>
+                <polygon id="Rectangle-4" points="18 0 22 0 22 23 18 23"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
