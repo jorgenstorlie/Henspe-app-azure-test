@@ -16,7 +16,7 @@ namespace Henspe.iOS
         public const int LocationRow = 1;
         public const int AddressRow = 2;
 
-        private int headerHeight = 100;
+        private int headerHeight = 80;
         private WeakReference<MainViewController> _parent;
 
         private string lastPositionText = "";

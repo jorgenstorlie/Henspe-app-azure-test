@@ -9,58 +9,61 @@ using System.CodeDom.Compiler;
 
 namespace Henspe.iOS
 {
-	[Register ("ButtonsCell")]
-	partial class ButtonsCell
-	{
-		[Outlet]
-		UIKit.UIImageView imgLeftImage { get; set; }
+    [Register ("ButtonsCell")]
+    partial class ButtonsCell
+    {
+        [Outlet]
+        UIKit.UIButton btnLeftButton { get; set; }
 
-		[Outlet]
-		UIKit.UIImageView imgMiddleImage { get; set; }
+        [Outlet]
+        UIKit.UIButton btnMiddleButton { get; set; }
 
-		[Outlet]
-		UIKit.UIImageView imgRightImage { get; set; }
+        [Outlet]
+        UIKit.UIButton btnRightButton { get; set; }
 
-		[Outlet]
-		UIKit.UILabel labLeft { get; set; }
+        [Outlet]
+        UIKit.UILabel labLeft { get; set; }
 
-		[Outlet]
-		UIKit.UILabel labMiddle { get; set; }
+        [Outlet]
+        UIKit.UILabel labMiddle { get; set; }
 
-		[Outlet]
-		UIKit.UILabel labRight { get; set; }
-		
-		void ReleaseDesignerOutlets ()
-		{
-			if (imgLeftImage != null) {
-				imgLeftImage.Dispose ();
-				imgLeftImage = null;
-			}
+        [Outlet]
+        UIKit.UILabel labRight { get; set; }
 
-			if (imgMiddleImage != null) {
-				imgMiddleImage.Dispose ();
-				imgMiddleImage = null;
-			}
+        [Action ("RightButtonClicked:")]
+        partial void RightButtonClicked (Foundation.NSObject sender);
+        
+        void ReleaseDesignerOutlets ()
+        {
+            if (btnLeftButton != null) {
+                btnLeftButton.Dispose ();
+                btnLeftButton = null;
+            }
 
-			if (imgRightImage != null) {
-				imgRightImage.Dispose ();
-				imgRightImage = null;
-			}
+            if (btnMiddleButton != null) {
+                btnMiddleButton.Dispose ();
+                btnMiddleButton = null;
+            }
 
-			if (labLeft != null) {
-				labLeft.Dispose ();
-				labLeft = null;
-			}
+            if (btnRightButton != null) {
+                btnRightButton.Dispose ();
+                btnRightButton = null;
+            }
 
-			if (labMiddle != null) {
-				labMiddle.Dispose ();
-				labMiddle = null;
-			}
+            if (labLeft != null) {
+                labLeft.Dispose ();
+                labLeft = null;
+            }
 
-			if (labRight != null) {
-				labRight.Dispose ();
-				labRight = null;
-			}
-		}
-	}
+            if (labMiddle != null) {
+                labMiddle.Dispose ();
+                labMiddle = null;
+            }
+
+            if (labRight != null) {
+                labRight.Dispose ();
+                labRight = null;
+            }
+        }
+    }
 }
