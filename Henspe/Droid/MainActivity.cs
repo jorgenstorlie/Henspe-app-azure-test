@@ -1,69 +1,38 @@
-﻿using Android.App;
-using Android.OS;
-using Android.Content;
+using Android.App;
+using Android.Content.PM;
 using Android.Views;
-using Android.Support.V7.App;
-using Android.Util;
-using Java.Lang;
-using Henspe.Droid.Utils;
+using Android.Widget;
+using Android.Content;
+using Android.Runtime;
 
 namespace Henspe.Droid
 {
-	[Activity(Label = "Henspe", MainLauncher = true, Icon = "@mipmap/icon", Theme ="@style/AppTheme")]
-	public class MainActivity : AppCompatActivity
-	{
-		/** 
-        * Fragment managing the behaviors, interactions and presentation of the navigation drawer.  
-        */
-		protected override void OnCreate(Bundle savedInstanceState)
+	[Activity(Label = "", ScreenOrientation = ScreenOrientation.Portrait)]
+	class MainActivity : SinglePaneActivity
+    {
+		HenspeFragment henspeFragment;
+
+		protected override Fragment OnCreatePane()
 		{
-			base.OnCreate(savedInstanceState);
-
-			RequestWindowFeature(WindowFeatures.NoTitle);
-
-			DisplayMetrics displayMetrics = new DisplayMetrics();
-			WindowManager.DefaultDisplay.GetMetrics(displayMetrics);
-			Henspe.Current.SetScreenSize(displayMetrics.HeightPixels, displayMetrics.WidthPixels);
-
-			if (UserUtil.settings.instructionsFinished)
-			{
-				Intent intent = new Intent(this, typeof(HenspeActivity));
-				StartActivity(intent);
-				Finish();
-			}
-			else
-			{
-				GoToInfoScreen();
-			}
+			henspeFragment = new HenspeFragment();
+			return henspeFragment;
 		}
 
-		protected override void OnPostCreate(Bundle savedInstanceState)
+		public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
 		{
-			base.OnPostCreate(savedInstanceState);
-		}
+			henspeFragment.InitializeLocationManager();
+			henspeFragment.RequestLocation();
 
-		protected override void OnDestroy()
-		{
-			try
-			{
-				base.OnDestroy();
-			}
-			catch (Exception ex)
-			{
-				ex.ToString();
-			}
-		}
-
-		private void GoToInfoScreen()
-		{
-			var intent = new Intent(this, typeof(InitialActivity));
-			StartActivity(intent);
-			Finish();
+			base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 		}
 
 		public override void OnBackPressed()
 		{
 			base.OnBackPressed();
+
+			Intent main = new Intent(Intent.ActionMain);
+			main.AddCategory(Intent.CategoryHome);
+			StartActivity(main);
 		}
 	}
 }

@@ -156,7 +156,7 @@ namespace Henspe.Droid
 
         private void GoToInfoScreen()
         {
-            var intentInitialActivity = new Intent(this.Activity, typeof(InitialActivity));
+            var intentInitialActivity = new Intent(this.Activity, typeof(OnBoardingActivity));
 			StartActivity(intentInitialActivity);
             //this.Activity.Finish();
         }

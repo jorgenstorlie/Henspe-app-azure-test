@@ -14,12 +14,12 @@ using Android.Gms.Location;
 
 namespace Henspe.Droid
 {
-#if DEBUG
-    [Application(Label = "@string/app_name", Theme = "@style/AppTheme", Debuggable = true, LargeHeap = true)]
+	#if DEBUG
+    [Application(Label = "@string/app_name", Theme = "@style/SplashTheme", Debuggable = true, LargeHeap = true)]
 #else
-    [Application(Label = "@string/app_name", Theme = "@style/AppTheme", Debuggable = false, LargeHeap = true)]
+    [Application(Label = "@string/app_name", Theme = "@style/SplashTheme", Debuggable = false, LargeHeap = true)]
 #endif
-	class Henspe : Application, Application.IActivityLifecycleCallbacks
+    class Henspe : Application, Application.IActivityLifecycleCallbacks
     {
 		public string mode = ModeConst.test;
 

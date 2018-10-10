@@ -1,75 +1,102 @@
-﻿<resources>
-    <style name="AppTheme" parent="AppTheme.Base"/>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <style name="SplashTheme" parent="SplashTheme.Base">
+        <!-- Set theme colors from http://www.google.com/design/spec/style/color.html#color-color-palette-->
+        <!-- colorPrimary is used for the default action bar background -->
+        <item name="colorPrimary">@color/primarySplash</item>
+        <!-- colorPrimaryDark is used for the status bar -->
+        <item name="colorPrimaryDark">@color/primaryDarkSplash</item>
+        <!-- colorAccent is used as the default value for colorControlActivated
+         which is used to tint widgets -->
+        <item name="colorAccent">@color/accent</item>
+    </style>
+    <style name="SplashTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
+    <style name="AppThemeOnBoarding" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primaryOnboarding</item>
+        <item name="colorPrimaryDark">@color/primaryDarkOnboarding</item>
+         <item name="android:textColor">@color/text_normalOnboarding</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorButtonNormal">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/primaryOnboarding</item>
+        <item name="android:statusBarColor">@color/primaryDarkOnboarding</item>
+    </style>
+    <style name="AppTheme" parent="AppTheme.Base" />
     <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primaryDark</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>
     </style>
-
-    <style name="MyTheme.Base" parent="Theme.AppCompat.Light"></style>
-    <style name="MyTheme" parent="MyTheme.Base"></style>
+    <style name="MyTheme.Base" parent="Theme.AppCompat.Light">
+    </style>
+    <style name="MyTheme" parent="MyTheme.Base">
+    </style>
     <!--style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowNoTitle">true</item>  
         <item name="android:windowFullscreen">false</item>  
         <item name="android:windowContentOverlay">@null</item>  
         <item name="android:windowActionBar">false</item>  
     </style-->
-
     <!--style name="ActionBar" parent="@android:style/Widget.ActionBar">
         <item name="android:displayOptions">showHome|useLogo</item>
     </style-->
-    
-	<style name="AppTheme.NoActionBar">
-	    <item name="windowActionBar">false</item>
-	    <item name="windowNoTitle">true</item>
-	    <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-	    <item name="android:statusBarColor">@android:color/transparent</item>
-	</style>
-
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
     <!--style name="ToolBarStyle">
      	<item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
      	<item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
     </style-->
-
     <!--style name="AppThemeyouaka.ActionBarMenu" parent="ThemeOverlay.AppCompat.Light">
     </style-->
-
     <style name="FontBase">
         <item name="android:textColor">@color/text_main</item>
     </style>
-    
     <style name="FontMedium" parent="FontBase">
         <item name="android:fontFamily">@font/montserrat</item>
     </style>
-
     <style name="FontLight" parent="FontBase">
         <item name="android:fontFamily">@font/montserrat_l</item>
     </style>
-
     <style name="FontCondensed" parent="FontBase">
         <item name="android:fontFamily">@font/montserrat</item>
     </style>
-
     <style name="NormalText" parent="FontMedium">
         <item name="android:textSize">@dimen/text_size_small</item>
     </style>
-    
     <style name="TextButton" parent="FontMedium">
         <item name="android:textColor">@color/text_normal</item>
         <item name="android:textSize">@dimen/text_size_medium</item>
     </style>
-
     <style name="TextTitle" parent="FontCondensed">         <item name="android:textSize">@dimen/text_size_large</item>     </style>
-
     <style name="TextHeaderSubWhite">
         <item name="android:textSize">@dimen/text_size_medium</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textColor">@color/text_normal</item>
         <item name="android:textAlignment">viewStart</item>
     </style>
-    
     <style name="TextSmall" parent="FontCondensed">
         <item name="android:textSize">@dimen/text_size_small</item>
     </style>
+    
+        <style name="OnboardingTextTitle" parent="FontLight">
+        <item name="android:textSize">@dimen/text_size_large</item>
+           <item name="android:textColor">@color/text_white</item>
+    </style>
+    
+     <style name="OnboardingNormalText" parent="FontLight">
+        <item name="android:textSize">@dimen/text_size_small</item>
+           <item name="android:textColor">@color/text_white</item>
+    </style>
+    
+     <style name="OnboardingTextButton" parent="FontMedium">
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+    
 </resources>
