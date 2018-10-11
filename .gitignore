@@ -6,3 +6,14 @@ Henspe/\Henspe.Core.Test/obj/
 Henspe/\Henspe.iOS/bin/
 Henspe/\Henspe.iOS/obj/
 Henspe/\packages/
+
+
+Henspe/Droid/obj/Debug/Henspe\.Droid\.csprojAssemblyReference\.cache
+
+*.cache
+
+Henspe/Henspe\.Core\.Test/obj/
+
+Henspe/Droid/obj/Debug/
+
+Henspe/Henspe\.iOS/obj/iPhoneSimulator/Debug/
