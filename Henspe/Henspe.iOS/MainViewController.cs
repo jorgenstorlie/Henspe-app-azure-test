@@ -60,7 +60,10 @@ namespace Henspe.iOS
 			UIImage imgLogo = UIImage.FromFile("ic_snla.png");
 			UIImageView imgViewLogo = new UIImageView(imgLogo);
 			this.NavigationItem.TitleView = imgViewLogo;
-		}
+
+            NavigationItem.LeftBarButtonItem.TintColor = ColorConst.Blue;
+            NavigationItem.RightBarButtonItem.TintColor = ColorConst.Blue;
+        }
 
 		private void OnSettingsClicked()
 		{
@@ -88,6 +91,7 @@ namespace Henspe.iOS
 		{
 			base.ViewWillAppear(animated);
 
+            btnHelpUs.SetTitleColor(ColorConst.Blue, UIControlState.Normal);
             btnHelpUs.Layer.BorderColor = btnHelpUs.TitleColor(UIControlState.Normal).CGColor;
             btnHelpUs.Layer.BorderWidth = 1;
             btnHelpUs.Layer.CornerRadius = 5.0f;
@@ -122,20 +126,6 @@ namespace Henspe.iOS
 		private void SetupView()
 		{
 			ResetGPSVariables();
-
-            //Task.Run(async () =>
-            //{
-            //    //var infoImage = await SVGUtil.LoadSVG("ic_info.svg");
-            //    //var settingsImage = await SVGUtil.LoadSVG("ic_gear.svg");
-            //    BeginInvokeOnMainThread(() =>
-            //    {
-            //        var infoImage = UIImage.FromBundle("ic_info");
-            //        var settingsImage = UIImage.FromBundle("ic_settings");
-            //        NavigationItem.LeftBarButtonItem = new UIBarButtonItem(infoImage, UIBarButtonItemStyle.Plain, (a, b) => OnInfoClicked());
-            //        NavigationItem.RightBarButtonItem = new UIBarButtonItem(settingsImage, UIBarButtonItemStyle.Plain, (a, b) => OnSettingsClicked());
-            //    });
-            //});
-
 
             // Table setup
             mainListTableViewSource = new MainListTableViewSource(this);
