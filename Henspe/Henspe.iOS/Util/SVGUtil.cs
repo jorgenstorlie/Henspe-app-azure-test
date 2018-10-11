@@ -27,7 +27,7 @@ namespace Henspe.iOS.Util
         {
             ImageService.Instance
                         .LoadFile(imageFilename)
-                        .WithCustomDataResolver(new SvgDataResolver(0, 0, true, replaceStringMap)).
+                        .WithCustomDataResolver(new SvgDataResolver(0, 0, true, replaceStringMap))
                         .Into(imageView);
         }
 

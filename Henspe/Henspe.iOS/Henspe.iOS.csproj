@@ -222,6 +222,10 @@
     <Compile Include="ButtonsCell.designer.cs">
       <DependentUpon>ButtonsCell.cs</DependentUpon>
     </Compile>
+    <Compile Include="HelpUsViewController.cs" />
+    <Compile Include="HelpUsViewController.designer.cs">
+      <DependentUpon>HelpUsViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ic_info.png" />
@@ -296,6 +300,7 @@
     <BundleResource Include="Resources\ic_s_sikkerhet.svg" />
     <BundleResource Include="Resources\ic_snla_logo_white.svg" />
     <BundleResource Include="Resources\ic_text_henspe.svg" />
+    <BundleResource Include="Resources\video10.mp4" />
   </ItemGroup>
   <Import Project="..\Henspe.Core\Henspe.Core.projitems" Label="Shared" Condition="Exists('..\Henspe.Core\Henspe.Core.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
