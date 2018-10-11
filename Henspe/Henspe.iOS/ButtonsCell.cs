@@ -19,9 +19,9 @@ namespace Henspe.iOS
         internal void SetContent()
         {
             BackgroundColor = UIColor.Clear;
-            labLeft.TextColor = ColorConst.textColor;
-            labMiddle.TextColor = ColorConst.textColor;
-            labRight.TextColor = ColorConst.textColor;
+            labLeft.TextColor = ColorConst.Blue;
+            labMiddle.TextColor = ColorConst.Blue;
+            labRight.TextColor = ColorConst.Blue;
 
             SVGUtil.LoadSVGToButton(btnLeftButton, "ic_btn_set_position.svg", "ic_btn_set_position_down.svg");
             SVGUtil.LoadSVGToButton(btnMiddleButton, "ic_btn_traffic.svg", "ic_btn_traffic_down.svg");
