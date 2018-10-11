@@ -114,6 +114,7 @@ Structure.Evakuering.Kjeder = "Effektive evakueringskjeder";
 Structure.Evakuering.Rett = "Rett pasient til rett sykehus";
 
 // Hjelp oss
+HelpUs.Title = "Du er viktig";
 HelpUs.AboutHENSPE = "HENSPE er utviklet ved hjelp av innsamlede midler. Vi vil kontakte deg fremover med informasjon om the livsviktige arbeidet.";
 HelpUs.More = "Mer informasjon";
 HelpUs.AboutSNLA = "Stiftelsen Norsk Luftambulanse er en ideell organisasjon som fullt ut er finansiert av privat innsamlede midler fra enkeltpersoner og støttebedrifter.\n\nDin støtte går til forskning og utvikling for at alle skal få raskere og riktigere avansert akkuttmedisinsk behandling utenfor sykehus. Din støtte bidrar til å redde liv i hele Norge. Driften av luftambulansetjenesten er statlig finansiert.";

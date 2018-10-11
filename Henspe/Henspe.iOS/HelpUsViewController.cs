@@ -26,6 +26,8 @@ namespace Henspe.iOS
         {
             base.ViewDidLoad();
 
+            Title = LangUtil.Get("HelpUs.Title");
+
             lblAboutHENSPE.TextColor = ColorConst.textColor;
             lblAboutSNLA.TextColor = ColorConst.textColor;
             lblYesPlease.TextColor = ColorConst.textColor;
