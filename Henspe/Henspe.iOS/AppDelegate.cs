@@ -209,11 +209,9 @@ namespace Henspe.iOS
 
         private void SetupCustomNavigationBar()
         {
-            UINavigationBar.Appearance.TintColor = ColorConst.textColor;
-
             UITextAttributes attributes = new UITextAttributes
             {
-                Font = UIFont.SystemFontOfSize(16, UIFontWeight.Medium),
+                Font = FontConst.fontNavbar,
                 TextColor = ColorConst.textColor
             }; // ForegroundColor
 
