@@ -2,23 +2,14 @@
 using UIKit;
 using CoreLocation;
 using Foundation;
-using System.IO;
 using Henspe.Core.Communication;
-using System.Net;
 using Henspe.Core.Const;
 using Henspe.iOS.Util;
-using System.Timers;
-using Henspe.Core.Model;
-using System.Linq;
 using Henspe.Core.Util;
 using Henspe.Core;
-using System.Threading.Tasks;
 using Henspe.iOS.Const;
 using Henspe.iOS.AppModel;
-using System.Collections.Generic;
 using Henspe.Core.Model.Dto;
-using static Henspe.Core.Model.Dto.StructureSectionDto;
-using Henspe.iOS.Communication;
 
 namespace Henspe.iOS
 {
@@ -34,25 +25,9 @@ namespace Henspe.iOS
         public string testUrlTest = "https://snla-apps.no/apps/henspetest/";
         public string plistFile = "Henspe.plist";
 
-        private AppVersionData appVersionData = new AppVersionData();
-
-        private float version;
-
-        public bool askedIfUserWantNewVersion = false;
-        public bool appResetOccured = false;
-        public bool appActicatedOccured = false;
-        public bool syncInProgress = false;
-        public int networkState = NetworkStateConst.noNetwork;
+        public bool appActicatedOccured;
 
 		// Format
-        public int coordinateFormat = CoordinateUtil.ddm; // Default coordinate format
-
-		// Flash text
-        private string lastNorthText = "";
-        private string lastEastText = "";
-        private string lastAccuracyLargeText = "";
-        private string lastAccuracySmallText = "";
-
         // GPS
         public double highAndLowAccuracyDivider = 200;
         public double gpsAccuracyRequirement = 200;
@@ -92,8 +67,9 @@ namespace Henspe.iOS
         public static UIViewController initialViewController;
 
         public StructureDto structure;
+        public int coordinateFormat;
 
-        public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+        public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
             // Background update interval in seconds
             //UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval (60.0f * 60.0f); // One hour
@@ -101,15 +77,9 @@ namespace Henspe.iOS
             current = this;
             window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-            setupDatabase();
             client = new CxHttpClient();
 
-            NSNotificationCenter.DefaultCenter.AddObserver(new NSString("registerDone"), HandleRegisterDone);
-            NSNotificationCenter.DefaultCenter.AddObserver(new NSString("doSync"), HandleDoSync);
-
-            //WaitBeforeDoSync (); // Is called from Activated
             SetupCustomNavigationBar();
-            GetVersion();
 
             SetupLocalData();
 
@@ -167,46 +137,6 @@ namespace Henspe.iOS
 			structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Evakuering.Rett"), "ic_e_rett.svg", 0.7f);
         }
 
-        private void GetVersion()
-        {
-            NSObject thisVersionObject = NSBundle.MainBundle.ObjectForInfoDictionary("CFBundleShortVersionString");
-            string thisVersionString = thisVersionObject.ToString();
-            version = ConvertUtil.ConvertStringToFloat(thisVersionString);
-            Console.WriteLine("UpdateMechanism-GetVersion. version: " + version);
-        }
-
-        public void HandleRegisterDone(NSNotification notification)
-        {
-            DoSyncIfLocalDataOld(false);
-        }
-
-        public void HandleDoSync(NSNotification notification)
-        {
-            DoSyncIfLocalDataOld(false);
-        }
-
-        private void SetUpGoogleAnalytics()
-        {
-            /*
-            // We use NSUserDefaults to store a bool value if we are tracking the user or not 
-            var optionsDict = NSDictionary.FromObjectAndKey (new NSString ("YES"), new NSString (AllowTrackingKey));
-            NSUserDefaults.StandardUserDefaults.RegisterDefaults (optionsDict);
-
-            // User must be able to opt out of tracking
-            GAI.SharedInstance.OptOut = !NSUserDefaults.StandardUserDefaults.BoolForKey (AllowTrackingKey);
-
-            // Initialize Google Analytics with a 5-second dispatch interval (Use a higher value when in production). There is a
-            // tradeoff between battery usage and timely dispatch.
-            GAI.SharedInstance.DispatchInterval = 5;
-            GAI.SharedInstance.TrackUncaughtExceptions = true;
-
-            //Tracker = GAI.SharedInstance.GetTracker ("CuteAnimals", TrackingId);
-            //Tracker = GAI.SharedInstance.GetTracker ("LATSamband", TrackingId);
-            //Tracker = GAI.SharedInstance.GetTracker (TrackingId);
-            Tracker = GAI.SharedInstance.GetTracker ("Computas", TrackingId);
-            */
-        }
-
         private void SetupCustomNavigationBar()
         {
             UITextAttributes attributes = new UITextAttributes
@@ -221,24 +151,8 @@ namespace Henspe.iOS
             UINavigationBar.Appearance.SetTitleTextAttributes(attributes);
         }
 
-        private void setupDatabase()
-        {
-            var sqliteFilename = "Henspe.db3";
-            // we need to put in /Library/ on iOS5.1 to meet Apple's iCloud terms
-            // (they don't want non-user-generated data in Documents)
-            string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal); // Documents folder
-            string libraryPath = Path.Combine(documentsPath, "../Library/"); // Library folder
-            var path = Path.Combine(libraryPath, sqliteFilename);
-            //conn = new Connection(path);
-            //repository = new Repository(conn);
-        }
-
-        // Standard methods
-
         public override void OnActivated(UIApplication application)
         {
-            askedIfUserWantNewVersion = false;
-
             Console.WriteLine("UpdateMechanism-OnActivated. Not waiting for new version install");
             // Sync after sleep
             appActicatedOccured = true;
@@ -285,277 +199,6 @@ namespace Henspe.iOS
         // This method is called when the application is about to terminate. Save data, if needed.
         public override void WillTerminate(UIApplication application)
         {
-        }
-
-        private void SetupServicesIfNeeded()
-        {
-            /*
-            if (syncHallo == null && UserUtil.Credentials.IsAuthenticated && UserUtil.Credentials.Key != 0)
-            {
-                syncHallo = new SyncHallo(client, repository, UserUtil.Credentials);
-                syncBasis = new SyncBasis(client, repository, UserUtil.Credentials);
-                syncTelefonliste = new SyncTelefonliste(client, repository, UserUtil.Credentials);
-            }
-            */
-        }
-
-        /*
-         * Server communication
-         */
-        public void DoSyncIfLocalDataOld(bool isInBackgroundMode)
-        {
-            // Dont sync if not authenticated
-            //if (UserUtil.credentials.IsAuthenticated == false)
-            //    return;
-
-            // Dont sync if sync already in progress
-            if (AppDelegate.current.syncInProgress)
-                return;
-
-            SetupServicesIfNeeded();
-
-            /*
-            // Check if there is an hour since last time
-            if (AppDelegate.current.repository.GetItemList<Telefon> ().ToList().Count > 0)
-            {
-                if (UserUtil.Credentials.Server_Local_Millisec_Diff != 0)
-                {
-                    int updateIntervarMinutes = UserUtil.Credentials.Intervall;
-                    updateIntervarMinutes = updateIntervarMinutes - 5;
-
-                    // Dont sync if local data is less than interval - 5 minutes old
-                    double updateInterval = 1000 * 60 * updateIntervarMinutes;
-
-                    DateTime lastSyncServerDateTime = DateUtil.ConvertDateStringToDateTime (String.Format("{0:00000000}", UserUtil.Credentials.Server_dato) + " " + String.Format("{0:000000}", UserUtil.Credentials.Server_kl), "yyyyMMdd HHmmss");
-                    DateTime nowSmartphoneDateTime = DateTime.Now;
-                    TimeSpan timeSpan = lastSyncServerDateTime - nowSmartphoneDateTime;
-
-                    double millisecondsAdjusted = timeSpan.TotalMilliseconds + UserUtil.Credentials.Server_Local_Millisec_Diff;
-                    double millisecondsAdjustedAbs = Math.Abs (millisecondsAdjusted);
-                    if(millisecondsAdjustedAbs < updateInterval)
-                    {
-                        return;
-                    }
-                }
-            }
-            */
-
-            SyncInProgress(true);
-            PerformServerCalls(isInBackgroundMode);
-            //if (isInBackgroundMode == false)
-            //    WaitBeforeDoSync();
-        }
-
-        private void SyncInProgress(bool inProgress)
-        {
-            AppDelegate.current.syncInProgress = inProgress;
-            InvokeOnMainThread(delegate
-            {
-                NSNotificationCenter.DefaultCenter.PostNotificationName("syncStateChanged", this);
-            });
-        }
-
-        public async void PerformServerCalls(bool isInBackroundMode)
-        {
-            NetworkStatus internetStatus = NetUtil.InternetConnectionStatus();
-            if (NetUtil.IsHostReachable())
-            {
-                // Put alternative content/message here
-                if (internetStatus == NetworkStatus.ReachableViaWiFiNetwork)
-                    AppDelegate.current.networkState = NetworkStateConst.wifiNetworkHostReached;
-                else if (internetStatus == NetworkStatus.ReachableViaCarrierDataNetwork)
-                    AppDelegate.current.networkState = NetworkStateConst.mobileNetworkOnlyHostReached;
-                else
-                    AppDelegate.current.networkState = NetworkStateConst.noNetwork;
-
-                if (isInBackroundMode == false)
-                {
-                    InvokeOnMainThread(delegate
-                    {
-                        NSNotificationCenter.DefaultCenter.PostNotificationName("syncStateChanged", this);
-                    });
-                }
-            }
-            else
-            {
-                // Put Internet Required Code here
-                if (internetStatus == NetworkStatus.ReachableViaWiFiNetwork)
-                    AppDelegate.current.networkState = NetworkStateConst.wifiNetworkButCouldNotReachHost;
-                else if (internetStatus == NetworkStatus.ReachableViaCarrierDataNetwork)
-                    AppDelegate.current.networkState = NetworkStateConst.mobileNetworkOnlyButCouldNotReachHost;
-                else
-                    AppDelegate.current.networkState = NetworkStateConst.noNetwork;
-
-                if (isInBackroundMode == false)
-                {
-                    InvokeOnMainThread(delegate
-                    {
-                        NSNotificationCenter.DefaultCenter.PostNotificationName("syncStateChanged", this);
-                    });
-                }
-
-                return;
-            }
-
-			if (UserUtil.settings.instructionsFinished == false)
-            {
-                // Not authenticated
-                SyncInProgress(false);
-                return;
-            }
-
-            try
-            {
-                //DebugUtil.ShowDebugTime("Calling syncHallo");
-                //Task<bool> halloResultTask = syncHallo.Hallo();
-                //bool halloResult = await halloResultTask.ConfigureAwait(false);
-
-                //// Basis
-                //DateTime prevBasisSyncDateTime = DateUtil.ConvertDateStringToDateTime(String.Format("{0:00000000}", UserUtil.Credentials.LastSync_basis_dato) + " " + String.Format("{0:000000}", UserUtil.Credentials.LastSync_basis_kl), "yyyyMMdd HHmmss");
-                //DateTime basisDateTime = DateUtil.ConvertDateStringToDateTime(String.Format("{0:00000000}", UserUtil.Credentials.Endr_basis_dato) + " " + String.Format("{0:000000}", UserUtil.Credentials.Endr_basis_kl), "yyyyMMdd HHmmss");
-                //TimeSpan timeSinceBasisAndLastSync = basisDateTime - prevBasisSyncDateTime;
-                //if (timeSinceBasisAndLastSync.TotalSeconds > 0)
-                //{
-                //    DebugUtil.ShowDebugTime("Calling syncBasis");
-                //    Task<bool> basisResultTask = syncBasis.Basis();
-                //    bool basisResult = await basisResultTask.ConfigureAwait(false);
-                //    UserUtil.Credentials.LastSync_basis_dato = UserUtil.Credentials.Endr_basis_dato;
-                //    UserUtil.Credentials.LastSync_basis_kl = UserUtil.Credentials.Endr_basis_kl;
-                //}
-
-                //// Tlf liste (ansatte and telefonliste)
-                //DateTime prevAnsSyncDateTime = DateUtil.ConvertDateStringToDateTime(String.Format("{0:00000000}", UserUtil.Credentials.LastSync_ans_dato) + " " + String.Format("{0:000000}", UserUtil.Credentials.LastSync_ans_kl), "yyyyMMdd HHmmss");
-                //DateTime ansDateTime = DateUtil.ConvertDateStringToDateTime(String.Format("{0:00000000}", UserUtil.Credentials.Endr_ans_dato) + " " + String.Format("{0:000000}", UserUtil.Credentials.Endr_ans_kl), "yyyyMMdd HHmmss");
-                //TimeSpan timeSinceAnsAndLastSync = ansDateTime - prevAnsSyncDateTime;
-
-                //DateTime prevTlfSyncDateTime = DateUtil.ConvertDateStringToDateTime(String.Format("{0:00000000}", UserUtil.Credentials.LastSync_tlf_dato) + " " + String.Format("{0:000000}", UserUtil.Credentials.LastSync_tlf_kl), "yyyyMMdd HHmmss");
-                //DateTime tlfDateTime = DateUtil.ConvertDateStringToDateTime(String.Format("{0:00000000}", UserUtil.Credentials.Endr_tlf_dato) + " " + String.Format("{0:000000}", UserUtil.Credentials.Endr_tlf_kl), "yyyyMMdd HHmmss");
-                //TimeSpan timeSinceTlfAndLastSync = tlfDateTime - prevTlfSyncDateTime;
-
-                //string action = null;
-
-                //if (timeSinceAnsAndLastSync.TotalSeconds > 0 && timeSinceTlfAndLastSync.TotalSeconds > 0)
-                //    action = "alle";
-                //else if (timeSinceAnsAndLastSync.TotalSeconds > 0)
-                //    action = "ans";
-                //else if (timeSinceTlfAndLastSync.TotalSeconds > 0)
-                //    action = "tlf";
-
-                //if (action != null)
-                //{
-                //    DebugUtil.ShowDebugTime("Calling syncTelefonliste");
-                //    Task<bool> telefonlisteResultTask = syncTelefonliste.Telefonliste(action);
-                //    bool telefonlisteResult = await telefonlisteResultTask.ConfigureAwait(false);
-
-                //    if (action == "alle" || action == "ans")
-                //    {
-                //        UserUtil.Credentials.LastSync_ans_dato = UserUtil.Credentials.Endr_ans_dato;
-                //        UserUtil.Credentials.LastSync_ans_kl = UserUtil.Credentials.Endr_ans_kl;
-                //    }
-
-                //    if (action == "alle" || action == "tlf")
-                //    {
-                //        UserUtil.Credentials.LastSync_tlf_dato = UserUtil.Credentials.Endr_tlf_dato;
-                //        UserUtil.Credentials.LastSync_tlf_kl = UserUtil.Credentials.Endr_tlf_kl;
-                //    }
-                //}
-
-                //DebugUtil.ShowDebugTime("Finished");
-                //SyncInProgress(false);
-
-                //InvokeOnMainThread(delegate
-                //{
-                //    NSNotificationCenter.DefaultCenter.PostNotificationName("syncStateChanged", this);
-                //});
-            }
-            catch (TaskCanceledException e)
-            {
-                BugtrackUtil.SendBugtrack("AppDelegate TaskCanceledException", e, "No json in this case", client, version, "Henspe app user");
-                return;
-            }
-            catch (Exception e)
-            {
-                SyncInProgress(false);
-                if (e.Message != "Error: NameResolutionFailure")
-                {
-                    if (isInBackroundMode == false)
-                    {
-                        InvokeOnMainThread(delegate
-                        {
-                            ErrorUtil.ShowError(e.Message);
-                        });
-                    }
-
-                    BugtrackUtil.SendBugtrack("AppDelegate error", e, "No json in this case", client, version, "Henspe app user");
-                }
-            }
-        }
-
-        /*
-         * New app version
-         */
-        private void CheckNewAppVersionAvailable()
-        {
-            if (askedIfUserWantNewVersion == false)
-            {
-                Console.WriteLine("UpdateMechanism-CheckNewAppVersionAvailable. Getting appversion");
-                appVersionData.GetIphoneVersion(OnGetCurrentAppVersionSuccess, OnGetCurrentAppVersionFault);
-            }
-        }
-
-        public void OnGetCurrentAppVersionSuccess(String appVersion)
-        {
-            string serverVersionNumberString = appVersion;
-            float serverVersionNumberFloat = ConvertUtil.ConvertStringToFloat(serverVersionNumberString);
-
-            if (serverVersionNumberFloat > version)
-            {
-                askedIfUserWantNewVersion = true;
-                Console.WriteLine("UpdateMechanism-CheckNewAppVersionAvailable. New version found");
-
-                InvokeOnMainThread(delegate
-                {
-                    UIAlertView alert = new UIAlertView(LangUtil.Get("Alert.NewVersion.Title"),
-                        LangUtil.Get("Alert.NewVersion.Message1") + " " +
-                        serverVersionNumberFloat + " " + LangUtil.Get("Alert.NewVersion.Message2") + " " +
-                        version + ". " + LangUtil.Get("Alert.NewVersion.Message3"),
-                        null,
-                        LangUtil.Get("Alert.Yes"),
-                        new string[] { LangUtil.Get("Alert.No") });
-
-                    alert.Clicked += (s, b) =>
-                    {
-                        if (b.ButtonIndex == 0)
-                        {
-                            Console.WriteLine("UpdateMechanism-CheckNewAppVersionAvailable. New version found and user want to install it");
-
-                            // Ja chosen
-                            string urlString = "";
-
-                            /*
-                            if(mode == ModeConst.prod)
-                                urlString = "itms-services://?action=download-manifest&url=https://snla-apps.no/apps/sms/Henspe.plist";
-                            else
-                                urlString = "itms-services://?action=download-manifest&url=https://snla-apps.no/apps/smstest/Henspe.plist";
-                            */
-
-                            if (mode == ModeConst.prod)
-                                urlString = prodUrlString;
-                            else
-                                urlString = testUrlTest;
-
-                            var url = NSUrl.FromString(urlString);
-                            UIApplication.SharedApplication.OpenUrl(url);
-                        }
-                        else
-                        {
-                            Console.WriteLine("UpdateMechanism-CheckNewAppVersionAvailable. New version found but user does not want to install it");
-                        }
-                    };
-
-                    alert.Show();
-                });
-            }
         }
 
         public void OnGetCurrentAppVersionFault(String reason)

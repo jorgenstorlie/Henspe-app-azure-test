@@ -22,13 +22,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Util\ConvertUtil.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\CoordinateUtil.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\DateUtil.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Util\FileUtil.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\JsonUtil.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\MathUtil.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Util\NumberUtil.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\SessionUtil.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\StringUtil.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Util\TimerUtil.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Dto\BrukerDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Dto\BugtrackResultDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Dto\StructureDto.cs" />
