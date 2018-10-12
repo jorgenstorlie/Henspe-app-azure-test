@@ -28,19 +28,30 @@
     <color name="primaryLightOnboarding">@color/snla_red_200</color>
        <color name="text_normalOnboarding">#ffffff</color>
     <!--   color for Main -->
-    <color name="primary">@color/snla_grey</color>
+    <color name="primary">#ffffff</color>
     <color name="primaryDark">@color/snla_grey700</color>
     <color name="primaryLight">@color/snla_grey200</color>
+  
+      <color name="ColorPrimary">#ffffff</color>
     
+    
+    <color name="header_background">@color/snla_grey</color>
+   
      <color name="text_white">#ffffff</color>
     <color name="text_normal">#4a4a4a</color>
     <color name="text_info">#a2a2a2</color>
-    <color name="text_header">#d0021b</color>
+    <color name="text_header">#4a4a4a</color>
     <color name="text_main">#333333</color>
     <color name="background_nla_white">#ffffff</color>
     <!--   color for the app bar and other primary UI elements -->
     <!--   a secondary color for controls like checkboxes and text fields -->
     <color name="colorAccent">#e20221</color>
     <color name="accent">#FFC107</color>
-    <color name="window_background">#F5F5F5</color>
+    <color name="window_background">#ffffff</color>
+    
+        <color name="page_indicator_selected_color">@color/ColorPrimary</color>
+        <color name="page_indicator_default_color">@color/snla_blue_700</color>
+      
+    
+    
 </resources>

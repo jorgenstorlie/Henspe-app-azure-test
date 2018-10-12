@@ -46,8 +46,8 @@ namespace Henspe.Droid
 		private Button _btnInfo;
 
 		private bool viewCreated = false;
-
-		private ViewGroup root;
+     
+        private ViewGroup root;
 
 		// GPS
 		private GoogleApiClient apiClient;
@@ -115,7 +115,7 @@ namespace Henspe.Droid
 			_recyclerView = root.FindViewById<RecyclerView>(Resource.Id.myList);
 
 			Dictionary<HenspeSectionModel, List<HenspeRowModel>> henspeRowDictionary = PopulateList();
-			_itemsAdapter = new HenspeRowAdapter(henspeRowDictionary, this.Activity);
+	//		_itemsAdapter = new HenspeRowAdapter(henspeRowDictionary, this.Activity);
 			_recyclerView.SetAdapter(_itemsAdapter);
 			_recyclerView.SetLayoutManager(new LinearLayoutManager(this.Activity) { Orientation = LinearLayoutManager.Vertical });
 

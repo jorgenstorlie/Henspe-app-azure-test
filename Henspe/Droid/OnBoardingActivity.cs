@@ -9,6 +9,7 @@ using Android.Content.PM;
 using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.Design.Widget;
 using Android.Support.V4.Content;
 using Android.Support.V4.View;
 using Android.Support.V7.App;
@@ -28,7 +29,7 @@ namespace Henspe.Droid
 {
     [Activity(Label = "OnBoardingActivity", NoHistory = true,
         ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/AppThemeOnBoarding")]
-    public class OnBoardingActivity : AppCompatActivity
+    public class OnBoardingActivity : AppCompatActivity, ViewPager.IOnPageChangeListener
     {
         private LottieAnimationView animationView;
 
@@ -64,22 +65,64 @@ namespace Henspe.Droid
 
             _mPager = FindViewById<ViewPager>(Resource.Id.onboarding_pager);
             mPagerAdapter = new InitialPagerAdapter(SupportFragmentManager);
-            _mPager.Adapter = mPagerAdapter;
-            _mCirclePageIndicator = FindViewById<CirclePageIndicator>(Resource.Id.onboarding_indicator);
+        //    _mPager.Adapter = mPagerAdapter;
+
+
+        //    _mCirclePageIndicator = FindViewById<CirclePageIndicator>(Resource.Id.onboarding_indicator);
+         //   _mCirclePageIndicator.Visibility = ViewStates.Gone;
+
+   //   var      onboarding_button_bottom = FindViewById<RelativeLayout>(Resource.Id.onboarding_button_bottom);
+     //       onboarding_button_bottom.Visibility = ViewStates.Gone;
+
+
+
+
+
+            /*
             _mCirclePageIndicator.SetViewPager(_mPager);
             _mCirclePageIndicator.SetSnap(true);
             _mCirclePageIndicator.SetOnPageChangeListener(new CirclePageChangeListener(_mPager, this, animationView));
 
             _mPager.SetBackgroundColor(Color.Transparent);
+            */
 
-            int colorInt2 = ContextCompat.GetColor(this, Resource.Color.primaryOnboarding);
-            Color color2 = new Color(colorInt2);
+            //  int colorInt2 = ContextCompat.GetColor(this, Resource.Color.primaryOnboarding);
+            //  Color color2 = new Color(colorInt2);
 
-            animationView.SetBackgroundColor(color2);
-            animationView.SetAnimation("intro1.json");
+            //  animationView.SetBackgroundColor(color2);
+            //   titleText.Text = "H E N S P E";
 
 
-         //   titleText.Text = "H E N S P E";
+
+
+
+            OnBoardingItemFragment f = new OnBoardingItemFragment(0);
+            OnBoardingItemFragment f2 = new OnBoardingItemFragment(1);
+            OnBoardingItemFragment f3 = new OnBoardingItemFragment(2);
+
+            ViewPagerAdapter adapter = new ViewPagerAdapter((this as AppCompatActivity).SupportFragmentManager);
+            adapter.addFragment(f, "");
+            adapter.addFragment(f2, "");
+            adapter.addFragment(f3, "");
+
+            _mPager.Adapter = adapter;
+
+
+            _mPager.PageSelected += ViewPager_PageSelected;
+            _mPager.AddOnPageChangeListener(this);
+
+
+            var dots = FindViewById<TabLayout>(Resource.Id.dots);
+         dots.SetupWithViewPager(_mPager, true); // <- magic here
+
+            _mPager.SetOnPageChangeListener(new CirclePageChangeListener(_mPager, this, animationView));
+
+
+
+        }
+
+        void ViewPager_PageSelected(object sender, ViewPager.PageSelectedEventArgs e)
+        {
 
         }
 
@@ -131,9 +174,6 @@ namespace Henspe.Droid
         private void NextButtonOnClick(object sender, EventArgs eventArgs)
         {
 
-
-
-
             //var instructionsFinished = UserUtil.settings.instructionsFinished;
             if (currentPage == (totalPages - 1))
             {
@@ -152,9 +192,46 @@ namespace Henspe.Droid
             }
         }
 
+
+        protected override void OnPause()
+        {
+            base.OnPause();
+        }
+
+
         protected override async void OnResume()
         {
             base.OnResume();
+        }
+
+        public void OnPageScrollStateChanged(int state)
+        {
+        //    throw new NotImplementedException();
+        }
+
+        private float[] ANIMATION_TIMES = { 0f, 0.3333f, 0.6666f, 1f, 1f };
+
+
+        float Lerp(float a, float b, float t)
+        {
+            return (1f - t) * a + t * b;
+        }
+
+        public void OnPageScrolled(int position, float positionOffset, int positionOffsetPixels)
+        {
+
+            currentPage = position;
+
+            float startProgress = ANIMATION_TIMES[position];
+            float endProgress = ANIMATION_TIMES[position + 1];
+
+
+            if (animationView.Animation == null)
+                animationView.SetAnimation("intro1.json");
+
+            animationView.Progress = Lerp(startProgress, endProgress, positionOffset);
+
+
         }
 
         private class CirclePageChangeListener : Java.Lang.Object,
@@ -192,7 +269,10 @@ namespace Henspe.Droid
                 float startProgress = ANIMATION_TIMES[position];
                 float endProgress = ANIMATION_TIMES[position + 1];
 
-       
+
+                if (animationView.Animation == null)
+                    animationView.SetAnimation("intro1.json");
+
                 animationView.Progress = Lerp(startProgress, endProgress, positionOffset);
 
             }

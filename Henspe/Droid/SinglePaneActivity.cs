@@ -18,7 +18,7 @@ namespace Henspe.Droid
 	[Activity(Label = "")]
 	public abstract class SinglePaneActivity : AppCompatActivity, ActivityCompat.IOnRequestPermissionsResultCallback
     {
-
+    
         private Fragment _mFragment;
 
         protected SinglePaneActivity(IntPtr handle, JniHandleOwnership ownerShip): base(handle, ownerShip)

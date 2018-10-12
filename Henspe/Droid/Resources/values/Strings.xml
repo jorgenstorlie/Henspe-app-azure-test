@@ -71,7 +71,11 @@
     <!-- Navigation menu items -->
     <string name="Navigation_Menuitem_Back">Tilbake</string>
     <string name="Navigation_Menuitem_Hjem">Hjem</string>
-
+    
+       <!-- Main -->
+    <string name="Info_Help">Du er viktig. Bli med oss å hjelpe andre.</string>
+   
+    
     <!-- Location -->
     <string name="Location_Element_Degrees_Text">grader</string>
     <string name="Location_Element_Now_Text">nå</string>
@@ -95,12 +99,12 @@
     <string name="Location_unknown_address_row2">Adresse</string>
 
     <!-- Hendelse -->
-    <string name="Structure_Hendelse_Header">HENDELSE</string> 
+    <string name="Structure_Hendelse_Header">Hendelse</string> 
     <string name="Structure_Hendelse_Trafikk">Trafikk, fly, båt, industri, skred osv</string> 
     <string name="Structure_Hendelse_Brann">Brann</string> 
 
     <!-- Eksakt posisjon -->
-    <string name="Structure_EksaktPosisjon_Header">EKSAKT POSISJON</string> 
+    <string name="Structure_EksaktPosisjon_Header">Eksakt posisjon</string> 
     <string name="Structure_EksaktPosisjon_Posisjon">Posisjon</string> 
     <string name="Structure_EksaktPosisjon_Adresse">Nærmeste adresse</string>
     <string name="Structure_EksaktPosisjon_Oppmotested">Oppmøtested</string>
@@ -108,24 +112,24 @@
     <string name="Structure_EksaktPosisjon_Avreise">Avreise</string>
 
     <!-- Nivå -->
-    <string name="Structure_Niva_Header">NIVÅ</string> 
+    <string name="Structure_Niva_Header">Nivå</string> 
     <string name="Structure_Niva_Type">Begrenset, stort, masseskade</string>
     <string name="Structure_Niva_QuatroVarsling">Quatro varsling</string>
 
     <!-- Sikkerhet -->
-    <string name="Structure_Sikkerhet_Header">SIKKERHET</string> 
+    <string name="Structure_Sikkerhet_Header">Sikkerhet</string> 
     <string name="Structure_Sikkerhet_Farer">Mulige/reelle farer</string>
     <string name="Structure_Sikkerhet_Brann">Brann</string>
     <string name="Structure_Sikkerhet_Sikkerhet">Sikkerhet for involverte</string>
 
     <!-- Pasienter -->
-    <string name="Structure_Pasienter_Header">PASIENTER</string> 
+    <string name="Structure_Pasienter_Header">Pasienter</string> 
     <string name="Structure_Pasienter_Antall">Ca antall pasienter</string>
     <string name="Structure_Pasienter_Type">Type skader</string>
     <string name="Structure_Pasienter_Omfang">Skademekanikk/omfang</string>
 
     <!-- Evakuering -->
-    <string name="Structure_Evakuering_Header">EVAKUERING</string> 
+    <string name="Structure_Evakuering_Header">Evakuering</string> 
     <string name="Structure_Evakuering_Flaskehalser">Avklar flaskehalser</string>
     <string name="Structure_Evakuering_Kjeder">Effektive evakueringskjeder</string>
     <string name="Structure_Evakuering_Rett">Rett pasient til rett sykehus</string>

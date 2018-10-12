@@ -34,7 +34,7 @@
     <dimen name="content_padding_very_small">10dp</dimen>
     <dimen name="content_padding_cell_side">15dp</dimen>
     <dimen name="content_padding_cell_vertical">3dp</dimen>
-    <dimen name="content_padding_cell_vertical_header">30dp</dimen>
+    <dimen name="content_padding_cell_vertical_header">5dp</dimen>
     <dimen name="content_padding_heading">15dp</dimen>
     <dimen name="content_padding_menu">15dp</dimen>
     <dimen name="content_padding_line">50dp</dimen>

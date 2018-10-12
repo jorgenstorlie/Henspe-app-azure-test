@@ -19,7 +19,8 @@ namespace Henspe.Droid.Util
     {
 		public static int GetResourceIdForImagename(string name)
         {
-			if(name != null && name.Length > 0)
+
+       if (name != null && name.Length > 0)
 			{
 				string filenameWithoutExtension = StringUtil.FindStringBefore(name, ".");
 				var resourceId = (int)typeof(Resource.Drawable).GetField(filenameWithoutExtension).GetValue(null);

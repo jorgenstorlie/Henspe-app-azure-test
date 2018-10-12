@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\Henspe.Core\Henspe.Core.projitems" Label="Shared" Condition="Exists('..\Henspe.Core\Henspe.Core.projitems')" />
   <Import Project="..\packages\Xamarin.Build.Download.0.4.11\build\Xamarin.Build.Download.props" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.11\build\Xamarin.Build.Download.props')" />
   <PropertyGroup>
@@ -151,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Henspe.cs" />
+    <Compile Include="MainNew.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\UserUtil.cs" />
@@ -171,7 +171,9 @@
     <Compile Include="Model\HenspeSectionModel.cs" />
     <Compile Include="Util\FlashTextUtil.cs" />
     <Compile Include="HenspeFragmentOld.cs" />
+    <Compile Include="NewHenspeFragment.cs" />
     <Compile Include="InitialActivity.cs" />
+    <Compile Include="FragmentAdressPagerAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -180,6 +182,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\layout\MainNew.axml" />
     <AndroidResource Include="Resources\layout\Main.axml" />
     <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
@@ -187,6 +190,11 @@
     <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_e_adresse.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_e_ankomst.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_e_avreise.png" />
@@ -307,8 +315,10 @@
     <AndroidResource Include="Resources\layout\HenspeRow.axml" />
     <AndroidResource Include="Resources\layout\FragmentHenspeList.axml" />
     <AndroidResource Include="Resources\layout\ListItemSection.axml" />
+       
     <AndroidResource Include="Resources\menu\MenuBase.xml" />
     <AndroidResource Include="Resources\menu\MenuHome.xml" />
+    <AndroidResource Include="Resources\menu\menu_main.xml" />
     <AndroidResource Include="Resources\drawable\button_info.xml" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_info_down.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\ic_info_down.png" />
@@ -328,6 +338,34 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\image_splash_logo.png" />
     <AndroidResource Include="Resources\drawable-mdpi\image_splash_logo.png" />
     <AndroidResource Include="Resources\drawable\drawable_logo_white.xml" />
+     <AndroidResource Include="Resources\drawable\bg_border_blue_round_btn.xml" />
+    <AndroidResource Include="Resources\drawable\drawable_logo_no_text.xml" />
+    <AndroidResource Include="Resources\drawable\drawable_logo_textright.xml" />
+    <AndroidResource Include="Resources\layout\henspe_fragment.axml" />
+    
+     <AndroidResource Include="Resources\drawable\ic_begrenset.xml" />
+         <AndroidResource Include="Resources\drawable\ic_brann.xml" />
+              <AndroidResource Include="Resources\drawable\ic_evakuering.xml" />
+                   <AndroidResource Include="Resources\drawable\ic_farer.xml" />
+                        <AndroidResource Include="Resources\drawable\ic_flaskehalser.xml" />
+                             <AndroidResource Include="Resources\drawable\ic_pasienter.xml" />
+                                  <AndroidResource Include="Resources\drawable\ic_quartro.xml" />
+                                       <AndroidResource Include="Resources\drawable\ic_rett.xml" />
+                                            <AndroidResource Include="Resources\drawable\ic_sikkerhet.xml" />
+                                                 <AndroidResource Include="Resources\drawable\ic_skademekanikk.xml" />
+                                              <AndroidResource Include="Resources\drawable\ic_oppmotested.xml" />
+        <AndroidResource Include="Resources\drawable\ic_type.xml" />
+        <AndroidResource Include="Resources\drawable\ic_trafikk.xml" />
+          <AndroidResource Include="Resources\drawable\ic_posisjon.xml" />
+              <AndroidResource Include="Resources\drawable\ic_adresse.xml" />
+                 <AndroidResource Include="Resources\drawable\ic_avreise.xml" />
+                    <AndroidResource Include="Resources\drawable\ic_ankomst.xml" />
+                    <AndroidResource Include="Resources\layout\adress_row.axml" />
+                    <AndroidResource Include="Resources\layout\TabLayout.axml" />
+                    <AndroidResource Include="Resources\drawable\dot_selector.xml" />
+                    <AndroidResource Include="Resources\drawable\selected_dot.xml" />
+                    <AndroidResource Include="Resources\drawable\default_dot.xml" />
+                      
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />

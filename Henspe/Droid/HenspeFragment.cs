@@ -31,6 +31,7 @@ using Henspe.Core.Util;
 using Android.Gms.Common;
 using Henspe.Core.Communication.Dto;
 using Android.Runtime;
+using Android.Support.V7.App;
 
 namespace Henspe.Droid
 {
@@ -46,7 +47,7 @@ namespace Henspe.Droid
         private Button _btnInfo;
 
         private bool viewCreated = false;
-
+      
         private ViewGroup root;
 
         // GPS
@@ -120,7 +121,7 @@ namespace Henspe.Droid
             _recyclerView = root.FindViewById<RecyclerView>(Resource.Id.myList);
 
             Dictionary<HenspeSectionModel, List<HenspeRowModel>> henspeRowDictionary = PopulateList();
-            _itemsAdapter = new HenspeRowAdapter(henspeRowDictionary, this.Activity);
+            _itemsAdapter = new HenspeRowAdapter(henspeRowDictionary, this.Activity as AppCompatActivity);
             _recyclerView.SetAdapter(_itemsAdapter);
             _recyclerView.SetLayoutManager(new LinearLayoutManager(this.Activity) { Orientation = LinearLayoutManager.Vertical });
 

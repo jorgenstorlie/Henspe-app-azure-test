@@ -117,40 +117,40 @@ namespace Henspe.Droid
             structure = new StructureDto();
 
             // Hendelse
-			StructureSectionDto structureHendelse = structure.AddStructureSection(Resources.GetString(Resource.String.Structure_Hendelse_Header), "ic_h.png");
-            structureHendelse.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Hendelse_Trafikk), "ic_h_trafikk.png", 1.0f);
-            structureHendelse.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Hendelse_Brann), "ic_h_brann.png", 0.8f);
+			StructureSectionDto structureHendelse = structure.AddStructureSection(Resources.GetString(Resource.String.Structure_Hendelse_Header), "");
+            structureHendelse.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Hendelse_Trafikk), "ic_trafikk", 1.0f);
+            structureHendelse.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Hendelse_Brann), "ic_brann", 0.8f);
 
             // Eksakt posisjon
-            StructureSectionDto structureEksaktPosisjon = structure.AddStructureSection(Resources.GetString(Resource.String.Structure_EksaktPosisjon_Header), "ic_e.png");
-            structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Position, Resources.GetString(Resource.String.Structure_EksaktPosisjon_Posisjon), "ic_e_posisjon.png", 0.8f);
-            structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Address, Resources.GetString(Resource.String.Structure_EksaktPosisjon_Adresse), "ic_e_adresse.png", 0.8f);
-            structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_EksaktPosisjon_Oppmotested), "ic_e_oppmotested.png", 1.0f);
-            structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_EksaktPosisjon_Ankomst), "ic_e_ankomst.png", 0.6f);
-            structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_EksaktPosisjon_Avreise), "ic_e_avreise.png", 0.6f);
+            StructureSectionDto structureEksaktPosisjon = structure.AddStructureSection(Resources.GetString(Resource.String.Structure_EksaktPosisjon_Header), "");
+            structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Position, Resources.GetString(Resource.String.Structure_EksaktPosisjon_Posisjon), "ic_posisjon", 0.8f);
+            structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Address, Resources.GetString(Resource.String.Structure_EksaktPosisjon_Adresse), "ic_adresse", 0.8f);
+            structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_EksaktPosisjon_Oppmotested), "ic_oppmotested", 1.0f);
+            structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_EksaktPosisjon_Ankomst), "ic_ankomst", 0.6f);
+            structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_EksaktPosisjon_Avreise), "ic_avreise", 0.6f);
 
             // Nivå
-            StructureSectionDto structureNiva = structure.AddStructureSection(Resources.GetString(Resource.String.Structure_Niva_Header), "ic_n.png");
-            structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Niva_Type), "ic_n_begrenset.png", 0.5f);
-            structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Niva_QuatroVarsling), "ic_n_quartro.png", 0.7f);
+            StructureSectionDto structureNiva = structure.AddStructureSection(Resources.GetString(Resource.String.Structure_Niva_Header), "");
+            structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Niva_Type), "ic_begrenset", 0.5f);
+            structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Niva_QuatroVarsling), "ic_quartro", 0.7f);
 
             // Sikkerhet
-            StructureSectionDto structureSikkerhet = structure.AddStructureSection(Resources.GetString(Resource.String.Structure_Sikkerhet_Header), "ic_s.png");
-            structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Sikkerhet_Farer), "ic_s_farer.png", 0.8f);
-            structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Sikkerhet_Brann), "ic_s_brann.png", 0.8f);
-            structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Sikkerhet_Sikkerhet), "ic_s_sikkerhet.png", 0.8f);
+            StructureSectionDto structureSikkerhet = structure.AddStructureSection(Resources.GetString(Resource.String.Structure_Sikkerhet_Header), "");
+            structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Sikkerhet_Farer), "ic_farer", 0.8f);
+            structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Sikkerhet_Brann), "ic_brann", 0.8f);
+            structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Sikkerhet_Sikkerhet), "ic_sikkerhet", 0.8f);
 
             // Pasienter
-            StructureSectionDto structurePasienter = structure.AddStructureSection(Resources.GetString(Resource.String.Structure_Pasienter_Header), "ic_p.png");
-            structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Pasienter_Antall), "ic_p_pasienter.png", 0.9f);
-            structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Pasienter_Type), "ic_p_type.png", 0.7f);
-            structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Pasienter_Omfang), "ic_p_skademekanikk.png", 0.8f);
+            StructureSectionDto structurePasienter = structure.AddStructureSection(Resources.GetString(Resource.String.Structure_Pasienter_Header), "");
+            structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Pasienter_Antall), "ic_pasienter", 0.9f);
+            structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Pasienter_Type), "ic_type", 0.7f);
+            structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Pasienter_Omfang), "ic_skademekanikk", 0.8f);
 
             // Evakuering
-            StructureSectionDto structureEvakuering = structure.AddStructureSection(Resources.GetString(Resource.String.Structure_Evakuering_Header), "ic_e.png");
-            structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Evakuering_Flaskehalser), "ic_e_flaskehalser.png", 0.7f);
-            structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Evakuering_Kjeder), "ic_e_evakuering.png", 0.7f);
-            structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Evakuering_Rett), "ic_e_rett.png", 0.7f);
+            StructureSectionDto structureEvakuering = structure.AddStructureSection(Resources.GetString(Resource.String.Structure_Evakuering_Header), "");
+            structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Evakuering_Flaskehalser), "ic_flaskehalser", 0.7f);
+            structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Evakuering_Kjeder), "ic_evakuering", 0.7f);
+            structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Evakuering_Rett), "ic_rett", 0.7f);
         }
 
 		#region check new version
