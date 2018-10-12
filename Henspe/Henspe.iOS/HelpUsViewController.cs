@@ -67,7 +67,7 @@ namespace Henspe.iOS
 
         private void SetupVideo()
         {
-            var url = NSUrl.FromFilename("video10.mp4");
+            var url = NSUrl.FromFilename("video480.mp4");
             _player = new AVPlayer(url);
             _preview = new AVPlayerViewController();
             _preview.Player = _player;
@@ -89,12 +89,18 @@ namespace Henspe.iOS
             _preview.View.Frame = viewMovieContainer.Bounds;
         }
 
+        public override void ViewDidDisappear(bool animated)
+        {
+            base.ViewDidDisappear(animated);
+
+            _player.Pause();
+        }
+
         public override void ViewDidLayoutSubviews()
         {
             base.ViewDidLayoutSubviews();
 
             UpdateGradient();
-            //_preview.View.Frame = viewMovieContainer.Bounds;
         }
 
         void ScrollViewAboutSNLA_Scrolled(object sender, EventArgs e)
