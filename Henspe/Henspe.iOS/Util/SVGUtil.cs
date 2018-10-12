@@ -31,23 +31,23 @@ namespace Henspe.iOS.Util
                         .Into(imageView);
         }
 
-        public static async Task LoadSVGToButton(UIButton button, string imageNormalFilename, string imageHighlightedFilename)
+        public static async Task LoadSVGToButton(UIButton button, string imageNormalFilename, string imageDisabledFilename)
         {
             UIImage imageNormal = await ImageService.Instance
                 .LoadFile(imageNormalFilename)
                 .WithCustomDataResolver(new SvgDataResolver(200, 0, true))
                 .AsUIImageAsync();
 
-            button.SetImage(imageNormal, UIControlState.Normal);
+            button.SetBackgroundImage(imageNormal, UIControlState.Normal);
 
-            if(imageHighlightedFilename != null)
+            if(imageDisabledFilename != null)
             {
-                UIImage imageHighlighted = await ImageService.Instance
-                    .LoadFile(imageHighlightedFilename)
+                UIImage imageDisabled = await ImageService.Instance
+                    .LoadFile(imageDisabledFilename)
                     .WithCustomDataResolver(new SvgDataResolver(200, 0, true))
                     .AsUIImageAsync();
 
-                button.SetImage(imageHighlighted, UIControlState.Highlighted);
+                button.SetBackgroundImage(imageDisabled, UIControlState.Disabled);
             }
         }
     }

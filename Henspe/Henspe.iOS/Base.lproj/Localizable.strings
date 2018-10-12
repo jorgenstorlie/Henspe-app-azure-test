@@ -113,7 +113,7 @@ Structure.Evakuering.Flaskehalser = "Avklar flaskehalser";
 Structure.Evakuering.Kjeder = "Effektive evakueringskjeder";
 Structure.Evakuering.Rett = "Rett pasient til rett sykehus";
 
-// Hjelp oss
+// Help us
 HelpUs.Title = "Du er viktig";
 HelpUs.AboutHENSPE = "HENSPE er utviklet ved hjelp av innsamlede midler. Vi vil kontakte deg fremover med informasjon om the livsviktige arbeidet.";
 HelpUs.More = "Mer informasjon";
@@ -122,3 +122,11 @@ HelpUs.Yes = "Ja takk, jeg er over 18 år og vil motta informasjon";
 HelpUs.SMS = "På SMS";
 HelpUs.Email = "På e-post";
 HelpUs.No = "Nei takk";
+
+// Register email
+RegEmail.Title = "Nyhetsbrev";
+RegEmail.Description = "Motta nyhetsbrev på e-post";
+RegEmail.Placeholder = "Din e-postadresse";
+RegEmail.Button = "OK";
+RegEmail.Success = "Takk!";
+RegEmail.Failed = "Noe gikk galt under registreringen";

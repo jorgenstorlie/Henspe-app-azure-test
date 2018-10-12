@@ -15,6 +15,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)Util\" />
     <Folder Include="$(MSBuildThisFileDirectory)Model\Dto\" />
     <Folder Include="$(MSBuildThisFileDirectory)Communication\Dto\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModel\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Util\BugtrackUtil.cs" />
@@ -44,5 +45,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Communication\CxHttpClient.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\Dto\FormattedCoordinatesDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\ISettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\CallRegEmailSMS.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\Dto\RegEmailSMSResultDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\RegisterEmailViewModel.cs" />
   </ItemGroup>
 </Project>

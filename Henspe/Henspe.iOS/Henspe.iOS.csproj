@@ -226,6 +226,10 @@
     <Compile Include="HelpUsViewController.designer.cs">
       <DependentUpon>HelpUsViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegisterEmailViewController.cs" />
+    <Compile Include="RegisterEmailViewController.designer.cs">
+      <DependentUpon>RegisterEmailViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ic_info.png" />
