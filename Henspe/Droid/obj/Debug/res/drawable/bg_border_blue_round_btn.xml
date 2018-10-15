@@ -1,4 +1,0 @@
-<selector xmlns:android="http://schemas.android.com/apk/res/android"><item android:state_pressed="true"><shape xmlns:android="http://schemas.android.com/apk/res/android"><stroke android:width="1dp" android:color="@color/snla_blue_700" />
-          /&gt;
-            
-             <corners android:radius="11dp"></corners></shape></item><item><shape xmlns:android="http://schemas.android.com/apk/res/android"><stroke android:width="1dp" android:color="@color/snla_blue" /><corners android:radius="11dp"></corners></shape></item></selector>
