@@ -136,13 +136,13 @@ namespace Henspe.Droid
         {
             if (viewType == 2)
             {
-               
+
                 var layout2 = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.TabLayout, parent, false);
                 var adressItemViewHolder = new AdressItemViewHolder(layout2);
                 setupViewPager(adressItemViewHolder.viewPager);
                 adressItemViewHolder.tabLayout.SetupWithViewPager(adressItemViewHolder.viewPager);
                 return adressItemViewHolder;
-             
+
                 /*
                 var layout2 = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.adress_row, parent, false);
                 var adressItemViewHolder = new AdressItemViewHolder(layout2);
@@ -156,7 +156,7 @@ namespace Henspe.Droid
               
 
                 return adressItemViewHolder;
-                */              
+                */
             }
             else
             {
@@ -179,14 +179,16 @@ namespace Henspe.Droid
         {
             //  InitFragment();
 
-            OnBoardingItemFragment f = new OnBoardingItemFragment(1);
-            OnBoardingItemFragment f2 = new OnBoardingItemFragment(2);
+            position_fragment f = new position_fragment(1);
+            position_fragment f2 = new position_fragment(2);
 
             ViewPagerAdapter adapter = new ViewPagerAdapter((activity as AppCompatActivity).SupportFragmentManager);
             adapter.addFragment(f, "Angitt posisjon ");
             adapter.addFragment(f2, "Valgt posisjon");
 
             viewPager.Adapter = adapter;
+
+            Henspe.Current.PositionFragment = f;
         }
 
 
@@ -251,9 +253,6 @@ namespace Henspe.Droid
                     viewHolder.image.Visibility = ViewStates.Visible;
                     viewHolder.description.Visibility = ViewStates.Visible;
 
-                    if (viewHolder.adress != null)
-                        viewHolder.adress.Visibility = ViewStates.Gone;
-
                     viewHolder.info.Text = "";
                     viewHolder.info.Visibility = ViewStates.Gone;
 
@@ -262,8 +261,7 @@ namespace Henspe.Droid
                 }
                 else if (henspeRowModel.elementType == StructureElementDto.ElementType.Position)
                 {
-                    if (viewHolder.adress != null)
-                        viewHolder.adress.Visibility = ViewStates.Gone;
+
 
                     viewHolder.description.Visibility = ViewStates.Visible;
 
@@ -278,80 +276,6 @@ namespace Henspe.Droid
                 else if (henspeRowModel.elementType == StructureElementDto.ElementType.Address)
                 {
 
-                    if (viewHolder.adress == null)
-                    {
-                        var inflater2 = LayoutInflater.From(activity);
-                        //   LayoutInflater inflater = (LayoutInflater)activity.GetSystemService("LayoutInflaterService");
-                        global::Android.Views.View view2 = inflater2.Inflate(Resource.Layout.TabLayout, null);
-
-                        viewHolder.adress = view2;
-
-
-
-                        // Get our button from the layout resource,
-                        // and attach an event to it
-                        ViewPager viewPager = (ViewPager)view2.FindViewById(Resource.Id.viewpager);
-
-
-                        setupViewPager(viewPager);
-
-
-
-                        TabLayout tabLayout = view2.FindViewById<TabLayout>(Resource.Id.sliding_tabs);
-                        tabLayout.SetupWithViewPager(viewPager);
-                        viewHolder.layout.AddView(view2);
-
-
-
-                        if (false)
-                        {
-
-
-
-
-
-                            var inflater = LayoutInflater.From(activity);
-                            //   LayoutInflater inflater = (LayoutInflater)activity.GetSystemService("LayoutInflaterService");
-                            global::Android.Views.View view = inflater.Inflate(Resource.Layout.adress_row, null);
-
-                            viewHolder.adress = view;
-
-
-                            // Instantiate the deck of flash cards:
-                            Adresses adresses = new Adresses();
-
-                            // Instantiate the adapter and pass in the deck of flash cards:
-                            AdressAdapter adapter = new AdressAdapter((activity as AppCompatActivity).SupportFragmentManager, adresses);
-
-                            // Find the ViewPager and plug in the adapter:
-                            ViewPager pager = (ViewPager)view.FindViewById(Resource.Id.pager);
-                            pager.Adapter = adapter;
-
-                            PagerTabStrip pagertab = (PagerTabStrip)view.FindViewById(Resource.Id.pagertab);
-
-                            //    pagertab.(pager);
-
-                            viewHolder.layout.AddView(view);
-
-
-                            /* TabLayout
-                            viewHolder.info.Text = Henspe.Current.addressText;
-                            viewHolder.info.Visibility = ViewStates.Visible;
-
-                            viewHolder.infoHelper.Text = "";
-                            viewHolder.infoHelper.Visibility = ViewStates.Visible;
-
-                            lastAddressText = FlashTextUtil.FlashChangedText(activity, activity.ApplicationContext, lastAddressText, Henspe.Current.addressText, viewHolder.infoHelper, FlashTextUtil.Type.AddressText);
-                      */
-                        }
-                    }
-
-                    viewHolder.info.Visibility = ViewStates.Gone;
-                    viewHolder.infoHelper.Visibility = ViewStates.Gone;
-                    viewHolder.image.Visibility = ViewStates.Gone;
-                    viewHolder.description.Visibility = ViewStates.Gone;
-
-                    viewHolder.adress.Visibility = ViewStates.Visible;
 
                 }
 
@@ -450,7 +374,6 @@ namespace Henspe.Droid
             public TextView description { get; set; }
             public TextView info { get; set; }
             public TextView infoHelper { get; set; }
-            public global::Android.Views.View adress { get; set; }
 
             public ItemViewHolder(global::Android.Views.View itemView) : base(itemView)
             {
@@ -476,8 +399,8 @@ namespace Henspe.Droid
                 //https://guides.codepath.com/android/google-play-style-tabs-using-tablayout
                 //https://guides.codepath.com/android/ViewPager-with-FragmentPagerAdapter
 
-             this.viewPager = itemView.FindViewById<ViewPager>(Resource.Id.viewpager);
-             this.tabLayout = itemView.FindViewById<TabLayout>(Resource.Id.sliding_tabs);
+                this.viewPager = itemView.FindViewById<ViewPager>(Resource.Id.viewpager);
+                this.tabLayout = itemView.FindViewById<TabLayout>(Resource.Id.sliding_tabs);
 
                 this.viewPager.NestedScrollingEnabled = true;
                 this.tabLayout.NestedScrollingEnabled = true;

@@ -49,8 +49,8 @@
     <color name="accent">#FFC107</color>
     <color name="window_background">#ffffff</color>
     
-        <color name="page_indicator_selected_color">@color/ColorPrimary</color>
-        <color name="page_indicator_default_color">@color/snla_blue_700</color>
+        <color name="page_indicator_selected_color">@color/snla_red_200</color>
+        <color name="page_indicator_default_color">@color/window_background</color>
       
     
     

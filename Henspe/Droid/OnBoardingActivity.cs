@@ -19,7 +19,7 @@ using Com.Airbnb.Lottie;
 using Henspe.Droid.Adapter;
 using Henspe.Droid.Util;
 using Henspe.Droid.Utils;
-using Henspe.Droid.View.Indicator;
+
 using Java.Lang;
 
 
@@ -38,7 +38,7 @@ namespace Henspe.Droid
         private static TextView mNextButton;
         private global::Android.Support.V4.View.ViewPager _mPager;
         private InitialPagerAdapter mPagerAdapter;
-        private CirclePageIndicator _mCirclePageIndicator;
+       
 
         static int totalPages = 3;
         static int currentPage = 0;

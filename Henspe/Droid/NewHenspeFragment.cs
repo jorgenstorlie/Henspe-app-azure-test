@@ -292,7 +292,7 @@ namespace Henspe.Droid
             }
 
             Console.WriteLine("RequestLocation 5");
-            UpdateLocation(Henspe.Current.myLocation);
+           UpdateLocation(Henspe.Current.myLocation);
         }
 
         private bool CheckLocationServiceAvailability()
@@ -339,8 +339,14 @@ namespace Henspe.Droid
             if (location != null)
             {
                 Console.WriteLine("UpdateLocation 2");
-                CreatePositionTextAndRefreshPositionRow(location);
-                CreateAddressTextAndRefreshAddressRow(location);
+
+if (Henspe.Current.PositionFragment != null)
+ Henspe.Current.PositionFragment.UpdateLocation(location);
+
+            //    Cre   atePositionTex
+                //  sitionRow(location);
+             //   CreateAddre
+           //    AddressRow(location);
             }
             else
             {
