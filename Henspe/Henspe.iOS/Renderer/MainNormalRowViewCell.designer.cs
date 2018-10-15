@@ -13,21 +13,19 @@ namespace Henspe.iOS
 	partial class MainNormalRowViewCell
 	{
 		[Outlet]
+		UIKit.NSLayoutConstraint constraintImageWidth { get; set; }
+
+		[Outlet]
 		UIKit.UIImageView imgImage { get; set; }
 
 		[Outlet]
 		UIKit.UILabel labLabel { get; set; }
 
 		[Outlet]
-		UIKit.UIView viewImage { get; set; }
+		UIKit.UIView viewImageContainer { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (viewImage != null) {
-				viewImage.Dispose ();
-				viewImage = null;
-			}
-
 			if (imgImage != null) {
 				imgImage.Dispose ();
 				imgImage = null;
@@ -36,6 +34,16 @@ namespace Henspe.iOS
 			if (labLabel != null) {
 				labLabel.Dispose ();
 				labLabel = null;
+			}
+
+			if (viewImageContainer != null) {
+				viewImageContainer.Dispose ();
+				viewImageContainer = null;
+			}
+
+			if (constraintImageWidth != null) {
+				constraintImageWidth.Dispose ();
+				constraintImageWidth = null;
 			}
 		}
 	}

@@ -78,12 +78,12 @@ Location.Element.Meters.Short.Text = "m";
 Location.Element.For = "for";
 
 // Hendelse
-Structure.Hendelse.Header = "HENDELSE"; 
+Structure.Hendelse.Header = "Hendelse"; 
 Structure.Hendelse.Trafikk = "Trafikk, fly, båt, industri, skred osv"; 
 Structure.Hendelse.Brann = "Brann"; 
 
 // Eksakt posisjon
-Structure.EksaktPosisjon.Header = "EKSAKT POSISJON"; 
+Structure.EksaktPosisjon.Header = "Eksakt posisjon"; 
 Structure.EksaktPosisjon.Posisjon = "Posisjon"; 
 Structure.EksaktPosisjon.Adresse = "Nærmeste adresse";
 Structure.EksaktPosisjon.Oppmotested = "Oppmøtested";
@@ -91,24 +91,42 @@ Structure.EksaktPosisjon.Ankomst = "Ankomst";
 Structure.EksaktPosisjon.Avreise = "Avreise";
 
 // Nivå
-Structure.Niva.Header = "NIVÅ"; 
+Structure.Niva.Header = "Nivå"; 
 Structure.Niva.Type = "Begrenset, stort, masseskade";
 Structure.Niva.QuatroVarsling = "Quatro varsling";
 
 // Sikkerhet
-Structure.Sikkerhet.Header = "SIKKERHET"; 
+Structure.Sikkerhet.Header = "Sikkerhet"; 
 Structure.Sikkerhet.Farer = "Mulige/reelle farer";
 Structure.Sikkerhet.Brann = "Brann";
 Structure.Sikkerhet.Sikkerhet = "Sikkerhet for involverte";
 
 // Pasienter
-Structure.Pasienter.Header = "PASIENTER"; 
+Structure.Pasienter.Header = "Pasienter"; 
 Structure.Pasienter.Antall = "Ca antall pasienter";
 Structure.Pasienter.Type = "Type skader";
 Structure.Pasienter.Omfang = "Skademekanikk/omfang";
 
 // Evakuering
-Structure.Evakuering.Header = "EVAKUERING"; 
+Structure.Evakuering.Header = "Evakuering"; 
 Structure.Evakuering.Flaskehalser = "Avklar flaskehalser";
 Structure.Evakuering.Kjeder = "Effektive evakueringskjeder";
 Structure.Evakuering.Rett = "Rett pasient til rett sykehus";
+
+// Help us
+HelpUs.Title = "Du er viktig";
+HelpUs.AboutHENSPE = "HENSPE er utviklet ved hjelp av innsamlede midler. Vi vil kontakte deg fremover med informasjon om the livsviktige arbeidet.";
+HelpUs.More = "Mer informasjon";
+HelpUs.AboutSNLA = "Stiftelsen Norsk Luftambulanse er en ideell organisasjon som fullt ut er finansiert av privat innsamlede midler fra enkeltpersoner og støttebedrifter.\n\nDin støtte går til forskning og utvikling for at alle skal få raskere og riktigere avansert akkuttmedisinsk behandling utenfor sykehus. Din støtte bidrar til å redde liv i hele Norge. Driften av luftambulansetjenesten er statlig finansiert.";
+HelpUs.Yes = "Ja takk, jeg er over 18 år og vil motta informasjon";
+HelpUs.SMS = "På SMS";
+HelpUs.Email = "På e-post";
+HelpUs.No = "Nei takk";
+
+// Register email
+RegEmail.Title = "Nyhetsbrev";
+RegEmail.Description = "Motta nyhetsbrev på e-post";
+RegEmail.Placeholder = "Din e-postadresse";
+RegEmail.Button = "OK";
+RegEmail.Success = "Takk!";
+RegEmail.Failed = "Noe gikk galt under registreringen";

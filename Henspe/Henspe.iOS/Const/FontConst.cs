@@ -20,7 +20,9 @@ namespace Henspe.iOS.Const
         static public UIFont fontMediumRegular = UIFont.FromName("Montserrat-Regular", 15f);
         static public UIFont fontMediumLight = UIFont.FromName("Montserrat-Light", 13f);
         static public UIFont fontLarge = UIFont.FromName("Montserrat-Light", 17f);
-		static public UIFont fontHeading = UIFont.FromName("Montserrat-Regular", 17f);
+		static public UIFont fontHeading = UIFont.FromName("Montserrat-Light", 17f);
+
+        static public UIFont fontNavbar = UIFont.FromName("Montserrat-Regular", 16f);
 
 		public FontConst ()
 		{

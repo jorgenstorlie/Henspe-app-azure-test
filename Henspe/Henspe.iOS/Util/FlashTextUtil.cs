@@ -31,53 +31,53 @@ namespace Henspe.iOS.Util
             if (labText == null)
                 return ""; 
 
-            if (newText == null || (newText != null && newText.Length == 0))
-            {
-				return lastText;
-            }
+   //         if (newText == null || (newText != null && newText.Length == 0))
+   //         {
+			//	return lastText;
+   //         }
 
-			if ((type == Type.Position && positionAnimationInProgress == true) && (type == Type.Address && addressAnimationInProgress == true))
-            {
-				return newText;
-            }
+			//if ((type == Type.Position && positionAnimationInProgress == true) && (type == Type.Address && addressAnimationInProgress == true))
+   //         {
+			//	return newText;
+   //         }
 
-			if (lastText == newText || lastText.Length == 0)
-            {
-                labText.Alpha = 1.0f;
-				labText.Text = newText;
+			//if (lastText == newText || lastText.Length == 0)
+   //         {
+   //             labText.Alpha = 1.0f;
+			//	labText.Text = newText;
 
-				return newText;
-            }
+			//	return newText;
+   //         }
             
-			var attributedString = new NSMutableAttributedString (newText);
-			if ((lastText.Length > 0 && lastText != newText) || ((type == Type.Position && positionAnimationInProgress == true) || (type == Type.Address && addressAnimationInProgress == true)))
-			{
-				List<string> diff = GetWordDiffFor (newText, lastText);
-				foreach (string word in diff)
-				{
-					int pos = newText.IndexOf (word);
-					attributedString = SetAttributeInString (attributedString, pos, word.Length, AttributeTypeConst.enhanced);
-				}
+			//var attributedString = new NSMutableAttributedString (newText);
+			//if ((lastText.Length > 0 && lastText != newText) || ((type == Type.Position && positionAnimationInProgress == true) || (type == Type.Address && addressAnimationInProgress == true)))
+			//{
+			//	List<string> diff = GetWordDiffFor (newText, lastText);
+			//	foreach (string word in diff)
+			//	{
+			//		int pos = newText.IndexOf (word);
+			//		attributedString = SetAttributeInString (attributedString, pos, word.Length, AttributeTypeConst.enhanced);
+			//	}
 
-				// Create temporary enhanced Text field
-				UILabel labEnhancedText = CloneUtil.CloneLabel (labText);
+			//	// Create temporary enhanced Text field
+			//	UILabel labEnhancedText = CloneUtil.CloneLabel (labText);
 
-				labEnhancedText.Alpha = 1.0f;
-				labEnhancedText.AttributedText = attributedString;
+			//	labEnhancedText.Alpha = 1.0f;
+			//	labEnhancedText.AttributedText = attributedString;
 
-				UIView uiView = labText.Superview;
-				uiView.AddSubview (labEnhancedText);
+			//	UIView uiView = labText.Superview;
+			//	uiView.AddSubview (labEnhancedText);
 
-				lastText = newText;
+			//	lastText = newText;
 
-				FadeEnhancedText (labText, labEnhancedText, newText, type);
-			}
-			else
-			{
-				labText.Alpha = 1.0f;
-				labText.Text = newText;
-				labText.AccessibilityLabel = newText;
-			}
+			//	FadeEnhancedText (labText, labEnhancedText, newText, type);
+			//}
+			//else
+			//{
+			//	labText.Alpha = 1.0f;
+			//	labText.Text = newText;
+			//	labText.AccessibilityLabel = newText;
+			//}
 
 			return lastText;
 		}
@@ -154,26 +154,6 @@ namespace Henspe.iOS.Util
             StopCheckTimer();
             addressAnimationInProgress = false;
         }
-
-		private static NSMutableAttributedString SetAttributeInString(NSMutableAttributedString attributedString, int fromPos, int len, int attributeType)
-		{
-			var normalText = new UIStringAttributes
-			{
-				ForegroundColor = ColorConst.textTransparent
-			};
-
-			var enhanceText = new UIStringAttributes 
-			{
-				ForegroundColor = ColorConst.textRed
-			};
-
-			if(attributeType == AttributeTypeConst.normal)
-				attributedString.SetAttributes (normalText.Dictionary, new NSRange (fromPos, len));
-			else if(attributeType == AttributeTypeConst.enhanced)
-				attributedString.SetAttributes (enhanceText.Dictionary, new NSRange (fromPos, len));
-
-			return attributedString;
-		}
 	}
 
 	public class FlashTextObject

@@ -9,24 +9,26 @@ using System.CodeDom.Compiler;
 
 namespace Henspe.iOS
 {
-	[Register ("MainViewController")]
-	partial class MainViewController
-	{
-		[Outlet]
-		UIKit.UITableView myTableView { get; set; }
+    [Register ("MainViewController")]
+    partial class MainViewController
+    {
+        [Outlet]
+        UIKit.UIButton btnHelpUs { get; set; }
 
-		[Action ("OnInfoClicked:")]
-		partial void OnInfoClicked (Foundation.NSObject sender);
+        [Outlet]
+        UIKit.UITableView myTableView { get; set; }
 
-		[Action ("OnSettingsClicked:")]
-		partial void OnSettingsClicked (Foundation.NSObject sender);
-		
-		void ReleaseDesignerOutlets ()
-		{
-			if (myTableView != null) {
-				myTableView.Dispose ();
-				myTableView = null;
-			}
-		}
-	}
+        void ReleaseDesignerOutlets ()
+        {
+            if (btnHelpUs != null) {
+                btnHelpUs.Dispose ();
+                btnHelpUs = null;
+            }
+
+            if (myTableView != null) {
+                myTableView.Dispose ();
+                myTableView = null;
+            }
+        }
+    }
 }

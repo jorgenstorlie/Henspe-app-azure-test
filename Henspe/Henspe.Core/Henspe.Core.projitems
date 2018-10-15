@@ -15,19 +15,17 @@
     <Folder Include="$(MSBuildThisFileDirectory)Util\" />
     <Folder Include="$(MSBuildThisFileDirectory)Model\Dto\" />
     <Folder Include="$(MSBuildThisFileDirectory)Communication\Dto\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModel\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Util\BugtrackUtil.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\ConvertUtil.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\CoordinateUtil.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\DateUtil.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Util\FileUtil.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\JsonUtil.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\MathUtil.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Util\NumberUtil.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\SessionUtil.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\StringUtil.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Util\TimerUtil.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Dto\BrukerDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Dto\BugtrackResultDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Dto\StructureDto.cs" />
@@ -44,5 +42,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Communication\CxHttpClient.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\Dto\FormattedCoordinatesDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\ISettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\CallRegEmailSMS.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\Dto\RegEmailSMSResultDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\RegisterEmailViewModel.cs" />
   </ItemGroup>
 </Project>

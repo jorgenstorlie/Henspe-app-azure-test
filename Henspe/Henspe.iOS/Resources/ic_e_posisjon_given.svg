@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="30px" viewBox="0 0 19 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_e_posisjon_given</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-6.6%" y="-4.3%" width="113.2%" height="108.6%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0.5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="SourceAlpha" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0" type="matrix" in="shadowOffsetOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.404087612">
+        <g id="Hovedskjerm-Copy-36" transform="translate(-15.000000, -502.000000)" fill="#D0021B" fill-rule="nonzero">
+            <g id="ic_e_posisjon_given" filter="url(#filter-1)" transform="translate(15.000000, 502.000000)">
+                <path d="M9.5,2.41666667 C13.29525,2.41666667 16.625,5.58008333 16.625,9.18575 C16.625,12.923125 13.6645625,17.8035833 9.5,24.4844583 C5.3354375,17.8035833 2.375,12.923125 2.375,9.18575 C2.375,5.58008333 5.70475,2.41666667 9.5,2.41666667 Z M9.5,0 C4.514875,0 0,4.11195833 0,9.18575 C0,14.2583333 4.1194375,20.3145 9.5,29 C14.8805625,20.3145 19,14.2583333 19,9.18575 C19,4.11195833 14.4863125,2.14643118e-15 9.5,0 Z M9.5,13.2916667 C7.5323125,13.2916667 5.9375,11.668875 5.9375,9.66666667 C5.9375,7.66445833 7.5323125,6.04166667 9.5,6.04166667 C11.4676875,6.04166667 13.0625,7.66445833 13.0625,9.66666667 C13.0625,11.668875 11.4676875,13.2916667 9.5,13.2916667 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

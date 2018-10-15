@@ -1,34 +1,16 @@
 ﻿using System;
-using System.IO;
-using System.Collections.Generic;
 using Android.App;
-using Android.Widget;
 using Android.OS;
-using Android.Net;
 using Android.Runtime;
 using Android.Content;
 using Android.Content.PM;
-using Android.Media;
 using Android.Support.V4.Content;
-using Henspe.Core.Util;
 using Henspe.Core;
 using Henspe.Core.Model.Dto;
-using Environment = System.Environment;
-using Java.Util;
 using System.Threading;
-using Java.Net;
-using System.Net;
 using Android.Locations;
 using Henspe.Droid.Const;
 using Android.Gms.Location;
-using static Android.Media.Audiofx.BassBoost;
-using Android.Arch.Lifecycle;
-using System.Threading.Tasks;
-using Android.Gms.Tasks;
-using Android.Support.V13.App;
-using Android;
-using Android.Support.Design.Widget;
-using static Android.Views.View;
 
 namespace Henspe.Droid
 {

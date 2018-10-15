@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using Airbnb.Lottie;
 using CoreGraphics;
 using Foundation;
 using Henspe.iOS.Const;
@@ -14,17 +15,13 @@ namespace Henspe.iOS
 	{
 		int totalPages = 3;
 		int currentPage = 0;
-		private DateTime debugTime;
 
-		private double scrollTime = 0.2;
-		private float scrollViewBorder = 8;
-		private List<InitialCardViewController> initialCardViewControllerList = null;
+        private LOTAnimationView _animation1;
+        private LOTAnimationView _animation2;
+        private LOTAnimationView _animation3;
+        private List<LOTAnimationView> _animations;
 
-		//private List<Category> categoryList = new List<Category>();
-		//private List<Speaker> speakerList = new List<Speaker>();
-		//private List<Location> locationList = new List<Location>();
-
-		public enum NextType
+        public enum NextType
 		{
 			Next,
             Finished
@@ -37,24 +34,23 @@ namespace Henspe.iOS
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+
+            _animation1 = LOTAnimationView.AnimationNamed("rocket");
+            _animation2 = LOTAnimationView.AnimationNamed("HENSPEintropart2");
+            _animation3 = LOTAnimationView.AnimationNamed("HENSPEintropart3");
+
+            _animations = new List<LOTAnimationView>() { _animation1, _animation2, _animation3 };
         }
 
         public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
-        }
-
-        public override void ViewDidAppear(bool animated)
-        {
-            base.ViewDidAppear(animated);
 
 			if (UserUtil.settings.instructionsFinished == false)
             {
-                scrScrollView.Scrolled += OnScrollViewEvent;
-
                 ClearAllBeforeDrawing();
                 SetupView();
-                DoPopulateInitalCardInScrollView();
+                PopulateInitialPage();
             }
             else
             {
@@ -65,15 +61,6 @@ namespace Henspe.iOS
 		private void ClearAllBeforeDrawing()
 		{
 			currentPage = 0;
-
-			foreach(UIView view in scrScrollView.Subviews)
-			{
-				view.RemoveFromSuperview();
-			}
-
-			scrScrollView.ContentSize = new CGSize(0, 0);
-
-			initialCardViewControllerList = null;
 		}
 
 		void SetupView()
@@ -92,7 +79,6 @@ namespace Henspe.iOS
             }
             else
             {
-                scrScrollView.Hidden = true;
                 btnSkip.Hidden = true;
                 pagPager.Hidden = true;
                 btnNext.Hidden = true;
@@ -115,39 +101,37 @@ namespace Henspe.iOS
             }
         }
 
-        void DoPopulateInitalCardInScrollView()
+        void PopulateInitialPage()
         {
             int pages = totalPages;
-
-            initialCardViewControllerList = new List<InitialCardViewController>();
-
-            for (int i = 1; i <= pages; i++)
-            {
-                InitialCardViewController initialCardViewController = MakeInitialCardViewController(i);
-
-                scrScrollView.AddSubview(initialCardViewController.View);
-                //initialCardViewController.Setup();
-
-                initialCardViewControllerList.Add(initialCardViewController);
-            }
-
             pagPager.Pages = pages;
 
-            scrScrollView.ContentSize = new CGSize(scrScrollView.Frame.Width * pages, scrScrollView.Frame.Height);
+            var view = ChangeAnimationView(0);
+
+            view.Play();
         }
 
-        private InitialCardViewController MakeInitialCardViewController(int i)
+        private LOTAnimationView ChangeAnimationView(int index)
         {
-            RectangleF viewRectangle = new RectangleF();
-            viewRectangle.X = (float)(scrScrollView.Frame.Width * (i - 1)) + scrollViewBorder;
+            if(index > 0)
+            {
+                var oldView = _animations[index - 1];
+                oldView.RemoveFromSuperview();
+            }
+            var newView = _animations[index];
+            newView.ContentMode = UIViewContentMode.ScaleAspectFit;
 
-            viewRectangle.Y = 0 + scrollViewBorder;
-            viewRectangle.Size = new SizeF((float)scrScrollView.Frame.Size.Width - (scrollViewBorder * 2), (float)scrScrollView.Frame.Size.Height);
+            _animation1.TranslatesAutoresizingMaskIntoConstraints = false;
+            viewAnimation.AddSubview(newView);
 
-			InitialCardViewController initialCardViewController = new InitialCardViewController(i);
-            initialCardViewController.View.Frame = viewRectangle;
+            var views = new NSMutableDictionary();
+            views.Add(new NSString("animationView"), newView);
+            var constraintsH = NSLayoutConstraint.FromVisualFormat("H:|-[animationView]-|", NSLayoutFormatOptions.AlignAllTop, null, views);
+            var constraintsV = NSLayoutConstraint.FromVisualFormat("V:|-[animationView]-|", NSLayoutFormatOptions.AlignAllLeft, null, views);
+            NSLayoutConstraint.ActivateConstraints(constraintsH);
+            NSLayoutConstraint.ActivateConstraints(constraintsV);
 
-            return initialCardViewController;
+            return newView;
         }
 
         partial void OnSkipClicked(NSObject sender)
@@ -167,43 +151,9 @@ namespace Henspe.iOS
 
         void GotoPage(int gotoPage)
         {
-            nfloat x = 0;
-
-            if (gotoPage > 0)
-            {
-                x = scrScrollView.Frame.Width * gotoPage;
-            }
-
-            UIView.Animate(scrollTime, 0, UIViewAnimationOptions.CurveEaseInOut, () =>
-            {
-                scrScrollView.ContentOffset = new CGPoint(x, 0);
-            }, () =>
-            {
-                // Finished
-            });
-        }
-
-        void OnScrollViewEvent(object sender, EventArgs e)
-        {
-            currentPage = (int)System.Math.Floor(scrScrollView.ContentOffset.X / scrScrollView.Frame.Size.Width);
-            if (currentPage < 0)
-                currentPage = 0;
-
-            pagPager.CurrentPage = currentPage;
-
-            //InitialCardViewController currentInitialCardViewController = initialCardViewControllerList[currentPage];
-            //currentInitialCardViewController.Setup();
-
-			if (UserUtil.settings.instructionsFinished == false)
-            {
-                if (currentPage == 2)
-					ShowActivityIndicatorForNext(NextType.Finished);
-                else
-					ShowActivityIndicatorForNext(NextType.Next);
-            }
-
-            foreach (InitialCardViewController initialCardViewController in initialCardViewControllerList)
-                initialCardViewController.SetScrollValue(scrScrollView.Frame.Width, scrScrollView.ContentOffset.X);
+            var view = ChangeAnimationView(gotoPage);
+            pagPager.CurrentPage = gotoPage;
+            view.PlayAsync();
         }
 
         private void TellThatUserNeedNetworkAtFirstRun()
@@ -249,27 +199,6 @@ namespace Henspe.iOS
             if (segue.Identifier == "segueInitialized")
             {
 				ClearAllBeforeDrawing();
-            }
-        }
-
-        public override void DidRotate(UIInterfaceOrientation fromInterfaceOrientation)
-        {
-            base.DidRotate(fromInterfaceOrientation);
-
-            if (DeviceUtil.isIpad())
-            {
-                foreach (UIView subview in scrScrollView.Subviews)
-                {
-                    subview.RemoveFromSuperview();
-                }
-
-                DoPopulateInitalCardInScrollView();
-                pagPager.Pages = totalPages;
-                currentPage = 0;
-				ShowActivityIndicatorForNext(NextType.Next);
-
-                CGPoint leftOffset = new CGPoint(0, 0);
-                scrScrollView.SetContentOffset(leftOffset, true);
             }
         }
 
