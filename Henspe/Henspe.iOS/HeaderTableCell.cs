@@ -18,6 +18,8 @@ namespace Henspe.iOS
             var header = title.First().ToString().ToUpper();
             labHeadline.Text = header;
             labDescription.Text = title;
+            labHeadline.TextColor = ColorConst.largeTextColor;
+            labDescription.TextColor = ColorConst.largeTextColor;
         }
 	}
 }

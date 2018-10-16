@@ -368,19 +368,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2gz-NO-E1J">
-                        <barButtonItem key="leftBarButtonItem" title="'" image="ic_info.png" id="rfW-Rs-Tw6">
-                            <color key="tintColor" red="0.089262411099999994" green="0.32050007990000001" blue="0.97797292469999997" alpha="0.90148758559999997" colorSpace="custom" customColorSpace="displayP3"/>
-                            <connections>
-                                <action selector="btnInfo:" destination="39h-0T-6KN" id="i6a-S1-IMt"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="ic_settings.png" id="Gpd-uZ-SzE">
                             <color key="tintColor" red="0.089262411099999994" green="0.32050007990000001" blue="0.97797292469999997" alpha="0.90148758559999997" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="IqM-aq-gfN" kind="show" identifier="SettingsSegue" id="LRk-Bh-bUR"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="btnHelpUs" destination="1Gw-ik-NzD" id="gsU-fD-OBV"/>
+                        <outlet property="constraintHelpUsHeight" destination="efX-HX-LMW" id="fkb-Wj-ydQ"/>
                         <outlet property="myTableView" destination="cVL-JB-Q0Q" id="liJ-Ve-Xh2"/>
                         <segue destination="OKo-4P-KxK" kind="unwind" identifier="segueInit" unwindAction="UnwindToInit:" id="7lG-vf-gEM"/>
                     </connections>
@@ -389,6 +387,449 @@
                 <exit id="OKo-4P-KxK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="908" y="138.91625615763547"/>
+        </scene>
+        <!--Innstillinger-->
+        <scene sceneID="LCE-fO-NX9">
+            <objects>
+                <tableViewController title="Innstillinger" id="IqM-aq-gfN" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Cp5-i0-9eL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection headerTitle="KOORDINATER" id="7Bw-zG-bij">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="68" id="So1-XB-GhJ">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="68"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="So1-XB-GhJ" id="tQf-bE-iLi">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="67.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Koordinater kan vises på fire ulike formater" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hff-CL-v1V">
+                                                    <rect key="frame" x="16" y="11.999999999999998" width="325" height="18.333333333333329"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DDM Grader og minutter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3H2-2P-BTr">
+                                                    <rect key="frame" x="16" y="38.333333333333336" width="325" height="17.333333333333336"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="3H2-2P-BTr" secondAttribute="trailing" id="4lW-EE-LBd"/>
+                                                <constraint firstAttribute="bottom" secondItem="3H2-2P-BTr" secondAttribute="bottom" constant="12" id="7Na-n5-4Ic"/>
+                                                <constraint firstItem="3H2-2P-BTr" firstAttribute="leading" secondItem="hff-CL-v1V" secondAttribute="leading" id="KyN-z5-LyY"/>
+                                                <constraint firstItem="hff-CL-v1V" firstAttribute="top" secondItem="tQf-bE-iLi" secondAttribute="top" constant="12" id="StB-bH-gia"/>
+                                                <constraint firstItem="hff-CL-v1V" firstAttribute="leading" secondItem="tQf-bE-iLi" secondAttribute="leading" constant="16" id="VDJ-hv-XYT"/>
+                                                <constraint firstItem="3H2-2P-BTr" firstAttribute="top" secondItem="hff-CL-v1V" secondAttribute="bottom" constant="8" id="nqO-7C-pKs"/>
+                                                <constraint firstAttribute="trailing" secondItem="hff-CL-v1V" secondAttribute="trailing" id="pLY-T3-fKp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="2OP-Vv-4aY" kind="show" identifier="SettingsCoordTypeSegue" id="6pz-Nk-0dg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="STED" id="2Me-eX-gUy">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="68" id="Exp-g4-0fH">
+                                        <rect key="frame" x="0.0" y="124" width="375" height="68"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Exp-g4-0fH" id="cLl-1x-bql">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="67.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stedstjenester brukes for å vise hvor du er" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqf-jW-bvo">
+                                                    <rect key="frame" x="16" y="11.999999999999998" width="325" height="18.333333333333329"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stedstjenester" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XyV-BD-El4">
+                                                    <rect key="frame" x="16" y="38.333333333333336" width="99" height="17.333333333333336"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tillatt" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GiM-q8-l8t">
+                                                    <rect key="frame" x="293" y="38" width="40" height="18"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="GiM-q8-l8t" secondAttribute="trailing" constant="8" id="5U5-nE-4WU"/>
+                                                <constraint firstItem="XyV-BD-El4" firstAttribute="top" secondItem="hqf-jW-bvo" secondAttribute="bottom" constant="8" id="6eM-a2-Acz"/>
+                                                <constraint firstAttribute="bottom" secondItem="XyV-BD-El4" secondAttribute="bottom" constant="12" id="EhU-0d-60U"/>
+                                                <constraint firstAttribute="trailing" secondItem="hqf-jW-bvo" secondAttribute="trailing" id="QX5-rp-OTB"/>
+                                                <constraint firstItem="hqf-jW-bvo" firstAttribute="leading" secondItem="cLl-1x-bql" secondAttribute="leading" constant="16" id="QiU-n5-2Sf"/>
+                                                <constraint firstItem="GiM-q8-l8t" firstAttribute="centerY" secondItem="XyV-BD-El4" secondAttribute="centerY" id="Xu6-Zm-gtI"/>
+                                                <constraint firstItem="GiM-q8-l8t" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XyV-BD-El4" secondAttribute="trailing" id="eaW-JW-dB5"/>
+                                                <constraint firstItem="hqf-jW-bvo" firstAttribute="top" secondItem="cLl-1x-bql" secondAttribute="top" constant="12" id="ts5-j3-EwK"/>
+                                                <constraint firstItem="XyV-BD-El4" firstAttribute="leading" secondItem="hqf-jW-bvo" secondAttribute="leading" id="yXl-il-Ho8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="KOTAKT" id="8Fj-IO-JyJ">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="68" id="19o-2q-wnj">
+                                        <rect key="frame" x="0.0" y="220" width="375" height="68"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="19o-2q-wnj" id="GcN-fV-hZo">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="67.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Du er viktig. Bli med å hjelpe andre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyE-nR-igi">
+                                                    <rect key="frame" x="16" y="11.999999999999998" width="325" height="18.333333333333329"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kontakt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8s-0t-pM1">
+                                                    <rect key="frame" x="16.000000000000004" y="38.333333333333336" width="55.333333333333343" height="17.333333333333336"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Samtykket på SMS" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAo-Ic-ytp">
+                                                    <rect key="frame" x="203.66666666666663" y="38" width="129.33333333333337" height="18"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="n8s-0t-pM1" firstAttribute="top" secondItem="yyE-nR-igi" secondAttribute="bottom" constant="8" id="67X-lG-M6P"/>
+                                                <constraint firstAttribute="trailing" secondItem="GAo-Ic-ytp" secondAttribute="trailing" constant="8" id="7jn-SK-04g"/>
+                                                <constraint firstAttribute="trailing" secondItem="yyE-nR-igi" secondAttribute="trailing" id="7kd-xK-roD"/>
+                                                <constraint firstItem="GAo-Ic-ytp" firstAttribute="centerY" secondItem="n8s-0t-pM1" secondAttribute="centerY" id="BKs-rR-jXB"/>
+                                                <constraint firstItem="yyE-nR-igi" firstAttribute="leading" secondItem="GcN-fV-hZo" secondAttribute="leading" constant="16" id="EZP-So-hw0"/>
+                                                <constraint firstAttribute="bottom" secondItem="n8s-0t-pM1" secondAttribute="bottom" constant="12" id="HDf-zC-gW2"/>
+                                                <constraint firstItem="GAo-Ic-ytp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="n8s-0t-pM1" secondAttribute="trailing" id="Hvf-MR-vMa"/>
+                                                <constraint firstItem="n8s-0t-pM1" firstAttribute="leading" secondItem="yyE-nR-igi" secondAttribute="leading" id="jKj-0f-grT"/>
+                                                <constraint firstItem="yyE-nR-igi" firstAttribute="top" secondItem="GcN-fV-hZo" secondAttribute="top" constant="12" id="q16-Xu-fN1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="eA2-Uu-Kc4" kind="show" id="L0I-GI-4x6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="VILKÅR OG PERSONVERN" id="z0R-SL-pxe">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="EVr-5Y-vHX">
+                                        <rect key="frame" x="0.0" y="316" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EVr-5Y-vHX" id="Sff-8g-6l5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Her kommer masse tekst. Først vilkår og så personvern" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iX1-GH-m0u">
+                                                    <rect key="frame" x="16" y="11.000000000000002" width="343" height="21.666666666666671"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="iX1-GH-m0u" secondAttribute="trailing" constant="16" id="2SI-uQ-uGu"/>
+                                                <constraint firstItem="iX1-GH-m0u" firstAttribute="leading" secondItem="Sff-8g-6l5" secondAttribute="leading" constant="16" id="Kan-8K-657"/>
+                                                <constraint firstItem="iX1-GH-m0u" firstAttribute="top" secondItem="Sff-8g-6l5" secondAttribute="top" constant="11.000000000000114" id="Szt-Op-I8n"/>
+                                                <constraint firstAttribute="bottom" secondItem="iX1-GH-m0u" secondAttribute="bottom" constant="11" id="eLH-ao-E5I"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="IqM-aq-gfN" id="PGM-vG-cq6"/>
+                            <outlet property="delegate" destination="IqM-aq-gfN" id="uJR-gN-Qms"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="cellContact" destination="19o-2q-wnj" id="yzY-YE-eFJ"/>
+                        <outlet property="cellCoord" destination="So1-XB-GhJ" id="ex9-dD-uWX"/>
+                        <outlet property="cellPlace" destination="Exp-g4-0fH" id="Csh-tE-Oa4"/>
+                        <outlet property="cellTerms" destination="EVr-5Y-vHX" id="w8L-Jz-iyf"/>
+                        <outlet property="lblContactDescription" destination="yyE-nR-igi" id="Ps0-66-CSd"/>
+                        <outlet property="lblContactSubDescription" destination="n8s-0t-pM1" id="huj-Ko-2hW"/>
+                        <outlet property="lblContactValue" destination="GAo-Ic-ytp" id="ZXi-0O-2J9"/>
+                        <outlet property="lblCoordDescription" destination="hff-CL-v1V" id="d0x-U4-YHk"/>
+                        <outlet property="lblCoordValue" destination="3H2-2P-BTr" id="tVn-dU-9gs"/>
+                        <outlet property="lblPlaceDescription" destination="hqf-jW-bvo" id="pQU-Ze-Bjy"/>
+                        <outlet property="lblPlaceSubDescription" destination="XyV-BD-El4" id="gyO-rA-RBU"/>
+                        <outlet property="lblPlaceValue" destination="GiM-q8-l8t" id="tzE-iP-dIA"/>
+                        <outlet property="lblTerms" destination="iX1-GH-m0u" id="avb-Lh-x6g"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zxo-bZ-Fsb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908" y="845.32019704433503"/>
+        </scene>
+        <!--Coord Type View Controller-->
+        <scene sceneID="NJs-ke-QDC">
+            <objects>
+                <viewController id="2OP-Vv-4aY" customClass="CoordTypeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gmm-ce-79R"/>
+                        <viewControllerLayoutGuide type="bottom" id="OvW-2M-CvH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ulH-Ko-Odo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Velg hvordan du vil vise kartposisjonen din" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njr-OG-gpm">
+                                <rect key="frame" x="87.666666666666686" y="120.00000000000001" width="200" height="41.666666666666671"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="YcT-oY-yt5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s39-5R-zRE">
+                                <rect key="frame" x="0.0" y="193.66666666666669" width="375" height="584.33333333333326"/>
+                                <connections>
+                                    <segue destination="V2y-i8-XpT" kind="embed" identifier="CoordTypeEmbeddedSegue" id="T8l-q1-uWw"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1xI-kg-LpH">
+                                <rect key="frame" x="0.0" y="192.66666666666666" width="375" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="UgL-pN-f4e"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="s39-5R-zRE" secondAttribute="trailing" id="5rs-WR-CR1"/>
+                            <constraint firstAttribute="trailing" secondItem="1xI-kg-LpH" secondAttribute="trailing" id="Bgt-Bl-Lmd"/>
+                            <constraint firstItem="1xI-kg-LpH" firstAttribute="leading" secondItem="ulH-Ko-Odo" secondAttribute="leading" id="EJ5-ld-i2L"/>
+                            <constraint firstItem="njr-OG-gpm" firstAttribute="centerX" secondItem="ulH-Ko-Odo" secondAttribute="centerX" id="H2v-zz-m6p"/>
+                            <constraint firstItem="OvW-2M-CvH" firstAttribute="top" secondItem="s39-5R-zRE" secondAttribute="bottom" id="L1t-lQ-oEg"/>
+                            <constraint firstItem="s39-5R-zRE" firstAttribute="top" secondItem="1xI-kg-LpH" secondAttribute="bottom" id="MFN-aC-BGQ"/>
+                            <constraint firstItem="njr-OG-gpm" firstAttribute="top" secondItem="gmm-ce-79R" secondAttribute="bottom" constant="32" id="QKe-aH-RNv"/>
+                            <constraint firstItem="s39-5R-zRE" firstAttribute="top" secondItem="njr-OG-gpm" secondAttribute="bottom" constant="32" id="ekW-zv-IzN"/>
+                            <constraint firstItem="s39-5R-zRE" firstAttribute="leading" secondItem="ulH-Ko-Odo" secondAttribute="leading" id="u1Z-0r-O25"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hMh-37-x57" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1813.5999999999999" y="844.58128078817742"/>
+        </scene>
+        <!--Coord Type Embedded Controller-->
+        <scene sceneID="fkq-H9-HbJ">
+            <objects>
+                <tableViewController id="V2y-i8-XpT" customClass="CoordTypeEmbeddedController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iDZ-Ft-5Th">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="584.33333333333326"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="taO-Wu-xLe">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="100" id="WFr-Sm-cgQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WFr-Sm-cgQ" id="iXm-Ha-hHT">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="DD - Grader" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlT-tC-sZh">
+                                                    <rect key="frame" x="15" y="11.000000000000057" width="345" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="53,2314 grader nord" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azn-NE-eI6">
+                                                    <rect key="frame" x="15" y="40.000000000000057" width="345" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="10,9283 grader øst" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXF-Cp-cGP">
+                                                    <rect key="frame" x="15" y="69" width="345" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="azn-NE-eI6" firstAttribute="top" secondItem="VlT-tC-sZh" secondAttribute="bottom" constant="8" id="6Pe-3h-t5D"/>
+                                                <constraint firstItem="mXF-Cp-cGP" firstAttribute="top" secondItem="azn-NE-eI6" secondAttribute="bottom" id="CPq-mZ-uX9"/>
+                                                <constraint firstItem="azn-NE-eI6" firstAttribute="leading" secondItem="VlT-tC-sZh" secondAttribute="leading" id="FKB-hi-okk"/>
+                                                <constraint firstItem="azn-NE-eI6" firstAttribute="trailing" secondItem="VlT-tC-sZh" secondAttribute="trailing" id="Fn5-4H-Zoc"/>
+                                                <constraint firstItem="mXF-Cp-cGP" firstAttribute="trailing" secondItem="azn-NE-eI6" secondAttribute="trailing" id="Fyd-TE-eBw"/>
+                                                <constraint firstAttribute="trailing" secondItem="VlT-tC-sZh" secondAttribute="trailing" constant="15" id="VUn-qd-fYT"/>
+                                                <constraint firstAttribute="bottom" secondItem="mXF-Cp-cGP" secondAttribute="bottom" constant="16" id="hbr-cZ-Jac"/>
+                                                <constraint firstItem="VlT-tC-sZh" firstAttribute="leading" secondItem="iXm-Ha-hHT" secondAttribute="leading" constant="15" id="iBc-TI-c6Q"/>
+                                                <constraint firstItem="mXF-Cp-cGP" firstAttribute="leading" secondItem="azn-NE-eI6" secondAttribute="leading" id="pvg-ay-aKZ"/>
+                                                <constraint firstItem="VlT-tC-sZh" firstAttribute="top" secondItem="iXm-Ha-hHT" secondAttribute="top" constant="16" id="xBr-yd-was"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="100" id="ST4-0A-jmt">
+                                        <rect key="frame" x="0.0" y="100" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ST4-0A-jmt" id="YCQ-mV-Vtg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="DDM - Grader og minutter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Jc-fG-HpI">
+                                                    <rect key="frame" x="15" y="11.000000000000057" width="345" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="53,2314 grader 23,14 minutter nord" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zev-tl-Td4">
+                                                    <rect key="frame" x="15" y="40.000000000000057" width="345" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="10 grader 92,83 minutter øst" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwV-ZV-FzK">
+                                                    <rect key="frame" x="15" y="69" width="345" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Zev-tl-Td4" firstAttribute="trailing" secondItem="1Jc-fG-HpI" secondAttribute="trailing" id="49Z-JL-gZi"/>
+                                                <constraint firstItem="qwV-ZV-FzK" firstAttribute="top" secondItem="Zev-tl-Td4" secondAttribute="bottom" id="A4k-Zw-9dG"/>
+                                                <constraint firstItem="Zev-tl-Td4" firstAttribute="leading" secondItem="1Jc-fG-HpI" secondAttribute="leading" id="KTy-pb-YqV"/>
+                                                <constraint firstItem="1Jc-fG-HpI" firstAttribute="top" secondItem="YCQ-mV-Vtg" secondAttribute="top" constant="16" id="VA4-ai-pzc"/>
+                                                <constraint firstAttribute="trailing" secondItem="1Jc-fG-HpI" secondAttribute="trailing" constant="15" id="XQu-K6-xRI"/>
+                                                <constraint firstAttribute="bottom" secondItem="qwV-ZV-FzK" secondAttribute="bottom" constant="16" id="ffk-VC-OG4"/>
+                                                <constraint firstItem="1Jc-fG-HpI" firstAttribute="leading" secondItem="YCQ-mV-Vtg" secondAttribute="leading" constant="15" id="k60-aY-ZXo"/>
+                                                <constraint firstItem="Zev-tl-Td4" firstAttribute="top" secondItem="1Jc-fG-HpI" secondAttribute="bottom" constant="8" id="lzR-Bk-Nep"/>
+                                                <constraint firstItem="qwV-ZV-FzK" firstAttribute="leading" secondItem="Zev-tl-Td4" secondAttribute="leading" id="nm2-Mk-xB1"/>
+                                                <constraint firstItem="qwV-ZV-FzK" firstAttribute="trailing" secondItem="Zev-tl-Td4" secondAttribute="trailing" id="ygI-r5-BwT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="100" id="1nB-Dm-Eho">
+                                        <rect key="frame" x="0.0" y="200" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1nB-Dm-Eho" id="tNu-mj-guv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="DMS - Grader og minutter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrA-LN-ZyY">
+                                                    <rect key="frame" x="15" y="11.000000000000057" width="345" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="53 grader 23 minutter 14,83 sekunder nord" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qkv-9g-pXD">
+                                                    <rect key="frame" x="15" y="40.000000000000057" width="345" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="10 grader 92 minutter, 83,93 sekunder øst" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3M5-k6-GKj">
+                                                    <rect key="frame" x="15" y="69" width="345" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3M5-k6-GKj" firstAttribute="top" secondItem="Qkv-9g-pXD" secondAttribute="bottom" id="22d-zT-FPh"/>
+                                                <constraint firstItem="vrA-LN-ZyY" firstAttribute="leading" secondItem="tNu-mj-guv" secondAttribute="leading" constant="15" id="33s-yQ-ZnA"/>
+                                                <constraint firstItem="3M5-k6-GKj" firstAttribute="leading" secondItem="Qkv-9g-pXD" secondAttribute="leading" id="3JB-sq-lEc"/>
+                                                <constraint firstItem="Qkv-9g-pXD" firstAttribute="trailing" secondItem="vrA-LN-ZyY" secondAttribute="trailing" id="6ol-le-VQY"/>
+                                                <constraint firstItem="Qkv-9g-pXD" firstAttribute="leading" secondItem="vrA-LN-ZyY" secondAttribute="leading" id="9Zr-Pd-puZ"/>
+                                                <constraint firstItem="3M5-k6-GKj" firstAttribute="trailing" secondItem="Qkv-9g-pXD" secondAttribute="trailing" id="R18-E5-Kes"/>
+                                                <constraint firstAttribute="bottom" secondItem="3M5-k6-GKj" secondAttribute="bottom" constant="16" id="Xb9-U4-npo"/>
+                                                <constraint firstItem="vrA-LN-ZyY" firstAttribute="top" secondItem="tNu-mj-guv" secondAttribute="top" constant="16" id="gF3-AD-WgW"/>
+                                                <constraint firstItem="Qkv-9g-pXD" firstAttribute="top" secondItem="vrA-LN-ZyY" secondAttribute="bottom" constant="8" id="pTU-xc-ZTv"/>
+                                                <constraint firstAttribute="trailing" secondItem="vrA-LN-ZyY" secondAttribute="trailing" constant="15" id="u53-fa-uKA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="100" id="Hqa-TV-MEj">
+                                        <rect key="frame" x="0.0" y="300" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hqa-TV-MEj" id="mPA-kV-MdX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="UTM - Universal Transverse Mercator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r45-xt-cS1">
+                                                    <rect key="frame" x="15" y="11.000000000000057" width="345" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="32V 6643112" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njv-pS-m3U">
+                                                    <rect key="frame" x="15" y="40.000000000000057" width="345" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0589833" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1v-xX-3eP">
+                                                    <rect key="frame" x="15" y="69" width="345" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Njv-pS-m3U" firstAttribute="top" secondItem="r45-xt-cS1" secondAttribute="bottom" constant="8" id="DCL-dl-zph"/>
+                                                <constraint firstAttribute="trailing" secondItem="r45-xt-cS1" secondAttribute="trailing" constant="15" id="Fzd-4H-ZmE"/>
+                                                <constraint firstItem="r45-xt-cS1" firstAttribute="leading" secondItem="mPA-kV-MdX" secondAttribute="leading" constant="15" id="IrB-Ql-gdk"/>
+                                                <constraint firstItem="Njv-pS-m3U" firstAttribute="leading" secondItem="r45-xt-cS1" secondAttribute="leading" id="Slb-hg-JA9"/>
+                                                <constraint firstItem="a1v-xX-3eP" firstAttribute="top" secondItem="Njv-pS-m3U" secondAttribute="bottom" id="XIf-Gk-T2w"/>
+                                                <constraint firstItem="a1v-xX-3eP" firstAttribute="trailing" secondItem="Njv-pS-m3U" secondAttribute="trailing" id="aPE-4k-d6P"/>
+                                                <constraint firstItem="a1v-xX-3eP" firstAttribute="leading" secondItem="Njv-pS-m3U" secondAttribute="leading" id="lVH-SL-Dy9"/>
+                                                <constraint firstItem="Njv-pS-m3U" firstAttribute="trailing" secondItem="r45-xt-cS1" secondAttribute="trailing" id="qAc-eh-or5"/>
+                                                <constraint firstAttribute="bottom" secondItem="a1v-xX-3eP" secondAttribute="bottom" constant="16" id="rG6-FD-Fx1"/>
+                                                <constraint firstItem="r45-xt-cS1" firstAttribute="top" secondItem="mPA-kV-MdX" secondAttribute="top" constant="16" id="ydp-Ma-c8d"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="V2y-i8-XpT" id="Efb-hc-9yD"/>
+                            <outlet property="delegate" destination="V2y-i8-XpT" id="WCL-E9-TZq"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="cellDD" destination="WFr-Sm-cgQ" id="ecT-Ec-Kus"/>
+                        <outlet property="cellDDM" destination="ST4-0A-jmt" id="dEn-LP-4mv"/>
+                        <outlet property="cellDMS" destination="1nB-Dm-Eho" id="tUo-HZ-wMG"/>
+                        <outlet property="cellUTM" destination="Hqa-TV-MEj" id="pKy-eY-ipJ"/>
+                        <outlet property="lblDDMSub1" destination="Zev-tl-Td4" id="Plv-SG-cya"/>
+                        <outlet property="lblDDMSub2" destination="qwV-ZV-FzK" id="6GM-ke-6RH"/>
+                        <outlet property="lblDDMTitle" destination="1Jc-fG-HpI" id="lUK-gH-Icx"/>
+                        <outlet property="lblDDSub1" destination="azn-NE-eI6" id="FWL-SJ-77P"/>
+                        <outlet property="lblDDSub2" destination="mXF-Cp-cGP" id="4ix-6x-Hye"/>
+                        <outlet property="lblDDTitle" destination="VlT-tC-sZh" id="T0j-iz-vFS"/>
+                        <outlet property="lblDMSSub1" destination="Qkv-9g-pXD" id="o06-xq-d5B"/>
+                        <outlet property="lblDMSSub2" destination="3M5-k6-GKj" id="rYm-yA-bSV"/>
+                        <outlet property="lblDMSTitle" destination="vrA-LN-ZyY" id="Kqb-Ud-YfQ"/>
+                        <outlet property="lblUTMSub1" destination="Njv-pS-m3U" id="oaw-LY-S2s"/>
+                        <outlet property="lblUTMSub2" destination="a1v-xX-3eP" id="ShE-ph-tmC"/>
+                        <outlet property="lblUTMTitle" destination="r45-xt-cS1" id="Wg1-4V-apN"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E64-8T-A1O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2668" y="760"/>
         </scene>
         <!--Help Us View Controller-->
         <scene sceneID="tFU-Ve-Y4C">
@@ -708,7 +1149,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus augue, viv
         </scene>
     </scenes>
     <resources>
-        <image name="ic_info.png" width="26" height="26"/>
         <image name="ic_settings.png" width="26" height="26"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="L0I-GI-4x6"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -4,6 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Henspe.Core.Communication;
 using Henspe.Core.Communication.Dto;
+using Henspe.Core.Service;
 
 namespace Henspe.Core.ViewModel
 {
@@ -16,6 +17,7 @@ namespace Henspe.Core.ViewModel
         }
 
         private readonly CallRegEmailSMS _callRegEmail;
+        private readonly SettingsService _settingsService;
         private readonly Regex _regex;
         private string _os;
         private string _noContactWithServerString;
@@ -26,6 +28,7 @@ namespace Henspe.Core.ViewModel
         {
             Email = string.Empty;
             _callRegEmail = new CallRegEmailSMS();
+            _settingsService = new SettingsService();
             _regex = new Regex(@"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$");
         }
 
@@ -49,6 +52,12 @@ namespace Henspe.Core.ViewModel
         public async Task<bool> RegisterEmailAsync()
         {
             var result = await _callRegEmail.RegEmailSMS(_noContactWithServerString, null, Email, _os);
+            if(result.success)
+            {
+                var settings = _settingsService.GetSettings();
+                settings.ResponseType = ResponseType.Email;
+                _settingsService.SaveSettings(settings);
+            }
             return result.success;
         }
     }

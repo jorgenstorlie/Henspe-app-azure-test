@@ -32,7 +32,7 @@ namespace Henspe.iOS
 
             lblNewsletter.Text = LangUtil.Get("RegEmail.Description");
             lblNewsletter.TextColor = ColorConst.textColor;
-            lblNewsletter.Font = FontConst.fontMedium;
+            lblNewsletter.Font = FontConst.Medium;
 
             txtEmail.Placeholder = LangUtil.Get("RegEmail.Placeholder");
             txtEmail.EditingChanged += TxtEmail_EditingChanged;

@@ -3,37 +3,36 @@ using Henspe.Core.Communication.Dto;
 
 namespace Henspe.Core.Util
 {
-	public class CoordinateUtil
+    public enum CoordinateFormat
+    {
+        Undefined,
+        DD,
+        DDM,
+        DMS,
+        UTM
+    }
+
+    public class CoordinateUtil
 	{
-        public const int undefinedFormat = 0;
-        public const int dd = 1;
-        public const int ddm = 2;
-        public const int dms = 3;
-        public const int utm = 4;
-
-        public CoordinateUtil ()
-		{
-		}
-
-        static public FormattedCoordinatesDto GetFormattedCoordinateDescription(int format, double latitude, double longitude, string degrees, string minutes, string seconds, string north, string east, string south, string west)
+        static public FormattedCoordinatesDto GetFormattedCoordinateDescription(CoordinateFormat format, double latitude, double longitude, string degrees, string minutes, string seconds, string north, string east, string south, string west)
         {
             FormattedCoordinatesDto formattedCoordinatesDto;
 
-            if(format == 1)
+            if(format == CoordinateFormat.DD)
             {
-                formattedCoordinatesDto = FormatDD(latitude, longitude, degrees, minutes, seconds, north, east, south, west);
+                formattedCoordinatesDto = FormatDD(latitude, longitude, degrees, north, east, south, west);
             }
-            else if (format == 2)
+            else if (format == CoordinateFormat.DDM)
             {
-                formattedCoordinatesDto = FormatDDM(latitude, longitude, degrees, minutes, seconds, north, east, south, west);
+                formattedCoordinatesDto = FormatDDM(latitude, longitude, degrees, minutes, north, east, south, west);
             }
-            else if (format == 3)
+            else if (format == CoordinateFormat.DMS)
             {
                 formattedCoordinatesDto = FormatDMS(latitude, longitude, degrees, minutes, seconds, north, east, south, west);
             }
-            else if (format == 4)
+            else if (format == CoordinateFormat.UTM)
             {
-                formattedCoordinatesDto = FormatUTM(latitude, longitude, degrees, minutes, seconds, north, east, south, west);
+                formattedCoordinatesDto = FormatUTM(latitude, longitude);
             }
             else
             {
@@ -45,7 +44,7 @@ namespace Henspe.Core.Util
             return formattedCoordinatesDto;
         }
 
-        static public FormattedCoordinatesDto FormatDD(double latitude, double longitude, string degrees, string minutes, string seconds, string north, string east, string south, string west)
+        static public FormattedCoordinatesDto FormatDD(double latitude, double longitude, string degrees, string north, string east, string south, string west)
         {
             // DD - Desimalgrader. Eksempel 33.268602° -45.543819°
             FormattedCoordinatesDto formattedCoordinatesDto = new FormattedCoordinatesDto();
@@ -79,7 +78,7 @@ namespace Henspe.Core.Util
             return formattedCoordinatesDto;
         }
 
-        static public FormattedCoordinatesDto FormatDDM(double latitude, double longitude, string degrees, string minutes, string seconds, string north, string east, string south, string west)
+        static public FormattedCoordinatesDto FormatDDM(double latitude, double longitude, string degrees, string minutes, string north, string east, string south, string west)
         {
             // DDM - Desimalgrader og minutter. Eksempel: 33° 16.116'N  45° 32.629'W
             FormattedCoordinatesDto formattedCoordinatesDto = new FormattedCoordinatesDto();
@@ -145,26 +144,20 @@ namespace Henspe.Core.Util
             return formattedCoordinatesDto;
         }
 
-        static public FormattedCoordinatesDto FormatUTM(double latitude, double longitude, string degrees, string minutes, string seconds, string north, string east, string south, string west)
+        static public FormattedCoordinatesDto FormatUTM(double latitude, double longitude)
         {
             // UTM - Universal Transverse Mercator. Eksempel: 17N 630084 4833438
             FormattedCoordinatesDto formattedCoordinatesDto = new FormattedCoordinatesDto();
 
             formattedCoordinatesDto.success = true;
 
-            string latitudeDirection = north;
-
             if (latitude < 0)
             {
-                latitudeDirection = south;
                 latitude = Math.Abs(latitude);
             }
 
-            string longitudeDirection = east;
-
             if (longitude < 0)
             {
-                longitudeDirection = west;
                 longitude = Math.Abs(longitude);
             }
 

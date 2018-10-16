@@ -1,0 +1,18 @@
+﻿{
+  "Settings.Degrees": "grader",
+  "Settings.North": "nord",
+  "Settings.East": "øst",
+  "Settings.South": "sør",
+  "Settings.West": "vest",
+  "Settings.Minutes": "minutter",
+  "Settings.Seconds": "sekunder",
+  "Settings.DDTitle": "DD - Grader",
+  "Settings.DDMTitle": "DDM - Grader og minutter",
+  "Settings.DMSTitle": "DDS - Grader, minutter og sekunder",
+  "Settings.UTMTitle": "UTM - Universal Transverse Mercator",
+  "Settings.NotDecided": "Ikke valgt",
+  "Settings.SMS": "SMS",
+  "Settings.Email": "E-post",
+  "Settings.None": "Ikke ønsket"
+
+}

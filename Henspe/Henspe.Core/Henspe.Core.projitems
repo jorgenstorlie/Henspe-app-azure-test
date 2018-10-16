@@ -16,6 +16,8 @@
     <Folder Include="$(MSBuildThisFileDirectory)Model\Dto\" />
     <Folder Include="$(MSBuildThisFileDirectory)Communication\Dto\" />
     <Folder Include="$(MSBuildThisFileDirectory)ViewModel\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Service\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Translations\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Util\BugtrackUtil.cs" />
@@ -45,5 +47,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Communication\CallRegEmailSMS.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\Dto\RegEmailSMSResultDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\RegisterEmailViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Service\SettingsService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\MainViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\SettingsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Service\TranslationService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Translations\Translations_no.json" />
   </ItemGroup>
 </Project>

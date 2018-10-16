@@ -98,9 +98,6 @@
     <Reference Include="Lottie.iOS">
       <HintPath>..\packages\Com.Airbnb.iOS.Lottie.2.5.4\lib\xamarinios10\Lottie.iOS.dll</HintPath>
     </Reference>
-    <Reference Include="SkiaSharp">
-      <HintPath>..\packages\SkiaSharp.1.60.0\lib\XamariniOS\SkiaSharp.dll</HintPath>
-    </Reference>
     <Reference Include="WebP.Touch">
       <HintPath>..\packages\WebP.Touch.1.0.8\lib\Xamarin.iOS10\WebP.Touch.dll</HintPath>
     </Reference>
@@ -113,8 +110,11 @@
     <Reference Include="FFImageLoading.Svg.Platform">
       <HintPath>..\packages\Xamarin.FFImageLoading.Svg.2.4.3.840\lib\Xamarin.iOS10\FFImageLoading.Svg.Platform.dll</HintPath>
     </Reference>
+    <Reference Include="SkiaSharp">
+      <HintPath>..\packages\SkiaSharp.1.60.3\lib\Xamarin.iOS\SkiaSharp.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Essentials">
-      <HintPath>..\packages\Xamarin.Essentials.0.10.0-preview\lib\xamarinios10\Xamarin.Essentials.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Essentials.0.11.0-preview\lib\xamarinios10\Xamarin.Essentials.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -226,6 +226,18 @@
     <Compile Include="RegisterEmailViewController.designer.cs">
       <DependentUpon>RegisterEmailViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="SettingsViewController.cs" />
+    <Compile Include="SettingsViewController.designer.cs">
+      <DependentUpon>SettingsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoordTypeViewController.cs" />
+    <Compile Include="CoordTypeViewController.designer.cs">
+      <DependentUpon>CoordTypeViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoordTypeEmbeddedController.cs" />
+    <Compile Include="CoordTypeEmbeddedController.designer.cs">
+      <DependentUpon>CoordTypeEmbeddedController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ic_info.png" />
@@ -301,6 +313,9 @@
     <BundleResource Include="Resources\ic_snla_logo_white.svg" />
     <BundleResource Include="Resources\ic_text_henspe.svg" />
     <BundleResource Include="Resources\video480.mp4" />
+    <BundleResource Include="..\Henspe.Core\Translations\Translations_no.json">
+      <Link>Resources\Translations_no.json</Link>
+    </BundleResource>
   </ItemGroup>
   <Import Project="..\Henspe.Core\Henspe.Core.projitems" Label="Shared" Condition="Exists('..\Henspe.Core\Henspe.Core.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

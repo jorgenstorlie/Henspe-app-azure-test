@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using CoreLocation;
 using Foundation;
 using Henspe.Core.Const;
+using Henspe.Core.ViewModel;
 using Henspe.iOS.AppModel;
 using Henspe.iOS.Const;
 using Henspe.iOS.Util;
@@ -19,19 +20,23 @@ namespace Henspe.iOS
 		// Events
 		NSObject observerActivatedOccured;
 
+        private MainViewModel _viewmodel;
+
         private UIStringAttributes normalText = new UIStringAttributes
 		{
             ForegroundColor = ColorConst.textColor,
-			Font = FontConst.fontMedium
+			Font = FontConst.Medium
 		};
 
-		public MainViewController(IntPtr handle) : base(handle)
+        public MainViewController(IntPtr handle) : base(handle)
 		{
 		}
 
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
+
+            _viewmodel = new MainViewModel();
 
 			SetupNavigationBar();
 			SetupView();
@@ -61,7 +66,6 @@ namespace Henspe.iOS
 			UIImageView imgViewLogo = new UIImageView(imgLogo);
 			this.NavigationItem.TitleView = imgViewLogo;
 
-            NavigationItem.LeftBarButtonItem.TintColor = ColorConst.Blue;
             NavigationItem.RightBarButtonItem.TintColor = ColorConst.Blue;
         }
 
@@ -97,6 +101,12 @@ namespace Henspe.iOS
             btnHelpUs.Layer.CornerRadius = 5.0f;
 
             View.BackgroundColor = ColorConst.backgroundColor;
+
+            if(!_viewmodel.ShowHelpUs)
+            {
+                btnHelpUs.Hidden = true;
+                constraintHelpUsHeight.Constant = 0;
+            }
 		}
 
 		public override void ViewDidAppear(bool animated)

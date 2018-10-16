@@ -5,11 +5,11 @@ using Foundation;
 using Henspe.Core.Communication;
 using Henspe.Core.Const;
 using Henspe.iOS.Util;
-using Henspe.Core.Util;
 using Henspe.Core;
 using Henspe.iOS.Const;
 using Henspe.iOS.AppModel;
 using Henspe.Core.Model.Dto;
+using Henspe.Core.Service;
 
 namespace Henspe.iOS
 {
@@ -19,6 +19,8 @@ namespace Henspe.iOS
     [Register("AppDelegate")]
     public partial class AppDelegate : UIApplicationDelegate
     {
+        private SettingsService settingsService;
+
         public string mode = ModeConst.test;
 
         public string prodUrlString = "https://snla-apps.no/apps/henspe/";
@@ -27,7 +29,6 @@ namespace Henspe.iOS
 
         public bool appActicatedOccured;
 
-		// Format
         // GPS
         public double highAndLowAccuracyDivider = 200;
         public double gpsAccuracyRequirement = 200;
@@ -50,6 +51,11 @@ namespace Henspe.iOS
 		public double roundedLatitude;
 		public double roundedLongitude;
 
+        public StructureDto structure;
+
+        // Settings
+        public Settings Settings => settingsService.GetSettings();
+
         // class-level declarations
         UIWindow window;
         public override UIWindow Window
@@ -59,6 +65,7 @@ namespace Henspe.iOS
         }
 
         public static AppDelegate current { get; private set; }
+
         //public Repository repository { get; set; }
         public CxHttpClient client { get; private set; }
 
@@ -66,22 +73,17 @@ namespace Henspe.iOS
 
         public static UIViewController initialViewController;
 
-        public StructureDto structure;
-        public int coordinateFormat;
-
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
-            // Background update interval in seconds
-            //UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval (60.0f * 60.0f); // One hour
-
             current = this;
+
+            settingsService = new SettingsService();
             window = new UIWindow(UIScreen.MainScreen.Bounds);
-
             client = new CxHttpClient();
-
             SetupCustomNavigationBar();
-
             SetupLocalData();
+
+            TranslationUtil.Init("no").Wait();
 
             return true;
         }
@@ -157,27 +159,12 @@ namespace Henspe.iOS
             // Sync after sleep
             appActicatedOccured = true;
 
-			CheckForAppSettings();
-
 			InvokeOnMainThread(delegate
             {
         	    NSNotificationCenter.DefaultCenter.PostNotificationName(EventConst.appActivated, this);
             });
         }
 
-		private void CheckForAppSettings()
-        {
-            InvokeOnMainThread(delegate
-            {
-                // Coordinate format
-                nint settingsUserDefinedFormat = NSUserDefaults.StandardUserDefaults.IntForKey("settings_user_defined_coordinate_format");
-                if (settingsUserDefinedFormat == CoordinateUtil.undefinedFormat)
-                    settingsUserDefinedFormat = CoordinateUtil.ddm; // Default coordinate format
-
-                AppDelegate.current.coordinateFormat = Convert.ToInt32(settingsUserDefinedFormat);
-            });
-        }
-        
         // This method is invoked when the application is about to move from active to inactive state.
         // OpenGL applications should use this method to pause.
         public override void OnResignActivation(UIApplication application)
