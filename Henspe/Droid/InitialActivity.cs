@@ -15,7 +15,9 @@ namespace Henspe.Droid
 
     [Activity(Label = "Henspe",
         Icon = "@mipmap/ic_launcher",
+           RoundIcon = "@mipmap/ic_launcher_round",
         Theme = "@style/SplashTheme",
+        ScreenOrientation = ScreenOrientation.Portrait,
         MainLauncher = true)]
     public class InitialActivity : AppCompatActivity
     {
@@ -23,11 +25,12 @@ namespace Henspe.Droid
         {
             base.OnCreate(savedInstanceState);
             Intent intent = null;
-
+           
+         
             if (UserUtil.settings.instructionsFinished)
-                intent = new Intent(this, typeof(MainActivity));
+                intent = new Intent(this, typeof(MainNew));
             else
-                intent = new Intent(this, typeof(OnBoardingActivity));
+           intent = new Intent(this, typeof(OnBoardingActivity));
 
             intent.AddFlags(ActivityFlags.ClearTop);
             intent.AddFlags(ActivityFlags.SingleTop);

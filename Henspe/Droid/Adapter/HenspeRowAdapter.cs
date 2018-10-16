@@ -1,37 +1,83 @@
+using Android.Graphics;
+using Android.Support.Design.Widget;
+using Android.Support.V4.App;
+using Android.Support.V4.Content;
+using Android.Support.V4.View;
+using Android.Support.V7.App;
 using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
 using Henspe.Core.Model.Dto;
 using Henspe.Droid.Adapters;
 using Henspe.Droid.Util;
+using Java.Lang;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Henspe.Droid.Adapters
+namespace Henspe.Droid
 {
+
+
+    public class ViewPagerAdapter : FragmentPagerAdapter
+    {
+        private List<Android.Support.V4.App.Fragment> mFragmentList = new List<Android.Support.V4.App.Fragment>();
+        private List<string> mFragmentTitleList = new List<string>();
+
+        public ViewPagerAdapter(Android.Support.V4.App.FragmentManager manager) : base(manager)
+        {
+            //base.OnCreate(manager);
+        }
+
+        public override int Count
+        {
+            get
+            {
+                return mFragmentList.Count;
+            }
+        }
+        public override Android.Support.V4.App.Fragment GetItem(int postion)
+        {
+            return mFragmentList[postion];
+        }
+
+        public override ICharSequence GetPageTitleFormatted(int position)
+        {
+
+            return new Java.Lang.String(mFragmentTitleList[position].ToLower());// display the title
+            //return null;// display only the icon
+        }
+
+        public void addFragment(Android.Support.V4.App.Fragment fragment, string title)
+        {
+            mFragmentList.Add(fragment);
+            mFragmentTitleList.Add(title);
+        }
+    }
+
+
     /// <summary>
     /// Adapter for Movies by Year
     /// </summary>
-	public class HenspeRowAdapter : SectionedRecyclerViewAdapter<HenspeRowModel>
+    public class HenspeRowAdapter : SectionedRecyclerViewAdapter<HenspeRowModel>
     {
         /// <summary>
         /// Data to be shown
         /// </summary>
-		private Dictionary<HenspeSectionModel, List<HenspeRowModel>> itemList { get; set; }
+        private Dictionary<HenspeSectionModel, List<HenspeRowModel>> itemList { get; set; }
 
-		private Android.App.Activity activity;
+        private Android.App.Activity activity;
 
-		private string lastPositionText = "";
-		private string lastAddressText = "";
+        private string lastPositionText = "";
+        private string lastAddressText = "";
 
         /// <summary>
         /// Our simple constructor
         /// </summary>
         /// <param name="movies"></param>
-		public HenspeRowAdapter(Dictionary<HenspeSectionModel, List<HenspeRowModel>> itemList, Android.App.Activity activity)
+        public HenspeRowAdapter(Dictionary<HenspeSectionModel, List<HenspeRowModel>> itemList, Android.App.Activity activity)
         {
-			this.itemList = itemList;
-			this.activity = activity;
+            this.itemList = itemList;
+            this.activity = activity;
         }
 
         /// <summary>
@@ -68,11 +114,14 @@ namespace Henspe.Droid.Adapters
         /// </summary>
         /// <param name="indexPath"></param>
         /// <returns></returns>
-		public override HenspeRowModel GetItem(IndexPath indexPath)
+        public override HenspeRowModel GetItem(IndexPath indexPath)
         {
             var section = this.itemList.ElementAt(indexPath.SectionIndex);
             return section.Value[indexPath.ItemIndex.GetValueOrDefault()];
         }
+
+
+
 
         /// <summary>
         /// Let's create view for Item template
@@ -83,17 +132,65 @@ namespace Henspe.Droid.Adapters
         /// We use Android's internal Android.Resource.Layout.SimpleListItem2 resource.
         /// You can change this with your custom XML Layout
         /// </remarks>
-        public override RecyclerView.ViewHolder OnCreateItemViewHolder(ViewGroup parent)
+        public override RecyclerView.ViewHolder OnCreateItemViewHolder(ViewGroup parent, int viewType)
         {
-			global::Android.Views.View row = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.HenspeRow, parent, false);
+            if (viewType == 2)
+            {
 
-            var viewHolder = new ItemViewHolder(row);
+                var layout2 = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.TabLayout, parent, false);
+                var adressItemViewHolder = new AdressItemViewHolder(layout2);
+                setupViewPager(adressItemViewHolder.viewPager);
+                adressItemViewHolder.tabLayout.SetupWithViewPager(adressItemViewHolder.viewPager);
+                return adressItemViewHolder;
 
-            //viewHolder.txvOtherInfo.SetTextSize(Android.Util.ComplexUnitType.Sp, 10);
-            //viewHolder.txvOtherInfo.SetTextColor(Android.Graphics.Color.LightGray);
+                /*
+                var layout2 = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.adress_row, parent, false);
+                var adressItemViewHolder = new AdressItemViewHolder(layout2);
 
-            return viewHolder;
+
+                Adresses adresses = new Adresses();
+
+           AdressAdapter adapter = new AdressAdapter((activity as AppCompatActivity).SupportFragmentManager, adresses);
+       adressItemViewHolder.viewPager.Adapter = adapter;
+
+              
+
+                return adressItemViewHolder;
+                */
+            }
+            else
+            {
+                var layout = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.HenspeRow, parent, false);
+                return new ItemViewHolder(layout);
+            }
+
         }
+
+
+        public override int GetSubType(IndexPath indexPath)
+        {
+            if (GetItem(indexPath).elementType == StructureElementDto.ElementType.Address)
+                return 2;
+            else
+                return 1;
+        }
+
+        public void setupViewPager(ViewPager viewPager)
+        {
+            //  InitFragment();
+
+            position_fragment f = new position_fragment(1);
+            position_fragment f2 = new position_fragment(2);
+
+            ViewPagerAdapter adapter = new ViewPagerAdapter((activity as AppCompatActivity).SupportFragmentManager);
+            adapter.addFragment(f, "Angitt posisjon ");
+            adapter.addFragment(f2, "Valgt posisjon");
+
+            viewPager.Adapter = adapter;
+
+            Henspe.Current.PositionFragment = f;
+        }
+
 
         /// <summary>
         /// Let's populate Item views
@@ -102,50 +199,106 @@ namespace Henspe.Droid.Adapters
         /// <param name="indexPath"></param>
         public override void OnBindItemViewHolder(RecyclerView.ViewHolder holder, IndexPath indexPath)
         {
-            var viewHolder = (holder as ItemViewHolder);
-			HenspeRowModel henspeRowModel = this.GetItem(indexPath);
+            HenspeRowModel henspeRowModel = this.GetItem(indexPath);
 
-            // description
-			viewHolder.description.Text = henspeRowModel.description;
-
-            // info
-			if (henspeRowModel.elementType == StructureElementDto.ElementType.Normal)
+            if (indexPath.SubType == 2)
             {
-				viewHolder.info.Text = "";
-				viewHolder.info.Visibility = ViewStates.Gone;
+                var viewHolder2 = (holder as AdressItemViewHolder);
 
-				viewHolder.infoHelper.Text = "";
-				viewHolder.infoHelper.Visibility = ViewStates.Gone;
+                /*
+                if (viewHolder2.adress == null)
+                {
+                    var inflater2 = LayoutInflater.From(activity);
+                    //   LayoutInflater inflater = (LayoutInflater)activity.GetSystemService("LayoutInflaterService");
+                    global::Android.Views.View view2 = inflater2.Inflate(Resource.Layout.TabLayout, null);
+
+                    viewHolder2.adress = view2;
+
+
+
+                    // Get our button from the layout resource,
+                    // and attach an event to it
+                    ViewPager viewPager = (ViewPager)view2.FindViewById(Resource.Id.viewpager);
+
+
+                    setupViewPager(viewPager);
+
+
+
+                    TabLayout tabLayout = view2.FindViewById<TabLayout>(Resource.Id.sliding_tabs);
+                    tabLayout.SetupWithViewPager(viewPager);
+                    viewHolder2.layout.AddView(view2);
+
+                }
+
+                viewHolder2.info.Visibility = ViewStates.Gone;
+                viewHolder2.infoHelper.Visibility = ViewStates.Gone;
+                viewHolder2.image.Visibility = ViewStates.Gone;
+                viewHolder2.description.Visibility = ViewStates.Gone;
+
+                viewHolder2.adress.Visibility = ViewStates.Visible;
+                */
             }
-            else if (henspeRowModel.elementType == StructureElementDto.ElementType.Position)
+            else
             {
-				viewHolder.info.Text = Henspe.Current.coordinatesText;
-				viewHolder.info.Visibility = ViewStates.Visible;
+                var viewHolder = (holder as ItemViewHolder);
 
-				viewHolder.infoHelper.Text = "";
-				viewHolder.infoHelper.Visibility = ViewStates.Visible;
 
-				lastPositionText = FlashTextUtil.FlashChangedText(activity, activity.ApplicationContext, lastPositionText, Henspe.Current.coordinatesText, viewHolder.infoHelper, FlashTextUtil.Type.LatText);
+                // description
+                viewHolder.description.Text = henspeRowModel.description;
+
+                // info
+                if (henspeRowModel.elementType == StructureElementDto.ElementType.Normal)
+                {
+                    viewHolder.image.Visibility = ViewStates.Visible;
+                    viewHolder.description.Visibility = ViewStates.Visible;
+
+                    viewHolder.info.Text = "";
+                    viewHolder.info.Visibility = ViewStates.Gone;
+
+                    viewHolder.infoHelper.Text = "";
+                    viewHolder.infoHelper.Visibility = ViewStates.Gone;
+                }
+                else if (henspeRowModel.elementType == StructureElementDto.ElementType.Position)
+                {
+
+
+                    viewHolder.description.Visibility = ViewStates.Visible;
+
+                    viewHolder.info.Text = Henspe.Current.coordinatesText;
+                    viewHolder.info.Visibility = ViewStates.Visible;
+
+                    viewHolder.infoHelper.Text = "";
+                    viewHolder.infoHelper.Visibility = ViewStates.Visible;
+
+                    lastPositionText = FlashTextUtil.FlashChangedText(activity, activity.ApplicationContext, lastPositionText, Henspe.Current.coordinatesText, viewHolder.infoHelper, FlashTextUtil.Type.LatText);
+                }
+                else if (henspeRowModel.elementType == StructureElementDto.ElementType.Address)
+                {
+
+
+                }
+
+
+                // image
+                //    int imageResourceId = ResourceUtil.GetResourceIdForImagename(henspeRowModel.image);
+                //  int imageResourceId = ResourceUtil.GetResourceIdForImagename("ic_evakuering");
+                //  viewHolder.image.SetImageResource(Resource.Drawable.ic_evakuering);
+
+
+                var resourceId = (int)typeof(Resource.Drawable).GetField(henspeRowModel.image).GetValue(null);
+                viewHolder.image.SetImageResource(resourceId);
+                //   viewHolder.image.ImageAlpha = 0;
+
+
+                Color t = new Android.Graphics.Color(ContextCompat.GetColor(activity, Resource.Color.text_normal));
+
+                viewHolder.image.SetColorFilter(t);
+
+                //    viewHolder.image.ScaleX = henspeRowModel.percent;
+                //    viewHolder.image.ScaleY = henspeRowModel.percent;
             }
-            else if (henspeRowModel.elementType == StructureElementDto.ElementType.Address)
-            {
-				viewHolder.info.Text = Henspe.Current.addressText;
-				viewHolder.info.Visibility = ViewStates.Visible;
-
-				viewHolder.infoHelper.Text = "";
-				viewHolder.infoHelper.Visibility = ViewStates.Visible;
-
-				lastAddressText = FlashTextUtil.FlashChangedText(activity, activity.ApplicationContext, lastAddressText, Henspe.Current.addressText, viewHolder.infoHelper, FlashTextUtil.Type.AddressText);
-            }
-
-            // image
-			int imageResourceId = ResourceUtil.GetResourceIdForImagename(henspeRowModel.image);
-
-			viewHolder.image.SetImageResource(imageResourceId);
-			viewHolder.image.ScaleX = henspeRowModel.percent;
-			viewHolder.image.ScaleY = henspeRowModel.percent;
         }
-
         /// <summary>
         /// Let's create view for Section template
         /// </summary>
@@ -157,8 +310,8 @@ namespace Henspe.Droid.Adapters
         /// </remarks>
         public override RecyclerView.ViewHolder OnCreateSectionViewHolder(ViewGroup parent)
         {
-			global::Android.Views.View row = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.ListItemSection, parent, false);
-            
+            global::Android.Views.View row = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.ListItemSection, parent, false);
+
             var viewHolder = new SectionViewHolder(row);
 
             /*
@@ -179,22 +332,31 @@ namespace Henspe.Droid.Adapters
         /// <param name="sectionIndex"></param>
         public override void OnBindSectionViewHolder(RecyclerView.ViewHolder holder, int sectionIndex)
         {
-			float scale = 0.8f;
+            float scale = 0.8f;
 
             var viewHolder = (holder as SectionViewHolder);
 
-			HenspeSectionModel henspeSectionModel = this.itemList.ElementAt(sectionIndex).Key;
+            HenspeSectionModel henspeSectionModel = this.itemList.ElementAt(sectionIndex).Key;
 
-			// Image
-			int imageResourceId = ResourceUtil.GetResourceIdForImagename(henspeSectionModel.image);
+            /*
+            // Image
+            int imageResourceId = ResourceUtil.GetResourceIdForImagename(henspeSectionModel.image);
 
-			viewHolder.image.SetImageResource(imageResourceId);
-			viewHolder.image.ScaleX = scale;
-			viewHolder.image.ScaleY = scale;
+            viewHolder.image.SetImageResource(imageResourceId);
+            viewHolder.image.ScaleX = scale;
+            viewHolder.image.ScaleY = scale;
+            */
+
 
             // Description
-			if (viewHolder.description != null)
-				viewHolder.description.SetText(henspeSectionModel.description, TextView.BufferType.Normal);
+            if (viewHolder.description != null)
+                viewHolder.description.SetText(henspeSectionModel.description, TextView.BufferType.Normal);
+
+            // Header
+            if (viewHolder.header != null)
+                viewHolder.header.Text = viewHolder.description.Text[0].ToString();
+
+
         }
 
         /// <summary>
@@ -206,17 +368,47 @@ namespace Henspe.Droid.Adapters
         /// </remarks>
         internal class ItemViewHolder : RecyclerView.ViewHolder
         {
-			public ImageView image { get; set; }
+
+            public RelativeLayout layout { get; set; }
+            public ImageView image { get; set; }
             public TextView description { get; set; }
             public TextView info { get; set; }
-			public TextView infoHelper { get; set; }
+            public TextView infoHelper { get; set; }
 
-			public ItemViewHolder(global::Android.Views.View itemView) : base(itemView)
+            public ItemViewHolder(global::Android.Views.View itemView) : base(itemView)
             {
-				this.image = itemView.FindViewById<ImageView>(Resource.Id.image);
+                this.layout = itemView.FindViewById<RelativeLayout>(Resource.Id.row_layout);
+                this.image = itemView.FindViewById<ImageView>(Resource.Id.image);
                 this.description = itemView.FindViewById<TextView>(Resource.Id.description);
-				this.info = itemView.FindViewById<TextView>(Resource.Id.info);
-				this.infoHelper = itemView.FindViewById<TextView>(Resource.Id.info_helper);
+                this.info = itemView.FindViewById<TextView>(Resource.Id.info);
+                this.infoHelper = itemView.FindViewById<TextView>(Resource.Id.info_helper);
+            }
+        }
+
+
+        internal class AdressItemViewHolder : RecyclerView.ViewHolder
+        {
+            public LinearLayout layout { get; set; }
+            public ViewPager viewPager { get; set; }
+            public TabLayout tabLayout { get; set; }
+            public PagerTabStrip pagertab { get; set; }
+
+            public AdressItemViewHolder(global::Android.Views.View itemView) : base(itemView)
+            {
+
+                //https://guides.codepath.com/android/google-play-style-tabs-using-tablayout
+                //https://guides.codepath.com/android/ViewPager-with-FragmentPagerAdapter
+
+                this.viewPager = itemView.FindViewById<ViewPager>(Resource.Id.viewpager);
+                this.tabLayout = itemView.FindViewById<TabLayout>(Resource.Id.sliding_tabs);
+
+                this.viewPager.NestedScrollingEnabled = true;
+                this.tabLayout.NestedScrollingEnabled = true;
+
+
+                // this.viewPager = itemView.FindViewById<ViewPager>(Resource.Id.pager);
+                //     this.pagertab = itemView.FindViewById<PagerTabStrip>(Resource.Id.pagertab);
+                //
             }
         }
 
@@ -229,13 +421,15 @@ namespace Henspe.Droid.Adapters
         /// </remarks>
         internal class SectionViewHolder : RecyclerView.ViewHolder
         {
-			public ImageView image { get; set; }
-			public TextView description { get; set; }
+            //    public ImageView image { get; set; }
+            public TextView description { get; set; }
+            public TextView header { get; set; }
 
-			public SectionViewHolder(global::Android.Views.View itemView) : base(itemView)
+            public SectionViewHolder(global::Android.Views.View itemView) : base(itemView)
             {
-				this.image = itemView.FindViewById<ImageView>(Resource.Id.image);
-				this.description = itemView.FindViewById<TextView>(Resource.Id.description);
+                //    this.image = itemView.FindViewById<ImageView>(Resource.Id.image);
+                this.description = itemView.FindViewById<TextView>(Resource.Id.description);
+                this.header = itemView.FindViewById<TextView>(Resource.Id.header);
             }
         }
     }

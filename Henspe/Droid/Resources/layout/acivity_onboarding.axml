@@ -40,37 +40,37 @@
             android:layout_above="@+id/onboarding_button_bottom"
 />
     
-  
+
+        
+
+        
     <android.support.v4.view.ViewPager
         android:id="@+id/onboarding_pager"
         android:layout_width="fill_parent"
-        android:layout_height="match_parent"
-   android:layout_below="@+id/onboarding_title"
-        android:layout_above="@+id/onboarding_button_bottom" />
+ android:layout_height="wrap_content"
+              android:layout_below="@+id/onboarding_title"
+                 android:layout_above="@+id/onboarding_button_bottom"
+ />
    
-    <RelativeLayout
+          <RelativeLayout
         android:id="@+id/onboarding_button_bottom"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_alignParentBottom="true"
         android:layout_margin="@dimen/default_margin"
         android:orientation="horizontal">
+            
+                      <android.support.design.widget.TabLayout
+        android:id="@+id/dots"
+             android:layout_width="match_parent"
+        android:layout_height="26dp"
+      app:tabBackground="@drawable/dot_selector"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp"
+        app:tabPaddingStart="7dp"
+        app:tabPaddingEnd="7dp"/>
         
-        
-
-                  <Henspe.Droid.View.Indicator.CirclePageIndicator 
-        android:id="@+id/onboarding_indicator"
-        android:paddingLeft="@dimen/small_margin"
-
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_centerHorizontal="true"
-
-           android:layout_centerInParent="true"
-        android:gravity="center" />
-      
-     
-        <TextView
+              <TextView
             android:id="@+id/onboarding_skip_button"
             style="@style/OnboardingTextButton"
             android:layout_width="wrap_content"
@@ -88,5 +88,9 @@
             android:layout_weight="1"
             android:layout_alignParentRight="true"
             android:text="@string/Initial_Next" />
-    </RelativeLayout>
+        
+        
+   />
+           </RelativeLayout>
+
 </RelativeLayout>

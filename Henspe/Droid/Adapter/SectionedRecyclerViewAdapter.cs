@@ -11,7 +11,8 @@ namespace Henspe.Droid.Adapters
         public enum ItemType
         {
             Section,
-            Item
+            Item,
+            ItemAdress
         }
 
         public class IndexPath
@@ -19,12 +20,23 @@ namespace Henspe.Droid.Adapters
             public int OriginalPosition { get; set; }
             public int SectionIndex { get; set; }
             public int? ItemIndex { get; set; }
+            public int? SubType { get; set; }
 
             public ItemType ItemType
             {
                 get
                 {
-                    return this.ItemIndex.HasValue ? ItemType.Item : ItemType.Section;
+                    if (!this.ItemIndex.HasValue)
+                        return ItemType.Section;
+                    else
+                    {
+                        if (this.SubType == 2)
+                            return ItemType.ItemAdress;
+                        else
+                            return ItemType.Item;
+
+                    }
+
                 }
             }
         }
@@ -35,13 +47,21 @@ namespace Henspe.Droid.Adapters
 
         public abstract void OnBindItemViewHolder(RecyclerView.ViewHolder holder, IndexPath indexPath);
 
-        public abstract RecyclerView.ViewHolder OnCreateItemViewHolder(ViewGroup parent);
+        public abstract RecyclerView.ViewHolder OnCreateItemViewHolder(ViewGroup parent, int viewType);
 
         public virtual void OnBindSectionViewHolder(RecyclerView.ViewHolder holder, int section) { }
 
         public virtual RecyclerView.ViewHolder OnCreateSectionViewHolder(ViewGroup parent) { return null; }
 
         public abstract T GetItem(IndexPath indexPath);
+
+
+
+
+        public virtual int GetSubType(IndexPath indexPath)
+        {
+            return -1;
+        }
 
         public virtual bool ShowHeader
         {
@@ -85,6 +105,8 @@ namespace Henspe.Droid.Adapters
             if (counter > 0 && counter <= position)
                 throw new IndexOutOfRangeException();
 
+            result.SubType = GetSubType(result);
+
             return result;
         }
 
@@ -119,6 +141,9 @@ namespace Henspe.Droid.Adapters
                 case ItemType.Item:
                     this.OnBindItemViewHolder(holder, indexPath);
                     break;
+                case ItemType.ItemAdress:
+                    this.OnBindItemViewHolder(holder, indexPath);
+                    break;
             }
 
         }
@@ -132,7 +157,9 @@ namespace Henspe.Droid.Adapters
                 case ItemType.Section:
                     return this.OnCreateSectionViewHolder(parent);
                 case ItemType.Item:
-                    return this.OnCreateItemViewHolder(parent);
+                    return this.OnCreateItemViewHolder(parent, viewType);
+                case ItemType.ItemAdress:
+                    return this.OnCreateItemViewHolder(parent, viewType);
             }
 
             return null;

@@ -28,7 +28,22 @@
         <item name="colorPrimaryDark">@color/primaryDark</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>
+        
+       
+  <item name="android:statusBarColor">@color/primaryDark</item>
     </style>
+    
+    
+       <style name="TabLayoutThemes" parent="Widget.Design.TabLayout">
+ 
+        <item name="tabIndicatorColor">@color/snla_blue</item> 
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabSelectedTextColor">@color/snla_red</item>
+ 
+ 
+    </style>
+        
+    
     <style name="MyTheme.Base" parent="Theme.AppCompat.Light">
     </style>
     <style name="MyTheme" parent="MyTheme.Base">
@@ -66,6 +81,14 @@
     <style name="FontCondensed" parent="FontBase">
         <item name="android:fontFamily">@font/montserrat</item>
     </style>
+    
+    
+    
+    
+      <style name="HeaderText" parent="FontMedium">
+        <item name="android:textSize">@dimen/text_size_xxlarge</item>
+    </style>
+    
     <style name="NormalText" parent="FontMedium">
         <item name="android:textSize">@dimen/text_size_small</item>
     </style>
@@ -97,6 +120,25 @@
      <style name="OnboardingTextButton" parent="FontMedium">
         <item name="android:textColor">@color/text_white</item>
         <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+    
+    
+         <style name="ButtonStroked" parent="Widget.AppCompat.Button.Colored">
+     
+
+        <item name="android:textAllCaps">true</item>
+   
+        <item name="android:minHeight">36dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:paddingStart">4dp</item>
+        <item name="android:paddingEnd">4dp</item>
+    </style>
+    
+    
+       <style name="ButtonStroked.Blue">
+      
+        <item name="android:textColor">@color/snla_blue</item>
+        <item name="android:background">@drawable/bg_border_blue_round_btn</item>
     </style>
     
 </resources>
