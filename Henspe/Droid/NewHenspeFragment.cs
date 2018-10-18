@@ -358,7 +358,7 @@ if (Henspe.Current.PositionFragment != null)
 
         private void CreatePositionTextAndRefreshPositionRow(Location location)
         {
-            FormattedCoordinatesDto formattedCoordinatesDto = CoordinateUtil.GetFormattedCoordinateDescription(1, location.Latitude, location.Longitude, degrees, minutes, seconds, north, east, south, west);
+            FormattedCoordinatesDto formattedCoordinatesDto = CoordinateUtil.GetFormattedCoordinateDescription(CoordinateFormat.DD, location.Latitude, location.Longitude);
             Henspe.Current.coordinatesText = formattedCoordinatesDto.latitudeDescription + "\n" + formattedCoordinatesDto.longitudeDescription;
 
             RefreshRow(4);

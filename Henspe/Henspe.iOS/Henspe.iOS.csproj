@@ -238,6 +238,10 @@
     <Compile Include="CoordTypeEmbeddedController.designer.cs">
       <DependentUpon>CoordTypeEmbeddedController.cs</DependentUpon>
     </Compile>
+    <Compile Include="EnterCoordinatesViewController.cs" />
+    <Compile Include="EnterCoordinatesViewController.designer.cs">
+      <DependentUpon>EnterCoordinatesViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ic_info.png" />

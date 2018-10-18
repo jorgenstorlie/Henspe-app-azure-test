@@ -17,6 +17,8 @@ namespace Henspe.Core.Service
     {
         public CoordinateFormat CoordinateFormat { get; set; }
         public ResponseType ResponseType { get; set; }
+        public double? SetLongitude { get; set; }
+        public double? SetLatitude { get; set; }
     }
 
 

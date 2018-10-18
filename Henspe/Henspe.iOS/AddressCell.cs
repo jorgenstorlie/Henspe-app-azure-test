@@ -3,8 +3,7 @@
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using Foundation;
-using Henspe.Core.Model.Dto;
+using Henspe.Core.ViewModel;
 using Henspe.iOS.Const;
 using Henspe.iOS.Util;
 using UIKit;
@@ -18,7 +17,7 @@ namespace Henspe.iOS
         {
         }
 
-        public void SetContent(StructureElementDto structureElement, bool currentAddress)
+        public void SetContent(MainViewModel viewModel, bool currentAddress)
         {
             BackgroundColor = UIColor.Clear;
 
@@ -41,33 +40,51 @@ namespace Henspe.iOS
             labAddressLine1.Font = FontConst.fontLarge;
             labAddressLine2.Font = FontConst.fontLarge;
 
-            UpdateAddress();
+            UpdateAddress(viewModel, currentAddress);
         }
 
-        public void UpdateAddress()
+        public void UpdateAddress(MainViewModel viewModel, bool currentAddress)
         {
-            if (AppDelegate.current.gpsCurrentPositionObject == null || AppDelegate.current.gpsCurrentPositionObject.latitudeDescription == null)
+            if (currentAddress)
             {
-                labAddressLine1.Text = LangUtil.Get("GPS.UnknownAddress");
-                labAddressLine2.Text = string.Empty;
+                if (AppDelegate.current.gpsCurrentPositionObject == null || AppDelegate.current.gpsCurrentPositionObject.latitudeDescription == null)
+                {
+                    labAddressLine1.Text = LangUtil.Get("GPS.UnknownAddress");
+                    labAddressLine2.Text = string.Empty;
+                }
+                else
+                {
+                    Task.Run(async () =>
+                    {
+                        var coords = AppDelegate.current.gpsCurrentPositionObject.gpsCoordinates;
+                        await SetAddress(coords.Latitude, coords.Longitude);
+                    });
+                }
             }
             else
             {
-                Task.Run(async () => 
+                if(viewModel.CoordiantesSet)
                 {
-                    var coords = AppDelegate.current.gpsCurrentPositionObject.gpsCoordinates;
-                    var placemarks = await Geocoding.GetPlacemarksAsync(coords.Latitude, coords.Longitude);
-                    var placemark = placemarks?.FirstOrDefault();
-                    if (placemark != null)
+                    Task.Run(async () =>
                     {
-                        var street = placemark.FeatureName;
-                        var city = placemark.PostalCode + " " + placemark.Locality;
-                        BeginInvokeOnMainThread(() =>
-                        {
-                            labAddressLine1.Text = street;
-                            labAddressLine2.Text = city;
-                        });
-                    }
+                        await SetAddress(viewModel.SetLatitude.Value, viewModel.SetLongitude.Value);
+                    });
+                }
+            }
+        }
+
+        private async Task SetAddress(double latitude, double longitude)
+        {
+            var placemarks = await Geocoding.GetPlacemarksAsync(latitude, longitude);
+            var placemark = placemarks?.FirstOrDefault();
+            if (placemark != null)
+            {
+                var street = placemark.FeatureName;
+                var city = placemark.PostalCode + " " + placemark.Locality;
+                BeginInvokeOnMainThread(() =>
+                {
+                    labAddressLine1.Text = street;
+                    labAddressLine2.Text = city;
                 });
             }
         }

@@ -107,6 +107,7 @@ namespace Henspe.iOS
                 btnHelpUs.Hidden = true;
                 constraintHelpUsHeight.Constant = 0;
             }
+            myTableView.ReloadData();
 		}
 
 		public override void ViewDidAppear(bool animated)
@@ -138,7 +139,7 @@ namespace Henspe.iOS
 			ResetGPSVariables();
 
             // Table setup
-            mainListTableViewSource = new MainListTableViewSource(this);
+            mainListTableViewSource = new MainListTableViewSource(this, _viewmodel);
 			myTableView.Source = mainListTableViewSource;
 			myTableView.BackgroundColor = UIColor.Clear;
             myTableView.SeparatorStyle = UITableViewCellSeparatorStyle.None;
@@ -152,8 +153,6 @@ namespace Henspe.iOS
 			myTableView.ContentInset = insets;
 
 			mainListTableViewSource.sectionsWithRows = AppDelegate.current.structure;
-
-			myTableView.ReloadData();
 		}
 
 		private void ResetGPSVariables()

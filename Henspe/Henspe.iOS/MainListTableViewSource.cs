@@ -7,6 +7,7 @@ using Henspe.iOS.Const;
 using Henspe.iOS.Util;
 using UIKit;
 using System.Linq;
+using Henspe.Core.ViewModel;
 
 namespace Henspe.iOS
 {
@@ -18,16 +19,17 @@ namespace Henspe.iOS
 
         private int headerHeight = 80;
         private WeakReference<MainViewController> _parent;
-
+        private MainViewModel _viewmodel;
         private string lastPositionText = "";
         private string lastAddressText = "";
 
         public StructureDto sectionsWithRows;
         private int _selectedSegment;
 
-        public MainListTableViewSource(MainViewController controller)
+        public MainListTableViewSource(MainViewController controller, MainViewModel viewmodel)
         {
             _parent = new WeakReference<MainViewController>(controller);
+            _viewmodel = viewmodel;
         }
 
         // UITablViewSource methods
@@ -140,13 +142,13 @@ namespace Henspe.iOS
             {
                 // Location row
                 MainLocationRowViewCell locationCell = tableView.DequeueReusableCell(positionIdentifier, indexPath) as MainLocationRowViewCell;
-                locationCell.SetContent(structureElement, _selectedSegment == 0);
+                locationCell.SetContent(_viewmodel, _selectedSegment == 0);
                 return locationCell;
             }
             else if(structureElement.elementType == StructureElementDto.ElementType.Address)
             {
                 var addressCell = tableView.DequeueReusableCell(addressIdentifier, indexPath) as AddressCell;
-                addressCell.SetContent(structureElement, _selectedSegment == 0);
+                addressCell.SetContent(_viewmodel, _selectedSegment == 0);
                 return addressCell;
             }
             else if(structureElement.elementType == StructureElementDto.ElementType.Selector)

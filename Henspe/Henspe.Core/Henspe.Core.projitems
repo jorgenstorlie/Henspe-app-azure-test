@@ -51,6 +51,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\MainViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\SettingsViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Service\TranslationService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\EnterCoordinatesViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Translations\Translations_no.json" />

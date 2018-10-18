@@ -13,6 +13,12 @@
   "Settings.NotDecided": "Ikke valgt",
   "Settings.SMS": "SMS",
   "Settings.Email": "E-post",
-  "Settings.None": "Ikke ønsket"
-
+  "Settings.None": "Ikke ønsket",
+  "Coords.Degrees": "grader",
+  "Coords.North": "nord",
+  "Coords.East": "øst",
+  "Coords.South": "sør",
+  "Coords.West": "vest",
+  "Coords.Minutes": "minutter",
+  "Coords.Seconds": "sekunder"
 }

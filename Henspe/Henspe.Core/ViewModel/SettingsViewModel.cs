@@ -44,17 +44,9 @@ namespace Henspe.Core.ViewModel
             double lat = 53.2314d;
             double lon = 10.9283d;
 
-            var deg = "Settings.Degrees".Translate();
-            var north = "Settings.North".Translate();
-            var east = "Settings.East".Translate();
-            var south = "Settings.South".Translate();
-            var west = "Settings.West".Translate();
-            var minutes = "Settings.Minutes".Translate();
-            var seconds = "Settings.Seconds".Translate();
-
-            var dd = CoordinateUtil.FormatDD(lat, lon, deg, north, east, south, west);
-            var ddm = CoordinateUtil.FormatDDM(lat, lon, deg, minutes, north, east, south, west);
-            var dms = CoordinateUtil.FormatDMS(lat, lon, deg, minutes, seconds, north, south, east, west);
+            var dd = CoordinateUtil.FormatDD(lat, lon);
+            var ddm = CoordinateUtil.FormatDDM(lat, lon);
+            var dms = CoordinateUtil.FormatDMS(lat, lon);
             var utm = CoordinateUtil.FormatUTM(lat, lon);
 
             CoordinateRows.Add(new CoordianteRow

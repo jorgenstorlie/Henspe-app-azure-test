@@ -1,5 +1,6 @@
 ﻿using System;
 using Henspe.Core.Communication.Dto;
+using Henspe.Core.Service;
 
 namespace Henspe.Core.Util
 {
@@ -14,21 +15,21 @@ namespace Henspe.Core.Util
 
     public class CoordinateUtil
 	{
-        static public FormattedCoordinatesDto GetFormattedCoordinateDescription(CoordinateFormat format, double latitude, double longitude, string degrees, string minutes, string seconds, string north, string east, string south, string west)
+        static public FormattedCoordinatesDto GetFormattedCoordinateDescription(CoordinateFormat format, double latitude, double longitude)
         {
             FormattedCoordinatesDto formattedCoordinatesDto;
 
             if(format == CoordinateFormat.DD)
             {
-                formattedCoordinatesDto = FormatDD(latitude, longitude, degrees, north, east, south, west);
+                formattedCoordinatesDto = FormatDD(latitude, longitude);
             }
             else if (format == CoordinateFormat.DDM)
             {
-                formattedCoordinatesDto = FormatDDM(latitude, longitude, degrees, minutes, north, east, south, west);
+                formattedCoordinatesDto = FormatDDM(latitude, longitude);
             }
             else if (format == CoordinateFormat.DMS)
             {
-                formattedCoordinatesDto = FormatDMS(latitude, longitude, degrees, minutes, seconds, north, east, south, west);
+                formattedCoordinatesDto = FormatDMS(latitude, longitude);
             }
             else if (format == CoordinateFormat.UTM)
             {
@@ -44,32 +45,32 @@ namespace Henspe.Core.Util
             return formattedCoordinatesDto;
         }
 
-        static public FormattedCoordinatesDto FormatDD(double latitude, double longitude, string degrees, string north, string east, string south, string west)
+        static public FormattedCoordinatesDto FormatDD(double latitude, double longitude)
         {
             // DD - Desimalgrader. Eksempel 33.268602° -45.543819°
             FormattedCoordinatesDto formattedCoordinatesDto = new FormattedCoordinatesDto();
 
             formattedCoordinatesDto.success = true;
 
-            string latitudeDirection = north;
+            string latitudeDirection = "Coords.North".Translate();
 
             if (latitude < 0)
             {
-				latitudeDirection = south;
+				latitudeDirection = "Coords.South".Translate();
                 latitude = Math.Abs(latitude);            
             }
 
-            string longitudeDirection = east;
+            string longitudeDirection = "Coords.East".Translate();
 
             if (longitude < 0)
             {
-                longitudeDirection = west;
+                longitudeDirection = "Coords.West".Translate();
                 longitude = Math.Abs(longitude);
             }
 
             string format = "00.0000";
-            string latitudeDescription = latitude.ToString(format) + " " + degrees + " " + latitudeDirection;
-            string longitudeDescription = longitude.ToString(format) + " " + degrees + " " + longitudeDirection;;
+            string latitudeDescription = latitude.ToString(format) + " " + "Coords.Degrees".Translate() + " " + latitudeDirection;
+            string longitudeDescription = longitude.ToString(format) + " " + "Coords.Degrees".Translate() + " " + longitudeDirection;;
 
             formattedCoordinatesDto.success = true;
             formattedCoordinatesDto.latitudeDescription = latitudeDescription;
@@ -78,31 +79,30 @@ namespace Henspe.Core.Util
             return formattedCoordinatesDto;
         }
 
-        static public FormattedCoordinatesDto FormatDDM(double latitude, double longitude, string degrees, string minutes, string north, string east, string south, string west)
+        static public FormattedCoordinatesDto FormatDDM(double latitude, double longitude)
         {
             // DDM - Desimalgrader og minutter. Eksempel: 33° 16.116'N  45° 32.629'W
             FormattedCoordinatesDto formattedCoordinatesDto = new FormattedCoordinatesDto();
 
             formattedCoordinatesDto.success = true;
 
-            string latitudeDirection = north;
+            string latitudeDirection = "Coords.North".Translate();
 
             if (latitude < 0)
             {
-                latitudeDirection = south;
+                latitudeDirection = "Coords.South".Translate();
                 latitude = Math.Abs(latitude);
             }
 
-            string longitudeDirection = east;
+            string longitudeDirection = "Coords.East".Translate();
 
             if (longitude < 0)
             {
-                longitudeDirection = west;
+                longitudeDirection = "Coords.West".Translate();
                 longitude = Math.Abs(longitude);
             }
-
-            string latitudeDescription = GetDegreesValue(latitude) + " " + degrees + " " + GetDecimalMinutes(latitude) + " " + minutes + " " + latitudeDirection;
-            string longitudeDescription = GetDegreesValue(longitude) + " " + degrees + " " + GetDecimalMinutes(longitude) + " " + minutes + " " + longitudeDirection;
+            string latitudeDescription = GetDegreesValue(latitude) + " " + "Coords.Degrees" + " " + GetDecimalMinutes(latitude) + " " + "Coords.Minutes" + " " + latitudeDirection;
+            string longitudeDescription = GetDegreesValue(longitude) + " " + "Coords.Degrees" + " " + GetDecimalMinutes(longitude) + " " + "Coords.Minutes" + " " + longitudeDirection;
 
             formattedCoordinatesDto.success = true;
             formattedCoordinatesDto.latitudeDescription = latitudeDescription;
@@ -111,31 +111,30 @@ namespace Henspe.Core.Util
             return formattedCoordinatesDto;
         }
 
-        static public FormattedCoordinatesDto FormatDMS(double latitude, double longitude, string degrees, string minutes, string seconds, string north, string east, string south, string west)
+        static public FormattedCoordinatesDto FormatDMS(double latitude, double longitude)
         {
             // DMS - Desimalgrader, minutter og sekunder. Eksempel: 33° 16' 6.97"N  45° 32' 37.75"W
             FormattedCoordinatesDto formattedCoordinatesDto = new FormattedCoordinatesDto();
 
             formattedCoordinatesDto.success = true;
 
-            string latitudeDirection = north;
+            string latitudeDirection = "Coords.North".Translate();
 
             if (latitude < 0)
             {
-                latitudeDirection = south;
+                latitudeDirection = "Coords.South".Translate();
                 latitude = Math.Abs(latitude);
             }
 
-            string longitudeDirection = east;
+            string longitudeDirection = "Coords.East".Translate();
 
             if (longitude < 0)
             {
-                longitudeDirection = west;
+                longitudeDirection = "Coords.West".Translate();
                 longitude = Math.Abs(longitude);
             }
-
-            string latitudeDescription = GetDegreesValue(latitude) + " " + degrees + " " + GetMinutesValue(latitude) + " " + minutes + " " + GetDecimalSeconds(latitude) + " " + seconds + " " + latitudeDirection;
-            string longitudeDescription = GetDegreesValue(longitude) + " " + degrees + " " + GetMinutesValue(longitude) + " " + minutes + " " + GetDecimalSeconds(longitude) + " " + seconds + " " + longitudeDirection;
+            string latitudeDescription = GetDegreesValue(latitude) + " " + "Coords.Degrees".Translate() + " " + GetMinutesValue(latitude) + " " + "Coords.Minutes".Translate() + " " + GetDecimalSeconds(latitude) + " " + "Coords.Seconds".Translate() + " " + latitudeDirection;
+            string longitudeDescription = GetDegreesValue(longitude) + " " + "Coords.Degrees".Translate() + " " + GetMinutesValue(longitude) + " " + "Coords.Minutes".Translate() + " " + GetDecimalSeconds(longitude) + " " + "Coords.Minutes".Translate() + " " + longitudeDirection;
 
             formattedCoordinatesDto.success = true;
             formattedCoordinatesDto.latitudeDescription = latitudeDescription;
