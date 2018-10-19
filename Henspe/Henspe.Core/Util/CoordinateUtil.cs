@@ -101,8 +101,8 @@ namespace Henspe.Core.Util
                 longitudeDirection = "Coords.West".Translate();
                 longitude = Math.Abs(longitude);
             }
-            string latitudeDescription = GetDegreesValue(latitude) + " " + "Coords.Degrees" + " " + GetDecimalMinutes(latitude) + " " + "Coords.Minutes" + " " + latitudeDirection;
-            string longitudeDescription = GetDegreesValue(longitude) + " " + "Coords.Degrees" + " " + GetDecimalMinutes(longitude) + " " + "Coords.Minutes" + " " + longitudeDirection;
+            string latitudeDescription = GetDegreesValue(latitude) + " " + "Coords.Degrees".Translate() + " " + GetDecimalMinutes(latitude) + " " + "Coords.Minutes".Translate() + " " + latitudeDirection;
+            string longitudeDescription = GetDegreesValue(longitude) + " " + "Coords.Degrees".Translate() + " " + GetDecimalMinutes(longitude) + " " + "Coords.Minutes".Translate() + " " + longitudeDirection;
 
             formattedCoordinatesDto.success = true;
             formattedCoordinatesDto.latitudeDescription = latitudeDescription;
