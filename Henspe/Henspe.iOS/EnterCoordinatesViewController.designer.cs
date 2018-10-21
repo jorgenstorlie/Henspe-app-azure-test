@@ -31,6 +31,12 @@ namespace Henspe.iOS
 		MapKit.MKMapView mapView { get; set; }
 
 		[Outlet]
+		UIKit.UISearchBar searchBar { get; set; }
+
+		[Outlet]
+		UIKit.UIView searchContainerView { get; set; }
+
+		[Outlet]
 		UIKit.UITextField txtAddress { get; set; }
 
 		[Outlet]
@@ -38,6 +44,9 @@ namespace Henspe.iOS
 
 		[Outlet]
 		UIKit.UITextField txtDegreesNorth { get; set; }
+
+		[Outlet]
+		UIKit.UIView viewContainer { get; set; }
 
 		[Action ("latitudeChanged:")]
 		partial void latitudeChanged (Foundation.NSObject sender);
@@ -47,19 +56,19 @@ namespace Henspe.iOS
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (lblEnterPosition != null) {
-				lblEnterPosition.Dispose ();
-				lblEnterPosition = null;
+			if (viewContainer != null) {
+				viewContainer.Dispose ();
+				viewContainer = null;
 			}
 
-			if (txtDegreesNorth != null) {
-				txtDegreesNorth.Dispose ();
-				txtDegreesNorth = null;
+			if (imgMapCenter != null) {
+				imgMapCenter.Dispose ();
+				imgMapCenter = null;
 			}
 
-			if (txtDegreesEast != null) {
-				txtDegreesEast.Dispose ();
-				txtDegreesEast = null;
+			if (lblAddress != null) {
+				lblAddress.Dispose ();
+				lblAddress = null;
 			}
 
 			if (lblDegreesEast != null) {
@@ -72,14 +81,9 @@ namespace Henspe.iOS
 				lblDegreesNorth = null;
 			}
 
-			if (lblAddress != null) {
-				lblAddress.Dispose ();
-				lblAddress = null;
-			}
-
-			if (txtAddress != null) {
-				txtAddress.Dispose ();
-				txtAddress = null;
+			if (lblEnterPosition != null) {
+				lblEnterPosition.Dispose ();
+				lblEnterPosition = null;
 			}
 
 			if (mapView != null) {
@@ -87,9 +91,29 @@ namespace Henspe.iOS
 				mapView = null;
 			}
 
-			if (imgMapCenter != null) {
-				imgMapCenter.Dispose ();
-				imgMapCenter = null;
+			if (searchBar != null) {
+				searchBar.Dispose ();
+				searchBar = null;
+			}
+
+			if (searchContainerView != null) {
+				searchContainerView.Dispose ();
+				searchContainerView = null;
+			}
+
+			if (txtAddress != null) {
+				txtAddress.Dispose ();
+				txtAddress = null;
+			}
+
+			if (txtDegreesEast != null) {
+				txtDegreesEast.Dispose ();
+				txtDegreesEast = null;
+			}
+
+			if (txtDegreesNorth != null) {
+				txtDegreesNorth.Dispose ();
+				txtDegreesNorth = null;
 			}
 		}
 	}
