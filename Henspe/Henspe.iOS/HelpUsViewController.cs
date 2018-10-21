@@ -12,7 +12,7 @@ using UIKit;
 
 namespace Henspe.iOS
 {
-	public partial class HelpUsViewController : UIViewController
+    public partial class HelpUsViewController : UIViewController, ICALayerDelegate
 	{
         private CAGradientLayer _gradient;
         private AVPlayer _player;
@@ -27,6 +27,9 @@ namespace Henspe.iOS
             base.ViewDidLoad();
 
             Title = LangUtil.Get("HelpUs.Title");
+
+            View.BackgroundColor = ColorConst.backgroundColor;
+            viewAboutContainer.BackgroundColor = ColorConst.backgroundColor;
 
             lblAboutHENSPE.TextColor = ColorConst.textColor;
             lblAboutSNLA.TextColor = ColorConst.textColor;
@@ -47,10 +50,18 @@ namespace Henspe.iOS
             btnSMS.SetTitle(LangUtil.Get("HelpUs.SMS"), UIControlState.Normal);
             btnEmail.SetTitle(LangUtil.Get("HelpUs.Email"), UIControlState.Normal);
 
+            //scrollViewAboutSNLA.ContentInset = new UIEdgeInsets(scrollViewAboutSNLA.Frame.Top,
+                                                               // scrollViewAboutSNLA.Frame.Left,
+                                                               //scrollViewAboutSNLA.Frame.Top + 200,
+                                                                //scrollViewAboutSNLA.Frame.Right);
+
+            //scrollViewAboutSNLA.ContentSize = 
+
             SetupScrollView();
 
             SetupVideo();
 
+            View.BringSubviewToFront(scrollViewAboutSNLA);
         }
 
         private void SetupScrollView()
@@ -59,10 +70,14 @@ namespace Henspe.iOS
 
             _gradient = new CAGradientLayer();
             _gradient.Frame = scrollViewAboutSNLA.Bounds;
-            _gradient.Colors = new[] { ColorConst.textColor.CGColor, UIColor.Clear.CGColor };
-            _gradient.Locations = new[] { new NSNumber(0.6f), new NSNumber(1) };
+            _gradient.Colors = new[] { UIColor.Clear.CGColor, ColorConst.textColor.CGColor, ColorConst.textColor.CGColor, UIColor.Clear.CGColor };
+            _gradient.Locations = new[] { new NSNumber(0.0f), new NSNumber(0.1f), new NSNumber(0.9f), new NSNumber(1) };
+            _gradient.Delegate = this;
+
             scrollViewAboutSNLA.Layer.Mask = _gradient;
             scrollViewAboutSNLA.Scrolled += ScrollViewAboutSNLA_Scrolled;
+
+
         }
 
         private void SetupVideo()
@@ -122,8 +137,14 @@ namespace Henspe.iOS
         private void UpdateGradient()
         {
             scrollViewAboutSNLA.Layer.Mask = _gradient;
-            _gradient.Frame = new CGRect(0, scrollViewAboutSNLA.ContentOffset.Y, scrollViewAboutSNLA.Bounds.Width, scrollViewAboutSNLA.Bounds.Height);
+            _gradient.Frame = new CGRect(0, viewAboutContainer.Frame.Top, scrollViewAboutSNLA.Bounds.Width, scrollViewAboutSNLA.Bounds.Height);
 
+        }
+
+        [Export("actionForLayer:forKey:")]
+        public NSObject ActionForLayer(CALayer layer, string eventKey)
+        {
+            return null;
         }
 
         private void HideGradient()
