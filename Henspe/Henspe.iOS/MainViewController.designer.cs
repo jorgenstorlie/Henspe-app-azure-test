@@ -9,37 +9,40 @@ using System.CodeDom.Compiler;
 
 namespace Henspe.iOS
 {
-	[Register ("MainViewController")]
-	partial class MainViewController
-	{
-		[Outlet]
-		UIKit.UIButton btnHelpUs { get; set; }
+    [Register ("MainViewController")]
+    partial class MainViewController
+    {
+        [Outlet]
+        UIKit.UIButton btnHelpUs { get; set; }
 
-		[Outlet]
-		UIKit.NSLayoutConstraint constraintHelpUsHeight { get; set; }
+        [Outlet]
+        UIKit.NSLayoutConstraint constraintHelpUsHeight { get; set; }
 
-		[Outlet]
-		UIKit.UITableView myTableView { get; set; }
+        [Outlet]
+        UIKit.UITableView myTableView { get; set; }
 
-		[Action ("SettingsClicked:")]
-		partial void SettingsClicked (Foundation.NSObject sender);
-		
-		void ReleaseDesignerOutlets ()
-		{
-			if (btnHelpUs != null) {
-				btnHelpUs.Dispose ();
-				btnHelpUs = null;
-			}
+        [Action ("HelpUsClicked:")]
+        partial void HelpUsClicked (Foundation.NSObject sender);
 
-			if (constraintHelpUsHeight != null) {
-				constraintHelpUsHeight.Dispose ();
-				constraintHelpUsHeight = null;
-			}
+        [Action ("SettingsClicked:")]
+        partial void SettingsClicked (Foundation.NSObject sender);
+        
+        void ReleaseDesignerOutlets ()
+        {
+            if (btnHelpUs != null) {
+                btnHelpUs.Dispose ();
+                btnHelpUs = null;
+            }
 
-			if (myTableView != null) {
-				myTableView.Dispose ();
-				myTableView = null;
-			}
-		}
-	}
+            if (constraintHelpUsHeight != null) {
+                constraintHelpUsHeight.Dispose ();
+                constraintHelpUsHeight = null;
+            }
+
+            if (myTableView != null) {
+                myTableView.Dispose ();
+                myTableView = null;
+            }
+        }
+    }
 }

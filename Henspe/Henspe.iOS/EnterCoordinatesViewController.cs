@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using System.Timers;
 using CoreGraphics;
@@ -12,6 +13,7 @@ using Henspe.Core.ViewModel;
 using Henspe.iOS.Const;
 using Henspe.iOS.Util;
 using MapKit;
+using Newtonsoft.Json;
 using UIKit;
 
 namespace Henspe.iOS
@@ -22,6 +24,7 @@ namespace Henspe.iOS
         private EnterCoordinatesViewModel _viewmodel;
         private UITableView _searchResultView;
         private MKLocalSearchCompleter _completer;
+        private HttpClient _client;
 
         public EnterCoordinatesViewController (IntPtr handle) : base (handle)
 		{
@@ -54,6 +57,8 @@ namespace Henspe.iOS
             txtAddress.EditingChanged += TxtAddress_EditingChanged;
 
             UpdateCoordFields();
+
+            _client = new HttpClient();
         }
 
         partial void latitudeChanged(NSObject sender)
@@ -157,6 +162,8 @@ namespace Henspe.iOS
             var searchRequest = new MKLocalSearchRequest();
             searchRequest.NaturalLanguageQuery = forSearchString;
 
+            var test = Noe(forSearchString);
+
             //searchRequest.Region = region;
 
             //var localSearch = new MKLocalSearch(searchRequest);
@@ -177,8 +184,8 @@ namespace Henspe.iOS
             //});
 
 
-            _completer.Region = region;
-            _completer.QueryFragment = forSearchString;
+            //_completer.Region = region;
+            //_completer.QueryFragment = forSearchString;
         }
 
         [Export("completerDidUpdateResults:")]
@@ -214,6 +221,45 @@ namespace Henspe.iOS
                 txtDegreesNorth.Text = _viewmodel.Latitude.Value.ToString("N4");
             if (_viewmodel.Longitude.HasValue)
                 txtDegreesEast.Text = _viewmodel.Longitude.Value.ToString("N4");
+        }
+
+        public SearchResult Noe(string test)
+        {
+            var url = $"https://ws.geonorge.no/AdresseWS/adresse/sok?sokestreng={test}&side=0&antPerSide=10";
+            //var url = "https://ws.geonorge.no/AdresseWS/adresse/radius?sokestreng=fjordvei&side=0&antPerSide=100";
+            var result = _client.GetAsync(url).Result;
+            var resultStr = result.Content.ReadAsStringAsync().Result;
+            var resultObject = JsonConvert.DeserializeObject<SearchResult>(resultStr);
+            return resultObject;
+        }
+
+        public class SearchResult
+        {
+            public SearchStatus sokStatus { get; set; }
+            public int totaltAntallTreff { get; set; }
+            public List<SearchAddress> adresser { get; set; }
+        }
+
+        public class SearchStatus
+        {
+            public bool ok { get; set; }
+            public string melding { get; set; }
+        }
+
+        public class SearchAddress
+        {
+            public string type { get; set; }
+            public string adressekode { get; set; }
+            public string adressenavn { get; set; }
+            public string kortadressenavn { get; set; }
+            public string husnr { get; set; }
+            public string undernr { get; set; }
+            public string postnr { get; set; }
+            public string poststed { get; set; }
+            public string kommunenr { get; set; }
+            public string kommunenavn { get; set; }
+            public string nord { get; set; }
+            public string aust { get; set; }
         }
 
         private class SearchSource : UITableViewSource
