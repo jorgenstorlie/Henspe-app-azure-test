@@ -1,117 +1,149 @@
 // WARNING
 //
-// This file has been generated automatically by Visual Studio from the outlets and
-// actions declared in your storyboard file.
-// Manual changes to this file will not be maintained.
+// This file has been generated automatically by Visual Studio to store outlets and
+// actions made in the UI designer. If it is removed, they will be lost.
+// Manual changes to this file may not be handled correctly.
 //
 using Foundation;
-using System;
 using System.CodeDom.Compiler;
 
 namespace Henspe.iOS
 {
-    [Register ("HelpUsViewController")]
-    partial class HelpUsViewController
-    {
-        [Outlet]
-        UIKit.UIButton btnEmail { get; set; }
+	[Register ("HelpUsViewController")]
+	partial class HelpUsViewController
+	{
+		[Outlet]
+		UIKit.UIButton btnAccept { get; set; }
 
+		[Outlet]
+		UIKit.UIButton btnNoThankYou { get; set; }
 
-        [Outlet]
-        UIKit.UIButton btnNoThankYou { get; set; }
+		[Outlet]
+		UIKit.NSLayoutConstraint constraintEmailHeight { get; set; }
 
+		[Outlet]
+		UIKit.UIImageView imgArrow { get; set; }
 
-        [Outlet]
-        UIKit.UIButton btnSMS { get; set; }
+		[Outlet]
+		UIKit.UILabel labShowMore { get; set; }
 
+		[Outlet]
+		UIKit.UILabel lblAboutHENSPE { get; set; }
 
-        [Outlet]
-        UIKit.UIImageView imgArrow { get; set; }
+		[Outlet]
+		UIKit.UILabel lblAboutSNLA { get; set; }
 
+		[Outlet]
+		UIKit.UILabel lblEmail { get; set; }
 
-        [Outlet]
-        UIKit.UILabel labShowMore { get; set; }
+		[Outlet]
+		UIKit.UILabel lblSMS { get; set; }
 
+		[Outlet]
+		UIKit.UILabel lblYesPlease { get; set; }
 
-        [Outlet]
-        UIKit.UILabel lblAboutHENSPE { get; set; }
+		[Outlet]
+		UIKit.UIScrollView scrollViewAboutSNLA { get; set; }
 
+		[Outlet]
+		UIKit.UISwitch swtEmail { get; set; }
 
-        [Outlet]
-        UIKit.UILabel lblAboutSNLA { get; set; }
+		[Outlet]
+		UIKit.UISwitch swtSms { get; set; }
 
+		[Outlet]
+		UIKit.UITextField txtEpost { get; set; }
 
-        [Outlet]
-        UIKit.UILabel lblYesPlease { get; set; }
+		[Outlet]
+		UIKit.UIView viewAboutContainer { get; set; }
 
+		[Outlet]
+		UIKit.UIView viewMovieContainer { get; set; }
 
-        [Outlet]
-        UIKit.UIScrollView scrollViewAboutSNLA { get; set; }
+		[Action ("EmailChanged:")]
+		partial void EmailChanged (Foundation.NSObject sender);
+		
+		void ReleaseDesignerOutlets ()
+		{
+			if (btnAccept != null) {
+				btnAccept.Dispose ();
+				btnAccept = null;
+			}
 
+			if (btnNoThankYou != null) {
+				btnNoThankYou.Dispose ();
+				btnNoThankYou = null;
+			}
 
-        [Outlet]
-        UIKit.UIView viewAboutContainer { get; set; }
+			if (constraintEmailHeight != null) {
+				constraintEmailHeight.Dispose ();
+				constraintEmailHeight = null;
+			}
 
+			if (imgArrow != null) {
+				imgArrow.Dispose ();
+				imgArrow = null;
+			}
 
-        [Outlet]
-        UIKit.UIView viewMovieContainer { get; set; }
+			if (labShowMore != null) {
+				labShowMore.Dispose ();
+				labShowMore = null;
+			}
 
-        void ReleaseDesignerOutlets ()
-        {
-            if (btnEmail != null) {
-                btnEmail.Dispose ();
-                btnEmail = null;
-            }
+			if (lblAboutHENSPE != null) {
+				lblAboutHENSPE.Dispose ();
+				lblAboutHENSPE = null;
+			}
 
-            if (btnNoThankYou != null) {
-                btnNoThankYou.Dispose ();
-                btnNoThankYou = null;
-            }
+			if (lblAboutSNLA != null) {
+				lblAboutSNLA.Dispose ();
+				lblAboutSNLA = null;
+			}
 
-            if (btnSMS != null) {
-                btnSMS.Dispose ();
-                btnSMS = null;
-            }
+			if (lblEmail != null) {
+				lblEmail.Dispose ();
+				lblEmail = null;
+			}
 
-            if (imgArrow != null) {
-                imgArrow.Dispose ();
-                imgArrow = null;
-            }
+			if (lblSMS != null) {
+				lblSMS.Dispose ();
+				lblSMS = null;
+			}
 
-            if (labShowMore != null) {
-                labShowMore.Dispose ();
-                labShowMore = null;
-            }
+			if (lblYesPlease != null) {
+				lblYesPlease.Dispose ();
+				lblYesPlease = null;
+			}
 
-            if (lblAboutHENSPE != null) {
-                lblAboutHENSPE.Dispose ();
-                lblAboutHENSPE = null;
-            }
+			if (scrollViewAboutSNLA != null) {
+				scrollViewAboutSNLA.Dispose ();
+				scrollViewAboutSNLA = null;
+			}
 
-            if (lblAboutSNLA != null) {
-                lblAboutSNLA.Dispose ();
-                lblAboutSNLA = null;
-            }
+			if (swtEmail != null) {
+				swtEmail.Dispose ();
+				swtEmail = null;
+			}
 
-            if (lblYesPlease != null) {
-                lblYesPlease.Dispose ();
-                lblYesPlease = null;
-            }
+			if (swtSms != null) {
+				swtSms.Dispose ();
+				swtSms = null;
+			}
 
-            if (scrollViewAboutSNLA != null) {
-                scrollViewAboutSNLA.Dispose ();
-                scrollViewAboutSNLA = null;
-            }
+			if (txtEpost != null) {
+				txtEpost.Dispose ();
+				txtEpost = null;
+			}
 
-            if (viewAboutContainer != null) {
-                viewAboutContainer.Dispose ();
-                viewAboutContainer = null;
-            }
+			if (viewAboutContainer != null) {
+				viewAboutContainer.Dispose ();
+				viewAboutContainer = null;
+			}
 
-            if (viewMovieContainer != null) {
-                viewMovieContainer.Dispose ();
-                viewMovieContainer = null;
-            }
-        }
-    }
+			if (viewMovieContainer != null) {
+				viewMovieContainer.Dispose ();
+				viewMovieContainer = null;
+			}
+		}
+	}
 }

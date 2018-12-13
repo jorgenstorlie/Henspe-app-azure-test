@@ -339,23 +339,13 @@ namespace Henspe.iOS
 			NSIndexPath[] indexPathList = new NSIndexPath[] { NSIndexPath.FromRowSection(row, section) };
 			myTableView.ReloadRows(indexPathList, UITableViewRowAnimation.Fade);
         }
-		#endregion
+        #endregion
 
 
-		private void OnInfoClicked()
-		{
-			InvokeOnMainThread(() =>
-            {
-                this.PerformSegue("segueInit", this);
-            });
-		}
-
-		public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
+        partial void HelpUsClicked(NSObject sender)
         {
-			if (segue.Identifier == "segueInit")
-            {
-				UserUtil.settings.instructionsFinished = false;
-            }
+            var controller = new HelpUsViewController();
+            PresentViewController(controller, true, null);
         }
-	}
+    }
 }

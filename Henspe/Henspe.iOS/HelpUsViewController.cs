@@ -23,6 +23,11 @@ namespace Henspe.iOS
 		{
 		}
 
+        public HelpUsViewController() : base("HelpUs", null)
+        {
+
+        }
+
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
@@ -37,23 +42,28 @@ namespace Henspe.iOS
             lblYesPlease.TextColor = ColorConst.textColor;
             labShowMore.TextColor = ColorConst.textColor;
 
-            btnSMS.BackgroundColor = ColorConst.Blue;
-            btnEmail.BackgroundColor = ColorConst.Blue;
+            btnAccept.BackgroundColor = ColorConst.Blue;
+            btnAccept.SetTitleColor(UIColor.LightTextColor, UIControlState.Normal);
             btnNoThankYou.SetTitleColor(ColorConst.Blue, UIControlState.Normal);
 
-            btnSMS.Layer.CornerRadius = 5;
-            btnEmail.Layer.CornerRadius = 5;
+            lblSMS.TextColor = ColorConst.Blue;
+            lblEmail.TextColor = ColorConst.Blue;
+
+            btnAccept.Layer.CornerRadius = 5;
 
             lblAboutHENSPE.Text = LangUtil.Get("HelpUs.AboutHENSPE");
             lblAboutSNLA.Text = LangUtil.Get("HelpUs.AboutSNLA");
             labShowMore.Text = LangUtil.Get("HelpUs.More");
             btnNoThankYou.SetTitle(LangUtil.Get("HelpUs.No"), UIControlState.Normal);
-            btnSMS.SetTitle(LangUtil.Get("HelpUs.SMS"), UIControlState.Normal);
-            btnEmail.SetTitle(LangUtil.Get("HelpUs.Email"), UIControlState.Normal);
+            //btnSMS.SetTitle(LangUtil.Get("HelpUs.SMS"), UIControlState.Normal);
+            //btnEmail.SetTitle(LangUtil.Get("HelpUs.Email"), UIControlState.Normal);
 
             SetupScrollView();
 
             SetupVideo();
+
+            txtEpost.Hidden = true;
+            constraintEmailHeight.Constant = 0;
         }
 
         private void SetupScrollView()
@@ -148,6 +158,40 @@ namespace Henspe.iOS
         private void HideGradient()
         {
             scrollViewAboutSNLA.Layer.Mask = null;
+        }
+
+        partial void EmailChanged(NSObject sender)
+        {
+            BeginInvokeOnMainThread(() =>
+            {
+                if (swtEmail.On)
+                {
+                    UIView.AnimateAsync(2, () =>
+                    {
+                        constraintEmailHeight.Constant = 30;
+                        txtEpost.Hidden = false;
+                    });
+                }
+                else
+                {
+                    UIView.AnimateAsync(2, () =>
+                    {
+                        constraintEmailHeight.Constant = 0;
+                        txtEpost.Hidden = true;
+                    });
+                }
+            });
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            base.Dispose(disposing);
+
+            if(disposing)
+            {
+                _gradient = null;
+                _gradient2 = null;  
+            }
         }
     }
 }
