@@ -1265,7 +1265,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus augue, viv
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="actActivityIndicator" destination="fvw-Q9-Otf" id="oWK-3c-qcM"/>
                         <outlet property="btnNext" destination="dkd-ga-UcR" id="ATg-y6-AxM"/>
                         <outlet property="btnSkip" destination="7eI-B5-8dI" id="dpv-dg-EPQ"/>
                         <outlet property="pagPager" destination="SJH-hk-fxF" id="d8v-TS-DqS"/>

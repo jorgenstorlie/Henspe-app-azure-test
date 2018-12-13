@@ -1,0 +1,7 @@
+﻿// Norske settings locales
+"CustomSettingsTitle" = "Innstillinger";
+"UserDefCoordinateFormat" = "Koordinater";
+"CoordinateFormatDD" = "DD - Grader";
+"CoordinateFormatDDM" = "DDM - Grader og minutter";
+"CoordinateFormatDMS" = "DMS - Grader, minutter og sekunder";
+"CoordinateFormatUTM" = "UTM - Universal Transverse Mercator";
