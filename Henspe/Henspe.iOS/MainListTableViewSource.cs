@@ -7,7 +7,6 @@ using Henspe.iOS.Const;
 using Henspe.iOS.Util;
 using UIKit;
 using System.Linq;
-using Henspe.Core.ViewModel;
 
 namespace Henspe.iOS
 {
@@ -16,20 +15,18 @@ namespace Henspe.iOS
     {
         public const int LocationRow = 1;
         public const int AddressRow = 2;
+        public int selectedSegment = 0;
 
         private int headerHeight = 80;
         private WeakReference<MainViewController> _parent;
-        private MainViewModel _viewmodel;
         private string lastPositionText = "";
         private string lastAddressText = "";
 
         public StructureDto sectionsWithRows;
-        private int _selectedSegment;
 
-        public MainListTableViewSource(MainViewController controller, MainViewModel viewmodel)
+        public MainListTableViewSource(MainViewController controller)
         {
             _parent = new WeakReference<MainViewController>(controller);
-            _viewmodel = viewmodel;
         }
 
         // UITablViewSource methods
@@ -142,20 +139,20 @@ namespace Henspe.iOS
             {
                 // Location row
                 MainLocationRowViewCell locationCell = tableView.DequeueReusableCell(positionIdentifier, indexPath) as MainLocationRowViewCell;
-                locationCell.SetContent(_viewmodel, _selectedSegment == 0);
+                selectedSegment = 0;
                 return locationCell;
             }
             else if(structureElement.elementType == StructureElementDto.ElementType.Address)
             {
                 var addressCell = tableView.DequeueReusableCell(addressIdentifier, indexPath) as AddressCell;
-                addressCell.SetContent(_viewmodel, _selectedSegment == 0);
+                selectedSegment = 0;
                 return addressCell;
             }
             else if(structureElement.elementType == StructureElementDto.ElementType.Selector)
             {
                 var segmentedCell = tableView.DequeueReusableCell("SegmentedCell", indexPath) as SegmentedCell;
                 segmentedCell.SegmentSelected -= SegmentedCell_SegmentSelected;
-                segmentedCell.SetContent(new [] { "Din posisjon", "Angitt posisjon" }.ToList(), _selectedSegment);
+                segmentedCell.SetContent(new [] { "Din posisjon", "Angitt posisjon" }.ToList(), selectedSegment);
                 segmentedCell.SegmentSelected += SegmentedCell_SegmentSelected;
                 return segmentedCell;
             }
@@ -175,10 +172,10 @@ namespace Henspe.iOS
         {
             labLabelBottom.Text = LangUtil.Get("GPS.UnknownPosition");
 
-            if (AppDelegate.current.gpsCurrentPositionObject != null)
+            if (AppDelegate.current.locationManager.gpsCurrentPositionObject != null)
             {
-                string latitudeText = AppDelegate.current.gpsCurrentPositionObject.latitudeDescription;
-                string longitudeText = AppDelegate.current.gpsCurrentPositionObject.longitudeDescription;
+                string latitudeText = AppDelegate.current.locationManager.gpsCurrentPositionObject.latitudeDescription;
+                string longitudeText = AppDelegate.current.locationManager.gpsCurrentPositionObject.longitudeDescription;
                 //string accuracySmall = LangUtil.Get("") + ": " + AppDelegate.current.gpsCurrentPositionObject.accuracy + " " + LangUtil.Get("Location.Element.Meters.Text");
 
                 string newPositionText = latitudeText + "\n" + longitudeText;
@@ -194,7 +191,7 @@ namespace Henspe.iOS
 
         void SegmentedCell_SegmentSelected(object sender, int e)
         {
-            _selectedSegment = e;
+            selectedSegment = e;
             if (!_parent.TryGetTarget(out MainViewController parent))
                 return;
             parent.RefreshPositionAndAddressRows();

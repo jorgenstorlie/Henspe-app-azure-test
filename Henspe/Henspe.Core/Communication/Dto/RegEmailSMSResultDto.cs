@@ -6,6 +6,8 @@
         public bool resultat { get; set; }
         public bool epost_on { get; set; }
         public bool mob_on { get; set; }
+        public bool epost_off { get; set; }
+        public bool mob_off { get; set; }
         public string pin { get; set; }
         public string error_message { get; set; }
 

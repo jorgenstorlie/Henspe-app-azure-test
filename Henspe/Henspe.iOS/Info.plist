@@ -43,6 +43,8 @@
 		<string>Montserrat-Medium.ttf</string>
 		<string>Montserrat-Regular.ttf</string>
 		<string>Montserrat-Light.ttf</string>
+		<string>Montserrat-Thin.ttf</string>
+		<string>Montserrat-ExtraLight.ttf</string>
 	</array>
 	<key>CFBundleName</key>
 	<string>HENSPE</string>

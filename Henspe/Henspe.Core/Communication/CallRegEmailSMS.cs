@@ -1,50 +1,95 @@
-﻿using System.Threading.Tasks;
-using System;
-using System.Net.Http;
-using Newtonsoft.Json;
+﻿using System.Net;
+using Henspe.Core.Storage;
+using System.Threading.Tasks;
 using Henspe.Core.Communication.Dto;
+using System;
+using System.IO;
+using System.Text;
+using Henspe.Core.Util;
+using Henspe.Core.Const;
+using System.Net.Http;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+using Henspe.Core.Communication;
 
 namespace Henspe.Core.Communication
 {
     public class CallRegEmailSMS
-	{
-        const string NLA113Base = "https://ws.snla-it.no/api/h113/";
-        const string NLARegEmailSMSUrl = NLA113Base + "h113_register.php";
-        static readonly string[] NLAMobAutApiKey = { "0", "e", "a", "7", "a", "b", "2", "f", "5", "3", "8", "2", "7", "8", "0", "f", "7", "b", "c", "6", "4", "f", "e", "6", "4", "e", "c", "f", "a", "1", "c", "9" };
+    {
+        public CallRegEmailSMS()
+        {
+        }
 
         public async Task<RegEmailSMSResultDto> RegEmailSMS(string noContactWithServerString, string mobil, string epost, string os)
-		{
-            RegEmailSMSResultDto regEmailSMSResultDto = new RegEmailSMSResultDto ();
-			regEmailSMSResultDto.success = false;
+        {
+            RegEmailSMSResultDto regEmailSMSResultDto = new RegEmailSMSResultDto();
+            regEmailSMSResultDto.success = false;
 
-            string apikey = String.Join("", NLAMobAutApiKey);
+            string apikey = String.Join("", UrlConst.NLAMobAutApiKey);
 
-            if(mobil != null)
-                mobil = Uri.EscapeUriString (mobil);
+            os = Uri.EscapeUriString(os);
 
-            if(epost != null)
-                epost = Uri.EscapeUriString (epost);
-    
-            os = Uri.EscapeUriString (os);
+            using (CxHttpClient client = new CxHttpClient())
+            {
+                string url = UrlConst.NLARegEmailSMSUrl + "?action=reg&apikey=" + apikey + "&os=" + os;
 
-			using (CxHttpClient client = new CxHttpClient ())
-			{
-                string url = NLARegEmailSMSUrl + "?action=reg&apikey=" + apikey + "&mobil=" + mobil + "&epost=" + epost + "&os=" + os;
-				Task<HttpContent> contentTask = client.DoGet (url);
-				HttpContent content = await contentTask;
-				if(content == null)
-				{
+                if (mobil != null)
+                    url = url + "&mobil=" + Uri.EscapeUriString(mobil);
+
+                if (epost != null)
+                    url = url + "&epost=" + Uri.EscapeUriString(epost);
+
+                Task<HttpContent> contentTask = client.DoGet(url);
+                HttpContent content = await contentTask;
+                if (content == null)
+                {
                     regEmailSMSResultDto.error_message = noContactWithServerString; // Localized no contact with server string
-					return regEmailSMSResultDto;
-				}
+                    return regEmailSMSResultDto;
+                }
 
-				var stringJson = content.ReadAsStringAsync().Result;
-                regEmailSMSResultDto = JsonConvert.DeserializeObject<RegEmailSMSResultDto> (stringJson);
-			}
+                var stringJson = content.ReadAsStringAsync().Result;
+                regEmailSMSResultDto = JsonConvert.DeserializeObject<RegEmailSMSResultDto>(stringJson);
+            }
 
             regEmailSMSResultDto.success = regEmailSMSResultDto.resultat;
 
             return regEmailSMSResultDto;
-		}
-	}
+        }
+
+        public async Task<RegEmailSMSResultDto> UnRegEmailSMS(string noContactWithServerString, string mobil, string epost, string os)
+        {
+            RegEmailSMSResultDto regEmailSMSResultDto = new RegEmailSMSResultDto();
+            regEmailSMSResultDto.success = false;
+
+            string apikey = String.Join("", UrlConst.NLAMobAutApiKey);
+
+            os = Uri.EscapeUriString(os);
+
+            using (CxHttpClient client = new CxHttpClient())
+            {
+                string url = UrlConst.NLARegEmailSMSUrl + "?action=avreg&apikey=" + apikey + "&os=" + os;
+
+                if (mobil != null)
+                    url = url + "&mobil=" + Uri.EscapeUriString(mobil);
+
+                if (epost != null)
+                    url = url + "&epost=" + Uri.EscapeUriString(epost);
+
+                Task<HttpContent> contentTask = client.DoGet(url);
+                HttpContent content = await contentTask;
+                if (content == null)
+                {
+                    regEmailSMSResultDto.error_message = noContactWithServerString; // Localized no contact with server string
+                    return regEmailSMSResultDto;
+                }
+
+                var stringJson = content.ReadAsStringAsync().Result;
+                regEmailSMSResultDto = JsonConvert.DeserializeObject<RegEmailSMSResultDto>(stringJson);
+            }
+
+            regEmailSMSResultDto.success = regEmailSMSResultDto.resultat;
+
+            return regEmailSMSResultDto;
+        }
+    }
 }

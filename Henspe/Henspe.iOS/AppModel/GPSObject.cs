@@ -3,6 +3,7 @@ using CoreLocation;
 using Henspe.Core.Communication.Dto;
 using Henspe.Core.Util;
 using Henspe.iOS.Util;
+using SNLA.Core.Util;
 
 namespace Henspe.iOS.AppModel
 {
@@ -41,9 +42,7 @@ namespace Henspe.iOS.AppModel
                 //string south = LangUtil.Get("Location.Element.South.Text");
                 //string west = LangUtil.Get("Location.Element.West.Text");
 
-                var formattedCoordinatesDto = CoordinateUtil.GetFormattedCoordinateDescription(AppDelegate.current.Settings.CoordinateFormat, 
-                                                                                               value.Latitude, 
-                                                                                               value.Longitude);
+                var formattedCoordinatesDto = AppDelegate.current.coordinateService.GetFormattedCoordinateDescription(UserUtil.settings.format, value.Latitude, value.Longitude);
 
                 if (formattedCoordinatesDto.success)
                 {

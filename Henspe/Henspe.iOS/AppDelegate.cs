@@ -10,6 +10,12 @@ using Henspe.iOS.Const;
 using Henspe.iOS.AppModel;
 using Henspe.Core.Model.Dto;
 using Henspe.Core.Service;
+using Henspe.Core.Storage;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using SNLA.Core.Util;
+using System.IO;
 
 namespace Henspe.iOS
 {
@@ -19,7 +25,8 @@ namespace Henspe.iOS
     [Register("AppDelegate")]
     public partial class AppDelegate : UIApplicationDelegate
     {
-        private SettingsService settingsService;
+        public string os = SettingsConst.ios;
+        public string version;
 
         public string mode = ModeConst.test;
 
@@ -29,32 +36,23 @@ namespace Henspe.iOS
 
         public bool appActicatedOccured;
 
-        // GPS
-        public double highAndLowAccuracyDivider = 200;
-        public double gpsAccuracyRequirement = 200;
-        public double distanceToUpdateAddress = 200;
-        public bool gpsEventOccured = false;
-        public int gpsCoverage = GpsCoverageConst.none;
-        public int lastPositionType = PositionTypeConst.off;
-        public CLAuthorizationStatus gpsStatus;
-        public bool gpsStarted = false;
-        public CLLocationManager iPhoneLocationManager = null;
-        public CLLocation currentLocation = null;
-        public CLLocation lastLocation = null;
-        public CLGeocoder geocoder = null;
-        public bool gpsPosFound = false;
-        public CLLocation lastAddressLocation = null;
-        public GPSObject gpsCurrentPositionObject = new GPSObject();
-        public GPSObject gpsStoredPositionObject = new GPSObject();
-        public double desiredAccuracy = 10;
-        public double distanceFilter = 10;
-		public double roundedLatitude;
-		public double roundedLongitude;
+        // Services
+        private bool deleteDatabaseOnStartup = false;
+        private string noNetworkString;
+        public bool servcicesInitialized = false;
+        public HjertestarterService hjertestarterService;
+        public CoordinateService coordinateService;
+        public RegEmailSMSService regEmailSMSService;
+
+        // Main reference
+        public MainViewController mainViewController = null;
+
+        // Location manager
+        public LocationManager locationManager;
 
         public StructureDto structure;
 
-        // Settings
-        public Settings Settings => settingsService.GetSettings();
+        public Repository repository { get; set; }
 
         // class-level declarations
         UIWindow window;
@@ -63,6 +61,8 @@ namespace Henspe.iOS
             get;
             set;
         }
+
+        private SQLite.SQLiteConnection conn;
 
         public static AppDelegate current { get; private set; }
 
@@ -77,15 +77,67 @@ namespace Henspe.iOS
         {
             current = this;
 
-            settingsService = new SettingsService();
             window = new UIWindow(UIScreen.MainScreen.Bounds);
             client = new CxHttpClient();
             SetupCustomNavigationBar();
             SetupLocalData();
 
-            TranslationUtil.Init("no").Wait();
+            SetupDatabase();
+
+            if (UserUtil.settings.format == CoordinateFormat.Undefined)
+                UserUtil.settings.format = CoordinateFormat.DDM;
+
+            if (deleteDatabaseOnStartup)
+            {
+                repository.DeleteAllTables();
+            }
+
+            GetVersion();
+            SetupServicesIfNeeded();
+
+            var textAttributes = new UITextAttributes();
+            textAttributes.TextColor = ColorConst.snlaBlue;
+            textAttributes.Font = FontConst.fontMedium;
+            UIBarButtonItem.Appearance.SetTitleTextAttributes(textAttributes, UIControlState.Normal);
+            UINavigationBar.Appearance.SetTitleTextAttributes(textAttributes);
+
+            StartAppCenter();
 
             return true;
+        }
+
+        private void StartAppCenter()
+        {
+            AppCenter.Start("48ab726a-46ee-4762-ad50-51a2dcc928b4", typeof(Analytics), typeof(Crashes));
+        }
+
+        private void GetVersion()
+        {
+            NSObject thisVersionObject = NSBundle.MainBundle.ObjectForInfoDictionary("CFBundleShortVersionString");
+            version = thisVersionObject.ToString();
+        }
+
+        private void SetupServicesIfNeeded()
+        {
+            if (servcicesInitialized == false)
+            {
+                noNetworkString = LangUtil.Get("Error.NoResponse");
+
+                hjertestarterService = new HjertestarterService(client, repository, UserUtil.settings, version, os);
+
+                regEmailSMSService = new RegEmailSMSService(client, repository, UserUtil.settings, version, os);
+
+                coordinateService = new CoordinateService();
+                coordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_North, LangUtil.Get("Element.North.Text"));
+                coordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_South, LangUtil.Get("Element.South.Text"));
+                coordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_East, LangUtil.Get("Element.East.Text"));
+                coordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_West, LangUtil.Get("Element.West.Text"));
+                coordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_Degrees, LangUtil.Get("Element.Degrees.Text"));
+                coordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_Minutes, LangUtil.Get("Element.Minutes.Text"));
+                coordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_Seconds, LangUtil.Get("Element.Seconds.Text"));
+
+                servcicesInitialized = true;
+            }
         }
 
         void SetupLocalData()
@@ -95,7 +147,19 @@ namespace Henspe.iOS
             structure.currentStructureSectionId = 0;
         }
 
-		void SetupSectionsWithElements()
+        private void SetupDatabase()
+        {
+            var sqliteFilename = "HenspeDB.db";
+            // we need to put in /Library/ on iOS5.1 to meet Apple's iCloud terms
+            // (they don't want non-user-generated data in Documents)
+            string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal); // Documents folder
+            string libraryPath = Path.Combine(documentsPath, "../Library/"); // Library folder
+            string path = Path.Combine(libraryPath, sqliteFilename);
+            conn = new SQLite.SQLiteConnection(path);
+            repository = new Repository(conn);
+        }
+
+        void SetupSectionsWithElements()
         {
             // Structure that all will be added to
             structure = new StructureDto();
@@ -143,8 +207,8 @@ namespace Henspe.iOS
         {
             UITextAttributes attributes = new UITextAttributes
             {
-                Font = FontConst.fontNavbar,
-                TextColor = ColorConst.textColor
+                Font = FontConst.fontHeadingTable,
+                TextColor = ColorConst.snlaText
             }; // ForegroundColor
 
             // White top
@@ -164,6 +228,26 @@ namespace Henspe.iOS
         	    NSNotificationCenter.DefaultCenter.PostNotificationName(EventConst.appActivated, this);
             });
         }
+
+        #region permissions
+        public bool IsOnboardingNeeded()
+        {
+            bool isLocationRightsNeeded = IsLocationRightsNeeded();
+
+            if (isLocationRightsNeeded)
+                return true;
+            else
+                return false;
+        }
+
+        public bool IsLocationRightsNeeded()
+        {
+            if (locationManager.HasLocationPermission())
+                return false;
+            else
+                return true;
+        }
+        #endregion
 
         // This method is invoked when the application is about to move from active to inactive state.
         // OpenGL applications should use this method to pause.

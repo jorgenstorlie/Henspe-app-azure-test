@@ -2,7 +2,6 @@
 
 using System;
 using Henspe.Core.Util;
-using Henspe.Core.ViewModel;
 using Henspe.iOS.Const;
 using Henspe.iOS.Util;
 using UIKit;
@@ -15,52 +14,25 @@ namespace Henspe.iOS
 		{
 		}
 
-        internal void SetContent(MainViewModel viewModel, bool currentAddress)
+        internal void SetContent()
         {
             BackgroundColor = UIColor.Clear;
 
             UIColor textColor;
 
-            if (currentAddress)
-            {
-                textColor = UIColor.FromRGB(0, 45, 115);
-                SVGUtil.LoadSVGToImageView(imgImage, "ic_e_my_position.svg", new System.Collections.Generic.Dictionary<string, string>());
+            textColor = UIColor.FromRGB(0, 45, 115);
+            SVGUtil.LoadSVGToImageView(imgImage, "ic_e_my_position.svg", new System.Collections.Generic.Dictionary<string, string>());
 
-                if (AppDelegate.current.currentLocation != null)
-                {
-                    var loc = AppDelegate.current.gpsCurrentPositionObject;
-                    labLabelTop.Text = loc.latitudeDescription;
-                    labLabelBottom.Text = loc.longitudeDescription;
-                }
-                else
-                {
-                    labLabelTop.Text = string.Empty;
-                    labLabelBottom.Text = string.Empty;
-                }
+            if (AppDelegate.current.locationManager.locationManager.Location != null)
+            {
+                var loc = AppDelegate.current.locationManager.gpsCurrentPositionObject;
+                labLabelTop.Text = loc.latitudeDescription;
+                labLabelBottom.Text = loc.longitudeDescription;
             }
             else
             {
-                textColor = UIColor.FromRGB(208, 2, 27);
-                SVGUtil.LoadSVGToImageView(imgImage, "ic_e_posisjon_given.svg", new System.Collections.Generic.Dictionary<string, string>());
-
-                if (viewModel.CoordiantesSet)
-                {
-                    var loc = AppDelegate.current.gpsCurrentPositionObject;
-                    labLabelTop.Text = loc.latitudeDescription;
-                    labLabelBottom.Text = loc.longitudeDescription;
-
-                    var coords = CoordinateUtil.GetFormattedCoordinateDescription(viewModel.CoordinateFormat, 
-                                                                               viewModel.SetLatitude.Value,
-                                                                               viewModel.SetLongitude.Value);
-                    labLabelTop.Text = coords.latitudeDescription;
-                    labLabelBottom.Text = coords.longitudeDescription;
-                }
-                else
-                {
-                    labLabelTop.Text = "Ikke satt";
-                    labLabelBottom.Text = string.Empty;
-                }
-
+                labLabelTop.Text = string.Empty;
+                labLabelBottom.Text = string.Empty;
             }
 
             labLabelTop.TextColor = textColor;

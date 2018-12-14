@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using CoreLocation;
 using Foundation;
 using Henspe.Core.Const;
-using Henspe.Core.ViewModel;
 using Henspe.iOS.AppModel;
 using Henspe.iOS.Const;
 using Henspe.iOS.Util;
@@ -15,28 +14,27 @@ namespace Henspe.iOS
 {
     public partial class MainViewController : UIViewController
 	{
+        private bool showHelpUs = false;
 		private MainListTableViewSource mainListTableViewSource = null;
 
 		// Events
 		NSObject observerActivatedOccured;
 
-        private MainViewModel _viewmodel;
-
         private UIStringAttributes normalText = new UIStringAttributes
 		{
-            ForegroundColor = ColorConst.textColor,
-			Font = FontConst.Medium
+            ForegroundColor = ColorConst.snlaText,
+			Font = FontConst.fontMedium
 		};
 
         public MainViewController(IntPtr handle) : base(handle)
 		{
-		}
+            AppDelegate.current.mainViewController = this;
+            AppDelegate.current.locationManager = new LocationManager();
+        }
 
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
-
-            _viewmodel = new MainViewModel();
 
 			SetupNavigationBar();
 			SetupView();
@@ -47,8 +45,8 @@ namespace Henspe.iOS
 
 		public void HandleActivatedOccured(NSNotification notification)
         {
-			if(AppDelegate.current.gpsCurrentPositionObject != null && AppDelegate.current.currentLocation != null)
-				AppDelegate.current.gpsCurrentPositionObject.gpsCoordinates = AppDelegate.current.currentLocation.Coordinate;
+            if(AppDelegate.current.locationManager.gpsCurrentPositionObject != null && AppDelegate.current.locationManager.locationManager.Location != null)
+                AppDelegate.current.locationManager.gpsCurrentPositionObject.gpsCoordinates = AppDelegate.current.locationManager.locationManager.Location.Coordinate;
 
             RefreshPositionAndAddressRows();
         }
@@ -66,20 +64,13 @@ namespace Henspe.iOS
 			UIImageView imgViewLogo = new UIImageView(imgLogo);
 			this.NavigationItem.TitleView = imgViewLogo;
 
-            NavigationItem.RightBarButtonItem.TintColor = ColorConst.Blue;
+            NavigationItem.RightBarButtonItem.TintColor = ColorConst.snlaBlue;
         }
 
 		private void OnSettingsClicked()
 		{
 			UIApplication.SharedApplication.OpenUrl(new NSUrl(UIApplication.OpenSettingsUrlString));
 		}
-
-		/*
-        public void HandleActivatedOccured(NSNotification notification)
-        {
-            DoCallKystvarsel();
-        }
-        */
 
 		public override void ViewDidUnload()
 		{
@@ -95,18 +86,19 @@ namespace Henspe.iOS
 		{
 			base.ViewWillAppear(animated);
 
-            btnHelpUs.SetTitleColor(ColorConst.Blue, UIControlState.Normal);
+            btnHelpUs.SetTitleColor(ColorConst.snlaBlue, UIControlState.Normal);
             btnHelpUs.Layer.BorderColor = btnHelpUs.TitleColor(UIControlState.Normal).CGColor;
             btnHelpUs.Layer.BorderWidth = 1;
             btnHelpUs.Layer.CornerRadius = 5.0f;
 
-            View.BackgroundColor = ColorConst.backgroundColor;
+            View.BackgroundColor = ColorConst.snlaBackground; 
 
-            if(!_viewmodel.ShowHelpUs)
+            if(!showHelpUs)
             {
                 btnHelpUs.Hidden = true;
                 constraintHelpUsHeight.Constant = 0;
             }
+
             myTableView.ReloadData();
 		}
 
@@ -114,19 +106,6 @@ namespace Henspe.iOS
 		{
 			//base.ViewDidAppear(animated);
 
-			StartGPSIfNotStartedAlreadyAfterActivated();
-			//SetupGlowTimers();
-		}
-
-		private void StartGPSIfNotStartedAlreadyAfterActivated()
-		{
-			AppDelegate.current.gpsStatus = CLLocationManager.Status;
-
-			if (AppDelegate.current.gpsStarted == false)
-			{
-				// GPG motor was not started. Restart it.
-				StartGPSTracking();
-			}
 		}
 
 		public override void ViewWillDisappear(bool animated)
@@ -136,10 +115,8 @@ namespace Henspe.iOS
 
 		private void SetupView()
 		{
-			ResetGPSVariables();
-
             // Table setup
-            mainListTableViewSource = new MainListTableViewSource(this, _viewmodel);
+            mainListTableViewSource = new MainListTableViewSource(this);
 			myTableView.Source = mainListTableViewSource;
 			myTableView.BackgroundColor = UIColor.Clear;
             myTableView.SeparatorStyle = UITableViewCellSeparatorStyle.None;
@@ -153,166 +130,6 @@ namespace Henspe.iOS
 			myTableView.ContentInset = insets;
 
 			mainListTableViewSource.sectionsWithRows = AppDelegate.current.structure;
-		}
-
-		private void ResetGPSVariables()
-		{
-			AppDelegate.current.gpsPosFound = false;
-			AppDelegate.current.currentLocation = null;
-			AppDelegate.current.lastAddressLocation = null;
-		}
-
-		#region GPS
-		private void StartGPSTracking()
-		{
-			if (AppDelegate.current.iPhoneLocationManager == null)
-			{
-				AppDelegate.current.iPhoneLocationManager = new CLLocationManager
-				{
-					ActivityType = CLActivityType.OtherNavigation,
-				};
-			}
-			else
-			{
-				AppDelegate.current.iPhoneLocationManager.StopUpdatingLocation();
-			}
-
-			AppDelegate.current.iPhoneLocationManager.DesiredAccuracy = AppDelegate.current.desiredAccuracy;
-			AppDelegate.current.iPhoneLocationManager.DistanceFilter = AppDelegate.current.distanceFilter;
-
-			if (UIDevice.CurrentDevice.CheckSystemVersion(6, 0))
-			{
-				AppDelegate.current.iPhoneLocationManager.LocationsUpdated += HandleLocationsUpdated;
-			}
-			else
-			{
-				// This will not be called on iOS 6. Depricated
-			}
-
-			// iOS 8 requires you to manually request authorization
-			if (UIDevice.CurrentDevice.CheckSystemVersion(8, 0))
-			{
-				AppDelegate.current.iPhoneLocationManager.RequestWhenInUseAuthorization();
-			}
-
-			AppDelegate.current.gpsStatus = CLLocationManager.Status;
-
-            // start updating our location, et. al.
-            if (CLLocationManager.Status != CLAuthorizationStatus.NotDetermined &&
-                CLLocationManager.Status != CLAuthorizationStatus.Authorized &&
-                CLLocationManager.Status != CLAuthorizationStatus.AuthorizedAlways &&
-                CLLocationManager.Status != CLAuthorizationStatus.AuthorizedWhenInUse)
-            {
-                // Something is wrong with the GPS grant
-                AppDelegate.current.gpsStarted = false;
-
-                InvokeOnMainThread(delegate
-                {
-                    var alert = UIAlertController.Create(LangUtil.Get("Alert.Title.Warning"),
-                                                                       LangUtil.Get("GPS.NoAccessToGPS.Message"),
-                                                                       UIAlertControllerStyle.Alert);
-                    UIAlertAction.Create(LangUtil.Get("Alert.OK"), UIAlertActionStyle.Default, (a) =>
-                    {
-                        AppDelegate.current.iPhoneLocationManager.StopUpdatingLocation();
-                    });
-                    PresentViewController(alert, true, null);
-                });
-            }
-			else if (CLLocationManager.LocationServicesEnabled)
-			{
-				AppDelegate.current.iPhoneLocationManager.StartUpdatingLocation();
-				AppDelegate.current.gpsStarted = true;
-			}
-		}
-
-		private void HandleLocationsUpdated(object sender, CLLocationsUpdatedEventArgs e)
-		{
-			UpdateLocation(e);
-		}
-
-		private void UpdateLocation(CLLocationsUpdatedEventArgs e)
-		{
-			if (AppDelegate.current.iPhoneLocationManager != null)
-			{
-				AppDelegate.current.gpsPosFound = true;
-
-				AppDelegate.current.currentLocation = e.Locations[e.Locations.Length - 1];
-
-                // Debug
-                //AppDelegate.current.currentLocation = new CLLocation(59.9155646, 10.6075103);
-
-				double roundedLatitude = Math.Floor(AppDelegate.current.currentLocation.Coordinate.Latitude);
-				double roundedLongitude = Math.Floor(AppDelegate.current.currentLocation.Coordinate.Longitude);
-
-				// If location is cupertino, we are in simulator. Lets set it to Norway to speed things up
-				if (AppDelegate.current.roundedLatitude == POIConst.cupertinoLatitude && AppDelegate.current.roundedLongitude == POIConst.cupertinoLongitude)
-				{
-					AppDelegate.current.currentLocation = new CLLocation(POIConst.stabekkLatitude, POIConst.stabekkLongitude);
-				}
-
-				int previousGpsCoverage = AppDelegate.current.gpsCoverage;
-				int newGpsCoverage = GpsCoverageConst.none;
-
-				newGpsCoverage = iOSMapUtil.GetAccuracyType(AppDelegate.current.currentLocation.HorizontalAccuracy, AppDelegate.current.highAndLowAccuracyDivider, GpsCoverageConst.low, GpsCoverageConst.high);
-
-				AppDelegate.current.gpsCoverage = newGpsCoverage;
-
-				GPSObject gpsObject = new GPSObject();
-				gpsObject.accuracy = AppDelegate.current.currentLocation.HorizontalAccuracy;
-				gpsObject.gpsCoordinates = AppDelegate.current.currentLocation.Coordinate;
-				gpsObject.storedDateTime = DateTime.Now;
-				AppDelegate.current.gpsCurrentPositionObject = gpsObject;
-
-				AppDelegate.current.gpsEventOccured = true;
-
-				NSNotificationCenter.DefaultCenter.PostNotificationName(EventConst.gpsEvent, this);
-
-				if (AppDelegate.current.currentLocation.HorizontalAccuracy <= AppDelegate.current.gpsAccuracyRequirement)
-				{
-					SetupPosition(PositionTypeConst.found);
-				}
-				else
-				{
-					SetupPosition(PositionTypeConst.finding);
-				}
-
-				//Console.WriteLine ("Location updated");
-				bool positionSignificantlyChanged = UpdateGPSPositionAndAlsoAddressIfSignificantChange();
-			}
-			else
-			{
-				StartGPSTracking();
-			}
-		}
-
-        private void SetupPosition(int found)
-        {
-            //throw new NotImplementedException();
-        }
-
-        private bool UpdateGPSPositionAndAlsoAddressIfSignificantChange()
-		{
-			double lat1 = AppDelegate.current.currentLocation.Coordinate.Latitude;
-			double lon1 = AppDelegate.current.currentLocation.Coordinate.Longitude;
-			double lat2 = 0;
-			double lon2 = 0;
-
-			if (AppDelegate.current.lastAddressLocation != null)
-			{
-				lat2 = AppDelegate.current.lastAddressLocation.Coordinate.Latitude;
-				lon2 = AppDelegate.current.lastAddressLocation.Coordinate.Longitude;
-			}
-
-			if (iOSMapUtil.Distance(lat1, lon1, lat2, lon2) > AppDelegate.current.distanceToUpdateAddress || (lat2 == 0 && lon2 == 0))
-			{
-				AppDelegate.current.lastAddressLocation = AppDelegate.current.currentLocation;
-
-                RefreshPositionAndAddressRows();
-
-				return true;
-			}
-
-			return false;
 		}
 
         private void RefreshPositionRow()
@@ -339,13 +156,9 @@ namespace Henspe.iOS
 			NSIndexPath[] indexPathList = new NSIndexPath[] { NSIndexPath.FromRowSection(row, section) };
 			myTableView.ReloadRows(indexPathList, UITableViewRowAnimation.Fade);
         }
-        #endregion
-
 
         partial void HelpUsClicked(NSObject sender)
         {
-            var controller = new HelpUsViewController();
-            PresentViewController(controller, true, null);
         }
     }
 }

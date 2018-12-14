@@ -1,4 +1,6 @@
 ﻿using System;
+using CoreTelephony;
+using ObjCRuntime;
 using UIKit;
 
 namespace Henspe.iOS.Util
@@ -9,8 +11,34 @@ namespace Henspe.iOS.Util
 		{
 		}
 
-		// Must be run on mainthread
-		public static bool isIpad() 
+        static public bool CanDevicePlaceCall()
+        {
+            if (UIApplication.SharedApplication.CanOpenUrl(new Foundation.NSUrl("tel://")))
+            {
+                CTTelephonyNetworkInfo networkInfo = new CTTelephonyNetworkInfo();
+                CTCarrier ctCarrier = networkInfo.SubscriberCellularProvider;
+                string mnc = ctCarrier.MobileNetworkCode;
+                if (mnc == null || mnc.Length == 0 || mnc.Equals("65535"))
+                    return false;
+                else
+                    return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        static public bool IsRunningOnSimulator()
+        {
+            if (ObjCRuntime.Runtime.Arch == Arch.SIMULATOR)
+                return true;
+            else
+                return false;
+        }
+
+        // Must be run on mainthread
+        public static bool isIpad() 
 		{
 			if(UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
 				return true;
@@ -50,5 +78,24 @@ namespace Henspe.iOS.Util
 
             return false;
         }
-	}
+
+        static public bool HasExtraTop()
+        {
+            // Like iPhone X
+            nfloat top = 0;
+            if (UIDevice.CurrentDevice.CheckSystemVersion(11, 0))
+            {
+                // iOS 11 or later
+                if (UIApplication.SharedApplication.KeyWindow != null && UIApplication.SharedApplication.KeyWindow.SafeAreaInsets != null)
+                {
+                    top = UIApplication.SharedApplication.KeyWindow.SafeAreaInsets.Top;
+                }
+            }
+
+            if (top > 0)
+                return true;
+            else
+                return false;
+        }
+    }
 }

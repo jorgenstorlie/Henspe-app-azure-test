@@ -116,23 +116,62 @@
     <Reference Include="Xamarin.Essentials">
       <HintPath>..\packages\Xamarin.Essentials.0.11.0-preview\lib\xamarinios10\Xamarin.Essentials.dll</HintPath>
     </Reference>
+    <Reference Include="SQLitePCLRaw.core">
+      <HintPath>..\packages\SQLitePCLRaw.core.1.1.11\lib\Xamarin.iOS10\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.sqlite3">
+      <HintPath>..\packages\SQLitePCLRaw.provider.sqlite3.ios_unified.1.1.11\lib\Xamarin.iOS10\SQLitePCLRaw.provider.sqlite3.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_green">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.11\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_green.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_v2">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.11\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_v2.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite-net">
+      <HintPath>..\packages\sqlite-net-pcl.1.5.231\lib\netstandard1.1\SQLite-net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter">
+      <HintPath>..\packages\Microsoft.AppCenter.1.11.0\lib\Xamarin.iOS10\Microsoft.AppCenter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.iOS.Bindings">
+      <HintPath>..\packages\Microsoft.AppCenter.1.11.0\lib\Xamarin.iOS10\Microsoft.AppCenter.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Crashes">
+      <HintPath>..\packages\Microsoft.AppCenter.Crashes.1.11.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Crashes.iOS.Bindings">
+      <HintPath>..\packages\Microsoft.AppCenter.Crashes.1.11.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Analytics">
+      <HintPath>..\packages\Microsoft.AppCenter.Analytics.1.11.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Analytics.iOS.Bindings">
+      <HintPath>..\packages\Microsoft.AppCenter.Analytics.1.11.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="MBProgressHUD">
+      <HintPath>..\packages\mbprogresshud.0.9.2.0\lib\Xamarin.iOS\MBProgressHUD.dll</HintPath>
+    </Reference>
+    <Reference Include="Nager.Date">
+      <HintPath>..\packages\Nager.Date.1.22.3\lib\netstandard2.0\Nager.Date.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-1024.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-167.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-152.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-83.5%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Notification.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Notification%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Notification%403x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-40%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iTunesArtwork%401x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small%403x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-40%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-40.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-20.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-180.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-120.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-87.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-58.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-80.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -150,7 +189,6 @@
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
     <InterfaceDefinition Include="InitialCardViewController.xib" />
-    <InterfaceDefinition Include="HelpUs.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -179,7 +217,6 @@
     <Compile Include="Util\LocalDateUtil.cs" />
     <Compile Include="Util\NetUtil.cs" />
     <Compile Include="Util\StoreUtil.cs" />
-    <Compile Include="Util\UserUtil.cs" />
     <Compile Include="Util\ViewUtil.cs" />
     <Compile Include="MainViewController.cs" />
     <Compile Include="MainViewController.designer.cs">
@@ -203,47 +240,82 @@
     </Compile>
     <Compile Include="Extension\StringExtensions.cs" />
     <Compile Include="Extension\ViewExtensions.cs" />
-    <Compile Include="HeaderTableCell.cs" />
-    <Compile Include="HeaderTableCell.designer.cs">
-      <DependentUpon>HeaderTableCell.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainListTableViewSource.cs" />
     <Compile Include="Util\SVGUtil.cs" />
-    <Compile Include="SegmentedCell.cs" />
-    <Compile Include="SegmentedCell.designer.cs">
-      <DependentUpon>SegmentedCell.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddressCell.cs" />
-    <Compile Include="AddressCell.designer.cs">
-      <DependentUpon>AddressCell.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ButtonsCell.cs" />
-    <Compile Include="ButtonsCell.designer.cs">
-      <DependentUpon>ButtonsCell.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HelpUsViewController.cs" />
-    <Compile Include="HelpUsViewController.designer.cs">
-      <DependentUpon>HelpUsViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RegisterEmailViewController.cs" />
-    <Compile Include="RegisterEmailViewController.designer.cs">
-      <DependentUpon>RegisterEmailViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="SettingsViewController.cs" />
     <Compile Include="SettingsViewController.designer.cs">
       <DependentUpon>SettingsViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="CoordTypeViewController.cs" />
-    <Compile Include="CoordTypeViewController.designer.cs">
-      <DependentUpon>CoordTypeViewController.cs</DependentUpon>
+    <Compile Include="MapViewController.cs" />
+    <Compile Include="MapViewController.designer.cs">
+      <DependentUpon>MapViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="CoordTypeEmbeddedController.cs" />
-    <Compile Include="CoordTypeEmbeddedController.designer.cs">
-      <DependentUpon>CoordTypeEmbeddedController.cs</DependentUpon>
+    <Compile Include="InfoViewController.cs" />
+    <Compile Include="InfoViewController.designer.cs">
+      <DependentUpon>InfoViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="EnterCoordinatesViewController.cs" />
-    <Compile Include="EnterCoordinatesViewController.designer.cs">
-      <DependentUpon>EnterCoordinatesViewController.cs</DependentUpon>
+    <Compile Include="ConsentViewController.cs" />
+    <Compile Include="ConsentViewController.designer.cs">
+      <DependentUpon>ConsentViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsCoordinateFormatViewController.cs" />
+    <Compile Include="SettingsCoordinateFormatViewController.designer.cs">
+      <DependentUpon>SettingsCoordinateFormatViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapTopViewController.cs" />
+    <Compile Include="MapTopViewController.designer.cs">
+      <DependentUpon>MapTopViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapTopCameraViewController.cs" />
+    <Compile Include="MapTopCameraViewController.designer.cs">
+      <DependentUpon>MapTopCameraViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Renderer\AddressCell.cs" />
+    <Compile Include="Renderer\AddressCell.designer.cs">
+      <DependentUpon>AddressCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Renderer\ButtonsCell.cs" />
+    <Compile Include="Renderer\ButtonsCell.designer.cs">
+      <DependentUpon>ButtonsCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Renderer\HeaderTableCell.cs" />
+    <Compile Include="Renderer\HeaderTableCell.designer.cs">
+      <DependentUpon>HeaderTableCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Renderer\SegmentedCell.cs" />
+    <Compile Include="Renderer\SegmentedCell.designer.cs">
+      <DependentUpon>SegmentedCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Renderer\SettingsInfoTableCell.cs" />
+    <Compile Include="Renderer\SettingsInfoTableCell.designer.cs">
+      <DependentUpon>SettingsInfoTableCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Renderer\SettingsTopInfoTableCell.cs" />
+    <Compile Include="Renderer\SettingsTopInfoTableCell.designer.cs">
+      <DependentUpon>SettingsTopInfoTableCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Renderer\SettingsLocationTableCell.cs" />
+    <Compile Include="Renderer\SettingsLocationTableCell.designer.cs">
+      <DependentUpon>SettingsLocationTableCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Renderer\SettingsCoordinatesTableCell.cs" />
+    <Compile Include="Renderer\SettingsCoordinatesTableCell.designer.cs">
+      <DependentUpon>SettingsCoordinatesTableCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocationManager.cs" />
+    <Compile Include="Util\UrlUtil.cs" />
+    <Compile Include="Util\LocaleUtil.cs" />
+    <Compile Include="Util\TableUtil.cs" />
+    <Compile Include="SettingsShowPositionDuringCallTableCell.cs" />
+    <Compile Include="SettingsShowPositionDuringCallTableCell.designer.cs">
+      <DependentUpon>SettingsShowPositionDuringCallTableCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\KeyboardUtil.cs" />
+    <Compile Include="Util\EmailUtil.cs" />
+    <Compile Include="Util\SpinnerUtil.cs" />
+    <Compile Include="Renderer\SettingsCoordinateFormatTableCell.cs" />
+    <Compile Include="Renderer\SettingsCoordinateFormatTableCell.designer.cs">
+      <DependentUpon>SettingsCoordinateFormatTableCell.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -267,7 +339,6 @@
     <BundleResource Include="Resources\HENSPEintropart1.json" />
     <BundleResource Include="Resources\HENSPEintropart2.json" />
     <BundleResource Include="Resources\HENSPEintropart3.json" />
-    <BundleResource Include="Resources\rocket.json" />
     <BundleResource Include="Resources\ic_arrow_left_portrait.svg" />
     <BundleResource Include="Resources\ic_arrow_right.svg" />
     <BundleResource Include="Resources\ic_arrow_up.svg" />
@@ -323,6 +394,18 @@
     <BundleResource Include="..\Henspe.Core\Translations\Translations_no.json">
       <Link>Resources\Translations_no.json</Link>
     </BundleResource>
+    <BundleResource Include="Resources\btn_blue%402x.png" />
+    <BundleResource Include="Resources\btn_blue%403x.png" />
+    <BundleResource Include="Resources\btn_blue.png" />
+    <BundleResource Include="Resources\btn_blue_disabled.png" />
+    <BundleResource Include="Resources\btn_blue_disabled%402x.png" />
+    <BundleResource Include="Resources\btn_blue_disabled%403x.png" />
+    <BundleResource Include="Resources\btn_blue_down.png" />
+    <BundleResource Include="Resources\btn_blue_down%402x.png" />
+    <BundleResource Include="Resources\btn_blue_down%403x.png" />
+    <BundleResource Include="Resources\intro.json" />
+    <BundleResource Include="Resources\Montserrat-ExtraLight.ttf" />
+    <BundleResource Include="Resources\Montserrat-Thin.ttf" />
   </ItemGroup>
   <Import Project="..\Henspe.Core\Henspe.Core.projitems" Label="Shared" Condition="Exists('..\Henspe.Core\Henspe.Core.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

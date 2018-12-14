@@ -17,6 +17,51 @@ CoordinateFormatDDM = "Grader og min.";
 CoordinateFormatDMS = "Grader, min. og sek.";
 CoordinateFormatUTM = "UTM";
 
+// Elements
+Element.Degrees.Text = "grader";
+Element.Now.Text = "nå";
+Element.Minute.Text = "m";
+Element.Minutes.Text = "minutter";
+Element.Seconds.Text = "sekunder";
+Element.Second.Text = "s";
+Element.Hour.Text = "t";
+Element.Day.Text = "d";
+Element.North.Large.Text = "Nord";
+Element.North.Text = "nord";
+Element.East.Text = "øst";
+Element.East.Large.Text = "Øst";
+Element.South.Text = "sør";
+Element.West.Text = "vest";
+Element.Meters.Text = "meter";
+Element.Meters.Short.Text = "m";
+
+// Coordinates
+SettingsViewController.Coordinates.Header = "Koordinater";
+SettingsViewController.Coordinates.Info = "Koordinatene kan vises på fire formater.";
+SettingsViewController.Coordinates.DD = "DD - Grader";
+SettingsViewController.Coordinates.DDM = "DDM - Grader og minutter";
+SettingsViewController.Coordinates.DMS = "DMS - Grader, minutter og sekunder";
+SettingsViewController.Coordinates.UTM = "UTM - Universal Transverse Mercator";
+SettingsViewController.Coordinates.Format.Title = "Koordinat format";
+SettingsViewController.Coordinates.Format.Header = "Velg hvordan du vil vise kartposisjonen din";
+//Location
+SettingsViewController.Location.Header = "Sted";
+SettingsViewController.Location.Info = "Velg alltid så appen kan sende oppdatert posisisjon under en nødsamtale for best mulig nøyaktighet.";
+SettingsViewController.Location.Text = "Stedstjenester";
+SettingsViewController.Location.Unset = "Ikke satt";
+SettingsViewController.Location.NotAllowed = "Ikke tillatt";
+SettingsViewController.Location.OnlyWhenInUse = "Kun når i bruk";
+SettingsViewController.Location.Always = "Alltid";
+//Information
+SettingsViewController.Information.Header = "Informasjon";
+SettingsViewController.Information.Text = "Personvernerklæring";
+SettingsViewController.Information.Text2 = "Brukervilkår";
+//Concent
+SettingsViewController.Concent.Header = "Hold deg oppdatert";
+SettingsViewController.Concent.Text = "Les mer om vårt livsviktige arbeide";
+SettingsViewController.Concent.Accessibility.Label = "Hold deg oppdatert";
+SettingsViewController.Concent.Accessibility.Hint = "Les mer om vårt livsviktige arbeide";
+
 // GPS
 GPS.NoAccessToGPS.Message = "Fikk ikke tilgang til Sted. Velg tannhjulet øverst til høyre og velg tillat når appen er i bruk for Sted så appen skal kunne vise stedet du er.";
 GPS.UnknownAddress = "Ukjent adresse";
@@ -48,6 +93,7 @@ Navigation.Menuitem.Back = "Tilbake";
 Navigation.Menuitem.Hjem = "Hjem";
 
 // Initial
+Initial.Header = "H E N S P E";
 Initial.Skip = "Hopp over";
 Initial.Next = "Neste";
 Initial.Finished = "Ferdig";
@@ -113,15 +159,34 @@ Structure.Evakuering.Flaskehalser = "Avklar flaskehalser";
 Structure.Evakuering.Kjeder = "Effektive evakueringskjeder";
 Structure.Evakuering.Rett = "Rett pasient til rett sykehus";
 
-// Help us
-HelpUs.Title = "Du er viktig";
-HelpUs.AboutHENSPE = "HENSPE er utviklet ved hjelp av innsamlede midler. Vi vil kontakte deg fremover med informasjon om the livsviktige arbeidet.";
-HelpUs.More = "Mer informasjon";
-HelpUs.AboutSNLA = "Stiftelsen Norsk Luftambulanse er en ideell organisasjon som fullt ut er finansiert av privat innsamlede midler fra enkeltpersoner og støttebedrifter.\n\nDin støtte går til forskning og utvikling for at alle skal få raskere og riktigere avansert akkuttmedisinsk behandling utenfor sykehus. Din støtte bidrar til å redde liv i hele Norge. Driften av luftambulansetjenesten er statlig finansiert.";
-HelpUs.Yes = "Ja takk, jeg er over 18 år og vil motta informasjon";
-HelpUs.SMS = "På SMS";
-HelpUs.Email = "På e-post";
-HelpUs.No = "Nei takk";
+// Info View
+Consent.Title.Text = "Hold deg oppdatert";
+Consent.Header.Text = "Hjelp 113 er utviklet ved hjelp av innsamlede midler. Vi ønsker å holde deg oppdatert med informasjon om vårt livsviktige arbeid (ca 1-2 ganger i måneden)";
+Consent.ReadMore.Text = "Les mer";
+Consent.Description.Text = "Stiftelsen Norsk Luftambulanse er en ideell organisasjon som fullt er finansiert av privat innsamlede midler fra enkeltpersoner og støttebedrifter.\n\nDin støtte gå til forskning og utvikling for at alle skal få raskere og riktigere avansert akuttmedisinsk behandling utenfor sykehus. Din støtte bidrar til å redde liv i hele Norge. Driften av luftambulansetjenesten er statlig finansiert.";
+Consent.Approval.Text = "Ja takk, jeg er over 18 år og vil motta informasjon på";
+Consent.SMS.Text = "SMS";
+Consent.Email.Text = "E-post";
+Consent.TextInput.Placeholder = "Skriv inn din e-post";
+Consent.SendButton.Text = "Godta";
+Consent.UpdateButton.Text = "Oppdater";
+Consent.NoThanksButton.Text = "Nei takk";
+Consent.Thanks.Text = "Tusen takk!";
+Consent.ThanksForNoThanks.Text = "Nei er registrert";
+Consent.Error.Text = "Fikk ikke kontakt med serveren";
+
+Consent.SMS.Accessibility.Label = "SMS";
+Consent.SMS.Accessibility.Hint = "Velg for å kunne bli kontaktet";
+Consent.Email.Accessibility.Label = "E-post";
+Consent.Email.Accessibility.Hint = "Velg for å skrive inn epostadresse";
+Consent.UpdateButton.Accessibility.Label = "Godta";
+Consent.UpdateButton.Accessibility.Hint = "Trykk for å godta";
+Consent.ReadMore.Accessibility.Label = "Les mer";
+Consent.ReadMore.Accessibility.Hint = "Trykk for å vise mer informasjon";
+Consent.NoThanksButton.Accessibility.Label = "Nei takk";
+Consent.NoThanksButton.Accessibility.Hint = "Trykk for å ikke bli kontaktet";
+Consent.EmailAdress.Accessibility.Label = "E-post adresse";
+Consent.EmailAdress.Accessibility.Hint = "Skriv inn epostadresse";
 
 // Register email
 RegEmail.Title = "Nyhetsbrev";

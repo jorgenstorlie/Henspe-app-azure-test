@@ -79,5 +79,20 @@ namespace Henspe.Core.Util
 		{
 			return Convert.ToDouble (value);
 		}
-	}
+
+        static public double MetersToDecimalDegrees(double meters, double latitude)
+        {
+            try
+            {
+                double result = meters / (111.32 * 1000 * Math.Cos(latitude * (Math.PI / 180)));
+                return result;
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("MetersToDecimalDegrees exception: " + e.ToString());
+            }
+
+            return 0;
+        }
+    }
 }

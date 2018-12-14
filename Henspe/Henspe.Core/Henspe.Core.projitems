@@ -15,14 +15,14 @@
     <Folder Include="$(MSBuildThisFileDirectory)Util\" />
     <Folder Include="$(MSBuildThisFileDirectory)Model\Dto\" />
     <Folder Include="$(MSBuildThisFileDirectory)Communication\Dto\" />
-    <Folder Include="$(MSBuildThisFileDirectory)ViewModel\" />
     <Folder Include="$(MSBuildThisFileDirectory)Service\" />
     <Folder Include="$(MSBuildThisFileDirectory)Translations\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Storage\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Services\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Util\BugtrackUtil.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\ConvertUtil.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Util\CoordinateUtil.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\DateUtil.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\JsonUtil.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\MathUtil.cs" />
@@ -43,15 +43,24 @@
     <Compile Include="$(MSBuildThisFileDirectory)Communication\CallDebugInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\CxHttpClient.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\Dto\FormattedCoordinatesDto.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Communication\ISettings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\CallRegEmailSMS.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\Dto\RegEmailSMSResultDto.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\RegisterEmailViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Service\SettingsService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\MainViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\SettingsViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Service\TranslationService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\EnterCoordinatesViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Storage\Repository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\BusinessEntityBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Hjertestarter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\IBusinessEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Service\HjertestarterService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Service\IHjertestarterService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\CallHjertestarter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\Dto\GetHjertestartersResultDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\Dto\HjertestartersInBoxIfNeededResultDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Const\UrlConst.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\UserUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\NumberUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Service\RegEmailSMSService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Const\SettingsConst.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Service\CoordinateService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Const\NLA113OsTypes.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Translations\Translations_no.json" />

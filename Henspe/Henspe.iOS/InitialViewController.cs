@@ -7,6 +7,7 @@ using CoreGraphics;
 using Foundation;
 using Henspe.iOS.Const;
 using Henspe.iOS.Util;
+using SNLA.Core.Util;
 using UIKit;
 
 namespace Henspe.iOS
@@ -35,7 +36,7 @@ namespace Henspe.iOS
         {
             base.ViewDidLoad();
 
-            _animation1 = LOTAnimationView.AnimationNamed("rocket");
+            _animation1 = LOTAnimationView.AnimationNamed("intro");
             _animation2 = LOTAnimationView.AnimationNamed("HENSPEintropart2");
             _animation3 = LOTAnimationView.AnimationNamed("HENSPEintropart3");
 
@@ -46,7 +47,7 @@ namespace Henspe.iOS
         {
             base.ViewWillAppear(animated);
 
-			if (UserUtil.settings.instructionsFinished == false)
+            if (UserUtil.settings.onboardingCompleted == false)
             {
                 ClearAllBeforeDrawing();
                 SetupView();
@@ -66,15 +67,20 @@ namespace Henspe.iOS
 		void SetupView()
         {
 			pagPager.PageIndicatorTintColor = UIColor.White;
-			pagPager.CurrentPageIndicatorTintColor = ColorConst.themeSecondaryColor;
+			pagPager.CurrentPageIndicatorTintColor = ColorConst.snlaRed;
 
-			if (UserUtil.settings.instructionsFinished == false)
+			if (UserUtil.settings.onboardingCompleted == false)
             {
+                labHeader.Text = LangUtil.Get("Initial.Header");
+                labHeader.TextColor = ColorConst.snlaRed;
+
+                btnSkip.SetTitleColor(ColorConst.snlaRed, UIControlState.Normal);
                 btnSkip.SetTitle(LangUtil.Get("Initial.Skip"), UIControlState.Normal);
                 btnSkip.Hidden = false;
 
                 pagPager.Pages = totalPages;
 
+                btnNext.SetTitleColor(ColorConst.snlaRed, UIControlState.Normal);
                 btnNext.SetTitle(LangUtil.Get("Initial.Next") + " >", UIControlState.Normal);
             }
             else
@@ -178,9 +184,9 @@ namespace Henspe.iOS
 
 		private void GoToMain()
         {
-			UserUtil.settings.instructionsFinished = true;
+            UserUtil.settings.onboardingCompleted = true;
 
-            InvokeOnMainThread(() =>
+            InvokeOnMainThread(delegate 
             {
                 this.PerformSegue("segueInitialized", this);
             });
@@ -188,7 +194,7 @@ namespace Henspe.iOS
 
         private void GoToMainScreen()
         {
-            InvokeOnMainThread(() =>
+            InvokeOnMainThread(delegate 
             {
                 this.PerformSegue("segueInitialized", this);
             });

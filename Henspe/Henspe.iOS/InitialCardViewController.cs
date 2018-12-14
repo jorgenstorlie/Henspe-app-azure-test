@@ -73,8 +73,8 @@ namespace Henspe.iOS
         {
             this.View.BackgroundColor = UIColor.Clear;
 
-            labHeader.TextColor = ColorConst.textColor;
-            labText.TextColor = ColorConst.textColor;
+            labHeader.TextColor = ColorConst.snlaText;
+            labText.TextColor = ColorConst.snlaText;
 
             if (pageNumber == 1)
             {
