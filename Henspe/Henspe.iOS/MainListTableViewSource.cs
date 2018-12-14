@@ -148,20 +148,6 @@ namespace Henspe.iOS
                 selectedSegment = 0;
                 return addressCell;
             }
-            else if(structureElement.elementType == StructureElementDto.ElementType.Selector)
-            {
-                var segmentedCell = tableView.DequeueReusableCell("SegmentedCell", indexPath) as SegmentedCell;
-                segmentedCell.SegmentSelected -= SegmentedCell_SegmentSelected;
-                segmentedCell.SetContent(new [] { "Din posisjon", "Angitt posisjon" }.ToList(), selectedSegment);
-                segmentedCell.SegmentSelected += SegmentedCell_SegmentSelected;
-                return segmentedCell;
-            }
-            else if(structureElement.elementType == StructureElementDto.ElementType.Buttons)
-            {
-                var buttonsCell = tableView.DequeueReusableCell("ButtonsCell", indexPath) as ButtonsCell;
-                buttonsCell.SetContent();
-                return buttonsCell;
-            }
             else
             {
                 return null;

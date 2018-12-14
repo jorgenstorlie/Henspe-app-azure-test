@@ -43,11 +43,6 @@ namespace Henspe.iOS
 				actActivityIndicator = null;
 			}
 
-			if (labHeader != null) {
-				labHeader.Dispose ();
-				labHeader = null;
-			}
-
 			if (btnNext != null) {
 				btnNext.Dispose ();
 				btnNext = null;
@@ -56,6 +51,11 @@ namespace Henspe.iOS
 			if (btnSkip != null) {
 				btnSkip.Dispose ();
 				btnSkip = null;
+			}
+
+			if (labHeader != null) {
+				labHeader.Dispose ();
+				labHeader = null;
 			}
 
 			if (pagPager != null) {

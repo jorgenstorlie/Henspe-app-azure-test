@@ -185,11 +185,7 @@ namespace Henspe.iOS
 		private void GoToMain()
         {
             UserUtil.settings.onboardingCompleted = true;
-
-            InvokeOnMainThread(delegate 
-            {
-                this.PerformSegue("segueInitialized", this);
-            });
+            GoToMainScreen();
         }
 
         private void GoToMainScreen()

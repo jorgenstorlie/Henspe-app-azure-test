@@ -274,17 +274,9 @@
     <Compile Include="Renderer\AddressCell.designer.cs">
       <DependentUpon>AddressCell.cs</DependentUpon>
     </Compile>
-    <Compile Include="Renderer\ButtonsCell.cs" />
-    <Compile Include="Renderer\ButtonsCell.designer.cs">
-      <DependentUpon>ButtonsCell.cs</DependentUpon>
-    </Compile>
     <Compile Include="Renderer\HeaderTableCell.cs" />
     <Compile Include="Renderer\HeaderTableCell.designer.cs">
       <DependentUpon>HeaderTableCell.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Renderer\SegmentedCell.cs" />
-    <Compile Include="Renderer\SegmentedCell.designer.cs">
-      <DependentUpon>SegmentedCell.cs</DependentUpon>
     </Compile>
     <Compile Include="Renderer\SettingsInfoTableCell.cs" />
     <Compile Include="Renderer\SettingsInfoTableCell.designer.cs">
