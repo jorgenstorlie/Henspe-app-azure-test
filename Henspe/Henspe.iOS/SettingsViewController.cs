@@ -228,12 +228,11 @@ namespace Henspe.iOS
     // Table view source
     public class SettingsViewSource : UITableViewSource
     {
-        private const int numberOfSections = 8;
+        private const int numberOfSections = 4;
         public int concentSection = 0;
-        public int extraInfoSection = 6;
         public int coordinatsSection = 1;
         public int locationSection = 2;
-        public int informationSection = 7;
+        public int informationSection = 3;
 
         private WeakReference<SettingsViewController> _parent;
         private int headerHeight = 40;
@@ -286,9 +285,7 @@ namespace Henspe.iOS
             label.Font = FontConst.fontHeadingTable;
             label.TextColor = ColorConst.headerTextColor;
 
-            if (section == extraInfoSection)
-                label.Text = LangUtil.Get("SettingsViewController.ExtraInfo.Header").ToUpper();
-            else if (section == coordinatsSection)
+            if (section == coordinatsSection)
                 label.Text = LangUtil.Get("SettingsViewController.Coordinates.Header").ToUpper();
             else if (section == locationSection)
                 label.Text = LangUtil.Get("SettingsViewController.Location.Header").ToUpper();
@@ -307,16 +304,11 @@ namespace Henspe.iOS
 
         private bool GetSectionVisible(nint section)
         {
-            if (section == extraInfoSection)
-                return false;
-            else
-                return true;
+            return true;
         }
 
         private bool GetCellVisible(NSIndexPath indexPath)
         {
-            if (indexPath.Section == extraInfoSection)
-                return false;
             return true;
         }
 
@@ -324,26 +316,14 @@ namespace Henspe.iOS
         {
             string cellIdentifier = "";
 
-            if (indexPath.Section == extraInfoSection)
-            {
-                cellIdentifier = "cellId1";
-            }
-            else if (indexPath.Section == coordinatsSection)
-            {
-                cellIdentifier = "cellId2";
-            }
+            if (indexPath.Section == coordinatsSection)
+                cellIdentifier = "cellIdCoordinates";
             else if (indexPath.Section == locationSection)
-            {
-                cellIdentifier = "cellId5";
-            }
+                cellIdentifier = "cellIdLocation";
             else if (indexPath.Section == informationSection)
-            {
-                cellIdentifier = "cellId7";
-            }
+                cellIdentifier = "cellIdInfo";
             else if (indexPath.Section == concentSection)
-            {
-                cellIdentifier = "cellId7";
-            }
+                cellIdentifier = "cellIdTopInfo";
             return cellIdentifier;
         }
 
@@ -441,12 +421,53 @@ namespace Henspe.iOS
                 }
                 return settingsLocationTableCell;
             }
-            else if (indexPath.Section == informationSection || indexPath.Section == concentSection)
+            else if (indexPath.Section == concentSection)
+            {
+                SettingsTopInfoTableCell settingsTopInfoTableCell = tableView.DequeueReusableCell(cellIdentifier) as SettingsTopInfoTableCell;
+                settingsTopInfoTableCell.BackgroundColor = UIColor.Clear;
+                settingsTopInfoTableCell.LabInfo.TextColor = ColorConst.snlaText;
+                settingsTopInfoTableCell.LabInfo.Font = FontConst.fontLarge;
+
+                if (indexPath.Section == concentSection)
+                {
+                    //    settingsInfoTableCell.AccessibilityLabel = LangUtil.Get("SettingsViewController.Concent.Accessibility.Label");
+                    //    settingsInfoTableCell.AccessibilityHint = LangUtil.Get("SettingsViewController.Concent.Accessibility.Hint");
+
+                    if (UserUtil.settings.consentAgreed == ConsentAgreed.True)
+                    {
+                        settingsTopInfoTableCell.BackgroundColor = UIColor.Clear;
+                        settingsTopInfoTableCell.LabInfo.TextColor = ColorConst.snlaText;
+                    }
+                    else
+                    {
+                        settingsTopInfoTableCell.BackgroundColor = ColorConst.snlaRed;
+                        settingsTopInfoTableCell.LabInfo.TextColor = ColorConst.snlaTextLight;
+                    }
+                }
+
+                string text = "";
+
+                if (indexPath.Section == informationSection)
+                {
+                    if (indexPath.Row == 0)
+                        text = LangUtil.Get("SettingsViewController.Information.Text");
+                    else if (indexPath.Row == 1)
+                        text = LangUtil.Get("SettingsViewController.Information.Text2");
+                }
+                else if (indexPath.Section == concentSection)
+                {
+                    text = LangUtil.Get("SettingsViewController.Concent.Text");
+                }
+
+                settingsTopInfoTableCell.LabInfo.Text = text;
+                return settingsTopInfoTableCell;
+            }
+            else if (indexPath.Section == informationSection)
             {
                 SettingsInfoTableCell settingsInfoTableCell = tableView.DequeueReusableCell(cellIdentifier) as SettingsInfoTableCell;
                 settingsInfoTableCell.BackgroundColor = UIColor.Clear;
                 settingsInfoTableCell.LabLabel.TextColor = ColorConst.snlaText;
-                settingsInfoTableCell.LabLabel.Font = FontConst.fontMediumLight;
+                settingsInfoTableCell.LabLabel.Font = FontConst.fontLarge;
 
                 if (indexPath.Section == concentSection)
                 {

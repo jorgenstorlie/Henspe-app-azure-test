@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
@@ -276,10 +275,6 @@
     <Compile Include="Util\UrlUtil.cs" />
     <Compile Include="Util\LocaleUtil.cs" />
     <Compile Include="Util\TableUtil.cs" />
-    <Compile Include="SettingsShowPositionDuringCallTableCell.cs" />
-    <Compile Include="SettingsShowPositionDuringCallTableCell.designer.cs">
-      <DependentUpon>SettingsShowPositionDuringCallTableCell.cs</DependentUpon>
-    </Compile>
     <Compile Include="Util\KeyboardUtil.cs" />
     <Compile Include="Util\EmailUtil.cs" />
     <Compile Include="Util\SpinnerUtil.cs" />
