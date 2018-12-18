@@ -15,8 +15,6 @@ namespace Henspe.Core.Model.Dto
             Normal,
             Position,
             Address,
-            Selector,
-            Buttons
         };
 
         public StructureElementDto(ElementType elementType, string description, string image, float percent)

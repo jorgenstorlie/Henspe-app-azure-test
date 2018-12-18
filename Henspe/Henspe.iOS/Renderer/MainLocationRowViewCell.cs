@@ -16,7 +16,7 @@ namespace Henspe.iOS
 
         internal void SetContent()
         {
-            BackgroundColor = UIColor.Clear;
+            this.BackgroundColor = UIColor.Clear;
 
             UIColor textColor;
 

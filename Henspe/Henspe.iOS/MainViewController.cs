@@ -118,10 +118,11 @@ namespace Henspe.iOS
         {
             // Table setup
             mainListTableViewSource = new MainListTableViewSource(this);
+            mainListTableViewSource.sectionsWithRows = AppDelegate.current.structure;
+
             myTableView.Source = mainListTableViewSource;
             myTableView.BackgroundColor = UIColor.Clear;
             myTableView.SeparatorStyle = UITableViewCellSeparatorStyle.None;
-
             myTableView.RowHeight = UITableView.AutomaticDimension;
             myTableView.EstimatedRowHeight = 50;
 
@@ -129,8 +130,6 @@ namespace Henspe.iOS
 
             UIEdgeInsets insets = new UIEdgeInsets(0, 0, 100, 0);
             myTableView.ContentInset = insets;
-
-            mainListTableViewSource.sectionsWithRows = AppDelegate.current.structure;
         }
 
         private void RefreshPositionRow()
@@ -164,13 +163,24 @@ namespace Henspe.iOS
         {
             InvokeOnMainThread(delegate
             {
+                this.PerformSegue("segueConsent", this);
+            });
+        }
+
+        partial void OnSettingsClicked(NSObject sender)
+        {
+            InvokeOnMainThread(delegate
+            {
                 this.PerformSegue("segueSettings", this);
             });
         }
 
         public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
         {
-            if (segue.Identifier == "segueSettings")
+            if (segue.Identifier == "segueConsent")
+            {
+            }
+            else if (segue.Identifier == "segueSettings")
             {
             }
         }
@@ -267,7 +277,7 @@ namespace Henspe.iOS
                 return null;
             }
 
-            var cell = (HeaderViewCell)tableView.DequeueReusableCell("HeaderTableCell");
+            var cell = (HeaderViewCell)tableView.DequeueReusableCell("HeaderCell");
             cell.SetContent(structureSection.description);
             cell.ContentView.BackgroundColor = ColorConst.headerBackgroundColor;
             return cell.ContentView;
@@ -275,8 +285,8 @@ namespace Henspe.iOS
 
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
-            const string normalCellIdentifier = "SingleLine";
-            const string positionIdentifier = "PositionCell";
+            const string normalCellIdentifier = "MainNormalCell";
+            const string positionIdentifier = "MainLocationCell";
             const string addressIdentifier = "AddressCell";
 
             int section = indexPath.Section;
@@ -310,13 +320,13 @@ namespace Henspe.iOS
             {
                 // Location row
                 MainLocationRowViewCell locationCell = tableView.DequeueReusableCell(positionIdentifier, indexPath) as MainLocationRowViewCell;
-                selectedSegment = 0;
+                locationCell.SetContent();
                 return locationCell;
             }
             else if (structureElement.elementType == StructureElementDto.ElementType.Address)
             {
                 var addressCell = tableView.DequeueReusableCell(addressIdentifier, indexPath) as AddressViewCell;
-                selectedSegment = 0;
+                addressCell.SetContent();
                 return addressCell;
             }
             else
