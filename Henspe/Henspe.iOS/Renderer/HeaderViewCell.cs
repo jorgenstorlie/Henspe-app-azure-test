@@ -2,14 +2,15 @@
 
 using System;
 using System.Linq;
+using Foundation;
 using Henspe.iOS.Const;
 using UIKit;
 
 namespace Henspe.iOS
 {
-    public partial class HeaderTableCell : UITableViewCell
+	public partial class HeaderViewCell : UITableViewCell
 	{
-		public HeaderTableCell (IntPtr handle) : base (handle)
+		public HeaderViewCell (IntPtr handle) : base (handle)
 		{
 		}
 
@@ -21,5 +22,5 @@ namespace Henspe.iOS
             labHeadline.TextColor = ColorConst.largeTextColor;
             labDescription.TextColor = ColorConst.largeTextColor;
         }
-	}
+    }
 }

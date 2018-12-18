@@ -188,7 +188,6 @@
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
-    <InterfaceDefinition Include="InitialCardViewController.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -218,14 +217,6 @@
     <Compile Include="Util\NetUtil.cs" />
     <Compile Include="Util\StoreUtil.cs" />
     <Compile Include="Util\ViewUtil.cs" />
-    <Compile Include="MainViewController.cs" />
-    <Compile Include="MainViewController.designer.cs">
-      <DependentUpon>MainViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InitialViewController.cs" />
-    <Compile Include="InitialViewController.designer.cs">
-      <DependentUpon>InitialViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="Renderer\MainLocationRowViewCell.cs" />
     <Compile Include="Renderer\MainLocationRowViewCell.designer.cs">
       <DependentUpon>MainLocationRowViewCell.cs</DependentUpon>
@@ -234,13 +225,8 @@
     <Compile Include="Renderer\MainNormalRowViewCell.designer.cs">
       <DependentUpon>MainNormalRowViewCell.cs</DependentUpon>
     </Compile>
-    <Compile Include="InitialCardViewController.cs" />
-    <Compile Include="InitialCardViewController.designer.cs">
-      <DependentUpon>InitialCardViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="Extension\StringExtensions.cs" />
     <Compile Include="Extension\ViewExtensions.cs" />
-    <Compile Include="MainListTableViewSource.cs" />
     <Compile Include="Util\SVGUtil.cs" />
     <Compile Include="SettingsViewController.cs" />
     <Compile Include="SettingsViewController.designer.cs">
@@ -269,14 +255,6 @@
     <Compile Include="MapTopCameraViewController.cs" />
     <Compile Include="MapTopCameraViewController.designer.cs">
       <DependentUpon>MapTopCameraViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Renderer\AddressCell.cs" />
-    <Compile Include="Renderer\AddressCell.designer.cs">
-      <DependentUpon>AddressCell.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Renderer\HeaderTableCell.cs" />
-    <Compile Include="Renderer\HeaderTableCell.designer.cs">
-      <DependentUpon>HeaderTableCell.cs</DependentUpon>
     </Compile>
     <Compile Include="Renderer\SettingsInfoTableCell.cs" />
     <Compile Include="Renderer\SettingsInfoTableCell.designer.cs">
@@ -308,6 +286,26 @@
     <Compile Include="Renderer\SettingsCoordinateFormatTableCell.cs" />
     <Compile Include="Renderer\SettingsCoordinateFormatTableCell.designer.cs">
       <DependentUpon>SettingsCoordinateFormatTableCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Renderer\HeaderViewCell.cs" />
+    <Compile Include="Renderer\HeaderViewCell.designer.cs">
+      <DependentUpon>HeaderViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Renderer\AddressViewCell.cs" />
+    <Compile Include="Renderer\AddressViewCell.designer.cs">
+      <DependentUpon>AddressViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainViewController.cs" />
+    <Compile Include="MainViewController.designer.cs">
+      <DependentUpon>MainViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnboardingViewController.cs" />
+    <Compile Include="OnboardingViewController.designer.cs">
+      <DependentUpon>OnboardingViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InitialViewController.cs" />
+    <Compile Include="InitialViewController.designer.cs">
+      <DependentUpon>InitialViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

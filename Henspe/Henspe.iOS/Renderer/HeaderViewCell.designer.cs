@@ -9,12 +9,26 @@ using System.CodeDom.Compiler;
 
 namespace Henspe.iOS
 {
-	[Register ("InitialViewController")]
-	partial class InitialViewController
+	[Register ("HeaderViewCell")]
+	partial class HeaderViewCell
 	{
+		[Outlet]
+		UIKit.UILabel labDescription { get; set; }
+
+		[Outlet]
+		UIKit.UILabel labHeadline { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (labHeadline != null) {
+				labHeadline.Dispose ();
+				labHeadline = null;
+			}
+
+			if (labDescription != null) {
+				labDescription.Dispose ();
+				labDescription = null;
+			}
 		}
 	}
 }
