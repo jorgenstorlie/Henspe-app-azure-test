@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using System;
 using System.IO;
 using System.Text;
-using Henspe.Core.Util;
+using SNLA.Core.Util;
 using Newtonsoft.Json;
 using System.Net.Http;
 using Henspe.Core.Model.Dto;
@@ -48,7 +48,7 @@ namespace Henspe.Core.Communication
 				}
 				catch(Exception e)
 				{
-					BugtrackUtil.SendBugtrack("CallBugtrack error", e, stringJson, client, version, user);
+					AppCenterUtil.SendBugtrack("CallBugtrack error", e, stringJson, client, version, user);
 				}
 			} 
 			else

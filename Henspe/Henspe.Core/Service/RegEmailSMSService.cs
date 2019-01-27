@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Henspe.Core.Communication.Dto;
 using System.IO;
 using System.Text;
-using Henspe.Core.Util;
 using Henspe.Core.Const;
 using Newtonsoft.Json;
 using System.Collections.Generic;

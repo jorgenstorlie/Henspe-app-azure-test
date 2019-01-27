@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using Henspe.Core.Model;
-using Henspe.Core.Util;
 using SQLite;
 using Nager.Date;
 using System.Linq;
 using Henspe.Core.Service;
 using Henspe.Core.Communication;
 using System.Diagnostics;
+using SNLA.Core.Util;
 
 namespace Henspe.Core.Model
 {

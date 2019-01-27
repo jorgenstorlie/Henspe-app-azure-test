@@ -4,6 +4,7 @@ using System.IO;
 using Henspe.Core.Model;
 using System.Linq;
 using SQLite;
+using SNLA.Core.Storage; 
 
 namespace Henspe.Core.Storage  
 {

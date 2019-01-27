@@ -4,6 +4,7 @@ using Foundation;
 using Henspe.iOS;
 using Henspe.iOS.Const;
 using UIKit;
+using SNLA.Core.Util;
 
 namespace Henspe.iOS
 {
@@ -58,11 +59,11 @@ namespace Henspe.iOS
 
             NSObject objectFade = parameters[NSObject.FromObject("fadeIn")];
             string objectFadeParameter = objectFade.ToString();
-            int fadeNumber = Henspe.Core.Util.ConvertUtil.ConvertStringToInt(objectFadeParameter);
+            int fadeNumber = ConvertUtil.ConvertStringToInt(objectFadeParameter);
 
             NSObject objectView = parameters[NSObject.FromObject("view")];
             string objectViewParameter = objectView.ToString();
-            int view = Henspe.Core.Util.ConvertUtil.ConvertStringToInt(objectViewParameter);
+            int view = ConvertUtil.ConvertStringToInt(objectViewParameter);
 
             nfloat value = 0.0f;
             if (fadeNumber == 1)
@@ -89,7 +90,7 @@ namespace Henspe.iOS
 
             NSObject objectShowInfo = parameters[NSObject.FromObject("showInfo")];
             string showInfoParameter = objectShowInfo.ToString();
-            int showInfoParameterNumber = Core.Util.ConvertUtil.ConvertStringToInt(showInfoParameter);
+            int showInfoParameterNumber = ConvertUtil.ConvertStringToInt(showInfoParameter);
             ShowInfo(showInfoParameterNumber);
         }
 

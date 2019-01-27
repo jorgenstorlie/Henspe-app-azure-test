@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Xml;
 using Henspe.Core;
-using Henspe.Core.Util;
+using SNLA.Core.Util;
 
 namespace Henspe.iOS.Communication
 {

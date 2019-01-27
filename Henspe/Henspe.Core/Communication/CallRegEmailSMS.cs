@@ -5,7 +5,6 @@ using Henspe.Core.Communication.Dto;
 using System;
 using System.IO;
 using System.Text;
-using Henspe.Core.Util;
 using Henspe.Core.Const;
 using System.Net.Http;
 using System.Collections.Generic;

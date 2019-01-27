@@ -18,7 +18,7 @@ namespace Henspe.iOS.AppModel
             }
             set
             {
-                _accuracy = MathUtil.Round(value);
+                _accuracy = Math.Round(value, 0, MidpointRounding.AwayFromZero);
             }
         }
 

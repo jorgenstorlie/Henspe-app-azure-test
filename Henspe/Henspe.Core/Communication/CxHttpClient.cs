@@ -7,7 +7,7 @@ using System.Net.Http.Headers;
 
 namespace Henspe.Core.Communication
 {
-    public class CxHttpClient:HttpClient
+    public class CxHttpClient : HttpClient
     {
 		public const string BugtrackUrl = "http://www.arerefsdal.com/bugtrack/trackbug.php?key=2p49fhiruhssdf&app=SMSApp&header=Bugtrack from app&receiver=are.refsdal@computas.com";
 		public const string DebugInfoUrl = "http://www.arerefsdal.com/bugtrack/trackbug.php?key=2p49fhiruhssdf&app=SMSApp&header=App info from app&receiver=webmaster@snla-system.no, are.refsdal@computas.com";

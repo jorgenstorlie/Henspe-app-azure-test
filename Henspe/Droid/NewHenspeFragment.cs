@@ -27,7 +27,6 @@ using Android.Gms.Tasks;
 using Android.Support.V13.App;
 using Android.Gms.Location;
 using Android.Gms.Common.Apis;
-using Henspe.Core.Util;
 using Android.Gms.Common;
 using Henspe.Core.Communication.Dto;
 using Android.Runtime;

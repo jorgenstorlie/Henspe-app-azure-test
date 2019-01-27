@@ -11,7 +11,7 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
-using Henspe.Core.Util;
+
 
 namespace Henspe.Droid.Util
 {

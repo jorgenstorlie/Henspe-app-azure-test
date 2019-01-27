@@ -7,7 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Henspe.iOS", "Henspe.iOS\He
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Henspe.Droid", "Droid\Henspe.Droid.csproj", "{BC57D061-E00F-4B31-A329-43D8EE64728D}"
 EndProject
-Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "Henspe.Core.Test", "Henspe.Core.Test\Henspe.Core.Test.csproj", "{A7AC37A0-9158-4FCA-8E08-74A5C6AC0DA8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Henspe.Core.Test", "Henspe.Core.Test\Henspe.Core.Test.csproj", "{A7AC37A0-9158-4FCA-8E08-74A5C6AC0DA8}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SNLA.Core", "..\..\SNLA-app\SNLA.Core\SNLA.Core.shproj", "{C6E8C3AA-12EB-480B-BE7D-1DA3A610F0B4}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SNLA.Android", "..\..\SNLA-app\SNLA.Android\SNLA.Android.shproj", "{5A24DFC1-7C45-4558-9FDF-C4D0CE60B605}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SNLA.iOS", "..\..\SNLA-app\SNLA.iOS\SNLA.iOS.shproj", "{F461BE23-0A04-44F6-9E62-6EEEC4F6D9BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
