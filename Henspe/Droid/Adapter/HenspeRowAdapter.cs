@@ -271,7 +271,7 @@ namespace Henspe.Droid
                     viewHolder.infoHelper.Text = "";
                     viewHolder.infoHelper.Visibility = ViewStates.Visible;
 
-                    lastPositionText = FlashTextUtil.FlashChangedText(activity, activity.ApplicationContext, lastPositionText, Henspe.Current.coordinatesText, viewHolder.infoHelper, FlashTextUtil.Type.LatText);
+                    lastPositionText = FlashTextUtil.FlashChangedText(activity, activity.ApplicationContext, lastPositionText, Henspe.Current.coordinatesText, viewHolder.infoHelper, FlashTextUtil.Type.LatText, Resource.Animator.abc_fade_out);
                 }
                 else if (henspeRowModel.elementType == StructureElementDto.ElementType.Address)
                 {

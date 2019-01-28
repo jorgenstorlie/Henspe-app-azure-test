@@ -26,6 +26,2137 @@ namespace Henspe.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::AndroidHUD.Resource.Attribute.ahBarColor = global::Henspe.Droid.Resource.Attribute.ahBarColor;
+			global::AndroidHUD.Resource.Attribute.ahBarLength = global::Henspe.Droid.Resource.Attribute.ahBarLength;
+			global::AndroidHUD.Resource.Attribute.ahBarWidth = global::Henspe.Droid.Resource.Attribute.ahBarWidth;
+			global::AndroidHUD.Resource.Attribute.ahCircleColor = global::Henspe.Droid.Resource.Attribute.ahCircleColor;
+			global::AndroidHUD.Resource.Attribute.ahDelayMillis = global::Henspe.Droid.Resource.Attribute.ahDelayMillis;
+			global::AndroidHUD.Resource.Attribute.ahRadius = global::Henspe.Droid.Resource.Attribute.ahRadius;
+			global::AndroidHUD.Resource.Attribute.ahRimColor = global::Henspe.Droid.Resource.Attribute.ahRimColor;
+			global::AndroidHUD.Resource.Attribute.ahRimWidth = global::Henspe.Droid.Resource.Attribute.ahRimWidth;
+			global::AndroidHUD.Resource.Attribute.ahSpinSpeed = global::Henspe.Droid.Resource.Attribute.ahSpinSpeed;
+			global::AndroidHUD.Resource.Attribute.ahText = global::Henspe.Droid.Resource.Attribute.ahText;
+			global::AndroidHUD.Resource.Attribute.ahTextColor = global::Henspe.Droid.Resource.Attribute.ahTextColor;
+			global::AndroidHUD.Resource.Attribute.ahTextSize = global::Henspe.Droid.Resource.Attribute.ahTextSize;
+			global::AndroidHUD.Resource.Drawable.ic_errorstatus = global::Henspe.Droid.Resource.Drawable.ic_errorstatus;
+			global::AndroidHUD.Resource.Drawable.ic_successstatus = global::Henspe.Droid.Resource.Drawable.ic_successstatus;
+			global::AndroidHUD.Resource.Drawable.roundedbg = global::Henspe.Droid.Resource.Drawable.roundedbg;
+			global::AndroidHUD.Resource.Drawable.roundedbgdark = global::Henspe.Droid.Resource.Drawable.roundedbgdark;
+			global::AndroidHUD.Resource.Id.loadingImage = global::Henspe.Droid.Resource.Id.loadingImage;
+			global::AndroidHUD.Resource.Id.loadingProgressBar = global::Henspe.Droid.Resource.Id.loadingProgressBar;
+			global::AndroidHUD.Resource.Id.loadingProgressWheel = global::Henspe.Droid.Resource.Id.loadingProgressWheel;
+			global::AndroidHUD.Resource.Id.textViewStatus = global::Henspe.Droid.Resource.Id.textViewStatus;
+			global::AndroidHUD.Resource.Layout.loading = global::Henspe.Droid.Resource.Layout.loading;
+			global::AndroidHUD.Resource.Layout.loadingimage = global::Henspe.Droid.Resource.Layout.loadingimage;
+			global::AndroidHUD.Resource.Layout.loadingprogress = global::Henspe.Droid.Resource.Layout.loadingprogress;
+			global::AndroidHUD.Resource.String.library_name = global::Henspe.Droid.Resource.String.library_name;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel = global::Henspe.Droid.Resource.Styleable.ProgressWheel;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahBarColor = global::Henspe.Droid.Resource.Styleable.ProgressWheel_ahBarColor;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahBarLength = global::Henspe.Droid.Resource.Styleable.ProgressWheel_ahBarLength;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahBarWidth = global::Henspe.Droid.Resource.Styleable.ProgressWheel_ahBarWidth;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahCircleColor = global::Henspe.Droid.Resource.Styleable.ProgressWheel_ahCircleColor;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahDelayMillis = global::Henspe.Droid.Resource.Styleable.ProgressWheel_ahDelayMillis;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahRadius = global::Henspe.Droid.Resource.Styleable.ProgressWheel_ahRadius;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahRimColor = global::Henspe.Droid.Resource.Styleable.ProgressWheel_ahRimColor;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahRimWidth = global::Henspe.Droid.Resource.Styleable.ProgressWheel_ahRimWidth;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahSpinSpeed = global::Henspe.Droid.Resource.Styleable.ProgressWheel_ahSpinSpeed;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahText = global::Henspe.Droid.Resource.Styleable.ProgressWheel_ahText;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextColor = global::Henspe.Droid.Resource.Styleable.ProgressWheel_ahTextColor;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextSize = global::Henspe.Droid.Resource.Styleable.ProgressWheel_ahTextSize;
+			global::Plugin.Hud.Resource.Animation.abc_fade_in = global::Henspe.Droid.Resource.Animation.abc_fade_in;
+			global::Plugin.Hud.Resource.Animation.abc_fade_out = global::Henspe.Droid.Resource.Animation.abc_fade_out;
+			global::Plugin.Hud.Resource.Animation.abc_grow_fade_in_from_bottom = global::Henspe.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::Plugin.Hud.Resource.Animation.abc_popup_enter = global::Henspe.Droid.Resource.Animation.abc_popup_enter;
+			global::Plugin.Hud.Resource.Animation.abc_popup_exit = global::Henspe.Droid.Resource.Animation.abc_popup_exit;
+			global::Plugin.Hud.Resource.Animation.abc_shrink_fade_out_from_bottom = global::Henspe.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::Plugin.Hud.Resource.Animation.abc_slide_in_bottom = global::Henspe.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::Plugin.Hud.Resource.Animation.abc_slide_in_top = global::Henspe.Droid.Resource.Animation.abc_slide_in_top;
+			global::Plugin.Hud.Resource.Animation.abc_slide_out_bottom = global::Henspe.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::Plugin.Hud.Resource.Animation.abc_slide_out_top = global::Henspe.Droid.Resource.Animation.abc_slide_out_top;
+			global::Plugin.Hud.Resource.Animation.design_bottom_sheet_slide_in = global::Henspe.Droid.Resource.Animation.design_bottom_sheet_slide_in;
+			global::Plugin.Hud.Resource.Animation.design_bottom_sheet_slide_out = global::Henspe.Droid.Resource.Animation.design_bottom_sheet_slide_out;
+			global::Plugin.Hud.Resource.Animation.design_snackbar_in = global::Henspe.Droid.Resource.Animation.design_snackbar_in;
+			global::Plugin.Hud.Resource.Animation.design_snackbar_out = global::Henspe.Droid.Resource.Animation.design_snackbar_out;
+			global::Plugin.Hud.Resource.Animator.design_appbar_state_list_animator = global::Henspe.Droid.Resource.Animator.design_appbar_state_list_animator;
+			global::Plugin.Hud.Resource.Attribute.actionBarDivider = global::Henspe.Droid.Resource.Attribute.actionBarDivider;
+			global::Plugin.Hud.Resource.Attribute.actionBarItemBackground = global::Henspe.Droid.Resource.Attribute.actionBarItemBackground;
+			global::Plugin.Hud.Resource.Attribute.actionBarPopupTheme = global::Henspe.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::Plugin.Hud.Resource.Attribute.actionBarSize = global::Henspe.Droid.Resource.Attribute.actionBarSize;
+			global::Plugin.Hud.Resource.Attribute.actionBarSplitStyle = global::Henspe.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::Plugin.Hud.Resource.Attribute.actionBarStyle = global::Henspe.Droid.Resource.Attribute.actionBarStyle;
+			global::Plugin.Hud.Resource.Attribute.actionBarTabBarStyle = global::Henspe.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::Plugin.Hud.Resource.Attribute.actionBarTabStyle = global::Henspe.Droid.Resource.Attribute.actionBarTabStyle;
+			global::Plugin.Hud.Resource.Attribute.actionBarTabTextStyle = global::Henspe.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::Plugin.Hud.Resource.Attribute.actionBarTheme = global::Henspe.Droid.Resource.Attribute.actionBarTheme;
+			global::Plugin.Hud.Resource.Attribute.actionBarWidgetTheme = global::Henspe.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::Plugin.Hud.Resource.Attribute.actionButtonStyle = global::Henspe.Droid.Resource.Attribute.actionButtonStyle;
+			global::Plugin.Hud.Resource.Attribute.actionDropDownStyle = global::Henspe.Droid.Resource.Attribute.actionDropDownStyle;
+			global::Plugin.Hud.Resource.Attribute.actionLayout = global::Henspe.Droid.Resource.Attribute.actionLayout;
+			global::Plugin.Hud.Resource.Attribute.actionMenuTextAppearance = global::Henspe.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::Plugin.Hud.Resource.Attribute.actionMenuTextColor = global::Henspe.Droid.Resource.Attribute.actionMenuTextColor;
+			global::Plugin.Hud.Resource.Attribute.actionModeBackground = global::Henspe.Droid.Resource.Attribute.actionModeBackground;
+			global::Plugin.Hud.Resource.Attribute.actionModeCloseButtonStyle = global::Henspe.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::Plugin.Hud.Resource.Attribute.actionModeCloseDrawable = global::Henspe.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::Plugin.Hud.Resource.Attribute.actionModeCopyDrawable = global::Henspe.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::Plugin.Hud.Resource.Attribute.actionModeCutDrawable = global::Henspe.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::Plugin.Hud.Resource.Attribute.actionModeFindDrawable = global::Henspe.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::Plugin.Hud.Resource.Attribute.actionModePasteDrawable = global::Henspe.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::Plugin.Hud.Resource.Attribute.actionModePopupWindowStyle = global::Henspe.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::Plugin.Hud.Resource.Attribute.actionModeSelectAllDrawable = global::Henspe.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::Plugin.Hud.Resource.Attribute.actionModeShareDrawable = global::Henspe.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::Plugin.Hud.Resource.Attribute.actionModeSplitBackground = global::Henspe.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::Plugin.Hud.Resource.Attribute.actionModeStyle = global::Henspe.Droid.Resource.Attribute.actionModeStyle;
+			global::Plugin.Hud.Resource.Attribute.actionModeWebSearchDrawable = global::Henspe.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::Plugin.Hud.Resource.Attribute.actionOverflowButtonStyle = global::Henspe.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::Plugin.Hud.Resource.Attribute.actionOverflowMenuStyle = global::Henspe.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::Plugin.Hud.Resource.Attribute.actionProviderClass = global::Henspe.Droid.Resource.Attribute.actionProviderClass;
+			global::Plugin.Hud.Resource.Attribute.actionViewClass = global::Henspe.Droid.Resource.Attribute.actionViewClass;
+			global::Plugin.Hud.Resource.Attribute.activityChooserViewStyle = global::Henspe.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::Plugin.Hud.Resource.Attribute.ahBarColor = global::Henspe.Droid.Resource.Attribute.ahBarColor;
+			global::Plugin.Hud.Resource.Attribute.ahBarLength = global::Henspe.Droid.Resource.Attribute.ahBarLength;
+			global::Plugin.Hud.Resource.Attribute.ahBarWidth = global::Henspe.Droid.Resource.Attribute.ahBarWidth;
+			global::Plugin.Hud.Resource.Attribute.ahCircleColor = global::Henspe.Droid.Resource.Attribute.ahCircleColor;
+			global::Plugin.Hud.Resource.Attribute.ahDelayMillis = global::Henspe.Droid.Resource.Attribute.ahDelayMillis;
+			global::Plugin.Hud.Resource.Attribute.ahRadius = global::Henspe.Droid.Resource.Attribute.ahRadius;
+			global::Plugin.Hud.Resource.Attribute.ahRimColor = global::Henspe.Droid.Resource.Attribute.ahRimColor;
+			global::Plugin.Hud.Resource.Attribute.ahRimWidth = global::Henspe.Droid.Resource.Attribute.ahRimWidth;
+			global::Plugin.Hud.Resource.Attribute.ahSpinSpeed = global::Henspe.Droid.Resource.Attribute.ahSpinSpeed;
+			global::Plugin.Hud.Resource.Attribute.ahText = global::Henspe.Droid.Resource.Attribute.ahText;
+			global::Plugin.Hud.Resource.Attribute.ahTextColor = global::Henspe.Droid.Resource.Attribute.ahTextColor;
+			global::Plugin.Hud.Resource.Attribute.ahTextSize = global::Henspe.Droid.Resource.Attribute.ahTextSize;
+			global::Plugin.Hud.Resource.Attribute.alertDialogButtonGroupStyle = global::Henspe.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::Plugin.Hud.Resource.Attribute.alertDialogCenterButtons = global::Henspe.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::Plugin.Hud.Resource.Attribute.alertDialogStyle = global::Henspe.Droid.Resource.Attribute.alertDialogStyle;
+			global::Plugin.Hud.Resource.Attribute.alertDialogTheme = global::Henspe.Droid.Resource.Attribute.alertDialogTheme;
+			global::Plugin.Hud.Resource.Attribute.allowStacking = global::Henspe.Droid.Resource.Attribute.allowStacking;
+			global::Plugin.Hud.Resource.Attribute.alpha = global::Henspe.Droid.Resource.Attribute.alpha;
+			global::Plugin.Hud.Resource.Attribute.arrowHeadLength = global::Henspe.Droid.Resource.Attribute.arrowHeadLength;
+			global::Plugin.Hud.Resource.Attribute.arrowShaftLength = global::Henspe.Droid.Resource.Attribute.arrowShaftLength;
+			global::Plugin.Hud.Resource.Attribute.autoCompleteTextViewStyle = global::Henspe.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::Plugin.Hud.Resource.Attribute.background = global::Henspe.Droid.Resource.Attribute.background;
+			global::Plugin.Hud.Resource.Attribute.backgroundSplit = global::Henspe.Droid.Resource.Attribute.backgroundSplit;
+			global::Plugin.Hud.Resource.Attribute.backgroundStacked = global::Henspe.Droid.Resource.Attribute.backgroundStacked;
+			global::Plugin.Hud.Resource.Attribute.backgroundTint = global::Henspe.Droid.Resource.Attribute.backgroundTint;
+			global::Plugin.Hud.Resource.Attribute.backgroundTintMode = global::Henspe.Droid.Resource.Attribute.backgroundTintMode;
+			global::Plugin.Hud.Resource.Attribute.barLength = global::Henspe.Droid.Resource.Attribute.barLength;
+			global::Plugin.Hud.Resource.Attribute.behavior_autoHide = global::Henspe.Droid.Resource.Attribute.behavior_autoHide;
+			global::Plugin.Hud.Resource.Attribute.behavior_hideable = global::Henspe.Droid.Resource.Attribute.behavior_hideable;
+			global::Plugin.Hud.Resource.Attribute.behavior_overlapTop = global::Henspe.Droid.Resource.Attribute.behavior_overlapTop;
+			global::Plugin.Hud.Resource.Attribute.behavior_peekHeight = global::Henspe.Droid.Resource.Attribute.behavior_peekHeight;
+			global::Plugin.Hud.Resource.Attribute.behavior_skipCollapsed = global::Henspe.Droid.Resource.Attribute.behavior_skipCollapsed;
+			global::Plugin.Hud.Resource.Attribute.borderWidth = global::Henspe.Droid.Resource.Attribute.borderWidth;
+			global::Plugin.Hud.Resource.Attribute.borderlessButtonStyle = global::Henspe.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::Plugin.Hud.Resource.Attribute.bottomSheetDialogTheme = global::Henspe.Droid.Resource.Attribute.bottomSheetDialogTheme;
+			global::Plugin.Hud.Resource.Attribute.bottomSheetStyle = global::Henspe.Droid.Resource.Attribute.bottomSheetStyle;
+			global::Plugin.Hud.Resource.Attribute.buttonBarButtonStyle = global::Henspe.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::Plugin.Hud.Resource.Attribute.buttonBarNegativeButtonStyle = global::Henspe.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::Plugin.Hud.Resource.Attribute.buttonBarNeutralButtonStyle = global::Henspe.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::Plugin.Hud.Resource.Attribute.buttonBarPositiveButtonStyle = global::Henspe.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::Plugin.Hud.Resource.Attribute.buttonBarStyle = global::Henspe.Droid.Resource.Attribute.buttonBarStyle;
+			global::Plugin.Hud.Resource.Attribute.buttonGravity = global::Henspe.Droid.Resource.Attribute.buttonGravity;
+			global::Plugin.Hud.Resource.Attribute.buttonPanelSideLayout = global::Henspe.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::Plugin.Hud.Resource.Attribute.buttonStyle = global::Henspe.Droid.Resource.Attribute.buttonStyle;
+			global::Plugin.Hud.Resource.Attribute.buttonStyleSmall = global::Henspe.Droid.Resource.Attribute.buttonStyleSmall;
+			global::Plugin.Hud.Resource.Attribute.buttonTint = global::Henspe.Droid.Resource.Attribute.buttonTint;
+			global::Plugin.Hud.Resource.Attribute.buttonTintMode = global::Henspe.Droid.Resource.Attribute.buttonTintMode;
+			global::Plugin.Hud.Resource.Attribute.cardBackgroundColor = global::Henspe.Droid.Resource.Attribute.cardBackgroundColor;
+			global::Plugin.Hud.Resource.Attribute.cardCornerRadius = global::Henspe.Droid.Resource.Attribute.cardCornerRadius;
+			global::Plugin.Hud.Resource.Attribute.cardElevation = global::Henspe.Droid.Resource.Attribute.cardElevation;
+			global::Plugin.Hud.Resource.Attribute.cardMaxElevation = global::Henspe.Droid.Resource.Attribute.cardMaxElevation;
+			global::Plugin.Hud.Resource.Attribute.cardPreventCornerOverlap = global::Henspe.Droid.Resource.Attribute.cardPreventCornerOverlap;
+			global::Plugin.Hud.Resource.Attribute.cardUseCompatPadding = global::Henspe.Droid.Resource.Attribute.cardUseCompatPadding;
+			global::Plugin.Hud.Resource.Attribute.checkboxStyle = global::Henspe.Droid.Resource.Attribute.checkboxStyle;
+			global::Plugin.Hud.Resource.Attribute.checkedTextViewStyle = global::Henspe.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::Plugin.Hud.Resource.Attribute.closeIcon = global::Henspe.Droid.Resource.Attribute.closeIcon;
+			global::Plugin.Hud.Resource.Attribute.closeItemLayout = global::Henspe.Droid.Resource.Attribute.closeItemLayout;
+			global::Plugin.Hud.Resource.Attribute.collapseContentDescription = global::Henspe.Droid.Resource.Attribute.collapseContentDescription;
+			global::Plugin.Hud.Resource.Attribute.collapseIcon = global::Henspe.Droid.Resource.Attribute.collapseIcon;
+			global::Plugin.Hud.Resource.Attribute.collapsedTitleGravity = global::Henspe.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::Plugin.Hud.Resource.Attribute.collapsedTitleTextAppearance = global::Henspe.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::Plugin.Hud.Resource.Attribute.color = global::Henspe.Droid.Resource.Attribute.color;
+			global::Plugin.Hud.Resource.Attribute.colorAccent = global::Henspe.Droid.Resource.Attribute.colorAccent;
+			global::Plugin.Hud.Resource.Attribute.colorBackgroundFloating = global::Henspe.Droid.Resource.Attribute.colorBackgroundFloating;
+			global::Plugin.Hud.Resource.Attribute.colorButtonNormal = global::Henspe.Droid.Resource.Attribute.colorButtonNormal;
+			global::Plugin.Hud.Resource.Attribute.colorControlActivated = global::Henspe.Droid.Resource.Attribute.colorControlActivated;
+			global::Plugin.Hud.Resource.Attribute.colorControlHighlight = global::Henspe.Droid.Resource.Attribute.colorControlHighlight;
+			global::Plugin.Hud.Resource.Attribute.colorControlNormal = global::Henspe.Droid.Resource.Attribute.colorControlNormal;
+			global::Plugin.Hud.Resource.Attribute.colorPrimary = global::Henspe.Droid.Resource.Attribute.colorPrimary;
+			global::Plugin.Hud.Resource.Attribute.colorPrimaryDark = global::Henspe.Droid.Resource.Attribute.colorPrimaryDark;
+			global::Plugin.Hud.Resource.Attribute.colorSwitchThumbNormal = global::Henspe.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::Plugin.Hud.Resource.Attribute.commitIcon = global::Henspe.Droid.Resource.Attribute.commitIcon;
+			global::Plugin.Hud.Resource.Attribute.contentInsetEnd = global::Henspe.Droid.Resource.Attribute.contentInsetEnd;
+			global::Plugin.Hud.Resource.Attribute.contentInsetEndWithActions = global::Henspe.Droid.Resource.Attribute.contentInsetEndWithActions;
+			global::Plugin.Hud.Resource.Attribute.contentInsetLeft = global::Henspe.Droid.Resource.Attribute.contentInsetLeft;
+			global::Plugin.Hud.Resource.Attribute.contentInsetRight = global::Henspe.Droid.Resource.Attribute.contentInsetRight;
+			global::Plugin.Hud.Resource.Attribute.contentInsetStart = global::Henspe.Droid.Resource.Attribute.contentInsetStart;
+			global::Plugin.Hud.Resource.Attribute.contentInsetStartWithNavigation = global::Henspe.Droid.Resource.Attribute.contentInsetStartWithNavigation;
+			global::Plugin.Hud.Resource.Attribute.contentPadding = global::Henspe.Droid.Resource.Attribute.contentPadding;
+			global::Plugin.Hud.Resource.Attribute.contentPaddingBottom = global::Henspe.Droid.Resource.Attribute.contentPaddingBottom;
+			global::Plugin.Hud.Resource.Attribute.contentPaddingLeft = global::Henspe.Droid.Resource.Attribute.contentPaddingLeft;
+			global::Plugin.Hud.Resource.Attribute.contentPaddingRight = global::Henspe.Droid.Resource.Attribute.contentPaddingRight;
+			global::Plugin.Hud.Resource.Attribute.contentPaddingTop = global::Henspe.Droid.Resource.Attribute.contentPaddingTop;
+			global::Plugin.Hud.Resource.Attribute.contentScrim = global::Henspe.Droid.Resource.Attribute.contentScrim;
+			global::Plugin.Hud.Resource.Attribute.controlBackground = global::Henspe.Droid.Resource.Attribute.controlBackground;
+			global::Plugin.Hud.Resource.Attribute.counterEnabled = global::Henspe.Droid.Resource.Attribute.counterEnabled;
+			global::Plugin.Hud.Resource.Attribute.counterMaxLength = global::Henspe.Droid.Resource.Attribute.counterMaxLength;
+			global::Plugin.Hud.Resource.Attribute.counterOverflowTextAppearance = global::Henspe.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::Plugin.Hud.Resource.Attribute.counterTextAppearance = global::Henspe.Droid.Resource.Attribute.counterTextAppearance;
+			global::Plugin.Hud.Resource.Attribute.customNavigationLayout = global::Henspe.Droid.Resource.Attribute.customNavigationLayout;
+			global::Plugin.Hud.Resource.Attribute.defaultQueryHint = global::Henspe.Droid.Resource.Attribute.defaultQueryHint;
+			global::Plugin.Hud.Resource.Attribute.dialogPreferredPadding = global::Henspe.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::Plugin.Hud.Resource.Attribute.dialogTheme = global::Henspe.Droid.Resource.Attribute.dialogTheme;
+			global::Plugin.Hud.Resource.Attribute.displayOptions = global::Henspe.Droid.Resource.Attribute.displayOptions;
+			global::Plugin.Hud.Resource.Attribute.divider = global::Henspe.Droid.Resource.Attribute.divider;
+			global::Plugin.Hud.Resource.Attribute.dividerHorizontal = global::Henspe.Droid.Resource.Attribute.dividerHorizontal;
+			global::Plugin.Hud.Resource.Attribute.dividerPadding = global::Henspe.Droid.Resource.Attribute.dividerPadding;
+			global::Plugin.Hud.Resource.Attribute.dividerVertical = global::Henspe.Droid.Resource.Attribute.dividerVertical;
+			global::Plugin.Hud.Resource.Attribute.drawableSize = global::Henspe.Droid.Resource.Attribute.drawableSize;
+			global::Plugin.Hud.Resource.Attribute.drawerArrowStyle = global::Henspe.Droid.Resource.Attribute.drawerArrowStyle;
+			global::Plugin.Hud.Resource.Attribute.dropDownListViewStyle = global::Henspe.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::Plugin.Hud.Resource.Attribute.dropdownListPreferredItemHeight = global::Henspe.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::Plugin.Hud.Resource.Attribute.editTextBackground = global::Henspe.Droid.Resource.Attribute.editTextBackground;
+			global::Plugin.Hud.Resource.Attribute.editTextColor = global::Henspe.Droid.Resource.Attribute.editTextColor;
+			global::Plugin.Hud.Resource.Attribute.editTextStyle = global::Henspe.Droid.Resource.Attribute.editTextStyle;
+			global::Plugin.Hud.Resource.Attribute.elevation = global::Henspe.Droid.Resource.Attribute.elevation;
+			global::Plugin.Hud.Resource.Attribute.errorEnabled = global::Henspe.Droid.Resource.Attribute.errorEnabled;
+			global::Plugin.Hud.Resource.Attribute.errorTextAppearance = global::Henspe.Droid.Resource.Attribute.errorTextAppearance;
+			global::Plugin.Hud.Resource.Attribute.expandActivityOverflowButtonDrawable = global::Henspe.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::Plugin.Hud.Resource.Attribute.expanded = global::Henspe.Droid.Resource.Attribute.expanded;
+			global::Plugin.Hud.Resource.Attribute.expandedTitleGravity = global::Henspe.Droid.Resource.Attribute.expandedTitleGravity;
+			global::Plugin.Hud.Resource.Attribute.expandedTitleMargin = global::Henspe.Droid.Resource.Attribute.expandedTitleMargin;
+			global::Plugin.Hud.Resource.Attribute.expandedTitleMarginBottom = global::Henspe.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::Plugin.Hud.Resource.Attribute.expandedTitleMarginEnd = global::Henspe.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::Plugin.Hud.Resource.Attribute.expandedTitleMarginStart = global::Henspe.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::Plugin.Hud.Resource.Attribute.expandedTitleMarginTop = global::Henspe.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::Plugin.Hud.Resource.Attribute.expandedTitleTextAppearance = global::Henspe.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::Plugin.Hud.Resource.Attribute.externalRouteEnabledDrawable = global::Henspe.Droid.Resource.Attribute.externalRouteEnabledDrawable;
+			global::Plugin.Hud.Resource.Attribute.fabSize = global::Henspe.Droid.Resource.Attribute.fabSize;
+			global::Plugin.Hud.Resource.Attribute.foregroundInsidePadding = global::Henspe.Droid.Resource.Attribute.foregroundInsidePadding;
+			global::Plugin.Hud.Resource.Attribute.gapBetweenBars = global::Henspe.Droid.Resource.Attribute.gapBetweenBars;
+			global::Plugin.Hud.Resource.Attribute.goIcon = global::Henspe.Droid.Resource.Attribute.goIcon;
+			global::Plugin.Hud.Resource.Attribute.headerLayout = global::Henspe.Droid.Resource.Attribute.headerLayout;
+			global::Plugin.Hud.Resource.Attribute.height = global::Henspe.Droid.Resource.Attribute.height;
+			global::Plugin.Hud.Resource.Attribute.hideOnContentScroll = global::Henspe.Droid.Resource.Attribute.hideOnContentScroll;
+			global::Plugin.Hud.Resource.Attribute.hintAnimationEnabled = global::Henspe.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::Plugin.Hud.Resource.Attribute.hintEnabled = global::Henspe.Droid.Resource.Attribute.hintEnabled;
+			global::Plugin.Hud.Resource.Attribute.hintTextAppearance = global::Henspe.Droid.Resource.Attribute.hintTextAppearance;
+			global::Plugin.Hud.Resource.Attribute.homeAsUpIndicator = global::Henspe.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::Plugin.Hud.Resource.Attribute.homeLayout = global::Henspe.Droid.Resource.Attribute.homeLayout;
+			global::Plugin.Hud.Resource.Attribute.icon = global::Henspe.Droid.Resource.Attribute.icon;
+			global::Plugin.Hud.Resource.Attribute.iconifiedByDefault = global::Henspe.Droid.Resource.Attribute.iconifiedByDefault;
+			global::Plugin.Hud.Resource.Attribute.imageButtonStyle = global::Henspe.Droid.Resource.Attribute.imageButtonStyle;
+			global::Plugin.Hud.Resource.Attribute.indeterminateProgressStyle = global::Henspe.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::Plugin.Hud.Resource.Attribute.initialActivityCount = global::Henspe.Droid.Resource.Attribute.initialActivityCount;
+			global::Plugin.Hud.Resource.Attribute.insetForeground = global::Henspe.Droid.Resource.Attribute.insetForeground;
+			global::Plugin.Hud.Resource.Attribute.isLightTheme = global::Henspe.Droid.Resource.Attribute.isLightTheme;
+			global::Plugin.Hud.Resource.Attribute.itemBackground = global::Henspe.Droid.Resource.Attribute.itemBackground;
+			global::Plugin.Hud.Resource.Attribute.itemIconTint = global::Henspe.Droid.Resource.Attribute.itemIconTint;
+			global::Plugin.Hud.Resource.Attribute.itemPadding = global::Henspe.Droid.Resource.Attribute.itemPadding;
+			global::Plugin.Hud.Resource.Attribute.itemTextAppearance = global::Henspe.Droid.Resource.Attribute.itemTextAppearance;
+			global::Plugin.Hud.Resource.Attribute.itemTextColor = global::Henspe.Droid.Resource.Attribute.itemTextColor;
+			global::Plugin.Hud.Resource.Attribute.keylines = global::Henspe.Droid.Resource.Attribute.keylines;
+			global::Plugin.Hud.Resource.Attribute.layout = global::Henspe.Droid.Resource.Attribute.layout;
+			global::Plugin.Hud.Resource.Attribute.layoutManager = global::Henspe.Droid.Resource.Attribute.layoutManager;
+			global::Plugin.Hud.Resource.Attribute.layout_anchor = global::Henspe.Droid.Resource.Attribute.layout_anchor;
+			global::Plugin.Hud.Resource.Attribute.layout_anchorGravity = global::Henspe.Droid.Resource.Attribute.layout_anchorGravity;
+			global::Plugin.Hud.Resource.Attribute.layout_behavior = global::Henspe.Droid.Resource.Attribute.layout_behavior;
+			global::Plugin.Hud.Resource.Attribute.layout_collapseMode = global::Henspe.Droid.Resource.Attribute.layout_collapseMode;
+			global::Plugin.Hud.Resource.Attribute.layout_collapseParallaxMultiplier = global::Henspe.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::Plugin.Hud.Resource.Attribute.layout_dodgeInsetEdges = global::Henspe.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::Plugin.Hud.Resource.Attribute.layout_insetEdge = global::Henspe.Droid.Resource.Attribute.layout_insetEdge;
+			global::Plugin.Hud.Resource.Attribute.layout_keyline = global::Henspe.Droid.Resource.Attribute.layout_keyline;
+			global::Plugin.Hud.Resource.Attribute.layout_scrollFlags = global::Henspe.Droid.Resource.Attribute.layout_scrollFlags;
+			global::Plugin.Hud.Resource.Attribute.layout_scrollInterpolator = global::Henspe.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::Plugin.Hud.Resource.Attribute.listChoiceBackgroundIndicator = global::Henspe.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::Plugin.Hud.Resource.Attribute.listDividerAlertDialog = global::Henspe.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::Plugin.Hud.Resource.Attribute.listItemLayout = global::Henspe.Droid.Resource.Attribute.listItemLayout;
+			global::Plugin.Hud.Resource.Attribute.listLayout = global::Henspe.Droid.Resource.Attribute.listLayout;
+			global::Plugin.Hud.Resource.Attribute.listMenuViewStyle = global::Henspe.Droid.Resource.Attribute.listMenuViewStyle;
+			global::Plugin.Hud.Resource.Attribute.listPopupWindowStyle = global::Henspe.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::Plugin.Hud.Resource.Attribute.listPreferredItemHeight = global::Henspe.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::Plugin.Hud.Resource.Attribute.listPreferredItemHeightLarge = global::Henspe.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::Plugin.Hud.Resource.Attribute.listPreferredItemHeightSmall = global::Henspe.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::Plugin.Hud.Resource.Attribute.listPreferredItemPaddingLeft = global::Henspe.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::Plugin.Hud.Resource.Attribute.listPreferredItemPaddingRight = global::Henspe.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::Plugin.Hud.Resource.Attribute.logo = global::Henspe.Droid.Resource.Attribute.logo;
+			global::Plugin.Hud.Resource.Attribute.logoDescription = global::Henspe.Droid.Resource.Attribute.logoDescription;
+			global::Plugin.Hud.Resource.Attribute.maxActionInlineWidth = global::Henspe.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::Plugin.Hud.Resource.Attribute.maxButtonHeight = global::Henspe.Droid.Resource.Attribute.maxButtonHeight;
+			global::Plugin.Hud.Resource.Attribute.measureWithLargestChild = global::Henspe.Droid.Resource.Attribute.measureWithLargestChild;
+			global::Plugin.Hud.Resource.Attribute.mediaRouteAudioTrackDrawable = global::Henspe.Droid.Resource.Attribute.mediaRouteAudioTrackDrawable;
+			global::Plugin.Hud.Resource.Attribute.mediaRouteButtonStyle = global::Henspe.Droid.Resource.Attribute.mediaRouteButtonStyle;
+			global::Plugin.Hud.Resource.Attribute.mediaRouteCloseDrawable = global::Henspe.Droid.Resource.Attribute.mediaRouteCloseDrawable;
+			global::Plugin.Hud.Resource.Attribute.mediaRouteControlPanelThemeOverlay = global::Henspe.Droid.Resource.Attribute.mediaRouteControlPanelThemeOverlay;
+			global::Plugin.Hud.Resource.Attribute.mediaRouteDefaultIconDrawable = global::Henspe.Droid.Resource.Attribute.mediaRouteDefaultIconDrawable;
+			global::Plugin.Hud.Resource.Attribute.mediaRoutePauseDrawable = global::Henspe.Droid.Resource.Attribute.mediaRoutePauseDrawable;
+			global::Plugin.Hud.Resource.Attribute.mediaRoutePlayDrawable = global::Henspe.Droid.Resource.Attribute.mediaRoutePlayDrawable;
+			global::Plugin.Hud.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable = global::Henspe.Droid.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable;
+			global::Plugin.Hud.Resource.Attribute.mediaRouteSpeakerIconDrawable = global::Henspe.Droid.Resource.Attribute.mediaRouteSpeakerIconDrawable;
+			global::Plugin.Hud.Resource.Attribute.mediaRouteTheme = global::Henspe.Droid.Resource.Attribute.mediaRouteTheme;
+			global::Plugin.Hud.Resource.Attribute.mediaRouteTvIconDrawable = global::Henspe.Droid.Resource.Attribute.mediaRouteTvIconDrawable;
+			global::Plugin.Hud.Resource.Attribute.menu = global::Henspe.Droid.Resource.Attribute.menu;
+			global::Plugin.Hud.Resource.Attribute.multiChoiceItemLayout = global::Henspe.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::Plugin.Hud.Resource.Attribute.navigationContentDescription = global::Henspe.Droid.Resource.Attribute.navigationContentDescription;
+			global::Plugin.Hud.Resource.Attribute.navigationIcon = global::Henspe.Droid.Resource.Attribute.navigationIcon;
+			global::Plugin.Hud.Resource.Attribute.navigationMode = global::Henspe.Droid.Resource.Attribute.navigationMode;
+			global::Plugin.Hud.Resource.Attribute.overlapAnchor = global::Henspe.Droid.Resource.Attribute.overlapAnchor;
+			global::Plugin.Hud.Resource.Attribute.paddingBottomNoButtons = global::Henspe.Droid.Resource.Attribute.paddingBottomNoButtons;
+			global::Plugin.Hud.Resource.Attribute.paddingEnd = global::Henspe.Droid.Resource.Attribute.paddingEnd;
+			global::Plugin.Hud.Resource.Attribute.paddingStart = global::Henspe.Droid.Resource.Attribute.paddingStart;
+			global::Plugin.Hud.Resource.Attribute.paddingTopNoTitle = global::Henspe.Droid.Resource.Attribute.paddingTopNoTitle;
+			global::Plugin.Hud.Resource.Attribute.panelBackground = global::Henspe.Droid.Resource.Attribute.panelBackground;
+			global::Plugin.Hud.Resource.Attribute.panelMenuListTheme = global::Henspe.Droid.Resource.Attribute.panelMenuListTheme;
+			global::Plugin.Hud.Resource.Attribute.panelMenuListWidth = global::Henspe.Droid.Resource.Attribute.panelMenuListWidth;
+			global::Plugin.Hud.Resource.Attribute.passwordToggleContentDescription = global::Henspe.Droid.Resource.Attribute.passwordToggleContentDescription;
+			global::Plugin.Hud.Resource.Attribute.passwordToggleDrawable = global::Henspe.Droid.Resource.Attribute.passwordToggleDrawable;
+			global::Plugin.Hud.Resource.Attribute.passwordToggleEnabled = global::Henspe.Droid.Resource.Attribute.passwordToggleEnabled;
+			global::Plugin.Hud.Resource.Attribute.passwordToggleTint = global::Henspe.Droid.Resource.Attribute.passwordToggleTint;
+			global::Plugin.Hud.Resource.Attribute.passwordToggleTintMode = global::Henspe.Droid.Resource.Attribute.passwordToggleTintMode;
+			global::Plugin.Hud.Resource.Attribute.popupMenuStyle = global::Henspe.Droid.Resource.Attribute.popupMenuStyle;
+			global::Plugin.Hud.Resource.Attribute.popupTheme = global::Henspe.Droid.Resource.Attribute.popupTheme;
+			global::Plugin.Hud.Resource.Attribute.popupWindowStyle = global::Henspe.Droid.Resource.Attribute.popupWindowStyle;
+			global::Plugin.Hud.Resource.Attribute.preserveIconSpacing = global::Henspe.Droid.Resource.Attribute.preserveIconSpacing;
+			global::Plugin.Hud.Resource.Attribute.pressedTranslationZ = global::Henspe.Droid.Resource.Attribute.pressedTranslationZ;
+			global::Plugin.Hud.Resource.Attribute.progressBarPadding = global::Henspe.Droid.Resource.Attribute.progressBarPadding;
+			global::Plugin.Hud.Resource.Attribute.progressBarStyle = global::Henspe.Droid.Resource.Attribute.progressBarStyle;
+			global::Plugin.Hud.Resource.Attribute.queryBackground = global::Henspe.Droid.Resource.Attribute.queryBackground;
+			global::Plugin.Hud.Resource.Attribute.queryHint = global::Henspe.Droid.Resource.Attribute.queryHint;
+			global::Plugin.Hud.Resource.Attribute.radioButtonStyle = global::Henspe.Droid.Resource.Attribute.radioButtonStyle;
+			global::Plugin.Hud.Resource.Attribute.ratingBarStyle = global::Henspe.Droid.Resource.Attribute.ratingBarStyle;
+			global::Plugin.Hud.Resource.Attribute.ratingBarStyleIndicator = global::Henspe.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::Plugin.Hud.Resource.Attribute.ratingBarStyleSmall = global::Henspe.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::Plugin.Hud.Resource.Attribute.reverseLayout = global::Henspe.Droid.Resource.Attribute.reverseLayout;
+			global::Plugin.Hud.Resource.Attribute.rippleColor = global::Henspe.Droid.Resource.Attribute.rippleColor;
+			global::Plugin.Hud.Resource.Attribute.scrimAnimationDuration = global::Henspe.Droid.Resource.Attribute.scrimAnimationDuration;
+			global::Plugin.Hud.Resource.Attribute.scrimVisibleHeightTrigger = global::Henspe.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::Plugin.Hud.Resource.Attribute.searchHintIcon = global::Henspe.Droid.Resource.Attribute.searchHintIcon;
+			global::Plugin.Hud.Resource.Attribute.searchIcon = global::Henspe.Droid.Resource.Attribute.searchIcon;
+			global::Plugin.Hud.Resource.Attribute.searchViewStyle = global::Henspe.Droid.Resource.Attribute.searchViewStyle;
+			global::Plugin.Hud.Resource.Attribute.seekBarStyle = global::Henspe.Droid.Resource.Attribute.seekBarStyle;
+			global::Plugin.Hud.Resource.Attribute.selectableItemBackground = global::Henspe.Droid.Resource.Attribute.selectableItemBackground;
+			global::Plugin.Hud.Resource.Attribute.selectableItemBackgroundBorderless = global::Henspe.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::Plugin.Hud.Resource.Attribute.showAsAction = global::Henspe.Droid.Resource.Attribute.showAsAction;
+			global::Plugin.Hud.Resource.Attribute.showDividers = global::Henspe.Droid.Resource.Attribute.showDividers;
+			global::Plugin.Hud.Resource.Attribute.showText = global::Henspe.Droid.Resource.Attribute.showText;
+			global::Plugin.Hud.Resource.Attribute.showTitle = global::Henspe.Droid.Resource.Attribute.showTitle;
+			global::Plugin.Hud.Resource.Attribute.singleChoiceItemLayout = global::Henspe.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::Plugin.Hud.Resource.Attribute.spanCount = global::Henspe.Droid.Resource.Attribute.spanCount;
+			global::Plugin.Hud.Resource.Attribute.spinBars = global::Henspe.Droid.Resource.Attribute.spinBars;
+			global::Plugin.Hud.Resource.Attribute.spinnerDropDownItemStyle = global::Henspe.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::Plugin.Hud.Resource.Attribute.spinnerStyle = global::Henspe.Droid.Resource.Attribute.spinnerStyle;
+			global::Plugin.Hud.Resource.Attribute.splitTrack = global::Henspe.Droid.Resource.Attribute.splitTrack;
+			global::Plugin.Hud.Resource.Attribute.srcCompat = global::Henspe.Droid.Resource.Attribute.srcCompat;
+			global::Plugin.Hud.Resource.Attribute.stackFromEnd = global::Henspe.Droid.Resource.Attribute.stackFromEnd;
+			global::Plugin.Hud.Resource.Attribute.state_above_anchor = global::Henspe.Droid.Resource.Attribute.state_above_anchor;
+			global::Plugin.Hud.Resource.Attribute.state_collapsed = global::Henspe.Droid.Resource.Attribute.state_collapsed;
+			global::Plugin.Hud.Resource.Attribute.state_collapsible = global::Henspe.Droid.Resource.Attribute.state_collapsible;
+			global::Plugin.Hud.Resource.Attribute.statusBarBackground = global::Henspe.Droid.Resource.Attribute.statusBarBackground;
+			global::Plugin.Hud.Resource.Attribute.statusBarScrim = global::Henspe.Droid.Resource.Attribute.statusBarScrim;
+			global::Plugin.Hud.Resource.Attribute.subMenuArrow = global::Henspe.Droid.Resource.Attribute.subMenuArrow;
+			global::Plugin.Hud.Resource.Attribute.submitBackground = global::Henspe.Droid.Resource.Attribute.submitBackground;
+			global::Plugin.Hud.Resource.Attribute.subtitle = global::Henspe.Droid.Resource.Attribute.subtitle;
+			global::Plugin.Hud.Resource.Attribute.subtitleTextAppearance = global::Henspe.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::Plugin.Hud.Resource.Attribute.subtitleTextColor = global::Henspe.Droid.Resource.Attribute.subtitleTextColor;
+			global::Plugin.Hud.Resource.Attribute.subtitleTextStyle = global::Henspe.Droid.Resource.Attribute.subtitleTextStyle;
+			global::Plugin.Hud.Resource.Attribute.suggestionRowLayout = global::Henspe.Droid.Resource.Attribute.suggestionRowLayout;
+			global::Plugin.Hud.Resource.Attribute.switchMinWidth = global::Henspe.Droid.Resource.Attribute.switchMinWidth;
+			global::Plugin.Hud.Resource.Attribute.switchPadding = global::Henspe.Droid.Resource.Attribute.switchPadding;
+			global::Plugin.Hud.Resource.Attribute.switchStyle = global::Henspe.Droid.Resource.Attribute.switchStyle;
+			global::Plugin.Hud.Resource.Attribute.switchTextAppearance = global::Henspe.Droid.Resource.Attribute.switchTextAppearance;
+			global::Plugin.Hud.Resource.Attribute.tabBackground = global::Henspe.Droid.Resource.Attribute.tabBackground;
+			global::Plugin.Hud.Resource.Attribute.tabContentStart = global::Henspe.Droid.Resource.Attribute.tabContentStart;
+			global::Plugin.Hud.Resource.Attribute.tabGravity = global::Henspe.Droid.Resource.Attribute.tabGravity;
+			global::Plugin.Hud.Resource.Attribute.tabIndicatorColor = global::Henspe.Droid.Resource.Attribute.tabIndicatorColor;
+			global::Plugin.Hud.Resource.Attribute.tabIndicatorHeight = global::Henspe.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::Plugin.Hud.Resource.Attribute.tabMaxWidth = global::Henspe.Droid.Resource.Attribute.tabMaxWidth;
+			global::Plugin.Hud.Resource.Attribute.tabMinWidth = global::Henspe.Droid.Resource.Attribute.tabMinWidth;
+			global::Plugin.Hud.Resource.Attribute.tabMode = global::Henspe.Droid.Resource.Attribute.tabMode;
+			global::Plugin.Hud.Resource.Attribute.tabPadding = global::Henspe.Droid.Resource.Attribute.tabPadding;
+			global::Plugin.Hud.Resource.Attribute.tabPaddingBottom = global::Henspe.Droid.Resource.Attribute.tabPaddingBottom;
+			global::Plugin.Hud.Resource.Attribute.tabPaddingEnd = global::Henspe.Droid.Resource.Attribute.tabPaddingEnd;
+			global::Plugin.Hud.Resource.Attribute.tabPaddingStart = global::Henspe.Droid.Resource.Attribute.tabPaddingStart;
+			global::Plugin.Hud.Resource.Attribute.tabPaddingTop = global::Henspe.Droid.Resource.Attribute.tabPaddingTop;
+			global::Plugin.Hud.Resource.Attribute.tabSelectedTextColor = global::Henspe.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::Plugin.Hud.Resource.Attribute.tabTextAppearance = global::Henspe.Droid.Resource.Attribute.tabTextAppearance;
+			global::Plugin.Hud.Resource.Attribute.tabTextColor = global::Henspe.Droid.Resource.Attribute.tabTextColor;
+			global::Plugin.Hud.Resource.Attribute.textAllCaps = global::Henspe.Droid.Resource.Attribute.textAllCaps;
+			global::Plugin.Hud.Resource.Attribute.textAppearanceLargePopupMenu = global::Henspe.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::Plugin.Hud.Resource.Attribute.textAppearanceListItem = global::Henspe.Droid.Resource.Attribute.textAppearanceListItem;
+			global::Plugin.Hud.Resource.Attribute.textAppearanceListItemSmall = global::Henspe.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::Plugin.Hud.Resource.Attribute.textAppearancePopupMenuHeader = global::Henspe.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::Plugin.Hud.Resource.Attribute.textAppearanceSearchResultSubtitle = global::Henspe.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::Plugin.Hud.Resource.Attribute.textAppearanceSearchResultTitle = global::Henspe.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::Plugin.Hud.Resource.Attribute.textAppearanceSmallPopupMenu = global::Henspe.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::Plugin.Hud.Resource.Attribute.textColorAlertDialogListItem = global::Henspe.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::Plugin.Hud.Resource.Attribute.textColorSearchUrl = global::Henspe.Droid.Resource.Attribute.textColorSearchUrl;
+			global::Plugin.Hud.Resource.Attribute.theme = global::Henspe.Droid.Resource.Attribute.theme;
+			global::Plugin.Hud.Resource.Attribute.thickness = global::Henspe.Droid.Resource.Attribute.thickness;
+			global::Plugin.Hud.Resource.Attribute.thumbTextPadding = global::Henspe.Droid.Resource.Attribute.thumbTextPadding;
+			global::Plugin.Hud.Resource.Attribute.thumbTint = global::Henspe.Droid.Resource.Attribute.thumbTint;
+			global::Plugin.Hud.Resource.Attribute.thumbTintMode = global::Henspe.Droid.Resource.Attribute.thumbTintMode;
+			global::Plugin.Hud.Resource.Attribute.tickMark = global::Henspe.Droid.Resource.Attribute.tickMark;
+			global::Plugin.Hud.Resource.Attribute.tickMarkTint = global::Henspe.Droid.Resource.Attribute.tickMarkTint;
+			global::Plugin.Hud.Resource.Attribute.tickMarkTintMode = global::Henspe.Droid.Resource.Attribute.tickMarkTintMode;
+			global::Plugin.Hud.Resource.Attribute.title = global::Henspe.Droid.Resource.Attribute.title;
+			global::Plugin.Hud.Resource.Attribute.titleEnabled = global::Henspe.Droid.Resource.Attribute.titleEnabled;
+			global::Plugin.Hud.Resource.Attribute.titleMargin = global::Henspe.Droid.Resource.Attribute.titleMargin;
+			global::Plugin.Hud.Resource.Attribute.titleMarginBottom = global::Henspe.Droid.Resource.Attribute.titleMarginBottom;
+			global::Plugin.Hud.Resource.Attribute.titleMarginEnd = global::Henspe.Droid.Resource.Attribute.titleMarginEnd;
+			global::Plugin.Hud.Resource.Attribute.titleMarginStart = global::Henspe.Droid.Resource.Attribute.titleMarginStart;
+			global::Plugin.Hud.Resource.Attribute.titleMarginTop = global::Henspe.Droid.Resource.Attribute.titleMarginTop;
+			global::Plugin.Hud.Resource.Attribute.titleMargins = global::Henspe.Droid.Resource.Attribute.titleMargins;
+			global::Plugin.Hud.Resource.Attribute.titleTextAppearance = global::Henspe.Droid.Resource.Attribute.titleTextAppearance;
+			global::Plugin.Hud.Resource.Attribute.titleTextColor = global::Henspe.Droid.Resource.Attribute.titleTextColor;
+			global::Plugin.Hud.Resource.Attribute.titleTextStyle = global::Henspe.Droid.Resource.Attribute.titleTextStyle;
+			global::Plugin.Hud.Resource.Attribute.toolbarId = global::Henspe.Droid.Resource.Attribute.toolbarId;
+			global::Plugin.Hud.Resource.Attribute.toolbarNavigationButtonStyle = global::Henspe.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::Plugin.Hud.Resource.Attribute.toolbarStyle = global::Henspe.Droid.Resource.Attribute.toolbarStyle;
+			global::Plugin.Hud.Resource.Attribute.track = global::Henspe.Droid.Resource.Attribute.track;
+			global::Plugin.Hud.Resource.Attribute.trackTint = global::Henspe.Droid.Resource.Attribute.trackTint;
+			global::Plugin.Hud.Resource.Attribute.trackTintMode = global::Henspe.Droid.Resource.Attribute.trackTintMode;
+			global::Plugin.Hud.Resource.Attribute.useCompatPadding = global::Henspe.Droid.Resource.Attribute.useCompatPadding;
+			global::Plugin.Hud.Resource.Attribute.voiceIcon = global::Henspe.Droid.Resource.Attribute.voiceIcon;
+			global::Plugin.Hud.Resource.Attribute.windowActionBar = global::Henspe.Droid.Resource.Attribute.windowActionBar;
+			global::Plugin.Hud.Resource.Attribute.windowActionBarOverlay = global::Henspe.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::Plugin.Hud.Resource.Attribute.windowActionModeOverlay = global::Henspe.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::Plugin.Hud.Resource.Attribute.windowFixedHeightMajor = global::Henspe.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::Plugin.Hud.Resource.Attribute.windowFixedHeightMinor = global::Henspe.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::Plugin.Hud.Resource.Attribute.windowFixedWidthMajor = global::Henspe.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::Plugin.Hud.Resource.Attribute.windowFixedWidthMinor = global::Henspe.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::Plugin.Hud.Resource.Attribute.windowMinWidthMajor = global::Henspe.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::Plugin.Hud.Resource.Attribute.windowMinWidthMinor = global::Henspe.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::Plugin.Hud.Resource.Attribute.windowNoTitle = global::Henspe.Droid.Resource.Attribute.windowNoTitle;
+			global::Plugin.Hud.Resource.Boolean.abc_action_bar_embed_tabs = global::Henspe.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Plugin.Hud.Resource.Boolean.abc_allow_stacked_button_bar = global::Henspe.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::Plugin.Hud.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::Henspe.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::Plugin.Hud.Resource.Color.abc_background_cache_hint_selector_material_dark = global::Henspe.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::Plugin.Hud.Resource.Color.abc_background_cache_hint_selector_material_light = global::Henspe.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::Plugin.Hud.Resource.Color.abc_btn_colored_borderless_text_material = global::Henspe.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::Plugin.Hud.Resource.Color.abc_btn_colored_text_material = global::Henspe.Droid.Resource.Color.abc_btn_colored_text_material;
+			global::Plugin.Hud.Resource.Color.abc_color_highlight_material = global::Henspe.Droid.Resource.Color.abc_color_highlight_material;
+			global::Plugin.Hud.Resource.Color.abc_hint_foreground_material_dark = global::Henspe.Droid.Resource.Color.abc_hint_foreground_material_dark;
+			global::Plugin.Hud.Resource.Color.abc_hint_foreground_material_light = global::Henspe.Droid.Resource.Color.abc_hint_foreground_material_light;
+			global::Plugin.Hud.Resource.Color.abc_input_method_navigation_guard = global::Henspe.Droid.Resource.Color.abc_input_method_navigation_guard;
+			global::Plugin.Hud.Resource.Color.abc_primary_text_disable_only_material_dark = global::Henspe.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::Plugin.Hud.Resource.Color.abc_primary_text_disable_only_material_light = global::Henspe.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::Plugin.Hud.Resource.Color.abc_primary_text_material_dark = global::Henspe.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::Plugin.Hud.Resource.Color.abc_primary_text_material_light = global::Henspe.Droid.Resource.Color.abc_primary_text_material_light;
+			global::Plugin.Hud.Resource.Color.abc_search_url_text = global::Henspe.Droid.Resource.Color.abc_search_url_text;
+			global::Plugin.Hud.Resource.Color.abc_search_url_text_normal = global::Henspe.Droid.Resource.Color.abc_search_url_text_normal;
+			global::Plugin.Hud.Resource.Color.abc_search_url_text_pressed = global::Henspe.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::Plugin.Hud.Resource.Color.abc_search_url_text_selected = global::Henspe.Droid.Resource.Color.abc_search_url_text_selected;
+			global::Plugin.Hud.Resource.Color.abc_secondary_text_material_dark = global::Henspe.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::Plugin.Hud.Resource.Color.abc_secondary_text_material_light = global::Henspe.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::Plugin.Hud.Resource.Color.abc_tint_btn_checkable = global::Henspe.Droid.Resource.Color.abc_tint_btn_checkable;
+			global::Plugin.Hud.Resource.Color.abc_tint_default = global::Henspe.Droid.Resource.Color.abc_tint_default;
+			global::Plugin.Hud.Resource.Color.abc_tint_edittext = global::Henspe.Droid.Resource.Color.abc_tint_edittext;
+			global::Plugin.Hud.Resource.Color.abc_tint_seek_thumb = global::Henspe.Droid.Resource.Color.abc_tint_seek_thumb;
+			global::Plugin.Hud.Resource.Color.abc_tint_spinner = global::Henspe.Droid.Resource.Color.abc_tint_spinner;
+			global::Plugin.Hud.Resource.Color.abc_tint_switch_track = global::Henspe.Droid.Resource.Color.abc_tint_switch_track;
+			global::Plugin.Hud.Resource.Color.accent_material_dark = global::Henspe.Droid.Resource.Color.accent_material_dark;
+			global::Plugin.Hud.Resource.Color.accent_material_light = global::Henspe.Droid.Resource.Color.accent_material_light;
+			global::Plugin.Hud.Resource.Color.background_floating_material_dark = global::Henspe.Droid.Resource.Color.background_floating_material_dark;
+			global::Plugin.Hud.Resource.Color.background_floating_material_light = global::Henspe.Droid.Resource.Color.background_floating_material_light;
+			global::Plugin.Hud.Resource.Color.background_material_dark = global::Henspe.Droid.Resource.Color.background_material_dark;
+			global::Plugin.Hud.Resource.Color.background_material_light = global::Henspe.Droid.Resource.Color.background_material_light;
+			global::Plugin.Hud.Resource.Color.bright_foreground_disabled_material_dark = global::Henspe.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::Plugin.Hud.Resource.Color.bright_foreground_disabled_material_light = global::Henspe.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::Plugin.Hud.Resource.Color.bright_foreground_inverse_material_dark = global::Henspe.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::Plugin.Hud.Resource.Color.bright_foreground_inverse_material_light = global::Henspe.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::Plugin.Hud.Resource.Color.bright_foreground_material_dark = global::Henspe.Droid.Resource.Color.bright_foreground_material_dark;
+			global::Plugin.Hud.Resource.Color.bright_foreground_material_light = global::Henspe.Droid.Resource.Color.bright_foreground_material_light;
+			global::Plugin.Hud.Resource.Color.button_material_dark = global::Henspe.Droid.Resource.Color.button_material_dark;
+			global::Plugin.Hud.Resource.Color.button_material_light = global::Henspe.Droid.Resource.Color.button_material_light;
+			global::Plugin.Hud.Resource.Color.cardview_dark_background = global::Henspe.Droid.Resource.Color.cardview_dark_background;
+			global::Plugin.Hud.Resource.Color.cardview_light_background = global::Henspe.Droid.Resource.Color.cardview_light_background;
+			global::Plugin.Hud.Resource.Color.cardview_shadow_end_color = global::Henspe.Droid.Resource.Color.cardview_shadow_end_color;
+			global::Plugin.Hud.Resource.Color.cardview_shadow_start_color = global::Henspe.Droid.Resource.Color.cardview_shadow_start_color;
+			global::Plugin.Hud.Resource.Color.design_bottom_navigation_shadow_color = global::Henspe.Droid.Resource.Color.design_bottom_navigation_shadow_color;
+			global::Plugin.Hud.Resource.Color.design_error = global::Henspe.Droid.Resource.Color.design_error;
+			global::Plugin.Hud.Resource.Color.design_fab_shadow_end_color = global::Henspe.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::Plugin.Hud.Resource.Color.design_fab_shadow_mid_color = global::Henspe.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::Plugin.Hud.Resource.Color.design_fab_shadow_start_color = global::Henspe.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::Plugin.Hud.Resource.Color.design_fab_stroke_end_inner_color = global::Henspe.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::Plugin.Hud.Resource.Color.design_fab_stroke_end_outer_color = global::Henspe.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::Plugin.Hud.Resource.Color.design_fab_stroke_top_inner_color = global::Henspe.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::Plugin.Hud.Resource.Color.design_fab_stroke_top_outer_color = global::Henspe.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::Plugin.Hud.Resource.Color.design_snackbar_background_color = global::Henspe.Droid.Resource.Color.design_snackbar_background_color;
+			global::Plugin.Hud.Resource.Color.design_tint_password_toggle = global::Henspe.Droid.Resource.Color.design_tint_password_toggle;
+			global::Plugin.Hud.Resource.Color.dim_foreground_disabled_material_dark = global::Henspe.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::Plugin.Hud.Resource.Color.dim_foreground_disabled_material_light = global::Henspe.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::Plugin.Hud.Resource.Color.dim_foreground_material_dark = global::Henspe.Droid.Resource.Color.dim_foreground_material_dark;
+			global::Plugin.Hud.Resource.Color.dim_foreground_material_light = global::Henspe.Droid.Resource.Color.dim_foreground_material_light;
+			global::Plugin.Hud.Resource.Color.foreground_material_dark = global::Henspe.Droid.Resource.Color.foreground_material_dark;
+			global::Plugin.Hud.Resource.Color.foreground_material_light = global::Henspe.Droid.Resource.Color.foreground_material_light;
+			global::Plugin.Hud.Resource.Color.highlighted_text_material_dark = global::Henspe.Droid.Resource.Color.highlighted_text_material_dark;
+			global::Plugin.Hud.Resource.Color.highlighted_text_material_light = global::Henspe.Droid.Resource.Color.highlighted_text_material_light;
+			global::Plugin.Hud.Resource.Color.material_blue_grey_800 = global::Henspe.Droid.Resource.Color.material_blue_grey_800;
+			global::Plugin.Hud.Resource.Color.material_blue_grey_900 = global::Henspe.Droid.Resource.Color.material_blue_grey_900;
+			global::Plugin.Hud.Resource.Color.material_blue_grey_950 = global::Henspe.Droid.Resource.Color.material_blue_grey_950;
+			global::Plugin.Hud.Resource.Color.material_deep_teal_200 = global::Henspe.Droid.Resource.Color.material_deep_teal_200;
+			global::Plugin.Hud.Resource.Color.material_deep_teal_500 = global::Henspe.Droid.Resource.Color.material_deep_teal_500;
+			global::Plugin.Hud.Resource.Color.material_grey_100 = global::Henspe.Droid.Resource.Color.material_grey_100;
+			global::Plugin.Hud.Resource.Color.material_grey_300 = global::Henspe.Droid.Resource.Color.material_grey_300;
+			global::Plugin.Hud.Resource.Color.material_grey_50 = global::Henspe.Droid.Resource.Color.material_grey_50;
+			global::Plugin.Hud.Resource.Color.material_grey_600 = global::Henspe.Droid.Resource.Color.material_grey_600;
+			global::Plugin.Hud.Resource.Color.material_grey_800 = global::Henspe.Droid.Resource.Color.material_grey_800;
+			global::Plugin.Hud.Resource.Color.material_grey_850 = global::Henspe.Droid.Resource.Color.material_grey_850;
+			global::Plugin.Hud.Resource.Color.material_grey_900 = global::Henspe.Droid.Resource.Color.material_grey_900;
+			global::Plugin.Hud.Resource.Color.notification_action_color_filter = global::Henspe.Droid.Resource.Color.notification_action_color_filter;
+			global::Plugin.Hud.Resource.Color.notification_icon_bg_color = global::Henspe.Droid.Resource.Color.notification_icon_bg_color;
+			global::Plugin.Hud.Resource.Color.notification_material_background_media_default_color = global::Henspe.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::Plugin.Hud.Resource.Color.primary_dark_material_dark = global::Henspe.Droid.Resource.Color.primary_dark_material_dark;
+			global::Plugin.Hud.Resource.Color.primary_dark_material_light = global::Henspe.Droid.Resource.Color.primary_dark_material_light;
+			global::Plugin.Hud.Resource.Color.primary_material_dark = global::Henspe.Droid.Resource.Color.primary_material_dark;
+			global::Plugin.Hud.Resource.Color.primary_material_light = global::Henspe.Droid.Resource.Color.primary_material_light;
+			global::Plugin.Hud.Resource.Color.primary_text_default_material_dark = global::Henspe.Droid.Resource.Color.primary_text_default_material_dark;
+			global::Plugin.Hud.Resource.Color.primary_text_default_material_light = global::Henspe.Droid.Resource.Color.primary_text_default_material_light;
+			global::Plugin.Hud.Resource.Color.primary_text_disabled_material_dark = global::Henspe.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::Plugin.Hud.Resource.Color.primary_text_disabled_material_light = global::Henspe.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::Plugin.Hud.Resource.Color.ripple_material_dark = global::Henspe.Droid.Resource.Color.ripple_material_dark;
+			global::Plugin.Hud.Resource.Color.ripple_material_light = global::Henspe.Droid.Resource.Color.ripple_material_light;
+			global::Plugin.Hud.Resource.Color.secondary_text_default_material_dark = global::Henspe.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::Plugin.Hud.Resource.Color.secondary_text_default_material_light = global::Henspe.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Plugin.Hud.Resource.Color.secondary_text_disabled_material_dark = global::Henspe.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::Plugin.Hud.Resource.Color.secondary_text_disabled_material_light = global::Henspe.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::Plugin.Hud.Resource.Color.switch_thumb_disabled_material_dark = global::Henspe.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::Plugin.Hud.Resource.Color.switch_thumb_disabled_material_light = global::Henspe.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::Plugin.Hud.Resource.Color.switch_thumb_material_dark = global::Henspe.Droid.Resource.Color.switch_thumb_material_dark;
+			global::Plugin.Hud.Resource.Color.switch_thumb_material_light = global::Henspe.Droid.Resource.Color.switch_thumb_material_light;
+			global::Plugin.Hud.Resource.Color.switch_thumb_normal_material_dark = global::Henspe.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::Plugin.Hud.Resource.Color.switch_thumb_normal_material_light = global::Henspe.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::Plugin.Hud.Resource.Dimension.abc_action_bar_content_inset_material = global::Henspe.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::Plugin.Hud.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::Henspe.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::Plugin.Hud.Resource.Dimension.abc_action_bar_default_height_material = global::Henspe.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::Plugin.Hud.Resource.Dimension.abc_action_bar_default_padding_end_material = global::Henspe.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::Plugin.Hud.Resource.Dimension.abc_action_bar_default_padding_start_material = global::Henspe.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::Plugin.Hud.Resource.Dimension.abc_action_bar_elevation_material = global::Henspe.Droid.Resource.Dimension.abc_action_bar_elevation_material;
+			global::Plugin.Hud.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::Henspe.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::Plugin.Hud.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::Henspe.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::Plugin.Hud.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::Henspe.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::Plugin.Hud.Resource.Dimension.abc_action_bar_stacked_max_height = global::Henspe.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::Plugin.Hud.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::Henspe.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::Plugin.Hud.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::Henspe.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::Plugin.Hud.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::Henspe.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::Plugin.Hud.Resource.Dimension.abc_action_button_min_height_material = global::Henspe.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::Plugin.Hud.Resource.Dimension.abc_action_button_min_width_material = global::Henspe.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::Plugin.Hud.Resource.Dimension.abc_action_button_min_width_overflow_material = global::Henspe.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::Plugin.Hud.Resource.Dimension.abc_alert_dialog_button_bar_height = global::Henspe.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::Plugin.Hud.Resource.Dimension.abc_button_inset_horizontal_material = global::Henspe.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::Plugin.Hud.Resource.Dimension.abc_button_inset_vertical_material = global::Henspe.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::Plugin.Hud.Resource.Dimension.abc_button_padding_horizontal_material = global::Henspe.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::Plugin.Hud.Resource.Dimension.abc_button_padding_vertical_material = global::Henspe.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::Plugin.Hud.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::Henspe.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::Plugin.Hud.Resource.Dimension.abc_config_prefDialogWidth = global::Henspe.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::Plugin.Hud.Resource.Dimension.abc_control_corner_material = global::Henspe.Droid.Resource.Dimension.abc_control_corner_material;
+			global::Plugin.Hud.Resource.Dimension.abc_control_inset_material = global::Henspe.Droid.Resource.Dimension.abc_control_inset_material;
+			global::Plugin.Hud.Resource.Dimension.abc_control_padding_material = global::Henspe.Droid.Resource.Dimension.abc_control_padding_material;
+			global::Plugin.Hud.Resource.Dimension.abc_dialog_fixed_height_major = global::Henspe.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::Plugin.Hud.Resource.Dimension.abc_dialog_fixed_height_minor = global::Henspe.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::Plugin.Hud.Resource.Dimension.abc_dialog_fixed_width_major = global::Henspe.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::Plugin.Hud.Resource.Dimension.abc_dialog_fixed_width_minor = global::Henspe.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::Plugin.Hud.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::Henspe.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::Plugin.Hud.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::Henspe.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::Plugin.Hud.Resource.Dimension.abc_dialog_min_width_major = global::Henspe.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::Plugin.Hud.Resource.Dimension.abc_dialog_min_width_minor = global::Henspe.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::Plugin.Hud.Resource.Dimension.abc_dialog_padding_material = global::Henspe.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::Plugin.Hud.Resource.Dimension.abc_dialog_padding_top_material = global::Henspe.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::Plugin.Hud.Resource.Dimension.abc_dialog_title_divider_material = global::Henspe.Droid.Resource.Dimension.abc_dialog_title_divider_material;
+			global::Plugin.Hud.Resource.Dimension.abc_disabled_alpha_material_dark = global::Henspe.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::Plugin.Hud.Resource.Dimension.abc_disabled_alpha_material_light = global::Henspe.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::Plugin.Hud.Resource.Dimension.abc_dropdownitem_icon_width = global::Henspe.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::Plugin.Hud.Resource.Dimension.abc_dropdownitem_text_padding_left = global::Henspe.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::Plugin.Hud.Resource.Dimension.abc_dropdownitem_text_padding_right = global::Henspe.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::Plugin.Hud.Resource.Dimension.abc_edit_text_inset_bottom_material = global::Henspe.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::Plugin.Hud.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::Henspe.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::Plugin.Hud.Resource.Dimension.abc_edit_text_inset_top_material = global::Henspe.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::Plugin.Hud.Resource.Dimension.abc_floating_window_z = global::Henspe.Droid.Resource.Dimension.abc_floating_window_z;
+			global::Plugin.Hud.Resource.Dimension.abc_list_item_padding_horizontal_material = global::Henspe.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::Plugin.Hud.Resource.Dimension.abc_panel_menu_list_width = global::Henspe.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::Plugin.Hud.Resource.Dimension.abc_progress_bar_height_material = global::Henspe.Droid.Resource.Dimension.abc_progress_bar_height_material;
+			global::Plugin.Hud.Resource.Dimension.abc_search_view_preferred_height = global::Henspe.Droid.Resource.Dimension.abc_search_view_preferred_height;
+			global::Plugin.Hud.Resource.Dimension.abc_search_view_preferred_width = global::Henspe.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::Plugin.Hud.Resource.Dimension.abc_seekbar_track_background_height_material = global::Henspe.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::Plugin.Hud.Resource.Dimension.abc_seekbar_track_progress_height_material = global::Henspe.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::Plugin.Hud.Resource.Dimension.abc_select_dialog_padding_start_material = global::Henspe.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::Plugin.Hud.Resource.Dimension.abc_switch_padding = global::Henspe.Droid.Resource.Dimension.abc_switch_padding;
+			global::Plugin.Hud.Resource.Dimension.abc_text_size_body_1_material = global::Henspe.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::Plugin.Hud.Resource.Dimension.abc_text_size_body_2_material = global::Henspe.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::Plugin.Hud.Resource.Dimension.abc_text_size_button_material = global::Henspe.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::Plugin.Hud.Resource.Dimension.abc_text_size_caption_material = global::Henspe.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::Plugin.Hud.Resource.Dimension.abc_text_size_display_1_material = global::Henspe.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::Plugin.Hud.Resource.Dimension.abc_text_size_display_2_material = global::Henspe.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::Plugin.Hud.Resource.Dimension.abc_text_size_display_3_material = global::Henspe.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::Plugin.Hud.Resource.Dimension.abc_text_size_display_4_material = global::Henspe.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::Plugin.Hud.Resource.Dimension.abc_text_size_headline_material = global::Henspe.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::Plugin.Hud.Resource.Dimension.abc_text_size_large_material = global::Henspe.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::Plugin.Hud.Resource.Dimension.abc_text_size_medium_material = global::Henspe.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::Plugin.Hud.Resource.Dimension.abc_text_size_menu_header_material = global::Henspe.Droid.Resource.Dimension.abc_text_size_menu_header_material;
+			global::Plugin.Hud.Resource.Dimension.abc_text_size_menu_material = global::Henspe.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::Plugin.Hud.Resource.Dimension.abc_text_size_small_material = global::Henspe.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::Plugin.Hud.Resource.Dimension.abc_text_size_subhead_material = global::Henspe.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::Plugin.Hud.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::Henspe.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::Plugin.Hud.Resource.Dimension.abc_text_size_title_material = global::Henspe.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::Plugin.Hud.Resource.Dimension.abc_text_size_title_material_toolbar = global::Henspe.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::Plugin.Hud.Resource.Dimension.cardview_compat_inset_shadow = global::Henspe.Droid.Resource.Dimension.cardview_compat_inset_shadow;
+			global::Plugin.Hud.Resource.Dimension.cardview_default_elevation = global::Henspe.Droid.Resource.Dimension.cardview_default_elevation;
+			global::Plugin.Hud.Resource.Dimension.cardview_default_radius = global::Henspe.Droid.Resource.Dimension.cardview_default_radius;
+			global::Plugin.Hud.Resource.Dimension.design_appbar_elevation = global::Henspe.Droid.Resource.Dimension.design_appbar_elevation;
+			global::Plugin.Hud.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::Henspe.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::Plugin.Hud.Resource.Dimension.design_bottom_navigation_active_text_size = global::Henspe.Droid.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::Plugin.Hud.Resource.Dimension.design_bottom_navigation_elevation = global::Henspe.Droid.Resource.Dimension.design_bottom_navigation_elevation;
+			global::Plugin.Hud.Resource.Dimension.design_bottom_navigation_height = global::Henspe.Droid.Resource.Dimension.design_bottom_navigation_height;
+			global::Plugin.Hud.Resource.Dimension.design_bottom_navigation_item_max_width = global::Henspe.Droid.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::Plugin.Hud.Resource.Dimension.design_bottom_navigation_item_min_width = global::Henspe.Droid.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::Plugin.Hud.Resource.Dimension.design_bottom_navigation_margin = global::Henspe.Droid.Resource.Dimension.design_bottom_navigation_margin;
+			global::Plugin.Hud.Resource.Dimension.design_bottom_navigation_shadow_height = global::Henspe.Droid.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::Plugin.Hud.Resource.Dimension.design_bottom_navigation_text_size = global::Henspe.Droid.Resource.Dimension.design_bottom_navigation_text_size;
+			global::Plugin.Hud.Resource.Dimension.design_bottom_sheet_modal_elevation = global::Henspe.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::Plugin.Hud.Resource.Dimension.design_bottom_sheet_peek_height_min = global::Henspe.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::Plugin.Hud.Resource.Dimension.design_fab_border_width = global::Henspe.Droid.Resource.Dimension.design_fab_border_width;
+			global::Plugin.Hud.Resource.Dimension.design_fab_elevation = global::Henspe.Droid.Resource.Dimension.design_fab_elevation;
+			global::Plugin.Hud.Resource.Dimension.design_fab_image_size = global::Henspe.Droid.Resource.Dimension.design_fab_image_size;
+			global::Plugin.Hud.Resource.Dimension.design_fab_size_mini = global::Henspe.Droid.Resource.Dimension.design_fab_size_mini;
+			global::Plugin.Hud.Resource.Dimension.design_fab_size_normal = global::Henspe.Droid.Resource.Dimension.design_fab_size_normal;
+			global::Plugin.Hud.Resource.Dimension.design_fab_translation_z_pressed = global::Henspe.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::Plugin.Hud.Resource.Dimension.design_navigation_elevation = global::Henspe.Droid.Resource.Dimension.design_navigation_elevation;
+			global::Plugin.Hud.Resource.Dimension.design_navigation_icon_padding = global::Henspe.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::Plugin.Hud.Resource.Dimension.design_navigation_icon_size = global::Henspe.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::Plugin.Hud.Resource.Dimension.design_navigation_max_width = global::Henspe.Droid.Resource.Dimension.design_navigation_max_width;
+			global::Plugin.Hud.Resource.Dimension.design_navigation_padding_bottom = global::Henspe.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::Plugin.Hud.Resource.Dimension.design_navigation_separator_vertical_padding = global::Henspe.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::Plugin.Hud.Resource.Dimension.design_snackbar_action_inline_max_width = global::Henspe.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::Plugin.Hud.Resource.Dimension.design_snackbar_background_corner_radius = global::Henspe.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::Plugin.Hud.Resource.Dimension.design_snackbar_elevation = global::Henspe.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::Plugin.Hud.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::Henspe.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::Plugin.Hud.Resource.Dimension.design_snackbar_max_width = global::Henspe.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::Plugin.Hud.Resource.Dimension.design_snackbar_min_width = global::Henspe.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::Plugin.Hud.Resource.Dimension.design_snackbar_padding_horizontal = global::Henspe.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::Plugin.Hud.Resource.Dimension.design_snackbar_padding_vertical = global::Henspe.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::Plugin.Hud.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::Henspe.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::Plugin.Hud.Resource.Dimension.design_snackbar_text_size = global::Henspe.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::Plugin.Hud.Resource.Dimension.design_tab_max_width = global::Henspe.Droid.Resource.Dimension.design_tab_max_width;
+			global::Plugin.Hud.Resource.Dimension.design_tab_scrollable_min_width = global::Henspe.Droid.Resource.Dimension.design_tab_scrollable_min_width;
+			global::Plugin.Hud.Resource.Dimension.design_tab_text_size = global::Henspe.Droid.Resource.Dimension.design_tab_text_size;
+			global::Plugin.Hud.Resource.Dimension.design_tab_text_size_2line = global::Henspe.Droid.Resource.Dimension.design_tab_text_size_2line;
+			global::Plugin.Hud.Resource.Dimension.disabled_alpha_material_dark = global::Henspe.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::Plugin.Hud.Resource.Dimension.disabled_alpha_material_light = global::Henspe.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::Plugin.Hud.Resource.Dimension.highlight_alpha_material_colored = global::Henspe.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::Plugin.Hud.Resource.Dimension.highlight_alpha_material_dark = global::Henspe.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::Plugin.Hud.Resource.Dimension.highlight_alpha_material_light = global::Henspe.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::Plugin.Hud.Resource.Dimension.hint_alpha_material_dark = global::Henspe.Droid.Resource.Dimension.hint_alpha_material_dark;
+			global::Plugin.Hud.Resource.Dimension.hint_alpha_material_light = global::Henspe.Droid.Resource.Dimension.hint_alpha_material_light;
+			global::Plugin.Hud.Resource.Dimension.hint_pressed_alpha_material_dark = global::Henspe.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::Plugin.Hud.Resource.Dimension.hint_pressed_alpha_material_light = global::Henspe.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::Plugin.Hud.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::Henspe.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::Plugin.Hud.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::Henspe.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::Plugin.Hud.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::Henspe.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::Plugin.Hud.Resource.Dimension.mr_controller_volume_group_list_item_height = global::Henspe.Droid.Resource.Dimension.mr_controller_volume_group_list_item_height;
+			global::Plugin.Hud.Resource.Dimension.mr_controller_volume_group_list_item_icon_size = global::Henspe.Droid.Resource.Dimension.mr_controller_volume_group_list_item_icon_size;
+			global::Plugin.Hud.Resource.Dimension.mr_controller_volume_group_list_max_height = global::Henspe.Droid.Resource.Dimension.mr_controller_volume_group_list_max_height;
+			global::Plugin.Hud.Resource.Dimension.mr_controller_volume_group_list_padding_top = global::Henspe.Droid.Resource.Dimension.mr_controller_volume_group_list_padding_top;
+			global::Plugin.Hud.Resource.Dimension.mr_dialog_fixed_width_major = global::Henspe.Droid.Resource.Dimension.mr_dialog_fixed_width_major;
+			global::Plugin.Hud.Resource.Dimension.mr_dialog_fixed_width_minor = global::Henspe.Droid.Resource.Dimension.mr_dialog_fixed_width_minor;
+			global::Plugin.Hud.Resource.Dimension.notification_action_icon_size = global::Henspe.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Plugin.Hud.Resource.Dimension.notification_action_text_size = global::Henspe.Droid.Resource.Dimension.notification_action_text_size;
+			global::Plugin.Hud.Resource.Dimension.notification_big_circle_margin = global::Henspe.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Plugin.Hud.Resource.Dimension.notification_content_margin_start = global::Henspe.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Plugin.Hud.Resource.Dimension.notification_large_icon_height = global::Henspe.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Plugin.Hud.Resource.Dimension.notification_large_icon_width = global::Henspe.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Plugin.Hud.Resource.Dimension.notification_main_column_padding_top = global::Henspe.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Plugin.Hud.Resource.Dimension.notification_media_narrow_margin = global::Henspe.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Plugin.Hud.Resource.Dimension.notification_right_icon_size = global::Henspe.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Plugin.Hud.Resource.Dimension.notification_right_side_padding_top = global::Henspe.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Plugin.Hud.Resource.Dimension.notification_small_icon_background_padding = global::Henspe.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Plugin.Hud.Resource.Dimension.notification_small_icon_size_as_large = global::Henspe.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Plugin.Hud.Resource.Dimension.notification_subtext_size = global::Henspe.Droid.Resource.Dimension.notification_subtext_size;
+			global::Plugin.Hud.Resource.Dimension.notification_top_pad = global::Henspe.Droid.Resource.Dimension.notification_top_pad;
+			global::Plugin.Hud.Resource.Dimension.notification_top_pad_large_text = global::Henspe.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Plugin.Hud.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::Henspe.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::Plugin.Hud.Resource.Drawable.abc_action_bar_item_background_material = global::Henspe.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::Plugin.Hud.Resource.Drawable.abc_btn_borderless_material = global::Henspe.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::Plugin.Hud.Resource.Drawable.abc_btn_check_material = global::Henspe.Droid.Resource.Drawable.abc_btn_check_material;
+			global::Plugin.Hud.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::Henspe.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::Plugin.Hud.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::Henspe.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::Plugin.Hud.Resource.Drawable.abc_btn_colored_material = global::Henspe.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::Plugin.Hud.Resource.Drawable.abc_btn_default_mtrl_shape = global::Henspe.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::Plugin.Hud.Resource.Drawable.abc_btn_radio_material = global::Henspe.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::Plugin.Hud.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::Henspe.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::Plugin.Hud.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::Henspe.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::Plugin.Hud.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::Henspe.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::Plugin.Hud.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::Henspe.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::Plugin.Hud.Resource.Drawable.abc_cab_background_internal_bg = global::Henspe.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::Plugin.Hud.Resource.Drawable.abc_cab_background_top_material = global::Henspe.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::Plugin.Hud.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::Henspe.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::Plugin.Hud.Resource.Drawable.abc_control_background_material = global::Henspe.Droid.Resource.Drawable.abc_control_background_material;
+			global::Plugin.Hud.Resource.Drawable.abc_dialog_material_background = global::Henspe.Droid.Resource.Drawable.abc_dialog_material_background;
+			global::Plugin.Hud.Resource.Drawable.abc_edit_text_material = global::Henspe.Droid.Resource.Drawable.abc_edit_text_material;
+			global::Plugin.Hud.Resource.Drawable.abc_ic_ab_back_material = global::Henspe.Droid.Resource.Drawable.abc_ic_ab_back_material;
+			global::Plugin.Hud.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::Henspe.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::Plugin.Hud.Resource.Drawable.abc_ic_clear_material = global::Henspe.Droid.Resource.Drawable.abc_ic_clear_material;
+			global::Plugin.Hud.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::Henspe.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::Plugin.Hud.Resource.Drawable.abc_ic_go_search_api_material = global::Henspe.Droid.Resource.Drawable.abc_ic_go_search_api_material;
+			global::Plugin.Hud.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::Henspe.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::Plugin.Hud.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::Henspe.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::Plugin.Hud.Resource.Drawable.abc_ic_menu_overflow_material = global::Henspe.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::Plugin.Hud.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::Henspe.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::Plugin.Hud.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::Henspe.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::Plugin.Hud.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::Henspe.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::Plugin.Hud.Resource.Drawable.abc_ic_search_api_material = global::Henspe.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::Plugin.Hud.Resource.Drawable.abc_ic_star_black_16dp = global::Henspe.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::Plugin.Hud.Resource.Drawable.abc_ic_star_black_36dp = global::Henspe.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::Plugin.Hud.Resource.Drawable.abc_ic_star_black_48dp = global::Henspe.Droid.Resource.Drawable.abc_ic_star_black_48dp;
+			global::Plugin.Hud.Resource.Drawable.abc_ic_star_half_black_16dp = global::Henspe.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::Plugin.Hud.Resource.Drawable.abc_ic_star_half_black_36dp = global::Henspe.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::Plugin.Hud.Resource.Drawable.abc_ic_star_half_black_48dp = global::Henspe.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::Plugin.Hud.Resource.Drawable.abc_ic_voice_search_api_material = global::Henspe.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::Plugin.Hud.Resource.Drawable.abc_item_background_holo_dark = global::Henspe.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::Plugin.Hud.Resource.Drawable.abc_item_background_holo_light = global::Henspe.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::Plugin.Hud.Resource.Drawable.abc_list_divider_mtrl_alpha = global::Henspe.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::Plugin.Hud.Resource.Drawable.abc_list_focused_holo = global::Henspe.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::Plugin.Hud.Resource.Drawable.abc_list_longpressed_holo = global::Henspe.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::Plugin.Hud.Resource.Drawable.abc_list_pressed_holo_dark = global::Henspe.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::Plugin.Hud.Resource.Drawable.abc_list_pressed_holo_light = global::Henspe.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::Plugin.Hud.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::Henspe.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::Plugin.Hud.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::Henspe.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::Plugin.Hud.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::Henspe.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::Plugin.Hud.Resource.Drawable.abc_list_selector_disabled_holo_light = global::Henspe.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::Plugin.Hud.Resource.Drawable.abc_list_selector_holo_dark = global::Henspe.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::Plugin.Hud.Resource.Drawable.abc_list_selector_holo_light = global::Henspe.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::Plugin.Hud.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::Henspe.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::Plugin.Hud.Resource.Drawable.abc_popup_background_mtrl_mult = global::Henspe.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::Plugin.Hud.Resource.Drawable.abc_ratingbar_indicator_material = global::Henspe.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::Plugin.Hud.Resource.Drawable.abc_ratingbar_material = global::Henspe.Droid.Resource.Drawable.abc_ratingbar_material;
+			global::Plugin.Hud.Resource.Drawable.abc_ratingbar_small_material = global::Henspe.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::Plugin.Hud.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::Henspe.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::Plugin.Hud.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::Henspe.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::Plugin.Hud.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::Henspe.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::Plugin.Hud.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::Henspe.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::Plugin.Hud.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::Henspe.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::Plugin.Hud.Resource.Drawable.abc_seekbar_thumb_material = global::Henspe.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::Plugin.Hud.Resource.Drawable.abc_seekbar_tick_mark_material = global::Henspe.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::Plugin.Hud.Resource.Drawable.abc_seekbar_track_material = global::Henspe.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::Plugin.Hud.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::Henspe.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::Plugin.Hud.Resource.Drawable.abc_spinner_textfield_background_material = global::Henspe.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::Plugin.Hud.Resource.Drawable.abc_switch_thumb_material = global::Henspe.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::Plugin.Hud.Resource.Drawable.abc_switch_track_mtrl_alpha = global::Henspe.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::Plugin.Hud.Resource.Drawable.abc_tab_indicator_material = global::Henspe.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::Plugin.Hud.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::Henspe.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::Plugin.Hud.Resource.Drawable.abc_text_cursor_material = global::Henspe.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::Plugin.Hud.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::Henspe.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::Plugin.Hud.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::Henspe.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::Plugin.Hud.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::Henspe.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::Plugin.Hud.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::Henspe.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::Plugin.Hud.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::Henspe.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::Plugin.Hud.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::Henspe.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::Plugin.Hud.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::Henspe.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::Plugin.Hud.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::Henspe.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::Plugin.Hud.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::Henspe.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::Plugin.Hud.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::Henspe.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::Plugin.Hud.Resource.Drawable.abc_textfield_search_material = global::Henspe.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::Plugin.Hud.Resource.Drawable.abc_vector_test = global::Henspe.Droid.Resource.Drawable.abc_vector_test;
+			global::Plugin.Hud.Resource.Drawable.avd_hide_password = global::Henspe.Droid.Resource.Drawable.avd_hide_password;
+			global::Plugin.Hud.Resource.Drawable.avd_show_password = global::Henspe.Droid.Resource.Drawable.avd_show_password;
+			global::Plugin.Hud.Resource.Drawable.design_bottom_navigation_item_background = global::Henspe.Droid.Resource.Drawable.design_bottom_navigation_item_background;
+			global::Plugin.Hud.Resource.Drawable.design_fab_background = global::Henspe.Droid.Resource.Drawable.design_fab_background;
+			global::Plugin.Hud.Resource.Drawable.design_ic_visibility = global::Henspe.Droid.Resource.Drawable.design_ic_visibility;
+			global::Plugin.Hud.Resource.Drawable.design_ic_visibility_off = global::Henspe.Droid.Resource.Drawable.design_ic_visibility_off;
+			global::Plugin.Hud.Resource.Drawable.design_password_eye = global::Henspe.Droid.Resource.Drawable.design_password_eye;
+			global::Plugin.Hud.Resource.Drawable.design_snackbar_background = global::Henspe.Droid.Resource.Drawable.design_snackbar_background;
+			global::Plugin.Hud.Resource.Drawable.ic_audiotrack_dark = global::Henspe.Droid.Resource.Drawable.ic_audiotrack_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_audiotrack_light = global::Henspe.Droid.Resource.Drawable.ic_audiotrack_light;
+			global::Plugin.Hud.Resource.Drawable.ic_dialog_close_dark = global::Henspe.Droid.Resource.Drawable.ic_dialog_close_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_dialog_close_light = global::Henspe.Droid.Resource.Drawable.ic_dialog_close_light;
+			global::Plugin.Hud.Resource.Drawable.ic_errorstatus = global::Henspe.Droid.Resource.Drawable.ic_errorstatus;
+			global::Plugin.Hud.Resource.Drawable.ic_group_collapse_00 = global::Henspe.Droid.Resource.Drawable.ic_group_collapse_00;
+			global::Plugin.Hud.Resource.Drawable.ic_group_collapse_01 = global::Henspe.Droid.Resource.Drawable.ic_group_collapse_01;
+			global::Plugin.Hud.Resource.Drawable.ic_group_collapse_02 = global::Henspe.Droid.Resource.Drawable.ic_group_collapse_02;
+			global::Plugin.Hud.Resource.Drawable.ic_group_collapse_03 = global::Henspe.Droid.Resource.Drawable.ic_group_collapse_03;
+			global::Plugin.Hud.Resource.Drawable.ic_group_collapse_04 = global::Henspe.Droid.Resource.Drawable.ic_group_collapse_04;
+			global::Plugin.Hud.Resource.Drawable.ic_group_collapse_05 = global::Henspe.Droid.Resource.Drawable.ic_group_collapse_05;
+			global::Plugin.Hud.Resource.Drawable.ic_group_collapse_06 = global::Henspe.Droid.Resource.Drawable.ic_group_collapse_06;
+			global::Plugin.Hud.Resource.Drawable.ic_group_collapse_07 = global::Henspe.Droid.Resource.Drawable.ic_group_collapse_07;
+			global::Plugin.Hud.Resource.Drawable.ic_group_collapse_08 = global::Henspe.Droid.Resource.Drawable.ic_group_collapse_08;
+			global::Plugin.Hud.Resource.Drawable.ic_group_collapse_09 = global::Henspe.Droid.Resource.Drawable.ic_group_collapse_09;
+			global::Plugin.Hud.Resource.Drawable.ic_group_collapse_10 = global::Henspe.Droid.Resource.Drawable.ic_group_collapse_10;
+			global::Plugin.Hud.Resource.Drawable.ic_group_collapse_11 = global::Henspe.Droid.Resource.Drawable.ic_group_collapse_11;
+			global::Plugin.Hud.Resource.Drawable.ic_group_collapse_12 = global::Henspe.Droid.Resource.Drawable.ic_group_collapse_12;
+			global::Plugin.Hud.Resource.Drawable.ic_group_collapse_13 = global::Henspe.Droid.Resource.Drawable.ic_group_collapse_13;
+			global::Plugin.Hud.Resource.Drawable.ic_group_collapse_14 = global::Henspe.Droid.Resource.Drawable.ic_group_collapse_14;
+			global::Plugin.Hud.Resource.Drawable.ic_group_collapse_15 = global::Henspe.Droid.Resource.Drawable.ic_group_collapse_15;
+			global::Plugin.Hud.Resource.Drawable.ic_group_expand_00 = global::Henspe.Droid.Resource.Drawable.ic_group_expand_00;
+			global::Plugin.Hud.Resource.Drawable.ic_group_expand_01 = global::Henspe.Droid.Resource.Drawable.ic_group_expand_01;
+			global::Plugin.Hud.Resource.Drawable.ic_group_expand_02 = global::Henspe.Droid.Resource.Drawable.ic_group_expand_02;
+			global::Plugin.Hud.Resource.Drawable.ic_group_expand_03 = global::Henspe.Droid.Resource.Drawable.ic_group_expand_03;
+			global::Plugin.Hud.Resource.Drawable.ic_group_expand_04 = global::Henspe.Droid.Resource.Drawable.ic_group_expand_04;
+			global::Plugin.Hud.Resource.Drawable.ic_group_expand_05 = global::Henspe.Droid.Resource.Drawable.ic_group_expand_05;
+			global::Plugin.Hud.Resource.Drawable.ic_group_expand_06 = global::Henspe.Droid.Resource.Drawable.ic_group_expand_06;
+			global::Plugin.Hud.Resource.Drawable.ic_group_expand_07 = global::Henspe.Droid.Resource.Drawable.ic_group_expand_07;
+			global::Plugin.Hud.Resource.Drawable.ic_group_expand_08 = global::Henspe.Droid.Resource.Drawable.ic_group_expand_08;
+			global::Plugin.Hud.Resource.Drawable.ic_group_expand_09 = global::Henspe.Droid.Resource.Drawable.ic_group_expand_09;
+			global::Plugin.Hud.Resource.Drawable.ic_group_expand_10 = global::Henspe.Droid.Resource.Drawable.ic_group_expand_10;
+			global::Plugin.Hud.Resource.Drawable.ic_group_expand_11 = global::Henspe.Droid.Resource.Drawable.ic_group_expand_11;
+			global::Plugin.Hud.Resource.Drawable.ic_group_expand_12 = global::Henspe.Droid.Resource.Drawable.ic_group_expand_12;
+			global::Plugin.Hud.Resource.Drawable.ic_group_expand_13 = global::Henspe.Droid.Resource.Drawable.ic_group_expand_13;
+			global::Plugin.Hud.Resource.Drawable.ic_group_expand_14 = global::Henspe.Droid.Resource.Drawable.ic_group_expand_14;
+			global::Plugin.Hud.Resource.Drawable.ic_group_expand_15 = global::Henspe.Droid.Resource.Drawable.ic_group_expand_15;
+			global::Plugin.Hud.Resource.Drawable.ic_media_pause_dark = global::Henspe.Droid.Resource.Drawable.ic_media_pause_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_media_pause_light = global::Henspe.Droid.Resource.Drawable.ic_media_pause_light;
+			global::Plugin.Hud.Resource.Drawable.ic_media_play_dark = global::Henspe.Droid.Resource.Drawable.ic_media_play_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_media_play_light = global::Henspe.Droid.Resource.Drawable.ic_media_play_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_00_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_00_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_00_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_00_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_01_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_01_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_01_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_01_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_02_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_02_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_02_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_02_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_03_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_03_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_03_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_03_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_04_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_04_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_04_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_04_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_05_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_05_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_05_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_05_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_06_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_06_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_06_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_06_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_07_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_07_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_07_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_07_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_08_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_08_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_08_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_08_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_09_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_09_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_09_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_09_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_10_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_10_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_10_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_10_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_11_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_11_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_11_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_11_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_12_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_12_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_12_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_12_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_13_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_13_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_13_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_13_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_14_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_14_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_14_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_14_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_15_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_15_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_15_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_15_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_16_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_16_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_16_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_16_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_17_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_17_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_17_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_17_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_18_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_18_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_18_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_18_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_19_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_19_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_19_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_19_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_20_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_20_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_20_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_20_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_21_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_21_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_21_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_21_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_22_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_22_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connected_22_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connected_22_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_00_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_00_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_00_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_00_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_01_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_01_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_01_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_01_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_02_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_02_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_02_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_02_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_03_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_03_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_03_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_03_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_04_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_04_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_04_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_04_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_05_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_05_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_05_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_05_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_06_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_06_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_06_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_06_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_07_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_07_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_07_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_07_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_08_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_08_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_08_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_08_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_09_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_09_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_09_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_09_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_10_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_10_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_10_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_10_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_11_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_11_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_11_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_11_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_12_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_12_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_12_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_12_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_13_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_13_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_13_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_13_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_14_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_14_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_14_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_14_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_15_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_15_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_15_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_15_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_16_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_16_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_16_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_16_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_17_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_17_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_17_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_17_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_18_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_18_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_18_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_18_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_19_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_19_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_19_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_19_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_20_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_20_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_20_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_20_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_21_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_21_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_21_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_21_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_22_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_22_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_connecting_22_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_connecting_22_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_disabled_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_disabled_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_disabled_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_disabled_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_disconnected_dark = global::Henspe.Droid.Resource.Drawable.ic_mr_button_disconnected_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_disconnected_light = global::Henspe.Droid.Resource.Drawable.ic_mr_button_disconnected_light;
+			global::Plugin.Hud.Resource.Drawable.ic_mr_button_grey = global::Henspe.Droid.Resource.Drawable.ic_mr_button_grey;
+			global::Plugin.Hud.Resource.Drawable.ic_successstatus = global::Henspe.Droid.Resource.Drawable.ic_successstatus;
+			global::Plugin.Hud.Resource.Drawable.ic_vol_type_speaker_dark = global::Henspe.Droid.Resource.Drawable.ic_vol_type_speaker_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_vol_type_speaker_group_dark = global::Henspe.Droid.Resource.Drawable.ic_vol_type_speaker_group_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_vol_type_speaker_group_light = global::Henspe.Droid.Resource.Drawable.ic_vol_type_speaker_group_light;
+			global::Plugin.Hud.Resource.Drawable.ic_vol_type_speaker_light = global::Henspe.Droid.Resource.Drawable.ic_vol_type_speaker_light;
+			global::Plugin.Hud.Resource.Drawable.ic_vol_type_tv_dark = global::Henspe.Droid.Resource.Drawable.ic_vol_type_tv_dark;
+			global::Plugin.Hud.Resource.Drawable.ic_vol_type_tv_light = global::Henspe.Droid.Resource.Drawable.ic_vol_type_tv_light;
+			global::Plugin.Hud.Resource.Drawable.mr_button_connected_dark = global::Henspe.Droid.Resource.Drawable.mr_button_connected_dark;
+			global::Plugin.Hud.Resource.Drawable.mr_button_connected_light = global::Henspe.Droid.Resource.Drawable.mr_button_connected_light;
+			global::Plugin.Hud.Resource.Drawable.mr_button_connecting_dark = global::Henspe.Droid.Resource.Drawable.mr_button_connecting_dark;
+			global::Plugin.Hud.Resource.Drawable.mr_button_connecting_light = global::Henspe.Droid.Resource.Drawable.mr_button_connecting_light;
+			global::Plugin.Hud.Resource.Drawable.mr_button_dark = global::Henspe.Droid.Resource.Drawable.mr_button_dark;
+			global::Plugin.Hud.Resource.Drawable.mr_button_light = global::Henspe.Droid.Resource.Drawable.mr_button_light;
+			global::Plugin.Hud.Resource.Drawable.mr_dialog_close_dark = global::Henspe.Droid.Resource.Drawable.mr_dialog_close_dark;
+			global::Plugin.Hud.Resource.Drawable.mr_dialog_close_light = global::Henspe.Droid.Resource.Drawable.mr_dialog_close_light;
+			global::Plugin.Hud.Resource.Drawable.mr_dialog_material_background_dark = global::Henspe.Droid.Resource.Drawable.mr_dialog_material_background_dark;
+			global::Plugin.Hud.Resource.Drawable.mr_dialog_material_background_light = global::Henspe.Droid.Resource.Drawable.mr_dialog_material_background_light;
+			global::Plugin.Hud.Resource.Drawable.mr_group_collapse = global::Henspe.Droid.Resource.Drawable.mr_group_collapse;
+			global::Plugin.Hud.Resource.Drawable.mr_group_expand = global::Henspe.Droid.Resource.Drawable.mr_group_expand;
+			global::Plugin.Hud.Resource.Drawable.mr_media_pause_dark = global::Henspe.Droid.Resource.Drawable.mr_media_pause_dark;
+			global::Plugin.Hud.Resource.Drawable.mr_media_pause_light = global::Henspe.Droid.Resource.Drawable.mr_media_pause_light;
+			global::Plugin.Hud.Resource.Drawable.mr_media_play_dark = global::Henspe.Droid.Resource.Drawable.mr_media_play_dark;
+			global::Plugin.Hud.Resource.Drawable.mr_media_play_light = global::Henspe.Droid.Resource.Drawable.mr_media_play_light;
+			global::Plugin.Hud.Resource.Drawable.mr_vol_type_audiotrack_dark = global::Henspe.Droid.Resource.Drawable.mr_vol_type_audiotrack_dark;
+			global::Plugin.Hud.Resource.Drawable.mr_vol_type_audiotrack_light = global::Henspe.Droid.Resource.Drawable.mr_vol_type_audiotrack_light;
+			global::Plugin.Hud.Resource.Drawable.navigation_empty_icon = global::Henspe.Droid.Resource.Drawable.navigation_empty_icon;
+			global::Plugin.Hud.Resource.Drawable.notification_action_background = global::Henspe.Droid.Resource.Drawable.notification_action_background;
+			global::Plugin.Hud.Resource.Drawable.notification_bg = global::Henspe.Droid.Resource.Drawable.notification_bg;
+			global::Plugin.Hud.Resource.Drawable.notification_bg_low = global::Henspe.Droid.Resource.Drawable.notification_bg_low;
+			global::Plugin.Hud.Resource.Drawable.notification_bg_low_normal = global::Henspe.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Plugin.Hud.Resource.Drawable.notification_bg_low_pressed = global::Henspe.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Plugin.Hud.Resource.Drawable.notification_bg_normal = global::Henspe.Droid.Resource.Drawable.notification_bg_normal;
+			global::Plugin.Hud.Resource.Drawable.notification_bg_normal_pressed = global::Henspe.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Plugin.Hud.Resource.Drawable.notification_icon_background = global::Henspe.Droid.Resource.Drawable.notification_icon_background;
+			global::Plugin.Hud.Resource.Drawable.notification_template_icon_bg = global::Henspe.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Plugin.Hud.Resource.Drawable.notification_template_icon_low_bg = global::Henspe.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Plugin.Hud.Resource.Drawable.notification_tile_bg = global::Henspe.Droid.Resource.Drawable.notification_tile_bg;
+			global::Plugin.Hud.Resource.Drawable.notify_panel_notification_icon_bg = global::Henspe.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Plugin.Hud.Resource.Drawable.roundedbg = global::Henspe.Droid.Resource.Drawable.roundedbg;
+			global::Plugin.Hud.Resource.Drawable.roundedbgdark = global::Henspe.Droid.Resource.Drawable.roundedbgdark;
+			global::Plugin.Hud.Resource.Id.action0 = global::Henspe.Droid.Resource.Id.action0;
+			global::Plugin.Hud.Resource.Id.action_bar = global::Henspe.Droid.Resource.Id.action_bar;
+			global::Plugin.Hud.Resource.Id.action_bar_activity_content = global::Henspe.Droid.Resource.Id.action_bar_activity_content;
+			global::Plugin.Hud.Resource.Id.action_bar_container = global::Henspe.Droid.Resource.Id.action_bar_container;
+			global::Plugin.Hud.Resource.Id.action_bar_root = global::Henspe.Droid.Resource.Id.action_bar_root;
+			global::Plugin.Hud.Resource.Id.action_bar_spinner = global::Henspe.Droid.Resource.Id.action_bar_spinner;
+			global::Plugin.Hud.Resource.Id.action_bar_subtitle = global::Henspe.Droid.Resource.Id.action_bar_subtitle;
+			global::Plugin.Hud.Resource.Id.action_bar_title = global::Henspe.Droid.Resource.Id.action_bar_title;
+			global::Plugin.Hud.Resource.Id.action_container = global::Henspe.Droid.Resource.Id.action_container;
+			global::Plugin.Hud.Resource.Id.action_context_bar = global::Henspe.Droid.Resource.Id.action_context_bar;
+			global::Plugin.Hud.Resource.Id.action_divider = global::Henspe.Droid.Resource.Id.action_divider;
+			global::Plugin.Hud.Resource.Id.action_image = global::Henspe.Droid.Resource.Id.action_image;
+			global::Plugin.Hud.Resource.Id.action_menu_divider = global::Henspe.Droid.Resource.Id.action_menu_divider;
+			global::Plugin.Hud.Resource.Id.action_menu_presenter = global::Henspe.Droid.Resource.Id.action_menu_presenter;
+			global::Plugin.Hud.Resource.Id.action_mode_bar = global::Henspe.Droid.Resource.Id.action_mode_bar;
+			global::Plugin.Hud.Resource.Id.action_mode_bar_stub = global::Henspe.Droid.Resource.Id.action_mode_bar_stub;
+			global::Plugin.Hud.Resource.Id.action_mode_close_button = global::Henspe.Droid.Resource.Id.action_mode_close_button;
+			global::Plugin.Hud.Resource.Id.action_text = global::Henspe.Droid.Resource.Id.action_text;
+			global::Plugin.Hud.Resource.Id.actions = global::Henspe.Droid.Resource.Id.actions;
+			global::Plugin.Hud.Resource.Id.activity_chooser_view_content = global::Henspe.Droid.Resource.Id.activity_chooser_view_content;
+			global::Plugin.Hud.Resource.Id.add = global::Henspe.Droid.Resource.Id.add;
+			global::Plugin.Hud.Resource.Id.alertTitle = global::Henspe.Droid.Resource.Id.alertTitle;
+			global::Plugin.Hud.Resource.Id.all = global::Henspe.Droid.Resource.Id.all;
+			global::Plugin.Hud.Resource.Id.always = global::Henspe.Droid.Resource.Id.always;
+			global::Plugin.Hud.Resource.Id.auto = global::Henspe.Droid.Resource.Id.auto;
+			global::Plugin.Hud.Resource.Id.beginning = global::Henspe.Droid.Resource.Id.beginning;
+			global::Plugin.Hud.Resource.Id.bottom = global::Henspe.Droid.Resource.Id.bottom;
+			global::Plugin.Hud.Resource.Id.buttonPanel = global::Henspe.Droid.Resource.Id.buttonPanel;
+			global::Plugin.Hud.Resource.Id.cancel_action = global::Henspe.Droid.Resource.Id.cancel_action;
+			global::Plugin.Hud.Resource.Id.center = global::Henspe.Droid.Resource.Id.center;
+			global::Plugin.Hud.Resource.Id.center_horizontal = global::Henspe.Droid.Resource.Id.center_horizontal;
+			global::Plugin.Hud.Resource.Id.center_vertical = global::Henspe.Droid.Resource.Id.center_vertical;
+			global::Plugin.Hud.Resource.Id.checkbox = global::Henspe.Droid.Resource.Id.checkbox;
+			global::Plugin.Hud.Resource.Id.chronometer = global::Henspe.Droid.Resource.Id.chronometer;
+			global::Plugin.Hud.Resource.Id.clip_horizontal = global::Henspe.Droid.Resource.Id.clip_horizontal;
+			global::Plugin.Hud.Resource.Id.clip_vertical = global::Henspe.Droid.Resource.Id.clip_vertical;
+			global::Plugin.Hud.Resource.Id.collapseActionView = global::Henspe.Droid.Resource.Id.collapseActionView;
+			global::Plugin.Hud.Resource.Id.contentPanel = global::Henspe.Droid.Resource.Id.contentPanel;
+			global::Plugin.Hud.Resource.Id.custom = global::Henspe.Droid.Resource.Id.custom;
+			global::Plugin.Hud.Resource.Id.customPanel = global::Henspe.Droid.Resource.Id.customPanel;
+			global::Plugin.Hud.Resource.Id.decor_content_parent = global::Henspe.Droid.Resource.Id.decor_content_parent;
+			global::Plugin.Hud.Resource.Id.default_activity_button = global::Henspe.Droid.Resource.Id.default_activity_button;
+			global::Plugin.Hud.Resource.Id.design_bottom_sheet = global::Henspe.Droid.Resource.Id.design_bottom_sheet;
+			global::Plugin.Hud.Resource.Id.design_menu_item_action_area = global::Henspe.Droid.Resource.Id.design_menu_item_action_area;
+			global::Plugin.Hud.Resource.Id.design_menu_item_action_area_stub = global::Henspe.Droid.Resource.Id.design_menu_item_action_area_stub;
+			global::Plugin.Hud.Resource.Id.design_menu_item_text = global::Henspe.Droid.Resource.Id.design_menu_item_text;
+			global::Plugin.Hud.Resource.Id.design_navigation_view = global::Henspe.Droid.Resource.Id.design_navigation_view;
+			global::Plugin.Hud.Resource.Id.disableHome = global::Henspe.Droid.Resource.Id.disableHome;
+			global::Plugin.Hud.Resource.Id.edit_query = global::Henspe.Droid.Resource.Id.edit_query;
+			global::Plugin.Hud.Resource.Id.end = global::Henspe.Droid.Resource.Id.end;
+			global::Plugin.Hud.Resource.Id.end_padder = global::Henspe.Droid.Resource.Id.end_padder;
+			global::Plugin.Hud.Resource.Id.enterAlways = global::Henspe.Droid.Resource.Id.enterAlways;
+			global::Plugin.Hud.Resource.Id.enterAlwaysCollapsed = global::Henspe.Droid.Resource.Id.enterAlwaysCollapsed;
+			global::Plugin.Hud.Resource.Id.exitUntilCollapsed = global::Henspe.Droid.Resource.Id.exitUntilCollapsed;
+			global::Plugin.Hud.Resource.Id.expand_activities_button = global::Henspe.Droid.Resource.Id.expand_activities_button;
+			global::Plugin.Hud.Resource.Id.expanded_menu = global::Henspe.Droid.Resource.Id.expanded_menu;
+			global::Plugin.Hud.Resource.Id.fill = global::Henspe.Droid.Resource.Id.fill;
+			global::Plugin.Hud.Resource.Id.fill_horizontal = global::Henspe.Droid.Resource.Id.fill_horizontal;
+			global::Plugin.Hud.Resource.Id.fill_vertical = global::Henspe.Droid.Resource.Id.fill_vertical;
+			global::Plugin.Hud.Resource.Id.@fixed = global::Henspe.Droid.Resource.Id.@fixed;
+			global::Plugin.Hud.Resource.Id.home = global::Henspe.Droid.Resource.Id.home;
+			global::Plugin.Hud.Resource.Id.homeAsUp = global::Henspe.Droid.Resource.Id.homeAsUp;
+			global::Plugin.Hud.Resource.Id.icon = global::Henspe.Droid.Resource.Id.icon;
+			global::Plugin.Hud.Resource.Id.icon_group = global::Henspe.Droid.Resource.Id.icon_group;
+			global::Plugin.Hud.Resource.Id.ifRoom = global::Henspe.Droid.Resource.Id.ifRoom;
+			global::Plugin.Hud.Resource.Id.image = global::Henspe.Droid.Resource.Id.image;
+			global::Plugin.Hud.Resource.Id.info = global::Henspe.Droid.Resource.Id.info;
+			global::Plugin.Hud.Resource.Id.item_touch_helper_previous_elevation = global::Henspe.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::Plugin.Hud.Resource.Id.largeLabel = global::Henspe.Droid.Resource.Id.largeLabel;
+			global::Plugin.Hud.Resource.Id.left = global::Henspe.Droid.Resource.Id.left;
+			global::Plugin.Hud.Resource.Id.line1 = global::Henspe.Droid.Resource.Id.line1;
+			global::Plugin.Hud.Resource.Id.line3 = global::Henspe.Droid.Resource.Id.line3;
+			global::Plugin.Hud.Resource.Id.listMode = global::Henspe.Droid.Resource.Id.listMode;
+			global::Plugin.Hud.Resource.Id.list_item = global::Henspe.Droid.Resource.Id.list_item;
+			global::Plugin.Hud.Resource.Id.loadingImage = global::Henspe.Droid.Resource.Id.loadingImage;
+			global::Plugin.Hud.Resource.Id.loadingProgressBar = global::Henspe.Droid.Resource.Id.loadingProgressBar;
+			global::Plugin.Hud.Resource.Id.loadingProgressWheel = global::Henspe.Droid.Resource.Id.loadingProgressWheel;
+			global::Plugin.Hud.Resource.Id.masked = global::Henspe.Droid.Resource.Id.masked;
+			global::Plugin.Hud.Resource.Id.media_actions = global::Henspe.Droid.Resource.Id.media_actions;
+			global::Plugin.Hud.Resource.Id.middle = global::Henspe.Droid.Resource.Id.middle;
+			global::Plugin.Hud.Resource.Id.mini = global::Henspe.Droid.Resource.Id.mini;
+			global::Plugin.Hud.Resource.Id.mr_art = global::Henspe.Droid.Resource.Id.mr_art;
+			global::Plugin.Hud.Resource.Id.mr_chooser_list = global::Henspe.Droid.Resource.Id.mr_chooser_list;
+			global::Plugin.Hud.Resource.Id.mr_chooser_route_desc = global::Henspe.Droid.Resource.Id.mr_chooser_route_desc;
+			global::Plugin.Hud.Resource.Id.mr_chooser_route_icon = global::Henspe.Droid.Resource.Id.mr_chooser_route_icon;
+			global::Plugin.Hud.Resource.Id.mr_chooser_route_name = global::Henspe.Droid.Resource.Id.mr_chooser_route_name;
+			global::Plugin.Hud.Resource.Id.mr_chooser_title = global::Henspe.Droid.Resource.Id.mr_chooser_title;
+			global::Plugin.Hud.Resource.Id.mr_close = global::Henspe.Droid.Resource.Id.mr_close;
+			global::Plugin.Hud.Resource.Id.mr_control_divider = global::Henspe.Droid.Resource.Id.mr_control_divider;
+			global::Plugin.Hud.Resource.Id.mr_control_subtitle = global::Henspe.Droid.Resource.Id.mr_control_subtitle;
+			global::Plugin.Hud.Resource.Id.mr_control_title = global::Henspe.Droid.Resource.Id.mr_control_title;
+			global::Plugin.Hud.Resource.Id.mr_control_title_container = global::Henspe.Droid.Resource.Id.mr_control_title_container;
+			global::Plugin.Hud.Resource.Id.mr_custom_control = global::Henspe.Droid.Resource.Id.mr_custom_control;
+			global::Plugin.Hud.Resource.Id.mr_default_control = global::Henspe.Droid.Resource.Id.mr_default_control;
+			global::Plugin.Hud.Resource.Id.mr_dialog_area = global::Henspe.Droid.Resource.Id.mr_dialog_area;
+			global::Plugin.Hud.Resource.Id.mr_expandable_area = global::Henspe.Droid.Resource.Id.mr_expandable_area;
+			global::Plugin.Hud.Resource.Id.mr_group_expand_collapse = global::Henspe.Droid.Resource.Id.mr_group_expand_collapse;
+			global::Plugin.Hud.Resource.Id.mr_media_main_control = global::Henspe.Droid.Resource.Id.mr_media_main_control;
+			global::Plugin.Hud.Resource.Id.mr_name = global::Henspe.Droid.Resource.Id.mr_name;
+			global::Plugin.Hud.Resource.Id.mr_playback_control = global::Henspe.Droid.Resource.Id.mr_playback_control;
+			global::Plugin.Hud.Resource.Id.mr_title_bar = global::Henspe.Droid.Resource.Id.mr_title_bar;
+			global::Plugin.Hud.Resource.Id.mr_volume_control = global::Henspe.Droid.Resource.Id.mr_volume_control;
+			global::Plugin.Hud.Resource.Id.mr_volume_group_list = global::Henspe.Droid.Resource.Id.mr_volume_group_list;
+			global::Plugin.Hud.Resource.Id.mr_volume_item_icon = global::Henspe.Droid.Resource.Id.mr_volume_item_icon;
+			global::Plugin.Hud.Resource.Id.mr_volume_slider = global::Henspe.Droid.Resource.Id.mr_volume_slider;
+			global::Plugin.Hud.Resource.Id.multiply = global::Henspe.Droid.Resource.Id.multiply;
+			global::Plugin.Hud.Resource.Id.navigation_header_container = global::Henspe.Droid.Resource.Id.navigation_header_container;
+			global::Plugin.Hud.Resource.Id.never = global::Henspe.Droid.Resource.Id.never;
+			global::Plugin.Hud.Resource.Id.none = global::Henspe.Droid.Resource.Id.none;
+			global::Plugin.Hud.Resource.Id.normal = global::Henspe.Droid.Resource.Id.normal;
+			global::Plugin.Hud.Resource.Id.notification_background = global::Henspe.Droid.Resource.Id.notification_background;
+			global::Plugin.Hud.Resource.Id.notification_main_column = global::Henspe.Droid.Resource.Id.notification_main_column;
+			global::Plugin.Hud.Resource.Id.notification_main_column_container = global::Henspe.Droid.Resource.Id.notification_main_column_container;
+			global::Plugin.Hud.Resource.Id.parallax = global::Henspe.Droid.Resource.Id.parallax;
+			global::Plugin.Hud.Resource.Id.parentPanel = global::Henspe.Droid.Resource.Id.parentPanel;
+			global::Plugin.Hud.Resource.Id.pin = global::Henspe.Droid.Resource.Id.pin;
+			global::Plugin.Hud.Resource.Id.progress_circular = global::Henspe.Droid.Resource.Id.progress_circular;
+			global::Plugin.Hud.Resource.Id.progress_horizontal = global::Henspe.Droid.Resource.Id.progress_horizontal;
+			global::Plugin.Hud.Resource.Id.radio = global::Henspe.Droid.Resource.Id.radio;
+			global::Plugin.Hud.Resource.Id.right = global::Henspe.Droid.Resource.Id.right;
+			global::Plugin.Hud.Resource.Id.right_icon = global::Henspe.Droid.Resource.Id.right_icon;
+			global::Plugin.Hud.Resource.Id.right_side = global::Henspe.Droid.Resource.Id.right_side;
+			global::Plugin.Hud.Resource.Id.screen = global::Henspe.Droid.Resource.Id.screen;
+			global::Plugin.Hud.Resource.Id.scroll = global::Henspe.Droid.Resource.Id.scroll;
+			global::Plugin.Hud.Resource.Id.scrollIndicatorDown = global::Henspe.Droid.Resource.Id.scrollIndicatorDown;
+			global::Plugin.Hud.Resource.Id.scrollIndicatorUp = global::Henspe.Droid.Resource.Id.scrollIndicatorUp;
+			global::Plugin.Hud.Resource.Id.scrollView = global::Henspe.Droid.Resource.Id.scrollView;
+			global::Plugin.Hud.Resource.Id.scrollable = global::Henspe.Droid.Resource.Id.scrollable;
+			global::Plugin.Hud.Resource.Id.search_badge = global::Henspe.Droid.Resource.Id.search_badge;
+			global::Plugin.Hud.Resource.Id.search_bar = global::Henspe.Droid.Resource.Id.search_bar;
+			global::Plugin.Hud.Resource.Id.search_button = global::Henspe.Droid.Resource.Id.search_button;
+			global::Plugin.Hud.Resource.Id.search_close_btn = global::Henspe.Droid.Resource.Id.search_close_btn;
+			global::Plugin.Hud.Resource.Id.search_edit_frame = global::Henspe.Droid.Resource.Id.search_edit_frame;
+			global::Plugin.Hud.Resource.Id.search_go_btn = global::Henspe.Droid.Resource.Id.search_go_btn;
+			global::Plugin.Hud.Resource.Id.search_mag_icon = global::Henspe.Droid.Resource.Id.search_mag_icon;
+			global::Plugin.Hud.Resource.Id.search_plate = global::Henspe.Droid.Resource.Id.search_plate;
+			global::Plugin.Hud.Resource.Id.search_src_text = global::Henspe.Droid.Resource.Id.search_src_text;
+			global::Plugin.Hud.Resource.Id.search_voice_btn = global::Henspe.Droid.Resource.Id.search_voice_btn;
+			global::Plugin.Hud.Resource.Id.select_dialog_listview = global::Henspe.Droid.Resource.Id.select_dialog_listview;
+			global::Plugin.Hud.Resource.Id.shortcut = global::Henspe.Droid.Resource.Id.shortcut;
+			global::Plugin.Hud.Resource.Id.showCustom = global::Henspe.Droid.Resource.Id.showCustom;
+			global::Plugin.Hud.Resource.Id.showHome = global::Henspe.Droid.Resource.Id.showHome;
+			global::Plugin.Hud.Resource.Id.showTitle = global::Henspe.Droid.Resource.Id.showTitle;
+			global::Plugin.Hud.Resource.Id.smallLabel = global::Henspe.Droid.Resource.Id.smallLabel;
+			global::Plugin.Hud.Resource.Id.snackbar_action = global::Henspe.Droid.Resource.Id.snackbar_action;
+			global::Plugin.Hud.Resource.Id.snackbar_text = global::Henspe.Droid.Resource.Id.snackbar_text;
+			global::Plugin.Hud.Resource.Id.snap = global::Henspe.Droid.Resource.Id.snap;
+			global::Plugin.Hud.Resource.Id.spacer = global::Henspe.Droid.Resource.Id.spacer;
+			global::Plugin.Hud.Resource.Id.split_action_bar = global::Henspe.Droid.Resource.Id.split_action_bar;
+			global::Plugin.Hud.Resource.Id.src_atop = global::Henspe.Droid.Resource.Id.src_atop;
+			global::Plugin.Hud.Resource.Id.src_in = global::Henspe.Droid.Resource.Id.src_in;
+			global::Plugin.Hud.Resource.Id.src_over = global::Henspe.Droid.Resource.Id.src_over;
+			global::Plugin.Hud.Resource.Id.start = global::Henspe.Droid.Resource.Id.start;
+			global::Plugin.Hud.Resource.Id.status_bar_latest_event_content = global::Henspe.Droid.Resource.Id.status_bar_latest_event_content;
+			global::Plugin.Hud.Resource.Id.submenuarrow = global::Henspe.Droid.Resource.Id.submenuarrow;
+			global::Plugin.Hud.Resource.Id.submit_area = global::Henspe.Droid.Resource.Id.submit_area;
+			global::Plugin.Hud.Resource.Id.tabMode = global::Henspe.Droid.Resource.Id.tabMode;
+			global::Plugin.Hud.Resource.Id.text = global::Henspe.Droid.Resource.Id.text;
+			global::Plugin.Hud.Resource.Id.text2 = global::Henspe.Droid.Resource.Id.text2;
+			global::Plugin.Hud.Resource.Id.textSpacerNoButtons = global::Henspe.Droid.Resource.Id.textSpacerNoButtons;
+			global::Plugin.Hud.Resource.Id.textSpacerNoTitle = global::Henspe.Droid.Resource.Id.textSpacerNoTitle;
+			global::Plugin.Hud.Resource.Id.textViewStatus = global::Henspe.Droid.Resource.Id.textViewStatus;
+			global::Plugin.Hud.Resource.Id.text_input_password_toggle = global::Henspe.Droid.Resource.Id.text_input_password_toggle;
+			global::Plugin.Hud.Resource.Id.textinput_counter = global::Henspe.Droid.Resource.Id.textinput_counter;
+			global::Plugin.Hud.Resource.Id.textinput_error = global::Henspe.Droid.Resource.Id.textinput_error;
+			global::Plugin.Hud.Resource.Id.time = global::Henspe.Droid.Resource.Id.time;
+			global::Plugin.Hud.Resource.Id.title = global::Henspe.Droid.Resource.Id.title;
+			global::Plugin.Hud.Resource.Id.titleDividerNoCustom = global::Henspe.Droid.Resource.Id.titleDividerNoCustom;
+			global::Plugin.Hud.Resource.Id.title_template = global::Henspe.Droid.Resource.Id.title_template;
+			global::Plugin.Hud.Resource.Id.top = global::Henspe.Droid.Resource.Id.top;
+			global::Plugin.Hud.Resource.Id.topPanel = global::Henspe.Droid.Resource.Id.topPanel;
+			global::Plugin.Hud.Resource.Id.touch_outside = global::Henspe.Droid.Resource.Id.touch_outside;
+			global::Plugin.Hud.Resource.Id.transition_current_scene = global::Henspe.Droid.Resource.Id.transition_current_scene;
+			global::Plugin.Hud.Resource.Id.transition_scene_layoutid_cache = global::Henspe.Droid.Resource.Id.transition_scene_layoutid_cache;
+			global::Plugin.Hud.Resource.Id.up = global::Henspe.Droid.Resource.Id.up;
+			global::Plugin.Hud.Resource.Id.useLogo = global::Henspe.Droid.Resource.Id.useLogo;
+			global::Plugin.Hud.Resource.Id.view_offset_helper = global::Henspe.Droid.Resource.Id.view_offset_helper;
+			global::Plugin.Hud.Resource.Id.visible = global::Henspe.Droid.Resource.Id.visible;
+			global::Plugin.Hud.Resource.Id.volume_item_container = global::Henspe.Droid.Resource.Id.volume_item_container;
+			global::Plugin.Hud.Resource.Id.withText = global::Henspe.Droid.Resource.Id.withText;
+			global::Plugin.Hud.Resource.Id.wrap_content = global::Henspe.Droid.Resource.Id.wrap_content;
+			global::Plugin.Hud.Resource.Integer.abc_config_activityDefaultDur = global::Henspe.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::Plugin.Hud.Resource.Integer.abc_config_activityShortDur = global::Henspe.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::Plugin.Hud.Resource.Integer.app_bar_elevation_anim_duration = global::Henspe.Droid.Resource.Integer.app_bar_elevation_anim_duration;
+			global::Plugin.Hud.Resource.Integer.bottom_sheet_slide_duration = global::Henspe.Droid.Resource.Integer.bottom_sheet_slide_duration;
+			global::Plugin.Hud.Resource.Integer.cancel_button_image_alpha = global::Henspe.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::Plugin.Hud.Resource.Integer.design_snackbar_text_max_lines = global::Henspe.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::Plugin.Hud.Resource.Integer.hide_password_duration = global::Henspe.Droid.Resource.Integer.hide_password_duration;
+			global::Plugin.Hud.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms = global::Henspe.Droid.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms;
+			global::Plugin.Hud.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms = global::Henspe.Droid.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms;
+			global::Plugin.Hud.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms = global::Henspe.Droid.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms;
+			global::Plugin.Hud.Resource.Integer.show_password_duration = global::Henspe.Droid.Resource.Integer.show_password_duration;
+			global::Plugin.Hud.Resource.Integer.status_bar_notification_info_maxnum = global::Henspe.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Plugin.Hud.Resource.Interpolator.mr_fast_out_slow_in = global::Henspe.Droid.Resource.Interpolator.mr_fast_out_slow_in;
+			global::Plugin.Hud.Resource.Interpolator.mr_linear_out_slow_in = global::Henspe.Droid.Resource.Interpolator.mr_linear_out_slow_in;
+			global::Plugin.Hud.Resource.Layout.abc_action_bar_title_item = global::Henspe.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::Plugin.Hud.Resource.Layout.abc_action_bar_up_container = global::Henspe.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::Plugin.Hud.Resource.Layout.abc_action_menu_item_layout = global::Henspe.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::Plugin.Hud.Resource.Layout.abc_action_menu_layout = global::Henspe.Droid.Resource.Layout.abc_action_menu_layout;
+			global::Plugin.Hud.Resource.Layout.abc_action_mode_bar = global::Henspe.Droid.Resource.Layout.abc_action_mode_bar;
+			global::Plugin.Hud.Resource.Layout.abc_action_mode_close_item_material = global::Henspe.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::Plugin.Hud.Resource.Layout.abc_activity_chooser_view = global::Henspe.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::Plugin.Hud.Resource.Layout.abc_activity_chooser_view_list_item = global::Henspe.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::Plugin.Hud.Resource.Layout.abc_alert_dialog_button_bar_material = global::Henspe.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::Plugin.Hud.Resource.Layout.abc_alert_dialog_material = global::Henspe.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::Plugin.Hud.Resource.Layout.abc_alert_dialog_title_material = global::Henspe.Droid.Resource.Layout.abc_alert_dialog_title_material;
+			global::Plugin.Hud.Resource.Layout.abc_dialog_title_material = global::Henspe.Droid.Resource.Layout.abc_dialog_title_material;
+			global::Plugin.Hud.Resource.Layout.abc_expanded_menu_layout = global::Henspe.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::Plugin.Hud.Resource.Layout.abc_list_menu_item_checkbox = global::Henspe.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::Plugin.Hud.Resource.Layout.abc_list_menu_item_icon = global::Henspe.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::Plugin.Hud.Resource.Layout.abc_list_menu_item_layout = global::Henspe.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::Plugin.Hud.Resource.Layout.abc_list_menu_item_radio = global::Henspe.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::Plugin.Hud.Resource.Layout.abc_popup_menu_header_item_layout = global::Henspe.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::Plugin.Hud.Resource.Layout.abc_popup_menu_item_layout = global::Henspe.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::Plugin.Hud.Resource.Layout.abc_screen_content_include = global::Henspe.Droid.Resource.Layout.abc_screen_content_include;
+			global::Plugin.Hud.Resource.Layout.abc_screen_simple = global::Henspe.Droid.Resource.Layout.abc_screen_simple;
+			global::Plugin.Hud.Resource.Layout.abc_screen_simple_overlay_action_mode = global::Henspe.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::Plugin.Hud.Resource.Layout.abc_screen_toolbar = global::Henspe.Droid.Resource.Layout.abc_screen_toolbar;
+			global::Plugin.Hud.Resource.Layout.abc_search_dropdown_item_icons_2line = global::Henspe.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::Plugin.Hud.Resource.Layout.abc_search_view = global::Henspe.Droid.Resource.Layout.abc_search_view;
+			global::Plugin.Hud.Resource.Layout.abc_select_dialog_material = global::Henspe.Droid.Resource.Layout.abc_select_dialog_material;
+			global::Plugin.Hud.Resource.Layout.design_bottom_navigation_item = global::Henspe.Droid.Resource.Layout.design_bottom_navigation_item;
+			global::Plugin.Hud.Resource.Layout.design_bottom_sheet_dialog = global::Henspe.Droid.Resource.Layout.design_bottom_sheet_dialog;
+			global::Plugin.Hud.Resource.Layout.design_layout_snackbar = global::Henspe.Droid.Resource.Layout.design_layout_snackbar;
+			global::Plugin.Hud.Resource.Layout.design_layout_snackbar_include = global::Henspe.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::Plugin.Hud.Resource.Layout.design_layout_tab_icon = global::Henspe.Droid.Resource.Layout.design_layout_tab_icon;
+			global::Plugin.Hud.Resource.Layout.design_layout_tab_text = global::Henspe.Droid.Resource.Layout.design_layout_tab_text;
+			global::Plugin.Hud.Resource.Layout.design_menu_item_action_area = global::Henspe.Droid.Resource.Layout.design_menu_item_action_area;
+			global::Plugin.Hud.Resource.Layout.design_navigation_item = global::Henspe.Droid.Resource.Layout.design_navigation_item;
+			global::Plugin.Hud.Resource.Layout.design_navigation_item_header = global::Henspe.Droid.Resource.Layout.design_navigation_item_header;
+			global::Plugin.Hud.Resource.Layout.design_navigation_item_separator = global::Henspe.Droid.Resource.Layout.design_navigation_item_separator;
+			global::Plugin.Hud.Resource.Layout.design_navigation_item_subheader = global::Henspe.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::Plugin.Hud.Resource.Layout.design_navigation_menu = global::Henspe.Droid.Resource.Layout.design_navigation_menu;
+			global::Plugin.Hud.Resource.Layout.design_navigation_menu_item = global::Henspe.Droid.Resource.Layout.design_navigation_menu_item;
+			global::Plugin.Hud.Resource.Layout.design_text_input_password_icon = global::Henspe.Droid.Resource.Layout.design_text_input_password_icon;
+			global::Plugin.Hud.Resource.Layout.loading = global::Henspe.Droid.Resource.Layout.loading;
+			global::Plugin.Hud.Resource.Layout.loadingimage = global::Henspe.Droid.Resource.Layout.loadingimage;
+			global::Plugin.Hud.Resource.Layout.loadingprogress = global::Henspe.Droid.Resource.Layout.loadingprogress;
+			global::Plugin.Hud.Resource.Layout.mr_chooser_dialog = global::Henspe.Droid.Resource.Layout.mr_chooser_dialog;
+			global::Plugin.Hud.Resource.Layout.mr_chooser_list_item = global::Henspe.Droid.Resource.Layout.mr_chooser_list_item;
+			global::Plugin.Hud.Resource.Layout.mr_controller_material_dialog_b = global::Henspe.Droid.Resource.Layout.mr_controller_material_dialog_b;
+			global::Plugin.Hud.Resource.Layout.mr_controller_volume_item = global::Henspe.Droid.Resource.Layout.mr_controller_volume_item;
+			global::Plugin.Hud.Resource.Layout.mr_playback_control = global::Henspe.Droid.Resource.Layout.mr_playback_control;
+			global::Plugin.Hud.Resource.Layout.mr_volume_control = global::Henspe.Droid.Resource.Layout.mr_volume_control;
+			global::Plugin.Hud.Resource.Layout.notification_action = global::Henspe.Droid.Resource.Layout.notification_action;
+			global::Plugin.Hud.Resource.Layout.notification_action_tombstone = global::Henspe.Droid.Resource.Layout.notification_action_tombstone;
+			global::Plugin.Hud.Resource.Layout.notification_media_action = global::Henspe.Droid.Resource.Layout.notification_media_action;
+			global::Plugin.Hud.Resource.Layout.notification_media_cancel_action = global::Henspe.Droid.Resource.Layout.notification_media_cancel_action;
+			global::Plugin.Hud.Resource.Layout.notification_template_big_media = global::Henspe.Droid.Resource.Layout.notification_template_big_media;
+			global::Plugin.Hud.Resource.Layout.notification_template_big_media_custom = global::Henspe.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::Plugin.Hud.Resource.Layout.notification_template_big_media_narrow = global::Henspe.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::Plugin.Hud.Resource.Layout.notification_template_big_media_narrow_custom = global::Henspe.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::Plugin.Hud.Resource.Layout.notification_template_custom_big = global::Henspe.Droid.Resource.Layout.notification_template_custom_big;
+			global::Plugin.Hud.Resource.Layout.notification_template_icon_group = global::Henspe.Droid.Resource.Layout.notification_template_icon_group;
+			global::Plugin.Hud.Resource.Layout.notification_template_lines_media = global::Henspe.Droid.Resource.Layout.notification_template_lines_media;
+			global::Plugin.Hud.Resource.Layout.notification_template_media = global::Henspe.Droid.Resource.Layout.notification_template_media;
+			global::Plugin.Hud.Resource.Layout.notification_template_media_custom = global::Henspe.Droid.Resource.Layout.notification_template_media_custom;
+			global::Plugin.Hud.Resource.Layout.notification_template_part_chronometer = global::Henspe.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Plugin.Hud.Resource.Layout.notification_template_part_time = global::Henspe.Droid.Resource.Layout.notification_template_part_time;
+			global::Plugin.Hud.Resource.Layout.select_dialog_item_material = global::Henspe.Droid.Resource.Layout.select_dialog_item_material;
+			global::Plugin.Hud.Resource.Layout.select_dialog_multichoice_material = global::Henspe.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::Plugin.Hud.Resource.Layout.select_dialog_singlechoice_material = global::Henspe.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::Plugin.Hud.Resource.Layout.support_simple_spinner_dropdown_item = global::Henspe.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::Plugin.Hud.Resource.String.abc_action_bar_home_description = global::Henspe.Droid.Resource.String.abc_action_bar_home_description;
+			global::Plugin.Hud.Resource.String.abc_action_bar_up_description = global::Henspe.Droid.Resource.String.abc_action_bar_up_description;
+			global::Plugin.Hud.Resource.String.abc_action_menu_overflow_description = global::Henspe.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::Plugin.Hud.Resource.String.abc_action_mode_done = global::Henspe.Droid.Resource.String.abc_action_mode_done;
+			global::Plugin.Hud.Resource.String.abc_activity_chooser_view_see_all = global::Henspe.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::Plugin.Hud.Resource.String.abc_activitychooserview_choose_application = global::Henspe.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::Plugin.Hud.Resource.String.abc_capital_off = global::Henspe.Droid.Resource.String.abc_capital_off;
+			global::Plugin.Hud.Resource.String.abc_capital_on = global::Henspe.Droid.Resource.String.abc_capital_on;
+			global::Plugin.Hud.Resource.String.abc_font_family_body_1_material = global::Henspe.Droid.Resource.String.abc_font_family_body_1_material;
+			global::Plugin.Hud.Resource.String.abc_font_family_body_2_material = global::Henspe.Droid.Resource.String.abc_font_family_body_2_material;
+			global::Plugin.Hud.Resource.String.abc_font_family_button_material = global::Henspe.Droid.Resource.String.abc_font_family_button_material;
+			global::Plugin.Hud.Resource.String.abc_font_family_caption_material = global::Henspe.Droid.Resource.String.abc_font_family_caption_material;
+			global::Plugin.Hud.Resource.String.abc_font_family_display_1_material = global::Henspe.Droid.Resource.String.abc_font_family_display_1_material;
+			global::Plugin.Hud.Resource.String.abc_font_family_display_2_material = global::Henspe.Droid.Resource.String.abc_font_family_display_2_material;
+			global::Plugin.Hud.Resource.String.abc_font_family_display_3_material = global::Henspe.Droid.Resource.String.abc_font_family_display_3_material;
+			global::Plugin.Hud.Resource.String.abc_font_family_display_4_material = global::Henspe.Droid.Resource.String.abc_font_family_display_4_material;
+			global::Plugin.Hud.Resource.String.abc_font_family_headline_material = global::Henspe.Droid.Resource.String.abc_font_family_headline_material;
+			global::Plugin.Hud.Resource.String.abc_font_family_menu_material = global::Henspe.Droid.Resource.String.abc_font_family_menu_material;
+			global::Plugin.Hud.Resource.String.abc_font_family_subhead_material = global::Henspe.Droid.Resource.String.abc_font_family_subhead_material;
+			global::Plugin.Hud.Resource.String.abc_font_family_title_material = global::Henspe.Droid.Resource.String.abc_font_family_title_material;
+			global::Plugin.Hud.Resource.String.abc_search_hint = global::Henspe.Droid.Resource.String.abc_search_hint;
+			global::Plugin.Hud.Resource.String.abc_searchview_description_clear = global::Henspe.Droid.Resource.String.abc_searchview_description_clear;
+			global::Plugin.Hud.Resource.String.abc_searchview_description_query = global::Henspe.Droid.Resource.String.abc_searchview_description_query;
+			global::Plugin.Hud.Resource.String.abc_searchview_description_search = global::Henspe.Droid.Resource.String.abc_searchview_description_search;
+			global::Plugin.Hud.Resource.String.abc_searchview_description_submit = global::Henspe.Droid.Resource.String.abc_searchview_description_submit;
+			global::Plugin.Hud.Resource.String.abc_searchview_description_voice = global::Henspe.Droid.Resource.String.abc_searchview_description_voice;
+			global::Plugin.Hud.Resource.String.abc_shareactionprovider_share_with = global::Henspe.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::Plugin.Hud.Resource.String.abc_shareactionprovider_share_with_application = global::Henspe.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::Plugin.Hud.Resource.String.abc_toolbar_collapse_description = global::Henspe.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::Plugin.Hud.Resource.String.appbar_scrolling_view_behavior = global::Henspe.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::Plugin.Hud.Resource.String.bottom_sheet_behavior = global::Henspe.Droid.Resource.String.bottom_sheet_behavior;
+			global::Plugin.Hud.Resource.String.character_counter_pattern = global::Henspe.Droid.Resource.String.character_counter_pattern;
+			global::Plugin.Hud.Resource.String.library_name = global::Henspe.Droid.Resource.String.library_name;
+			global::Plugin.Hud.Resource.String.mr_button_content_description = global::Henspe.Droid.Resource.String.mr_button_content_description;
+			global::Plugin.Hud.Resource.String.mr_cast_button_connected = global::Henspe.Droid.Resource.String.mr_cast_button_connected;
+			global::Plugin.Hud.Resource.String.mr_cast_button_connecting = global::Henspe.Droid.Resource.String.mr_cast_button_connecting;
+			global::Plugin.Hud.Resource.String.mr_cast_button_disconnected = global::Henspe.Droid.Resource.String.mr_cast_button_disconnected;
+			global::Plugin.Hud.Resource.String.mr_chooser_searching = global::Henspe.Droid.Resource.String.mr_chooser_searching;
+			global::Plugin.Hud.Resource.String.mr_chooser_title = global::Henspe.Droid.Resource.String.mr_chooser_title;
+			global::Plugin.Hud.Resource.String.mr_controller_album_art = global::Henspe.Droid.Resource.String.mr_controller_album_art;
+			global::Plugin.Hud.Resource.String.mr_controller_casting_screen = global::Henspe.Droid.Resource.String.mr_controller_casting_screen;
+			global::Plugin.Hud.Resource.String.mr_controller_close_description = global::Henspe.Droid.Resource.String.mr_controller_close_description;
+			global::Plugin.Hud.Resource.String.mr_controller_collapse_group = global::Henspe.Droid.Resource.String.mr_controller_collapse_group;
+			global::Plugin.Hud.Resource.String.mr_controller_disconnect = global::Henspe.Droid.Resource.String.mr_controller_disconnect;
+			global::Plugin.Hud.Resource.String.mr_controller_expand_group = global::Henspe.Droid.Resource.String.mr_controller_expand_group;
+			global::Plugin.Hud.Resource.String.mr_controller_no_info_available = global::Henspe.Droid.Resource.String.mr_controller_no_info_available;
+			global::Plugin.Hud.Resource.String.mr_controller_no_media_selected = global::Henspe.Droid.Resource.String.mr_controller_no_media_selected;
+			global::Plugin.Hud.Resource.String.mr_controller_pause = global::Henspe.Droid.Resource.String.mr_controller_pause;
+			global::Plugin.Hud.Resource.String.mr_controller_play = global::Henspe.Droid.Resource.String.mr_controller_play;
+			global::Plugin.Hud.Resource.String.mr_controller_stop = global::Henspe.Droid.Resource.String.mr_controller_stop;
+			global::Plugin.Hud.Resource.String.mr_controller_volume_slider = global::Henspe.Droid.Resource.String.mr_controller_volume_slider;
+			global::Plugin.Hud.Resource.String.mr_system_route_name = global::Henspe.Droid.Resource.String.mr_system_route_name;
+			global::Plugin.Hud.Resource.String.mr_user_route_category_name = global::Henspe.Droid.Resource.String.mr_user_route_category_name;
+			global::Plugin.Hud.Resource.String.password_toggle_content_description = global::Henspe.Droid.Resource.String.password_toggle_content_description;
+			global::Plugin.Hud.Resource.String.path_password_eye = global::Henspe.Droid.Resource.String.path_password_eye;
+			global::Plugin.Hud.Resource.String.path_password_eye_mask_strike_through = global::Henspe.Droid.Resource.String.path_password_eye_mask_strike_through;
+			global::Plugin.Hud.Resource.String.path_password_eye_mask_visible = global::Henspe.Droid.Resource.String.path_password_eye_mask_visible;
+			global::Plugin.Hud.Resource.String.path_password_strike_through = global::Henspe.Droid.Resource.String.path_password_strike_through;
+			global::Plugin.Hud.Resource.String.search_menu_title = global::Henspe.Droid.Resource.String.search_menu_title;
+			global::Plugin.Hud.Resource.String.status_bar_notification_info_overflow = global::Henspe.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Plugin.Hud.Resource.Style.AlertDialog_AppCompat = global::Henspe.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::Plugin.Hud.Resource.Style.AlertDialog_AppCompat_Light = global::Henspe.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::Plugin.Hud.Resource.Style.Animation_AppCompat_Dialog = global::Henspe.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::Plugin.Hud.Resource.Style.Animation_AppCompat_DropDownUp = global::Henspe.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::Plugin.Hud.Resource.Style.Animation_Design_BottomSheetDialog = global::Henspe.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::Plugin.Hud.Resource.Style.Base_AlertDialog_AppCompat = global::Henspe.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::Plugin.Hud.Resource.Style.Base_AlertDialog_AppCompat_Light = global::Henspe.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::Plugin.Hud.Resource.Style.Base_Animation_AppCompat_Dialog = global::Henspe.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::Plugin.Hud.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::Henspe.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::Plugin.Hud.Resource.Style.Base_CardView = global::Henspe.Droid.Resource.Style.Base_CardView;
+			global::Plugin.Hud.Resource.Style.Base_DialogWindowTitle_AppCompat = global::Henspe.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::Plugin.Hud.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::Henspe.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Button = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Large = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Small = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Title = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::Henspe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::Henspe.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::Henspe.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Plugin.Hud.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::Henspe.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Plugin.Hud.Resource.Style.Base_Theme_AppCompat = global::Henspe.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::Plugin.Hud.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::Henspe.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::Plugin.Hud.Resource.Style.Base_Theme_AppCompat_Dialog = global::Henspe.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::Plugin.Hud.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::Henspe.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::Plugin.Hud.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::Henspe.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::Plugin.Hud.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::Henspe.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::Plugin.Hud.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::Henspe.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::Plugin.Hud.Resource.Style.Base_Theme_AppCompat_Light = global::Henspe.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::Plugin.Hud.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::Henspe.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::Plugin.Hud.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::Henspe.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::Plugin.Hud.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::Henspe.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::Plugin.Hud.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::Henspe.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::Plugin.Hud.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::Henspe.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Plugin.Hud.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::Henspe.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::Plugin.Hud.Resource.Style.Base_ThemeOverlay_AppCompat = global::Henspe.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::Plugin.Hud.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::Henspe.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::Plugin.Hud.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::Henspe.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::Plugin.Hud.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::Henspe.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Plugin.Hud.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::Henspe.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::Plugin.Hud.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::Henspe.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Plugin.Hud.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::Henspe.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::Plugin.Hud.Resource.Style.Base_V21_Theme_AppCompat = global::Henspe.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::Plugin.Hud.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::Henspe.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::Plugin.Hud.Resource.Style.Base_V21_Theme_AppCompat_Light = global::Henspe.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::Plugin.Hud.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::Henspe.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::Plugin.Hud.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::Henspe.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::Plugin.Hud.Resource.Style.Base_V22_Theme_AppCompat = global::Henspe.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::Plugin.Hud.Resource.Style.Base_V22_Theme_AppCompat_Light = global::Henspe.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::Plugin.Hud.Resource.Style.Base_V23_Theme_AppCompat = global::Henspe.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::Plugin.Hud.Resource.Style.Base_V23_Theme_AppCompat_Light = global::Henspe.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::Plugin.Hud.Resource.Style.Base_V7_Theme_AppCompat = global::Henspe.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::Plugin.Hud.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::Henspe.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::Plugin.Hud.Resource.Style.Base_V7_Theme_AppCompat_Light = global::Henspe.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::Plugin.Hud.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::Henspe.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::Plugin.Hud.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::Henspe.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::Plugin.Hud.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::Henspe.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::Plugin.Hud.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::Henspe.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_ActionBar = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_ActionButton = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_ActionMode = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_Button = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_Button_Small = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_EditText = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_ImageButton = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_ListView = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_RatingBar = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_SearchView = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_SeekBar = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_Spinner = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_Toolbar = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::Plugin.Hud.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::Henspe.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Plugin.Hud.Resource.Style.Base_Widget_Design_TabLayout = global::Henspe.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::Plugin.Hud.Resource.Style.CardView = global::Henspe.Droid.Resource.Style.CardView;
+			global::Plugin.Hud.Resource.Style.CardView_Dark = global::Henspe.Droid.Resource.Style.CardView_Dark;
+			global::Plugin.Hud.Resource.Style.CardView_Light = global::Henspe.Droid.Resource.Style.CardView_Light;
+			global::Plugin.Hud.Resource.Style.Platform_AppCompat = global::Henspe.Droid.Resource.Style.Platform_AppCompat;
+			global::Plugin.Hud.Resource.Style.Platform_AppCompat_Light = global::Henspe.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::Plugin.Hud.Resource.Style.Platform_ThemeOverlay_AppCompat = global::Henspe.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::Plugin.Hud.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::Henspe.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::Plugin.Hud.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::Henspe.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::Plugin.Hud.Resource.Style.Platform_V21_AppCompat = global::Henspe.Droid.Resource.Style.Platform_V21_AppCompat;
+			global::Plugin.Hud.Resource.Style.Platform_V21_AppCompat_Light = global::Henspe.Droid.Resource.Style.Platform_V21_AppCompat_Light;
+			global::Plugin.Hud.Resource.Style.Platform_V25_AppCompat = global::Henspe.Droid.Resource.Style.Platform_V25_AppCompat;
+			global::Plugin.Hud.Resource.Style.Platform_V25_AppCompat_Light = global::Henspe.Droid.Resource.Style.Platform_V25_AppCompat_Light;
+			global::Plugin.Hud.Resource.Style.Platform_Widget_AppCompat_Spinner = global::Henspe.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::Plugin.Hud.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::Henspe.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::Plugin.Hud.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::Henspe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::Plugin.Hud.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::Henspe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::Plugin.Hud.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::Henspe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::Plugin.Hud.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::Henspe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::Plugin.Hud.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::Henspe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::Plugin.Hud.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::Henspe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::Plugin.Hud.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::Henspe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::Plugin.Hud.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::Henspe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::Plugin.Hud.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::Henspe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::Plugin.Hud.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::Henspe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::Plugin.Hud.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::Henspe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::Plugin.Hud.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::Henspe.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::Plugin.Hud.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::Henspe.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Body1 = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Body2 = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Button = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Caption = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Display1 = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Display2 = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Display3 = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Display4 = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Headline = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Inverse = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Large = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Medium = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Menu = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Small = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Subhead = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Title = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::Plugin.Hud.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::Henspe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Plugin.Hud.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::Henspe.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::Plugin.Hud.Resource.Style.TextAppearance_Design_Counter = global::Henspe.Droid.Resource.Style.TextAppearance_Design_Counter;
+			global::Plugin.Hud.Resource.Style.TextAppearance_Design_Counter_Overflow = global::Henspe.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::Plugin.Hud.Resource.Style.TextAppearance_Design_Error = global::Henspe.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::Plugin.Hud.Resource.Style.TextAppearance_Design_Hint = global::Henspe.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::Plugin.Hud.Resource.Style.TextAppearance_Design_Snackbar_Message = global::Henspe.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::Plugin.Hud.Resource.Style.TextAppearance_Design_Tab = global::Henspe.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::Plugin.Hud.Resource.Style.TextAppearance_MediaRouter_PrimaryText = global::Henspe.Droid.Resource.Style.TextAppearance_MediaRouter_PrimaryText;
+			global::Plugin.Hud.Resource.Style.TextAppearance_MediaRouter_SecondaryText = global::Henspe.Droid.Resource.Style.TextAppearance_MediaRouter_SecondaryText;
+			global::Plugin.Hud.Resource.Style.TextAppearance_MediaRouter_Title = global::Henspe.Droid.Resource.Style.TextAppearance_MediaRouter_Title;
+			global::Plugin.Hud.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::Henspe.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Plugin.Hud.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::Henspe.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Plugin.Hud.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::Henspe.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Plugin.Hud.Resource.Style.Theme_AppCompat = global::Henspe.Droid.Resource.Style.Theme_AppCompat;
+			global::Plugin.Hud.Resource.Style.Theme_AppCompat_CompactMenu = global::Henspe.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::Plugin.Hud.Resource.Style.Theme_AppCompat_DayNight = global::Henspe.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::Plugin.Hud.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::Henspe.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::Plugin.Hud.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::Henspe.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::Plugin.Hud.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::Henspe.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::Plugin.Hud.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::Henspe.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::Plugin.Hud.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::Henspe.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::Plugin.Hud.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::Henspe.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::Plugin.Hud.Resource.Style.Theme_AppCompat_Dialog = global::Henspe.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::Plugin.Hud.Resource.Style.Theme_AppCompat_Dialog_Alert = global::Henspe.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::Plugin.Hud.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::Henspe.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::Plugin.Hud.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::Henspe.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::Plugin.Hud.Resource.Style.Theme_AppCompat_Light = global::Henspe.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::Plugin.Hud.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::Henspe.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::Plugin.Hud.Resource.Style.Theme_AppCompat_Light_Dialog = global::Henspe.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::Plugin.Hud.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::Henspe.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::Plugin.Hud.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::Henspe.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Plugin.Hud.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::Henspe.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::Plugin.Hud.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::Henspe.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::Plugin.Hud.Resource.Style.Theme_AppCompat_NoActionBar = global::Henspe.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::Plugin.Hud.Resource.Style.Theme_Design = global::Henspe.Droid.Resource.Style.Theme_Design;
+			global::Plugin.Hud.Resource.Style.Theme_Design_BottomSheetDialog = global::Henspe.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::Plugin.Hud.Resource.Style.Theme_Design_Light = global::Henspe.Droid.Resource.Style.Theme_Design_Light;
+			global::Plugin.Hud.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::Henspe.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::Plugin.Hud.Resource.Style.Theme_Design_Light_NoActionBar = global::Henspe.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::Plugin.Hud.Resource.Style.Theme_Design_NoActionBar = global::Henspe.Droid.Resource.Style.Theme_Design_NoActionBar;
+			global::Plugin.Hud.Resource.Style.Theme_MediaRouter = global::Henspe.Droid.Resource.Style.Theme_MediaRouter;
+			global::Plugin.Hud.Resource.Style.Theme_MediaRouter_Light = global::Henspe.Droid.Resource.Style.Theme_MediaRouter_Light;
+			global::Plugin.Hud.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel = global::Henspe.Droid.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel;
+			global::Plugin.Hud.Resource.Style.Theme_MediaRouter_LightControlPanel = global::Henspe.Droid.Resource.Style.Theme_MediaRouter_LightControlPanel;
+			global::Plugin.Hud.Resource.Style.ThemeOverlay_AppCompat = global::Henspe.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::Plugin.Hud.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::Henspe.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::Plugin.Hud.Resource.Style.ThemeOverlay_AppCompat_Dark = global::Henspe.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::Plugin.Hud.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::Henspe.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Plugin.Hud.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::Henspe.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::Plugin.Hud.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::Henspe.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Plugin.Hud.Resource.Style.ThemeOverlay_AppCompat_Light = global::Henspe.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::Plugin.Hud.Resource.Style.ThemeOverlay_MediaRouter_Dark = global::Henspe.Droid.Resource.Style.ThemeOverlay_MediaRouter_Dark;
+			global::Plugin.Hud.Resource.Style.ThemeOverlay_MediaRouter_Light = global::Henspe.Droid.Resource.Style.ThemeOverlay_MediaRouter_Light;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_ActionBar = global::Henspe.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::Henspe.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::Henspe.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::Henspe.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::Henspe.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_ActionButton = global::Henspe.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::Henspe.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::Henspe.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_ActionMode = global::Henspe.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_ActivityChooserView = global::Henspe.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::Henspe.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Button = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Button_Borderless = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Button_Colored = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Button_Small = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_ButtonBar = global::Henspe.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::Henspe.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::Henspe.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::Henspe.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::Henspe.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::Henspe.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::Henspe.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_EditText = global::Henspe.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_ImageButton = global::Henspe.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Light_ActionBar = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Light_ActionButton = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Light_SearchView = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_ListMenuView = global::Henspe.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_ListPopupWindow = global::Henspe.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_ListView = global::Henspe.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_ListView_DropDown = global::Henspe.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_ListView_Menu = global::Henspe.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_PopupMenu = global::Henspe.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::Henspe.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_PopupWindow = global::Henspe.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_ProgressBar = global::Henspe.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::Henspe.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_RatingBar = global::Henspe.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::Henspe.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_RatingBar_Small = global::Henspe.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_SearchView = global::Henspe.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::Henspe.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_SeekBar = global::Henspe.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::Henspe.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Spinner = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::Henspe.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Toolbar = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::Plugin.Hud.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::Henspe.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Plugin.Hud.Resource.Style.Widget_Design_AppBarLayout = global::Henspe.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::Plugin.Hud.Resource.Style.Widget_Design_BottomNavigationView = global::Henspe.Droid.Resource.Style.Widget_Design_BottomNavigationView;
+			global::Plugin.Hud.Resource.Style.Widget_Design_BottomSheet_Modal = global::Henspe.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::Plugin.Hud.Resource.Style.Widget_Design_CollapsingToolbar = global::Henspe.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::Plugin.Hud.Resource.Style.Widget_Design_FloatingActionButton = global::Henspe.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::Plugin.Hud.Resource.Style.Widget_Design_NavigationView = global::Henspe.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::Plugin.Hud.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::Henspe.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::Plugin.Hud.Resource.Style.Widget_Design_Snackbar = global::Henspe.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::Plugin.Hud.Resource.Style.Widget_Design_TabLayout = global::Henspe.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::Plugin.Hud.Resource.Style.Widget_Design_TextInputLayout = global::Henspe.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::Plugin.Hud.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton = global::Henspe.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton;
+			global::Plugin.Hud.Resource.Style.Widget_MediaRouter_MediaRouteButton = global::Henspe.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton;
+			global::Plugin.Hud.Resource.Styleable.ActionBar = global::Henspe.Droid.Resource.Styleable.ActionBar;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_background = global::Henspe.Droid.Resource.Styleable.ActionBar_background;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_backgroundSplit = global::Henspe.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_backgroundStacked = global::Henspe.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_contentInsetEnd = global::Henspe.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::Henspe.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_contentInsetLeft = global::Henspe.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_contentInsetRight = global::Henspe.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_contentInsetStart = global::Henspe.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::Henspe.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_customNavigationLayout = global::Henspe.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_displayOptions = global::Henspe.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_divider = global::Henspe.Droid.Resource.Styleable.ActionBar_divider;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_elevation = global::Henspe.Droid.Resource.Styleable.ActionBar_elevation;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_height = global::Henspe.Droid.Resource.Styleable.ActionBar_height;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_hideOnContentScroll = global::Henspe.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_homeAsUpIndicator = global::Henspe.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_homeLayout = global::Henspe.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_icon = global::Henspe.Droid.Resource.Styleable.ActionBar_icon;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::Henspe.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_itemPadding = global::Henspe.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_logo = global::Henspe.Droid.Resource.Styleable.ActionBar_logo;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_navigationMode = global::Henspe.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_popupTheme = global::Henspe.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_progressBarPadding = global::Henspe.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_progressBarStyle = global::Henspe.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_subtitle = global::Henspe.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_subtitleTextStyle = global::Henspe.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_title = global::Henspe.Droid.Resource.Styleable.ActionBar_title;
+			global::Plugin.Hud.Resource.Styleable.ActionBar_titleTextStyle = global::Henspe.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::Plugin.Hud.Resource.Styleable.ActionBarLayout = global::Henspe.Droid.Resource.Styleable.ActionBarLayout;
+			global::Plugin.Hud.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::Henspe.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::Plugin.Hud.Resource.Styleable.ActionMenuItemView = global::Henspe.Droid.Resource.Styleable.ActionMenuItemView;
+			global::Plugin.Hud.Resource.Styleable.ActionMenuItemView_android_minWidth = global::Henspe.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::Plugin.Hud.Resource.Styleable.ActionMenuView = global::Henspe.Droid.Resource.Styleable.ActionMenuView;
+			global::Plugin.Hud.Resource.Styleable.ActionMode = global::Henspe.Droid.Resource.Styleable.ActionMode;
+			global::Plugin.Hud.Resource.Styleable.ActionMode_background = global::Henspe.Droid.Resource.Styleable.ActionMode_background;
+			global::Plugin.Hud.Resource.Styleable.ActionMode_backgroundSplit = global::Henspe.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::Plugin.Hud.Resource.Styleable.ActionMode_closeItemLayout = global::Henspe.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::Plugin.Hud.Resource.Styleable.ActionMode_height = global::Henspe.Droid.Resource.Styleable.ActionMode_height;
+			global::Plugin.Hud.Resource.Styleable.ActionMode_subtitleTextStyle = global::Henspe.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::Plugin.Hud.Resource.Styleable.ActionMode_titleTextStyle = global::Henspe.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::Plugin.Hud.Resource.Styleable.ActivityChooserView = global::Henspe.Droid.Resource.Styleable.ActivityChooserView;
+			global::Plugin.Hud.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::Henspe.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::Plugin.Hud.Resource.Styleable.ActivityChooserView_initialActivityCount = global::Henspe.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::Plugin.Hud.Resource.Styleable.AlertDialog = global::Henspe.Droid.Resource.Styleable.AlertDialog;
+			global::Plugin.Hud.Resource.Styleable.AlertDialog_android_layout = global::Henspe.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::Plugin.Hud.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::Henspe.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::Plugin.Hud.Resource.Styleable.AlertDialog_listItemLayout = global::Henspe.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::Plugin.Hud.Resource.Styleable.AlertDialog_listLayout = global::Henspe.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::Plugin.Hud.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::Henspe.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::Plugin.Hud.Resource.Styleable.AlertDialog_showTitle = global::Henspe.Droid.Resource.Styleable.AlertDialog_showTitle;
+			global::Plugin.Hud.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::Henspe.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::Plugin.Hud.Resource.Styleable.AppBarLayout = global::Henspe.Droid.Resource.Styleable.AppBarLayout;
+			global::Plugin.Hud.Resource.Styleable.AppBarLayout_android_background = global::Henspe.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::Plugin.Hud.Resource.Styleable.AppBarLayout_elevation = global::Henspe.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::Plugin.Hud.Resource.Styleable.AppBarLayout_expanded = global::Henspe.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::Plugin.Hud.Resource.Styleable.AppBarLayoutStates = global::Henspe.Droid.Resource.Styleable.AppBarLayoutStates;
+			global::Plugin.Hud.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::Henspe.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::Plugin.Hud.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::Henspe.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::Plugin.Hud.Resource.Styleable.AppBarLayout_Layout = global::Henspe.Droid.Resource.Styleable.AppBarLayout_Layout;
+			global::Plugin.Hud.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::Henspe.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::Plugin.Hud.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::Henspe.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::Plugin.Hud.Resource.Styleable.AppCompatImageView = global::Henspe.Droid.Resource.Styleable.AppCompatImageView;
+			global::Plugin.Hud.Resource.Styleable.AppCompatImageView_android_src = global::Henspe.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::Plugin.Hud.Resource.Styleable.AppCompatImageView_srcCompat = global::Henspe.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::Plugin.Hud.Resource.Styleable.AppCompatSeekBar = global::Henspe.Droid.Resource.Styleable.AppCompatSeekBar;
+			global::Plugin.Hud.Resource.Styleable.AppCompatSeekBar_android_thumb = global::Henspe.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::Plugin.Hud.Resource.Styleable.AppCompatSeekBar_tickMark = global::Henspe.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::Plugin.Hud.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::Henspe.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::Plugin.Hud.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::Henspe.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTextHelper = global::Henspe.Droid.Resource.Styleable.AppCompatTextHelper;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::Henspe.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::Henspe.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::Henspe.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::Henspe.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::Henspe.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::Henspe.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::Henspe.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTextView = global::Henspe.Droid.Resource.Styleable.AppCompatTextView;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTextView_android_textAppearance = global::Henspe.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTextView_textAllCaps = global::Henspe.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme = global::Henspe.Droid.Resource.Styleable.AppCompatTheme;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionBarDivider = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionBarSize = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionBarStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionBarTheme = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionModeBackground = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionModeStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_buttonStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_checkboxStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_colorAccent = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_colorControlActivated = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_colorControlNormal = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_colorPrimary = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_controlBackground = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_dialogTheme = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_dividerVertical = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_editTextBackground = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_editTextColor = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_editTextStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_panelBackground = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_searchViewStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_seekBarStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_spinnerStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_switchStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_toolbarStyle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_windowActionBar = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::Plugin.Hud.Resource.Styleable.AppCompatTheme_windowNoTitle = global::Henspe.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::Plugin.Hud.Resource.Styleable.BottomNavigationView = global::Henspe.Droid.Resource.Styleable.BottomNavigationView;
+			global::Plugin.Hud.Resource.Styleable.BottomNavigationView_elevation = global::Henspe.Droid.Resource.Styleable.BottomNavigationView_elevation;
+			global::Plugin.Hud.Resource.Styleable.BottomNavigationView_itemBackground = global::Henspe.Droid.Resource.Styleable.BottomNavigationView_itemBackground;
+			global::Plugin.Hud.Resource.Styleable.BottomNavigationView_itemIconTint = global::Henspe.Droid.Resource.Styleable.BottomNavigationView_itemIconTint;
+			global::Plugin.Hud.Resource.Styleable.BottomNavigationView_itemTextColor = global::Henspe.Droid.Resource.Styleable.BottomNavigationView_itemTextColor;
+			global::Plugin.Hud.Resource.Styleable.BottomNavigationView_menu = global::Henspe.Droid.Resource.Styleable.BottomNavigationView_menu;
+			global::Plugin.Hud.Resource.Styleable.BottomSheetBehavior_Layout = global::Henspe.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::Plugin.Hud.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::Henspe.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::Plugin.Hud.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::Henspe.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::Plugin.Hud.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::Henspe.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::Plugin.Hud.Resource.Styleable.ButtonBarLayout = global::Henspe.Droid.Resource.Styleable.ButtonBarLayout;
+			global::Plugin.Hud.Resource.Styleable.ButtonBarLayout_allowStacking = global::Henspe.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::Plugin.Hud.Resource.Styleable.CardView = global::Henspe.Droid.Resource.Styleable.CardView;
+			global::Plugin.Hud.Resource.Styleable.CardView_android_minHeight = global::Henspe.Droid.Resource.Styleable.CardView_android_minHeight;
+			global::Plugin.Hud.Resource.Styleable.CardView_android_minWidth = global::Henspe.Droid.Resource.Styleable.CardView_android_minWidth;
+			global::Plugin.Hud.Resource.Styleable.CardView_cardBackgroundColor = global::Henspe.Droid.Resource.Styleable.CardView_cardBackgroundColor;
+			global::Plugin.Hud.Resource.Styleable.CardView_cardCornerRadius = global::Henspe.Droid.Resource.Styleable.CardView_cardCornerRadius;
+			global::Plugin.Hud.Resource.Styleable.CardView_cardElevation = global::Henspe.Droid.Resource.Styleable.CardView_cardElevation;
+			global::Plugin.Hud.Resource.Styleable.CardView_cardMaxElevation = global::Henspe.Droid.Resource.Styleable.CardView_cardMaxElevation;
+			global::Plugin.Hud.Resource.Styleable.CardView_cardPreventCornerOverlap = global::Henspe.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::Plugin.Hud.Resource.Styleable.CardView_cardUseCompatPadding = global::Henspe.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::Plugin.Hud.Resource.Styleable.CardView_contentPadding = global::Henspe.Droid.Resource.Styleable.CardView_contentPadding;
+			global::Plugin.Hud.Resource.Styleable.CardView_contentPaddingBottom = global::Henspe.Droid.Resource.Styleable.CardView_contentPaddingBottom;
+			global::Plugin.Hud.Resource.Styleable.CardView_contentPaddingLeft = global::Henspe.Droid.Resource.Styleable.CardView_contentPaddingLeft;
+			global::Plugin.Hud.Resource.Styleable.CardView_contentPaddingRight = global::Henspe.Droid.Resource.Styleable.CardView_contentPaddingRight;
+			global::Plugin.Hud.Resource.Styleable.CardView_contentPaddingTop = global::Henspe.Droid.Resource.Styleable.CardView_contentPaddingTop;
+			global::Plugin.Hud.Resource.Styleable.CollapsingToolbarLayout = global::Henspe.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::Plugin.Hud.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::Henspe.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::Plugin.Hud.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::Henspe.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::Plugin.Hud.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::Henspe.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::Plugin.Hud.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::Henspe.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::Plugin.Hud.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::Henspe.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::Plugin.Hud.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::Henspe.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::Plugin.Hud.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::Henspe.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::Plugin.Hud.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::Henspe.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::Plugin.Hud.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::Henspe.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::Plugin.Hud.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::Henspe.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::Plugin.Hud.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::Henspe.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::Plugin.Hud.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::Henspe.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::Plugin.Hud.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::Henspe.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::Plugin.Hud.Resource.Styleable.CollapsingToolbarLayout_title = global::Henspe.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::Plugin.Hud.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::Henspe.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::Plugin.Hud.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::Henspe.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::Plugin.Hud.Resource.Styleable.CollapsingToolbarLayout_Layout = global::Henspe.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::Plugin.Hud.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::Henspe.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::Plugin.Hud.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::Henspe.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::Plugin.Hud.Resource.Styleable.ColorStateListItem = global::Henspe.Droid.Resource.Styleable.ColorStateListItem;
+			global::Plugin.Hud.Resource.Styleable.ColorStateListItem_alpha = global::Henspe.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::Plugin.Hud.Resource.Styleable.ColorStateListItem_android_alpha = global::Henspe.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Plugin.Hud.Resource.Styleable.ColorStateListItem_android_color = global::Henspe.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::Plugin.Hud.Resource.Styleable.CompoundButton = global::Henspe.Droid.Resource.Styleable.CompoundButton;
+			global::Plugin.Hud.Resource.Styleable.CompoundButton_android_button = global::Henspe.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::Plugin.Hud.Resource.Styleable.CompoundButton_buttonTint = global::Henspe.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::Plugin.Hud.Resource.Styleable.CompoundButton_buttonTintMode = global::Henspe.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::Plugin.Hud.Resource.Styleable.CoordinatorLayout = global::Henspe.Droid.Resource.Styleable.CoordinatorLayout;
+			global::Plugin.Hud.Resource.Styleable.CoordinatorLayout_keylines = global::Henspe.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Plugin.Hud.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::Henspe.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Plugin.Hud.Resource.Styleable.CoordinatorLayout_Layout = global::Henspe.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::Plugin.Hud.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::Henspe.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::Plugin.Hud.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::Henspe.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::Plugin.Hud.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::Henspe.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::Plugin.Hud.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::Henspe.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::Plugin.Hud.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::Henspe.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::Plugin.Hud.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::Henspe.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::Plugin.Hud.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::Henspe.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::Plugin.Hud.Resource.Styleable.DesignTheme = global::Henspe.Droid.Resource.Styleable.DesignTheme;
+			global::Plugin.Hud.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::Henspe.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
+			global::Plugin.Hud.Resource.Styleable.DesignTheme_bottomSheetStyle = global::Henspe.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle;
+			global::Plugin.Hud.Resource.Styleable.DrawerArrowToggle = global::Henspe.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::Plugin.Hud.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::Henspe.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::Plugin.Hud.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::Henspe.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::Plugin.Hud.Resource.Styleable.DrawerArrowToggle_barLength = global::Henspe.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::Plugin.Hud.Resource.Styleable.DrawerArrowToggle_color = global::Henspe.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::Plugin.Hud.Resource.Styleable.DrawerArrowToggle_drawableSize = global::Henspe.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::Plugin.Hud.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::Henspe.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::Plugin.Hud.Resource.Styleable.DrawerArrowToggle_spinBars = global::Henspe.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::Plugin.Hud.Resource.Styleable.DrawerArrowToggle_thickness = global::Henspe.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::Plugin.Hud.Resource.Styleable.FloatingActionButton = global::Henspe.Droid.Resource.Styleable.FloatingActionButton;
+			global::Plugin.Hud.Resource.Styleable.FloatingActionButton_backgroundTint = global::Henspe.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::Plugin.Hud.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::Henspe.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::Plugin.Hud.Resource.Styleable.FloatingActionButton_borderWidth = global::Henspe.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::Plugin.Hud.Resource.Styleable.FloatingActionButton_elevation = global::Henspe.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::Plugin.Hud.Resource.Styleable.FloatingActionButton_fabSize = global::Henspe.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::Plugin.Hud.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::Henspe.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::Plugin.Hud.Resource.Styleable.FloatingActionButton_rippleColor = global::Henspe.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::Plugin.Hud.Resource.Styleable.FloatingActionButton_useCompatPadding = global::Henspe.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::Plugin.Hud.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::Henspe.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::Plugin.Hud.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::Henspe.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::Plugin.Hud.Resource.Styleable.ForegroundLinearLayout = global::Henspe.Droid.Resource.Styleable.ForegroundLinearLayout;
+			global::Plugin.Hud.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::Henspe.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::Plugin.Hud.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::Henspe.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::Plugin.Hud.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::Henspe.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::Plugin.Hud.Resource.Styleable.LinearLayoutCompat = global::Henspe.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::Plugin.Hud.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::Henspe.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::Plugin.Hud.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::Henspe.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::Plugin.Hud.Resource.Styleable.LinearLayoutCompat_android_gravity = global::Henspe.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::Plugin.Hud.Resource.Styleable.LinearLayoutCompat_android_orientation = global::Henspe.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::Plugin.Hud.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::Henspe.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::Plugin.Hud.Resource.Styleable.LinearLayoutCompat_divider = global::Henspe.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::Plugin.Hud.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::Henspe.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::Plugin.Hud.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::Henspe.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::Plugin.Hud.Resource.Styleable.LinearLayoutCompat_showDividers = global::Henspe.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::Plugin.Hud.Resource.Styleable.LinearLayoutCompat_Layout = global::Henspe.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::Plugin.Hud.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::Henspe.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::Plugin.Hud.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::Henspe.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::Plugin.Hud.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::Henspe.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::Plugin.Hud.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::Henspe.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::Plugin.Hud.Resource.Styleable.ListPopupWindow = global::Henspe.Droid.Resource.Styleable.ListPopupWindow;
+			global::Plugin.Hud.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::Henspe.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::Plugin.Hud.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::Henspe.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::Plugin.Hud.Resource.Styleable.MediaRouteButton = global::Henspe.Droid.Resource.Styleable.MediaRouteButton;
+			global::Plugin.Hud.Resource.Styleable.MediaRouteButton_android_minHeight = global::Henspe.Droid.Resource.Styleable.MediaRouteButton_android_minHeight;
+			global::Plugin.Hud.Resource.Styleable.MediaRouteButton_android_minWidth = global::Henspe.Droid.Resource.Styleable.MediaRouteButton_android_minWidth;
+			global::Plugin.Hud.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable = global::Henspe.Droid.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable;
+			global::Plugin.Hud.Resource.Styleable.MenuGroup = global::Henspe.Droid.Resource.Styleable.MenuGroup;
+			global::Plugin.Hud.Resource.Styleable.MenuGroup_android_checkableBehavior = global::Henspe.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::Plugin.Hud.Resource.Styleable.MenuGroup_android_enabled = global::Henspe.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::Plugin.Hud.Resource.Styleable.MenuGroup_android_id = global::Henspe.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::Plugin.Hud.Resource.Styleable.MenuGroup_android_menuCategory = global::Henspe.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::Plugin.Hud.Resource.Styleable.MenuGroup_android_orderInCategory = global::Henspe.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::Plugin.Hud.Resource.Styleable.MenuGroup_android_visible = global::Henspe.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::Plugin.Hud.Resource.Styleable.MenuItem = global::Henspe.Droid.Resource.Styleable.MenuItem;
+			global::Plugin.Hud.Resource.Styleable.MenuItem_actionLayout = global::Henspe.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::Plugin.Hud.Resource.Styleable.MenuItem_actionProviderClass = global::Henspe.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::Plugin.Hud.Resource.Styleable.MenuItem_actionViewClass = global::Henspe.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::Plugin.Hud.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::Henspe.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::Plugin.Hud.Resource.Styleable.MenuItem_android_checkable = global::Henspe.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::Plugin.Hud.Resource.Styleable.MenuItem_android_checked = global::Henspe.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::Plugin.Hud.Resource.Styleable.MenuItem_android_enabled = global::Henspe.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::Plugin.Hud.Resource.Styleable.MenuItem_android_icon = global::Henspe.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::Plugin.Hud.Resource.Styleable.MenuItem_android_id = global::Henspe.Droid.Resource.Styleable.MenuItem_android_id;
+			global::Plugin.Hud.Resource.Styleable.MenuItem_android_menuCategory = global::Henspe.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::Plugin.Hud.Resource.Styleable.MenuItem_android_numericShortcut = global::Henspe.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::Plugin.Hud.Resource.Styleable.MenuItem_android_onClick = global::Henspe.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::Plugin.Hud.Resource.Styleable.MenuItem_android_orderInCategory = global::Henspe.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::Plugin.Hud.Resource.Styleable.MenuItem_android_title = global::Henspe.Droid.Resource.Styleable.MenuItem_android_title;
+			global::Plugin.Hud.Resource.Styleable.MenuItem_android_titleCondensed = global::Henspe.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::Plugin.Hud.Resource.Styleable.MenuItem_android_visible = global::Henspe.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::Plugin.Hud.Resource.Styleable.MenuItem_showAsAction = global::Henspe.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::Plugin.Hud.Resource.Styleable.MenuView = global::Henspe.Droid.Resource.Styleable.MenuView;
+			global::Plugin.Hud.Resource.Styleable.MenuView_android_headerBackground = global::Henspe.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::Plugin.Hud.Resource.Styleable.MenuView_android_horizontalDivider = global::Henspe.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::Plugin.Hud.Resource.Styleable.MenuView_android_itemBackground = global::Henspe.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::Plugin.Hud.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::Henspe.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::Plugin.Hud.Resource.Styleable.MenuView_android_itemTextAppearance = global::Henspe.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::Plugin.Hud.Resource.Styleable.MenuView_android_verticalDivider = global::Henspe.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::Plugin.Hud.Resource.Styleable.MenuView_android_windowAnimationStyle = global::Henspe.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::Plugin.Hud.Resource.Styleable.MenuView_preserveIconSpacing = global::Henspe.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::Plugin.Hud.Resource.Styleable.MenuView_subMenuArrow = global::Henspe.Droid.Resource.Styleable.MenuView_subMenuArrow;
+			global::Plugin.Hud.Resource.Styleable.NavigationView = global::Henspe.Droid.Resource.Styleable.NavigationView;
+			global::Plugin.Hud.Resource.Styleable.NavigationView_android_background = global::Henspe.Droid.Resource.Styleable.NavigationView_android_background;
+			global::Plugin.Hud.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::Henspe.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::Plugin.Hud.Resource.Styleable.NavigationView_android_maxWidth = global::Henspe.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::Plugin.Hud.Resource.Styleable.NavigationView_elevation = global::Henspe.Droid.Resource.Styleable.NavigationView_elevation;
+			global::Plugin.Hud.Resource.Styleable.NavigationView_headerLayout = global::Henspe.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::Plugin.Hud.Resource.Styleable.NavigationView_itemBackground = global::Henspe.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::Plugin.Hud.Resource.Styleable.NavigationView_itemIconTint = global::Henspe.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::Plugin.Hud.Resource.Styleable.NavigationView_itemTextAppearance = global::Henspe.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::Plugin.Hud.Resource.Styleable.NavigationView_itemTextColor = global::Henspe.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::Plugin.Hud.Resource.Styleable.NavigationView_menu = global::Henspe.Droid.Resource.Styleable.NavigationView_menu;
+			global::Plugin.Hud.Resource.Styleable.PopupWindow = global::Henspe.Droid.Resource.Styleable.PopupWindow;
+			global::Plugin.Hud.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::Henspe.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::Plugin.Hud.Resource.Styleable.PopupWindow_android_popupBackground = global::Henspe.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::Plugin.Hud.Resource.Styleable.PopupWindow_overlapAnchor = global::Henspe.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::Plugin.Hud.Resource.Styleable.PopupWindowBackgroundState = global::Henspe.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::Plugin.Hud.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::Henspe.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::Plugin.Hud.Resource.Styleable.ProgressWheel = global::Henspe.Droid.Resource.Styleable.ProgressWheel;
+			global::Plugin.Hud.Resource.Styleable.ProgressWheel_ahBarColor = global::Henspe.Droid.Resource.Styleable.ProgressWheel_ahBarColor;
+			global::Plugin.Hud.Resource.Styleable.ProgressWheel_ahBarLength = global::Henspe.Droid.Resource.Styleable.ProgressWheel_ahBarLength;
+			global::Plugin.Hud.Resource.Styleable.ProgressWheel_ahBarWidth = global::Henspe.Droid.Resource.Styleable.ProgressWheel_ahBarWidth;
+			global::Plugin.Hud.Resource.Styleable.ProgressWheel_ahCircleColor = global::Henspe.Droid.Resource.Styleable.ProgressWheel_ahCircleColor;
+			global::Plugin.Hud.Resource.Styleable.ProgressWheel_ahDelayMillis = global::Henspe.Droid.Resource.Styleable.ProgressWheel_ahDelayMillis;
+			global::Plugin.Hud.Resource.Styleable.ProgressWheel_ahRadius = global::Henspe.Droid.Resource.Styleable.ProgressWheel_ahRadius;
+			global::Plugin.Hud.Resource.Styleable.ProgressWheel_ahRimColor = global::Henspe.Droid.Resource.Styleable.ProgressWheel_ahRimColor;
+			global::Plugin.Hud.Resource.Styleable.ProgressWheel_ahRimWidth = global::Henspe.Droid.Resource.Styleable.ProgressWheel_ahRimWidth;
+			global::Plugin.Hud.Resource.Styleable.ProgressWheel_ahSpinSpeed = global::Henspe.Droid.Resource.Styleable.ProgressWheel_ahSpinSpeed;
+			global::Plugin.Hud.Resource.Styleable.ProgressWheel_ahText = global::Henspe.Droid.Resource.Styleable.ProgressWheel_ahText;
+			global::Plugin.Hud.Resource.Styleable.ProgressWheel_ahTextColor = global::Henspe.Droid.Resource.Styleable.ProgressWheel_ahTextColor;
+			global::Plugin.Hud.Resource.Styleable.ProgressWheel_ahTextSize = global::Henspe.Droid.Resource.Styleable.ProgressWheel_ahTextSize;
+			global::Plugin.Hud.Resource.Styleable.RecycleListView = global::Henspe.Droid.Resource.Styleable.RecycleListView;
+			global::Plugin.Hud.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::Henspe.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::Plugin.Hud.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::Henspe.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::Plugin.Hud.Resource.Styleable.RecyclerView = global::Henspe.Droid.Resource.Styleable.RecyclerView;
+			global::Plugin.Hud.Resource.Styleable.RecyclerView_android_descendantFocusability = global::Henspe.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::Plugin.Hud.Resource.Styleable.RecyclerView_android_orientation = global::Henspe.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::Plugin.Hud.Resource.Styleable.RecyclerView_layoutManager = global::Henspe.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::Plugin.Hud.Resource.Styleable.RecyclerView_reverseLayout = global::Henspe.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::Plugin.Hud.Resource.Styleable.RecyclerView_spanCount = global::Henspe.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::Plugin.Hud.Resource.Styleable.RecyclerView_stackFromEnd = global::Henspe.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::Plugin.Hud.Resource.Styleable.ScrimInsetsFrameLayout = global::Henspe.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::Plugin.Hud.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::Henspe.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::Plugin.Hud.Resource.Styleable.ScrollingViewBehavior_Layout = global::Henspe.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::Plugin.Hud.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::Henspe.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::Plugin.Hud.Resource.Styleable.SearchView = global::Henspe.Droid.Resource.Styleable.SearchView;
+			global::Plugin.Hud.Resource.Styleable.SearchView_android_focusable = global::Henspe.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::Plugin.Hud.Resource.Styleable.SearchView_android_imeOptions = global::Henspe.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::Plugin.Hud.Resource.Styleable.SearchView_android_inputType = global::Henspe.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::Plugin.Hud.Resource.Styleable.SearchView_android_maxWidth = global::Henspe.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::Plugin.Hud.Resource.Styleable.SearchView_closeIcon = global::Henspe.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::Plugin.Hud.Resource.Styleable.SearchView_commitIcon = global::Henspe.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::Plugin.Hud.Resource.Styleable.SearchView_defaultQueryHint = global::Henspe.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::Plugin.Hud.Resource.Styleable.SearchView_goIcon = global::Henspe.Droid.Resource.Styleable.SearchView_goIcon;
+			global::Plugin.Hud.Resource.Styleable.SearchView_iconifiedByDefault = global::Henspe.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::Plugin.Hud.Resource.Styleable.SearchView_layout = global::Henspe.Droid.Resource.Styleable.SearchView_layout;
+			global::Plugin.Hud.Resource.Styleable.SearchView_queryBackground = global::Henspe.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::Plugin.Hud.Resource.Styleable.SearchView_queryHint = global::Henspe.Droid.Resource.Styleable.SearchView_queryHint;
+			global::Plugin.Hud.Resource.Styleable.SearchView_searchHintIcon = global::Henspe.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::Plugin.Hud.Resource.Styleable.SearchView_searchIcon = global::Henspe.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::Plugin.Hud.Resource.Styleable.SearchView_submitBackground = global::Henspe.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::Plugin.Hud.Resource.Styleable.SearchView_suggestionRowLayout = global::Henspe.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::Plugin.Hud.Resource.Styleable.SearchView_voiceIcon = global::Henspe.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::Plugin.Hud.Resource.Styleable.SnackbarLayout = global::Henspe.Droid.Resource.Styleable.SnackbarLayout;
+			global::Plugin.Hud.Resource.Styleable.SnackbarLayout_android_maxWidth = global::Henspe.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::Plugin.Hud.Resource.Styleable.SnackbarLayout_elevation = global::Henspe.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::Plugin.Hud.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::Henspe.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::Plugin.Hud.Resource.Styleable.Spinner = global::Henspe.Droid.Resource.Styleable.Spinner;
+			global::Plugin.Hud.Resource.Styleable.Spinner_android_dropDownWidth = global::Henspe.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::Plugin.Hud.Resource.Styleable.Spinner_android_entries = global::Henspe.Droid.Resource.Styleable.Spinner_android_entries;
+			global::Plugin.Hud.Resource.Styleable.Spinner_android_popupBackground = global::Henspe.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::Plugin.Hud.Resource.Styleable.Spinner_android_prompt = global::Henspe.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::Plugin.Hud.Resource.Styleable.Spinner_popupTheme = global::Henspe.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::Plugin.Hud.Resource.Styleable.SwitchCompat = global::Henspe.Droid.Resource.Styleable.SwitchCompat;
+			global::Plugin.Hud.Resource.Styleable.SwitchCompat_android_textOff = global::Henspe.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::Plugin.Hud.Resource.Styleable.SwitchCompat_android_textOn = global::Henspe.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::Plugin.Hud.Resource.Styleable.SwitchCompat_android_thumb = global::Henspe.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::Plugin.Hud.Resource.Styleable.SwitchCompat_showText = global::Henspe.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::Plugin.Hud.Resource.Styleable.SwitchCompat_splitTrack = global::Henspe.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::Plugin.Hud.Resource.Styleable.SwitchCompat_switchMinWidth = global::Henspe.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::Plugin.Hud.Resource.Styleable.SwitchCompat_switchPadding = global::Henspe.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::Plugin.Hud.Resource.Styleable.SwitchCompat_switchTextAppearance = global::Henspe.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::Plugin.Hud.Resource.Styleable.SwitchCompat_thumbTextPadding = global::Henspe.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::Plugin.Hud.Resource.Styleable.SwitchCompat_thumbTint = global::Henspe.Droid.Resource.Styleable.SwitchCompat_thumbTint;
+			global::Plugin.Hud.Resource.Styleable.SwitchCompat_thumbTintMode = global::Henspe.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::Plugin.Hud.Resource.Styleable.SwitchCompat_track = global::Henspe.Droid.Resource.Styleable.SwitchCompat_track;
+			global::Plugin.Hud.Resource.Styleable.SwitchCompat_trackTint = global::Henspe.Droid.Resource.Styleable.SwitchCompat_trackTint;
+			global::Plugin.Hud.Resource.Styleable.SwitchCompat_trackTintMode = global::Henspe.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::Plugin.Hud.Resource.Styleable.TabItem = global::Henspe.Droid.Resource.Styleable.TabItem;
+			global::Plugin.Hud.Resource.Styleable.TabItem_android_icon = global::Henspe.Droid.Resource.Styleable.TabItem_android_icon;
+			global::Plugin.Hud.Resource.Styleable.TabItem_android_layout = global::Henspe.Droid.Resource.Styleable.TabItem_android_layout;
+			global::Plugin.Hud.Resource.Styleable.TabItem_android_text = global::Henspe.Droid.Resource.Styleable.TabItem_android_text;
+			global::Plugin.Hud.Resource.Styleable.TabLayout = global::Henspe.Droid.Resource.Styleable.TabLayout;
+			global::Plugin.Hud.Resource.Styleable.TabLayout_tabBackground = global::Henspe.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::Plugin.Hud.Resource.Styleable.TabLayout_tabContentStart = global::Henspe.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::Plugin.Hud.Resource.Styleable.TabLayout_tabGravity = global::Henspe.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::Plugin.Hud.Resource.Styleable.TabLayout_tabIndicatorColor = global::Henspe.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::Plugin.Hud.Resource.Styleable.TabLayout_tabIndicatorHeight = global::Henspe.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::Plugin.Hud.Resource.Styleable.TabLayout_tabMaxWidth = global::Henspe.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::Plugin.Hud.Resource.Styleable.TabLayout_tabMinWidth = global::Henspe.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::Plugin.Hud.Resource.Styleable.TabLayout_tabMode = global::Henspe.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::Plugin.Hud.Resource.Styleable.TabLayout_tabPadding = global::Henspe.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::Plugin.Hud.Resource.Styleable.TabLayout_tabPaddingBottom = global::Henspe.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::Plugin.Hud.Resource.Styleable.TabLayout_tabPaddingEnd = global::Henspe.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::Plugin.Hud.Resource.Styleable.TabLayout_tabPaddingStart = global::Henspe.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::Plugin.Hud.Resource.Styleable.TabLayout_tabPaddingTop = global::Henspe.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::Plugin.Hud.Resource.Styleable.TabLayout_tabSelectedTextColor = global::Henspe.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::Plugin.Hud.Resource.Styleable.TabLayout_tabTextAppearance = global::Henspe.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::Plugin.Hud.Resource.Styleable.TabLayout_tabTextColor = global::Henspe.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::Plugin.Hud.Resource.Styleable.TextAppearance = global::Henspe.Droid.Resource.Styleable.TextAppearance;
+			global::Plugin.Hud.Resource.Styleable.TextAppearance_android_shadowColor = global::Henspe.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::Plugin.Hud.Resource.Styleable.TextAppearance_android_shadowDx = global::Henspe.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::Plugin.Hud.Resource.Styleable.TextAppearance_android_shadowDy = global::Henspe.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::Plugin.Hud.Resource.Styleable.TextAppearance_android_shadowRadius = global::Henspe.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::Plugin.Hud.Resource.Styleable.TextAppearance_android_textColor = global::Henspe.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::Plugin.Hud.Resource.Styleable.TextAppearance_android_textColorHint = global::Henspe.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::Plugin.Hud.Resource.Styleable.TextAppearance_android_textSize = global::Henspe.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::Plugin.Hud.Resource.Styleable.TextAppearance_android_textStyle = global::Henspe.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::Plugin.Hud.Resource.Styleable.TextAppearance_android_typeface = global::Henspe.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::Plugin.Hud.Resource.Styleable.TextAppearance_textAllCaps = global::Henspe.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::Plugin.Hud.Resource.Styleable.TextInputLayout = global::Henspe.Droid.Resource.Styleable.TextInputLayout;
+			global::Plugin.Hud.Resource.Styleable.TextInputLayout_android_hint = global::Henspe.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::Plugin.Hud.Resource.Styleable.TextInputLayout_android_textColorHint = global::Henspe.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::Plugin.Hud.Resource.Styleable.TextInputLayout_counterEnabled = global::Henspe.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::Plugin.Hud.Resource.Styleable.TextInputLayout_counterMaxLength = global::Henspe.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::Plugin.Hud.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::Henspe.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::Plugin.Hud.Resource.Styleable.TextInputLayout_counterTextAppearance = global::Henspe.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::Plugin.Hud.Resource.Styleable.TextInputLayout_errorEnabled = global::Henspe.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::Plugin.Hud.Resource.Styleable.TextInputLayout_errorTextAppearance = global::Henspe.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::Plugin.Hud.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::Henspe.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::Plugin.Hud.Resource.Styleable.TextInputLayout_hintEnabled = global::Henspe.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::Plugin.Hud.Resource.Styleable.TextInputLayout_hintTextAppearance = global::Henspe.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::Plugin.Hud.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::Henspe.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::Plugin.Hud.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::Henspe.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::Plugin.Hud.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::Henspe.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::Plugin.Hud.Resource.Styleable.TextInputLayout_passwordToggleTint = global::Henspe.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::Plugin.Hud.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::Henspe.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::Plugin.Hud.Resource.Styleable.Toolbar = global::Henspe.Droid.Resource.Styleable.Toolbar;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_android_gravity = global::Henspe.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_android_minHeight = global::Henspe.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_buttonGravity = global::Henspe.Droid.Resource.Styleable.Toolbar_buttonGravity;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_collapseContentDescription = global::Henspe.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_collapseIcon = global::Henspe.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_contentInsetEnd = global::Henspe.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::Henspe.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_contentInsetLeft = global::Henspe.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_contentInsetRight = global::Henspe.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_contentInsetStart = global::Henspe.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::Henspe.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_logo = global::Henspe.Droid.Resource.Styleable.Toolbar_logo;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_logoDescription = global::Henspe.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_maxButtonHeight = global::Henspe.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_navigationContentDescription = global::Henspe.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_navigationIcon = global::Henspe.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_popupTheme = global::Henspe.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_subtitle = global::Henspe.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_subtitleTextAppearance = global::Henspe.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_subtitleTextColor = global::Henspe.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_title = global::Henspe.Droid.Resource.Styleable.Toolbar_title;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_titleMargin = global::Henspe.Droid.Resource.Styleable.Toolbar_titleMargin;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_titleMarginBottom = global::Henspe.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_titleMarginEnd = global::Henspe.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_titleMarginStart = global::Henspe.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_titleMarginTop = global::Henspe.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_titleMargins = global::Henspe.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_titleTextAppearance = global::Henspe.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::Plugin.Hud.Resource.Styleable.Toolbar_titleTextColor = global::Henspe.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::Plugin.Hud.Resource.Styleable.View = global::Henspe.Droid.Resource.Styleable.View;
+			global::Plugin.Hud.Resource.Styleable.View_android_focusable = global::Henspe.Droid.Resource.Styleable.View_android_focusable;
+			global::Plugin.Hud.Resource.Styleable.View_android_theme = global::Henspe.Droid.Resource.Styleable.View_android_theme;
+			global::Plugin.Hud.Resource.Styleable.View_paddingEnd = global::Henspe.Droid.Resource.Styleable.View_paddingEnd;
+			global::Plugin.Hud.Resource.Styleable.View_paddingStart = global::Henspe.Droid.Resource.Styleable.View_paddingStart;
+			global::Plugin.Hud.Resource.Styleable.View_theme = global::Henspe.Droid.Resource.Styleable.View_theme;
+			global::Plugin.Hud.Resource.Styleable.ViewBackgroundHelper = global::Henspe.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::Plugin.Hud.Resource.Styleable.ViewBackgroundHelper_android_background = global::Henspe.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::Plugin.Hud.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::Henspe.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::Plugin.Hud.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::Henspe.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::Plugin.Hud.Resource.Styleable.ViewStubCompat = global::Henspe.Droid.Resource.Styleable.ViewStubCompat;
+			global::Plugin.Hud.Resource.Styleable.ViewStubCompat_android_id = global::Henspe.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::Plugin.Hud.Resource.Styleable.ViewStubCompat_android_inflatedId = global::Henspe.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::Plugin.Hud.Resource.Styleable.ViewStubCompat_android_layout = global::Henspe.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::Henspe.Droid.Resource.Attribute.actionBarSize;
 		}
 		
 		public partial class Animation
@@ -242,6 +2373,42 @@ namespace Henspe.Droid
 			
 			// aapt resource value: 0x7f01005f
 			public const int adjustable = 2130772063;
+			
+			// aapt resource value: 0x7f010258
+			public const int ahBarColor = 2130772568;
+			
+			// aapt resource value: 0x7f010260
+			public const int ahBarLength = 2130772576;
+			
+			// aapt resource value: 0x7f01025f
+			public const int ahBarWidth = 2130772575;
+			
+			// aapt resource value: 0x7f01025d
+			public const int ahCircleColor = 2130772573;
+			
+			// aapt resource value: 0x7f01025c
+			public const int ahDelayMillis = 2130772572;
+			
+			// aapt resource value: 0x7f01025e
+			public const int ahRadius = 2130772574;
+			
+			// aapt resource value: 0x7f010259
+			public const int ahRimColor = 2130772569;
+			
+			// aapt resource value: 0x7f01025a
+			public const int ahRimWidth = 2130772570;
+			
+			// aapt resource value: 0x7f01025b
+			public const int ahSpinSpeed = 2130772571;
+			
+			// aapt resource value: 0x7f010255
+			public const int ahText = 2130772565;
+			
+			// aapt resource value: 0x7f010256
+			public const int ahTextColor = 2130772566;
+			
+			// aapt resource value: 0x7f010257
+			public const int ahTextSize = 2130772567;
 			
 			// aapt resource value: 0x7f010113
 			public const int alertDialogButtonGroupStyle = 2130772243;
@@ -1970,47 +4137,47 @@ namespace Henspe.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0b007b
-			public const int ColorPrimary = 2131427451;
-			
-			// aapt resource value: 0x7f0b0088
-			public const int abc_background_cache_hint_selector_material_dark = 2131427464;
-			
-			// aapt resource value: 0x7f0b0089
-			public const int abc_background_cache_hint_selector_material_light = 2131427465;
-			
-			// aapt resource value: 0x7f0b008a
-			public const int abc_btn_colored_borderless_text_material = 2131427466;
-			
-			// aapt resource value: 0x7f0b008b
-			public const int abc_btn_colored_text_material = 2131427467;
+			// aapt resource value: 0x7f0b007f
+			public const int ColorPrimary = 2131427455;
 			
 			// aapt resource value: 0x7f0b008c
-			public const int abc_color_highlight_material = 2131427468;
+			public const int abc_background_cache_hint_selector_material_dark = 2131427468;
 			
 			// aapt resource value: 0x7f0b008d
-			public const int abc_hint_foreground_material_dark = 2131427469;
+			public const int abc_background_cache_hint_selector_material_light = 2131427469;
 			
 			// aapt resource value: 0x7f0b008e
-			public const int abc_hint_foreground_material_light = 2131427470;
+			public const int abc_btn_colored_borderless_text_material = 2131427470;
+			
+			// aapt resource value: 0x7f0b008f
+			public const int abc_btn_colored_text_material = 2131427471;
+			
+			// aapt resource value: 0x7f0b0090
+			public const int abc_color_highlight_material = 2131427472;
+			
+			// aapt resource value: 0x7f0b0091
+			public const int abc_hint_foreground_material_dark = 2131427473;
+			
+			// aapt resource value: 0x7f0b0092
+			public const int abc_hint_foreground_material_light = 2131427474;
 			
 			// aapt resource value: 0x7f0b000d
 			public const int abc_input_method_navigation_guard = 2131427341;
 			
-			// aapt resource value: 0x7f0b008f
-			public const int abc_primary_text_disable_only_material_dark = 2131427471;
-			
-			// aapt resource value: 0x7f0b0090
-			public const int abc_primary_text_disable_only_material_light = 2131427472;
-			
-			// aapt resource value: 0x7f0b0091
-			public const int abc_primary_text_material_dark = 2131427473;
-			
-			// aapt resource value: 0x7f0b0092
-			public const int abc_primary_text_material_light = 2131427474;
-			
 			// aapt resource value: 0x7f0b0093
-			public const int abc_search_url_text = 2131427475;
+			public const int abc_primary_text_disable_only_material_dark = 2131427475;
+			
+			// aapt resource value: 0x7f0b0094
+			public const int abc_primary_text_disable_only_material_light = 2131427476;
+			
+			// aapt resource value: 0x7f0b0095
+			public const int abc_primary_text_material_dark = 2131427477;
+			
+			// aapt resource value: 0x7f0b0096
+			public const int abc_primary_text_material_light = 2131427478;
+			
+			// aapt resource value: 0x7f0b0097
+			public const int abc_search_url_text = 2131427479;
 			
 			// aapt resource value: 0x7f0b000e
 			public const int abc_search_url_text_normal = 2131427342;
@@ -2021,32 +4188,32 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0b0010
 			public const int abc_search_url_text_selected = 2131427344;
 			
-			// aapt resource value: 0x7f0b0094
-			public const int abc_secondary_text_material_dark = 2131427476;
-			
-			// aapt resource value: 0x7f0b0095
-			public const int abc_secondary_text_material_light = 2131427477;
-			
-			// aapt resource value: 0x7f0b0096
-			public const int abc_tint_btn_checkable = 2131427478;
-			
-			// aapt resource value: 0x7f0b0097
-			public const int abc_tint_default = 2131427479;
-			
 			// aapt resource value: 0x7f0b0098
-			public const int abc_tint_edittext = 2131427480;
+			public const int abc_secondary_text_material_dark = 2131427480;
 			
 			// aapt resource value: 0x7f0b0099
-			public const int abc_tint_seek_thumb = 2131427481;
+			public const int abc_secondary_text_material_light = 2131427481;
 			
 			// aapt resource value: 0x7f0b009a
-			public const int abc_tint_spinner = 2131427482;
+			public const int abc_tint_btn_checkable = 2131427482;
 			
 			// aapt resource value: 0x7f0b009b
-			public const int abc_tint_switch_track = 2131427483;
+			public const int abc_tint_default = 2131427483;
 			
-			// aapt resource value: 0x7f0b0084
-			public const int accent = 2131427460;
+			// aapt resource value: 0x7f0b009c
+			public const int abc_tint_edittext = 2131427484;
+			
+			// aapt resource value: 0x7f0b009d
+			public const int abc_tint_seek_thumb = 2131427485;
+			
+			// aapt resource value: 0x7f0b009e
+			public const int abc_tint_spinner = 2131427486;
+			
+			// aapt resource value: 0x7f0b009f
+			public const int abc_tint_switch_track = 2131427487;
+			
+			// aapt resource value: 0x7f0b0088
+			public const int accent = 2131427464;
 			
 			// aapt resource value: 0x7f0b0011
 			public const int accent_material_dark = 2131427345;
@@ -2066,8 +4233,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0b0016
 			public const int background_material_light = 2131427350;
 			
-			// aapt resource value: 0x7f0b0082
-			public const int background_nla_white = 2131427458;
+			// aapt resource value: 0x7f0b0086
+			public const int background_nla_white = 2131427462;
 			
 			// aapt resource value: 0x7f0b0017
 			public const int bright_foreground_disabled_material_dark = 2131427351;
@@ -2087,6 +4254,18 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0b001c
 			public const int bright_foreground_material_light = 2131427356;
 			
+			// aapt resource value: 0x7f0b005d
+			public const int browser_actions_bg_grey = 2131427421;
+			
+			// aapt resource value: 0x7f0b005e
+			public const int browser_actions_divider_color = 2131427422;
+			
+			// aapt resource value: 0x7f0b005f
+			public const int browser_actions_text_color = 2131427423;
+			
+			// aapt resource value: 0x7f0b0060
+			public const int browser_actions_title_color = 2131427424;
+			
 			// aapt resource value: 0x7f0b001d
 			public const int button_material_dark = 2131427357;
 			
@@ -2105,11 +4284,11 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0b000c
 			public const int cardview_shadow_start_color = 2131427340;
 			
-			// aapt resource value: 0x7f0b0083
-			public const int colorAccent = 2131427459;
+			// aapt resource value: 0x7f0b0087
+			public const int colorAccent = 2131427463;
 			
-			// aapt resource value: 0x7f0b009c
-			public const int common_google_signin_btn_text_dark = 2131427484;
+			// aapt resource value: 0x7f0b00a0
+			public const int common_google_signin_btn_text_dark = 2131427488;
 			
 			// aapt resource value: 0x7f0b0000
 			public const int common_google_signin_btn_text_dark_default = 2131427328;
@@ -2123,8 +4302,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0b0003
 			public const int common_google_signin_btn_text_dark_pressed = 2131427331;
 			
-			// aapt resource value: 0x7f0b009d
-			public const int common_google_signin_btn_text_light = 2131427485;
+			// aapt resource value: 0x7f0b00a1
+			public const int common_google_signin_btn_text_light = 2131427489;
 			
 			// aapt resource value: 0x7f0b0004
 			public const int common_google_signin_btn_text_light_default = 2131427332;
@@ -2138,29 +4317,29 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0b0007
 			public const int common_google_signin_btn_text_light_pressed = 2131427335;
 			
-			// aapt resource value: 0x7f0b009e
-			public const int common_google_signin_btn_tint = 2131427486;
-			
-			// aapt resource value: 0x7f0b0069
-			public const int default_color_white_alpha_30 = 2131427433;
-			
-			// aapt resource value: 0x7f0b006a
-			public const int default_color_white_alpha_40 = 2131427434;
-			
-			// aapt resource value: 0x7f0b006b
-			public const int default_color_white_alpha_50 = 2131427435;
-			
-			// aapt resource value: 0x7f0b006c
-			public const int default_color_white_alpha_60 = 2131427436;
+			// aapt resource value: 0x7f0b00a2
+			public const int common_google_signin_btn_tint = 2131427490;
 			
 			// aapt resource value: 0x7f0b006d
-			public const int default_color_white_alpha_70 = 2131427437;
+			public const int default_color_white_alpha_30 = 2131427437;
 			
 			// aapt resource value: 0x7f0b006e
-			public const int default_color_white_alpha_80 = 2131427438;
+			public const int default_color_white_alpha_40 = 2131427438;
 			
 			// aapt resource value: 0x7f0b006f
-			public const int default_color_white_alpha_90 = 2131427439;
+			public const int default_color_white_alpha_50 = 2131427439;
+			
+			// aapt resource value: 0x7f0b0070
+			public const int default_color_white_alpha_60 = 2131427440;
+			
+			// aapt resource value: 0x7f0b0071
+			public const int default_color_white_alpha_70 = 2131427441;
+			
+			// aapt resource value: 0x7f0b0072
+			public const int default_color_white_alpha_80 = 2131427442;
+			
+			// aapt resource value: 0x7f0b0073
+			public const int default_color_white_alpha_90 = 2131427443;
 			
 			// aapt resource value: 0x7f0b004a
 			public const int design_bottom_navigation_shadow_color = 2131427402;
@@ -2171,8 +4350,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0b004c
 			public const int design_default_color_primary_dark = 2131427404;
 			
-			// aapt resource value: 0x7f0b009f
-			public const int design_error = 2131427487;
+			// aapt resource value: 0x7f0b00a3
+			public const int design_error = 2131427491;
 			
 			// aapt resource value: 0x7f0b004d
 			public const int design_fab_shadow_end_color = 2131427405;
@@ -2198,8 +4377,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0b0054
 			public const int design_snackbar_background_color = 2131427412;
 			
-			// aapt resource value: 0x7f0b00a0
-			public const int design_tint_password_toggle = 2131427488;
+			// aapt resource value: 0x7f0b00a4
+			public const int design_tint_password_toggle = 2131427492;
 			
 			// aapt resource value: 0x7f0b001f
 			public const int dim_foreground_disabled_material_dark = 2131427359;
@@ -2225,11 +4404,11 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0b0026
 			public const int foreground_material_light = 2131427366;
 			
-			// aapt resource value: 0x7f0b0068
-			public const int graystatusbar = 2131427432;
+			// aapt resource value: 0x7f0b006c
+			public const int graystatusbar = 2131427436;
 			
-			// aapt resource value: 0x7f0b007c
-			public const int header_background = 2131427452;
+			// aapt resource value: 0x7f0b0080
+			public const int header_background = 2131427456;
 			
 			// aapt resource value: 0x7f0b0027
 			public const int highlighted_text_material_dark = 2131427367;
@@ -2237,8 +4416,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0b0028
 			public const int highlighted_text_material_light = 2131427368;
 			
-			// aapt resource value: 0x7f0b0067
-			public const int iconselectedtint = 2131427431;
+			// aapt resource value: 0x7f0b006b
+			public const int iconselectedtint = 2131427435;
 			
 			// aapt resource value: 0x7f0b0029
 			public const int material_blue_grey_800 = 2131427369;
@@ -2276,71 +4455,71 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0b0034
 			public const int material_grey_900 = 2131427380;
 			
-			// aapt resource value: 0x7f0b00a1
-			public const int mtrl_bottom_nav_colored_item_tint = 2131427489;
+			// aapt resource value: 0x7f0b00a5
+			public const int mtrl_bottom_nav_colored_item_tint = 2131427493;
 			
-			// aapt resource value: 0x7f0b00a2
-			public const int mtrl_bottom_nav_item_tint = 2131427490;
+			// aapt resource value: 0x7f0b00a6
+			public const int mtrl_bottom_nav_item_tint = 2131427494;
 			
 			// aapt resource value: 0x7f0b0055
 			public const int mtrl_btn_bg_color_disabled = 2131427413;
 			
-			// aapt resource value: 0x7f0b00a3
-			public const int mtrl_btn_bg_color_selector = 2131427491;
+			// aapt resource value: 0x7f0b00a7
+			public const int mtrl_btn_bg_color_selector = 2131427495;
 			
-			// aapt resource value: 0x7f0b00a4
-			public const int mtrl_btn_ripple_color = 2131427492;
+			// aapt resource value: 0x7f0b00a8
+			public const int mtrl_btn_ripple_color = 2131427496;
 			
-			// aapt resource value: 0x7f0b00a5
-			public const int mtrl_btn_stroke_color_selector = 2131427493;
+			// aapt resource value: 0x7f0b00a9
+			public const int mtrl_btn_stroke_color_selector = 2131427497;
 			
-			// aapt resource value: 0x7f0b00a6
-			public const int mtrl_btn_text_btn_ripple_color = 2131427494;
+			// aapt resource value: 0x7f0b00aa
+			public const int mtrl_btn_text_btn_ripple_color = 2131427498;
 			
 			// aapt resource value: 0x7f0b0056
 			public const int mtrl_btn_text_color_disabled = 2131427414;
 			
-			// aapt resource value: 0x7f0b00a7
-			public const int mtrl_btn_text_color_selector = 2131427495;
+			// aapt resource value: 0x7f0b00ab
+			public const int mtrl_btn_text_color_selector = 2131427499;
 			
 			// aapt resource value: 0x7f0b0057
 			public const int mtrl_btn_transparent_bg_color = 2131427415;
 			
-			// aapt resource value: 0x7f0b00a8
-			public const int mtrl_chip_background_color = 2131427496;
-			
-			// aapt resource value: 0x7f0b00a9
-			public const int mtrl_chip_close_icon_tint = 2131427497;
-			
-			// aapt resource value: 0x7f0b00aa
-			public const int mtrl_chip_ripple_color = 2131427498;
-			
-			// aapt resource value: 0x7f0b00ab
-			public const int mtrl_chip_text_color = 2131427499;
-			
 			// aapt resource value: 0x7f0b00ac
-			public const int mtrl_fab_ripple_color = 2131427500;
+			public const int mtrl_chip_background_color = 2131427500;
+			
+			// aapt resource value: 0x7f0b00ad
+			public const int mtrl_chip_close_icon_tint = 2131427501;
+			
+			// aapt resource value: 0x7f0b00ae
+			public const int mtrl_chip_ripple_color = 2131427502;
+			
+			// aapt resource value: 0x7f0b00af
+			public const int mtrl_chip_text_color = 2131427503;
+			
+			// aapt resource value: 0x7f0b00b0
+			public const int mtrl_fab_ripple_color = 2131427504;
 			
 			// aapt resource value: 0x7f0b0058
 			public const int mtrl_scrim_color = 2131427416;
 			
-			// aapt resource value: 0x7f0b00ad
-			public const int mtrl_tabs_colored_ripple_color = 2131427501;
-			
-			// aapt resource value: 0x7f0b00ae
-			public const int mtrl_tabs_icon_color_selector = 2131427502;
-			
-			// aapt resource value: 0x7f0b00af
-			public const int mtrl_tabs_icon_color_selector_colored = 2131427503;
-			
-			// aapt resource value: 0x7f0b00b0
-			public const int mtrl_tabs_legacy_text_color_selector = 2131427504;
-			
 			// aapt resource value: 0x7f0b00b1
-			public const int mtrl_tabs_ripple_color = 2131427505;
+			public const int mtrl_tabs_colored_ripple_color = 2131427505;
 			
 			// aapt resource value: 0x7f0b00b2
-			public const int mtrl_text_btn_text_color_selector = 2131427506;
+			public const int mtrl_tabs_icon_color_selector = 2131427506;
+			
+			// aapt resource value: 0x7f0b00b3
+			public const int mtrl_tabs_icon_color_selector_colored = 2131427507;
+			
+			// aapt resource value: 0x7f0b00b4
+			public const int mtrl_tabs_legacy_text_color_selector = 2131427508;
+			
+			// aapt resource value: 0x7f0b00b5
+			public const int mtrl_tabs_ripple_color = 2131427509;
+			
+			// aapt resource value: 0x7f0b00b6
+			public const int mtrl_text_btn_text_color_selector = 2131427510;
 			
 			// aapt resource value: 0x7f0b0059
 			public const int mtrl_textinput_default_box_stroke_color = 2131427417;
@@ -2354,50 +4533,50 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0b005c
 			public const int mtrl_textinput_hovered_box_stroke_color = 2131427420;
 			
-			// aapt resource value: 0x7f0b005d
-			public const int notification_action_color_filter = 2131427421;
+			// aapt resource value: 0x7f0b0061
+			public const int notification_action_color_filter = 2131427425;
 			
-			// aapt resource value: 0x7f0b005e
-			public const int notification_icon_bg_color = 2131427422;
+			// aapt resource value: 0x7f0b0062
+			public const int notification_icon_bg_color = 2131427426;
 			
 			// aapt resource value: 0x7f0b0049
 			public const int notification_material_background_media_default_color = 2131427401;
 			
-			// aapt resource value: 0x7f0b0087
-			public const int page_indicator_default_color = 2131427463;
+			// aapt resource value: 0x7f0b008b
+			public const int page_indicator_default_color = 2131427467;
 			
-			// aapt resource value: 0x7f0b0086
-			public const int page_indicator_selected_color = 2131427462;
+			// aapt resource value: 0x7f0b008a
+			public const int page_indicator_selected_color = 2131427466;
 			
 			// aapt resource value: 0x7f0b0008
 			public const int preference_fallback_accent_color = 2131427336;
 			
-			// aapt resource value: 0x7f0b0078
-			public const int primary = 2131427448;
+			// aapt resource value: 0x7f0b007c
+			public const int primary = 2131427452;
+			
+			// aapt resource value: 0x7f0b007d
+			public const int primaryDark = 2131427453;
 			
 			// aapt resource value: 0x7f0b0079
-			public const int primaryDark = 2131427449;
+			public const int primaryDarkOnboarding = 2131427449;
 			
 			// aapt resource value: 0x7f0b0075
-			public const int primaryDarkOnboarding = 2131427445;
+			public const int primaryDarkSplash = 2131427445;
 			
-			// aapt resource value: 0x7f0b0071
-			public const int primaryDarkSplash = 2131427441;
+			// aapt resource value: 0x7f0b007e
+			public const int primaryLight = 2131427454;
 			
 			// aapt resource value: 0x7f0b007a
-			public const int primaryLight = 2131427450;
+			public const int primaryLightOnboarding = 2131427450;
 			
 			// aapt resource value: 0x7f0b0076
-			public const int primaryLightOnboarding = 2131427446;
+			public const int primaryLightSplash = 2131427446;
 			
-			// aapt resource value: 0x7f0b0072
-			public const int primaryLightSplash = 2131427442;
+			// aapt resource value: 0x7f0b0078
+			public const int primaryOnboarding = 2131427448;
 			
 			// aapt resource value: 0x7f0b0074
-			public const int primaryOnboarding = 2131427444;
-			
-			// aapt resource value: 0x7f0b0070
-			public const int primarySplash = 2131427440;
+			public const int primarySplash = 2131427444;
 			
 			// aapt resource value: 0x7f0b0035
 			public const int primary_dark_material_dark = 2131427381;
@@ -2441,32 +4620,32 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0b0042
 			public const int secondary_text_disabled_material_light = 2131427394;
 			
-			// aapt resource value: 0x7f0b0065
-			public const int snla_blue = 2131427429;
+			// aapt resource value: 0x7f0b0069
+			public const int snla_blue = 2131427433;
 			
-			// aapt resource value: 0x7f0b0066
-			public const int snla_blue_700 = 2131427430;
-			
-			// aapt resource value: 0x7f0b005f
-			public const int snla_grey = 2131427423;
-			
-			// aapt resource value: 0x7f0b0061
-			public const int snla_grey200 = 2131427425;
-			
-			// aapt resource value: 0x7f0b0060
-			public const int snla_grey700 = 2131427424;
-			
-			// aapt resource value: 0x7f0b0062
-			public const int snla_red = 2131427426;
-			
-			// aapt resource value: 0x7f0b0064
-			public const int snla_red_200 = 2131427428;
+			// aapt resource value: 0x7f0b006a
+			public const int snla_blue_700 = 2131427434;
 			
 			// aapt resource value: 0x7f0b0063
-			public const int snla_red_700 = 2131427427;
+			public const int snla_grey = 2131427427;
 			
-			// aapt resource value: 0x7f0b0073
-			public const int splash_background = 2131427443;
+			// aapt resource value: 0x7f0b0065
+			public const int snla_grey200 = 2131427429;
+			
+			// aapt resource value: 0x7f0b0064
+			public const int snla_grey700 = 2131427428;
+			
+			// aapt resource value: 0x7f0b0066
+			public const int snla_red = 2131427430;
+			
+			// aapt resource value: 0x7f0b0068
+			public const int snla_red_200 = 2131427432;
+			
+			// aapt resource value: 0x7f0b0067
+			public const int snla_red_700 = 2131427431;
+			
+			// aapt resource value: 0x7f0b0077
+			public const int splash_background = 2131427447;
 			
 			// aapt resource value: 0x7f0b0043
 			public const int switch_thumb_disabled_material_dark = 2131427395;
@@ -2474,11 +4653,11 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0b0044
 			public const int switch_thumb_disabled_material_light = 2131427396;
 			
-			// aapt resource value: 0x7f0b00b3
-			public const int switch_thumb_material_dark = 2131427507;
+			// aapt resource value: 0x7f0b00b7
+			public const int switch_thumb_material_dark = 2131427511;
 			
-			// aapt resource value: 0x7f0b00b4
-			public const int switch_thumb_material_light = 2131427508;
+			// aapt resource value: 0x7f0b00b8
+			public const int switch_thumb_material_light = 2131427512;
 			
 			// aapt resource value: 0x7f0b0045
 			public const int switch_thumb_normal_material_dark = 2131427397;
@@ -2486,23 +4665,23 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0b0046
 			public const int switch_thumb_normal_material_light = 2131427398;
 			
-			// aapt resource value: 0x7f0b0080
-			public const int text_header = 2131427456;
+			// aapt resource value: 0x7f0b0084
+			public const int text_header = 2131427460;
 			
-			// aapt resource value: 0x7f0b007f
-			public const int text_info = 2131427455;
+			// aapt resource value: 0x7f0b0083
+			public const int text_info = 2131427459;
+			
+			// aapt resource value: 0x7f0b0085
+			public const int text_main = 2131427461;
+			
+			// aapt resource value: 0x7f0b0082
+			public const int text_normal = 2131427458;
+			
+			// aapt resource value: 0x7f0b007b
+			public const int text_normalOnboarding = 2131427451;
 			
 			// aapt resource value: 0x7f0b0081
-			public const int text_main = 2131427457;
-			
-			// aapt resource value: 0x7f0b007e
-			public const int text_normal = 2131427454;
-			
-			// aapt resource value: 0x7f0b0077
-			public const int text_normalOnboarding = 2131427447;
-			
-			// aapt resource value: 0x7f0b007d
-			public const int text_white = 2131427453;
+			public const int text_white = 2131427457;
 			
 			// aapt resource value: 0x7f0b0047
 			public const int tooltip_background_dark = 2131427399;
@@ -2510,8 +4689,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0b0048
 			public const int tooltip_background_light = 2131427400;
 			
-			// aapt resource value: 0x7f0b0085
-			public const int window_background = 2131427461;
+			// aapt resource value: 0x7f0b0089
+			public const int window_background = 2131427465;
 			
 			static Color()
 			{
@@ -2751,8 +4930,14 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0c0018
 			public const int abc_text_size_title_material_toolbar = 2131492888;
 			
-			// aapt resource value: 0x7f0c0126
-			public const int bottom_bar_height = 2131493158;
+			// aapt resource value: 0x7f0c0128
+			public const int bottom_bar_height = 2131493160;
+			
+			// aapt resource value: 0x7f0c00d1
+			public const int browser_actions_context_menu_max_width = 2131493073;
+			
+			// aapt resource value: 0x7f0c00d2
+			public const int browser_actions_context_menu_min_padding = 2131493074;
 			
 			// aapt resource value: 0x7f0c0012
 			public const int cardview_compat_inset_shadow = 2131492882;
@@ -2763,83 +4948,83 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0c0014
 			public const int cardview_default_radius = 2131492884;
 			
-			// aapt resource value: 0x7f0c00e8
-			public const int circle_image_size_large = 2131493096;
-			
-			// aapt resource value: 0x7f0c00e9
-			public const int circle_image_size_xlarge = 2131493097;
-			
-			// aapt resource value: 0x7f0c00e7
-			public const int circle_image_xtra_small = 2131493095;
-			
-			// aapt resource value: 0x7f0c0121
-			public const int compass_button_container_size = 2131493153;
-			
-			// aapt resource value: 0x7f0c011f
-			public const int compass_button_size = 2131493151;
-			
-			// aapt resource value: 0x7f0c0120
-			public const int compass_margin_camera_icon = 2131493152;
-			
-			// aapt resource value: 0x7f0c0122
-			public const int compass_margin_from_corner = 2131493154;
-			
-			// aapt resource value: 0x7f0c00d5
-			public const int compat_button_inset_horizontal_material = 2131493077;
-			
-			// aapt resource value: 0x7f0c00d6
-			public const int compat_button_inset_vertical_material = 2131493078;
-			
-			// aapt resource value: 0x7f0c00d7
-			public const int compat_button_padding_horizontal_material = 2131493079;
-			
-			// aapt resource value: 0x7f0c00d8
-			public const int compat_button_padding_vertical_material = 2131493080;
-			
-			// aapt resource value: 0x7f0c00d9
-			public const int compat_control_corner_material = 2131493081;
-			
-			// aapt resource value: 0x7f0c00da
-			public const int compat_notification_large_icon_max_height = 2131493082;
-			
-			// aapt resource value: 0x7f0c00db
-			public const int compat_notification_large_icon_max_width = 2131493083;
-			
-			// aapt resource value: 0x7f0c00ff
-			public const int content_padding_cell_side = 2131493119;
-			
-			// aapt resource value: 0x7f0c0100
-			public const int content_padding_cell_vertical = 2131493120;
-			
-			// aapt resource value: 0x7f0c0101
-			public const int content_padding_cell_vertical_header = 2131493121;
-			
-			// aapt resource value: 0x7f0c00fb
-			public const int content_padding_editTextFilled = 2131493115;
-			
-			// aapt resource value: 0x7f0c0102
-			public const int content_padding_heading = 2131493122;
-			
-			// aapt resource value: 0x7f0c0104
-			public const int content_padding_line = 2131493124;
-			
-			// aapt resource value: 0x7f0c0103
-			public const int content_padding_menu = 2131493123;
-			
-			// aapt resource value: 0x7f0c00fc
-			public const int content_padding_normal = 2131493116;
-			
-			// aapt resource value: 0x7f0c00fd
-			public const int content_padding_small = 2131493117;
-			
-			// aapt resource value: 0x7f0c00fe
-			public const int content_padding_very_small = 2131493118;
+			// aapt resource value: 0x7f0c00ea
+			public const int circle_image_size_large = 2131493098;
 			
 			// aapt resource value: 0x7f0c00eb
-			public const int default_larger_margin = 2131493099;
+			public const int circle_image_size_xlarge = 2131493099;
 			
-			// aapt resource value: 0x7f0c00ec
-			public const int default_margin = 2131493100;
+			// aapt resource value: 0x7f0c00e9
+			public const int circle_image_xtra_small = 2131493097;
+			
+			// aapt resource value: 0x7f0c0123
+			public const int compass_button_container_size = 2131493155;
+			
+			// aapt resource value: 0x7f0c0121
+			public const int compass_button_size = 2131493153;
+			
+			// aapt resource value: 0x7f0c0122
+			public const int compass_margin_camera_icon = 2131493154;
+			
+			// aapt resource value: 0x7f0c0124
+			public const int compass_margin_from_corner = 2131493156;
+			
+			// aapt resource value: 0x7f0c00d7
+			public const int compat_button_inset_horizontal_material = 2131493079;
+			
+			// aapt resource value: 0x7f0c00d8
+			public const int compat_button_inset_vertical_material = 2131493080;
+			
+			// aapt resource value: 0x7f0c00d9
+			public const int compat_button_padding_horizontal_material = 2131493081;
+			
+			// aapt resource value: 0x7f0c00da
+			public const int compat_button_padding_vertical_material = 2131493082;
+			
+			// aapt resource value: 0x7f0c00db
+			public const int compat_control_corner_material = 2131493083;
+			
+			// aapt resource value: 0x7f0c00dc
+			public const int compat_notification_large_icon_max_height = 2131493084;
+			
+			// aapt resource value: 0x7f0c00dd
+			public const int compat_notification_large_icon_max_width = 2131493085;
+			
+			// aapt resource value: 0x7f0c0101
+			public const int content_padding_cell_side = 2131493121;
+			
+			// aapt resource value: 0x7f0c0102
+			public const int content_padding_cell_vertical = 2131493122;
+			
+			// aapt resource value: 0x7f0c0103
+			public const int content_padding_cell_vertical_header = 2131493123;
+			
+			// aapt resource value: 0x7f0c00fd
+			public const int content_padding_editTextFilled = 2131493117;
+			
+			// aapt resource value: 0x7f0c0104
+			public const int content_padding_heading = 2131493124;
+			
+			// aapt resource value: 0x7f0c0106
+			public const int content_padding_line = 2131493126;
+			
+			// aapt resource value: 0x7f0c0105
+			public const int content_padding_menu = 2131493125;
+			
+			// aapt resource value: 0x7f0c00fe
+			public const int content_padding_normal = 2131493118;
+			
+			// aapt resource value: 0x7f0c00ff
+			public const int content_padding_small = 2131493119;
+			
+			// aapt resource value: 0x7f0c0100
+			public const int content_padding_very_small = 2131493120;
+			
+			// aapt resource value: 0x7f0c00ed
+			public const int default_larger_margin = 2131493101;
+			
+			// aapt resource value: 0x7f0c00ee
+			public const int default_margin = 2131493102;
 			
 			// aapt resource value: 0x7f0c007d
 			public const int design_appbar_elevation = 2131492989;
@@ -2973,8 +5158,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0c00a0
 			public const int design_textinput_caption_translate_y = 2131493024;
 			
-			// aapt resource value: 0x7f0c00f9
-			public const int detail_image_size_big = 2131493113;
+			// aapt resource value: 0x7f0c00fb
+			public const int detail_image_size_big = 2131493115;
 			
 			// aapt resource value: 0x7f0c0060
 			public const int disabled_alpha_material_dark = 2131492960;
@@ -2982,8 +5167,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0c0061
 			public const int disabled_alpha_material_light = 2131492961;
 			
-			// aapt resource value: 0x7f0c0111
-			public const int extra_small_margin = 2131493137;
+			// aapt resource value: 0x7f0c0113
+			public const int extra_small_margin = 2131493139;
 			
 			// aapt resource value: 0x7f0c0000
 			public const int fastscroll_default_thickness = 2131492864;
@@ -2994,14 +5179,14 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0c0002
 			public const int fastscroll_minimum_range = 2131492866;
 			
-			// aapt resource value: 0x7f0c012b
-			public const int favourites_icon_size = 2131493163;
+			// aapt resource value: 0x7f0c012d
+			public const int favourites_icon_size = 2131493165;
 			
-			// aapt resource value: 0x7f0c0127
-			public const int hems_logo_height = 2131493159;
+			// aapt resource value: 0x7f0c0129
+			public const int hems_logo_height = 2131493161;
 			
-			// aapt resource value: 0x7f0c0128
-			public const int hems_logo_width = 2131493160;
+			// aapt resource value: 0x7f0c012a
+			public const int hems_logo_width = 2131493162;
 			
 			// aapt resource value: 0x7f0c0062
 			public const int highlight_alpha_material_colored = 2131492962;
@@ -3024,14 +5209,14 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0c0068
 			public const int hint_pressed_alpha_material_light = 2131492968;
 			
-			// aapt resource value: 0x7f0c0123
-			public const int ideal_button_size = 2131493155;
+			// aapt resource value: 0x7f0c0125
+			public const int ideal_button_size = 2131493157;
 			
-			// aapt resource value: 0x7f0c0112
-			public const int iga_menu_text_top = 2131493138;
+			// aapt resource value: 0x7f0c0114
+			public const int iga_menu_text_top = 2131493140;
 			
-			// aapt resource value: 0x7f0c0115
-			public const int image_container_height = 2131493141;
+			// aapt resource value: 0x7f0c0117
+			public const int image_container_height = 2131493143;
 			
 			// aapt resource value: 0x7f0c0003
 			public const int item_touch_helper_max_drag_scroll_per_frame = 2131492867;
@@ -3042,50 +5227,50 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0c0005
 			public const int item_touch_helper_swipe_escape_velocity = 2131492869;
 			
-			// aapt resource value: 0x7f0c00ea
-			public const int large_margin = 2131493098;
-			
-			// aapt resource value: 0x7f0c0108
-			public const int list_collapsed = 2131493128;
-			
-			// aapt resource value: 0x7f0c010b
-			public const int list_height = 2131493131;
-			
-			// aapt resource value: 0x7f0c00f6
-			public const int list_image_size = 2131493110;
-			
-			// aapt resource value: 0x7f0c00f8
-			public const int list_image_size_big = 2131493112;
-			
-			// aapt resource value: 0x7f0c00f7
-			public const int list_image_size_medium = 2131493111;
-			
-			// aapt resource value: 0x7f0c00f5
-			public const int list_image_size_small = 2131493109;
-			
-			// aapt resource value: 0x7f0c010e
-			public const int list_item_expand_button = 2131493134;
-			
-			// aapt resource value: 0x7f0c010f
-			public const int list_item_expand_button_padding = 2131493135;
-			
-			// aapt resource value: 0x7f0c0107
-			public const int list_item_image_default = 2131493127;
-			
-			// aapt resource value: 0x7f0c010c
-			public const int list_left_negative = 2131493132;
-			
-			// aapt resource value: 0x7f0c0109
-			public const int list_open = 2131493129;
+			// aapt resource value: 0x7f0c00ec
+			public const int large_margin = 2131493100;
 			
 			// aapt resource value: 0x7f0c010a
-			public const int list_right_container_width = 2131493130;
+			public const int list_collapsed = 2131493130;
 			
 			// aapt resource value: 0x7f0c010d
-			public const int login_button_padding = 2131493133;
+			public const int list_height = 2131493133;
 			
-			// aapt resource value: 0x7f0c012a
-			public const int menu_item_height = 2131493162;
+			// aapt resource value: 0x7f0c00f8
+			public const int list_image_size = 2131493112;
+			
+			// aapt resource value: 0x7f0c00fa
+			public const int list_image_size_big = 2131493114;
+			
+			// aapt resource value: 0x7f0c00f9
+			public const int list_image_size_medium = 2131493113;
+			
+			// aapt resource value: 0x7f0c00f7
+			public const int list_image_size_small = 2131493111;
+			
+			// aapt resource value: 0x7f0c0110
+			public const int list_item_expand_button = 2131493136;
+			
+			// aapt resource value: 0x7f0c0111
+			public const int list_item_expand_button_padding = 2131493137;
+			
+			// aapt resource value: 0x7f0c0109
+			public const int list_item_image_default = 2131493129;
+			
+			// aapt resource value: 0x7f0c010e
+			public const int list_left_negative = 2131493134;
+			
+			// aapt resource value: 0x7f0c010b
+			public const int list_open = 2131493131;
+			
+			// aapt resource value: 0x7f0c010c
+			public const int list_right_container_width = 2131493132;
+			
+			// aapt resource value: 0x7f0c010f
+			public const int login_button_padding = 2131493135;
+			
+			// aapt resource value: 0x7f0c012c
+			public const int menu_item_height = 2131493164;
 			
 			// aapt resource value: 0x7f0c000c
 			public const int mr_controller_volume_group_list_item_height = 2131492876;
@@ -3249,77 +5434,77 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0c00d0
 			public const int mtrl_toolbar_default_height = 2131493072;
 			
-			// aapt resource value: 0x7f0c0113
-			public const int my24dp = 2131493139;
-			
-			// aapt resource value: 0x7f0c00dc
-			public const int notification_action_icon_size = 2131493084;
-			
-			// aapt resource value: 0x7f0c00dd
-			public const int notification_action_text_size = 2131493085;
+			// aapt resource value: 0x7f0c0115
+			public const int my24dp = 2131493141;
 			
 			// aapt resource value: 0x7f0c00de
-			public const int notification_big_circle_margin = 2131493086;
-			
-			// aapt resource value: 0x7f0c00d2
-			public const int notification_content_margin_start = 2131493074;
+			public const int notification_action_icon_size = 2131493086;
 			
 			// aapt resource value: 0x7f0c00df
-			public const int notification_large_icon_height = 2131493087;
+			public const int notification_action_text_size = 2131493087;
 			
 			// aapt resource value: 0x7f0c00e0
-			public const int notification_large_icon_width = 2131493088;
-			
-			// aapt resource value: 0x7f0c00d3
-			public const int notification_main_column_padding_top = 2131493075;
+			public const int notification_big_circle_margin = 2131493088;
 			
 			// aapt resource value: 0x7f0c00d4
-			public const int notification_media_narrow_margin = 2131493076;
+			public const int notification_content_margin_start = 2131493076;
 			
 			// aapt resource value: 0x7f0c00e1
-			public const int notification_right_icon_size = 2131493089;
-			
-			// aapt resource value: 0x7f0c00d1
-			public const int notification_right_side_padding_top = 2131493073;
+			public const int notification_large_icon_height = 2131493089;
 			
 			// aapt resource value: 0x7f0c00e2
-			public const int notification_small_icon_background_padding = 2131493090;
+			public const int notification_large_icon_width = 2131493090;
+			
+			// aapt resource value: 0x7f0c00d5
+			public const int notification_main_column_padding_top = 2131493077;
+			
+			// aapt resource value: 0x7f0c00d6
+			public const int notification_media_narrow_margin = 2131493078;
 			
 			// aapt resource value: 0x7f0c00e3
-			public const int notification_small_icon_size_as_large = 2131493091;
+			public const int notification_right_icon_size = 2131493091;
+			
+			// aapt resource value: 0x7f0c00d3
+			public const int notification_right_side_padding_top = 2131493075;
 			
 			// aapt resource value: 0x7f0c00e4
-			public const int notification_subtext_size = 2131493092;
+			public const int notification_small_icon_background_padding = 2131493092;
 			
 			// aapt resource value: 0x7f0c00e5
-			public const int notification_top_pad = 2131493093;
+			public const int notification_small_icon_size_as_large = 2131493093;
 			
 			// aapt resource value: 0x7f0c00e6
-			public const int notification_top_pad_large_text = 2131493094;
+			public const int notification_subtext_size = 2131493094;
 			
-			// aapt resource value: 0x7f0c011c
-			public const int poi_back_arrow_height = 2131493148;
+			// aapt resource value: 0x7f0c00e7
+			public const int notification_top_pad = 2131493095;
 			
-			// aapt resource value: 0x7f0c011d
-			public const int poi_back_arrow_width = 2131493149;
+			// aapt resource value: 0x7f0c00e8
+			public const int notification_top_pad_large_text = 2131493096;
 			
-			// aapt resource value: 0x7f0c0116
-			public const int poi_info_text_popup_width = 2131493142;
+			// aapt resource value: 0x7f0c011e
+			public const int poi_back_arrow_height = 2131493150;
 			
-			// aapt resource value: 0x7f0c011b
-			public const int poi_map_margin_from_bottom = 2131493147;
-			
-			// aapt resource value: 0x7f0c0119
-			public const int poi_popup_height = 2131493145;
-			
-			// aapt resource value: 0x7f0c011a
-			public const int poi_popup_middle_margin = 2131493146;
+			// aapt resource value: 0x7f0c011f
+			public const int poi_back_arrow_width = 2131493151;
 			
 			// aapt resource value: 0x7f0c0118
-			public const int poi_thumb_container_size = 2131493144;
+			public const int poi_info_text_popup_width = 2131493144;
 			
-			// aapt resource value: 0x7f0c0117
-			public const int poi_thumb_image_size = 2131493143;
+			// aapt resource value: 0x7f0c011d
+			public const int poi_map_margin_from_bottom = 2131493149;
+			
+			// aapt resource value: 0x7f0c011b
+			public const int poi_popup_height = 2131493147;
+			
+			// aapt resource value: 0x7f0c011c
+			public const int poi_popup_middle_margin = 2131493148;
+			
+			// aapt resource value: 0x7f0c011a
+			public const int poi_thumb_container_size = 2131493146;
+			
+			// aapt resource value: 0x7f0c0119
+			public const int poi_thumb_image_size = 2131493145;
 			
 			// aapt resource value: 0x7f0c0006
 			public const int preference_category_padding_start = 2131492870;
@@ -3339,23 +5524,23 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0c000b
 			public const int preference_seekbar_value_width = 2131492875;
 			
-			// aapt resource value: 0x7f0c0114
-			public const int radar_button_size = 2131493140;
+			// aapt resource value: 0x7f0c0116
+			public const int radar_button_size = 2131493142;
 			
-			// aapt resource value: 0x7f0c0105
-			public const int row_padding = 2131493125;
+			// aapt resource value: 0x7f0c0107
+			public const int row_padding = 2131493127;
 			
-			// aapt resource value: 0x7f0c0106
-			public const int row_padding_callAndSms_rightPadding = 2131493126;
+			// aapt resource value: 0x7f0c0108
+			public const int row_padding_callAndSms_rightPadding = 2131493128;
 			
-			// aapt resource value: 0x7f0c00fa
-			public const int row_padding_text_top = 2131493114;
+			// aapt resource value: 0x7f0c00fc
+			public const int row_padding_text_top = 2131493116;
 			
-			// aapt resource value: 0x7f0c0129
-			public const int sigwx_info = 2131493161;
+			// aapt resource value: 0x7f0c012b
+			public const int sigwx_info = 2131493163;
 			
-			// aapt resource value: 0x7f0c00ed
-			public const int small_margin = 2131493101;
+			// aapt resource value: 0x7f0c00ef
+			public const int small_margin = 2131493103;
 			
 			// aapt resource value: 0x7f0c0071
 			public const int subtitle_corner_radius = 2131492977;
@@ -3369,29 +5554,29 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0c0074
 			public const int subtitle_shadow_radius = 2131492980;
 			
-			// aapt resource value: 0x7f0c0125
-			public const int temp_icon_size = 2131493157;
-			
-			// aapt resource value: 0x7f0c00f2
-			public const int text_size_large = 2131493106;
-			
-			// aapt resource value: 0x7f0c00f1
-			public const int text_size_medium = 2131493105;
-			
-			// aapt resource value: 0x7f0c00ef
-			public const int text_size_micro = 2131493103;
-			
-			// aapt resource value: 0x7f0c00ee
-			public const int text_size_nano = 2131493102;
-			
-			// aapt resource value: 0x7f0c00f0
-			public const int text_size_small = 2131493104;
-			
-			// aapt resource value: 0x7f0c00f3
-			public const int text_size_xlarge = 2131493107;
+			// aapt resource value: 0x7f0c0127
+			public const int temp_icon_size = 2131493159;
 			
 			// aapt resource value: 0x7f0c00f4
-			public const int text_size_xxlarge = 2131493108;
+			public const int text_size_large = 2131493108;
+			
+			// aapt resource value: 0x7f0c00f3
+			public const int text_size_medium = 2131493107;
+			
+			// aapt resource value: 0x7f0c00f1
+			public const int text_size_micro = 2131493105;
+			
+			// aapt resource value: 0x7f0c00f0
+			public const int text_size_nano = 2131493104;
+			
+			// aapt resource value: 0x7f0c00f2
+			public const int text_size_small = 2131493106;
+			
+			// aapt resource value: 0x7f0c00f5
+			public const int text_size_xlarge = 2131493109;
+			
+			// aapt resource value: 0x7f0c00f6
+			public const int text_size_xxlarge = 2131493110;
 			
 			// aapt resource value: 0x7f0c0069
 			public const int tooltip_corner_radius = 2131492969;
@@ -3417,14 +5602,14 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0c0070
 			public const int tooltip_y_offset_touch = 2131492976;
 			
-			// aapt resource value: 0x7f0c0124
-			public const int top_of_clock_margin = 2131493156;
+			// aapt resource value: 0x7f0c0126
+			public const int top_of_clock_margin = 2131493158;
 			
-			// aapt resource value: 0x7f0c0110
-			public const int very_small_margin = 2131493136;
+			// aapt resource value: 0x7f0c0112
+			public const int very_small_margin = 2131493138;
 			
-			// aapt resource value: 0x7f0c011e
-			public const int weather_camera_image_container_height = 2131493150;
+			// aapt resource value: 0x7f0c0120
+			public const int weather_camera_image_container_height = 2131493152;
 			
 			static Dimension()
 			{
@@ -3694,26 +5879,26 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f020054
 			public const int avd_hide_password = 2130837588;
 			
-			// aapt resource value: 0x7f02016b
-			public const int avd_hide_password_1 = 2130837867;
+			// aapt resource value: 0x7f02016f
+			public const int avd_hide_password_1 = 2130837871;
 			
-			// aapt resource value: 0x7f02016c
-			public const int avd_hide_password_2 = 2130837868;
+			// aapt resource value: 0x7f020170
+			public const int avd_hide_password_2 = 2130837872;
 			
-			// aapt resource value: 0x7f02016d
-			public const int avd_hide_password_3 = 2130837869;
+			// aapt resource value: 0x7f020171
+			public const int avd_hide_password_3 = 2130837873;
 			
 			// aapt resource value: 0x7f020055
 			public const int avd_show_password = 2130837589;
 			
-			// aapt resource value: 0x7f02016e
-			public const int avd_show_password_1 = 2130837870;
+			// aapt resource value: 0x7f020172
+			public const int avd_show_password_1 = 2130837874;
 			
-			// aapt resource value: 0x7f02016f
-			public const int avd_show_password_2 = 2130837871;
+			// aapt resource value: 0x7f020173
+			public const int avd_show_password_2 = 2130837875;
 			
-			// aapt resource value: 0x7f020170
-			public const int avd_show_password_3 = 2130837872;
+			// aapt resource value: 0x7f020174
+			public const int avd_show_password_3 = 2130837876;
 			
 			// aapt resource value: 0x7f020056
 			public const int bg_border_blue_round_btn = 2130837590;
@@ -3848,703 +6033,715 @@ namespace Henspe.Droid
 			public const int ic_dialog_close_light = 2130837633;
 			
 			// aapt resource value: 0x7f020082
-			public const int ic_evakuering = 2130837634;
+			public const int ic_errorstatus = 2130837634;
 			
 			// aapt resource value: 0x7f020083
-			public const int ic_farer = 2130837635;
+			public const int ic_evakuering = 2130837635;
 			
 			// aapt resource value: 0x7f020084
-			public const int ic_flaskehalser = 2130837636;
+			public const int ic_farer = 2130837636;
 			
 			// aapt resource value: 0x7f020085
-			public const int ic_group_collapse_00 = 2130837637;
+			public const int ic_flaskehalser = 2130837637;
 			
 			// aapt resource value: 0x7f020086
-			public const int ic_group_collapse_01 = 2130837638;
+			public const int ic_group_collapse_00 = 2130837638;
 			
 			// aapt resource value: 0x7f020087
-			public const int ic_group_collapse_02 = 2130837639;
+			public const int ic_group_collapse_01 = 2130837639;
 			
 			// aapt resource value: 0x7f020088
-			public const int ic_group_collapse_03 = 2130837640;
+			public const int ic_group_collapse_02 = 2130837640;
 			
 			// aapt resource value: 0x7f020089
-			public const int ic_group_collapse_04 = 2130837641;
+			public const int ic_group_collapse_03 = 2130837641;
 			
 			// aapt resource value: 0x7f02008a
-			public const int ic_group_collapse_05 = 2130837642;
+			public const int ic_group_collapse_04 = 2130837642;
 			
 			// aapt resource value: 0x7f02008b
-			public const int ic_group_collapse_06 = 2130837643;
+			public const int ic_group_collapse_05 = 2130837643;
 			
 			// aapt resource value: 0x7f02008c
-			public const int ic_group_collapse_07 = 2130837644;
+			public const int ic_group_collapse_06 = 2130837644;
 			
 			// aapt resource value: 0x7f02008d
-			public const int ic_group_collapse_08 = 2130837645;
+			public const int ic_group_collapse_07 = 2130837645;
 			
 			// aapt resource value: 0x7f02008e
-			public const int ic_group_collapse_09 = 2130837646;
+			public const int ic_group_collapse_08 = 2130837646;
 			
 			// aapt resource value: 0x7f02008f
-			public const int ic_group_collapse_10 = 2130837647;
+			public const int ic_group_collapse_09 = 2130837647;
 			
 			// aapt resource value: 0x7f020090
-			public const int ic_group_collapse_11 = 2130837648;
+			public const int ic_group_collapse_10 = 2130837648;
 			
 			// aapt resource value: 0x7f020091
-			public const int ic_group_collapse_12 = 2130837649;
+			public const int ic_group_collapse_11 = 2130837649;
 			
 			// aapt resource value: 0x7f020092
-			public const int ic_group_collapse_13 = 2130837650;
+			public const int ic_group_collapse_12 = 2130837650;
 			
 			// aapt resource value: 0x7f020093
-			public const int ic_group_collapse_14 = 2130837651;
+			public const int ic_group_collapse_13 = 2130837651;
 			
 			// aapt resource value: 0x7f020094
-			public const int ic_group_collapse_15 = 2130837652;
+			public const int ic_group_collapse_14 = 2130837652;
 			
 			// aapt resource value: 0x7f020095
-			public const int ic_group_expand_00 = 2130837653;
+			public const int ic_group_collapse_15 = 2130837653;
 			
 			// aapt resource value: 0x7f020096
-			public const int ic_group_expand_01 = 2130837654;
+			public const int ic_group_expand_00 = 2130837654;
 			
 			// aapt resource value: 0x7f020097
-			public const int ic_group_expand_02 = 2130837655;
+			public const int ic_group_expand_01 = 2130837655;
 			
 			// aapt resource value: 0x7f020098
-			public const int ic_group_expand_03 = 2130837656;
+			public const int ic_group_expand_02 = 2130837656;
 			
 			// aapt resource value: 0x7f020099
-			public const int ic_group_expand_04 = 2130837657;
+			public const int ic_group_expand_03 = 2130837657;
 			
 			// aapt resource value: 0x7f02009a
-			public const int ic_group_expand_05 = 2130837658;
+			public const int ic_group_expand_04 = 2130837658;
 			
 			// aapt resource value: 0x7f02009b
-			public const int ic_group_expand_06 = 2130837659;
+			public const int ic_group_expand_05 = 2130837659;
 			
 			// aapt resource value: 0x7f02009c
-			public const int ic_group_expand_07 = 2130837660;
+			public const int ic_group_expand_06 = 2130837660;
 			
 			// aapt resource value: 0x7f02009d
-			public const int ic_group_expand_08 = 2130837661;
+			public const int ic_group_expand_07 = 2130837661;
 			
 			// aapt resource value: 0x7f02009e
-			public const int ic_group_expand_09 = 2130837662;
+			public const int ic_group_expand_08 = 2130837662;
 			
 			// aapt resource value: 0x7f02009f
-			public const int ic_group_expand_10 = 2130837663;
+			public const int ic_group_expand_09 = 2130837663;
 			
 			// aapt resource value: 0x7f0200a0
-			public const int ic_group_expand_11 = 2130837664;
+			public const int ic_group_expand_10 = 2130837664;
 			
 			// aapt resource value: 0x7f0200a1
-			public const int ic_group_expand_12 = 2130837665;
+			public const int ic_group_expand_11 = 2130837665;
 			
 			// aapt resource value: 0x7f0200a2
-			public const int ic_group_expand_13 = 2130837666;
+			public const int ic_group_expand_12 = 2130837666;
 			
 			// aapt resource value: 0x7f0200a3
-			public const int ic_group_expand_14 = 2130837667;
+			public const int ic_group_expand_13 = 2130837667;
 			
 			// aapt resource value: 0x7f0200a4
-			public const int ic_group_expand_15 = 2130837668;
+			public const int ic_group_expand_14 = 2130837668;
 			
 			// aapt resource value: 0x7f0200a5
-			public const int ic_info = 2130837669;
+			public const int ic_group_expand_15 = 2130837669;
 			
 			// aapt resource value: 0x7f0200a6
-			public const int ic_info_down = 2130837670;
+			public const int ic_info = 2130837670;
 			
 			// aapt resource value: 0x7f0200a7
-			public const int ic_media_pause_dark = 2130837671;
+			public const int ic_info_down = 2130837671;
 			
 			// aapt resource value: 0x7f0200a8
-			public const int ic_media_pause_light = 2130837672;
+			public const int ic_media_pause_dark = 2130837672;
 			
 			// aapt resource value: 0x7f0200a9
-			public const int ic_media_play_dark = 2130837673;
+			public const int ic_media_pause_light = 2130837673;
 			
 			// aapt resource value: 0x7f0200aa
-			public const int ic_media_play_light = 2130837674;
+			public const int ic_media_play_dark = 2130837674;
 			
 			// aapt resource value: 0x7f0200ab
-			public const int ic_media_stop_dark = 2130837675;
+			public const int ic_media_play_light = 2130837675;
 			
 			// aapt resource value: 0x7f0200ac
-			public const int ic_media_stop_light = 2130837676;
+			public const int ic_media_stop_dark = 2130837676;
 			
 			// aapt resource value: 0x7f0200ad
-			public const int ic_mr_button_connected_00_dark = 2130837677;
+			public const int ic_media_stop_light = 2130837677;
 			
 			// aapt resource value: 0x7f0200ae
-			public const int ic_mr_button_connected_00_light = 2130837678;
+			public const int ic_mr_button_connected_00_dark = 2130837678;
 			
 			// aapt resource value: 0x7f0200af
-			public const int ic_mr_button_connected_01_dark = 2130837679;
+			public const int ic_mr_button_connected_00_light = 2130837679;
 			
 			// aapt resource value: 0x7f0200b0
-			public const int ic_mr_button_connected_01_light = 2130837680;
+			public const int ic_mr_button_connected_01_dark = 2130837680;
 			
 			// aapt resource value: 0x7f0200b1
-			public const int ic_mr_button_connected_02_dark = 2130837681;
+			public const int ic_mr_button_connected_01_light = 2130837681;
 			
 			// aapt resource value: 0x7f0200b2
-			public const int ic_mr_button_connected_02_light = 2130837682;
+			public const int ic_mr_button_connected_02_dark = 2130837682;
 			
 			// aapt resource value: 0x7f0200b3
-			public const int ic_mr_button_connected_03_dark = 2130837683;
+			public const int ic_mr_button_connected_02_light = 2130837683;
 			
 			// aapt resource value: 0x7f0200b4
-			public const int ic_mr_button_connected_03_light = 2130837684;
+			public const int ic_mr_button_connected_03_dark = 2130837684;
 			
 			// aapt resource value: 0x7f0200b5
-			public const int ic_mr_button_connected_04_dark = 2130837685;
+			public const int ic_mr_button_connected_03_light = 2130837685;
 			
 			// aapt resource value: 0x7f0200b6
-			public const int ic_mr_button_connected_04_light = 2130837686;
+			public const int ic_mr_button_connected_04_dark = 2130837686;
 			
 			// aapt resource value: 0x7f0200b7
-			public const int ic_mr_button_connected_05_dark = 2130837687;
+			public const int ic_mr_button_connected_04_light = 2130837687;
 			
 			// aapt resource value: 0x7f0200b8
-			public const int ic_mr_button_connected_05_light = 2130837688;
+			public const int ic_mr_button_connected_05_dark = 2130837688;
 			
 			// aapt resource value: 0x7f0200b9
-			public const int ic_mr_button_connected_06_dark = 2130837689;
+			public const int ic_mr_button_connected_05_light = 2130837689;
 			
 			// aapt resource value: 0x7f0200ba
-			public const int ic_mr_button_connected_06_light = 2130837690;
+			public const int ic_mr_button_connected_06_dark = 2130837690;
 			
 			// aapt resource value: 0x7f0200bb
-			public const int ic_mr_button_connected_07_dark = 2130837691;
+			public const int ic_mr_button_connected_06_light = 2130837691;
 			
 			// aapt resource value: 0x7f0200bc
-			public const int ic_mr_button_connected_07_light = 2130837692;
+			public const int ic_mr_button_connected_07_dark = 2130837692;
 			
 			// aapt resource value: 0x7f0200bd
-			public const int ic_mr_button_connected_08_dark = 2130837693;
+			public const int ic_mr_button_connected_07_light = 2130837693;
 			
 			// aapt resource value: 0x7f0200be
-			public const int ic_mr_button_connected_08_light = 2130837694;
+			public const int ic_mr_button_connected_08_dark = 2130837694;
 			
 			// aapt resource value: 0x7f0200bf
-			public const int ic_mr_button_connected_09_dark = 2130837695;
+			public const int ic_mr_button_connected_08_light = 2130837695;
 			
 			// aapt resource value: 0x7f0200c0
-			public const int ic_mr_button_connected_09_light = 2130837696;
+			public const int ic_mr_button_connected_09_dark = 2130837696;
 			
 			// aapt resource value: 0x7f0200c1
-			public const int ic_mr_button_connected_10_dark = 2130837697;
+			public const int ic_mr_button_connected_09_light = 2130837697;
 			
 			// aapt resource value: 0x7f0200c2
-			public const int ic_mr_button_connected_10_light = 2130837698;
+			public const int ic_mr_button_connected_10_dark = 2130837698;
 			
 			// aapt resource value: 0x7f0200c3
-			public const int ic_mr_button_connected_11_dark = 2130837699;
+			public const int ic_mr_button_connected_10_light = 2130837699;
 			
 			// aapt resource value: 0x7f0200c4
-			public const int ic_mr_button_connected_11_light = 2130837700;
+			public const int ic_mr_button_connected_11_dark = 2130837700;
 			
 			// aapt resource value: 0x7f0200c5
-			public const int ic_mr_button_connected_12_dark = 2130837701;
+			public const int ic_mr_button_connected_11_light = 2130837701;
 			
 			// aapt resource value: 0x7f0200c6
-			public const int ic_mr_button_connected_12_light = 2130837702;
+			public const int ic_mr_button_connected_12_dark = 2130837702;
 			
 			// aapt resource value: 0x7f0200c7
-			public const int ic_mr_button_connected_13_dark = 2130837703;
+			public const int ic_mr_button_connected_12_light = 2130837703;
 			
 			// aapt resource value: 0x7f0200c8
-			public const int ic_mr_button_connected_13_light = 2130837704;
+			public const int ic_mr_button_connected_13_dark = 2130837704;
 			
 			// aapt resource value: 0x7f0200c9
-			public const int ic_mr_button_connected_14_dark = 2130837705;
+			public const int ic_mr_button_connected_13_light = 2130837705;
 			
 			// aapt resource value: 0x7f0200ca
-			public const int ic_mr_button_connected_14_light = 2130837706;
+			public const int ic_mr_button_connected_14_dark = 2130837706;
 			
 			// aapt resource value: 0x7f0200cb
-			public const int ic_mr_button_connected_15_dark = 2130837707;
+			public const int ic_mr_button_connected_14_light = 2130837707;
 			
 			// aapt resource value: 0x7f0200cc
-			public const int ic_mr_button_connected_15_light = 2130837708;
+			public const int ic_mr_button_connected_15_dark = 2130837708;
 			
 			// aapt resource value: 0x7f0200cd
-			public const int ic_mr_button_connected_16_dark = 2130837709;
+			public const int ic_mr_button_connected_15_light = 2130837709;
 			
 			// aapt resource value: 0x7f0200ce
-			public const int ic_mr_button_connected_16_light = 2130837710;
+			public const int ic_mr_button_connected_16_dark = 2130837710;
 			
 			// aapt resource value: 0x7f0200cf
-			public const int ic_mr_button_connected_17_dark = 2130837711;
+			public const int ic_mr_button_connected_16_light = 2130837711;
 			
 			// aapt resource value: 0x7f0200d0
-			public const int ic_mr_button_connected_17_light = 2130837712;
+			public const int ic_mr_button_connected_17_dark = 2130837712;
 			
 			// aapt resource value: 0x7f0200d1
-			public const int ic_mr_button_connected_18_dark = 2130837713;
+			public const int ic_mr_button_connected_17_light = 2130837713;
 			
 			// aapt resource value: 0x7f0200d2
-			public const int ic_mr_button_connected_18_light = 2130837714;
+			public const int ic_mr_button_connected_18_dark = 2130837714;
 			
 			// aapt resource value: 0x7f0200d3
-			public const int ic_mr_button_connected_19_dark = 2130837715;
+			public const int ic_mr_button_connected_18_light = 2130837715;
 			
 			// aapt resource value: 0x7f0200d4
-			public const int ic_mr_button_connected_19_light = 2130837716;
+			public const int ic_mr_button_connected_19_dark = 2130837716;
 			
 			// aapt resource value: 0x7f0200d5
-			public const int ic_mr_button_connected_20_dark = 2130837717;
+			public const int ic_mr_button_connected_19_light = 2130837717;
 			
 			// aapt resource value: 0x7f0200d6
-			public const int ic_mr_button_connected_20_light = 2130837718;
+			public const int ic_mr_button_connected_20_dark = 2130837718;
 			
 			// aapt resource value: 0x7f0200d7
-			public const int ic_mr_button_connected_21_dark = 2130837719;
+			public const int ic_mr_button_connected_20_light = 2130837719;
 			
 			// aapt resource value: 0x7f0200d8
-			public const int ic_mr_button_connected_21_light = 2130837720;
+			public const int ic_mr_button_connected_21_dark = 2130837720;
 			
 			// aapt resource value: 0x7f0200d9
-			public const int ic_mr_button_connected_22_dark = 2130837721;
+			public const int ic_mr_button_connected_21_light = 2130837721;
 			
 			// aapt resource value: 0x7f0200da
-			public const int ic_mr_button_connected_22_light = 2130837722;
+			public const int ic_mr_button_connected_22_dark = 2130837722;
 			
 			// aapt resource value: 0x7f0200db
-			public const int ic_mr_button_connected_23_dark = 2130837723;
+			public const int ic_mr_button_connected_22_light = 2130837723;
 			
 			// aapt resource value: 0x7f0200dc
-			public const int ic_mr_button_connected_23_light = 2130837724;
+			public const int ic_mr_button_connected_23_dark = 2130837724;
 			
 			// aapt resource value: 0x7f0200dd
-			public const int ic_mr_button_connected_24_dark = 2130837725;
+			public const int ic_mr_button_connected_23_light = 2130837725;
 			
 			// aapt resource value: 0x7f0200de
-			public const int ic_mr_button_connected_24_light = 2130837726;
+			public const int ic_mr_button_connected_24_dark = 2130837726;
 			
 			// aapt resource value: 0x7f0200df
-			public const int ic_mr_button_connected_25_dark = 2130837727;
+			public const int ic_mr_button_connected_24_light = 2130837727;
 			
 			// aapt resource value: 0x7f0200e0
-			public const int ic_mr_button_connected_25_light = 2130837728;
+			public const int ic_mr_button_connected_25_dark = 2130837728;
 			
 			// aapt resource value: 0x7f0200e1
-			public const int ic_mr_button_connected_26_dark = 2130837729;
+			public const int ic_mr_button_connected_25_light = 2130837729;
 			
 			// aapt resource value: 0x7f0200e2
-			public const int ic_mr_button_connected_26_light = 2130837730;
+			public const int ic_mr_button_connected_26_dark = 2130837730;
 			
 			// aapt resource value: 0x7f0200e3
-			public const int ic_mr_button_connected_27_dark = 2130837731;
+			public const int ic_mr_button_connected_26_light = 2130837731;
 			
 			// aapt resource value: 0x7f0200e4
-			public const int ic_mr_button_connected_27_light = 2130837732;
+			public const int ic_mr_button_connected_27_dark = 2130837732;
 			
 			// aapt resource value: 0x7f0200e5
-			public const int ic_mr_button_connected_28_dark = 2130837733;
+			public const int ic_mr_button_connected_27_light = 2130837733;
 			
 			// aapt resource value: 0x7f0200e6
-			public const int ic_mr_button_connected_28_light = 2130837734;
+			public const int ic_mr_button_connected_28_dark = 2130837734;
 			
 			// aapt resource value: 0x7f0200e7
-			public const int ic_mr_button_connected_29_dark = 2130837735;
+			public const int ic_mr_button_connected_28_light = 2130837735;
 			
 			// aapt resource value: 0x7f0200e8
-			public const int ic_mr_button_connected_29_light = 2130837736;
+			public const int ic_mr_button_connected_29_dark = 2130837736;
 			
 			// aapt resource value: 0x7f0200e9
-			public const int ic_mr_button_connected_30_dark = 2130837737;
+			public const int ic_mr_button_connected_29_light = 2130837737;
 			
 			// aapt resource value: 0x7f0200ea
-			public const int ic_mr_button_connected_30_light = 2130837738;
+			public const int ic_mr_button_connected_30_dark = 2130837738;
 			
 			// aapt resource value: 0x7f0200eb
-			public const int ic_mr_button_connecting_00_dark = 2130837739;
+			public const int ic_mr_button_connected_30_light = 2130837739;
 			
 			// aapt resource value: 0x7f0200ec
-			public const int ic_mr_button_connecting_00_light = 2130837740;
+			public const int ic_mr_button_connecting_00_dark = 2130837740;
 			
 			// aapt resource value: 0x7f0200ed
-			public const int ic_mr_button_connecting_01_dark = 2130837741;
+			public const int ic_mr_button_connecting_00_light = 2130837741;
 			
 			// aapt resource value: 0x7f0200ee
-			public const int ic_mr_button_connecting_01_light = 2130837742;
+			public const int ic_mr_button_connecting_01_dark = 2130837742;
 			
 			// aapt resource value: 0x7f0200ef
-			public const int ic_mr_button_connecting_02_dark = 2130837743;
+			public const int ic_mr_button_connecting_01_light = 2130837743;
 			
 			// aapt resource value: 0x7f0200f0
-			public const int ic_mr_button_connecting_02_light = 2130837744;
+			public const int ic_mr_button_connecting_02_dark = 2130837744;
 			
 			// aapt resource value: 0x7f0200f1
-			public const int ic_mr_button_connecting_03_dark = 2130837745;
+			public const int ic_mr_button_connecting_02_light = 2130837745;
 			
 			// aapt resource value: 0x7f0200f2
-			public const int ic_mr_button_connecting_03_light = 2130837746;
+			public const int ic_mr_button_connecting_03_dark = 2130837746;
 			
 			// aapt resource value: 0x7f0200f3
-			public const int ic_mr_button_connecting_04_dark = 2130837747;
+			public const int ic_mr_button_connecting_03_light = 2130837747;
 			
 			// aapt resource value: 0x7f0200f4
-			public const int ic_mr_button_connecting_04_light = 2130837748;
+			public const int ic_mr_button_connecting_04_dark = 2130837748;
 			
 			// aapt resource value: 0x7f0200f5
-			public const int ic_mr_button_connecting_05_dark = 2130837749;
+			public const int ic_mr_button_connecting_04_light = 2130837749;
 			
 			// aapt resource value: 0x7f0200f6
-			public const int ic_mr_button_connecting_05_light = 2130837750;
+			public const int ic_mr_button_connecting_05_dark = 2130837750;
 			
 			// aapt resource value: 0x7f0200f7
-			public const int ic_mr_button_connecting_06_dark = 2130837751;
+			public const int ic_mr_button_connecting_05_light = 2130837751;
 			
 			// aapt resource value: 0x7f0200f8
-			public const int ic_mr_button_connecting_06_light = 2130837752;
+			public const int ic_mr_button_connecting_06_dark = 2130837752;
 			
 			// aapt resource value: 0x7f0200f9
-			public const int ic_mr_button_connecting_07_dark = 2130837753;
+			public const int ic_mr_button_connecting_06_light = 2130837753;
 			
 			// aapt resource value: 0x7f0200fa
-			public const int ic_mr_button_connecting_07_light = 2130837754;
+			public const int ic_mr_button_connecting_07_dark = 2130837754;
 			
 			// aapt resource value: 0x7f0200fb
-			public const int ic_mr_button_connecting_08_dark = 2130837755;
+			public const int ic_mr_button_connecting_07_light = 2130837755;
 			
 			// aapt resource value: 0x7f0200fc
-			public const int ic_mr_button_connecting_08_light = 2130837756;
+			public const int ic_mr_button_connecting_08_dark = 2130837756;
 			
 			// aapt resource value: 0x7f0200fd
-			public const int ic_mr_button_connecting_09_dark = 2130837757;
+			public const int ic_mr_button_connecting_08_light = 2130837757;
 			
 			// aapt resource value: 0x7f0200fe
-			public const int ic_mr_button_connecting_09_light = 2130837758;
+			public const int ic_mr_button_connecting_09_dark = 2130837758;
 			
 			// aapt resource value: 0x7f0200ff
-			public const int ic_mr_button_connecting_10_dark = 2130837759;
+			public const int ic_mr_button_connecting_09_light = 2130837759;
 			
 			// aapt resource value: 0x7f020100
-			public const int ic_mr_button_connecting_10_light = 2130837760;
+			public const int ic_mr_button_connecting_10_dark = 2130837760;
 			
 			// aapt resource value: 0x7f020101
-			public const int ic_mr_button_connecting_11_dark = 2130837761;
+			public const int ic_mr_button_connecting_10_light = 2130837761;
 			
 			// aapt resource value: 0x7f020102
-			public const int ic_mr_button_connecting_11_light = 2130837762;
+			public const int ic_mr_button_connecting_11_dark = 2130837762;
 			
 			// aapt resource value: 0x7f020103
-			public const int ic_mr_button_connecting_12_dark = 2130837763;
+			public const int ic_mr_button_connecting_11_light = 2130837763;
 			
 			// aapt resource value: 0x7f020104
-			public const int ic_mr_button_connecting_12_light = 2130837764;
+			public const int ic_mr_button_connecting_12_dark = 2130837764;
 			
 			// aapt resource value: 0x7f020105
-			public const int ic_mr_button_connecting_13_dark = 2130837765;
+			public const int ic_mr_button_connecting_12_light = 2130837765;
 			
 			// aapt resource value: 0x7f020106
-			public const int ic_mr_button_connecting_13_light = 2130837766;
+			public const int ic_mr_button_connecting_13_dark = 2130837766;
 			
 			// aapt resource value: 0x7f020107
-			public const int ic_mr_button_connecting_14_dark = 2130837767;
+			public const int ic_mr_button_connecting_13_light = 2130837767;
 			
 			// aapt resource value: 0x7f020108
-			public const int ic_mr_button_connecting_14_light = 2130837768;
+			public const int ic_mr_button_connecting_14_dark = 2130837768;
 			
 			// aapt resource value: 0x7f020109
-			public const int ic_mr_button_connecting_15_dark = 2130837769;
+			public const int ic_mr_button_connecting_14_light = 2130837769;
 			
 			// aapt resource value: 0x7f02010a
-			public const int ic_mr_button_connecting_15_light = 2130837770;
+			public const int ic_mr_button_connecting_15_dark = 2130837770;
 			
 			// aapt resource value: 0x7f02010b
-			public const int ic_mr_button_connecting_16_dark = 2130837771;
+			public const int ic_mr_button_connecting_15_light = 2130837771;
 			
 			// aapt resource value: 0x7f02010c
-			public const int ic_mr_button_connecting_16_light = 2130837772;
+			public const int ic_mr_button_connecting_16_dark = 2130837772;
 			
 			// aapt resource value: 0x7f02010d
-			public const int ic_mr_button_connecting_17_dark = 2130837773;
+			public const int ic_mr_button_connecting_16_light = 2130837773;
 			
 			// aapt resource value: 0x7f02010e
-			public const int ic_mr_button_connecting_17_light = 2130837774;
+			public const int ic_mr_button_connecting_17_dark = 2130837774;
 			
 			// aapt resource value: 0x7f02010f
-			public const int ic_mr_button_connecting_18_dark = 2130837775;
+			public const int ic_mr_button_connecting_17_light = 2130837775;
 			
 			// aapt resource value: 0x7f020110
-			public const int ic_mr_button_connecting_18_light = 2130837776;
+			public const int ic_mr_button_connecting_18_dark = 2130837776;
 			
 			// aapt resource value: 0x7f020111
-			public const int ic_mr_button_connecting_19_dark = 2130837777;
+			public const int ic_mr_button_connecting_18_light = 2130837777;
 			
 			// aapt resource value: 0x7f020112
-			public const int ic_mr_button_connecting_19_light = 2130837778;
+			public const int ic_mr_button_connecting_19_dark = 2130837778;
 			
 			// aapt resource value: 0x7f020113
-			public const int ic_mr_button_connecting_20_dark = 2130837779;
+			public const int ic_mr_button_connecting_19_light = 2130837779;
 			
 			// aapt resource value: 0x7f020114
-			public const int ic_mr_button_connecting_20_light = 2130837780;
+			public const int ic_mr_button_connecting_20_dark = 2130837780;
 			
 			// aapt resource value: 0x7f020115
-			public const int ic_mr_button_connecting_21_dark = 2130837781;
+			public const int ic_mr_button_connecting_20_light = 2130837781;
 			
 			// aapt resource value: 0x7f020116
-			public const int ic_mr_button_connecting_21_light = 2130837782;
+			public const int ic_mr_button_connecting_21_dark = 2130837782;
 			
 			// aapt resource value: 0x7f020117
-			public const int ic_mr_button_connecting_22_dark = 2130837783;
+			public const int ic_mr_button_connecting_21_light = 2130837783;
 			
 			// aapt resource value: 0x7f020118
-			public const int ic_mr_button_connecting_22_light = 2130837784;
+			public const int ic_mr_button_connecting_22_dark = 2130837784;
 			
 			// aapt resource value: 0x7f020119
-			public const int ic_mr_button_connecting_23_dark = 2130837785;
+			public const int ic_mr_button_connecting_22_light = 2130837785;
 			
 			// aapt resource value: 0x7f02011a
-			public const int ic_mr_button_connecting_23_light = 2130837786;
+			public const int ic_mr_button_connecting_23_dark = 2130837786;
 			
 			// aapt resource value: 0x7f02011b
-			public const int ic_mr_button_connecting_24_dark = 2130837787;
+			public const int ic_mr_button_connecting_23_light = 2130837787;
 			
 			// aapt resource value: 0x7f02011c
-			public const int ic_mr_button_connecting_24_light = 2130837788;
+			public const int ic_mr_button_connecting_24_dark = 2130837788;
 			
 			// aapt resource value: 0x7f02011d
-			public const int ic_mr_button_connecting_25_dark = 2130837789;
+			public const int ic_mr_button_connecting_24_light = 2130837789;
 			
 			// aapt resource value: 0x7f02011e
-			public const int ic_mr_button_connecting_25_light = 2130837790;
+			public const int ic_mr_button_connecting_25_dark = 2130837790;
 			
 			// aapt resource value: 0x7f02011f
-			public const int ic_mr_button_connecting_26_dark = 2130837791;
+			public const int ic_mr_button_connecting_25_light = 2130837791;
 			
 			// aapt resource value: 0x7f020120
-			public const int ic_mr_button_connecting_26_light = 2130837792;
+			public const int ic_mr_button_connecting_26_dark = 2130837792;
 			
 			// aapt resource value: 0x7f020121
-			public const int ic_mr_button_connecting_27_dark = 2130837793;
+			public const int ic_mr_button_connecting_26_light = 2130837793;
 			
 			// aapt resource value: 0x7f020122
-			public const int ic_mr_button_connecting_27_light = 2130837794;
+			public const int ic_mr_button_connecting_27_dark = 2130837794;
 			
 			// aapt resource value: 0x7f020123
-			public const int ic_mr_button_connecting_28_dark = 2130837795;
+			public const int ic_mr_button_connecting_27_light = 2130837795;
 			
 			// aapt resource value: 0x7f020124
-			public const int ic_mr_button_connecting_28_light = 2130837796;
+			public const int ic_mr_button_connecting_28_dark = 2130837796;
 			
 			// aapt resource value: 0x7f020125
-			public const int ic_mr_button_connecting_29_dark = 2130837797;
+			public const int ic_mr_button_connecting_28_light = 2130837797;
 			
 			// aapt resource value: 0x7f020126
-			public const int ic_mr_button_connecting_29_light = 2130837798;
+			public const int ic_mr_button_connecting_29_dark = 2130837798;
 			
 			// aapt resource value: 0x7f020127
-			public const int ic_mr_button_connecting_30_dark = 2130837799;
+			public const int ic_mr_button_connecting_29_light = 2130837799;
 			
 			// aapt resource value: 0x7f020128
-			public const int ic_mr_button_connecting_30_light = 2130837800;
+			public const int ic_mr_button_connecting_30_dark = 2130837800;
 			
 			// aapt resource value: 0x7f020129
-			public const int ic_mr_button_disabled_dark = 2130837801;
+			public const int ic_mr_button_connecting_30_light = 2130837801;
 			
 			// aapt resource value: 0x7f02012a
-			public const int ic_mr_button_disabled_light = 2130837802;
+			public const int ic_mr_button_disabled_dark = 2130837802;
 			
 			// aapt resource value: 0x7f02012b
-			public const int ic_mr_button_disconnected_dark = 2130837803;
+			public const int ic_mr_button_disabled_light = 2130837803;
 			
 			// aapt resource value: 0x7f02012c
-			public const int ic_mr_button_disconnected_light = 2130837804;
+			public const int ic_mr_button_disconnected_dark = 2130837804;
 			
 			// aapt resource value: 0x7f02012d
-			public const int ic_mr_button_grey = 2130837805;
+			public const int ic_mr_button_disconnected_light = 2130837805;
 			
 			// aapt resource value: 0x7f02012e
-			public const int ic_mtrl_chip_checked_black = 2130837806;
+			public const int ic_mr_button_grey = 2130837806;
 			
 			// aapt resource value: 0x7f02012f
-			public const int ic_mtrl_chip_checked_circle = 2130837807;
+			public const int ic_mtrl_chip_checked_black = 2130837807;
 			
 			// aapt resource value: 0x7f020130
-			public const int ic_mtrl_chip_close_circle = 2130837808;
+			public const int ic_mtrl_chip_checked_circle = 2130837808;
 			
 			// aapt resource value: 0x7f020131
-			public const int ic_oppmotested = 2130837809;
+			public const int ic_mtrl_chip_close_circle = 2130837809;
 			
 			// aapt resource value: 0x7f020132
-			public const int ic_pasienter = 2130837810;
+			public const int ic_oppmotested = 2130837810;
 			
 			// aapt resource value: 0x7f020133
-			public const int ic_posisjon = 2130837811;
+			public const int ic_pasienter = 2130837811;
 			
 			// aapt resource value: 0x7f020134
-			public const int ic_quartro = 2130837812;
+			public const int ic_posisjon = 2130837812;
 			
 			// aapt resource value: 0x7f020135
-			public const int ic_rett = 2130837813;
+			public const int ic_quartro = 2130837813;
 			
 			// aapt resource value: 0x7f020136
-			public const int ic_settings = 2130837814;
+			public const int ic_rett = 2130837814;
 			
 			// aapt resource value: 0x7f020137
-			public const int ic_sikkerhet = 2130837815;
+			public const int ic_settings = 2130837815;
 			
 			// aapt resource value: 0x7f020138
-			public const int ic_skademekanikk = 2130837816;
+			public const int ic_sikkerhet = 2130837816;
 			
 			// aapt resource value: 0x7f020139
-			public const int ic_snla = 2130837817;
+			public const int ic_skademekanikk = 2130837817;
 			
 			// aapt resource value: 0x7f02013a
-			public const int ic_trafikk = 2130837818;
+			public const int ic_snla = 2130837818;
 			
 			// aapt resource value: 0x7f02013b
-			public const int ic_type = 2130837819;
+			public const int ic_successstatus = 2130837819;
 			
 			// aapt resource value: 0x7f02013c
-			public const int ic_vol_type_speaker_dark = 2130837820;
+			public const int ic_trafikk = 2130837820;
 			
 			// aapt resource value: 0x7f02013d
-			public const int ic_vol_type_speaker_group_dark = 2130837821;
+			public const int ic_type = 2130837821;
 			
 			// aapt resource value: 0x7f02013e
-			public const int ic_vol_type_speaker_group_light = 2130837822;
+			public const int ic_vol_type_speaker_dark = 2130837822;
 			
 			// aapt resource value: 0x7f02013f
-			public const int ic_vol_type_speaker_light = 2130837823;
+			public const int ic_vol_type_speaker_group_dark = 2130837823;
 			
 			// aapt resource value: 0x7f020140
-			public const int ic_vol_type_tv_dark = 2130837824;
+			public const int ic_vol_type_speaker_group_light = 2130837824;
 			
 			// aapt resource value: 0x7f020141
-			public const int ic_vol_type_tv_light = 2130837825;
+			public const int ic_vol_type_speaker_light = 2130837825;
 			
 			// aapt resource value: 0x7f020142
-			public const int image_splash_logo = 2130837826;
+			public const int ic_vol_type_tv_dark = 2130837826;
 			
 			// aapt resource value: 0x7f020143
-			public const int mr_button_connected_dark = 2130837827;
+			public const int ic_vol_type_tv_light = 2130837827;
 			
 			// aapt resource value: 0x7f020144
-			public const int mr_button_connected_light = 2130837828;
+			public const int image_splash_logo = 2130837828;
 			
 			// aapt resource value: 0x7f020145
-			public const int mr_button_connecting_dark = 2130837829;
+			public const int mr_button_connected_dark = 2130837829;
 			
 			// aapt resource value: 0x7f020146
-			public const int mr_button_connecting_light = 2130837830;
+			public const int mr_button_connected_light = 2130837830;
 			
 			// aapt resource value: 0x7f020147
-			public const int mr_button_dark = 2130837831;
+			public const int mr_button_connecting_dark = 2130837831;
 			
 			// aapt resource value: 0x7f020148
-			public const int mr_button_light = 2130837832;
+			public const int mr_button_connecting_light = 2130837832;
 			
 			// aapt resource value: 0x7f020149
-			public const int mr_dialog_close_dark = 2130837833;
+			public const int mr_button_dark = 2130837833;
 			
 			// aapt resource value: 0x7f02014a
-			public const int mr_dialog_close_light = 2130837834;
+			public const int mr_button_light = 2130837834;
 			
 			// aapt resource value: 0x7f02014b
-			public const int mr_dialog_material_background_dark = 2130837835;
+			public const int mr_dialog_close_dark = 2130837835;
 			
 			// aapt resource value: 0x7f02014c
-			public const int mr_dialog_material_background_light = 2130837836;
+			public const int mr_dialog_close_light = 2130837836;
 			
 			// aapt resource value: 0x7f02014d
-			public const int mr_group_collapse = 2130837837;
+			public const int mr_dialog_material_background_dark = 2130837837;
 			
 			// aapt resource value: 0x7f02014e
-			public const int mr_group_expand = 2130837838;
+			public const int mr_dialog_material_background_light = 2130837838;
 			
 			// aapt resource value: 0x7f02014f
-			public const int mr_media_pause_dark = 2130837839;
+			public const int mr_group_collapse = 2130837839;
 			
 			// aapt resource value: 0x7f020150
-			public const int mr_media_pause_light = 2130837840;
+			public const int mr_group_expand = 2130837840;
 			
 			// aapt resource value: 0x7f020151
-			public const int mr_media_play_dark = 2130837841;
+			public const int mr_media_pause_dark = 2130837841;
 			
 			// aapt resource value: 0x7f020152
-			public const int mr_media_play_light = 2130837842;
+			public const int mr_media_pause_light = 2130837842;
 			
 			// aapt resource value: 0x7f020153
-			public const int mr_media_stop_dark = 2130837843;
+			public const int mr_media_play_dark = 2130837843;
 			
 			// aapt resource value: 0x7f020154
-			public const int mr_media_stop_light = 2130837844;
+			public const int mr_media_play_light = 2130837844;
 			
 			// aapt resource value: 0x7f020155
-			public const int mr_vol_type_audiotrack_dark = 2130837845;
+			public const int mr_media_stop_dark = 2130837845;
 			
 			// aapt resource value: 0x7f020156
-			public const int mr_vol_type_audiotrack_light = 2130837846;
+			public const int mr_media_stop_light = 2130837846;
 			
 			// aapt resource value: 0x7f020157
-			public const int mtrl_snackbar_background = 2130837847;
+			public const int mr_vol_type_audiotrack_dark = 2130837847;
 			
 			// aapt resource value: 0x7f020158
-			public const int mtrl_tabs_default_indicator = 2130837848;
+			public const int mr_vol_type_audiotrack_light = 2130837848;
 			
 			// aapt resource value: 0x7f020159
-			public const int navigation_empty_icon = 2130837849;
+			public const int mtrl_snackbar_background = 2130837849;
 			
 			// aapt resource value: 0x7f02015a
-			public const int notification_action_background = 2130837850;
+			public const int mtrl_tabs_default_indicator = 2130837850;
 			
 			// aapt resource value: 0x7f02015b
-			public const int notification_bg = 2130837851;
+			public const int navigation_empty_icon = 2130837851;
 			
 			// aapt resource value: 0x7f02015c
-			public const int notification_bg_low = 2130837852;
+			public const int notification_action_background = 2130837852;
 			
 			// aapt resource value: 0x7f02015d
-			public const int notification_bg_low_normal = 2130837853;
+			public const int notification_bg = 2130837853;
 			
 			// aapt resource value: 0x7f02015e
-			public const int notification_bg_low_pressed = 2130837854;
+			public const int notification_bg_low = 2130837854;
 			
 			// aapt resource value: 0x7f02015f
-			public const int notification_bg_normal = 2130837855;
+			public const int notification_bg_low_normal = 2130837855;
 			
 			// aapt resource value: 0x7f020160
-			public const int notification_bg_normal_pressed = 2130837856;
+			public const int notification_bg_low_pressed = 2130837856;
 			
 			// aapt resource value: 0x7f020161
-			public const int notification_icon_background = 2130837857;
-			
-			// aapt resource value: 0x7f020169
-			public const int notification_template_icon_bg = 2130837865;
-			
-			// aapt resource value: 0x7f02016a
-			public const int notification_template_icon_low_bg = 2130837866;
+			public const int notification_bg_normal = 2130837857;
 			
 			// aapt resource value: 0x7f020162
-			public const int notification_tile_bg = 2130837858;
+			public const int notification_bg_normal_pressed = 2130837858;
 			
 			// aapt resource value: 0x7f020163
-			public const int notify_panel_notification_icon_bg = 2130837859;
+			public const int notification_icon_background = 2130837859;
+			
+			// aapt resource value: 0x7f02016d
+			public const int notification_template_icon_bg = 2130837869;
+			
+			// aapt resource value: 0x7f02016e
+			public const int notification_template_icon_low_bg = 2130837870;
 			
 			// aapt resource value: 0x7f020164
-			public const int preference_list_divider_material = 2130837860;
+			public const int notification_tile_bg = 2130837860;
 			
 			// aapt resource value: 0x7f020165
-			public const int selected_dot = 2130837861;
+			public const int notify_panel_notification_icon_bg = 2130837861;
 			
 			// aapt resource value: 0x7f020166
-			public const int splash_screen = 2130837862;
+			public const int preference_list_divider_material = 2130837862;
 			
 			// aapt resource value: 0x7f020167
-			public const int tooltip_frame_dark = 2130837863;
+			public const int roundedbg = 2130837863;
 			
 			// aapt resource value: 0x7f020168
-			public const int tooltip_frame_light = 2130837864;
+			public const int roundedbgdark = 2130837864;
+			
+			// aapt resource value: 0x7f020169
+			public const int selected_dot = 2130837865;
+			
+			// aapt resource value: 0x7f02016a
+			public const int splash_screen = 2130837866;
+			
+			// aapt resource value: 0x7f02016b
+			public const int tooltip_frame_dark = 2130837867;
+			
+			// aapt resource value: 0x7f02016c
+			public const int tooltip_frame_light = 2130837868;
 			
 			static Drawable()
 			{
@@ -4602,8 +6799,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d004a
 			public const int SYM = 2131558474;
 			
-			// aapt resource value: 0x7f0d0103
-			public const int action0 = 2131558659;
+			// aapt resource value: 0x7f0d010c
+			public const int action0 = 2131558668;
 			
 			// aapt resource value: 0x7f0d009a
 			public const int action_bar = 2131558554;
@@ -4626,17 +6823,17 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d0076
 			public const int action_bar_title = 2131558518;
 			
-			// aapt resource value: 0x7f0d0100
-			public const int action_container = 2131558656;
+			// aapt resource value: 0x7f0d0109
+			public const int action_container = 2131558665;
 			
 			// aapt resource value: 0x7f0d009b
 			public const int action_context_bar = 2131558555;
 			
-			// aapt resource value: 0x7f0d0107
-			public const int action_divider = 2131558663;
+			// aapt resource value: 0x7f0d0110
+			public const int action_divider = 2131558672;
 			
-			// aapt resource value: 0x7f0d0101
-			public const int action_image = 2131558657;
+			// aapt resource value: 0x7f0d010a
+			public const int action_image = 2131558666;
 			
 			// aapt resource value: 0x7f0d0003
 			public const int action_menu_divider = 2131558403;
@@ -4653,11 +6850,11 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d0078
 			public const int action_mode_close_button = 2131558520;
 			
-			// aapt resource value: 0x7f0d0102
-			public const int action_text = 2131558658;
+			// aapt resource value: 0x7f0d010b
+			public const int action_text = 2131558667;
 			
-			// aapt resource value: 0x7f0d010f
-			public const int actions = 2131558671;
+			// aapt resource value: 0x7f0d0118
+			public const int actions = 2131558680;
 			
 			// aapt resource value: 0x7f0d0079
 			public const int activity_chooser_view_content = 2131558521;
@@ -4680,8 +6877,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d004b
 			public const int always = 2131558475;
 			
-			// aapt resource value: 0x7f0d00cc
-			public const int appBar = 2131558604;
+			// aapt resource value: 0x7f0d00d5
+			public const int appBar = 2131558613;
 			
 			// aapt resource value: 0x7f0d0070
 			public const int async = 2131558512;
@@ -4689,8 +6886,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d002f
 			public const int auto = 2131558447;
 			
-			// aapt resource value: 0x7f0d0123
-			public const int baseMenuItem = 2131558691;
+			// aapt resource value: 0x7f0d012c
+			public const int baseMenuItem = 2131558700;
 			
 			// aapt resource value: 0x7f0d0042
 			public const int beginning = 2131558466;
@@ -4701,14 +6898,29 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d0050
 			public const int bottom = 2131558480;
 			
-			// aapt resource value: 0x7f0d00c2
-			public const int btnInfo = 2131558594;
+			// aapt resource value: 0x7f0d00b6
+			public const int browser_actions_header_text = 2131558582;
+			
+			// aapt resource value: 0x7f0d00b8
+			public const int browser_actions_menu_item_icon = 2131558584;
+			
+			// aapt resource value: 0x7f0d00b9
+			public const int browser_actions_menu_item_text = 2131558585;
+			
+			// aapt resource value: 0x7f0d00b7
+			public const int browser_actions_menu_items = 2131558583;
+			
+			// aapt resource value: 0x7f0d00b5
+			public const int browser_actions_menu_view = 2131558581;
+			
+			// aapt resource value: 0x7f0d00c7
+			public const int btnInfo = 2131558599;
 			
 			// aapt resource value: 0x7f0d007f
 			public const int buttonPanel = 2131558527;
 			
-			// aapt resource value: 0x7f0d0104
-			public const int cancel_action = 2131558660;
+			// aapt resource value: 0x7f0d010d
+			public const int cancel_action = 2131558669;
 			
 			// aapt resource value: 0x7f0d0058
 			public const int center = 2131558488;
@@ -4722,8 +6934,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d0093
 			public const int checkbox = 2131558547;
 			
-			// aapt resource value: 0x7f0d010c
-			public const int chronometer = 2131558668;
+			// aapt resource value: 0x7f0d0115
+			public const int chronometer = 2131558677;
 			
 			// aapt resource value: 0x7f0d006c
 			public const int clip_horizontal = 2131558508;
@@ -4734,8 +6946,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d004c
 			public const int collapseActionView = 2131558476;
 			
-			// aapt resource value: 0x7f0d00b7
-			public const int container = 2131558583;
+			// aapt resource value: 0x7f0d00bc
+			public const int container = 2131558588;
 			
 			// aapt resource value: 0x7f0d008f
 			public const int content = 2131558543;
@@ -4743,11 +6955,11 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d0082
 			public const int contentPanel = 2131558530;
 			
-			// aapt resource value: 0x7f0d00b8
-			public const int coordinator = 2131558584;
+			// aapt resource value: 0x7f0d00bd
+			public const int coordinator = 2131558589;
 			
-			// aapt resource value: 0x7f0d0113
-			public const int cur = 2131558675;
+			// aapt resource value: 0x7f0d011c
+			public const int cur = 2131558684;
 			
 			// aapt resource value: 0x7f0d0089
 			public const int custom = 2131558537;
@@ -4764,26 +6976,26 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d007c
 			public const int default_activity_button = 2131558524;
 			
-			// aapt resource value: 0x7f0d00c7
-			public const int description = 2131558599;
+			// aapt resource value: 0x7f0d00cc
+			public const int description = 2131558604;
 			
-			// aapt resource value: 0x7f0d0116
-			public const int description2 = 2131558678;
-			
-			// aapt resource value: 0x7f0d00ba
-			public const int design_bottom_sheet = 2131558586;
+			// aapt resource value: 0x7f0d011f
+			public const int description2 = 2131558687;
 			
 			// aapt resource value: 0x7f0d00bf
-			public const int design_menu_item_action_area = 2131558591;
+			public const int design_bottom_sheet = 2131558591;
 			
-			// aapt resource value: 0x7f0d00be
-			public const int design_menu_item_action_area_stub = 2131558590;
+			// aapt resource value: 0x7f0d00c4
+			public const int design_menu_item_action_area = 2131558596;
 			
-			// aapt resource value: 0x7f0d00bd
-			public const int design_menu_item_text = 2131558589;
+			// aapt resource value: 0x7f0d00c3
+			public const int design_menu_item_action_area_stub = 2131558595;
 			
-			// aapt resource value: 0x7f0d00bc
-			public const int design_navigation_view = 2131558588;
+			// aapt resource value: 0x7f0d00c2
+			public const int design_menu_item_text = 2131558594;
+			
+			// aapt resource value: 0x7f0d00c1
+			public const int design_navigation_view = 2131558593;
 			
 			// aapt resource value: 0x7f0d0034
 			public const int disableHome = 2131558452;
@@ -4797,8 +7009,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d0043
 			public const int end = 2131558467;
 			
-			// aapt resource value: 0x7f0d0111
-			public const int end_padder = 2131558673;
+			// aapt resource value: 0x7f0d011a
+			public const int end_padder = 2131558682;
 			
 			// aapt resource value: 0x7f0d0052
 			public const int enterAlways = 2131558482;
@@ -4833,8 +7045,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d0072
 			public const int forever = 2131558514;
 			
-			// aapt resource value: 0x7f0d00cf
-			public const int fragmentlocation_siteNavigate = 2131558607;
+			// aapt resource value: 0x7f0d00d8
+			public const int fragmentlocation_siteNavigate = 2131558616;
 			
 			// aapt resource value: 0x7f0d000a
 			public const int ghost_view = 2131558410;
@@ -4842,8 +7054,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d008e
 			public const int group_divider = 2131558542;
 			
-			// aapt resource value: 0x7f0d00ca
-			public const int header = 2131558602;
+			// aapt resource value: 0x7f0d00cf
+			public const int header = 2131558607;
 			
 			// aapt resource value: 0x7f0d0005
 			public const int home = 2131558405;
@@ -4851,8 +7063,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d0035
 			public const int homeAsUp = 2131558453;
 			
-			// aapt resource value: 0x7f0d0124
-			public const int homeMenuItem = 2131558692;
+			// aapt resource value: 0x7f0d012d
+			public const int homeMenuItem = 2131558701;
 			
 			// aapt resource value: 0x7f0d0025
 			public const int hybrid = 2131558437;
@@ -4860,11 +7072,11 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d007e
 			public const int icon = 2131558526;
 			
-			// aapt resource value: 0x7f0d00c1
-			public const int icon_frame = 2131558593;
+			// aapt resource value: 0x7f0d00c6
+			public const int icon_frame = 2131558598;
 			
-			// aapt resource value: 0x7f0d0110
-			public const int icon_group = 2131558672;
+			// aapt resource value: 0x7f0d0119
+			public const int icon_group = 2131558681;
 			
 			// aapt resource value: 0x7f0d002c
 			public const int icon_only = 2131558444;
@@ -4875,20 +7087,20 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d007b
 			public const int image = 2131558523;
 			
-			// aapt resource value: 0x7f0d0114
-			public const int image2 = 2131558676;
+			// aapt resource value: 0x7f0d011d
+			public const int image2 = 2131558685;
 			
-			// aapt resource value: 0x7f0d00c8
-			public const int info = 2131558600;
+			// aapt resource value: 0x7f0d00cd
+			public const int info = 2131558605;
 			
-			// aapt resource value: 0x7f0d0117
-			public const int info2 = 2131558679;
+			// aapt resource value: 0x7f0d0120
+			public const int info2 = 2131558688;
 			
-			// aapt resource value: 0x7f0d00c9
-			public const int info_helper = 2131558601;
+			// aapt resource value: 0x7f0d00ce
+			public const int info_helper = 2131558606;
 			
-			// aapt resource value: 0x7f0d0118
-			public const int info_helper2 = 2131558680;
+			// aapt resource value: 0x7f0d0121
+			public const int info_helper2 = 2131558689;
 			
 			// aapt resource value: 0x7f0d0073
 			public const int italic = 2131558515;
@@ -4899,8 +7111,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d0059
 			public const int labeled = 2131558489;
 			
-			// aapt resource value: 0x7f0d00b6
-			public const int largeLabel = 2131558582;
+			// aapt resource value: 0x7f0d00bb
+			public const int largeLabel = 2131558587;
 			
 			// aapt resource value: 0x7f0d005f
 			public const int left = 2131558495;
@@ -4920,17 +7132,26 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d007d
 			public const int list_item = 2131558525;
 			
+			// aapt resource value: 0x7f0d00d2
+			public const int loadingImage = 2131558610;
+			
+			// aapt resource value: 0x7f0d00d0
+			public const int loadingProgressBar = 2131558608;
+			
+			// aapt resource value: 0x7f0d00d3
+			public const int loadingProgressWheel = 2131558611;
+			
 			// aapt resource value: 0x7f0d0024
 			public const int lottie_layer_name = 2131558436;
 			
-			// aapt resource value: 0x7f0d0121
-			public const int masked = 2131558689;
+			// aapt resource value: 0x7f0d012a
+			public const int masked = 2131558698;
 			
-			// aapt resource value: 0x7f0d0106
-			public const int media_actions = 2131558662;
+			// aapt resource value: 0x7f0d010f
+			public const int media_actions = 2131558671;
 			
-			// aapt resource value: 0x7f0d0122
-			public const int menu_settings = 2131558690;
+			// aapt resource value: 0x7f0d012b
+			public const int menu_settings = 2131558699;
 			
 			// aapt resource value: 0x7f0d00a9
 			public const int message = 2131558569;
@@ -4941,143 +7162,143 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d0064
 			public const int mini = 2131558500;
 			
-			// aapt resource value: 0x7f0d00ed
-			public const int mr_art = 2131558637;
-			
-			// aapt resource value: 0x7f0d00de
-			public const int mr_cast_checkbox = 2131558622;
-			
-			// aapt resource value: 0x7f0d00d7
-			public const int mr_cast_close_button = 2131558615;
-			
-			// aapt resource value: 0x7f0d00d2
-			public const int mr_cast_group_icon = 2131558610;
-			
-			// aapt resource value: 0x7f0d00d3
-			public const int mr_cast_group_name = 2131558611;
-			
-			// aapt resource value: 0x7f0d00d1
-			public const int mr_cast_list = 2131558609;
-			
-			// aapt resource value: 0x7f0d00d6
-			public const int mr_cast_meta = 2131558614;
-			
-			// aapt resource value: 0x7f0d00d8
-			public const int mr_cast_meta_art = 2131558616;
-			
-			// aapt resource value: 0x7f0d00da
-			public const int mr_cast_meta_subtitle = 2131558618;
-			
-			// aapt resource value: 0x7f0d00d9
-			public const int mr_cast_meta_title = 2131558617;
-			
-			// aapt resource value: 0x7f0d00dc
-			public const int mr_cast_route_icon = 2131558620;
-			
-			// aapt resource value: 0x7f0d00dd
-			public const int mr_cast_route_name = 2131558621;
-			
-			// aapt resource value: 0x7f0d00db
-			public const int mr_cast_stop_button = 2131558619;
-			
-			// aapt resource value: 0x7f0d00df
-			public const int mr_cast_volume_layout = 2131558623;
-			
-			// aapt resource value: 0x7f0d00e0
-			public const int mr_cast_volume_slider = 2131558624;
-			
-			// aapt resource value: 0x7f0d00e2
-			public const int mr_chooser_list = 2131558626;
-			
-			// aapt resource value: 0x7f0d00e5
-			public const int mr_chooser_route_desc = 2131558629;
-			
-			// aapt resource value: 0x7f0d00e3
-			public const int mr_chooser_route_icon = 2131558627;
-			
-			// aapt resource value: 0x7f0d00e4
-			public const int mr_chooser_route_name = 2131558628;
-			
-			// aapt resource value: 0x7f0d00e1
-			public const int mr_chooser_title = 2131558625;
-			
-			// aapt resource value: 0x7f0d00ea
-			public const int mr_close = 2131558634;
-			
-			// aapt resource value: 0x7f0d00f0
-			public const int mr_control_divider = 2131558640;
-			
-			// aapt resource value: 0x7f0d00fb
-			public const int mr_control_playback_ctrl = 2131558651;
-			
-			// aapt resource value: 0x7f0d00fe
-			public const int mr_control_subtitle = 2131558654;
-			
-			// aapt resource value: 0x7f0d00fd
-			public const int mr_control_title = 2131558653;
-			
-			// aapt resource value: 0x7f0d00fc
-			public const int mr_control_title_container = 2131558652;
-			
-			// aapt resource value: 0x7f0d00eb
-			public const int mr_custom_control = 2131558635;
-			
-			// aapt resource value: 0x7f0d00ec
-			public const int mr_default_control = 2131558636;
+			// aapt resource value: 0x7f0d00f6
+			public const int mr_art = 2131558646;
 			
 			// aapt resource value: 0x7f0d00e7
-			public const int mr_dialog_area = 2131558631;
+			public const int mr_cast_checkbox = 2131558631;
 			
-			// aapt resource value: 0x7f0d00f6
-			public const int mr_dialog_header_name = 2131558646;
+			// aapt resource value: 0x7f0d00e0
+			public const int mr_cast_close_button = 2131558624;
+			
+			// aapt resource value: 0x7f0d00db
+			public const int mr_cast_group_icon = 2131558619;
+			
+			// aapt resource value: 0x7f0d00dc
+			public const int mr_cast_group_name = 2131558620;
+			
+			// aapt resource value: 0x7f0d00da
+			public const int mr_cast_list = 2131558618;
+			
+			// aapt resource value: 0x7f0d00df
+			public const int mr_cast_meta = 2131558623;
+			
+			// aapt resource value: 0x7f0d00e1
+			public const int mr_cast_meta_art = 2131558625;
+			
+			// aapt resource value: 0x7f0d00e3
+			public const int mr_cast_meta_subtitle = 2131558627;
+			
+			// aapt resource value: 0x7f0d00e2
+			public const int mr_cast_meta_title = 2131558626;
+			
+			// aapt resource value: 0x7f0d00e5
+			public const int mr_cast_route_icon = 2131558629;
 			
 			// aapt resource value: 0x7f0d00e6
-			public const int mr_expandable_area = 2131558630;
+			public const int mr_cast_route_name = 2131558630;
 			
-			// aapt resource value: 0x7f0d00ff
-			public const int mr_group_expand_collapse = 2131558655;
-			
-			// aapt resource value: 0x7f0d00d4
-			public const int mr_group_volume_route_name = 2131558612;
-			
-			// aapt resource value: 0x7f0d00d5
-			public const int mr_group_volume_slider = 2131558613;
-			
-			// aapt resource value: 0x7f0d00ee
-			public const int mr_media_main_control = 2131558638;
-			
-			// aapt resource value: 0x7f0d00e9
-			public const int mr_name = 2131558633;
-			
-			// aapt resource value: 0x7f0d00f7
-			public const int mr_picker_close_button = 2131558647;
-			
-			// aapt resource value: 0x7f0d00f8
-			public const int mr_picker_list = 2131558648;
-			
-			// aapt resource value: 0x7f0d00f9
-			public const int mr_picker_route_icon = 2131558649;
-			
-			// aapt resource value: 0x7f0d00fa
-			public const int mr_picker_route_name = 2131558650;
-			
-			// aapt resource value: 0x7f0d00ef
-			public const int mr_playback_control = 2131558639;
+			// aapt resource value: 0x7f0d00e4
+			public const int mr_cast_stop_button = 2131558628;
 			
 			// aapt resource value: 0x7f0d00e8
-			public const int mr_title_bar = 2131558632;
+			public const int mr_cast_volume_layout = 2131558632;
 			
-			// aapt resource value: 0x7f0d00f1
-			public const int mr_volume_control = 2131558641;
+			// aapt resource value: 0x7f0d00e9
+			public const int mr_cast_volume_slider = 2131558633;
 			
-			// aapt resource value: 0x7f0d00f2
-			public const int mr_volume_group_list = 2131558642;
+			// aapt resource value: 0x7f0d00eb
+			public const int mr_chooser_list = 2131558635;
+			
+			// aapt resource value: 0x7f0d00ee
+			public const int mr_chooser_route_desc = 2131558638;
+			
+			// aapt resource value: 0x7f0d00ec
+			public const int mr_chooser_route_icon = 2131558636;
+			
+			// aapt resource value: 0x7f0d00ed
+			public const int mr_chooser_route_name = 2131558637;
+			
+			// aapt resource value: 0x7f0d00ea
+			public const int mr_chooser_title = 2131558634;
+			
+			// aapt resource value: 0x7f0d00f3
+			public const int mr_close = 2131558643;
+			
+			// aapt resource value: 0x7f0d00f9
+			public const int mr_control_divider = 2131558649;
+			
+			// aapt resource value: 0x7f0d0104
+			public const int mr_control_playback_ctrl = 2131558660;
+			
+			// aapt resource value: 0x7f0d0107
+			public const int mr_control_subtitle = 2131558663;
+			
+			// aapt resource value: 0x7f0d0106
+			public const int mr_control_title = 2131558662;
+			
+			// aapt resource value: 0x7f0d0105
+			public const int mr_control_title_container = 2131558661;
 			
 			// aapt resource value: 0x7f0d00f4
-			public const int mr_volume_item_icon = 2131558644;
+			public const int mr_custom_control = 2131558644;
 			
 			// aapt resource value: 0x7f0d00f5
-			public const int mr_volume_slider = 2131558645;
+			public const int mr_default_control = 2131558645;
+			
+			// aapt resource value: 0x7f0d00f0
+			public const int mr_dialog_area = 2131558640;
+			
+			// aapt resource value: 0x7f0d00ff
+			public const int mr_dialog_header_name = 2131558655;
+			
+			// aapt resource value: 0x7f0d00ef
+			public const int mr_expandable_area = 2131558639;
+			
+			// aapt resource value: 0x7f0d0108
+			public const int mr_group_expand_collapse = 2131558664;
+			
+			// aapt resource value: 0x7f0d00dd
+			public const int mr_group_volume_route_name = 2131558621;
+			
+			// aapt resource value: 0x7f0d00de
+			public const int mr_group_volume_slider = 2131558622;
+			
+			// aapt resource value: 0x7f0d00f7
+			public const int mr_media_main_control = 2131558647;
+			
+			// aapt resource value: 0x7f0d00f2
+			public const int mr_name = 2131558642;
+			
+			// aapt resource value: 0x7f0d0100
+			public const int mr_picker_close_button = 2131558656;
+			
+			// aapt resource value: 0x7f0d0101
+			public const int mr_picker_list = 2131558657;
+			
+			// aapt resource value: 0x7f0d0102
+			public const int mr_picker_route_icon = 2131558658;
+			
+			// aapt resource value: 0x7f0d0103
+			public const int mr_picker_route_name = 2131558659;
+			
+			// aapt resource value: 0x7f0d00f8
+			public const int mr_playback_control = 2131558648;
+			
+			// aapt resource value: 0x7f0d00f1
+			public const int mr_title_bar = 2131558641;
+			
+			// aapt resource value: 0x7f0d00fa
+			public const int mr_volume_control = 2131558650;
+			
+			// aapt resource value: 0x7f0d00fb
+			public const int mr_volume_group_list = 2131558651;
+			
+			// aapt resource value: 0x7f0d00fd
+			public const int mr_volume_item_icon = 2131558653;
+			
+			// aapt resource value: 0x7f0d00fe
+			public const int mr_volume_slider = 2131558654;
 			
 			// aapt resource value: 0x7f0d0014
 			public const int mtrl_child_content_container = 2131558420;
@@ -5088,14 +7309,14 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d003b
 			public const int multiply = 2131558459;
 			
-			// aapt resource value: 0x7f0d00cb
-			public const int myButton = 2131558603;
+			// aapt resource value: 0x7f0d00d4
+			public const int myButton = 2131558612;
 			
-			// aapt resource value: 0x7f0d00c3
-			public const int myList = 2131558595;
+			// aapt resource value: 0x7f0d00c8
+			public const int myList = 2131558600;
 			
-			// aapt resource value: 0x7f0d00bb
-			public const int navigation_header_container = 2131558587;
+			// aapt resource value: 0x7f0d00c0
+			public const int navigation_header_container = 2131558592;
 			
 			// aapt resource value: 0x7f0d004e
 			public const int never = 2131558478;
@@ -5106,14 +7327,14 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d0027
 			public const int normal = 2131558439;
 			
-			// aapt resource value: 0x7f0d010e
-			public const int notification_background = 2131558670;
+			// aapt resource value: 0x7f0d0117
+			public const int notification_background = 2131558679;
 			
-			// aapt resource value: 0x7f0d0109
-			public const int notification_main_column = 2131558665;
+			// aapt resource value: 0x7f0d0112
+			public const int notification_main_column = 2131558674;
 			
-			// aapt resource value: 0x7f0d0108
-			public const int notification_main_column_container = 2131558664;
+			// aapt resource value: 0x7f0d0111
+			public const int notification_main_column_container = 2131558673;
 			
 			// aapt resource value: 0x7f0d00ac
 			public const int onboarding_animation_view = 2131558572;
@@ -5121,8 +7342,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d00ad
 			public const int onboarding_button_bottom = 2131558573;
 			
-			// aapt resource value: 0x7f0d0112
-			public const int onboarding_description_text = 2131558674;
+			// aapt resource value: 0x7f0d011b
+			public const int onboarding_description_text = 2131558683;
 			
 			// aapt resource value: 0x7f0d00aa
 			public const int onboarding_logo = 2131558570;
@@ -5169,11 +7390,11 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d0094
 			public const int radio = 2131558548;
 			
-			// aapt resource value: 0x7f0d00c4
-			public const int recyclerView = 2131558596;
+			// aapt resource value: 0x7f0d00c9
+			public const int recyclerView = 2131558601;
 			
-			// aapt resource value: 0x7f0d011a
-			public const int recycler_view = 2131558682;
+			// aapt resource value: 0x7f0d0123
+			public const int recycler_view = 2131558691;
 			
 			// aapt resource value: 0x7f0d0074
 			public const int restart = 2131558516;
@@ -5184,20 +7405,20 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d0060
 			public const int right = 2131558496;
 			
-			// aapt resource value: 0x7f0d010d
-			public const int right_icon = 2131558669;
+			// aapt resource value: 0x7f0d0116
+			public const int right_icon = 2131558678;
 			
-			// aapt resource value: 0x7f0d010a
-			public const int right_side = 2131558666;
+			// aapt resource value: 0x7f0d0113
+			public const int right_side = 2131558675;
 			
 			// aapt resource value: 0x7f0d00b2
 			public const int root_container = 2131558578;
 			
-			// aapt resource value: 0x7f0d00c5
-			public const int row_layout = 2131558597;
+			// aapt resource value: 0x7f0d00ca
+			public const int row_layout = 2131558602;
 			
-			// aapt resource value: 0x7f0d00d0
-			public const int sample_content_fragment = 2131558608;
+			// aapt resource value: 0x7f0d00d9
+			public const int sample_content_fragment = 2131558617;
 			
 			// aapt resource value: 0x7f0d0028
 			public const int satellite = 2131558440;
@@ -5259,11 +7480,11 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d00a7
 			public const int search_voice_btn = 2131558567;
 			
-			// aapt resource value: 0x7f0d011b
-			public const int seekbar = 2131558683;
+			// aapt resource value: 0x7f0d0124
+			public const int seekbar = 2131558692;
 			
-			// aapt resource value: 0x7f0d011c
-			public const int seekbar_value = 2131558684;
+			// aapt resource value: 0x7f0d0125
+			public const int seekbar_value = 2131558693;
 			
 			// aapt resource value: 0x7f0d00a8
 			public const int select_dialog_listview = 2131558568;
@@ -5283,11 +7504,11 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d0038
 			public const int showTitle = 2131558456;
 			
-			// aapt resource value: 0x7f0d011e
-			public const int sliding_tabs = 2131558686;
+			// aapt resource value: 0x7f0d0127
+			public const int sliding_tabs = 2131558695;
 			
-			// aapt resource value: 0x7f0d00b5
-			public const int smallLabel = 2131558581;
+			// aapt resource value: 0x7f0d00ba
+			public const int smallLabel = 2131558586;
 			
 			// aapt resource value: 0x7f0d0016
 			public const int snackbar_action = 2131558422;
@@ -5304,8 +7525,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d0080
 			public const int spacer = 2131558528;
 			
-			// aapt resource value: 0x7f0d0119
-			public const int spinner = 2131558681;
+			// aapt resource value: 0x7f0d0122
+			public const int spinner = 2131558690;
 			
 			// aapt resource value: 0x7f0d0008
 			public const int split_action_bar = 2131558408;
@@ -5325,8 +7546,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d0061
 			public const int start = 2131558497;
 			
-			// aapt resource value: 0x7f0d0105
-			public const int status_bar_latest_event_content = 2131558661;
+			// aapt resource value: 0x7f0d010e
+			public const int status_bar_latest_event_content = 2131558670;
 			
 			// aapt resource value: 0x7f0d0066
 			public const int stretch = 2131558502;
@@ -5337,8 +7558,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d00a5
 			public const int submit_area = 2131558565;
 			
-			// aapt resource value: 0x7f0d011d
-			public const int switchWidget = 2131558685;
+			// aapt resource value: 0x7f0d0126
+			public const int switchWidget = 2131558694;
 			
 			// aapt resource value: 0x7f0d0033
 			public const int tabMode = 2131558451;
@@ -5361,11 +7582,11 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d0022
 			public const int text2 = 2131558434;
 			
-			// aapt resource value: 0x7f0d00c6
-			public const int textArea = 2131558598;
+			// aapt resource value: 0x7f0d00cb
+			public const int textArea = 2131558603;
 			
-			// aapt resource value: 0x7f0d0115
-			public const int textArea2 = 2131558677;
+			// aapt resource value: 0x7f0d011e
+			public const int textArea2 = 2131558686;
 			
 			// aapt resource value: 0x7f0d0086
 			public const int textSpacerNoButtons = 2131558534;
@@ -5376,8 +7597,11 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d0065
 			public const int textStart = 2131558501;
 			
-			// aapt resource value: 0x7f0d00c0
-			public const int text_input_password_toggle = 2131558592;
+			// aapt resource value: 0x7f0d00d1
+			public const int textViewStatus = 2131558609;
+			
+			// aapt resource value: 0x7f0d00c5
+			public const int text_input_password_toggle = 2131558597;
 			
 			// aapt resource value: 0x7f0d0018
 			public const int textinput_counter = 2131558424;
@@ -5388,8 +7612,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d001a
 			public const int textinput_helper_text = 2131558426;
 			
-			// aapt resource value: 0x7f0d010b
-			public const int time = 2131558667;
+			// aapt resource value: 0x7f0d0114
+			public const int time = 2131558676;
 			
 			// aapt resource value: 0x7f0d0023
 			public const int title = 2131558435;
@@ -5400,11 +7624,11 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d008b
 			public const int title_template = 2131558539;
 			
-			// aapt resource value: 0x7f0d00cd
-			public const int toolbar = 2131558605;
+			// aapt resource value: 0x7f0d00d6
+			public const int toolbar = 2131558614;
 			
-			// aapt resource value: 0x7f0d00ce
-			public const int toolbarImage = 2131558606;
+			// aapt resource value: 0x7f0d00d7
+			public const int toolbarImage = 2131558615;
 			
 			// aapt resource value: 0x7f0d0051
 			public const int top = 2131558481;
@@ -5412,8 +7636,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d008a
 			public const int topPanel = 2131558538;
 			
-			// aapt resource value: 0x7f0d00b9
-			public const int touch_outside = 2131558585;
+			// aapt resource value: 0x7f0d00be
+			public const int touch_outside = 2131558590;
 			
 			// aapt resource value: 0x7f0d000f
 			public const int transition_current_scene = 2131558415;
@@ -5445,14 +7669,14 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d001b
 			public const int view_offset_helper = 2131558427;
 			
-			// aapt resource value: 0x7f0d011f
-			public const int viewpager = 2131558687;
+			// aapt resource value: 0x7f0d0128
+			public const int viewpager = 2131558696;
 			
-			// aapt resource value: 0x7f0d0120
-			public const int visible = 2131558688;
+			// aapt resource value: 0x7f0d0129
+			public const int visible = 2131558697;
 			
-			// aapt resource value: 0x7f0d00f3
-			public const int volume_item_container = 2131558643;
+			// aapt resource value: 0x7f0d00fc
+			public const int volume_item_container = 2131558652;
 			
 			// aapt resource value: 0x7f0d002e
 			public const int wide = 2131558446;
@@ -5674,229 +7898,244 @@ namespace Henspe.Droid
 			public const int adress_row = 2131034142;
 			
 			// aapt resource value: 0x7f05001f
-			public const int design_bottom_navigation_item = 2131034143;
+			public const int browser_actions_context_menu_page = 2131034143;
 			
 			// aapt resource value: 0x7f050020
-			public const int design_bottom_sheet_dialog = 2131034144;
+			public const int browser_actions_context_menu_row = 2131034144;
 			
 			// aapt resource value: 0x7f050021
-			public const int design_layout_snackbar = 2131034145;
+			public const int design_bottom_navigation_item = 2131034145;
 			
 			// aapt resource value: 0x7f050022
-			public const int design_layout_snackbar_include = 2131034146;
+			public const int design_bottom_sheet_dialog = 2131034146;
 			
 			// aapt resource value: 0x7f050023
-			public const int design_layout_tab_icon = 2131034147;
+			public const int design_layout_snackbar = 2131034147;
 			
 			// aapt resource value: 0x7f050024
-			public const int design_layout_tab_text = 2131034148;
+			public const int design_layout_snackbar_include = 2131034148;
 			
 			// aapt resource value: 0x7f050025
-			public const int design_menu_item_action_area = 2131034149;
+			public const int design_layout_tab_icon = 2131034149;
 			
 			// aapt resource value: 0x7f050026
-			public const int design_navigation_item = 2131034150;
+			public const int design_layout_tab_text = 2131034150;
 			
 			// aapt resource value: 0x7f050027
-			public const int design_navigation_item_header = 2131034151;
+			public const int design_menu_item_action_area = 2131034151;
 			
 			// aapt resource value: 0x7f050028
-			public const int design_navigation_item_separator = 2131034152;
+			public const int design_navigation_item = 2131034152;
 			
 			// aapt resource value: 0x7f050029
-			public const int design_navigation_item_subheader = 2131034153;
+			public const int design_navigation_item_header = 2131034153;
 			
 			// aapt resource value: 0x7f05002a
-			public const int design_navigation_menu = 2131034154;
+			public const int design_navigation_item_separator = 2131034154;
 			
 			// aapt resource value: 0x7f05002b
-			public const int design_navigation_menu_item = 2131034155;
+			public const int design_navigation_item_subheader = 2131034155;
 			
 			// aapt resource value: 0x7f05002c
-			public const int design_text_input_password_icon = 2131034156;
+			public const int design_navigation_menu = 2131034156;
 			
 			// aapt resource value: 0x7f05002d
-			public const int expand_button = 2131034157;
+			public const int design_navigation_menu_item = 2131034157;
 			
 			// aapt resource value: 0x7f05002e
-			public const int FragmentHenspeList = 2131034158;
+			public const int design_text_input_password_icon = 2131034158;
 			
 			// aapt resource value: 0x7f05002f
-			public const int henspe_fragment = 2131034159;
+			public const int expand_button = 2131034159;
 			
 			// aapt resource value: 0x7f050030
-			public const int HenspeRow = 2131034160;
+			public const int FragmentHenspeList = 2131034160;
 			
 			// aapt resource value: 0x7f050031
-			public const int ListItemSection = 2131034161;
+			public const int henspe_fragment = 2131034161;
 			
 			// aapt resource value: 0x7f050032
-			public const int Main = 2131034162;
+			public const int HenspeRow = 2131034162;
 			
 			// aapt resource value: 0x7f050033
-			public const int MainNew = 2131034163;
+			public const int ListItemSection = 2131034163;
 			
 			// aapt resource value: 0x7f050034
-			public const int mr_cast_dialog = 2131034164;
+			public const int loading = 2131034164;
 			
 			// aapt resource value: 0x7f050035
-			public const int mr_cast_group_item = 2131034165;
+			public const int loadingimage = 2131034165;
 			
 			// aapt resource value: 0x7f050036
-			public const int mr_cast_group_volume_item = 2131034166;
+			public const int loadingprogress = 2131034166;
 			
 			// aapt resource value: 0x7f050037
-			public const int mr_cast_media_metadata = 2131034167;
+			public const int Main = 2131034167;
 			
 			// aapt resource value: 0x7f050038
-			public const int mr_cast_route_item = 2131034168;
+			public const int MainNew = 2131034168;
 			
 			// aapt resource value: 0x7f050039
-			public const int mr_chooser_dialog = 2131034169;
+			public const int mr_cast_dialog = 2131034169;
 			
 			// aapt resource value: 0x7f05003a
-			public const int mr_chooser_list_item = 2131034170;
+			public const int mr_cast_group_item = 2131034170;
 			
 			// aapt resource value: 0x7f05003b
-			public const int mr_controller_material_dialog_b = 2131034171;
+			public const int mr_cast_group_volume_item = 2131034171;
 			
 			// aapt resource value: 0x7f05003c
-			public const int mr_controller_volume_item = 2131034172;
+			public const int mr_cast_media_metadata = 2131034172;
 			
 			// aapt resource value: 0x7f05003d
-			public const int mr_dialog_header_item = 2131034173;
+			public const int mr_cast_route_item = 2131034173;
 			
 			// aapt resource value: 0x7f05003e
-			public const int mr_picker_dialog = 2131034174;
+			public const int mr_chooser_dialog = 2131034174;
 			
 			// aapt resource value: 0x7f05003f
-			public const int mr_picker_route_item = 2131034175;
+			public const int mr_chooser_list_item = 2131034175;
 			
 			// aapt resource value: 0x7f050040
-			public const int mr_playback_control = 2131034176;
+			public const int mr_controller_material_dialog_b = 2131034176;
 			
 			// aapt resource value: 0x7f050041
-			public const int mr_volume_control = 2131034177;
+			public const int mr_controller_volume_item = 2131034177;
 			
 			// aapt resource value: 0x7f050042
-			public const int mtrl_layout_snackbar = 2131034178;
+			public const int mr_dialog_header_item = 2131034178;
 			
 			// aapt resource value: 0x7f050043
-			public const int mtrl_layout_snackbar_include = 2131034179;
+			public const int mr_picker_dialog = 2131034179;
 			
 			// aapt resource value: 0x7f050044
-			public const int notification_action = 2131034180;
+			public const int mr_picker_route_item = 2131034180;
 			
 			// aapt resource value: 0x7f050045
-			public const int notification_action_tombstone = 2131034181;
+			public const int mr_playback_control = 2131034181;
 			
 			// aapt resource value: 0x7f050046
-			public const int notification_media_action = 2131034182;
+			public const int mr_volume_control = 2131034182;
 			
 			// aapt resource value: 0x7f050047
-			public const int notification_media_cancel_action = 2131034183;
+			public const int mtrl_layout_snackbar = 2131034183;
 			
 			// aapt resource value: 0x7f050048
-			public const int notification_template_big_media = 2131034184;
+			public const int mtrl_layout_snackbar_include = 2131034184;
 			
 			// aapt resource value: 0x7f050049
-			public const int notification_template_big_media_custom = 2131034185;
+			public const int notification_action = 2131034185;
 			
 			// aapt resource value: 0x7f05004a
-			public const int notification_template_big_media_narrow = 2131034186;
+			public const int notification_action_tombstone = 2131034186;
 			
 			// aapt resource value: 0x7f05004b
-			public const int notification_template_big_media_narrow_custom = 2131034187;
+			public const int notification_media_action = 2131034187;
 			
 			// aapt resource value: 0x7f05004c
-			public const int notification_template_custom_big = 2131034188;
+			public const int notification_media_cancel_action = 2131034188;
 			
 			// aapt resource value: 0x7f05004d
-			public const int notification_template_icon_group = 2131034189;
+			public const int notification_template_big_media = 2131034189;
 			
 			// aapt resource value: 0x7f05004e
-			public const int notification_template_lines_media = 2131034190;
+			public const int notification_template_big_media_custom = 2131034190;
 			
 			// aapt resource value: 0x7f05004f
-			public const int notification_template_media = 2131034191;
+			public const int notification_template_big_media_narrow = 2131034191;
 			
 			// aapt resource value: 0x7f050050
-			public const int notification_template_media_custom = 2131034192;
+			public const int notification_template_big_media_narrow_custom = 2131034192;
 			
 			// aapt resource value: 0x7f050051
-			public const int notification_template_part_chronometer = 2131034193;
+			public const int notification_template_custom_big = 2131034193;
 			
 			// aapt resource value: 0x7f050052
-			public const int notification_template_part_time = 2131034194;
+			public const int notification_template_icon_group = 2131034194;
 			
 			// aapt resource value: 0x7f050053
-			public const int onboarding_fragment = 2131034195;
+			public const int notification_template_lines_media = 2131034195;
 			
 			// aapt resource value: 0x7f050054
-			public const int position_fragment = 2131034196;
+			public const int notification_template_media = 2131034196;
 			
 			// aapt resource value: 0x7f050055
-			public const int preference = 2131034197;
+			public const int notification_template_media_custom = 2131034197;
 			
 			// aapt resource value: 0x7f050056
-			public const int preference_category = 2131034198;
+			public const int notification_template_part_chronometer = 2131034198;
 			
 			// aapt resource value: 0x7f050057
-			public const int preference_category_material = 2131034199;
+			public const int notification_template_part_time = 2131034199;
 			
 			// aapt resource value: 0x7f050058
-			public const int preference_dialog_edittext = 2131034200;
+			public const int onboarding_fragment = 2131034200;
 			
 			// aapt resource value: 0x7f050059
-			public const int preference_dropdown = 2131034201;
+			public const int position_fragment = 2131034201;
 			
 			// aapt resource value: 0x7f05005a
-			public const int preference_dropdown_material = 2131034202;
+			public const int preference = 2131034202;
 			
 			// aapt resource value: 0x7f05005b
-			public const int preference_information = 2131034203;
+			public const int preference_category = 2131034203;
 			
 			// aapt resource value: 0x7f05005c
-			public const int preference_information_material = 2131034204;
+			public const int preference_category_material = 2131034204;
 			
 			// aapt resource value: 0x7f05005d
-			public const int preference_list_fragment = 2131034205;
+			public const int preference_dialog_edittext = 2131034205;
 			
 			// aapt resource value: 0x7f05005e
-			public const int preference_material = 2131034206;
+			public const int preference_dropdown = 2131034206;
 			
 			// aapt resource value: 0x7f05005f
-			public const int preference_recyclerview = 2131034207;
+			public const int preference_dropdown_material = 2131034207;
 			
 			// aapt resource value: 0x7f050060
-			public const int preference_widget_checkbox = 2131034208;
+			public const int preference_information = 2131034208;
 			
 			// aapt resource value: 0x7f050061
-			public const int preference_widget_seekbar = 2131034209;
+			public const int preference_information_material = 2131034209;
 			
 			// aapt resource value: 0x7f050062
-			public const int preference_widget_seekbar_material = 2131034210;
+			public const int preference_list_fragment = 2131034210;
 			
 			// aapt resource value: 0x7f050063
-			public const int preference_widget_switch = 2131034211;
+			public const int preference_material = 2131034211;
 			
 			// aapt resource value: 0x7f050064
-			public const int preference_widget_switch_compat = 2131034212;
+			public const int preference_recyclerview = 2131034212;
 			
 			// aapt resource value: 0x7f050065
-			public const int select_dialog_item_material = 2131034213;
+			public const int preference_widget_checkbox = 2131034213;
 			
 			// aapt resource value: 0x7f050066
-			public const int select_dialog_multichoice_material = 2131034214;
+			public const int preference_widget_seekbar = 2131034214;
 			
 			// aapt resource value: 0x7f050067
-			public const int select_dialog_singlechoice_material = 2131034215;
+			public const int preference_widget_seekbar_material = 2131034215;
 			
 			// aapt resource value: 0x7f050068
-			public const int support_simple_spinner_dropdown_item = 2131034216;
+			public const int preference_widget_switch = 2131034216;
 			
 			// aapt resource value: 0x7f050069
-			public const int TabLayout = 2131034217;
+			public const int preference_widget_switch_compat = 2131034217;
+			
+			// aapt resource value: 0x7f05006a
+			public const int select_dialog_item_material = 2131034218;
+			
+			// aapt resource value: 0x7f05006b
+			public const int select_dialog_multichoice_material = 2131034219;
+			
+			// aapt resource value: 0x7f05006c
+			public const int select_dialog_singlechoice_material = 2131034220;
+			
+			// aapt resource value: 0x7f05006d
+			public const int support_simple_spinner_dropdown_item = 2131034221;
+			
+			// aapt resource value: 0x7f05006e
+			public const int TabLayout = 2131034222;
 			
 			static Layout()
 			{
@@ -5955,227 +8194,227 @@ namespace Henspe.Droid
 		public partial class String
 		{
 			
+			// aapt resource value: 0x7f0a008e
+			public const int AppDelegate_Alert_DeleteAll_Message = 2131361934;
+			
 			// aapt resource value: 0x7f0a008d
-			public const int AppDelegate_Alert_DeleteAll_Message = 2131361933;
-			
-			// aapt resource value: 0x7f0a008c
-			public const int AppDelegate_Alert_DeleteAll_Title = 2131361932;
-			
-			// aapt resource value: 0x7f0a007e
-			public const int CoordinateFormatDD = 2131361918;
+			public const int AppDelegate_Alert_DeleteAll_Title = 2131361933;
 			
 			// aapt resource value: 0x7f0a007f
-			public const int CoordinateFormatDDM = 2131361919;
+			public const int CoordinateFormatDD = 2131361919;
 			
 			// aapt resource value: 0x7f0a0080
-			public const int CoordinateFormatDMS = 2131361920;
-			
-			// aapt resource value: 0x7f0a007d
-			public const int CoordinateFormatError = 2131361917;
+			public const int CoordinateFormatDDM = 2131361920;
 			
 			// aapt resource value: 0x7f0a0081
-			public const int CoordinateFormatUTM = 2131361921;
+			public const int CoordinateFormatDMS = 2131361921;
 			
-			// aapt resource value: 0x7f0a0086
-			public const int Error_InvalidResultFromServer = 2131361926;
-			
-			// aapt resource value: 0x7f0a0085
-			public const int Error_NoResponse = 2131361925;
-			
-			// aapt resource value: 0x7f0a0084
-			public const int GPS_Accuracy_Text = 2131361924;
-			
-			// aapt resource value: 0x7f0a0083
-			public const int GPS_MyPosition = 2131361923;
+			// aapt resource value: 0x7f0a007e
+			public const int CoordinateFormatError = 2131361918;
 			
 			// aapt resource value: 0x7f0a0082
-			public const int GPS_UnknownPosition = 2131361922;
-			
-			// aapt resource value: 0x7f0a0090
-			public const int Info_Help = 2131361936;
-			
-			// aapt resource value: 0x7f0a006d
-			public const int Initial_Finished = 2131361901;
-			
-			// aapt resource value: 0x7f0a006a
-			public const int Initial_Loading = 2131361898;
-			
-			// aapt resource value: 0x7f0a006c
-			public const int Initial_Next = 2131361900;
-			
-			// aapt resource value: 0x7f0a006e
-			public const int Initial_PageOne_Header = 2131361902;
-			
-			// aapt resource value: 0x7f0a006f
-			public const int Initial_PageOne_Text = 2131361903;
-			
-			// aapt resource value: 0x7f0a0072
-			public const int Initial_PageThree_Header = 2131361906;
-			
-			// aapt resource value: 0x7f0a0073
-			public const int Initial_PageThree_Text = 2131361907;
-			
-			// aapt resource value: 0x7f0a0070
-			public const int Initial_PageTwo_Header = 2131361904;
-			
-			// aapt resource value: 0x7f0a0071
-			public const int Initial_PageTwo_Text = 2131361905;
-			
-			// aapt resource value: 0x7f0a006b
-			public const int Initial_Skip = 2131361899;
-			
-			// aapt resource value: 0x7f0a0098
-			public const int Location_Element_Day_Text = 2131361944;
-			
-			// aapt resource value: 0x7f0a0091
-			public const int Location_Element_Degrees_Text = 2131361937;
-			
-			// aapt resource value: 0x7f0a009c
-			public const int Location_Element_East_Large_Text = 2131361948;
-			
-			// aapt resource value: 0x7f0a009b
-			public const int Location_Element_East_Text = 2131361947;
-			
-			// aapt resource value: 0x7f0a00a0
-			public const int Location_Element_For = 2131361952;
-			
-			// aapt resource value: 0x7f0a0097
-			public const int Location_Element_Hour_Text = 2131361943;
-			
-			// aapt resource value: 0x7f0a009f
-			public const int Location_Element_Meters_Short_Text = 2131361951;
-			
-			// aapt resource value: 0x7f0a0093
-			public const int Location_Element_Minute_Text = 2131361939;
-			
-			// aapt resource value: 0x7f0a0094
-			public const int Location_Element_Minutes_Text = 2131361940;
-			
-			// aapt resource value: 0x7f0a0099
-			public const int Location_Element_North_Large_Text = 2131361945;
-			
-			// aapt resource value: 0x7f0a009a
-			public const int Location_Element_North_Text = 2131361946;
-			
-			// aapt resource value: 0x7f0a0092
-			public const int Location_Element_Now_Text = 2131361938;
-			
-			// aapt resource value: 0x7f0a0096
-			public const int Location_Element_Second_Text = 2131361942;
-			
-			// aapt resource value: 0x7f0a0095
-			public const int Location_Element_Seconds_Text = 2131361941;
-			
-			// aapt resource value: 0x7f0a009d
-			public const int Location_Element_South_Text = 2131361949;
-			
-			// aapt resource value: 0x7f0a009e
-			public const int Location_Element_West_Text = 2131361950;
-			
-			// aapt resource value: 0x7f0a00a3
-			public const int Location_unknown_address_row1 = 2131361955;
-			
-			// aapt resource value: 0x7f0a00a4
-			public const int Location_unknown_address_row2 = 2131361956;
-			
-			// aapt resource value: 0x7f0a00a1
-			public const int Location_unknown_coordinates_row1 = 2131361953;
-			
-			// aapt resource value: 0x7f0a00a2
-			public const int Location_unknown_coordinates_row2 = 2131361954;
-			
-			// aapt resource value: 0x7f0a008e
-			public const int Navigation_Menuitem_Back = 2131361934;
-			
-			// aapt resource value: 0x7f0a008f
-			public const int Navigation_Menuitem_Hjem = 2131361935;
+			public const int CoordinateFormatUTM = 2131361922;
 			
 			// aapt resource value: 0x7f0a0087
-			public const int Operation_Cancel = 2131361927;
+			public const int Error_InvalidResultFromServer = 2131361927;
 			
-			// aapt resource value: 0x7f0a0088
-			public const int Operation_Choose = 2131361928;
+			// aapt resource value: 0x7f0a0086
+			public const int Error_NoResponse = 2131361926;
 			
-			// aapt resource value: 0x7f0a008a
-			public const int Settings_heading = 2131361930;
+			// aapt resource value: 0x7f0a0085
+			public const int GPS_Accuracy_Text = 2131361925;
 			
-			// aapt resource value: 0x7f0a008b
-			public const int Settings_text = 2131361931;
+			// aapt resource value: 0x7f0a0084
+			public const int GPS_MyPosition = 2131361924;
 			
-			// aapt resource value: 0x7f0a0089
-			public const int Spinner_PleaseWait = 2131361929;
+			// aapt resource value: 0x7f0a0083
+			public const int GPS_UnknownPosition = 2131361923;
 			
-			// aapt resource value: 0x7f0a00aa
-			public const int Structure_EksaktPosisjon_Adresse = 2131361962;
+			// aapt resource value: 0x7f0a0091
+			public const int Info_Help = 2131361937;
 			
-			// aapt resource value: 0x7f0a00ac
-			public const int Structure_EksaktPosisjon_Ankomst = 2131361964;
+			// aapt resource value: 0x7f0a006e
+			public const int Initial_Finished = 2131361902;
 			
-			// aapt resource value: 0x7f0a00ad
-			public const int Structure_EksaktPosisjon_Avreise = 2131361965;
+			// aapt resource value: 0x7f0a006b
+			public const int Initial_Loading = 2131361899;
 			
-			// aapt resource value: 0x7f0a00a8
-			public const int Structure_EksaktPosisjon_Header = 2131361960;
+			// aapt resource value: 0x7f0a006d
+			public const int Initial_Next = 2131361901;
 			
-			// aapt resource value: 0x7f0a00ab
-			public const int Structure_EksaktPosisjon_Oppmotested = 2131361963;
+			// aapt resource value: 0x7f0a006f
+			public const int Initial_PageOne_Header = 2131361903;
 			
-			// aapt resource value: 0x7f0a00a9
-			public const int Structure_EksaktPosisjon_Posisjon = 2131361961;
+			// aapt resource value: 0x7f0a0070
+			public const int Initial_PageOne_Text = 2131361904;
 			
-			// aapt resource value: 0x7f0a00ba
-			public const int Structure_Evakuering_Flaskehalser = 2131361978;
+			// aapt resource value: 0x7f0a0073
+			public const int Initial_PageThree_Header = 2131361907;
 			
-			// aapt resource value: 0x7f0a00b9
-			public const int Structure_Evakuering_Header = 2131361977;
+			// aapt resource value: 0x7f0a0074
+			public const int Initial_PageThree_Text = 2131361908;
 			
-			// aapt resource value: 0x7f0a00bb
-			public const int Structure_Evakuering_Kjeder = 2131361979;
+			// aapt resource value: 0x7f0a0071
+			public const int Initial_PageTwo_Header = 2131361905;
 			
-			// aapt resource value: 0x7f0a00bc
-			public const int Structure_Evakuering_Rett = 2131361980;
+			// aapt resource value: 0x7f0a0072
+			public const int Initial_PageTwo_Text = 2131361906;
 			
-			// aapt resource value: 0x7f0a00a7
-			public const int Structure_Hendelse_Brann = 2131361959;
+			// aapt resource value: 0x7f0a006c
+			public const int Initial_Skip = 2131361900;
+			
+			// aapt resource value: 0x7f0a0099
+			public const int Location_Element_Day_Text = 2131361945;
+			
+			// aapt resource value: 0x7f0a0092
+			public const int Location_Element_Degrees_Text = 2131361938;
+			
+			// aapt resource value: 0x7f0a009d
+			public const int Location_Element_East_Large_Text = 2131361949;
+			
+			// aapt resource value: 0x7f0a009c
+			public const int Location_Element_East_Text = 2131361948;
+			
+			// aapt resource value: 0x7f0a00a1
+			public const int Location_Element_For = 2131361953;
+			
+			// aapt resource value: 0x7f0a0098
+			public const int Location_Element_Hour_Text = 2131361944;
+			
+			// aapt resource value: 0x7f0a00a0
+			public const int Location_Element_Meters_Short_Text = 2131361952;
+			
+			// aapt resource value: 0x7f0a0094
+			public const int Location_Element_Minute_Text = 2131361940;
+			
+			// aapt resource value: 0x7f0a0095
+			public const int Location_Element_Minutes_Text = 2131361941;
+			
+			// aapt resource value: 0x7f0a009a
+			public const int Location_Element_North_Large_Text = 2131361946;
+			
+			// aapt resource value: 0x7f0a009b
+			public const int Location_Element_North_Text = 2131361947;
+			
+			// aapt resource value: 0x7f0a0093
+			public const int Location_Element_Now_Text = 2131361939;
+			
+			// aapt resource value: 0x7f0a0097
+			public const int Location_Element_Second_Text = 2131361943;
+			
+			// aapt resource value: 0x7f0a0096
+			public const int Location_Element_Seconds_Text = 2131361942;
+			
+			// aapt resource value: 0x7f0a009e
+			public const int Location_Element_South_Text = 2131361950;
+			
+			// aapt resource value: 0x7f0a009f
+			public const int Location_Element_West_Text = 2131361951;
+			
+			// aapt resource value: 0x7f0a00a4
+			public const int Location_unknown_address_row1 = 2131361956;
 			
 			// aapt resource value: 0x7f0a00a5
-			public const int Structure_Hendelse_Header = 2131361957;
+			public const int Location_unknown_address_row2 = 2131361957;
 			
-			// aapt resource value: 0x7f0a00a6
-			public const int Structure_Hendelse_Trafikk = 2131361958;
+			// aapt resource value: 0x7f0a00a2
+			public const int Location_unknown_coordinates_row1 = 2131361954;
+			
+			// aapt resource value: 0x7f0a00a3
+			public const int Location_unknown_coordinates_row2 = 2131361955;
+			
+			// aapt resource value: 0x7f0a008f
+			public const int Navigation_Menuitem_Back = 2131361935;
+			
+			// aapt resource value: 0x7f0a0090
+			public const int Navigation_Menuitem_Hjem = 2131361936;
+			
+			// aapt resource value: 0x7f0a0088
+			public const int Operation_Cancel = 2131361928;
+			
+			// aapt resource value: 0x7f0a0089
+			public const int Operation_Choose = 2131361929;
+			
+			// aapt resource value: 0x7f0a008b
+			public const int Settings_heading = 2131361931;
+			
+			// aapt resource value: 0x7f0a008c
+			public const int Settings_text = 2131361932;
+			
+			// aapt resource value: 0x7f0a008a
+			public const int Spinner_PleaseWait = 2131361930;
+			
+			// aapt resource value: 0x7f0a00ab
+			public const int Structure_EksaktPosisjon_Adresse = 2131361963;
+			
+			// aapt resource value: 0x7f0a00ad
+			public const int Structure_EksaktPosisjon_Ankomst = 2131361965;
 			
 			// aapt resource value: 0x7f0a00ae
-			public const int Structure_Niva_Header = 2131361966;
+			public const int Structure_EksaktPosisjon_Avreise = 2131361966;
 			
-			// aapt resource value: 0x7f0a00b0
-			public const int Structure_Niva_QuatroVarsling = 2131361968;
+			// aapt resource value: 0x7f0a00a9
+			public const int Structure_EksaktPosisjon_Header = 2131361961;
+			
+			// aapt resource value: 0x7f0a00ac
+			public const int Structure_EksaktPosisjon_Oppmotested = 2131361964;
+			
+			// aapt resource value: 0x7f0a00aa
+			public const int Structure_EksaktPosisjon_Posisjon = 2131361962;
+			
+			// aapt resource value: 0x7f0a00bb
+			public const int Structure_Evakuering_Flaskehalser = 2131361979;
+			
+			// aapt resource value: 0x7f0a00ba
+			public const int Structure_Evakuering_Header = 2131361978;
+			
+			// aapt resource value: 0x7f0a00bc
+			public const int Structure_Evakuering_Kjeder = 2131361980;
+			
+			// aapt resource value: 0x7f0a00bd
+			public const int Structure_Evakuering_Rett = 2131361981;
+			
+			// aapt resource value: 0x7f0a00a8
+			public const int Structure_Hendelse_Brann = 2131361960;
+			
+			// aapt resource value: 0x7f0a00a6
+			public const int Structure_Hendelse_Header = 2131361958;
+			
+			// aapt resource value: 0x7f0a00a7
+			public const int Structure_Hendelse_Trafikk = 2131361959;
 			
 			// aapt resource value: 0x7f0a00af
-			public const int Structure_Niva_Type = 2131361967;
-			
-			// aapt resource value: 0x7f0a00b6
-			public const int Structure_Pasienter_Antall = 2131361974;
-			
-			// aapt resource value: 0x7f0a00b5
-			public const int Structure_Pasienter_Header = 2131361973;
-			
-			// aapt resource value: 0x7f0a00b8
-			public const int Structure_Pasienter_Omfang = 2131361976;
-			
-			// aapt resource value: 0x7f0a00b7
-			public const int Structure_Pasienter_Type = 2131361975;
-			
-			// aapt resource value: 0x7f0a00b3
-			public const int Structure_Sikkerhet_Brann = 2131361971;
-			
-			// aapt resource value: 0x7f0a00b2
-			public const int Structure_Sikkerhet_Farer = 2131361970;
+			public const int Structure_Niva_Header = 2131361967;
 			
 			// aapt resource value: 0x7f0a00b1
-			public const int Structure_Sikkerhet_Header = 2131361969;
+			public const int Structure_Niva_QuatroVarsling = 2131361969;
+			
+			// aapt resource value: 0x7f0a00b0
+			public const int Structure_Niva_Type = 2131361968;
+			
+			// aapt resource value: 0x7f0a00b7
+			public const int Structure_Pasienter_Antall = 2131361975;
+			
+			// aapt resource value: 0x7f0a00b6
+			public const int Structure_Pasienter_Header = 2131361974;
+			
+			// aapt resource value: 0x7f0a00b9
+			public const int Structure_Pasienter_Omfang = 2131361977;
+			
+			// aapt resource value: 0x7f0a00b8
+			public const int Structure_Pasienter_Type = 2131361976;
 			
 			// aapt resource value: 0x7f0a00b4
-			public const int Structure_Sikkerhet_Sikkerhet = 2131361972;
+			public const int Structure_Sikkerhet_Brann = 2131361972;
+			
+			// aapt resource value: 0x7f0a00b3
+			public const int Structure_Sikkerhet_Farer = 2131361971;
+			
+			// aapt resource value: 0x7f0a00b2
+			public const int Structure_Sikkerhet_Header = 2131361970;
+			
+			// aapt resource value: 0x7f0a00b5
+			public const int Structure_Sikkerhet_Sikkerhet = 2131361973;
 			
 			// aapt resource value: 0x7f0a002d
 			public const int abc_action_bar_home_description = 2131361837;
@@ -6294,23 +8533,23 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0a0047
 			public const int abc_toolbar_collapse_description = 2131361863;
 			
-			// aapt resource value: 0x7f0a007c
-			public const int alert_content = 2131361916;
-			
-			// aapt resource value: 0x7f0a007a
-			public const int alert_no = 2131361914;
+			// aapt resource value: 0x7f0a007d
+			public const int alert_content = 2131361917;
 			
 			// aapt resource value: 0x7f0a007b
-			public const int alert_title = 2131361915;
+			public const int alert_no = 2131361915;
 			
-			// aapt resource value: 0x7f0a0078
-			public const int alert_title_errorOccured = 2131361912;
+			// aapt resource value: 0x7f0a007c
+			public const int alert_title = 2131361916;
 			
 			// aapt resource value: 0x7f0a0079
-			public const int alert_yes = 2131361913;
+			public const int alert_title_errorOccured = 2131361913;
 			
-			// aapt resource value: 0x7f0a0063
-			public const int app_name = 2131361891;
+			// aapt resource value: 0x7f0a007a
+			public const int alert_yes = 2131361914;
+			
+			// aapt resource value: 0x7f0a0064
+			public const int app_name = 2131361892;
 			
 			// aapt resource value: 0x7f0a0055
 			public const int appbar_scrolling_view_behavior = 2131361877;
@@ -6384,23 +8623,26 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0a005a
 			public const int fab_transformation_sheet_behavior = 2131361882;
 			
-			// aapt resource value: 0x7f0a0067
-			public const int fontFamily__roboto_black = 2131361895;
-			
 			// aapt resource value: 0x7f0a0068
-			public const int fontFamily__roboto_condensed = 2131361896;
+			public const int fontFamily__roboto_black = 2131361896;
 			
 			// aapt resource value: 0x7f0a0069
-			public const int fontFamily__roboto_condensed_light = 2131361897;
+			public const int fontFamily__roboto_condensed = 2131361897;
+			
+			// aapt resource value: 0x7f0a006a
+			public const int fontFamily__roboto_condensed_light = 2131361898;
+			
+			// aapt resource value: 0x7f0a0067
+			public const int fontFamily__roboto_light = 2131361895;
 			
 			// aapt resource value: 0x7f0a0066
-			public const int fontFamily__roboto_light = 2131361894;
-			
-			// aapt resource value: 0x7f0a0065
-			public const int fontFamily__roboto_medium = 2131361893;
+			public const int fontFamily__roboto_medium = 2131361894;
 			
 			// aapt resource value: 0x7f0a005b
 			public const int hide_bottom_view_on_scroll_behavior = 2131361883;
+			
+			// aapt resource value: 0x7f0a0063
+			public const int library_name = 2131361891;
 			
 			// aapt resource value: 0x7f0a0015
 			public const int mr_button_content_description = 2131361813;
@@ -6477,11 +8719,11 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0a005c
 			public const int mtrl_chip_close_icon_content_description = 2131361884;
 			
-			// aapt resource value: 0x7f0a0074
-			public const int no_location_detected = 2131361908;
+			// aapt resource value: 0x7f0a0075
+			public const int no_location_detected = 2131361909;
 			
-			// aapt resource value: 0x7f0a0064
-			public const int ok = 2131361892;
+			// aapt resource value: 0x7f0a0065
+			public const int ok = 2131361893;
 			
 			// aapt resource value: 0x7f0a005d
 			public const int password_toggle_content_description = 2131361885;
@@ -6498,17 +8740,17 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0a0061
 			public const int path_password_strike_through = 2131361889;
 			
-			// aapt resource value: 0x7f0a0076
-			public const int permission_denied_explanation = 2131361910;
+			// aapt resource value: 0x7f0a0077
+			public const int permission_denied_explanation = 2131361911;
 			
-			// aapt resource value: 0x7f0a0075
-			public const int permission_rationale = 2131361909;
+			// aapt resource value: 0x7f0a0076
+			public const int permission_rationale = 2131361910;
 			
 			// aapt resource value: 0x7f0a0048
 			public const int search_menu_title = 2131361864;
 			
-			// aapt resource value: 0x7f0a0077
-			public const int settings = 2131361911;
+			// aapt resource value: 0x7f0a0078
+			public const int settings = 2131361912;
 			
 			// aapt resource value: 0x7f0a0062
 			public const int status_bar_notification_info_overflow = 2131361890;
@@ -10983,6 +13225,56 @@ namespace Henspe.Droid
 			
 			// aapt resource value: 9
 			public const int PreferenceTheme_yesNoPreferenceStyle = 9;
+			
+			public static int[] ProgressWheel = new int[] {
+					2130772565,
+					2130772566,
+					2130772567,
+					2130772568,
+					2130772569,
+					2130772570,
+					2130772571,
+					2130772572,
+					2130772573,
+					2130772574,
+					2130772575,
+					2130772576};
+			
+			// aapt resource value: 3
+			public const int ProgressWheel_ahBarColor = 3;
+			
+			// aapt resource value: 11
+			public const int ProgressWheel_ahBarLength = 11;
+			
+			// aapt resource value: 10
+			public const int ProgressWheel_ahBarWidth = 10;
+			
+			// aapt resource value: 8
+			public const int ProgressWheel_ahCircleColor = 8;
+			
+			// aapt resource value: 7
+			public const int ProgressWheel_ahDelayMillis = 7;
+			
+			// aapt resource value: 9
+			public const int ProgressWheel_ahRadius = 9;
+			
+			// aapt resource value: 4
+			public const int ProgressWheel_ahRimColor = 4;
+			
+			// aapt resource value: 5
+			public const int ProgressWheel_ahRimWidth = 5;
+			
+			// aapt resource value: 6
+			public const int ProgressWheel_ahSpinSpeed = 6;
+			
+			// aapt resource value: 0
+			public const int ProgressWheel_ahText = 0;
+			
+			// aapt resource value: 1
+			public const int ProgressWheel_ahTextColor = 1;
+			
+			// aapt resource value: 2
+			public const int ProgressWheel_ahTextSize = 2;
 			
 			public static int[] RecycleListView = new int[] {
 					2130772296,
