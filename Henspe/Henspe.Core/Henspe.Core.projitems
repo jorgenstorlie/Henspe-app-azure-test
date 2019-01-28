@@ -26,12 +26,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Model\Dto\StructureDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Dto\StructureElementDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Dto\StructureSectionDto.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Const\AttributeTypeConst.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Const\GpsCardinalDirectionConst.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Const\GpsCoverageConst.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Const\ModeConst.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Const\NetworkStateConst.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Const\POIConst.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\CallBugtrack.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\CallDebugInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\CxHttpClient.cs" />
@@ -50,9 +44,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Const\UrlConst.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\UserUtil.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Service\RegEmailSMSService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Const\SettingsConst.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Service\CoordinateService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Const\NLA113OsTypes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\ICredentials.cs" />
   </ItemGroup>
   <ItemGroup>

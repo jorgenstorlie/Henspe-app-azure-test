@@ -182,6 +182,7 @@
     <Folder Include="Base.lproj\" />
     <Folder Include="Settings.bundle\" />
     <Folder Include="Settings.bundle\Base.lproj\" />
+    <Folder Include="ViewControllers\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -200,19 +201,8 @@
     <Compile Include="Const\EventConst.cs" />
     <Compile Include="Const\FontConst.cs" />
     <Compile Include="Const\PositionTypeConst.cs" />
-    <Compile Include="Util\LangUtil.cs" />
     <Compile Include="Communication\AppVersionData.cs" />
-    <Compile Include="Util\CryptoUtil.cs" />
-    <Compile Include="Util\DeviceUtil.cs" />
-    <Compile Include="Util\ErrorUtil.cs" />
-    <Compile Include="Util\FlashTextUtil.cs" />
-    <Compile Include="Util\iOSDateUtil.cs" />
     <Compile Include="Util\iOSMapUtil.cs" />
-    <Compile Include="Util\iOSUtil.cs" />
-    <Compile Include="Util\LocalDateUtil.cs" />
-    <Compile Include="Util\NetUtil.cs" />
-    <Compile Include="Util\StoreUtil.cs" />
-    <Compile Include="Util\ViewUtil.cs" />
     <Compile Include="Renderer\MainLocationRowViewCell.cs" />
     <Compile Include="Renderer\MainLocationRowViewCell.designer.cs">
       <DependentUpon>MainLocationRowViewCell.cs</DependentUpon>
@@ -221,37 +211,7 @@
     <Compile Include="Renderer\MainNormalRowViewCell.designer.cs">
       <DependentUpon>MainNormalRowViewCell.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extension\StringExtensions.cs" />
-    <Compile Include="Extension\ViewExtensions.cs" />
     <Compile Include="Util\SVGUtil.cs" />
-    <Compile Include="SettingsViewController.cs" />
-    <Compile Include="SettingsViewController.designer.cs">
-      <DependentUpon>SettingsViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MapViewController.cs" />
-    <Compile Include="MapViewController.designer.cs">
-      <DependentUpon>MapViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InfoViewController.cs" />
-    <Compile Include="InfoViewController.designer.cs">
-      <DependentUpon>InfoViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ConsentViewController.cs" />
-    <Compile Include="ConsentViewController.designer.cs">
-      <DependentUpon>ConsentViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SettingsCoordinateFormatViewController.cs" />
-    <Compile Include="SettingsCoordinateFormatViewController.designer.cs">
-      <DependentUpon>SettingsCoordinateFormatViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MapTopViewController.cs" />
-    <Compile Include="MapTopViewController.designer.cs">
-      <DependentUpon>MapTopViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MapTopCameraViewController.cs" />
-    <Compile Include="MapTopCameraViewController.designer.cs">
-      <DependentUpon>MapTopCameraViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="Renderer\SettingsInfoTableCell.cs" />
     <Compile Include="Renderer\SettingsInfoTableCell.designer.cs">
       <DependentUpon>SettingsInfoTableCell.cs</DependentUpon>
@@ -270,11 +230,6 @@
     </Compile>
     <Compile Include="LocationManager.cs" />
     <Compile Include="Util\UrlUtil.cs" />
-    <Compile Include="Util\LocaleUtil.cs" />
-    <Compile Include="Util\TableUtil.cs" />
-    <Compile Include="Util\KeyboardUtil.cs" />
-    <Compile Include="Util\EmailUtil.cs" />
-    <Compile Include="Util\SpinnerUtil.cs" />
     <Compile Include="Renderer\SettingsCoordinateFormatTableCell.cs" />
     <Compile Include="Renderer\SettingsCoordinateFormatTableCell.designer.cs">
       <DependentUpon>SettingsCoordinateFormatTableCell.cs</DependentUpon>
@@ -287,17 +242,45 @@
     <Compile Include="Renderer\AddressViewCell.designer.cs">
       <DependentUpon>AddressViewCell.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainViewController.cs" />
-    <Compile Include="MainViewController.designer.cs">
+    <Compile Include="ViewControllers\ConsentViewController.cs" />
+    <Compile Include="ViewControllers\ConsentViewController.designer.cs">
+      <DependentUpon>ConsentViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\InfoViewController.cs" />
+    <Compile Include="ViewControllers\InfoViewController.designer.cs">
+      <DependentUpon>InfoViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\InitialViewController.cs" />
+    <Compile Include="ViewControllers\InitialViewController.designer.cs">
+      <DependentUpon>InitialViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\MainViewController.cs" />
+    <Compile Include="ViewControllers\MainViewController.designer.cs">
       <DependentUpon>MainViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="OnboardingViewController.cs" />
-    <Compile Include="OnboardingViewController.designer.cs">
+    <Compile Include="ViewControllers\MapTopCameraViewController.cs" />
+    <Compile Include="ViewControllers\MapTopCameraViewController.designer.cs">
+      <DependentUpon>MapTopCameraViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\MapTopViewController.cs" />
+    <Compile Include="ViewControllers\MapTopViewController.designer.cs">
+      <DependentUpon>MapTopViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\MapViewController.cs" />
+    <Compile Include="ViewControllers\MapViewController.designer.cs">
+      <DependentUpon>MapViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\OnboardingViewController.cs" />
+    <Compile Include="ViewControllers\OnboardingViewController.designer.cs">
       <DependentUpon>OnboardingViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="InitialViewController.cs" />
-    <Compile Include="InitialViewController.designer.cs">
-      <DependentUpon>InitialViewController.cs</DependentUpon>
+    <Compile Include="ViewControllers\SettingsCoordinateFormatViewController.cs" />
+    <Compile Include="ViewControllers\SettingsCoordinateFormatViewController.designer.cs">
+      <DependentUpon>SettingsCoordinateFormatViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\SettingsViewController.cs" />
+    <Compile Include="ViewControllers\SettingsViewController.designer.cs">
+      <DependentUpon>SettingsViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
