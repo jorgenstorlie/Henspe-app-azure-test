@@ -48,7 +48,7 @@ namespace Henspe.Core.Communication
 				}
 				catch(Exception e)
 				{
-					AppCenterUtil.SendBugtrack("CallBugtrack error", e, stringJson, client, version, user);
+					AppCenterUtil.SendBugTrack("CallBugtrack error", e, stringJson, client, version, user);
 				}
 			} 
 			else

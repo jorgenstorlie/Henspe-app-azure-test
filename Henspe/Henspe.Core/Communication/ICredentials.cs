@@ -36,7 +36,7 @@ namespace Henspe.Core.Communication
 		double server_dato { get; set; }
 		int server_kl { get; set; }
 		string siste_synk_id { get; set; }
-		double server_Local_Millisec_Diff { get; set; }
+		double server_local_millisec_diff { get; set; }
 		string amazonbase { get; set; }
 		string routebase { get; set; }
 		string ippcurl { get; set; }
