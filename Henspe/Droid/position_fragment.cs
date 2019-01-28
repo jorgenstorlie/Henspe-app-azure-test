@@ -11,12 +11,20 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using Android.Locations;
+
+using Fragment = Android.Support.V4.App.Fragment;
 
 namespace Henspe.Droid
 {
     public class position_fragment : Fragment
     {
-        public override void OnCreate(Bundle savedInstanceState)
+		public position_fragment(int id)
+		{
+
+		}
+
+		public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
@@ -30,5 +38,11 @@ namespace Henspe.Droid
 
             return base.OnCreateView(inflater, container, savedInstanceState);
         }
-    }
+
+		public void UpdateLocation(Location location)
+		{
+			throw new NotImplementedException();
+		}
+
+	}
 }
