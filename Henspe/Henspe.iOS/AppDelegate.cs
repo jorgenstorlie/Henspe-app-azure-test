@@ -3,8 +3,6 @@ using UIKit;
 using CoreLocation;
 using Foundation;
 using Henspe.Core.Communication;
-using Henspe.Core.Const;
-using Henspe.iOS.Util;
 using Henspe.Core;
 using Henspe.iOS.Const;
 using Henspe.iOS.AppModel;
@@ -15,6 +13,8 @@ using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using SNLA.Core.Util;
+using SNLA.iOS.Util;
+using SNLA.Core.Const;
 using System.IO;
 
 namespace Henspe.iOS

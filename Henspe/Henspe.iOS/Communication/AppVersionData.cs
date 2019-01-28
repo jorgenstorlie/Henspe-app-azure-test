@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Xml;
 using Henspe.Core;
 using SNLA.Core.Util;
+using SNLA.Core.Const;
 
 namespace Henspe.iOS.Communication
 {

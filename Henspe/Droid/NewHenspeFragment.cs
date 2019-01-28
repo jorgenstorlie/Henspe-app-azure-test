@@ -339,8 +339,8 @@ namespace Henspe.Droid
             {
                 Console.WriteLine("UpdateLocation 2");
 
-if (Henspe.Current.PositionFragment != null)
- Henspe.Current.PositionFragment.UpdateLocation(location);
+				if (Henspe.Current.PositionFragment != null)
+					Henspe.Current.PositionFragment.UpdateLocation(location);
 
             //    Cre   atePositionTex
                 //  sitionRow(location);

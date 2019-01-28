@@ -9,10 +9,10 @@ using Android.Views;
 using Android.Widget;
 using Henspe.Core.Model.Dto;
 using Henspe.Droid.Adapters;
-using Henspe.Droid.Util;
 using Java.Lang;
 using System.Collections.Generic;
 using System.Linq;
+using SNLA.Droid.Util;
 
 namespace Henspe.Droid
 {

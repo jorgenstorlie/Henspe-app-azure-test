@@ -11,6 +11,7 @@ using System.Threading;
 using Android.Locations;
 using Henspe.Droid.Const;
 using Android.Gms.Location;
+using SNLA.Core.Const;
 
 namespace Henspe.Droid
 {
