@@ -8,13 +8,18 @@ namespace Henspe.Droid.Utils
 {
     public class UserUtil
     {
+		public interface IPrefs
+		{
+			bool instructionsFinished { get; set; }
+		}
+
 		private const string PrefInstructionsFinished = "is_instructions_finished";
 
 		private const string PreferenceFile = "settings";
 
-		public static ISettings settings = new AndroidSettings();
+		public static IPrefs settings = new AndroidSettings();
 
-		public class AndroidSettings : ISettings
+		public class AndroidSettings : IPrefs
 		{
 			public bool instructionsFinished
 			{
