@@ -15,7 +15,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)Util\" />
     <Folder Include="$(MSBuildThisFileDirectory)Model\Dto\" />
     <Folder Include="$(MSBuildThisFileDirectory)Communication\Dto\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Service\" />
     <Folder Include="$(MSBuildThisFileDirectory)Translations\" />
     <Folder Include="$(MSBuildThisFileDirectory)Storage\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
@@ -36,16 +35,16 @@
     <Compile Include="$(MSBuildThisFileDirectory)Model\BusinessEntityBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Hjertestarter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\IBusinessEntity.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Service\HjertestarterService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Service\IHjertestarterService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\CallHjertestarter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\Dto\GetHjertestartersResultDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\Dto\HjertestartersInBoxIfNeededResultDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Const\UrlConst.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\UserUtil.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Service\RegEmailSMSService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Service\CoordinateService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\ICredentials.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\CoordinateService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\HjertestarterService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IHjertestarterService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\RegEmailSMSService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Translations\Translations_no.json" />

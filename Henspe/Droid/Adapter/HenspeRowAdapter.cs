@@ -13,6 +13,7 @@ using Java.Lang;
 using System.Collections.Generic;
 using System.Linq;
 using SNLA.Droid.Util;
+using Fragment = Henspe.Droid.position_fragment;
 
 namespace Henspe.Droid
 {

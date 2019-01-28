@@ -7,6 +7,7 @@ using Android.Support.V4.Content;
 using NavUtils = Android.Support.V4.App.NavUtils;
 using System.Collections.Generic;
 using System;
+using Henspe.Core.Service;
 using Henspe.Core.Model.Dto;
 using Henspe.Droid.Adapters;
 using Android.Locations;
@@ -49,7 +50,7 @@ namespace Henspe.Droid
         private bool viewCreated = false;
       
         private ViewGroup root;
-
+        
         // GPS
         private GoogleApiClient apiClient;
         private LocationManager locationManager;
@@ -69,7 +70,7 @@ namespace Henspe.Droid
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
+            
             viewCreated = false;
             SetupStrings();
             CheckGrantedGps();
@@ -357,7 +358,7 @@ namespace Henspe.Droid
 
         private void CreatePositionTextAndRefreshPositionRow(Location location)
         {
-            FormattedCoordinatesDto formattedCoordinatesDto = CoordinateUtil.GetFormattedCoordinateDescription(CoordinateFormat.DD, location.Latitude, location.Longitude);
+            FormattedCoordinatesDto formattedCoordinatesDto = Henspe.Current.CoordinateService.GetFormattedCoordinateDescription(CoordinateFormat.DD, location.Latitude, location.Longitude);
             Henspe.Current.coordinatesText = formattedCoordinatesDto.latitudeDescription + "\n" + formattedCoordinatesDto.longitudeDescription;
 
             RefreshRow(4);

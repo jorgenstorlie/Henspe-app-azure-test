@@ -6,6 +6,7 @@ using Android.Content;
 using Android.Content.PM;
 using Android.Support.V4.Content;
 using Henspe.Core;
+using Henspe.Core.Service;
 using Henspe.Core.Model.Dto;
 using System.Threading;
 using Android.Locations;
@@ -46,7 +47,9 @@ namespace Henspe.Droid
         public int screenWidth { get; private set; }
         public int screenHeightPercentage { get; private set; }
         public int screenWidthPercentage { get; private set; }
-public position_fragment PositionFragment;
+		public position_fragment PositionFragment;
+
+		public CoordinateService CoordinateService = null;
 
 		public Henspe(IntPtr handle, JniHandleOwnership transfer)
             : base(handle, transfer)
@@ -57,6 +60,8 @@ public position_fragment PositionFragment;
 		public override void OnCreate()
 		{
 			base.OnCreate();
+
+			CoordinateService = new CoordinateService();
 
 			mFusedLocationClient = LocationServices.GetFusedLocationProviderClient(this);
 			InitializeLocationText();
