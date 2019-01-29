@@ -103,7 +103,7 @@ namespace Henspe.iOS
                 // Catch any other exceptinons that may have occured
                 catch (Exception ex)
                 {
-                    //   Log.Debug("WEB", ex.Message);
+                    // Log.Debug("WEB", ex.Message);
                 }
             }, ct);
         }
@@ -124,7 +124,7 @@ namespace Henspe.iOS
             }
             else
             {
-                return "";
+                return string.Empty;
             }
         }
 

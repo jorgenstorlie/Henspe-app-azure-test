@@ -7,6 +7,7 @@ using SNLA.Core.Util;
 using System.Net.Http;
 using Henspe.Core.Model.Dto;
 using Newtonsoft.Json;
+using SNLA.Core.Communication;
 
 namespace Henspe.Core.Communication
 {

@@ -12,6 +12,7 @@ using Henspe.Core.Storage;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using SNLA.Core.Communication;
 using SNLA.Core.Util;
 using SNLA.iOS.Util;
 using SNLA.Core.Const;
