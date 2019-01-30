@@ -66,7 +66,7 @@ namespace Henspe.Core.Communication
 
             try
             {
-                getHjertestartersResultDto = await callHjertestarter.GetHjertestartersSinceLastSync(settings.cameraLastSyncId);
+                getHjertestartersResultDto = await callHjertestarter.GetHjertestartersSinceLastSync(Current.CameraLastSyncId);
                 StoreDefibrillatorList(getHjertestartersResultDto);
                 return true;
             }
@@ -89,7 +89,7 @@ namespace Henspe.Core.Communication
                 {
                     DeleteDefibrillatorsWithIds(getHjertestartersResultDto.slettes);
                     SaveDefibrillators(getHjertestartersResultDto);
-                    settings.cameraLastSyncId = getHjertestartersResultDto.siste_synk_id;
+                    Current.CameraLastSyncId = getHjertestartersResultDto.siste_synk_id;
                 }
 
                 return true;

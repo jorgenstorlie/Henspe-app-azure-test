@@ -60,7 +60,7 @@ namespace Henspe.iOS
 
         private void SetupValues()
         {
-            if (UserUtil.settings.consentAgreed == ConsentAgreed.NotSet)
+            if (UserUtil.Current.ConsentAgreed == ConsentAgreed.NotSet)
             {
                 // No selection done before
                 emailAddress = "";
@@ -68,7 +68,7 @@ namespace Henspe.iOS
                 originalEmailValue = false;
                 originalEmailAddress = "";
             }
-            else if (UserUtil.settings.consentAgreed == ConsentAgreed.False)
+            else if (UserUtil.Current.ConsentAgreed == ConsentAgreed.False)
             {
                 // No thanks selected before
                 emailAddress = "";
@@ -79,13 +79,13 @@ namespace Henspe.iOS
             else
             {
                 // Some agreement done before
-                originalSMSValue = UserUtil.settings.consentSMS;
-                originalEmailValue = UserUtil.settings.consentEmail;
+                originalSMSValue = UserUtil.Current.ConsentSMS;
+                originalEmailValue = UserUtil.Current.ConsentEmail;
 
                 if (originalEmailValue == true)
                 {
-                    originalEmailAddress = UserUtil.settings.consentEmailAddress;
-                    emailAddress = UserUtil.settings.consentEmailAddress;
+                    originalEmailAddress = UserUtil.Current.EmailAddress;
+                    emailAddress = UserUtil.Current.EmailAddress;
                 }
                 else
                 {
@@ -138,8 +138,8 @@ namespace Henspe.iOS
             originalHeightTxtEmail = txtEmail.Frame.Height;
             constraintEmailHeight.Constant = 0;
 
-            swiSMS.SetState(UserUtil.settings.consentSMS, originalSMSValue);
-            swiEmail.SetState(UserUtil.settings.consentEmail, originalEmailValue);
+            swiSMS.SetState(UserUtil.Current.ConsentSMS, originalSMSValue);
+            swiEmail.SetState(UserUtil.Current.ConsentEmail, originalEmailValue);
 
             txtEmail.Text = originalEmailAddress;
 
@@ -187,7 +187,7 @@ namespace Henspe.iOS
             SetEmail(originalEmailValue);
             txtEmail.Text = originalEmailAddress;
 
-            if (UserUtil.settings.consentAgreed != ConsentAgreed.NotSet)
+            if (UserUtil.Current.ConsentAgreed != ConsentAgreed.NotSet)
             {
                 btnAccept.SetTitle(LangUtil.Get("Consent.UpdateButton.Text"), UIControlState.Normal);
                 btnDeny.Hidden = true;
@@ -387,7 +387,7 @@ namespace Henspe.iOS
         #region validate
         private void SetStatusAcceptButton()
         {
-            if (UserUtil.settings.consentAgreed != ConsentAgreed.NotSet)
+            if (UserUtil.Current.ConsentAgreed != ConsentAgreed.NotSet)
             {
                 // Set before. React on changes
                 bool isSMSSwitchChanged = swiSMS.On != originalSMSValue ? true : false;
@@ -485,11 +485,11 @@ namespace Henspe.iOS
         {
             InvokeOnMainThread(delegate
             {
-                UserUtil.settings.consentSMS = swiSMS.On;
-                UserUtil.settings.consentEmail = swiEmail.On;
+                UserUtil.Current.ConsentSMS = swiSMS.On;
+                UserUtil.Current.ConsentEmail = swiEmail.On;
 
                 if (swiEmail.On)
-                    UserUtil.settings.consentEmailAddress = txtEmail.Text;
+                    UserUtil.Current.EmailAddress = txtEmail.Text;
 
                 RegisterOrDeregister();
             });
@@ -506,9 +506,9 @@ namespace Henspe.iOS
                 await Task.Delay(300);
 
                 if (regEmailSMSService == null)
-                    regEmailSMSService = new RegEmailSMSService(AppDelegate.current.client, AppDelegate.current.repository, UserUtil.settings, AppDelegate.current.version, AppDelegate.current.os);
+                    regEmailSMSService = new RegEmailSMSService(AppDelegate.current.client, AppDelegate.current.repository, UserUtil.Current, AppDelegate.current.version, AppDelegate.current.os);
 
-                if (UserUtil.settings.consentAgreed != ConsentAgreed.NotSet)
+                if (UserUtil.Current.ConsentAgreed != ConsentAgreed.NotSet)
                 {
                     // Change
                     bool isSMSChanged = originalSMSValue != swiSMS.On ? true : false;
@@ -524,7 +524,7 @@ namespace Henspe.iOS
                     bool hasEmailText = swiEmail.On ? true : false;
                     await RegSMSEmail(swiSMS.On, swiEmail.On, hasEmailText);
 
-                    UserUtil.settings.consentAgreed = ConsentAgreed.True;
+                    UserUtil.Current.ConsentAgreed = ConsentAgreed.True;
                 }
 
                 await SpinnerUtil.HideWaitSpinner(AppDelegate.current.mainViewController.View);
@@ -539,8 +539,8 @@ namespace Henspe.iOS
             bool isSMSUnreg = isSMSChanged == true && swiSMS.On == false ? true : false;
             bool isEmailUnreg = isEmailChanged == true && swiEmail.On == false ? true : false;
 
-            string mobilUnreg = isSMSUnreg ? UserUtil.settings.phoneNumber : null;
-            string epostUnreg = isEmailUnreg ? UserUtil.settings.consentEmailAddress : null;
+            string mobilUnreg = isSMSUnreg ? UserUtil.Current.PhoneNumber : null;
+            string epostUnreg = isEmailUnreg ? UserUtil.Current.EmailAddress : null;
 
             if (isSMSUnreg == true || isEmailUnreg == true || (swiEmail.On == true && isEmailAddressChanged == true && originalEmailAddress.Length > 0))
             {
@@ -552,10 +552,10 @@ namespace Henspe.iOS
                 if (regEmailSMSUnregResultDto.success == true)
                 {
                     if (regEmailSMSUnregResultDto.epost_off == true)
-                        UserUtil.settings.consentEmail = false;
+                        UserUtil.Current.ConsentEmail = false;
 
                     if (regEmailSMSUnregResultDto.mob_off == true)
-                        UserUtil.settings.consentSMS = false;
+                        UserUtil.Current.ConsentSMS = false;
                 }
             }
         }
@@ -565,7 +565,7 @@ namespace Henspe.iOS
             bool isSMSReg = isSMSChanged == true && swiSMS.On == true ? true : false;
             bool isEmailReg = isEmailChanged == true && swiEmail.On == true ? true : false;
 
-            string mobilReg = isSMSReg ? UserUtil.settings.phoneNumber : null;
+            string mobilReg = isSMSReg ? UserUtil.Current.PhoneNumber : null;
             string epostReg = isEmailReg ? txtEmail.Text : null;
 
             if (isSMSReg == true || isEmailReg == true || (swiEmail.On == true && isEmailAddressChanged == true))
@@ -578,10 +578,10 @@ namespace Henspe.iOS
                 if (regEmailSMSResultDto.success == true)
                 {
                     if (regEmailSMSResultDto.epost_on == true)
-                        UserUtil.settings.consentEmail = true;
+                        UserUtil.Current.ConsentEmail = true;
 
                     if (regEmailSMSResultDto.mob_on == true)
-                        UserUtil.settings.consentSMS = true;
+                        UserUtil.Current.ConsentSMS = true;
                 }
             }
         }
@@ -601,7 +601,7 @@ namespace Henspe.iOS
 
         private async Task StoreNoThankYou()
         {
-            UserUtil.settings.consentAgreed = ConsentAgreed.False;
+            UserUtil.Current.ConsentAgreed = ConsentAgreed.False;
 
 			await SpinnerUtil.ShowWaitSpinner(AppDelegate.current.mainViewController.View, 2, LangUtil.Get("Consent.ThanksForNoThanks.Text"), SpinnerUtil.SpinnerType.text);
 			//await SpinnerUtil.ShowSpinnerMessage(this.View, LangUtil.Get("Consent.ThanksForNoThanks.Text"), 2, SpinnerUtil.IconType.Check);

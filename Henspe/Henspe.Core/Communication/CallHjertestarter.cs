@@ -15,6 +15,7 @@ using System.Net.Http;
 using Henspe.Core.Model;
 using System.Threading;
 using System.Linq;
+using SNLA.Core.Util;
 using static SNLA.Core.Util.UserUtil;
 
 namespace Henspe.Core.Communication

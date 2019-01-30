@@ -45,8 +45,8 @@ namespace Henspe.iOS
         public CoordinateService coordinateService;
         public RegEmailSMSService regEmailSMSService;
 
-        // Main reference
-        public MainViewController mainViewController = null;
+		// Main reference
+		public MainViewController mainViewController = null;
 
         // Location manager
         public LocationManager locationManager;
@@ -83,10 +83,10 @@ namespace Henspe.iOS
             SetupCustomNavigationBar();
             SetupLocalData();
 
-            SetupDatabase();
+			SetupDatabase();
 
-            if (UserUtil.settings.format == CoordinateFormat.Undefined)
-                UserUtil.settings.format = CoordinateFormat.DDM;
+            if (UserUtil.Current.CoordinateFormat == CoordinateFormat.Undefined)
+                UserUtil.Current.CoordinateFormat = CoordinateFormat.DDM;
 
             if (deleteDatabaseOnStartup)
             {
@@ -124,9 +124,9 @@ namespace Henspe.iOS
             {
                 noNetworkString = LangUtil.Get("Error.NoResponse");
 
-                hjertestarterService = new HjertestarterService(client, repository, UserUtil.settings, version, os);
+                hjertestarterService = new HjertestarterService(client, repository, UserUtil.Current, version, os);
 
-                regEmailSMSService = new RegEmailSMSService(client, repository, UserUtil.settings, version, os);
+                regEmailSMSService = new RegEmailSMSService(client, repository, UserUtil.Current, version, os);
 
                 coordinateService = new CoordinateService();
                 coordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_North, LangUtil.Get("Element.North.Text"));

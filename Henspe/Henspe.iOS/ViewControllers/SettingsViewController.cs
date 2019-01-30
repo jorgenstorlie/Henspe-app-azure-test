@@ -133,7 +133,7 @@ namespace Henspe.iOS
 
         private void OnCoordinateFormatLinkClicked(NSNotification obj)
         {
-            //OpenModalPickerCoordainateFormat(UserUtil.credentials.format);
+            //OpenModalPickerCoordainateFormat(User.credentials.format);
         }
         #endregion
 
@@ -356,7 +356,7 @@ namespace Henspe.iOS
                 settingsCoordinatesTableCell.LabInfo.Font = FontConst.fontSmall;
 
                 string coordinateButtonText = "";
-                CoordinateFormat coordinateFormat = UserUtil.settings.format;
+                CoordinateFormat coordinateFormat = UserUtil.Current.CoordinateFormat;
 
                 if (coordinateFormat == CoordinateFormat.DD)
                     coordinateButtonText = LangUtil.Get("SettingsViewController.Coordinates.DD");
@@ -434,7 +434,7 @@ namespace Henspe.iOS
                     //    settingsInfoTableCell.AccessibilityLabel = LangUtil.Get("SettingsViewController.Concent.Accessibility.Label");
                     //    settingsInfoTableCell.AccessibilityHint = LangUtil.Get("SettingsViewController.Concent.Accessibility.Hint");
 
-                    if (UserUtil.settings.consentAgreed == ConsentAgreed.True)
+                    if (UserUtil.Current.ConsentAgreed == ConsentAgreed.True)
                     {
                         settingsTopInfoTableCell.BackgroundColor = UIColor.Clear;
                         settingsTopInfoTableCell.LabInfo.TextColor = ColorConst.snlaText;
@@ -475,7 +475,7 @@ namespace Henspe.iOS
                     //    settingsInfoTableCell.AccessibilityLabel = LangUtil.Get("SettingsViewController.Concent.Accessibility.Label");
                     //    settingsInfoTableCell.AccessibilityHint = LangUtil.Get("SettingsViewController.Concent.Accessibility.Hint");
 
-                    if (UserUtil.settings.consentAgreed == ConsentAgreed.True)
+                    if (UserUtil.Current.ConsentAgreed == ConsentAgreed.True)
                     {
                         settingsInfoTableCell.BackgroundColor = UIColor.Clear;
                         settingsInfoTableCell.LabLabel.TextColor = ColorConst.snlaText;
