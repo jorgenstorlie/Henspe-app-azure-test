@@ -1,90 +1,114 @@
 ﻿using Henspe.Core.Service;
 using Xamarin.Essentials;
+using Newtonsoft.Json;
+using System.Security;
 
 namespace SNLA.Core.Util
 {
-    public enum ConsentAgreed
-    {
-        NotSet = 0,
-        False = 1,
-        True = 2
-    }
+	public enum ConsentAgreed
+	{
+		NotSet = 0,
+		False = 1,
+		True = 2
+	}
 
-    public class UserUtil
-    {
-        private const string PreferenceFile = "settings";
+	public static class UserUtil
+	{
+		/// <summary>
+		/// Initializes the <see cref="T:SNLA.Core.Util.User"/> class. LoadSettings when first accessed
+		/// </summary>
+		static User()
+		{
+			LoadSettings();
+		}
+		/// <summary>
+		/// Consetable. Interface to be used if application requires Consent preferences
+		/// </summary>
+		public interface IConsetable
+		{
+			string PhoneNumber 			{ get; set; }
+			string EmailAddress 		{ get; set; }
+			bool ConsentEmail 			{ get; set; }
+			bool ConsentSMS				{ get; set; }
+			ConsentAgreed ConsentAgreed { get; set; }
+		}
 
-        private const string keyPhoneNumber = "phone_number";
-        private const string keyConsentEmailAddress = "consent_email_address";
-        private const string keyConsentEmail = "consent_email";
-        private const string keyConsentSMS = "consent_sms";
-        private const string keyFormat = "format";
-        private const string keyConsentAgreed = "consent_agreed";
-        private const string keyOnboardingCompleted = "onboarding_completed";
-        private const string keyCameraLastSyncId = "camera_last_sync_id";
+		/// <summary>
+		/// The current settings.
+		/// </summary>
+		private static Settings _currentSettings;
+		public static Settings Current
+		{
+			get { return _currentSettings; }
+			set {
+				_currentSettings = value;
+				SaveSettings();
+			}
+		}
 
-        public static Settings settings = new Settings();
+		public static string PreferenceFile = "settings";
+		//public static string SecureFile = "secure";
 
-        public class Settings
-        {
-            public string phoneNumber
-            {
-                get { return Preferences.Get(keyPhoneNumber, null, PreferenceFile); }
-                set
-                {
-                    onboardingCompleted = true;
-                    Preferences.Set(keyPhoneNumber, value, PreferenceFile);
-                }
-            }
+		/// <summary>
+		/// Settings. All Settings for Application
+		/// </summary>
+		public class Settings : IConsetable
+		{
+			public string PhoneNumber					{ get; set; }
+			public string EmailAddress 					{ get; set; }
+			public bool ConsentEmail 					{ get; set; }
+			public bool ConsentSMS 						{ get; set; }
+			public CoordinateFormat CoordinateFormat	{ get; set; }
+			public ConsentAgreed ConsentAgreed 			{ get; set; }
+			public bool OnboardingCompleted 			{ get; set; }
+			public string CameraLastSyncId 				{ get; set; }
 
-            public string consentEmailAddress
-            {
-                get { return Preferences.Get(keyConsentEmailAddress, null, PreferenceFile); }
-                set { Preferences.Set(keyConsentEmailAddress, value, PreferenceFile); }
-            }
+			/*[JsonIgnore]
+			public class SecureStorage
+			{
 
-            public bool consentEmail
-            {
-                get { return Preferences.Get(keyConsentEmail, false, PreferenceFile); }
-                set { Preferences.Set(keyConsentEmail, value, PreferenceFile); }
-            }
+			}*/
+		}
 
-            public bool consentSMS
-            {
-                get { return Preferences.Get(keyConsentSMS, false, PreferenceFile); }
-                set { Preferences.Set(keyConsentSMS, value, PreferenceFile); }
-            }
+		/// <summary>
+		/// Loads the settings.
+		/// </summary>
+		private static void LoadSettings()
+		{
+			string userSettings = Preferences.Get(PreferenceFile, null, PreferenceFile);
+			if(string.IsNullOrWhiteSpace(userSettings))
+			{
+				//If user settings is null, set Current to new Settings(), which will call SaveSettings
+				ResetSettings();
+				return;
+			}
+			_currentSettings = userSettings.JsonToObject<Settings>();
+		}
 
-            public CoordinateFormat format
-            {
-                get { return (CoordinateFormat)Preferences.Get(keyFormat, (int)CoordinateFormat.DDM, PreferenceFile); }
-                set { Preferences.Set(keyFormat, (int)value, PreferenceFile); }
-            }
+		/// <summary>
+		/// Saves the settings.
+		/// </summary>
+		private static void SaveSettings()
+		{
+			var json = Current.ToJson();
+			if (!string.IsNullOrWhiteSpace(json))
+			{
+				Preferences.Set(PreferenceFile, json, PreferenceFile);
+			}
 
-            public ConsentAgreed consentAgreed
-            {
-                get { return (ConsentAgreed)Preferences.Get(keyConsentAgreed, 0, PreferenceFile); }
-                set { Preferences.Set(keyConsentAgreed, (int)value, PreferenceFile); }
-            }
+			/*var secureJson = Current.ToJson();
+			if (!string.IsNullOrWhiteSpace(json))
+			{
+				SecureStorage.SetAsync(SecureFile, secureJson);
+			}*/
+		}
 
-            public bool onboardingCompleted
-            {
-                get { return Preferences.Get(keyOnboardingCompleted, false, PreferenceFile); }
-                set { Preferences.Set(keyOnboardingCompleted, value, PreferenceFile); }
-            }
-
-            public string cameraLastSyncId
-            {
-                get { return Preferences.Get(keyCameraLastSyncId, null, PreferenceFile); }
-                set { Preferences.Set(keyCameraLastSyncId, value, PreferenceFile); }
-            }
-
-            public bool isAuthenticated => !string.IsNullOrEmpty(phoneNumber);
-
-            public void ConvertSettings(string version)
-            {
-
-            }
-        }
-    }
+		/// <summary>
+		/// Resets the settings.
+		/// </summary>
+		public static void ResetSettings()
+		{
+			Current = new Settings();
+		}
+	}
 }
