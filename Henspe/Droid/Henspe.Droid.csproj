@@ -250,7 +250,6 @@
     <Compile Include="MainNew.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Util\UserUtil.cs" />
     <Compile Include="Adapter\InitialPagerAdapter.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="OnBoardingActivity.cs" />
@@ -368,7 +367,6 @@
     <Folder Include="Resources\drawable-xxxhdpi\" />
     <Folder Include="Adapter\" />
     <Folder Include="View\" />
-    <Folder Include="Util\" />
     <Folder Include="Const\" />
     <Folder Include="Resources\menu\" />
     <Folder Include="Model\" />

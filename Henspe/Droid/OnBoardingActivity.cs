@@ -166,7 +166,7 @@ namespace Henspe.Droid
 
         private void NavigateToMain()
         {
-            UserUtil.settings.instructionsFinished = true;
+            User.Current.OnboardingCompleted = true;
             StartActivity(new Intent(Application.Context, typeof(MainActivity)));
             Finish();
         }
@@ -174,8 +174,8 @@ namespace Henspe.Droid
         private void NextButtonOnClick(object sender, EventArgs eventArgs)
         {
 
-            //var instructionsFinished = UserUtil.settings.instructionsFinished;
-            if (currentPage == (totalPages - 1))
+			//var onboardingCompleted = User.Current.OnboardingCompleted;
+			if (currentPage == (totalPages - 1))
             {
                 // Last page
                 NavigateToMain();
