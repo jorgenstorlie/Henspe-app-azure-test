@@ -17,7 +17,7 @@ namespace SNLA.Core.Util
 		/// <summary>
 		/// Initializes the <see cref="T:SNLA.Core.Util.User"/> class. LoadSettings when first accessed
 		/// </summary>
-		static User()
+		static UserUtil()
 		{
 			LoadSettings();
 		}
