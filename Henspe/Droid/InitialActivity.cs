@@ -27,7 +27,7 @@ namespace Henspe.Droid
             Intent intent = null;
            
          
-            if (User.Current.OnboardingCompleted)
+            if (UserUtil.Current.OnboardingCompleted)
                 intent = new Intent(this, typeof(MainNew));
             else
            intent = new Intent(this, typeof(OnBoardingActivity));

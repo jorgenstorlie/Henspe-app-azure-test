@@ -1,4 +1,4 @@
-using Android.App;
+﻿using Android.App;
 using Android.Content;
 using Android.Views;
 using Android.Widget;
@@ -68,7 +68,7 @@ namespace Henspe.Droid
         {
             createdFinished = false;
 
-            //UserUtil.Credentials.OnDutyCountry = inputTittelType;
+            //User.Credentials.OnDutyCountry = inputTittelType;
         }
 
         public override void OnCreate(Bundle savedInstanceState)

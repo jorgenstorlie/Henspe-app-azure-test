@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +18,7 @@ using Android.Widget;
 using Com.Airbnb.Lottie;
 using Henspe.Droid.Adapter;
 using Henspe.Droid.Util;
-using Henspe.Droid.Utils;
+using SNLA.Core.Util;
 
 using Java.Lang;
 
@@ -43,8 +43,8 @@ namespace Henspe.Droid
         static int totalPages = 3;
         static int currentPage = 0;
 
-        private double scrollTime = 0.5;
-        private float scrollViewBorder = 8;
+        //private double scrollTime = 0.5;
+        //private float scrollViewBorder = 8;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -73,11 +73,7 @@ namespace Henspe.Droid
 
    //   var      onboarding_button_bottom = FindViewById<RelativeLayout>(Resource.Id.onboarding_button_bottom);
      //       onboarding_button_bottom.Visibility = ViewStates.Gone;
-
-
-
-
-
+	
             /*
             _mCirclePageIndicator.SetViewPager(_mPager);
             _mCirclePageIndicator.SetSnap(true);
@@ -91,10 +87,6 @@ namespace Henspe.Droid
 
             //  animationView.SetBackgroundColor(color2);
             //   titleText.Text = "H E N S P E";
-
-
-
-
 
             OnBoardingItemFragment f = new OnBoardingItemFragment(0);
             OnBoardingItemFragment f2 = new OnBoardingItemFragment(1);
@@ -166,7 +158,7 @@ namespace Henspe.Droid
 
         private void NavigateToMain()
         {
-            User.Current.OnboardingCompleted = true;
+            UserUtil.Current.OnboardingCompleted = true;
             StartActivity(new Intent(Application.Context, typeof(MainActivity)));
             Finish();
         }
@@ -174,7 +166,7 @@ namespace Henspe.Droid
         private void NextButtonOnClick(object sender, EventArgs eventArgs)
         {
 
-			//var onboardingCompleted = User.Current.OnboardingCompleted;
+			//var onboardingCompleted = UserUtil.Current.OnboardingCompleted;
 			if (currentPage == (totalPages - 1))
             {
                 // Last page
