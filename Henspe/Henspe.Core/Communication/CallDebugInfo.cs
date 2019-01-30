@@ -26,15 +26,15 @@ namespace Henspe.Core.Communication
 		public async Task<BugtrackResultDto> SendDebugInfo(string message)
 		{
 			BugtrackResultDto bugtrackResultDto = new BugtrackResultDto ();
-			bugtrackResultDto.result = "";
-			bugtrackResultDto.error = "";
+			bugtrackResultDto.result = string.Empty;
+			bugtrackResultDto.error = string.Empty;
 
 			string url = CxHttpClient.DebugInfoUrl + "&message=" + message;
 			Task<HttpContent> contentTask = client.DoGet (url);
 			HttpContent content = await contentTask;
 			if(content == null)
 			{
-				bugtrackResultDto.error = ""; // No contact with server
+				bugtrackResultDto.error = string.Empty; // No contact with server
 				return bugtrackResultDto;
 			}
 
