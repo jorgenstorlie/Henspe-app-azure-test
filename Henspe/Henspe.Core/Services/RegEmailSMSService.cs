@@ -28,7 +28,7 @@ namespace Henspe.Core.Communication
 
         private CallRegEmailSMS callRegEmailSMS;
 
-        public RegEmailSMSService(CxHttpClient iclient, Repository repository, Settings settings, string version, string os)
+        public RegEmailSMSService(CxHttpClient client, Repository repository, Settings settings, string version, string os)
         {
             this.client = client;
             this.repository = repository;
