@@ -17,7 +17,6 @@ using Android.Views;
 using Android.Widget;
 using Com.Airbnb.Lottie;
 using Henspe.Droid.Adapter;
-using Henspe.Droid.Util;
 using SNLA.Core.Util;
 
 using Java.Lang;

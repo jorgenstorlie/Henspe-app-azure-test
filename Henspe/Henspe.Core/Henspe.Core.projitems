@@ -30,7 +30,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Communication\CxHttpClient.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\Dto\FormattedCoordinatesDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\CallRegEmailSMS.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Communication\Dto\RegEmailSMSResultDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Storage\Repository.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\BusinessEntityBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Hjertestarter.cs" />

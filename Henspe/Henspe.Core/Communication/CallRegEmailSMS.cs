@@ -13,12 +13,20 @@ using Henspe.Core.Communication;
 
 namespace Henspe.Core.Communication
 {
-    public class CallRegEmailSMS
-    {
-        public CallRegEmailSMS()
-        {
-        }
+	public class RegEmailSMSResultDto
+	{
+		public bool success { get; set; }
+		public bool resultat { get; set; }
+		public bool epost_on { get; set; }
+		public bool mob_on { get; set; }
+		public bool epost_off { get; set; }
+		public bool mob_off { get; set; }
+		public string pin { get; set; }
+		public string error_message { get; set; }
+	}
 
+	public class CallRegEmailSMS
+    {
         public async Task<RegEmailSMSResultDto> RegEmailSMS(string noContactWithServerString, string mobil, string epost, string os)
         {
             RegEmailSMSResultDto regEmailSMSResultDto = new RegEmailSMSResultDto();
