@@ -27,10 +27,6 @@ namespace Henspe.iOS
     [Register("AppDelegate")]
     public partial class AppDelegate : UIApplicationDelegate
     {
-        public string prodUrlString = "https://snla-apps.no/apps/henspe/";
-        public string testUrlTest = "https://snla-apps.no/apps/henspetest/";
-        public string plistFile = "Henspe.plist";
-
         public bool appActicatedOccured;
 
         private string noNetworkString;
@@ -95,8 +91,6 @@ namespace Henspe.iOS
             if (servcicesInitialized == false)
             {
                 noNetworkString = LangUtil.Get("Error.NoResponse");
-
-                //hjertestarterService = new HjertestarterService(client, repository, UserUtil.Current, version, os);
 
                 regEmailSMSService = new RegEmailSMSService();
 
