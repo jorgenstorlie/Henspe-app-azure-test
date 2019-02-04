@@ -1,8 +1,5 @@
 ﻿using System;
 using CoreLocation;
-using Henspe.Core.Communication.Dto;
-using Henspe.Core.Util;
-using Henspe.iOS.Util;
 using SNLA.Core.Util;
 
 namespace Henspe.iOS.AppModel

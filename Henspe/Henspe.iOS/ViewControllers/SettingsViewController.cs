@@ -7,8 +7,6 @@ using Henspe.iOS.Util;
 using Henspe.Core.Util;
 using Ricardo.RMBProgressHUD.iOS;
 using System.Threading.Tasks;
-using Henspe.Core.Communication;
-using Henspe.Core.Communication.Dto;
 using Henspe.iOS.Const;
 using CoreGraphics;
 using System.Collections.Generic;

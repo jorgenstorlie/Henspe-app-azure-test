@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Henspe.Core.Communication.Dto;
 using Henspe.Core.Model;
 
 namespace Henspe.Core.Communication

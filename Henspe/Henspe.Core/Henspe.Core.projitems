@@ -14,7 +14,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)Model\" />
     <Folder Include="$(MSBuildThisFileDirectory)Util\" />
     <Folder Include="$(MSBuildThisFileDirectory)Model\Dto\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Communication\Dto\" />
     <Folder Include="$(MSBuildThisFileDirectory)Translations\" />
     <Folder Include="$(MSBuildThisFileDirectory)Storage\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
@@ -28,15 +27,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Communication\CallBugtrack.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\CallDebugInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\CxHttpClient.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Communication\Dto\FormattedCoordinatesDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\CallRegEmailSMS.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Storage\Repository.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\BusinessEntityBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Hjertestarter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\IBusinessEntity.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\CallHjertestarter.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Communication\Dto\GetHjertestartersResultDto.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Communication\Dto\HjertestartersInBoxIfNeededResultDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Const\UrlConst.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\UserUtil.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\ICredentials.cs" />

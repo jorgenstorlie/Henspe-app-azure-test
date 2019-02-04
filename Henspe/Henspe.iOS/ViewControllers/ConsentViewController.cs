@@ -9,7 +9,6 @@ using CoreFoundation;
 using CoreGraphics;
 using Foundation;
 using Henspe.Core.Communication;
-using Henspe.Core.Communication.Dto;
 using Henspe.Core.Const;
 using Henspe.Core.Util;
 using Henspe.iOS.Const;

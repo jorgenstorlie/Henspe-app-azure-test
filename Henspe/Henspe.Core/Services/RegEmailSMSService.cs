@@ -2,7 +2,6 @@
 using System.Net;
 using Henspe.Core.Storage;
 using System.Threading.Tasks;
-using Henspe.Core.Communication.Dto;
 using System.IO;
 using System.Text;
 using Henspe.Core.Const;

@@ -29,7 +29,7 @@ using Android.Support.V13.App;
 using Android.Gms.Location;
 using Android.Gms.Common.Apis;
 using Android.Gms.Common;
-using Henspe.Core.Communication.Dto;
+using Henspe.Core.Communication;
 using Android.Runtime;
 using Android.Support.V7.App;
 using Fragment = Android.Support.V4.App.Fragment;

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Henspe.Core.Communication.Dto;
+using Henspe.Core.Communication;
 
 namespace Henspe.Core.Service
 {
@@ -25,7 +25,15 @@ namespace Henspe.Core.Service
         Coordinate_Seconds
     }
 
-    public class CoordinateService
+	public class FormattedCoordinatesDto
+	{
+		public bool success { get; set; }
+		public string error { get; set; }
+		public string latitudeDescription { get; set; }
+		public string longitudeDescription { get; set; }
+	}
+
+	public class CoordinateService
     {
         public Dictionary<string, string> translations = new Dictionary<string, string>();
 

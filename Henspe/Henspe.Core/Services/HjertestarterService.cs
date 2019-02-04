@@ -1,7 +1,6 @@
 ﻿using System;
 using Henspe.Core.Storage;
 using System.Threading.Tasks;
-using Henspe.Core.Communication.Dto;
 using SNLA.Core.Util;
 using System.Collections.Generic;
 using Henspe.Core.Model;
@@ -12,7 +11,36 @@ using static SNLA.Core.Util.UserUtil;
 namespace Henspe.Core.Communication
 {
 
-    public enum HjertestarterServiceLanguageKey
+	public enum State
+	{
+		noAction,
+		removeAll,
+		cleanup,
+		replace
+	}
+
+	public class HjertestartersInBoxIfNeededResultDto
+	{
+		public State state { get; set; }
+		public IEnumerable<Hjertestarter> hjertestarters { get; set; }
+		public double resultNorthEastLat { get; set; }
+		public double resultNorthEastLong { get; set; }
+		public double resultSouthWestLat { get; set; }
+		public double resultSouthWestLong { get; set; }
+	}
+
+	public class GetHjertestartersResultDto
+	{
+		public bool success { get; set; }
+		public string siste_synk_id { get; set; }
+		public bool defibrillatorListStored { get; set; }
+		public IEnumerable<Hjertestarter> hjerte { get; set; }
+		public IEnumerable<double> slettes { get; set; }
+		public string error_message { get; set; }
+
+	}
+
+	public enum HjertestarterServiceLanguageKey
     {
         Hjertestarter_NotActive,
         Hjertestarter_AlwaysOpen,

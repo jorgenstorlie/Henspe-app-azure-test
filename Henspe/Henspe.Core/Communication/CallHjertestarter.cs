@@ -2,14 +2,12 @@
 using System.Net;
 using Henspe.Core.Storage;
 using System.Threading.Tasks;
-using Henspe.Core.Communication.Dto;
 using System.IO;
 using System.Text;
 using Henspe.Core.Const;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Henspe.Core.Communication;
 using System.Net.Http.Headers;
 using System.Net.Http;
 using Henspe.Core.Model;
