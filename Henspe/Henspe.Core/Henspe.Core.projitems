@@ -20,25 +20,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Model\Dto\BrukerDto.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Model\Dto\BugtrackResultDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Dto\StructureDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Dto\StructureElementDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Dto\StructureSectionDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\CallBugtrack.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\CallDebugInfo.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Communication\CxHttpClient.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\CallRegEmailSMS.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Storage\Repository.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Model\BusinessEntityBase.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Model\Hjertestarter.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Model\IBusinessEntity.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Communication\CallHjertestarter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Const\UrlConst.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Util\UserUtil.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Communication\ICredentials.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\Settings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\CoordinateService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\HjertestarterService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\IHjertestarterService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\RegEmailSMSService.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -354,7 +354,7 @@ namespace Henspe.iOS
                 settingsCoordinatesTableCell.LabInfo.Font = FontConst.fontSmall;
 
                 string coordinateButtonText = "";
-                CoordinateFormat coordinateFormat = UserUtil.Current.CoordinateFormat;
+                CoordinateFormat coordinateFormat = UserUtil.Current.format;
 
                 if (coordinateFormat == CoordinateFormat.DD)
                     coordinateButtonText = LangUtil.Get("SettingsViewController.Coordinates.DD");
@@ -432,7 +432,7 @@ namespace Henspe.iOS
                     //    settingsInfoTableCell.AccessibilityLabel = LangUtil.Get("SettingsViewController.Concent.Accessibility.Label");
                     //    settingsInfoTableCell.AccessibilityHint = LangUtil.Get("SettingsViewController.Concent.Accessibility.Hint");
 
-                    if (UserUtil.Current.ConsentAgreed == ConsentAgreed.True)
+                    if (UserUtil.Current.consentAgreed == ConsentAgreed.True)
                     {
                         settingsTopInfoTableCell.BackgroundColor = UIColor.Clear;
                         settingsTopInfoTableCell.LabInfo.TextColor = ColorConst.snlaText;
@@ -473,7 +473,7 @@ namespace Henspe.iOS
                     //    settingsInfoTableCell.AccessibilityLabel = LangUtil.Get("SettingsViewController.Concent.Accessibility.Label");
                     //    settingsInfoTableCell.AccessibilityHint = LangUtil.Get("SettingsViewController.Concent.Accessibility.Hint");
 
-                    if (UserUtil.Current.ConsentAgreed == ConsentAgreed.True)
+                    if (UserUtil.Current.consentAgreed == ConsentAgreed.True)
                     {
                         settingsInfoTableCell.BackgroundColor = UIColor.Clear;
                         settingsInfoTableCell.LabLabel.TextColor = ColorConst.snlaText;

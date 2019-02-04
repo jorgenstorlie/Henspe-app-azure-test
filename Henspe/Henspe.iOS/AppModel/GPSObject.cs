@@ -39,7 +39,7 @@ namespace Henspe.iOS.AppModel
                 //string south = LangUtil.Get("Location.Element.South.Text");
                 //string west = LangUtil.Get("Location.Element.West.Text");
 
-                var formattedCoordinatesDto = AppDelegate.current.coordinateService.GetFormattedCoordinateDescription(UserUtil.Current.CoordinateFormat, value.Latitude, value.Longitude);
+                var formattedCoordinatesDto = AppDelegate.current.coordinateService.GetFormattedCoordinateDescription(UserUtil.Current.format, value.Latitude, value.Longitude);
 
                 if (formattedCoordinatesDto.success)
                 {

@@ -23,7 +23,7 @@ namespace Henspe.iOS
         {
             base.ViewDidAppear(animated);
 
-            if (UserUtil.Current.OnboardingCompleted == false)
+            if (UserUtil.Current.onboardingCompleted == false)
                 GoToOnboarding();
             else
                 GoToMain();

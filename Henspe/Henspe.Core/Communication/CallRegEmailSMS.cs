@@ -8,6 +8,7 @@ using System.Text;
 using Henspe.Core.Const;
 using System.Net.Http;
 using System.Collections.Generic;
+using SNLA.Core.Communication;
 using Newtonsoft.Json;
 
 namespace Henspe.Core.Communication
@@ -24,7 +25,7 @@ namespace Henspe.Core.Communication
 		public string error_message { get; set; }
 	}
 
-	public class CallRegEmailSMS
+	public class CallRegEmailSMS : HttpClientBase
     {
         public async Task<RegEmailSMSResultDto> RegEmailSMS(string noContactWithServerString, string mobil, string epost, string os)
         {
@@ -35,7 +36,9 @@ namespace Henspe.Core.Communication
 
             os = Uri.EscapeUriString(os);
 
-            using (CxHttpClient client = new CxHttpClient())
+
+
+            using (SNLAHttpClient client = new SNLAHttpClient())
             {
                 string url = UrlConst.NLARegEmailSMSUrl + "?action=reg&apikey=" + apikey + "&os=" + os;
 
@@ -71,7 +74,7 @@ namespace Henspe.Core.Communication
 
             os = Uri.EscapeUriString(os);
 
-            using (CxHttpClient client = new CxHttpClient())
+            using (SNLAHttpClient client = new SNLAHttpClient())
             {
                 string url = UrlConst.NLARegEmailSMSUrl + "?action=avreg&apikey=" + apikey + "&os=" + os;
 

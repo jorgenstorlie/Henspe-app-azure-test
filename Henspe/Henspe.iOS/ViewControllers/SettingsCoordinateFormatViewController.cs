@@ -112,13 +112,13 @@ namespace Henspe.iOS
 
         public int SelectedCoordinatesRow()
         {
-            return settingsCoordinateFormatTableViewSource.coordinateRows.IndexOf(settingsCoordinateFormatTableViewSource.coordinateRows.First(x => x.CoordinateFormat == UserUtil.Current.CoordinateFormat));
+            return settingsCoordinateFormatTableViewSource.coordinateRows.IndexOf(settingsCoordinateFormatTableViewSource.coordinateRows.First(x => x.CoordinateFormat == UserUtil.Current.format));
         }
 
         private void RowSelected(NSIndexPath indexPath)
         {
             CoordinateFormat format = settingsCoordinateFormatTableViewSource.coordinateRows[indexPath.Row].CoordinateFormat;
-            UserUtil.Current.CoordinateFormat = format;
+            UserUtil.Current.format = format;
         }
 
         // Table view source

@@ -62,7 +62,7 @@ namespace Henspe.iOS
             pagPager.PageIndicatorTintColor = UIColor.White;
             pagPager.CurrentPageIndicatorTintColor = ColorConst.snlaRed;
 
-            if (UserUtil.Current.OnboardingCompleted == false)
+            if (UserUtil.Current.onboardingCompleted == false)
             {
                 labHeader.Text = LangUtil.Get("Initial.Header");
                 labHeader.TextColor = ColorConst.snlaRed;
@@ -177,7 +177,7 @@ namespace Henspe.iOS
 
         private void GoToMain()
         {
-            UserUtil.Current.OnboardingCompleted = true;
+            UserUtil.Current.onboardingCompleted = true;
             GoToMainScreen();
         }
 

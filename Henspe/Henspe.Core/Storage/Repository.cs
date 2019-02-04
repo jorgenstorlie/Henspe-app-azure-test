@@ -8,16 +8,11 @@ using SNLA.Core.Storage;
 
 namespace Henspe.Core.Storage  
 {
-	public class Repository 
+	public class Repository : RepositoryBase
 	{
-		static readonly object locker = new object();
-
-		private readonly SQLiteConnection _database;
-		protected static string dbLocation;	
-
-		public Repository(SQLiteConnection conn)
+		public Repository(SQLiteConnection conn) : base(conn)
 		{
-			_database = conn;
+			//_database = conn;
 
 			CreateOrUpdateTables();
 		}
@@ -25,16 +20,16 @@ namespace Henspe.Core.Storage
 		private void CreateOrUpdateTables()
 		{
 			// create the tables
-            _database.CreateTable<Hjertestarter>();
+            //_database.CreateTable<Hjertestarter>();
      }
 
 		public void DeleteAllTables()
 		{
 			// create the tables
-            DeleteAllItems<Hjertestarter>();
+           // DeleteAllItems<Hjertestarter>();
       }
 
-        public List<T> Query<T>(string sqlQuery) where T : IBusinessEntity, new()
+        /*public List<T> Query<T>(string sqlQuery) where T : IBusinessEntity, new()
         {
             return _database.Query<T>(sqlQuery).ToList();
         }
@@ -121,6 +116,6 @@ namespace Henspe.Core.Storage
 				});
 				return c;
 			}
-		}
+		}*/
 	}
 }

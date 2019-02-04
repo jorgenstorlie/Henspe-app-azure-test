@@ -62,7 +62,7 @@ namespace Henspe.Core.Util
 
             var url = $"{UrlBase}{urlPath}.html";
 
-            return url;
+            return System.Text.RegularExpressions.Regex.Escape(url);
         }
     }
 }

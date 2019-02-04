@@ -157,7 +157,7 @@ namespace Henspe.Droid
 
         private void NavigateToMain()
         {
-            UserUtil.Current.OnboardingCompleted = true;
+            UserUtil.Current.onboardingCompleted = true;
             StartActivity(new Intent(Application.Context, typeof(MainActivity)));
             Finish();
         }

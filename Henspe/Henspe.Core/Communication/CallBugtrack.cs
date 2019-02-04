@@ -11,18 +11,16 @@ using SNLA.Core.Communication;
 
 namespace Henspe.Core.Communication
 {
-	public class CallBugtrack
+	public class BugtrackResultDto
 	{
-		private readonly CxHttpClient client;
-		private readonly float version;
-		private readonly string user;
+		public string result { get; set; }
+		public string error { get; set; }
+	}
 
-		public CallBugtrack(CxHttpClient inputClient, float inputVersion, string inputUser)
-		{
-			client = inputClient;
-			version = inputVersion;
-			user = inputUser;
-		}
+	public class CallBugtrack : HttpClientBase
+	{
+		public CallBugtrack() : base()
+		{}
 
 		public async Task<BugtrackResultDto> TrackBug(string message)
 		{
@@ -30,7 +28,7 @@ namespace Henspe.Core.Communication
 			bugtrackResultDto.result = "";
 			bugtrackResultDto.error = "";
 
-			string url = CxHttpClient.BugtrackUrl + "&message=" + message;
+			/*string url = SNLAHttpClient.BugtrackUrl + "&message=" + message;
 			Task<HttpContent> contentTask = client.DoGet (url);
 			HttpContent content = await contentTask;
 			if(content == null)
@@ -57,7 +55,7 @@ namespace Henspe.Core.Communication
 				bugtrackResultDto.error = errorMessage;
 				return bugtrackResultDto;
 			}
-
+			*/
 			return bugtrackResultDto;
 		}
 	}

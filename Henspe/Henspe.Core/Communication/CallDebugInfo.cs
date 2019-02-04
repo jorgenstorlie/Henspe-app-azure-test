@@ -6,22 +6,22 @@ using System.Text;
 using SNLA.Core.Util;
 using Newtonsoft.Json;
 using System.Net.Http;
-using Henspe.Core.Model.Dto;
+using SNLA.Core.Communication;
 
 namespace Henspe.Core.Communication
 {
-	public class CallDebugInfo
+	public class CallDebugInfo : HttpClientBase
 	{
-		private readonly CxHttpClient client;
+		/*private readonly SNLAHttpClient client;
 		private readonly float version;
 		private readonly string user;
 
-		public CallDebugInfo(CxHttpClient inputClient, float inputVersion, string inputUser)
+		public CallDebugInfo(SNLAHttpClient inputClient, float inputVersion, string inputUser)
 		{
 			client = inputClient;
 			version = inputVersion;
 			user = inputUser;
-		}
+		}*/
 
 		public async Task<BugtrackResultDto> SendDebugInfo(string message)
 		{
@@ -29,7 +29,7 @@ namespace Henspe.Core.Communication
 			bugtrackResultDto.result = string.Empty;
 			bugtrackResultDto.error = string.Empty;
 
-			string url = CxHttpClient.DebugInfoUrl + "&message=" + message;
+			/*string url = SNLAHttpClient.DebugInfoUrl + "&message=" + message;
 			Task<HttpContent> contentTask = client.DoGet (url);
 			HttpContent content = await contentTask;
 			if(content == null)
@@ -55,7 +55,7 @@ namespace Henspe.Core.Communication
 			{
 				bugtrackResultDto.error = errorMessage;
 				return bugtrackResultDto;
-			}
+			}*/
 
 			return bugtrackResultDto;
 		}

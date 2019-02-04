@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using CoreGraphics;
 using Foundation;
-using Henspe.Core.Communication;
+using SNLA.Core.Communication;
 using Henspe.Core.Util;
 using Henspe.iOS.Const;
 using SNLA.iOS.Util;
@@ -130,7 +130,7 @@ namespace Henspe.iOS
 
         async Task<string> GetTextAsync(string url)
         {
-            using (CxHttpClient client = new CxHttpClient())
+            using (SNLAHttpClient client = new SNLAHttpClient())
             {
                 try
                 {

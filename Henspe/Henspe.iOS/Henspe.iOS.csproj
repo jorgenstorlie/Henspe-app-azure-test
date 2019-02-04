@@ -181,11 +181,11 @@
     <Folder Include="Util\" />
     <Folder Include="Communication\" />
     <Folder Include="Renderer\" />
-    <Folder Include="Extension\" />
     <Folder Include="Base.lproj\" />
     <Folder Include="Settings.bundle\" />
     <Folder Include="Settings.bundle\Base.lproj\" />
     <Folder Include="ViewControllers\" />
+    <Folder Include="Service\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -204,7 +204,6 @@
     <Compile Include="Const\EventConst.cs" />
     <Compile Include="Const\FontConst.cs" />
     <Compile Include="Const\PositionTypeConst.cs" />
-    <Compile Include="Communication\AppVersionData.cs" />
     <Compile Include="Util\iOSMapUtil.cs" />
     <Compile Include="Renderer\MainLocationRowViewCell.cs" />
     <Compile Include="Renderer\MainLocationRowViewCell.designer.cs">
@@ -285,6 +284,7 @@
     <Compile Include="ViewControllers\SettingsViewController.designer.cs">
       <DependentUpon>SettingsViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Service\IOSApplicationService.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ic_info.png" />

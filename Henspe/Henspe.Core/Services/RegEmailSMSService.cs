@@ -13,21 +13,27 @@ using System.Net.Http.Headers;
 using System.Net.Http;
 using Henspe.Core.Model;
 using System.Linq;
+using SNLA.Core.Communication;
 using static SNLA.Core.Util.UserUtil;
 
 namespace Henspe.Core.Communication
 {
-    public class RegEmailSMSService
+    public class RegEmailSMSService : HttpClientBase
     {
-        private readonly CxHttpClient client;
+		private CallRegEmailSMS callRegEmailSMS;
+
+		public RegEmailSMSService() : base()
+		{
+			callRegEmailSMS = new CallRegEmailSMS();
+		}
+
+		/*private readonly SNLAHttpClient client;
         private readonly Repository repository;
         private readonly Settings settings;
         private readonly string version;
         private readonly string os;
 
-        private CallRegEmailSMS callRegEmailSMS;
-
-        public RegEmailSMSService(CxHttpClient client, Repository repository, Settings settings, string version, string os)
+        public RegEmailSMSService(SNLAHttpClient client, Repository repository, Settings settings, string version, string os)
         {
             this.client = client;
             this.repository = repository;
@@ -36,9 +42,9 @@ namespace Henspe.Core.Communication
             this.os = os;
 
             callRegEmailSMS = new CallRegEmailSMS();
-        }
+        }*/
 
-        public async Task<RegEmailSMSResultDto> RegEmailSMS(string noContactWithServerString, string mobil, string epost, string os)
+		public async Task<RegEmailSMSResultDto> RegEmailSMS(string noContactWithServerString, string mobil, string epost, string os)
         {
             return await callRegEmailSMS.RegEmailSMS(noContactWithServerString, mobil, epost, os);
         }
