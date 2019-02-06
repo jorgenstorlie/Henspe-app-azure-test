@@ -24,12 +24,6 @@ namespace Henspe.Core.Model.Dto
                 return null;
         }
 
-        public bool IsLastStructureSection(int index)
-        {
-            if ((structureSectionList.Count - 1) == index)
-                return true;
-            else
-                return false;
-        }
+		public bool IsLastStructureSection(int index) => ((structureSectionList.Count - 1) == index);
     }
 }

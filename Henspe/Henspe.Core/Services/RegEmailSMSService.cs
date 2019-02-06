@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Net;
-using Henspe.Core.Storage;
 using System.Threading.Tasks;
 using System.IO;
 using System.Text;
@@ -26,23 +25,6 @@ namespace Henspe.Core.Communication
 		{
 			callRegEmailSMS = new CallRegEmailSMS();
 		}
-
-		/*private readonly SNLAHttpClient client;
-        private readonly Repository repository;
-        private readonly Settings settings;
-        private readonly string version;
-        private readonly string os;
-
-        public RegEmailSMSService(SNLAHttpClient client, Repository repository, Settings settings, string version, string os)
-        {
-            this.client = client;
-            this.repository = repository;
-            this.settings = settings;
-            this.version = version;
-            this.os = os;
-
-            callRegEmailSMS = new CallRegEmailSMS();
-        }*/
 
 		public async Task<RegEmailSMSResultDto> RegEmailSMS(string noContactWithServerString, string mobil, string epost, string os)
         {

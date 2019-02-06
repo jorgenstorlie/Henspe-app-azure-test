@@ -54,8 +54,8 @@ namespace Henspe.Core.Communication
 			{
 				bugtrackResultDto.error = errorMessage;
 				return bugtrackResultDto;
-			}
-			*/
+			}*/
+
 			return bugtrackResultDto;
 		}
 	}

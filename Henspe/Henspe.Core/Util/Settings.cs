@@ -6,7 +6,6 @@ using SNLA.Core.Service;
 
 namespace SNLA.Core.Util
 {
-
 	/// <summary>
 	/// Settings. All Settings for Application
 	/// </summary>

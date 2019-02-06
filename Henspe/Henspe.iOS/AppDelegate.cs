@@ -8,7 +8,6 @@ using Henspe.iOS.Const;
 using Henspe.iOS.AppModel;
 using Henspe.Core.Model.Dto;
 using Henspe.Core.Service;
-using Henspe.Core.Storage;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
