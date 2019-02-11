@@ -26,14 +26,14 @@ namespace Henspe.Core.Communication
 			callRegEmailSMS = new CallRegEmailSMS();
 		}
 
-		public async Task<RegEmailSMSResultDto> RegEmailSMS(string noContactWithServerString, string mobil, string epost, string os)
+		public async Task<RegEmailSMSResultDto> RegEmailSMS(string mobil, string epost, string os)
         {
-            return await callRegEmailSMS.RegEmailSMS(noContactWithServerString, mobil, epost, os);
+            return await callRegEmailSMS.RegEmailSMS(mobil, epost, os);
         }
 
-        public async Task<RegEmailSMSResultDto> UnRegEmailSMS(string noContactWithServerString, string mobil, string epost, string os)
+        public async Task<RegEmailSMSResultDto> UnRegEmailSMS(string mobil, string epost, string os)
         {
-            return await callRegEmailSMS.UnRegEmailSMS(noContactWithServerString, mobil, epost, os);
+            return await callRegEmailSMS.UnRegEmailSMS(mobil, epost, os);
         }
     }
 }
