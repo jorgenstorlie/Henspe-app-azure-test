@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Henspe.Core.Const
+namespace SNLA.Core.Const
 {
 	public class UrlConst
 	{
@@ -15,7 +15,12 @@ namespace Henspe.Core.Const
         public const string NLAMobilAuth = "https://ws.snla-it.no/api/h113/h113_mobaut.php?";
         public const string VianettBase = "https://smsc.vianett.no/v3/send";
 
-        public const string NLAInfoPage = "https://norskluftambulanse.no/nrdb/";
+		/// <summary>
+		/// The base URL. Required by SNLAHttpClient
+		/// </summary>
+		public const string BaseUrl = "https://ws.snla-it.no/api/mob_app/";
+
+		public const string NLAInfoPage = "https://norskluftambulanse.no/nrdb/";
 
         //public const string NLAProxyBase1 = "https://ws1.Hjelp113gps.no/";
         //public const string NLAProxyBase2 = "https://ws2.Hjelp113gps.no/";

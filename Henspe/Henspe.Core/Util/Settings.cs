@@ -19,13 +19,5 @@ namespace SNLA.Core.Util
 		public ConsentAgreed consentAgreed { get; set; }
 		public bool onboardingCompleted { get; set; }
 		public string cameraLastSyncId { get; set; }
-
-		public bool isAuthenticated => !string.IsNullOrEmpty(phoneNumber);
-
-		/*[JsonIgnore]
-		public class SecureStorage
-		{
-
-		}*/
 	}
 }
