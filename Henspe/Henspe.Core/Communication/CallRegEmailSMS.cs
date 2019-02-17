@@ -13,7 +13,7 @@ using Newtonsoft.Json;
 
 namespace Henspe.Core.Communication
 {
-	public class RegEmailSMSResultDto
+	public class RegEmailSMSResultDto : IServerDto
 	{
 		public bool success { get; set; }
 		public bool resultat { get; set; }

@@ -546,7 +546,7 @@ namespace Henspe.iOS
                 if (swiEmail.On == true && isEmailAddressChanged == true)
                     epostUnreg = originalEmailAddress;
 
-                RegEmailSMSResultDto regEmailSMSUnregResultDto = await regEmailSMSService.UnRegEmailSMS("Error", mobilUnreg, epostUnreg, SettingsConst.OsTypes.iOS);
+                RegEmailSMSResultDto regEmailSMSUnregResultDto = await regEmailSMSService.UnRegEmailSMS(mobilUnreg, epostUnreg, SettingsConst.OsTypes.iOS);
 
                 if (regEmailSMSUnregResultDto.success == true)
                 {
@@ -572,7 +572,7 @@ namespace Henspe.iOS
                 if (swiEmail.On == true && isEmailAddressChanged == true)
                     epostReg = txtEmail.Text;
 
-                RegEmailSMSResultDto regEmailSMSResultDto = await regEmailSMSService.RegEmailSMS("Error", mobilReg, epostReg, SettingsConst.OsTypes.iOS);
+                RegEmailSMSResultDto regEmailSMSResultDto = await regEmailSMSService.RegEmailSMS(mobilReg, epostReg, SettingsConst.OsTypes.iOS);
 
                 if (regEmailSMSResultDto.success == true)
                 {

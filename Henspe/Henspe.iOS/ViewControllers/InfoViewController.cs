@@ -13,6 +13,7 @@ using Henspe.iOS.Const;
 using SNLA.iOS.Util;
 using UIKit;
 using Xamarin.Essentials;
+using Newtonsoft.Json;
 
 namespace Henspe.iOS
 {
@@ -128,29 +129,21 @@ namespace Henspe.iOS
             }
         }
 
-        async Task<string> GetTextAsync(string url)
+		public class TextDto : IServerDto
+		{
+			[JsonIgnore]
+			public bool success { get; set; }
+			[JsonIgnore]
+			public string error_message { get; set; }
+
+			public string contentString { get; set; }
+		}
+
+		async Task<string> GetTextAsync(string url)
         {
-            using (SNLAHttpClient client = new SNLAHttpClient())
-            {
-                try
-                {
-                    Task<HttpContent> contentTask = client.DoGet(url);
-
-                    HttpContent content = await client.DoGet(url);
-                    if (content == null)
-                    {
-                        return null;
-                    }
-
-                    string result = await content.ReadAsStringAsync();
-
-                    return result;
-                }
-                catch (Exception ex)
-                {
-                    return null;
-                }
-            }
+			var client = AppDelegate.current.ApplicationService.client;
+            var textDto = await client.Get<TextDto>(new Uri(url));
+			return textDto.contentString;
         }
         async Task<string> GetTextAsync(string url, CancellationToken ct)
         {

@@ -343,6 +343,7 @@ namespace Henspe.Core.Service
 
         static private char UTMLetterDesignator(double Lat)
         {
+			//TODO return directly. No else. Only one && and ordered in relevance...?
             char LetterDesignator;
 
             if ((84 >= Lat) && (Lat >= 72)) LetterDesignator = 'X';

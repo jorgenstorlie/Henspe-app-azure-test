@@ -14,6 +14,7 @@ using Henspe.Core.Model;
 using System.Linq;
 using SNLA.Core.Communication;
 using static SNLA.Core.Util.UserUtil;
+using Xamarin.Essentials;
 
 namespace Henspe.Core.Communication
 {

@@ -11,7 +11,7 @@ using SNLA.Core.Communication;
 
 namespace Henspe.Core.Communication
 {
-	public class BugtrackResultDto
+	public class BugtrackResultDto 
 	{
 		public string result { get; set; }
 		public string error { get; set; }
