@@ -9,10 +9,11 @@ using Android.Views;
 using Android.Widget;
 using Henspe.Core.Model.Dto;
 using Henspe.Droid.Adapters;
-using Henspe.Droid.Util;
 using Java.Lang;
 using System.Collections.Generic;
 using System.Linq;
+using SNLA.Droid.Util;
+using Fragment = Henspe.Droid.position_fragment;
 
 namespace Henspe.Droid
 {
@@ -35,9 +36,9 @@ namespace Henspe.Droid
                 return mFragmentList.Count;
             }
         }
-        public override Android.Support.V4.App.Fragment GetItem(int postion)
+        public override Android.Support.V4.App.Fragment GetItem(int position)
         {
-            return mFragmentList[postion];
+            return mFragmentList[position];
         }
 
         public override ICharSequence GetPageTitleFormatted(int position)
@@ -271,7 +272,7 @@ namespace Henspe.Droid
                     viewHolder.infoHelper.Text = "";
                     viewHolder.infoHelper.Visibility = ViewStates.Visible;
 
-                    lastPositionText = FlashTextUtil.FlashChangedText(activity, activity.ApplicationContext, lastPositionText, Henspe.Current.coordinatesText, viewHolder.infoHelper, FlashTextUtil.Type.LatText);
+                    lastPositionText = FlashTextUtil.FlashChangedText(activity, activity.ApplicationContext, lastPositionText, Henspe.Current.coordinatesText, viewHolder.infoHelper, FlashTextUtil.Type.LatText, Resource.Animator.abc_fade_out);
                 }
                 else if (henspeRowModel.elementType == StructureElementDto.ElementType.Address)
                 {

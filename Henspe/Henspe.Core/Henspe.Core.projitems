@@ -14,53 +14,23 @@
     <Folder Include="$(MSBuildThisFileDirectory)Model\" />
     <Folder Include="$(MSBuildThisFileDirectory)Util\" />
     <Folder Include="$(MSBuildThisFileDirectory)Model\Dto\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Communication\Dto\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Service\" />
     <Folder Include="$(MSBuildThisFileDirectory)Translations\" />
     <Folder Include="$(MSBuildThisFileDirectory)Storage\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Util\BugtrackUtil.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Util\ConvertUtil.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Util\DateUtil.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Util\JsonUtil.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Util\MathUtil.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Util\SessionUtil.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Util\StringUtil.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Dto\BrukerDto.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Model\Dto\BugtrackResultDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Dto\StructureDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Dto\StructureElementDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Dto\StructureSectionDto.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Const\AttributeTypeConst.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Const\GpsCardinalDirectionConst.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Const\GpsCoverageConst.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Const\ModeConst.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Const\NetworkStateConst.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Const\POIConst.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\CallBugtrack.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\CallDebugInfo.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Communication\CxHttpClient.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Communication\Dto\FormattedCoordinatesDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Communication\CallRegEmailSMS.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Communication\Dto\RegEmailSMSResultDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Storage\Repository.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Model\BusinessEntityBase.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Model\Hjertestarter.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Model\IBusinessEntity.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Service\HjertestarterService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Service\IHjertestarterService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Communication\CallHjertestarter.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Communication\Dto\GetHjertestartersResultDto.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Communication\Dto\HjertestartersInBoxIfNeededResultDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Const\UrlConst.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Util\UserUtil.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Util\NumberUtil.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Service\RegEmailSMSService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Const\SettingsConst.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Service\CoordinateService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Const\NLA113OsTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\Settings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\CoordinateService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\RegEmailSMSService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Translations\Translations_no.json" />

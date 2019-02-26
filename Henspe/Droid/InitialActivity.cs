@@ -5,7 +5,7 @@ using Android.OS;
 using Android.Support.V7.App;
 using Android.Util;
 using Android.Content.PM;
-using Henspe.Droid.Utils;
+using SNLA.Core.Util;
 
 namespace Henspe.Droid
 {
@@ -27,7 +27,7 @@ namespace Henspe.Droid
             Intent intent = null;
            
          
-            if (UserUtil.settings.instructionsFinished)
+            if (UserUtil.Current.onboardingCompleted)
                 intent = new Intent(this, typeof(MainNew));
             else
            intent = new Intent(this, typeof(OnBoardingActivity));

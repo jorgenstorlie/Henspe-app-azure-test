@@ -3,38 +3,38 @@ using System.Threading.Tasks;
 using System;
 using System.IO;
 using System.Text;
-using Henspe.Core.Util;
+using SNLA.Core.Util;
 using Newtonsoft.Json;
 using System.Net.Http;
-using Henspe.Core.Model.Dto;
+using SNLA.Core.Communication;
 
 namespace Henspe.Core.Communication
 {
-	public class CallDebugInfo
+	public class CallDebugInfo : HttpClientBase
 	{
-		private readonly CxHttpClient client;
+		/*private readonly SNLAHttpClient client;
 		private readonly float version;
 		private readonly string user;
 
-		public CallDebugInfo(CxHttpClient inputClient, float inputVersion, string inputUser)
+		public CallDebugInfo(SNLAHttpClient inputClient, float inputVersion, string inputUser)
 		{
 			client = inputClient;
 			version = inputVersion;
 			user = inputUser;
-		}
+		}*/
 
 		public async Task<BugtrackResultDto> SendDebugInfo(string message)
 		{
 			BugtrackResultDto bugtrackResultDto = new BugtrackResultDto ();
-			bugtrackResultDto.result = "";
-			bugtrackResultDto.error = "";
+			bugtrackResultDto.result = string.Empty;
+			bugtrackResultDto.error = string.Empty;
 
-			string url = CxHttpClient.DebugInfoUrl + "&message=" + message;
+			/*string url = SNLAHttpClient.DebugInfoUrl + "&message=" + message;
 			Task<HttpContent> contentTask = client.DoGet (url);
 			HttpContent content = await contentTask;
 			if(content == null)
 			{
-				bugtrackResultDto.error = ""; // No contact with server
+				bugtrackResultDto.error = string.Empty; // No contact with server
 				return bugtrackResultDto;
 			}
 
@@ -48,14 +48,14 @@ namespace Henspe.Core.Communication
 				}
 				catch(Exception e)
 				{
-					BugtrackUtil.SendBugtrack("CallBugtrack error", e, stringJson, client, version, user);
+					AppCenterUtil.SendBugTrack("CallBugtrack error", e, stringJson, client, version, user);
 				}
 			} 
 			else
 			{
 				bugtrackResultDto.error = errorMessage;
 				return bugtrackResultDto;
-			}
+			}*/
 
 			return bugtrackResultDto;
 		}

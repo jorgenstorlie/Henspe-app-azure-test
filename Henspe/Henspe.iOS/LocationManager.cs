@@ -137,7 +137,7 @@ namespace Henspe.iOS
             locationManager.DesiredAccuracy = inEmergencyCallAccuracy;
             locationManager.DistanceFilter = inEmergencyCallFilter;
 
-            if (UserUtil.settings.onboardingCompleted)
+            if (UserUtil.Current.onboardingCompleted)
                 locationManager.AllowsBackgroundLocationUpdates = true;
         }
 
@@ -180,7 +180,7 @@ namespace Henspe.iOS
 
             locationManager.LocationsUpdated -= HandleLocationsUpdated;
 
-            if (UserUtil.settings.onboardingCompleted)
+            if (UserUtil.Current.onboardingCompleted)
             {
                 locationManager.LocationsUpdated += HandleLocationsUpdated;
                 locationManager.RequestAlwaysAuthorization();

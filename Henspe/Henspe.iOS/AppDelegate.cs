@@ -3,18 +3,19 @@ using UIKit;
 using CoreLocation;
 using Foundation;
 using Henspe.Core.Communication;
-using Henspe.Core.Const;
-using Henspe.iOS.Util;
 using Henspe.Core;
 using Henspe.iOS.Const;
 using Henspe.iOS.AppModel;
 using Henspe.Core.Model.Dto;
 using Henspe.Core.Service;
-using Henspe.Core.Storage;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using SNLA.Core.Communication;
 using SNLA.Core.Util;
+using SNLA.iOS.Util;
+using SNLA.Core.Service;
+using SNLA.Core.Const;
 using System.IO;
 
 namespace Henspe.iOS
@@ -25,34 +26,21 @@ namespace Henspe.iOS
     [Register("AppDelegate")]
     public partial class AppDelegate : UIApplicationDelegate
     {
-        public string os = SettingsConst.ios;
-        public string version;
-
-        public string mode = ModeConst.test;
-
-        public string prodUrlString = "https://snla-apps.no/apps/henspe/";
-        public string testUrlTest = "https://snla-apps.no/apps/henspetest/";
-        public string plistFile = "Henspe.plist";
-
         public bool appActicatedOccured;
 
-        // Services
-        private bool deleteDatabaseOnStartup = false;
         private string noNetworkString;
         public bool servcicesInitialized = false;
-        public HjertestarterService hjertestarterService;
+       // public HjertestarterService hjertestarterService;
         public CoordinateService coordinateService;
         public RegEmailSMSService regEmailSMSService;
 
-        // Main reference
-        public MainViewController mainViewController = null;
+		// Main reference
+		public MainViewController mainViewController = null;
 
         // Location manager
         public LocationManager locationManager;
 
         public StructureDto structure;
-
-        public Repository repository { get; set; }
 
         // class-level declarations
         UIWindow window;
@@ -61,15 +49,9 @@ namespace Henspe.iOS
             get;
             set;
         }
-
-        private SQLite.SQLiteConnection conn;
-
+        
         public static AppDelegate current { get; private set; }
-
-        //public Repository repository { get; set; }
-        public CxHttpClient client { get; private set; }
-
-        //Connection conn;
+		public ApplicationService ApplicationService;
 
         public static UIViewController initialViewController;
 
@@ -78,21 +60,13 @@ namespace Henspe.iOS
             current = this;
 
             window = new UIWindow(UIScreen.MainScreen.Bounds);
-            client = new CxHttpClient();
+			ApplicationService = new ApplicationService();
             SetupCustomNavigationBar();
-            SetupLocalData();
+			SetupSectionsWithElements();
 
-            SetupDatabase();
+			if (UserUtil.Current.format == CoordinateFormat.Undefined)
+                UserUtil.Current.format = CoordinateFormat.DDM;
 
-            if (UserUtil.settings.format == CoordinateFormat.Undefined)
-                UserUtil.settings.format = CoordinateFormat.DDM;
-
-            if (deleteDatabaseOnStartup)
-            {
-                repository.DeleteAllTables();
-            }
-
-            GetVersion();
             SetupServicesIfNeeded();
 
             var textAttributes = new UITextAttributes();
@@ -111,21 +85,13 @@ namespace Henspe.iOS
             AppCenter.Start("48ab726a-46ee-4762-ad50-51a2dcc928b4", typeof(Analytics), typeof(Crashes));
         }
 
-        private void GetVersion()
-        {
-            NSObject thisVersionObject = NSBundle.MainBundle.ObjectForInfoDictionary("CFBundleShortVersionString");
-            version = thisVersionObject.ToString();
-        }
-
         private void SetupServicesIfNeeded()
         {
             if (servcicesInitialized == false)
             {
                 noNetworkString = LangUtil.Get("Error.NoResponse");
 
-                hjertestarterService = new HjertestarterService(client, repository, UserUtil.settings, version, os);
-
-                regEmailSMSService = new RegEmailSMSService(client, repository, UserUtil.settings, version, os);
+                regEmailSMSService = new RegEmailSMSService();
 
                 coordinateService = new CoordinateService();
                 coordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_North, LangUtil.Get("Element.North.Text"));
@@ -138,25 +104,6 @@ namespace Henspe.iOS
 
                 servcicesInitialized = true;
             }
-        }
-
-        void SetupLocalData()
-        {
-            SetupSectionsWithElements();
-
-            structure.currentStructureSectionId = 0;
-        }
-
-        private void SetupDatabase()
-        {
-            var sqliteFilename = "HenspeDB.db";
-            // we need to put in /Library/ on iOS5.1 to meet Apple's iCloud terms
-            // (they don't want non-user-generated data in Documents)
-            string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal); // Documents folder
-            string libraryPath = Path.Combine(documentsPath, "../Library/"); // Library folder
-            string path = Path.Combine(libraryPath, sqliteFilename);
-            conn = new SQLite.SQLiteConnection(path);
-            repository = new Repository(conn);
         }
 
         void SetupSectionsWithElements()
@@ -199,7 +146,9 @@ namespace Henspe.iOS
 			structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Evakuering.Flaskehalser"), "ic_e_flaskehalser.svg", 0.7f);
 			structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Evakuering.Kjeder"), "ic_e_evakuering.svg", 0.7f);
 			structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Evakuering.Rett"), "ic_e_rett.svg", 0.7f);
-        }
+
+			structure.currentStructureSectionId = 0;
+		}
 
         private void SetupCustomNavigationBar()
         {
@@ -230,20 +179,8 @@ namespace Henspe.iOS
         #region permissions
         public bool IsOnboardingNeeded()
         {
-            bool isLocationRightsNeeded = IsLocationRightsNeeded();
-
-            if (isLocationRightsNeeded)
-                return true;
-            else
-                return false;
-        }
-
-        public bool IsLocationRightsNeeded()
-        {
-            if (locationManager.HasLocationPermission())
-                return false;
-            else
-                return true;
+			//Onboarding needed if location rights is needed
+           return !(locationManager.HasLocationPermission());
         }
         #endregion
 

@@ -1,5 +1,8 @@
 ﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProjectGuid>{8A58421D-AED1-496D-BFE9-A5337BBC3401}</ProjectGuid>
@@ -14,7 +17,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
-    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;DEBUG;ENABLE_TEST_CLOUD;HENSPE;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodesignKey>iPhone Developer</CodesignKey>
@@ -29,10 +32,9 @@
     <MtouchVerbosity></MtouchVerbosity>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
-    <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhone\Release</OutputPath>
-    <DefineConstants></DefineConstants>
+    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;HENSPE;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodesignKey>iPhone Distribution</CodesignKey>
@@ -45,10 +47,9 @@
     <CodesignProvision>HenspeAppStore</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
-    <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
-    <DefineConstants></DefineConstants>
+    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;HENSPE;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodesignKey>iPhone Developer</CodesignKey>
@@ -63,7 +64,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\iPhone\Debug</OutputPath>
-    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;DEBUG;ENABLE_TEST_CLOUD;HENSPE;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodesignKey>iPhone Developer</CodesignKey>
@@ -85,7 +86,7 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="Microsoft.Threading.Tasks">
@@ -95,64 +96,68 @@
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Lottie.iOS">
-      <HintPath>..\packages\Com.Airbnb.iOS.Lottie.2.5.4\lib\xamarinios10\Lottie.iOS.dll</HintPath>
+      <HintPath>..\packages\Com.Airbnb.iOS.Lottie.2.5.6\lib\xamarinios10\Lottie.iOS.dll</HintPath>
     </Reference>
     <Reference Include="WebP.Touch">
       <HintPath>..\packages\WebP.Touch.1.0.8\lib\Xamarin.iOS10\WebP.Touch.dll</HintPath>
     </Reference>
     <Reference Include="FFImageLoading">
-      <HintPath>..\packages\Xamarin.FFImageLoading.2.4.3.840\lib\Xamarin.iOS10\FFImageLoading.dll</HintPath>
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.4.4.859\lib\Xamarin.iOS10\FFImageLoading.dll</HintPath>
     </Reference>
     <Reference Include="FFImageLoading.Platform">
-      <HintPath>..\packages\Xamarin.FFImageLoading.2.4.3.840\lib\Xamarin.iOS10\FFImageLoading.Platform.dll</HintPath>
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.4.4.859\lib\Xamarin.iOS10\FFImageLoading.Platform.dll</HintPath>
     </Reference>
     <Reference Include="FFImageLoading.Svg.Platform">
-      <HintPath>..\packages\Xamarin.FFImageLoading.Svg.2.4.3.840\lib\Xamarin.iOS10\FFImageLoading.Svg.Platform.dll</HintPath>
+      <HintPath>..\packages\Xamarin.FFImageLoading.Svg.2.4.4.859\lib\Xamarin.iOS10\FFImageLoading.Svg.Platform.dll</HintPath>
     </Reference>
     <Reference Include="SkiaSharp">
-      <HintPath>..\packages\SkiaSharp.1.60.3\lib\Xamarin.iOS\SkiaSharp.dll</HintPath>
+      <HintPath>..\packages\SkiaSharp.1.68.0\lib\Xamarin.iOS\SkiaSharp.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Essentials">
-      <HintPath>..\packages\Xamarin.Essentials.0.11.0-preview\lib\xamarinios10\Xamarin.Essentials.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Essentials.1.0.1\lib\xamarinios10\Xamarin.Essentials.dll</HintPath>
     </Reference>
     <Reference Include="SQLitePCLRaw.core">
-      <HintPath>..\packages\SQLitePCLRaw.core.1.1.11\lib\Xamarin.iOS10\SQLitePCLRaw.core.dll</HintPath>
+      <HintPath>..\packages\SQLitePCLRaw.core.1.1.13\lib\Xamarin.iOS10\SQLitePCLRaw.core.dll</HintPath>
     </Reference>
     <Reference Include="SQLitePCLRaw.provider.sqlite3">
-      <HintPath>..\packages\SQLitePCLRaw.provider.sqlite3.ios_unified.1.1.11\lib\Xamarin.iOS10\SQLitePCLRaw.provider.sqlite3.dll</HintPath>
+      <HintPath>..\packages\SQLitePCLRaw.provider.sqlite3.ios_unified.1.1.13\lib\Xamarin.iOS10\SQLitePCLRaw.provider.sqlite3.dll</HintPath>
     </Reference>
     <Reference Include="SQLitePCLRaw.batteries_green">
-      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.11\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_green.dll</HintPath>
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.13\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_green.dll</HintPath>
     </Reference>
     <Reference Include="SQLitePCLRaw.batteries_v2">
-      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.11\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_v2.dll</HintPath>
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.13\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_v2.dll</HintPath>
     </Reference>
     <Reference Include="SQLite-net">
       <HintPath>..\packages\sqlite-net-pcl.1.5.231\lib\netstandard1.1\SQLite-net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AppCenter">
-      <HintPath>..\packages\Microsoft.AppCenter.1.11.0\lib\Xamarin.iOS10\Microsoft.AppCenter.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AppCenter.1.13.0\lib\Xamarin.iOS10\Microsoft.AppCenter.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AppCenter.iOS.Bindings">
-      <HintPath>..\packages\Microsoft.AppCenter.1.11.0\lib\Xamarin.iOS10\Microsoft.AppCenter.iOS.Bindings.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AppCenter.1.13.0\lib\Xamarin.iOS10\Microsoft.AppCenter.iOS.Bindings.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AppCenter.Crashes">
-      <HintPath>..\packages\Microsoft.AppCenter.Crashes.1.11.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AppCenter.Crashes.1.13.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AppCenter.Crashes.iOS.Bindings">
-      <HintPath>..\packages\Microsoft.AppCenter.Crashes.1.11.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.iOS.Bindings.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AppCenter.Crashes.1.13.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.iOS.Bindings.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AppCenter.Analytics">
-      <HintPath>..\packages\Microsoft.AppCenter.Analytics.1.11.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AppCenter.Analytics.1.13.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AppCenter.Analytics.iOS.Bindings">
-      <HintPath>..\packages\Microsoft.AppCenter.Analytics.1.11.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.iOS.Bindings.dll</HintPath>
-    </Reference>
-    <Reference Include="MBProgressHUD">
-      <HintPath>..\packages\mbprogresshud.0.9.2.0\lib\Xamarin.iOS\MBProgressHUD.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AppCenter.Analytics.1.13.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.iOS.Bindings.dll</HintPath>
     </Reference>
     <Reference Include="Nager.Date">
-      <HintPath>..\packages\Nager.Date.1.22.3\lib\netstandard2.0\Nager.Date.dll</HintPath>
+      <HintPath>..\packages\Nager.Date.1.24.3\lib\netstandard2.0\Nager.Date.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="Ricardo.MBProgressHUD.iOS">
+      <HintPath>..\packages\Ricardo.MBProgressHUD.iOS.1.1.0\lib\Xamarin.iOS10\Ricardo.MBProgressHUD.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.106.6.7\lib\netstandard2.0\RestSharp.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -179,10 +184,11 @@
     <Folder Include="Util\" />
     <Folder Include="Communication\" />
     <Folder Include="Renderer\" />
-    <Folder Include="Extension\" />
     <Folder Include="Base.lproj\" />
     <Folder Include="Settings.bundle\" />
     <Folder Include="Settings.bundle\Base.lproj\" />
+    <Folder Include="ViewControllers\" />
+    <Folder Include="Service\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -201,21 +207,7 @@
     <Compile Include="Const\EventConst.cs" />
     <Compile Include="Const\FontConst.cs" />
     <Compile Include="Const\PositionTypeConst.cs" />
-    <Compile Include="Util\LangUtil.cs" />
-    <Compile Include="Communication\AppVersionData.cs" />
-    <Compile Include="Util\CloneUtil.cs" />
-    <Compile Include="Util\CryptoUtil.cs" />
-    <Compile Include="Util\DebugUtil.cs" />
-    <Compile Include="Util\DeviceUtil.cs" />
-    <Compile Include="Util\ErrorUtil.cs" />
-    <Compile Include="Util\FlashTextUtil.cs" />
-    <Compile Include="Util\iOSDateUtil.cs" />
     <Compile Include="Util\iOSMapUtil.cs" />
-    <Compile Include="Util\iOSUtil.cs" />
-    <Compile Include="Util\LocalDateUtil.cs" />
-    <Compile Include="Util\NetUtil.cs" />
-    <Compile Include="Util\StoreUtil.cs" />
-    <Compile Include="Util\ViewUtil.cs" />
     <Compile Include="Renderer\MainLocationRowViewCell.cs" />
     <Compile Include="Renderer\MainLocationRowViewCell.designer.cs">
       <DependentUpon>MainLocationRowViewCell.cs</DependentUpon>
@@ -224,37 +216,7 @@
     <Compile Include="Renderer\MainNormalRowViewCell.designer.cs">
       <DependentUpon>MainNormalRowViewCell.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extension\StringExtensions.cs" />
-    <Compile Include="Extension\ViewExtensions.cs" />
     <Compile Include="Util\SVGUtil.cs" />
-    <Compile Include="SettingsViewController.cs" />
-    <Compile Include="SettingsViewController.designer.cs">
-      <DependentUpon>SettingsViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MapViewController.cs" />
-    <Compile Include="MapViewController.designer.cs">
-      <DependentUpon>MapViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InfoViewController.cs" />
-    <Compile Include="InfoViewController.designer.cs">
-      <DependentUpon>InfoViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ConsentViewController.cs" />
-    <Compile Include="ConsentViewController.designer.cs">
-      <DependentUpon>ConsentViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SettingsCoordinateFormatViewController.cs" />
-    <Compile Include="SettingsCoordinateFormatViewController.designer.cs">
-      <DependentUpon>SettingsCoordinateFormatViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MapTopViewController.cs" />
-    <Compile Include="MapTopViewController.designer.cs">
-      <DependentUpon>MapTopViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MapTopCameraViewController.cs" />
-    <Compile Include="MapTopCameraViewController.designer.cs">
-      <DependentUpon>MapTopCameraViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="Renderer\SettingsInfoTableCell.cs" />
     <Compile Include="Renderer\SettingsInfoTableCell.designer.cs">
       <DependentUpon>SettingsInfoTableCell.cs</DependentUpon>
@@ -273,11 +235,6 @@
     </Compile>
     <Compile Include="LocationManager.cs" />
     <Compile Include="Util\UrlUtil.cs" />
-    <Compile Include="Util\LocaleUtil.cs" />
-    <Compile Include="Util\TableUtil.cs" />
-    <Compile Include="Util\KeyboardUtil.cs" />
-    <Compile Include="Util\EmailUtil.cs" />
-    <Compile Include="Util\SpinnerUtil.cs" />
     <Compile Include="Renderer\SettingsCoordinateFormatTableCell.cs" />
     <Compile Include="Renderer\SettingsCoordinateFormatTableCell.designer.cs">
       <DependentUpon>SettingsCoordinateFormatTableCell.cs</DependentUpon>
@@ -290,18 +247,47 @@
     <Compile Include="Renderer\AddressViewCell.designer.cs">
       <DependentUpon>AddressViewCell.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainViewController.cs" />
-    <Compile Include="MainViewController.designer.cs">
-      <DependentUpon>MainViewController.cs</DependentUpon>
+    <Compile Include="ViewControllers\ConsentViewController.cs" />
+    <Compile Include="ViewControllers\ConsentViewController.designer.cs">
+      <DependentUpon>ConsentViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="OnboardingViewController.cs" />
-    <Compile Include="OnboardingViewController.designer.cs">
-      <DependentUpon>OnboardingViewController.cs</DependentUpon>
+    <Compile Include="ViewControllers\InfoViewController.cs" />
+    <Compile Include="ViewControllers\InfoViewController.designer.cs">
+      <DependentUpon>InfoViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="InitialViewController.cs" />
-    <Compile Include="InitialViewController.designer.cs">
+    <Compile Include="ViewControllers\InitialViewController.cs" />
+    <Compile Include="ViewControllers\InitialViewController.designer.cs">
       <DependentUpon>InitialViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewControllers\MainViewController.cs" />
+    <Compile Include="ViewControllers\MainViewController.designer.cs">
+      <DependentUpon>MainViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\MapTopCameraViewController.cs" />
+    <Compile Include="ViewControllers\MapTopCameraViewController.designer.cs">
+      <DependentUpon>MapTopCameraViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\MapTopViewController.cs" />
+    <Compile Include="ViewControllers\MapTopViewController.designer.cs">
+      <DependentUpon>MapTopViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\MapViewController.cs" />
+    <Compile Include="ViewControllers\MapViewController.designer.cs">
+      <DependentUpon>MapViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\OnboardingViewController.cs" />
+    <Compile Include="ViewControllers\OnboardingViewController.designer.cs">
+      <DependentUpon>OnboardingViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\SettingsCoordinateFormatViewController.cs" />
+    <Compile Include="ViewControllers\SettingsCoordinateFormatViewController.designer.cs">
+      <DependentUpon>SettingsCoordinateFormatViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\SettingsViewController.cs" />
+    <Compile Include="ViewControllers\SettingsViewController.designer.cs">
+      <DependentUpon>SettingsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\IOSApplicationService.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ic_info.png" />
@@ -401,6 +387,8 @@
     <BundleResource Include="Resources\ic_btn_placeholder%402x.png" />
     <BundleResource Include="Resources\ic_btn_placeholder%403x.png" />
   </ItemGroup>
+  <Import Project="..\..\..\SNLA-app\SNLA.iOS\SNLA.iOS.projitems" Label="Shared" Condition="Exists('..\..\..\SNLA-app\SNLA.iOS\SNLA.iOS.projitems')" />
+  <Import Project="..\..\..\SNLA-app\SNLA.Core\SNLA.Core.projitems" Label="Shared" Condition="Exists('..\..\..\SNLA-app\SNLA.Core\SNLA.Core.projitems')" />
   <Import Project="..\Henspe.Core\Henspe.Core.projitems" Label="Shared" Condition="Exists('..\Henspe.Core\Henspe.Core.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

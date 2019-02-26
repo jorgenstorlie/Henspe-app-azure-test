@@ -27,7 +27,7 @@ namespace Henspe.Core.Util
 
             var appVersionLastDelimiterIndex = AppInfo.VersionString.LastIndexOf('.');
             var appVersion = AppInfo.VersionString.Substring(0, appVersionLastDelimiterIndex);
-            var osVersion = DeviceInfo.Platform.ToLower();
+            var osVersion = DeviceInfo.Platform.ToString().ToLower();
 
             var urlPath = string.Empty;
 
@@ -62,7 +62,7 @@ namespace Henspe.Core.Util
 
             var url = $"{UrlBase}{urlPath}.html";
 
-            return url;
+            return System.Text.RegularExpressions.Regex.Escape(url);
         }
     }
 }

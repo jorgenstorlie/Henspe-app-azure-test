@@ -15,9 +15,5 @@ namespace Henspe.Core.Model.Dto
 		public string avsender_sms { get; set; }
 		public string avsender_mail { get; set; }
 		public int pin_kode { get; set; }
-
-		public BrukerDto ()
-		{
-		}
 	}
 }
