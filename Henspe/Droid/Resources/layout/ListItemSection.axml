@@ -9,11 +9,12 @@
     android:paddingTop="0dp"
     android:paddingBottom="0dp">
     <LinearLayout
+           android:id="@+id/headerbg"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
          android:gravity="center_horizontal"
-           android:background="@color/header_background"
+           android:background="@color/evenrow"
          android:paddingBottom="5dp"
         android:paddingTop="0dp">
     
@@ -22,7 +23,7 @@
                 style="@style/HeaderText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_header"
+                android:textColor="@color/color_snla_red"
                 tools:text="Description"
         
                 android:gravity="center" />

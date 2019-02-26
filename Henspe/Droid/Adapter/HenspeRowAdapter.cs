@@ -244,6 +244,15 @@ namespace Henspe.Droid
             {
                 var viewHolder = (holder as ItemViewHolder);
 
+                Color t;
+                if (IsOdd(indexPath.SectionIndex))
+                    t = new Color(ContextCompat.GetColor(activity, Resource.Color.evenrow));
+                else
+                    t = new Color(ContextCompat.GetColor(activity, Resource.Color.oddrow));
+
+                viewHolder.layout.SetBackgroundColor(t);
+
+
 
                 // description
                 viewHolder.description.Text = henspeRowModel.description;
@@ -292,9 +301,11 @@ namespace Henspe.Droid
                 //   viewHolder.image.ImageAlpha = 0;
 
 
-                Color t = new Android.Graphics.Color(ContextCompat.GetColor(activity, Resource.Color.text_normal));
+                //  Color t = new Android.Graphics.Color(ContextCompat.GetColor(activity, Resource.Color.text_normal));
 
-                viewHolder.image.SetColorFilter(t);
+                Color tt = new Android.Graphics.Color(ContextCompat.GetColor(activity, Resource.Color.icon_color));
+
+                viewHolder.image.SetColorFilter(tt);
 
                 //    viewHolder.image.ScaleX = henspeRowModel.percent;
                 //    viewHolder.image.ScaleY = henspeRowModel.percent;
@@ -326,6 +337,10 @@ namespace Henspe.Droid
             return viewHolder;
         }
 
+        public static bool IsOdd(int value)
+        {
+            return value % 2 != 0;
+        }
         /// <summary>
         /// Let's populate Section views
         /// </summary>
@@ -357,7 +372,13 @@ namespace Henspe.Droid
             if (viewHolder.header != null)
                 viewHolder.header.Text = viewHolder.description.Text[0].ToString();
 
+            Color t;
+            if (IsOdd(sectionIndex))
+                t = new Color(ContextCompat.GetColor(activity, Resource.Color.evenrow));
+            else
+                t = new Color(ContextCompat.GetColor(activity, Resource.Color.oddrow));
 
+            viewHolder.layout.SetBackgroundColor(t);
         }
 
         /// <summary>
@@ -423,12 +444,14 @@ namespace Henspe.Droid
         internal class SectionViewHolder : RecyclerView.ViewHolder
         {
             //    public ImageView image { get; set; }
+            public LinearLayout layout { get; set; }
             public TextView description { get; set; }
             public TextView header { get; set; }
 
             public SectionViewHolder(global::Android.Views.View itemView) : base(itemView)
             {
                 //    this.image = itemView.FindViewById<ImageView>(Resource.Id.image);
+                this.layout = itemView.FindViewById<LinearLayout>(Resource.Id.headerbg);
                 this.description = itemView.FindViewById<TextView>(Resource.Id.description);
                 this.header = itemView.FindViewById<TextView>(Resource.Id.header);
             }

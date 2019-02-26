@@ -41,7 +41,7 @@ namespace Henspe.Droid
 
 		public void UpdateLocation(Location location)
 		{
-			throw new NotImplementedException();
+		//	throw new NotImplementedException();
 		}
 
 	}

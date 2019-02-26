@@ -19,5 +19,10 @@ namespace SNLA.Core.Util
 		public ConsentAgreed consentAgreed { get; set; }
 		public bool onboardingCompleted { get; set; }
 		public string cameraLastSyncId { get; set; }
-	}
+
+        public void Upgrade()
+        {
+        }
+
+    }
 }

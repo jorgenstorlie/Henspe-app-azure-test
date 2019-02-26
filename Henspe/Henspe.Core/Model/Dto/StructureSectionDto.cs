@@ -15,9 +15,9 @@ namespace Henspe.Core.Model.Dto
 			this.image = image;
 		}
 
-		public void AddStructureElement(StructureElementDto.ElementType elementType, string description, string image, float percent)
+		public void AddStructureElement(StructureElementDto.ElementType elementType, string description, string image)
         {
-			StructureElementDto structureElementDto = new StructureElementDto(elementType, description, image, percent);
+			StructureElementDto structureElementDto = new StructureElementDto(elementType, description, image);
             structureElementList.Add(structureElementDto);
         }
 	}

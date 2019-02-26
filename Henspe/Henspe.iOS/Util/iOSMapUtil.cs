@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using Henspe.Core.Const;
 using CoreGraphics;
 using UIKit;
+using SNLA.Core.Const;
 
 namespace Henspe.iOS.Util
 {

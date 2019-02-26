@@ -228,7 +228,7 @@
       <HintPath>..\packages\Xamarin.Android.Support.ViewPager.28.0.0.1\lib\monoandroid90\Xamarin.Android.Support.ViewPager.dll</HintPath>
     </Reference>
     <Reference Include="Nager.Date">
-      <HintPath>..\packages\Nager.Date.1.24.3\lib\netstandard2.0\Nager.Date.dll</HintPath>
+      <HintPath>..\packages\Nager.Date.1.24.5\lib\netstandard2.0\Nager.Date.dll</HintPath>
     </Reference>
     <Reference Include="AndHUD">
       <HintPath>..\packages\AndHUD.1.4.1\lib\MonoAndroid81\AndHUD.dll</HintPath>
@@ -317,8 +317,6 @@
     <AndroidResource Include="Resources\menu\MenuBase.xml" />
     <AndroidResource Include="Resources\menu\MenuHome.xml" />
     <AndroidResource Include="Resources\menu\menu_main.xml" />
-    <AndroidResource Include="Resources\drawable\button_info.xml" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_info_down.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\ic_info_down.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_info_down.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_info_down.png" />
@@ -336,7 +334,6 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\image_splash_logo.png" />
     <AndroidResource Include="Resources\drawable-mdpi\image_splash_logo.png" />
     <AndroidResource Include="Resources\drawable\drawable_logo_white.xml" />
-     <AndroidResource Include="Resources\drawable\bg_border_blue_round_btn.xml" />
     <AndroidResource Include="Resources\drawable\drawable_logo_no_text.xml" />
     <AndroidResource Include="Resources\drawable\drawable_logo_textright.xml" />
     <AndroidResource Include="Resources\layout\henspe_fragment.axml" />
@@ -365,6 +362,9 @@
                     <AndroidResource Include="Resources\drawable\default_dot.xml" />
                       
                     <AndroidResource Include="Resources\layout\position_fragment.axml" />
+                    <AndroidResource Include="Resources\drawable\ic_3.xml" />
+                    <AndroidResource Include="Resources\drawable\ic_2.xml" />
+                    <AndroidResource Include="Resources\drawable\ic_1.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />

@@ -7,7 +7,6 @@ namespace Henspe.Core.Model.Dto
         public ElementType elementType;
         public string description { get; set; }
         public string image { get; set; }
-        public float percent { get; set; }
         public string sectionName { get; set; }
 
         public enum ElementType
@@ -17,12 +16,11 @@ namespace Henspe.Core.Model.Dto
             Address,
         };
 
-        public StructureElementDto(ElementType elementType, string description, string image, float percent)
+        public StructureElementDto(ElementType elementType, string description, string image)
         {
             this.elementType = elementType;
             this.description = description;
             this.image = image;
-            this.percent = percent;
         }
     }
 }

@@ -25,12 +25,12 @@ namespace Henspe.Droid
         {
             base.OnCreate(savedInstanceState);
             Intent intent = null;
-           
-         
+
+
             if (UserUtil.Current.onboardingCompleted)
                 intent = new Intent(this, typeof(MainNew));
             else
-           intent = new Intent(this, typeof(OnBoardingActivity));
+                intent = new Intent(this, typeof(OnBoardingActivity));
 
             intent.AddFlags(ActivityFlags.ClearTop);
             intent.AddFlags(ActivityFlags.SingleTop);

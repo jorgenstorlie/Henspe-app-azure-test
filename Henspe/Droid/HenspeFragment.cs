@@ -207,7 +207,7 @@ namespace Henspe.Droid
 
                 foreach (StructureElementDto structureElementDto in structureSectionDto.structureElementList)
                 {
-                    HenspeRowModel henspeRowModel = new HenspeRowModel(structureElementDto.elementType, structureElementDto.description, structureElementDto.image, structureElementDto.percent);
+                    HenspeRowModel henspeRowModel = new HenspeRowModel(structureElementDto.elementType, structureElementDto.description, structureElementDto.image);
 
                     if (result.ContainsKey(key))
                     {

@@ -23,7 +23,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:scaleType="fitCenter"
-                    android:background="@drawable/button_info"
+                  android:src="@drawable/ic_quartro"
                     android:layout_marginLeft="19dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="3dp" />

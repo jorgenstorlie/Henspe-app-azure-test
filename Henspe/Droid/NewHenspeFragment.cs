@@ -9,31 +9,17 @@ using System.Collections.Generic;
 using System;
 using Henspe.Core.Service;
 using Henspe.Core.Model.Dto;
-using Henspe.Droid.Adapters;
 using Android.Locations;
-//using Android.Gms.Location;
-//using Android.Gms.Common.Apis;
 using Android;
 using Android.Content.PM;
-using static Android.Support.V4.App.ActivityCompat;
-using AlertDialog = Android.Support.V7.App.AlertDialog;
-using ClipboardManager = Android.Content.ClipboardManager;
 using Geocoder = Android.Locations.Geocoder;
 using Android.Support.V7.Widget;
-using static Android.Media.Audiofx.BassBoost;
-using Android.Arch.Lifecycle;
-using static Android.Views.View;
-using Android.Support.Design.Widget;
-using Android.Gms.Tasks;
 using Android.Support.V13.App;
 using Android.Gms.Location;
 using Android.Gms.Common.Apis;
 using Android.Gms.Common;
-using Henspe.Core.Communication;
-using Android.Runtime;
 using Android.Support.V7.App;
 using Fragment = Android.Support.V4.App.Fragment;
-using Android.Graphics;
 
 namespace Henspe.Droid
 {
@@ -44,11 +30,8 @@ namespace Henspe.Droid
         private HenspeRowAdapter _itemsAdapter;
         private Spinner _spiFilter;
         private bool createdFinished = false;
-
         private RecyclerView _recyclerView;
-     
         private bool viewCreated = false;
-      
         private ViewGroup root;
         
         // GPS
@@ -69,8 +52,7 @@ namespace Henspe.Droid
 
         public override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState);
-            
+            base.OnCreate(savedInstanceState); 
             viewCreated = false;
             SetupStrings();
             CheckGrantedGps();
@@ -185,7 +167,7 @@ namespace Henspe.Droid
 
                 foreach (StructureElementDto structureElementDto in structureSectionDto.structureElementList)
                 {
-                    HenspeRowModel henspeRowModel = new HenspeRowModel(structureElementDto.elementType, structureElementDto.description, structureElementDto.image, structureElementDto.percent);
+                    HenspeRowModel henspeRowModel = new HenspeRowModel(structureElementDto.elementType, structureElementDto.description, structureElementDto.image);
 
                     if (result.ContainsKey(key))
                     {
