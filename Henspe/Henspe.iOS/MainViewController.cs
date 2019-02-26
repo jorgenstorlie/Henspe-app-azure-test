@@ -134,20 +134,20 @@ namespace Henspe.iOS
 
         private void RefreshPositionRow()
         {
-            RefreshTableRow(1, MainListTableViewSource.LocationRow);
+            RefreshTableRow(1, MainListTableViewSource.locationRow);
         }
 
         private void RefreshAddressRow()
         {
-            RefreshTableRow(1, MainListTableViewSource.AddressRow);
+            RefreshTableRow(1, MainListTableViewSource.addressRow);
         }
 
         public void RefreshPositionAndAddressRows()
         {
             NSIndexPath[] indexPathList = 
             {
-                NSIndexPath.FromRowSection(MainListTableViewSource.LocationRow, 1),
-                NSIndexPath.FromRowSection(MainListTableViewSource.AddressRow, 1),
+                NSIndexPath.FromRowSection(MainListTableViewSource.locationRow, 1),
+                NSIndexPath.FromRowSection(MainListTableViewSource.addressRow, 1),
             };
 
             myTableView.ReloadRows(indexPathList, UITableViewRowAnimation.Fade);
@@ -175,12 +175,26 @@ namespace Henspe.iOS
             });
         }
 
+        public void RowSelected(NSIndexPath indexPath, bool selected)
+        {
+            if (indexPath.Section == MainListTableViewSource.exactPostitionSection && indexPath.Row == 0)
+            {
+                InvokeOnMainThread(delegate
+                {
+                    this.PerformSegue("segueMap", this);
+                });
+            }
+        }
+
         public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
         {
             if (segue.Identifier == "segueConsent")
             {
             }
             else if (segue.Identifier == "segueSettings")
+            {
+            }
+            else if (segue.Identifier == "segueMap")
             {
             }
         }
@@ -194,9 +208,10 @@ namespace Henspe.iOS
     // Table view source
     public partial class MainListTableViewSource : UITableViewSource
     {
-        public const int LocationRow = 1;
-        public const int AddressRow = 2;
-        public int selectedSegment = 0;
+        public const int locationRow = 1;
+        public const int addressRow = 2;
+
+        public const int exactPostitionSection = 1;
 
         private int headerHeight = 80;
         private WeakReference<MainViewController> _parent;
@@ -356,12 +371,14 @@ namespace Henspe.iOS
             }
         }
 
-        void SegmentedCell_SegmentSelected(object sender, int e)
+        public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
-            selectedSegment = e;
-            if (!_parent.TryGetTarget(out MainViewController parent))
-                return;
-            parent.RefreshPositionAndAddressRows();
+            MainViewController parent;
+            if (_parent.TryGetTarget(out parent))
+            {
+                parent.RowSelected(indexPath, true);
+                tableView.DeselectRow(indexPath, false);
+            }
         }
     }
 }

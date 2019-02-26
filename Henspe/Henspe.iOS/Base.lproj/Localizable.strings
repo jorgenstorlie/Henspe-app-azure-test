@@ -195,3 +195,5 @@ RegEmail.Placeholder = "Din e-postadresse";
 RegEmail.Button = "OK";
 RegEmail.Success = "Takk!";
 RegEmail.Failed = "Noe gikk galt under registreringen";
+
+// Map

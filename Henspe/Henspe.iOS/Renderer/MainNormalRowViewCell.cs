@@ -23,6 +23,7 @@ namespace Henspe.iOS
 
             labLabel.TextColor = ColorConst.snlaText;
             labLabel.Text = structureElement.description;
+
             viewImageContainer.BackgroundColor = UIColor.Clear;
             if (_constraint != null)
             {

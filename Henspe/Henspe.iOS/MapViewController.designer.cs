@@ -19,7 +19,10 @@ namespace Henspe.iOS
 		UIKit.UIButton btnZoomHome { get; set; }
 
 		[Outlet]
-		UIKit.UIView map { get; set; }
+		UIKit.NSLayoutConstraint constraintInfoHeight { get; set; }
+
+		[Outlet]
+		MapKit.MKMapView map { get; set; }
 
 		[Outlet]
 		UIKit.UIView viewInfo { get; set; }
@@ -32,6 +35,11 @@ namespace Henspe.iOS
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (map != null) {
+				map.Dispose ();
+				map = null;
+			}
+
 			if (btnMapType != null) {
 				btnMapType.Dispose ();
 				btnMapType = null;
@@ -42,14 +50,14 @@ namespace Henspe.iOS
 				btnZoomHome = null;
 			}
 
+			if (constraintInfoHeight != null) {
+				constraintInfoHeight.Dispose ();
+				constraintInfoHeight = null;
+			}
+
 			if (viewInfo != null) {
 				viewInfo.Dispose ();
 				viewInfo = null;
-			}
-
-			if (map != null) {
-				map.Dispose ();
-				map = null;
 			}
 		}
 	}
