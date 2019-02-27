@@ -20,8 +20,9 @@ namespace SNLA.Core.Util
 		public bool onboardingCompleted { get; set; }
 		public string cameraLastSyncId { get; set; }
 
-        public void Upgrade()
+        public bool Upgrade()
         {
+            return false;
         }
 
     }

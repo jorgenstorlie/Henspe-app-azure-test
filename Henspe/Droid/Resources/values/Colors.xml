@@ -20,49 +20,19 @@
     <color name="default_color_white_alpha_70">#B3ffffff</color>
     <color name="default_color_white_alpha_80">#CCffffff</color>
     <color name="default_color_white_alpha_90">#E6ffffff</color>
-    
-        <color name="bg_color">#F8F5F3</color>
-        <color name="bg_color2">#F3F0EE</color>
-           <color name="icon_color">#838282</color>
-    
-    <!--   color for Splash -->
-    <color name="primarySplash">@color/color_snla_red</color>
-    <color name="primaryDarkSplash">@color/color_snla_red_700</color>
-    <color name="primaryLightSplash">@color/color_snla_red_200</color>
-    <color name="splash_background">@color/color_snla_red</color>
-    <!--   color for Onboarding -->
-    <color name="primaryOnboarding">@color/color_snla_red</color>
-    <color name="primaryDarkOnboarding">@color/color_snla_red_700</color>
-    <color name="primaryLightOnboarding">@color/color_snla_red_200</color>
-    <color name="text_normalOnboarding">#ffffff</color>
-    <!--   color for Main -->
-    <color name="primary">#ffffff</color>
-    <color name="primaryDark">@color/color_snla_grey700</color>
-    <color name="primaryLight">@color/color_snla_grey200</color>
-    <color name="ColorPrimary">#ffffff</color>
-    <color name="evenrow">@color/bg_color</color>
-        <color name="oddrow">@color/bg_color2</color>
-    <color name="text_white">#ffffff</color>
-    <color name="text_normal">#4a4a4a</color>
-    <color name="text_info">#a2a2a2</color>
-    <color name="text_header">#4a4a4a</color>
-    <color name="text_main">#333333</color>
-    <color name="background_nla_white">#ffffff</color>
-    <!--   color for the app bar and other primary UI elements -->
-    <!--   a secondary color for controls like checkboxes and text fields -->
-    <color name="colorAccent">#e20221</color>
-    <color name="accent">#FFC107</color>
-    <color name="window_background">#ffffff</color>
-    <color name="page_indicator_selected_color">@color/color_snla_red_200</color>
-    <color name="page_indicator_default_color">@color/window_background</color>
-    
-    
-    
-     <!-- Theme colors -->
+    <color name="bg_color">#F8F5F3</color>
+    <color name="bg_color2">#F3F0EE</color>
+    <color name="icon_color">#838282</color>
+    <!-- Theme colors -->
     <color name="colorPrimary">@color/color_snla_blue</color>
     <color name="colorPrimaryDark">@color/color_snla_blue_700</color>
     <color name="colorPrimaryLight">@color/color_snla_blue_100</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorToolBar">@color/bg_color</color>
+    <color name="colorStatusBar">@color/colorPrimaryDark</color>
+    <color name="colorBackGround">@color/bg_color</color>
+    <color name="evenrow">@color/bg_color</color>
+    <color name="oddrow">@color/bg_color2</color>
     <color name="colorSplashPrimary">#ffffff</color>
     <color name="colorSplashPrimaryDark">#333333</color>
     <color name="colorSplashAccent">@color/color_snla_blue</color>
@@ -76,11 +46,23 @@
     <color name="colorGroupBackGround">@color/colorGray</color>
     <color name="colorPrimaryText">#de000000</color>
     <color name="colorLinkText">@color/colorLink</color>
-    
-    
-    <color name="theme_color">#ffffff</color>
-     <color name="theme_accent">@color/colorPrimary</color>
-     <color name="theme_color_darker">#333333</color>
-    <color name="status_bar">@color/colorPrimaryDark</color>
-    
+    <color name="colorOnboardingPrimary">@color/color_snla_blue</color>
+    <color name="colorOnboardingPrimaryDark">@color/color_snla_blue</color>
+    <color name="colorOnboardingPrimaryLight">@color/color_snla_red_200</color>
+    <color name="colorOnboardingAccent">@color/color_snla_blue</color>
+    <color name="colorOnboardingBackground">@color/bg_color</color>
+    <color name="colorOnboardingStatusBar">@color/color_snla_blue</color>
+    <color name="colorOnboardingText">@color/color_snla_red</color>
+    <!--   color for Main -->
+    <color name="text_white">#ffffff</color>
+    <color name="text_normal">#4a4a4a</color>
+    <color name="text_info">#a2a2a2</color>
+    <color name="text_header">#4a4a4a</color>
+    <color name="text_main">#333333</color>
+    <!--   color for the app bar and other primary UI elements -->
+    <!--   a secondary color for controls like checkboxes and text fields -->
+    <color name="window_background">#ffffff</color>
+    <color name="page_indicator_selected_color">@color/color_snla_red_200</color>
+    <color name="page_indicator_default_color">@color/window_background</color>
+    <color name="graystatusbar">#818181</color>
 </resources>

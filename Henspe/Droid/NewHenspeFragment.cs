@@ -26,14 +26,13 @@ namespace Henspe.Droid
     class NewHenspeFragment : Fragment, Android.Gms.Location.ILocationListener, GoogleApiClient.IConnectionCallbacks, GoogleApiClient.IOnConnectionFailedListener
     {
         public const string parameterSelectedBase = "com.computas.latsamband.onduty.selectedBase";
-
         private HenspeRowAdapter _itemsAdapter;
         private Spinner _spiFilter;
         private bool createdFinished = false;
         private RecyclerView _recyclerView;
         private bool viewCreated = false;
         private ViewGroup root;
-        
+
         // GPS
         private GoogleApiClient apiClient;
         private LocationManager locationManager;
@@ -52,7 +51,7 @@ namespace Henspe.Droid
 
         public override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState); 
+            base.OnCreate(savedInstanceState);
             viewCreated = false;
             SetupStrings();
             CheckGrantedGps();
@@ -88,22 +87,18 @@ namespace Henspe.Droid
         }
 
         public override global::Android.Views.View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
- {
+        {
             root = (ViewGroup)inflater.Inflate(Resource.Layout.henspe_fragment, container, false);
 
             // Recycler View
             _recyclerView = root.FindViewById<RecyclerView>(Resource.Id.recyclerView);
             _recyclerView.NestedScrollingEnabled = true;
 
-          Dictionary<HenspeSectionModel, List<HenspeRowModel>> henspeRowDictionary = PopulateList();
-          _itemsAdapter = new HenspeRowAdapter(henspeRowDictionary, this.Activity as AppCompatActivity);
-          _recyclerView.SetAdapter(_itemsAdapter);
-          _recyclerView.SetLayoutManager(new LinearLayoutManager(this.Activity) { Orientation = LinearLayoutManager.Vertical });
-       
-          viewCreated = true;
-
-            int paddingTop = 30;
-            _recyclerView.SetPadding(0,40,0,0);
+            Dictionary<HenspeSectionModel, List<HenspeRowModel>> henspeRowDictionary = PopulateList();
+            _itemsAdapter = new HenspeRowAdapter(henspeRowDictionary, this.Activity as AppCompatActivity);
+            _recyclerView.SetAdapter(_itemsAdapter);
+            _recyclerView.SetLayoutManager(new LinearLayoutManager(this.Activity) { Orientation = LinearLayoutManager.Vertical });
+            viewCreated = true;
 
             return root;
         }
@@ -118,7 +113,6 @@ namespace Henspe.Droid
             south = Resources.GetString(Resource.String.Location_Element_South_Text);
             west = Resources.GetString(Resource.String.Location_Element_West_Text);
         }
-
 
         public override void OnViewCreated(global::Android.Views.View view, Bundle savedInstanceState)
         {
@@ -181,7 +175,6 @@ namespace Henspe.Droid
                     }
                 }
             }
-
             return result;
         }
 
@@ -199,8 +192,8 @@ namespace Henspe.Droid
 
         public void RefreshRow(int index)
         {
-        //jls    if (viewCreated && _itemsAdapter != null)
-        //jls        _itemsAdapter.NotifyItemChanged(index);
+            //jls    if (viewCreated && _itemsAdapter != null)
+            //jls        _itemsAdapter.NotifyItemChanged(index);
         }
 
         #region GPS
@@ -214,7 +207,7 @@ namespace Henspe.Droid
         private void SetupApiClient()
         {
             Console.WriteLine("SetupApiClient 1");
-            if(apiClient == null)
+            if (apiClient == null)
             {
                 Console.WriteLine("SetupApiClient 2");
                 apiClient = new GoogleApiClient.Builder(Activity, this, this).AddApi(LocationServices.API).Build();
@@ -246,7 +239,7 @@ namespace Henspe.Droid
         private void SetupLocationRequest()
         {
             Console.WriteLine("SetupLocationRequest 1");
-            if(locationRequest == null)
+            if (locationRequest == null)
             {
                 Console.WriteLine("SetupLocationRequest 2");
                 locationRequest = new LocationRequest();
@@ -267,30 +260,30 @@ namespace Henspe.Droid
 
             Console.WriteLine("RequestLocation 3");
             locationManager = (LocationManager)Context.GetSystemService(Context.LocationService);
-            if(locationManager != null)
+            if (locationManager != null)
             {
                 Console.WriteLine("RequestLocation 3");
                 Henspe.Current.myLocation = locationManager.GetLastKnownLocation(LocationManager.GpsProvider);
             }
 
             Console.WriteLine("RequestLocation 5");
-           UpdateLocation(Henspe.Current.myLocation);
+            UpdateLocation(Henspe.Current.myLocation);
         }
 
         private bool CheckLocationServiceAvailability()
         {
             locationManager = (LocationManager)Context.GetSystemService(Context.LocationService);
 
-            if(locationManager != null)
+            if (locationManager != null)
             {
                 bool gpsProviderEnabled = locationManager.IsProviderEnabled(LocationManager.GpsProvider);
                 bool networkProviderEnabled = locationManager.IsProviderEnabled(LocationManager.NetworkProvider);
-            
+
                 return isGrantedPermissionGps && (gpsProviderEnabled || networkProviderEnabled);
             }
             else
             {
-                return false;   
+                return false;
             }
         }
 
@@ -321,12 +314,12 @@ namespace Henspe.Droid
             if (location != null)
             {
                 Console.WriteLine("UpdateLocation 2");
-				Henspe.Current.PositionFragment?.UpdateLocation(location);
+                Henspe.Current.PositionFragment?.UpdateLocation(location);
 
-            //    Cre   atePositionTex
+                //    Cre   atePositionTex
                 //  sitionRow(location);
-             //   CreateAddre
-           //    AddressRow(location);
+                //   CreateAddre
+                //    AddressRow(location);
             }
             else
             {

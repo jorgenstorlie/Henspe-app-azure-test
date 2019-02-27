@@ -19,7 +19,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/primary"
+            android:background="@color/colorToolBar"
           >
             
                <ImageView
@@ -38,39 +38,15 @@
            
       </android.support.v7.widget.Toolbar>
 
-     <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="10dp"
-  >
-  
-            
-            <Button
-                android:id="@+id/fragmentlocation_siteNavigate"
-         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4sp"
-                android:paddingLeft="10sp"
-                android:paddingRight="10sp"
-                android:text="@string/Info_Help"
-                android:textAllCaps="false"
-                android:textSize="@dimen/text_size_small" />
-            
-            
-
-
-</LinearLayout>
-        
+   
 </android.support.design.widget.AppBarLayout>
 
   <FrameLayout
             android:background="@color/window_background"
-              android:paddingTop="100dp"  
+               app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:id="@+id/sample_content_fragment"
-          app:layout_anchor="@id/appBar"
-        app:layout_anchorGravity="bottom|left|end"
+     
+       
       android:layout_width="match_parent"
         android:layout_height="match_parent" />
     

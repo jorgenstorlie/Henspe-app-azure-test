@@ -1,20 +1,22 @@
 ﻿using Android.App;
 using Android.Content;
-using Android.OS;
 using Android.Support.Design.Widget;
-using Android.Support.V7.App;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Views;
+using Android.Content.PM;
+using Android.Runtime;
+using Fragment = Android.Support.V4.App.Fragment;
 
 namespace Henspe.Droid
 {
     [Activity(Label = "MainNew")]
-    public class MainNew : AppCompatActivity
+    public class MainNew : SinglePaneActivity
     {
         NewHenspeFragment henspeFragment;
         private Toolbar toolbar;
         private AppBarLayout appBarLayout;
 
+        /*
         protected override void OnCreate(Bundle savedInstanceState)
         {
             SetTheme(Resource.Style.AppThemeDarkMaterial);
@@ -40,6 +42,13 @@ namespace Henspe.Droid
                 transaction.Replace(Resource.Id.sample_content_fragment, henspeFragment);
                 transaction.Commit();
             }
+        }
+
+    */
+        protected override Fragment OnCreatePane()
+        {
+            henspeFragment = new NewHenspeFragment();
+            return henspeFragment;
         }
 
         private void GoToInfoScreen()
@@ -69,6 +78,14 @@ namespace Henspe.Droid
                 return true;
             }
             return base.OnOptionsItemSelected(item);
+        }
+
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
+        {
+            henspeFragment.InitializeLocationManager();
+            henspeFragment.RequestLocation();
+
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 
     }

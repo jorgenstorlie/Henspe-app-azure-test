@@ -1,26 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
-using Android.Graphics;
 using Android.OS;
-using Android.Runtime;
 using Android.Support.Design.Widget;
-using Android.Support.V4.Content;
 using Android.Support.V4.View;
 using Android.Support.V7.App;
-using Android.Views;
 using Android.Widget;
 using Com.Airbnb.Lottie;
 using Henspe.Droid.Adapter;
 using SNLA.Core.Util;
-
 using Java.Lang;
-
 
 // https://github.com/airbnb/lottie-android/blob/master/LottieSample/src/main/kotlin/com/airbnb/lottie/samples/AppIntroActivity.kt
 
@@ -37,7 +27,7 @@ namespace Henspe.Droid
         private static TextView mNextButton;
         private global::Android.Support.V4.View.ViewPager _mPager;
         private InitialPagerAdapter mPagerAdapter;
-       
+
 
         static int totalPages = 3;
         static int currentPage = 0;
@@ -64,15 +54,15 @@ namespace Henspe.Droid
 
             _mPager = FindViewById<ViewPager>(Resource.Id.onboarding_pager);
             mPagerAdapter = new InitialPagerAdapter(SupportFragmentManager);
-        //    _mPager.Adapter = mPagerAdapter;
+            //    _mPager.Adapter = mPagerAdapter;
 
 
-        //    _mCirclePageIndicator = FindViewById<CirclePageIndicator>(Resource.Id.onboarding_indicator);
-         //   _mCirclePageIndicator.Visibility = ViewStates.Gone;
+            //    _mCirclePageIndicator = FindViewById<CirclePageIndicator>(Resource.Id.onboarding_indicator);
+            //   _mCirclePageIndicator.Visibility = ViewStates.Gone;
 
-   //   var      onboarding_button_bottom = FindViewById<RelativeLayout>(Resource.Id.onboarding_button_bottom);
-     //       onboarding_button_bottom.Visibility = ViewStates.Gone;
-	
+            //   var      onboarding_button_bottom = FindViewById<RelativeLayout>(Resource.Id.onboarding_button_bottom);
+            //       onboarding_button_bottom.Visibility = ViewStates.Gone;
+
             /*
             _mCirclePageIndicator.SetViewPager(_mPager);
             _mCirclePageIndicator.SetSnap(true);
@@ -104,7 +94,7 @@ namespace Henspe.Droid
 
 
             var dots = FindViewById<TabLayout>(Resource.Id.dots);
-         dots.SetupWithViewPager(_mPager, true); // <- magic here
+            dots.SetupWithViewPager(_mPager, true); // <- magic here
 
             _mPager.SetOnPageChangeListener(new CirclePageChangeListener(_mPager, this, animationView));
 
@@ -158,15 +148,15 @@ namespace Henspe.Droid
         private void NavigateToMain()
         {
             UserUtil.Current.onboardingCompleted = true;
-            StartActivity(new Intent(Application.Context, typeof(MainActivity)));
+            StartActivity(new Intent(Application.Context, typeof(MainNew)));
             Finish();
         }
 
         private void NextButtonOnClick(object sender, EventArgs eventArgs)
         {
 
-			//var onboardingCompleted = UserUtil.Current.OnboardingCompleted;
-			if (currentPage == (totalPages - 1))
+            //var onboardingCompleted = UserUtil.Current.OnboardingCompleted;
+            if (currentPage == (totalPages - 1))
             {
                 // Last page
                 NavigateToMain();
@@ -197,7 +187,7 @@ namespace Henspe.Droid
 
         public void OnPageScrollStateChanged(int state)
         {
-        //    throw new NotImplementedException();
+            //    throw new NotImplementedException();
         }
 
         private float[] ANIMATION_TIMES = { 0f, 0.3333f, 0.6666f, 1f, 1f };
@@ -218,7 +208,7 @@ namespace Henspe.Droid
 
 
             if (animationView.Animation == null)
-                animationView.SetAnimation("intro1.json");
+                animationView.SetAnimation("intro.json");
 
             animationView.Progress = Lerp(startProgress, endProgress, positionOffset);
 
@@ -262,7 +252,7 @@ namespace Henspe.Droid
 
 
                 if (animationView.Animation == null)
-                    animationView.SetAnimation("intro1.json");
+                    animationView.SetAnimation("intro.json");
 
                 animationView.Progress = Lerp(startProgress, endProgress, positionOffset);
 

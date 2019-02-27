@@ -1,90 +1,38 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <resources>
     <style name="SplashTheme" parent="SplashTheme.Base">
-        <!-- Set theme colors from http://www.google.com/design/spec/style/color.html#color-color-palette-->
-        <!-- colorPrimary is used for the default action bar background -->
-        <item name="colorPrimary">@color/primarySplash</item>
-        <!-- colorPrimaryDark is used for the status bar -->
-        <item name="colorPrimaryDark">@color/primaryDarkSplash</item>
-        <!-- colorAccent is used as the default value for colorControlActivated
-         which is used to tint widgets -->
-        <item name="colorAccent">@color/accent</item>
+        <item name="colorPrimary">@color/colorSplashPrimary</item>
+        <item name="colorPrimaryDark">@color/colorSplashPrimaryDark</item>
+        <item name="colorAccent">@color/colorSplashAccent</item>
     </style>
     <style name="SplashTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_screen</item>
     </style>
     <style name="AppThemeOnBoarding" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/primaryOnboarding</item>
-        <item name="colorPrimaryDark">@color/primaryDarkOnboarding</item>
-         <item name="android:textColor">@color/text_normalOnboarding</item>
+        <item name="colorPrimary">@color/colorOnboardingPrimary</item>
+        <item name="colorPrimaryDark">@color/colorOnboardingPrimaryDark</item>
+        <item name="android:textColor">@color/colorOnboardingText</item>
+        <item name="colorAccent">@color/colorOnboardingAccent</item>
+        <item name="colorButtonNormal">@color/colorOnboardingAccent</item>
+        <item name="android:windowBackground">@color/colorOnboardingBackground</item>
+        <item name="android:statusBarColor">@color/colorOnboardingStatusBar</item>
+    </style>
+    <style name="AppThemeDarkMaterial" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorButtonNormal">@color/colorAccent</item>
-        <item name="android:windowBackground">@color/primaryOnboarding</item>
-        <item name="android:statusBarColor">@color/primaryDarkOnboarding</item>
-    </style>
-    <style name="AppTheme" parent="AppTheme.Base" />
-    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/primary</item>
-        <item name="colorPrimaryDark">@color/primaryDark</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowActionBar">false</item>
-        
-       
-        
-        
-  <item name="android:statusBarColor">@color/primaryDark</item>
-    </style>
-    
-    
-     <style name="AppThemeDarkMaterial" parent="Theme.MaterialComponents.Light.DarkActionBar">
-        <item name="windowNoTitle">true</item>
-        <item name="windowActionBar">false</item>
-        <item name="colorPrimary">@color/theme_color</item>
-        <item name="colorPrimaryDark">@color/theme_color_darker</item>
-        <item name="colorAccent">@color/theme_accent</item>
-        <item name="colorButtonNormal">@color/theme_accent</item>
-        <item name="android:statusBarColor">@color/status_bar</item>
-        <item name="android:windowBackground">@color/theme_color</item>
+        <item name="android:statusBarColor">@color/colorStatusBar</item>
+        <item name="android:windowBackground">@color/colorBackGround</item>
         <item name="android:colorEdgeEffect">@color/colorPrimary</item>
     </style>
-    
-    
-    
-       <style name="TabLayoutThemes" parent="Widget.Design.TabLayout">
- 
-        <item name="tabIndicatorColor">@color/color_snla_blue</item> 
+    <style name="TabLayoutThemes" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/color_snla_blue</item>
         <item name="tabIndicatorHeight">2dp</item>
         <item name="tabSelectedTextColor">@color/color_snla_red</item>
- 
- 
     </style>
-        
-    
-    <style name="MyTheme.Base" parent="Theme.AppCompat.Light">
-    </style>
-    <style name="MyTheme" parent="MyTheme.Base">
-    </style>
-    <!--style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowNoTitle">true</item>  
-        <item name="android:windowFullscreen">false</item>  
-        <item name="android:windowContentOverlay">@null</item>  
-        <item name="android:windowActionBar">false</item>  
-    </style-->
-    <!--style name="ActionBar" parent="@android:style/Widget.ActionBar">
-        <item name="android:displayOptions">showHome|useLogo</item>
-    </style-->
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-    </style>
-    <!--style name="ToolBarStyle">
-     	<item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
-     	<item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
-    </style-->
-    <!--style name="AppThemeyouaka.ActionBarMenu" parent="ThemeOverlay.AppCompat.Light">
-    </style-->
     <style name="FontBase">
         <item name="android:textColor">@color/text_main</item>
     </style>
@@ -97,14 +45,9 @@
     <style name="FontCondensed" parent="FontBase">
         <item name="android:fontFamily">@font/montserrat</item>
     </style>
-    
-    
-    
-    
-      <style name="HeaderText" parent="FontMedium">
+    <style name="HeaderText" parent="FontMedium">
         <item name="android:textSize">@dimen/text_size_xxlarge</item>
     </style>
-    
     <style name="NormalText" parent="FontMedium">
         <item name="android:textSize">@dimen/text_size_small</item>
     </style>
@@ -112,7 +55,9 @@
         <item name="android:textColor">@color/text_normal</item>
         <item name="android:textSize">@dimen/text_size_medium</item>
     </style>
-    <style name="TextTitle" parent="FontCondensed">         <item name="android:textSize">@dimen/text_size_large</item>     </style>
+    <style name="TextTitle" parent="FontCondensed">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
     <style name="TextHeaderSubWhite">
         <item name="android:textSize">@dimen/text_size_medium</item>
         <item name="android:textStyle">normal</item>
@@ -122,34 +67,23 @@
     <style name="TextSmall" parent="FontCondensed">
         <item name="android:textSize">@dimen/text_size_small</item>
     </style>
-    
-        <style name="OnboardingTextTitle" parent="FontLight">
+    <style name="OnboardingTextTitle" parent="FontLight">
         <item name="android:textSize">@dimen/text_size_large</item>
-           <item name="android:textColor">@color/text_white</item>
+        <item name="android:textColor">@color/colorOnboardingText</item>
     </style>
-    
-     <style name="OnboardingNormalText" parent="FontLight">
+    <style name="OnboardingNormalText" parent="FontLight">
         <item name="android:textSize">@dimen/text_size_small</item>
-           <item name="android:textColor">@color/text_white</item>
+        <item name="android:textColor">@color/colorOnboardingText</item>
     </style>
-    
-     <style name="OnboardingTextButton" parent="FontMedium">
-        <item name="android:textColor">@color/text_white</item>
+    <style name="OnboardingTextButton" parent="FontMedium">
+        <item name="android:textColor">@color/colorOnboardingText</item>
         <item name="android:textSize">@dimen/text_size_medium</item>
     </style>
-    
-    
-         <style name="ButtonStroked" parent="Widget.AppCompat.Button.Colored">
-     
-
+    <style name="ButtonStroked" parent="Widget.AppCompat.Button.Colored">
         <item name="android:textAllCaps">true</item>
-   
         <item name="android:minHeight">36dp</item>
         <item name="android:layout_height">36dp</item>
         <item name="android:paddingStart">4dp</item>
         <item name="android:paddingEnd">4dp</item>
     </style>
-    
- 
-    
 </resources>

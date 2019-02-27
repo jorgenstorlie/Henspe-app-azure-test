@@ -257,12 +257,9 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Adapter\InitialPagerAdapter.cs" />
-    <Compile Include="MainActivity.cs" />
     <Compile Include="OnBoardingActivity.cs" />
     <Compile Include="OnBoardingItemFragment.cs" />
-    <Compile Include="HenspeFragment.cs" />
     <Compile Include="SinglePaneActivity.cs" />
-    <Compile Include="Const\EventsConst.cs" />
     <Compile Include="Model\HenspeRowModel.cs" />
     <Compile Include="Adapter\SectionedRecyclerViewAdapter.cs" />
     <Compile Include="Adapter\HenspeRowAdapter.cs" />
@@ -280,7 +277,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\MainNew.axml" />
-    <AndroidResource Include="Resources\layout\Main.axml" />
     <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png" />
@@ -305,11 +301,9 @@
     <AndroidResource Include="Resources\values\Styles.xml" />
     <AndroidResource Include="Resources\layout\acivity_onboarding.axml" />
     <AndroidResource Include="Resources\layout\onboarding_fragment.axml" />
-    <AndroidResource Include="Resources\layout\ActivityBase.axml" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_snla.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\ic_snla.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_snla.png" />
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_snla.png" />
     <AndroidResource Include="Resources\layout\HenspeRow.axml" />
     <AndroidResource Include="Resources\layout\FragmentHenspeList.axml" />
     <AndroidResource Include="Resources\layout\ListItemSection.axml" />
@@ -317,10 +311,6 @@
     <AndroidResource Include="Resources\menu\MenuBase.xml" />
     <AndroidResource Include="Resources\menu\MenuHome.xml" />
     <AndroidResource Include="Resources\menu\menu_main.xml" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_info_down.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_info_down.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_info_down.png" />
-    <AndroidResource Include="Resources\animator\abc_fade_out.xml" />
     <AndroidResource Include="Resources\font\montserrat.xml" />
     <AndroidResource Include="Resources\font\montserrat_regular.ttf" />
     <AndroidResource Include="Resources\font\montserrat_light.ttf" />
@@ -328,28 +318,20 @@
     <AndroidResource Include="Resources\drawable\splash_screen.xml" />
     <AndroidResource Include="Resources\values-v19\styles.xml" />
     <AndroidResource Include="Resources\values-v21\styles.xml" />
-    <AndroidResource Include="Resources\drawable-hdpi\image_splash_logo.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\image_splash_logo.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\image_splash_logo.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\image_splash_logo.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\image_splash_logo.png" />
     <AndroidResource Include="Resources\drawable\drawable_logo_white.xml" />
     <AndroidResource Include="Resources\drawable\drawable_logo_no_text.xml" />
     <AndroidResource Include="Resources\drawable\drawable_logo_textright.xml" />
     <AndroidResource Include="Resources\layout\henspe_fragment.axml" />
     
-     <AndroidResource Include="Resources\drawable\ic_begrenset.xml" />
          <AndroidResource Include="Resources\drawable\ic_brann.xml" />
               <AndroidResource Include="Resources\drawable\ic_evakuering.xml" />
                    <AndroidResource Include="Resources\drawable\ic_farer.xml" />
                         <AndroidResource Include="Resources\drawable\ic_flaskehalser.xml" />
                              <AndroidResource Include="Resources\drawable\ic_pasienter.xml" />
-                                  <AndroidResource Include="Resources\drawable\ic_quartro.xml" />
                                        <AndroidResource Include="Resources\drawable\ic_rett.xml" />
                                             <AndroidResource Include="Resources\drawable\ic_sikkerhet.xml" />
                                                  <AndroidResource Include="Resources\drawable\ic_skademekanikk.xml" />
                                               <AndroidResource Include="Resources\drawable\ic_oppmotested.xml" />
-        <AndroidResource Include="Resources\drawable\ic_type.xml" />
         <AndroidResource Include="Resources\drawable\ic_trafikk.xml" />
           <AndroidResource Include="Resources\drawable\ic_posisjon.xml" />
               <AndroidResource Include="Resources\drawable\ic_adresse.xml" />
@@ -365,6 +347,13 @@
                     <AndroidResource Include="Resources\drawable\ic_3.xml" />
                     <AndroidResource Include="Resources\drawable\ic_2.xml" />
                     <AndroidResource Include="Resources\drawable\ic_1.xml" />
+                    <AndroidResource Include="Resources\drawable\ic_skader.xml" />
+                    <AndroidResource Include="Resources\drawable\ic_quattro.xml" />
+                    <AndroidResource Include="Resources\drawable-hdpi\img_splash_logo.png" />
+                    <AndroidResource Include="Resources\drawable-mdpi\img_splash_logo.png" />
+                    <AndroidResource Include="Resources\drawable-xhdpi\img_splash_logo.png" />
+                    <AndroidResource Include="Resources\drawable-xxhdpi\img_splash_logo.png" />
+                    <AndroidResource Include="Resources\drawable-xxxhdpi\img_splash_logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />
@@ -373,17 +362,13 @@
     <Folder Include="Resources\drawable-xxxhdpi\" />
     <Folder Include="Adapter\" />
     <Folder Include="View\" />
-    <Folder Include="Const\" />
     <Folder Include="Resources\menu\" />
     <Folder Include="Model\" />
     <Folder Include="Resources\drawable\" />
-    <Folder Include="Resources\animator\" />
     <Folder Include="Resources\font\" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\intro1.json" />
-    <AndroidAsset Include="Assets\intro2.json" />
-    <AndroidAsset Include="Assets\intro3.json" />
+    <AndroidAsset Include="Assets\intro.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

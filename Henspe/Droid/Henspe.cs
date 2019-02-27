@@ -18,25 +18,19 @@ namespace Henspe.Droid
     class Henspe : Application
     {
         public string mode = ModeConst.test;
-
         protected const int RequestPermissionsRequestCode = 34;
         public static Henspe Current { get; private set; }
-        public float version { get; private set; }
-        public bool askedIfUserWantNewVersion = false;
-        public bool fetchNewVersion = false;
+
         // GPS
         //     public int coordinateFormat = CoordinateUtil.ddm; // Default coordinate format
         public FusedLocationProviderClient mFusedLocationClient;
         public Location myLocation;
+
         public string unknownCoordinates = "";
         public string coordinatesText = "";
         public string unknownAddress = "";
         public string addressText = "";
         public StructureDto structure;
-        public int screenHeight { get; private set; }
-        public int screenWidth { get; private set; }
-        public int screenHeightPercentage { get; private set; }
-        public int screenWidthPercentage { get; private set; }
         public position_fragment PositionFragment;
         public CoordinateService CoordinateService = null;
 
@@ -93,7 +87,7 @@ namespace Henspe.Droid
             structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Niva_1), "ic_1");
             structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Niva_2), "ic_2");
             structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Niva_3), "ic_3");
-            structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Niva_QuatroVarsling), "ic_quartro");
+            structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Niva_QuatroVarsling), "ic_quattro");
 
             // Sikkerhet
             StructureSectionDto structureSikkerhet = structure.AddStructureSection(Resources.GetString(Resource.String.Structure_Sikkerhet_Header), "");
@@ -104,7 +98,7 @@ namespace Henspe.Droid
             // Pasienter
             StructureSectionDto structurePasienter = structure.AddStructureSection(Resources.GetString(Resource.String.Structure_Pasienter_Header), "");
             structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Pasienter_Antall), "ic_pasienter");
-            structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Pasienter_Type), "ic_type");
+            structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Pasienter_Type), "ic_skader");
             structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Pasienter_Omfang), "ic_skademekanikk");
 
             // Evakuering

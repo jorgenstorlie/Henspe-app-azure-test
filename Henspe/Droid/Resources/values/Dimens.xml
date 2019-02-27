@@ -43,58 +43,6 @@
     <dimen name="row_padding">5dp</dimen>
     <dimen name="row_padding_callAndSms_rightPadding">8dp</dimen>
     
-	<!-- Map margins -->
-	<dimen name="list_item_image_default">36dp</dimen>
-	<dimen name="list_collapsed">52dp</dimen>
-	<dimen name="list_open">200dp</dimen>
-	<dimen name="list_right_container_width">150dp</dimen>
-	<dimen name="list_height">410dp</dimen>
-	<dimen name="list_left_negative">-148dp</dimen>
-	<dimen name="login_button_padding">22dp</dimen>
-	<dimen name="list_item_expand_button">24dp</dimen>
-	<dimen name="list_item_expand_button_padding">12.5dp</dimen>
 
-	<!-- IGA margins -->
-	<dimen name="very_small_margin">6.5dp</dimen>
-	<dimen name="extra_small_margin">4dp</dimen>
-	<dimen name="iga_menu_text_top">12dp</dimen>
 
-	<!-- Radar dimens -->
-	<dimen name="my24dp">40dp</dimen>
-	<dimen name="radar_button_size">42dp</dimen>
-
-	<!-- POI dimens -->
-	<dimen name="image_container_height">180dp</dimen>
-	<dimen name="poi_info_text_popup_width">200dp</dimen>
-	<dimen name="poi_thumb_image_size">80dp</dimen>
-	<dimen name="poi_thumb_container_size">240dp</dimen>
-	<dimen name="poi_popup_height">70dp</dimen>
-	<dimen name="poi_popup_middle_margin">40dp</dimen>
-	<dimen name="poi_map_margin_from_bottom">200dp</dimen>
-	<dimen name="poi_back_arrow_height">30dp</dimen>
-	<dimen name="poi_back_arrow_width">40dp</dimen>
-
-	<!-- Weather camera dimens -->
-	<dimen name="weather_camera_image_container_height">240dp</dimen>
-	<dimen name="compass_button_size">50dp</dimen>
-	<dimen name="compass_margin_camera_icon">54dp</dimen>
-	<dimen name="compass_button_container_size">158dp</dimen>
-	<dimen name="compass_margin_from_corner">17dp</dimen>
-	<dimen name="ideal_button_size">50dp</dimen>
-	<dimen name="top_of_clock_margin">2dp</dimen>
-	<dimen name="temp_icon_size">30dp</dimen>
-
-	<!-- Bottom bar -->
-	<dimen name="bottom_bar_height">40dp</dimen>
-
-	<!-- Info page -->
-	<dimen name="hems_logo_height">95dp</dimen>
-	<dimen name="hems_logo_width">135dp</dimen>
-
-	<!-- Menu-->
-	<dimen name="sigwx_info">25dp</dimen>
-	<dimen name="menu_item_height">30dp</dimen>
-
-	<!-- Favourites menu -->
-	<dimen name="favourites_icon_size">17.5dp</dimen>
 </resources>
