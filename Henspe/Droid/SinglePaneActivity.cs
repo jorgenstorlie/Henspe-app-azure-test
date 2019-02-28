@@ -36,7 +36,7 @@ namespace Henspe.Droid
 
             base.OnCreate(bundle);
 
-            SetContentView(Resource.Layout.MainNew);
+            SetContentView(Resource.Layout.Main);
 
             //   SetContentView(Resource.Layout.ActivityBase);
 

@@ -12,7 +12,8 @@ namespace Henspe.Droid.Adapters
         {
             Section,
             Item,
-            ItemAdress
+            ItemAdress,
+            ItemPosition
         }
 
         public class IndexPath
@@ -33,6 +34,9 @@ namespace Henspe.Droid.Adapters
                         if (this.SubType == 2)
                             return ItemType.ItemAdress;
                         else
+                              if (this.SubType == 3)
+                            return ItemType.ItemPosition;
+                        else
                             return ItemType.Item;
 
                     }
@@ -42,22 +46,12 @@ namespace Henspe.Droid.Adapters
         }
 
         public virtual int NumbersOfSections() { return 1; }
-
         public abstract int RowsInSection(int section);
-
         public abstract void OnBindItemViewHolder(RecyclerView.ViewHolder holder, IndexPath indexPath);
-
         public abstract RecyclerView.ViewHolder OnCreateItemViewHolder(ViewGroup parent, int viewType);
-
         public virtual void OnBindSectionViewHolder(RecyclerView.ViewHolder holder, int section) { }
-
         public virtual RecyclerView.ViewHolder OnCreateSectionViewHolder(ViewGroup parent) { return null; }
-
         public abstract T GetItem(IndexPath indexPath);
-
-
-
-
         public virtual int GetSubType(IndexPath indexPath)
         {
             return -1;
@@ -74,7 +68,6 @@ namespace Henspe.Droid.Adapters
             var numbersOfSections = this.NumbersOfSections();
             var result = new IndexPath() { OriginalPosition = position };
 
-
             for (int i = 0; i < numbersOfSections; i++)
             {
                 result.SectionIndex = i;
@@ -88,7 +81,6 @@ namespace Henspe.Droid.Adapters
                 {
                     result.ItemIndex = 0;
                 }
-
 
                 for (int j = 0; j < this.RowsInSection(i); j++)
                 {
@@ -144,8 +136,10 @@ namespace Henspe.Droid.Adapters
                 case ItemType.ItemAdress:
                     this.OnBindItemViewHolder(holder, indexPath);
                     break;
+                case ItemType.ItemPosition:
+                    this.OnBindItemViewHolder(holder, indexPath);
+                    break;
             }
-
         }
 
         [Obsolete("Do not use this method directly", true)]
@@ -159,6 +153,8 @@ namespace Henspe.Droid.Adapters
                 case ItemType.Item:
                     return this.OnCreateItemViewHolder(parent, viewType);
                 case ItemType.ItemAdress:
+                    return this.OnCreateItemViewHolder(parent, viewType);
+                case ItemType.ItemPosition:
                     return this.OnCreateItemViewHolder(parent, viewType);
             }
 

@@ -36,7 +36,7 @@
                 <ImageView
                     android:layout_width="68.5dp"
                     android:paddingTop="10dp"
-                    android:src="@drawable/ic_snla"
+      
                     android:layout_weight="0.33"
                     android:layout_height="40dp"
                     android:layout_marginBottom="5dp"

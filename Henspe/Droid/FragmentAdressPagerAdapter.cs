@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Android.App;
-using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Support.V4.App;
@@ -18,7 +12,6 @@ namespace Henspe.Droid
             new Adress { problem = "42 " },
             new Adress { problem = "9 "}
         };
-
 
         // Array of flash cards that make up the flash card deck:
         private Adress[] adresses;
@@ -69,7 +62,6 @@ namespace Henspe.Droid
 
     class AdressAdapter : FragmentPagerAdapter
     {
-
         // Underlying model data (flash card deck):
         public Adresses adresses;
 
@@ -94,7 +86,6 @@ namespace Henspe.Droid
         // Display the problem number in the PagerTitleStrip:
         public override Java.Lang.ICharSequence GetPageTitleFormatted(int position)
         {
-
             if (position == 1)
                 return new Java.Lang.String("Din posisjon");
             else

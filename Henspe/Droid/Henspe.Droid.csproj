@@ -43,8 +43,9 @@
     <WarningLevel>4</WarningLevel>
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
-    <AndroidSupportedAbis>armeabi-v7a;armeabi;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+    <EnableProguard>true</EnableProguard>
+    <AndroidLinkMode>Full</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -227,9 +228,6 @@
     <Reference Include="Xamarin.Android.Support.ViewPager">
       <HintPath>..\packages\Xamarin.Android.Support.ViewPager.28.0.0.1\lib\monoandroid90\Xamarin.Android.Support.ViewPager.dll</HintPath>
     </Reference>
-    <Reference Include="Nager.Date">
-      <HintPath>..\packages\Nager.Date.1.24.5\lib\netstandard2.0\Nager.Date.dll</HintPath>
-    </Reference>
     <Reference Include="AndHUD">
       <HintPath>..\packages\AndHUD.1.4.1\lib\MonoAndroid81\AndHUD.dll</HintPath>
     </Reference>
@@ -253,7 +251,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Henspe.cs" />
-    <Compile Include="MainNew.cs" />
+    <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Adapter\InitialPagerAdapter.cs" />
@@ -264,10 +262,12 @@
     <Compile Include="Adapter\SectionedRecyclerViewAdapter.cs" />
     <Compile Include="Adapter\HenspeRowAdapter.cs" />
     <Compile Include="Model\HenspeSectionModel.cs" />
-    <Compile Include="NewHenspeFragment.cs" />
+    <Compile Include="HenspeFragment.cs" />
     <Compile Include="InitialActivity.cs" />
     <Compile Include="FragmentAdressPagerAdapter.cs" />
     <Compile Include="position_fragment.cs" />
+    <Compile Include="Services\Utils.cs" />
+    <Compile Include="Services\LocationUpdatesService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -276,7 +276,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\MainNew.axml" />
+    <AndroidResource Include="Resources\layout\Main.axml" />
     <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png" />
@@ -301,9 +301,6 @@
     <AndroidResource Include="Resources\values\Styles.xml" />
     <AndroidResource Include="Resources\layout\acivity_onboarding.axml" />
     <AndroidResource Include="Resources\layout\onboarding_fragment.axml" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_snla.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_snla.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_snla.png" />
     <AndroidResource Include="Resources\layout\HenspeRow.axml" />
     <AndroidResource Include="Resources\layout\FragmentHenspeList.axml" />
     <AndroidResource Include="Resources\layout\ListItemSection.axml" />
@@ -354,6 +351,8 @@
                     <AndroidResource Include="Resources\drawable-xhdpi\img_splash_logo.png" />
                     <AndroidResource Include="Resources\drawable-xxhdpi\img_splash_logo.png" />
                     <AndroidResource Include="Resources\drawable-xxxhdpi\img_splash_logo.png" />
+                    <AndroidResource Include="Resources\animator\abc_fade_out.xml" />
+                    <AndroidResource Include="Resources\layout\position_row.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />
@@ -369,6 +368,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\intro.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProguardConfiguration Include="proguard.cfg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

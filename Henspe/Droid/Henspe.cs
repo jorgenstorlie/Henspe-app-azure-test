@@ -1,6 +1,5 @@
 ﻿using System;
 using Android.App;
-using Android.OS;
 using Android.Runtime;
 using Henspe.Core.Service;
 using Henspe.Core.Model.Dto;
@@ -45,6 +44,14 @@ namespace Henspe.Droid
             base.OnCreate();
             CoordinateService = new CoordinateService();
 
+            CoordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_North, Resources.GetString(Resource.String.Location_Element_North_Text));
+            CoordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_South, Resources.GetString(Resource.String.Location_Element_South_Text));
+            CoordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_East, Resources.GetString(Resource.String.Location_Element_East_Text));
+            CoordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_West, Resources.GetString(Resource.String.Location_Element_West_Text));
+            CoordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_Degrees, Resources.GetString(Resource.String.Location_Element_Degrees_Text));
+            CoordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_Minutes, Resources.GetString(Resource.String.Location_Element_Minutes_Text));
+            CoordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_Seconds, Resources.GetString(Resource.String.Location_Element_Seconds_Text));
+
             mFusedLocationClient = LocationServices.GetFusedLocationProviderClient(this);
             InitializeLocationText();
             SetupLocalData();
@@ -76,8 +83,8 @@ namespace Henspe.Droid
 
             // Eksakt posisjon
             StructureSectionDto structureEksaktPosisjon = structure.AddStructureSection(Resources.GetString(Resource.String.Structure_EksaktPosisjon_Header), "");
-            //   structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Position, Resources.GetString(Resource.String.Structure_EksaktPosisjon_Posisjon), "ic_posisjon");
-            structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Address, Resources.GetString(Resource.String.Structure_EksaktPosisjon_Adresse), "ic_adresse");
+            structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Position, Resources.GetString(Resource.String.Structure_EksaktPosisjon_Posisjon), "ic_posisjon");
+            //  structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Address, Resources.GetString(Resource.String.Structure_EksaktPosisjon_Adresse), "ic_adresse");
             structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_EksaktPosisjon_Oppmotested), "ic_oppmotested");
             structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_EksaktPosisjon_Ankomst), "ic_ankomst");
             structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_EksaktPosisjon_Avreise), "ic_avreise");

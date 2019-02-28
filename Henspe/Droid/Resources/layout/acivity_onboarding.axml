@@ -14,7 +14,7 @@
          android:gravity="center"
             android:layout_margin="@dimen/default_margin"
      android:layout_centerHorizontal="true"
-          app:srcCompat="@drawable/drawable_logo_white"
+          app:srcCompat="@drawable/drawable_logo_no_text"
               />
     
     
