@@ -27,7 +27,7 @@
     <color name="colorPrimary">@color/color_snla_blue</color>
     <color name="colorPrimaryDark">@color/color_snla_blue_700</color>
     <color name="colorPrimaryLight">@color/color_snla_blue_100</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">@color/color_snla_blue</color>
     <color name="colorToolBar">@color/bg_color</color>
     <color name="colorStatusBar">@color/colorPrimaryDark</color>
     <color name="colorBackGround">@color/bg_color</color>
@@ -62,7 +62,10 @@
     <!--   color for the app bar and other primary UI elements -->
     <!--   a secondary color for controls like checkboxes and text fields -->
     <color name="window_background">#ffffff</color>
-    <color name="page_indicator_selected_color">@color/color_snla_red_200</color>
-    <color name="page_indicator_default_color">@color/window_background</color>
+    <color name="page_indicator_selected_color">@color/colorAlternativePrimary</color>
+    <color name="page_indicator_default_color">@color/colorAlternativePrimaryLight</color>
     <color name="graystatusbar">#818181</color>
+    <color name="text_secondary">#666666</color>
+    <color name="text_inverse">#ffffff</color>
+    <color name="text_error">#a42023</color>
 </resources>

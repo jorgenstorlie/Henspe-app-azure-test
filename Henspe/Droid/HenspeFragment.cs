@@ -122,8 +122,6 @@ namespace Henspe.Droid
 
         internal void UpdateLocation(Location location)
         {
-          
-
             CreatePositionTextAndRefreshPositionRow(location);
             CreateAddressTextAndRefreshAddressRow(location);
             RefreshRow(4);
@@ -133,7 +131,6 @@ namespace Henspe.Droid
           {
               FormattedCoordinatesDto formattedCoordinatesDto = Henspe.Current.CoordinateService.GetFormattedCoordinateDescription(CoordinateFormat.DD, location.Latitude, location.Longitude);
               Henspe.Current.coordinatesText = formattedCoordinatesDto.latitudeDescription + "\n" + formattedCoordinatesDto.longitudeDescription;
-
           //    RefreshRow(4);
           }
 
@@ -159,8 +156,6 @@ namespace Henspe.Droid
                   Henspe.Current.addressText = Henspe.Current.unknownAddress;
 
           //    RefreshRow(5);
-
-
 
           }
 

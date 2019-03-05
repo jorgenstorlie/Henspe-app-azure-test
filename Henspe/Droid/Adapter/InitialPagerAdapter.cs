@@ -21,7 +21,7 @@ namespace Henspe.Droid.Adapter
         public override int Count { get {return NumPage;} }
         public override Fragment GetItem(int position)
         {
-            return new OnBoardingItemFragment(position);
+            return new OnboardingItemFragment(position);
         }
     }
 }

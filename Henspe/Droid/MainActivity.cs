@@ -7,7 +7,6 @@ using Fragment = Android.Support.V4.App.Fragment;
 using Android.OS;
 using Java.Lang;
 using Android.Locations;
-using Android.Widget;
 using Android.Util;
 using Android.Support.V4.App;
 using Android;
@@ -32,10 +31,9 @@ namespace Henspe.Droid
 
         // Tracks the bound state of the service.
         bool Bound;
-
-        HenspeFragment henspeFragment;
         private Toolbar toolbar;
         private AppBarLayout appBarLayout;
+        private HenspeFragment henspeFragment { get { return (HenspeFragment)_mFragment; } }
 
         // Monitors the state of the connection to the service.
         CustomServiceConnection ServiceConnection;
@@ -209,23 +207,24 @@ namespace Henspe.Droid
 
         protected override Fragment OnCreatePane()
         {
-            henspeFragment = new HenspeFragment();
-            return henspeFragment;
+            return new HenspeFragment();
         }
 
         private void GoToInfoScreen()
         {
-            var intentInitialActivity = new Intent(this, typeof(OnBoardingActivity));
+            var intentInitialActivity = new Intent(this, typeof(OnboardingActivity));
             StartActivity(intentInitialActivity);
             //this.Activity.Finish();
         }
 
+        /*
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
             MenuInflater menuInflater = MenuInflater;
             MenuInflater.Inflate(Resource.Menu.menu_main, menu);
             return true;
         }
+        */
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
@@ -257,9 +256,11 @@ namespace Henspe.Droid
                 if (location != null)
                 {
                     Henspe.Current.myLocation = location;
-                    (Context as MainActivity).henspeFragment.UpdateLocation(location);
 
-                    Toast.MakeText(Context, Utils.GetLocationText(location), ToastLength.Short).Show();
+                    if ((Context as MainActivity).henspeFragment != null)
+                        (Context as MainActivity).henspeFragment.UpdateLocation(location);
+
+               //     Toast.MakeText(Context, Utils.GetLocationText(location), ToastLength.Short).Show();
                 }
             }
         }

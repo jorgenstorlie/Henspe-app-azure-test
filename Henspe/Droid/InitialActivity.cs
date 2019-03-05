@@ -1,9 +1,7 @@
-﻿using System.Threading.Tasks;
-using Android.App;
+﻿using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Support.V7.App;
-using Android.Util;
 using Android.Content.PM;
 using SNLA.Core.Util;
 
@@ -29,7 +27,7 @@ namespace Henspe.Droid
             if (UserUtil.Current.onboardingCompleted)
                 intent = new Intent(this, typeof(MainActivity));
             else
-                intent = new Intent(this, typeof(OnBoardingActivity));
+                intent = new Intent(this, typeof(OnboardingActivity));
 
             intent.AddFlags(ActivityFlags.ClearTop);
             intent.AddFlags(ActivityFlags.SingleTop);

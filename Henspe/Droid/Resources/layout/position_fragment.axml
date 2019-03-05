@@ -18,8 +18,8 @@
         >
     <ImageView
         android:id="@+id/image"
-        android:layout_width="@dimen/list_image_size_medium"
-        android:layout_height="@dimen/list_image_size_medium"
+        android:layout_width="@dimen/list_image_size"
+        android:layout_height="@dimen/list_image_size"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="8dp"
@@ -78,8 +78,8 @@
         >
     <ImageView
         android:id="@+id/image2"
-        android:layout_width="@dimen/list_image_size_medium"
-        android:layout_height="@dimen/list_image_size_medium"
+        android:layout_width="@dimen/list_image_size"
+        android:layout_height="@dimen/list_image_size"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="8dp"

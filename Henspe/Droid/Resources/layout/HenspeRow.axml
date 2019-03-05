@@ -12,18 +12,17 @@
     android:gravity="top">
     <ImageView
         android:id="@+id/image"
-        android:layout_width="@dimen/list_image_size_medium"
-        android:layout_height="@dimen/list_image_size_medium"
+        android:layout_width="@dimen/list_image_size"
+        android:layout_height="@dimen/list_image_size"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:layout_marginRight="8dp"
+        android:layout_marginRight="@dimen/large_margin"
         android:scaleType="fitCenter" />
     <RelativeLayout
         android:id="@+id/textArea"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingRight="@dimen/row_padding_callAndSms_rightPadding"
-        android:paddingTop="@dimen/row_padding_text_top"
+
         android:layout_toRightOf="@id/image"
         android:gravity="center_vertical"
         android:orientation="vertical">
@@ -35,30 +34,5 @@
             android:textColor="@color/text_normal"
             tools:text="Description"
             android:gravity="center_vertical" />
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/description">
-            <TextView
-                android:id="@+id/info"
-                style="@style/NormalText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:singleLine="false"
-                android:maxLines="2"
-                android:textColor="@color/text_info"
-                tools:text="" />
-            <TextView
-                android:id="@+id/info_helper"
-                style="@style/NormalText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:singleLine="false"
-                android:maxLines="2"
-                android:textColor="@color/text_info"
-                tools:text="" />
-        </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>

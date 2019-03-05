@@ -189,7 +189,9 @@ namespace Henspe.Droid
 					startForeground(NOTIFICATION_ID, getNotification());
 				}
 				 */
-                StartForeground(NotificationId, GetNotification());
+
+                //jls
+               // StartForeground(NotificationId, GetNotification());
             }
             return true; // Ensures onRebind() is called when a client re-binds.
         }

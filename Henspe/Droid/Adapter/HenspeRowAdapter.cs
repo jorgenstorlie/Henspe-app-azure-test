@@ -194,12 +194,6 @@ namespace Henspe.Droid
                 {
                     viewHolder.image.Visibility = ViewStates.Visible;
                     viewHolder.description.Visibility = ViewStates.Visible;
-
-                    viewHolder.info.Text = "";
-                    viewHolder.info.Visibility = ViewStates.Gone;
-
-                    viewHolder.infoHelper.Text = "";
-                    viewHolder.infoHelper.Visibility = ViewStates.Gone;
                 }
 
                 else if (henspeRowModel.elementType == StructureElementDto.ElementType.Address)
@@ -254,16 +248,13 @@ namespace Henspe.Droid
             public RelativeLayout layout { get; set; }
             public ImageView image { get; set; }
             public TextView description { get; set; }
-            public TextView info { get; set; }
-            public TextView infoHelper { get; set; }
+
 
             public ItemViewHolder(View itemView) : base(itemView)
             {
                 this.layout = itemView.FindViewById<RelativeLayout>(Resource.Id.row_layout);
                 this.image = itemView.FindViewById<ImageView>(Resource.Id.image);
                 this.description = itemView.FindViewById<TextView>(Resource.Id.description);
-                this.info = itemView.FindViewById<TextView>(Resource.Id.info);
-                this.infoHelper = itemView.FindViewById<TextView>(Resource.Id.info_helper);
             }
         }
 
@@ -299,40 +290,44 @@ namespace Henspe.Droid
                 this.share = itemView.FindViewById<Button>(Resource.Id.shareposition);
                 this.map = itemView.FindViewById<Button>(Resource.Id.showmap);
 
-             
                 share.Click += ShareClicked;
                 map.Click += MapClicked;
-
             }
 
             private void MapClicked(object sender, EventArgs e)
             {
-                NavigationMode mode = NavigationMode.Walking;
-                string name = "HENSPE";
-
-                var location = new Location(Henspe.Current.myLocation.Latitude, Henspe.Current.myLocation.Longitude);
-                var options = new MapLaunchOptions
+                if (Henspe.Current.myLocation != null)
                 {
-                    Name = name,
-                    NavigationMode = mode
-                };
+                    var location = new Location(Henspe.Current.myLocation.Latitude, Henspe.Current.myLocation.Longitude);
 
-                Map.OpenAsync(location, options);
+                    NavigationMode mode = NavigationMode.None;
+                    string name = "HENSPE";
+                    var options = new MapLaunchOptions
+                    {
+                        Name = name,
+                        NavigationMode = mode
+                    };
+
+                    Map.OpenAsync(location);
+                }
             }
 
             private void ShareClicked(object sender, EventArgs e)
             {
-                string latString = Henspe.Current.coordinatesText;
-                string lonString = Henspe.Current.addressText;
-                string posString = latString + "\n" + lonString;
-                string lat = Henspe.Current.myLocation.Latitude.ToString(System.Globalization.CultureInfo.InvariantCulture);
-                string lon = Henspe.Current.myLocation.Longitude.ToString(System.Globalization.CultureInfo.InvariantCulture);
-                string linkString = "https://www.google.com/maps/search/?api=1&query=" + lat + "," + lon;
-                string common_share_my_position = Application.Context.Resources.GetString(Resource.String.common_share_my_position);
+                if (Henspe.Current.myLocation != null)
+                {
+                    string latString = Henspe.Current.coordinatesText;
+                    string lonString = Henspe.Current.addressText;
+                    string posString = latString + "\n" + lonString;
+                    string lat = Henspe.Current.myLocation.Latitude.ToString(System.Globalization.CultureInfo.InvariantCulture);
+                    string lon = Henspe.Current.myLocation.Longitude.ToString(System.Globalization.CultureInfo.InvariantCulture);
+                    string linkString = "https://www.google.com/maps/search/?api=1&query=" + lat + "," + lon;
+                    string common_share_my_position = Application.Context.Resources.GetString(Resource.String.common_share_my_position);
 
-                posString = posString + "\n" + linkString;
-                var shareTextRequest = new ShareTextRequest(posString, common_share_my_position);
-                Share.RequestAsync(shareTextRequest);
+                    posString = posString + "\n" + linkString;
+                    var shareTextRequest = new ShareTextRequest(posString, common_share_my_position);
+                    Share.RequestAsync(shareTextRequest);
+                }
             }
         }
 

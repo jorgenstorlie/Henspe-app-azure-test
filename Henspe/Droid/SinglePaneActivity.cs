@@ -18,7 +18,7 @@ namespace Henspe.Droid
         private Toolbar toolbar;
         private AppBarLayout appBarLayout;
 
-        private Fragment _mFragment;
+        protected Fragment _mFragment;
 
         protected SinglePaneActivity(IntPtr handle, JniHandleOwnership ownerShip) : base(handle, ownerShip)
         {
@@ -50,8 +50,6 @@ namespace Henspe.Droid
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SupportActionBar.SetHomeButtonEnabled(true);
             SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.ic_info);
-
-
 
 
             //ActionBar.SetLogo(Resource.Drawable.ic_snla);
