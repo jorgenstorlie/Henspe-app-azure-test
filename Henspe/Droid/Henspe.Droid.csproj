@@ -46,6 +46,12 @@
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <EnableProguard>true</EnableProguard>
     <AndroidLinkMode>Full</AndroidLinkMode>
+    <AndroidSigningKeyStore>/Users/jorgenstorlie/Apper/Henspe-app/Henspe/Droid/henspe.jks</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>snlasolutions</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>snla</AndroidSigningKeyAlias>
+    <AndroidKeyStore>True</AndroidKeyStore>
+    <AndroidSigningKeyPass>snlasolutions</AndroidSigningKeyPass>
+    <AndroidEnableMultiDex>false</AndroidEnableMultiDex>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -122,9 +128,6 @@
     </Reference>
     <Reference Include="Xamarin.Android.Arch.Lifecycle.ViewModel">
       <HintPath>..\packages\Xamarin.Android.Arch.Lifecycle.ViewModel.1.1.1.1\lib\monoandroid90\Xamarin.Android.Arch.Lifecycle.ViewModel.dll</HintPath>
-    </Reference>
-    <Reference Include="AndHUD">
-      <HintPath>..\packages\AndHUD.1.4.1\lib\MonoAndroid81\AndHUD.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Essentials">
       <HintPath>..\packages\Xamarin.Essentials.1.0.1\lib\monoandroid81\Xamarin.Essentials.dll</HintPath>
@@ -224,6 +227,9 @@
     <Reference Include="Xamarin.Android.Support.CustomTabs">
       <HintPath>..\packages\Xamarin.Android.Support.CustomTabs.28.0.0.1\lib\monoandroid90\Xamarin.Android.Support.CustomTabs.dll</HintPath>
     </Reference>
+    <Reference Include="AndHUD">
+      <HintPath>..\packages\AndHUD.1.4.1\lib\MonoAndroid81\AndHUD.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Henspe.cs" />
@@ -241,7 +247,7 @@
     <Compile Include="HenspeFragment.cs" />
     <Compile Include="InitialActivity.cs" />
     <Compile Include="FragmentAdressPagerAdapter.cs" />
-    <Compile Include="position_fragment.cs" />
+    <Compile Include="PositionFragment.cs" />
     <Compile Include="Services\Utils.cs" />
     <Compile Include="Services\LocationUpdatesService.cs" />
   </ItemGroup>
@@ -338,7 +344,6 @@
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\drawable-xxxhdpi\" />
     <Folder Include="Adapter\" />
-    <Folder Include="View\" />
     <Folder Include="Resources\menu\" />
     <Folder Include="Model\" />
     <Folder Include="Resources\drawable\" />

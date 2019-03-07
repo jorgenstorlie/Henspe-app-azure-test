@@ -123,8 +123,8 @@ namespace Henspe.Droid
 
         public void setupViewPager(ViewPager viewPager)
         {
-            position_fragment f = new position_fragment(1);
-            position_fragment f2 = new position_fragment(2);
+            PositionFragment f = new PositionFragment(1);
+            PositionFragment f2 = new PositionFragment(2);
 
             ViewPagerAdapter adapter = new ViewPagerAdapter((activity as AppCompatActivity).SupportFragmentManager);
             adapter.addFragment(f, "Angitt posisjon ");

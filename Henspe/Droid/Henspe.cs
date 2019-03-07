@@ -30,7 +30,7 @@ namespace Henspe.Droid
         public string unknownAddress = "";
         public string addressText = "";
         public StructureDto structure;
-        public position_fragment PositionFragment;
+        public PositionFragment PositionFragment;
         public CoordinateService CoordinateService = null;
 
         public Henspe(IntPtr handle, JniHandleOwnership transfer)
@@ -94,7 +94,7 @@ namespace Henspe.Droid
             structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Niva_1), "ic_1");
             structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Niva_2), "ic_2");
             structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Niva_3), "ic_3");
-            structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Niva_QuatroVarsling), "ic_quattro");
+            structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Niva_QuattroVarsling), "ic_quattro");
 
             // Sikkerhet
             StructureSectionDto structureSikkerhet = structure.AddStructureSection(Resources.GetString(Resource.String.Structure_Sikkerhet_Header), "");

@@ -11,7 +11,7 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SNLA.Core", "..\..\SNLA-app
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SNLA.iOS", "..\..\SNLA-app\SNLA.iOS\SNLA.iOS.shproj", "{F461BE23-0A04-44F6-9E62-6EEEC4F6D9BB}"
 EndProject
-Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "Henspe.Core.Test", "Henspe.Core.Test\Henspe.Core.Test.csproj", "{B9ADE6A4-940B-4FF7-BCD8-1C3ADF8D6B9E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Henspe.Core.Test", "Henspe.Core.Test\Henspe.Core.Test.csproj", "{B9ADE6A4-940B-4FF7-BCD8-1C3ADF8D6B9E}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SNLA.Droid", "..\..\SNLA-app\SNLA.Droid\SNLA.Droid.shproj", "{5A24DFC1-7C45-4558-9FDF-C4D0CE60B605}"
 EndProject

@@ -53,10 +53,12 @@ namespace Henspe.Droid
         }
         */
 
-        public override void OnCreateOptionsMenu(IMenu menu, MenuInflater inflater)
-        {
-            inflater.Inflate(Resource.Menu.MenuHome, menu);
-        }
+        /*
+    public override void OnCreateOptionsMenu(IMenu menu, MenuInflater inflater)
+    {
+        inflater.Inflate(Resource.Menu.MenuHome, menu);
+    }
+    */
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
@@ -117,7 +119,7 @@ namespace Henspe.Droid
         public void RefreshRow(int index)
         {
             //jls    if (viewCreated && _itemsAdapter != null)
-                _itemsAdapter.NotifyItemChanged(index);
+            _itemsAdapter.NotifyItemChanged(index);
         }
 
         internal void UpdateLocation(Location location)
@@ -127,38 +129,50 @@ namespace Henspe.Droid
             RefreshRow(4);
         }
 
-          private void CreatePositionTextAndRefreshPositionRow(Location location)
-          {
-              FormattedCoordinatesDto formattedCoordinatesDto = Henspe.Current.CoordinateService.GetFormattedCoordinateDescription(CoordinateFormat.DD, location.Latitude, location.Longitude);
-              Henspe.Current.coordinatesText = formattedCoordinatesDto.latitudeDescription + "\n" + formattedCoordinatesDto.longitudeDescription;
-          //    RefreshRow(4);
-          }
+        private void CreatePositionTextAndRefreshPositionRow(Location location)
+        {
+            FormattedCoordinatesDto formattedCoordinatesDto = Henspe.Current.CoordinateService.GetFormattedCoordinateDescription(CoordinateFormat.DD, location.Latitude, location.Longitude);
+            Henspe.Current.coordinatesText = formattedCoordinatesDto.latitudeDescription + "\n" + formattedCoordinatesDto.longitudeDescription;
+            //    RefreshRow(4);
+        }
 
-          private void CreateAddressTextAndRefreshAddressRow(Location location)
-          {
-              Geocoder geocoder = new Geocoder(this.Activity);
+        private void CreateAddressTextAndRefreshAddressRow(Location location)
+        {
+            Geocoder geocoder = new Geocoder(this.Activity);
 
-              IList<Address> addresses = geocoder.GetFromLocation(location.Latitude, location.Longitude, 1);
+            IList<Address> addresses = geocoder.GetFromLocation(location.Latitude, location.Longitude, 1);
 
-              string wholeAddress = "";
+            string wholeAddress = "";
 
-              try
+            try
+            {
+                var dd = addresses[0];
+                wholeAddress = dd.Thoroughfare + " " + dd.SubThoroughfare;
+                wholeAddress = wholeAddress + System.Environment.NewLine  + dd.SubLocality + ", "+ dd.Locality;
+            }
+            catch (System.ArgumentOutOfRangeException aoore)
+            {
+            }
+
+            /*
+            try
               {
                   wholeAddress = addresses[0].GetAddressLine(0);
               }
               catch (System.ArgumentOutOfRangeException aoore)
               {
               }
+              */
 
-              if (wholeAddress.Length > 0)
-                  Henspe.Current.addressText = wholeAddress;
-              else
-                  Henspe.Current.addressText = Henspe.Current.unknownAddress;
+            if (wholeAddress.Length > 0)
+                Henspe.Current.addressText = wholeAddress;
+            else
+                Henspe.Current.addressText = Henspe.Current.unknownAddress;
 
-          //    RefreshRow(5);
+            //    RefreshRow(5);
 
-          }
+        }
 
-      
+
     }
 }

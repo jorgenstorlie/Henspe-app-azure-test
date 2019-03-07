@@ -97,7 +97,7 @@
     <string name="Structure_Niva_1">Redningsoppdrag</string>
     <string name="Structure_Niva_2">Alvorlig hendelse</string>
     <string name="Structure_Niva_3">Katasstrofe</string>
-    <string name="Structure_Niva_QuatroVarsling">Quatro varsling</string>
+    <string name="Structure_Niva_QuattroVarsling">Quattro varsling</string>
     <!-- Sikkerhet -->
     <string name="Structure_Sikkerhet_Header">Sikkerhet</string>
     <string name="Structure_Sikkerhet_Farer">Mulige/reelle farer</string>

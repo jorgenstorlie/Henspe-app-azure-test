@@ -5090,7 +5090,7 @@ namespace Henspe.Droid
 			public const int Structure_Niva_Header = 2131361939;
 			
 			// aapt resource value: 0x7f0a0097
-			public const int Structure_Niva_QuatroVarsling = 2131361943;
+			public const int Structure_Niva_QuattroVarsling = 2131361943;
 			
 			// aapt resource value: 0x7f0a009d
 			public const int Structure_Pasienter_Antall = 2131361949;

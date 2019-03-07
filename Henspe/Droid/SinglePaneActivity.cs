@@ -47,12 +47,11 @@ namespace Henspe.Droid
             SetSupportActionBar(toolbar);
             SupportActionBar.SetDisplayShowTitleEnabled(false);
 
+            /*
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SupportActionBar.SetHomeButtonEnabled(true);
             SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.ic_info);
-
-
-            //ActionBar.SetLogo(Resource.Drawable.ic_snla);
+            */
 
             if (Intent.HasExtra(Intent.ExtraTitle))
             {

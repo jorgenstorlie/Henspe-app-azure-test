@@ -5,9 +5,9 @@ using Fragment = Android.Support.V4.App.Fragment;
 
 namespace Henspe.Droid
 {
-    public class position_fragment : Fragment
+    public class PositionFragment : Fragment
     {
-		public position_fragment(int id)
+		public PositionFragment(int id)
 		{
 
 		}

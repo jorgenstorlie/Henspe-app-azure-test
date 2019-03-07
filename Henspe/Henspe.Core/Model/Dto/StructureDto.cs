@@ -8,7 +8,7 @@ namespace Henspe.Core.Model.Dto
         public List<StructureSectionDto> structureSectionList { get; set; } = new List<StructureSectionDto>();
 		public int currentStructureSectionId { get; set; }
 
-        public StructureSectionDto AddStructureSection(string description, string image)
+        public StructureSectionDto AddStructureSection(string description, string image = null)
         {
             StructureSectionDto structureSectionDto = new StructureSectionDto(description, image);
             structureSectionDto.structureElementList = new List<StructureElementDto>();

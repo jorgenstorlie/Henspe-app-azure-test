@@ -29,7 +29,7 @@ namespace Henspe.Droid
         private InitialPagerAdapter mPagerAdapter;
         static int totalPages = 3;
         static int currentPage = 0;
-        private int pageIndex = 0;
+        private int pageIndex = -1;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -41,9 +41,6 @@ namespace Henspe.Droid
 
             titleText = FindViewById<TextView>(Resource.Id.onboarding_title);
             animationView = FindViewById<LottieAnimationView>(Resource.Id.onboarding_animation_view);
-
-            //mSkipButton.Visibility = ViewStates.Invisible;
-
             mNextButton.Click += NextButtonOnClick;
 
             _mPager = FindViewById<ViewPager>(Resource.Id.onboarding_pager);
@@ -69,7 +66,6 @@ namespace Henspe.Droid
 
             this.animationView.AddAnimatorListener(this);
             this.animationView.AddAnimatorUpdateListener(this);
-
         }
 
         private void OnViewPagerPageScrolled(object sender, ViewPager.PageScrolledEventArgs e)
@@ -133,33 +129,39 @@ namespace Henspe.Droid
 
         private void PlayAnimation(int position)
         {
-            pageIndex = position;
 
-            if (animationView.Animation == null)
-                animationView.SetAnimation("intro.json");
-
-            animationView.RepeatCount = 0;
-
-            switch (position)
+            if (pageIndex != position)
             {
-                case 0:
-                    animationView.SetMinFrame(0);
-                    animationView.SetMaxFrame(150);
-                    animationView.Progress = 0;
-                    break;
-                case 1:
-                    animationView.SetMinFrame(150);
-                    animationView.SetMaxFrame(250);
-                    animationView.Progress = 150;
-                    break;
-                case 2:
-                    animationView.SetMinFrame(250);
-                    animationView.SetMaxFrame(390);
-                    animationView.Progress = 250;
-                    break;
+                pageIndex = position;
 
+                if (animationView.Animation == null)
+                    animationView.SetAnimation("intro.json");
+
+                //   animationView.CancelAnimation();
+                animationView.RepeatCount = 0;
+
+                switch (position)
+                {
+                    case 0:
+                        animationView.SetMinFrame(0);
+                        animationView.SetMaxFrame(125);
+                        animationView.Frame = 0;
+                        break;
+                    case 1:
+                        animationView.SetMinFrame(125);
+                        animationView.SetMaxFrame(199);
+                        animationView.Frame = 125;
+                        break;
+                    case 2:
+                        animationView.SetMinFrame(199);
+                        animationView.SetMaxFrame(386);
+                        animationView.Frame = 199;
+                        break;
+
+                }
+
+                animationView.PlayAnimation();// Loop = true;
             }
-            animationView.PlayAnimation();// Loop = true;
         }
 
         protected override void OnPause()
