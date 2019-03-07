@@ -20,7 +20,7 @@ namespace Henspe.iOS
             labHeadline.Text = header;
             labDescription.Text = title;
             labHeadline.TextColor = ColorConst.largeTextColor;
-            labDescription.TextColor = ColorConst.largeTextColor;
+            labDescription.TextColor = ColorConst.headerDescriptionTextColor;
         }
     }
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>ic_oppmotested</title>
+    <desc>Created with Sketch.</desc>
+    <g id="ic_oppmotested" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(1.500000, 1.500000)" fill="#4A4A4A">
+            <polygon id="Shape" stroke="#4A4A4A" stroke-width="0.5" fill-rule="nonzero" points="3.32767742 7.58219355 2.60031484 8.39665755 4.17818323 10.1753455 -4.40092407e-13 10.1753455 -4.40092407e-13 11.3250415 4.17818323 11.3250415 2.60031484 13.1037295 3.32767742 13.9181935 6.1316129 10.7501935"></polygon>
+            <polygon id="Shape" stroke="#4A4A4A" stroke-width="0.5" fill-rule="nonzero" transform="translate(10.545806, 3.168000) rotate(90.000000) translate(-10.545806, -3.168000) " points="10.8076774 3.4861003e-13 10.0803148 0.814464 11.6581832 2.593152 7.48 2.593152 7.48 3.742848 11.6581832 3.742848 10.0803148 5.521536 10.8076774 6.336 13.6116129 3.168"></polygon>
+            <polygon id="Shape" stroke="#4A4A4A" stroke-width="0.5" fill-rule="nonzero" transform="translate(18.025806, 10.750194) rotate(180.000000) translate(-18.025806, -10.750194) " points="18.2876774 7.58219355 17.5603148 8.39665755 19.1381832 10.1753455 14.96 10.1753455 14.96 11.3250415 19.1381832 11.3250415 17.5603148 13.1037295 18.2876774 13.9181935 21.0916129 10.7501935"></polygon>
+            <polygon id="Shape" stroke="#4A4A4A" stroke-width="0.5" fill-rule="nonzero" transform="translate(10.545806, 18.128000) rotate(-90.000000) translate(-10.545806, -18.128000) " points="10.8076774 14.96 10.0803148 15.774464 11.6581832 17.553152 7.48 17.553152 7.48 18.702848 11.6581832 18.702848 10.0803148 20.481536 10.8076774 21.296 13.6116129 18.128"></polygon>
+            <circle id="Oval" cx="10.56" cy="10.6621935" r="2.2"></circle>
+        </g>
+    </g>
+</svg>

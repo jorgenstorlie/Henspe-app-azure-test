@@ -1,22 +1,16 @@
 ﻿using System;
 using UIKit;
-using CoreLocation;
 using Foundation;
 using Henspe.Core.Communication;
-using Henspe.Core;
 using Henspe.iOS.Const;
-using Henspe.iOS.AppModel;
 using Henspe.Core.Model.Dto;
 using Henspe.Core.Service;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
-using SNLA.Core.Communication;
 using SNLA.Core.Util;
 using SNLA.iOS.Util;
 using SNLA.Core.Service;
-using SNLA.Core.Const;
-using System.IO;
 
 namespace Henspe.iOS
 {
@@ -30,12 +24,11 @@ namespace Henspe.iOS
 
         private string noNetworkString;
         public bool servcicesInitialized = false;
-       // public HjertestarterService hjertestarterService;
         public CoordinateService coordinateService;
         public RegEmailSMSService regEmailSMSService;
 
-		// Main reference
-		public MainViewController mainViewController = null;
+        // Main reference
+        public MainViewController mainViewController = null;
 
         // Location manager
         public LocationManager locationManager;
@@ -49,9 +42,9 @@ namespace Henspe.iOS
             get;
             set;
         }
-        
+
         public static AppDelegate current { get; private set; }
-		public ApplicationService ApplicationService;
+        public ApplicationService ApplicationService;
 
         public static UIViewController initialViewController;
 
@@ -60,11 +53,11 @@ namespace Henspe.iOS
             current = this;
 
             window = new UIWindow(UIScreen.MainScreen.Bounds);
-			ApplicationService = new ApplicationService();
+            ApplicationService = new ApplicationService();
             SetupCustomNavigationBar();
-			SetupSectionsWithElements();
+            SetupSectionsWithElements();
 
-			if (UserUtil.Current.format == CoordinateFormat.Undefined)
+            if (UserUtil.Current.format == CoordinateFormat.Undefined)
                 UserUtil.Current.format = CoordinateFormat.DDM;
 
             SetupServicesIfNeeded();
@@ -101,7 +94,6 @@ namespace Henspe.iOS
                 coordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_Degrees, LangUtil.Get("Element.Degrees.Text"));
                 coordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_Minutes, LangUtil.Get("Element.Minutes.Text"));
                 coordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_Seconds, LangUtil.Get("Element.Seconds.Text"));
-
                 servcicesInitialized = true;
             }
         }
@@ -110,45 +102,47 @@ namespace Henspe.iOS
         {
             // Structure that all will be added to
             structure = new StructureDto();
-            
+
             // Hendelse
-			StructureSectionDto structureHendelse = structure.AddStructureSection(LangUtil.Get("Structure.Hendelse.Header"), string.Empty);
-			structureHendelse.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Hendelse.Trafikk"), "ic_h_trafikk.svg", 1.0f);
-			structureHendelse.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Hendelse.Brann"), "ic_h_brann.svg", 0.8f);
-            
-			// Eksakt posisjon
-			StructureSectionDto structureEksaktPosisjon = structure.AddStructureSection(LangUtil.Get("Structure.EksaktPosisjon.Header"), "ic_e.svg");
-            structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Position, LangUtil.Get("Structure.EksaktPosisjon.Posisjon"), "ic_e_posisjon.svg", 0.8f);
-			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Address, LangUtil.Get("Structure.EksaktPosisjon.Adresse"), "ic_e_adresse.svg", 0.8f);
-			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.EksaktPosisjon.Oppmotested"), "ic_e_oppmotested.svg", 1.0f);
-			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.EksaktPosisjon.Ankomst"), "ic_e_ankomst.svg", 0.6f);
-			structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.EksaktPosisjon.Avreise"), "ic_e_avreise.svg", 0.6f);
+            StructureSectionDto structureHendelse = structure.AddStructureSection(LangUtil.Get("Structure.Hendelse.Header"));
+            structureHendelse.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Hendelse.Trafikk"), "ic_trafikk.svg");
+            structureHendelse.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Hendelse.Brann"), "ic_brann.svg");
+
+            // Eksakt posisjon
+            StructureSectionDto structureEksaktPosisjon = structure.AddStructureSection(LangUtil.Get("Structure.EksaktPosisjon.Header"));
+            structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Position, LangUtil.Get("Structure.EksaktPosisjon.Posisjon"), "ic_posisjon.svg");
+            structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Address, LangUtil.Get("Structure.EksaktPosisjon.Adresse"), "ic_adresse.svg");
+            structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.EksaktPosisjon.Oppmotested"), "ic_oppmotested.svg");
+            structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.EksaktPosisjon.Ankomst"), "ic_ankomst.svg");
+            structureEksaktPosisjon.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.EksaktPosisjon.Avreise"), "ic_avreise.svg");
 
             // Nivå
-            StructureSectionDto structureNiva = structure.AddStructureSection(LangUtil.Get("Structure.Niva.Header"), "ic_n.svg");
-			structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Niva.Type"), "ic_n_begrenset.svg", 0.5f);
-			structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Niva.QuatroVarsling"), "ic_n_quartro.svg", 0.7f);
+            StructureSectionDto structureNiva = structure.AddStructureSection(LangUtil.Get("Structure.Niva.Header"));
+            structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Niva.1"), "ic_1.svg");
+            structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Niva.2"), "ic_2.svg");
+            structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Niva.3"), "ic_3.svg");
+            structureNiva.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Niva.QuattroVarsling"), "ic_quattro.svg");
 
-			// Sikkerhet
-			StructureSectionDto structureSikkerhet = structure.AddStructureSection(LangUtil.Get("Structure.Sikkerhet.Header"), "ic_s.svg");
-			structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Sikkerhet.Farer"), "ic_s_farer.svg", 0.8f);
-			structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Sikkerhet.Brann"), "ic_s_brann.svg", 0.8f);
-			structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Sikkerhet.Sikkerhet"), "ic_s_sikkerhet.svg", 0.8f);
+            // Sikkerhet
+            StructureSectionDto structureSikkerhet = structure.AddStructureSection(LangUtil.Get("Structure.Sikkerhet.Header"));
+            structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Sikkerhet.Farer"), "ic_farer.svg");
+            structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Sikkerhet.Brann"), "ic_brann.svg");
+            structureSikkerhet.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Sikkerhet.Sikkerhet"), "ic_sikkerhet.svg");
 
             // Pasienter
-			StructureSectionDto structurePasienter = structure.AddStructureSection(LangUtil.Get("Structure.Pasienter.Header"), "ic_p.svg");
-			structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Pasienter.Antall"), "ic_p_pasienter.svg", 0.9f);
-			structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Pasienter.Type"), "ic_p_type.svg", 0.7f);
-			structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Pasienter.Omfang"), "ic_p_skademekanikk.svg", 0.8f);
+            StructureSectionDto structurePasienter = structure.AddStructureSection(LangUtil.Get("Structure.Pasienter.Header"));
+            structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Pasienter.Antall"), "ic_pasienter.svg");
+            structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Pasienter.Type"), "ic_skader.svg");
+            structurePasienter.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Pasienter.Omfang"), "ic_skademekanikk.svg");
 
             // Evakuering
-			StructureSectionDto structureEvakuering = structure.AddStructureSection(LangUtil.Get("Structure.Evakuering.Header"), "ic_e.svg");
-			structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Evakuering.Flaskehalser"), "ic_e_flaskehalser.svg", 0.7f);
-			structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Evakuering.Kjeder"), "ic_e_evakuering.svg", 0.7f);
-			structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Evakuering.Rett"), "ic_e_rett.svg", 0.7f);
+            StructureSectionDto structureEvakuering = structure.AddStructureSection(LangUtil.Get("Structure.Evakuering.Header"));
+            structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Evakuering.Flaskehalser"), "ic_flaskehalser.svg");
+            structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Evakuering.Kjeder"), "ic_evakuering.svg");
+            structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, LangUtil.Get("Structure.Evakuering.Rett"), "ic_rett.svg");
 
-			structure.currentStructureSectionId = 0;
-		}
+            structure.currentStructureSectionId = 0;
+        }
 
         private void SetupCustomNavigationBar()
         {
@@ -170,17 +164,17 @@ namespace Henspe.iOS
             // Sync after sleep
             appActicatedOccured = true;
 
-			InvokeOnMainThread(delegate
+            InvokeOnMainThread(delegate
             {
-        	    NSNotificationCenter.DefaultCenter.PostNotificationName(EventConst.appActivated, this);
+                NSNotificationCenter.DefaultCenter.PostNotificationName(EventConst.appActivated, this);
             });
         }
 
         #region permissions
         public bool IsOnboardingNeeded()
         {
-			//Onboarding needed if location rights is needed
-           return !(locationManager.HasLocationPermission());
+            //Onboarding needed if location rights is needed
+            return !(locationManager.HasLocationPermission());
         }
         #endregion
 

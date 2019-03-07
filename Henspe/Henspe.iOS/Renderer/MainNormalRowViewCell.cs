@@ -23,27 +23,29 @@ namespace Henspe.iOS
 
             labLabel.TextColor = ColorConst.snlaText;
             labLabel.Text = structureElement.description;
+            /*jls
+         viewImageContainer.BackgroundColor = UIColor.Clear;
+         if (_constraint != null)
+         {
+             viewImageContainer.RemoveConstraint(_constraint);
+             _constraint.Dispose();
+             _constraint = null;
+         }
 
-            viewImageContainer.BackgroundColor = UIColor.Clear;
-            if (_constraint != null)
-            {
-                viewImageContainer.RemoveConstraint(_constraint);
-                _constraint.Dispose();
-                _constraint = null;
-            }
 
-            if(structureElement.percent < 1)
-            {
+         if(structureElement.percent < 1)
+         {
 
-                //ImageView.TranslatesAutoresizingMaskIntoConstraints = false;
-                _constraint = NSLayoutConstraint.Create(imgImage, NSLayoutAttribute.Width, NSLayoutRelation.Equal, viewImageContainer, NSLayoutAttribute.Width, structureElement.percent, 1);
-                viewImageContainer.AddConstraint(_constraint);
-            }
-            else
+             //ImageView.TranslatesAutoresizingMaskIntoConstraints = false;
+             _constraint = NSLayoutConstraint.Create(imgImage, NSLayoutAttribute.Width, NSLayoutRelation.Equal, viewImageContainer, NSLayoutAttribute.Width, structureElement.percent, 1);
+             viewImageContainer.AddConstraint(_constraint);
+         }
+         else
+        
             {
                 constraintImageWidth.Active = true;
             }
-
+             */
             SVGUtil.LoadSVGToImageView(imgImage, structureElement.image, new Dictionary<string, string>());
         }
     }

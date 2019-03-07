@@ -20,7 +20,7 @@
     <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;DEBUG;ENABLE_TEST_CLOUD;HENSPE;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: Jørgen Storlie (3A9PFKBHG2)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
     <MtouchFastDev>true</MtouchFastDev>
@@ -30,6 +30,7 @@
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <DeviceSpecificBuild>false</DeviceSpecificBuild>
     <MtouchVerbosity></MtouchVerbosity>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <Optimize>true</Optimize>
@@ -37,12 +38,12 @@
     <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;HENSPE;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignKey>iPhone Distribution: Stiftelsen Norsk Luftambulanse (CVYHAGEZ87)</CodesignKey>
     <MtouchFloat32>true</MtouchFloat32>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchLink>SdkOnly</MtouchLink>
-    <MtouchArch>ARMv7, ARMv7s, ARM64</MtouchArch>
-    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchLink>Full</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <MtouchVerbosity></MtouchVerbosity>
     <CodesignProvision>HenspeAppStore</CodesignProvision>
   </PropertyGroup>
@@ -52,12 +53,13 @@
     <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;HENSPE;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: Jørgen Storlie (3A9PFKBHG2)</CodesignKey>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
-    <MtouchLink>None</MtouchLink>
+    <MtouchLink>Full</MtouchLink>
     <MtouchArch>i386, x86_64</MtouchArch>
-    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <MtouchVerbosity></MtouchVerbosity>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -67,7 +69,7 @@
     <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;DEBUG;ENABLE_TEST_CLOUD;HENSPE;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: Jørgen Storlie (3A9PFKBHG2)</CodesignKey>
     <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <MtouchDebug>true</MtouchDebug>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
@@ -79,6 +81,7 @@
     <MtouchArch>ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <MtouchVerbosity></MtouchVerbosity>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -148,9 +151,6 @@
     </Reference>
     <Reference Include="Microsoft.AppCenter.Analytics.iOS.Bindings">
       <HintPath>..\packages\Microsoft.AppCenter.Analytics.1.13.2\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.iOS.Bindings.dll</HintPath>
-    </Reference>
-    <Reference Include="Nager.Date">
-      <HintPath>..\packages\Nager.Date.1.24.5\lib\netstandard2.0\Nager.Date.dll</HintPath>
     </Reference>
     <Reference Include="System.Net" />
     <Reference Include="Ricardo.MBProgressHUD.iOS">
@@ -307,9 +307,6 @@
     <BundleResource Include="Resources\Montserrat-Regular.ttf" />
     <BundleResource Include="Base.lproj\InfoPlist.strings" />
     <BundleResource Include="Base.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\HENSPEintropart1.json" />
-    <BundleResource Include="Resources\HENSPEintropart2.json" />
-    <BundleResource Include="Resources\HENSPEintropart3.json" />
     <BundleResource Include="Resources\ic_arrow_left_portrait.svg" />
     <BundleResource Include="Resources\ic_arrow_right.svg" />
     <BundleResource Include="Resources\ic_arrow_up.svg" />
@@ -333,32 +330,17 @@
     <BundleResource Include="Resources\ic_cluster.svg" />
     <BundleResource Include="Resources\ic_e_adresse_given.svg" />
     <BundleResource Include="Resources\ic_e_adresse_my.svg" />
-    <BundleResource Include="Resources\ic_e_ankomst.svg" />
-    <BundleResource Include="Resources\ic_e_avreise.svg" />
-    <BundleResource Include="Resources\ic_e_evakuering.svg" />
-    <BundleResource Include="Resources\ic_e_flaskehalser.svg" />
     <BundleResource Include="Resources\ic_e_my_position.svg" />
-    <BundleResource Include="Resources\ic_e_oppmotested.svg" />
     <BundleResource Include="Resources\ic_e_posisjon_given.svg" />
-    <BundleResource Include="Resources\ic_e_rett.svg" />
     <BundleResource Include="Resources\ic_gear_down.svg" />
     <BundleResource Include="Resources\ic_gear.svg" />
-    <BundleResource Include="Resources\ic_h_brann.svg" />
-    <BundleResource Include="Resources\ic_h_trafikk.svg" />
     <BundleResource Include="Resources\ic_info_down.svg" />
     <BundleResource Include="Resources\ic_info.svg" />
     <BundleResource Include="Resources\ic_logo_color_simple.svg" />
     <BundleResource Include="Resources\ic_n_begrenset.svg" />
-    <BundleResource Include="Resources\ic_n_quartro.svg" />
-    <BundleResource Include="Resources\ic_p_pasienter.svg" />
-    <BundleResource Include="Resources\ic_p_skademekanikk.svg" />
-    <BundleResource Include="Resources\ic_p_type.svg" />
     <BundleResource Include="Resources\ic_poi_selected_position.svg" />
     <BundleResource Include="Resources\ic_road_camera_down.svg" />
     <BundleResource Include="Resources\ic_road_camera_up.svg" />
-    <BundleResource Include="Resources\ic_s_brann.svg" />
-    <BundleResource Include="Resources\ic_s_farer.svg" />
-    <BundleResource Include="Resources\ic_s_sikkerhet.svg" />
     <BundleResource Include="Resources\ic_snla_logo_white.svg" />
     <BundleResource Include="Resources\ic_text_henspe.svg" />
     <BundleResource Include="Resources\video480.mp4" />
@@ -386,6 +368,25 @@
     <BundleResource Include="Resources\ic_btn_placeholder.png" />
     <BundleResource Include="Resources\ic_btn_placeholder%402x.png" />
     <BundleResource Include="Resources\ic_btn_placeholder%403x.png" />
+    <BundleResource Include="Resources\ic_trafikk.svg" />
+    <BundleResource Include="Resources\ic_1.svg" />
+    <BundleResource Include="Resources\ic_2.svg" />
+    <BundleResource Include="Resources\ic_3.svg" />
+    <BundleResource Include="Resources\ic_adresse.svg" />
+    <BundleResource Include="Resources\ic_ankomst.svg" />
+    <BundleResource Include="Resources\ic_avreise.svg" />
+    <BundleResource Include="Resources\ic_brann.svg" />
+    <BundleResource Include="Resources\ic_farer.svg" />
+    <BundleResource Include="Resources\ic_flaskehalser.svg" />
+    <BundleResource Include="Resources\ic_oppmotested.svg" />
+    <BundleResource Include="Resources\ic_pasienter.svg" />
+    <BundleResource Include="Resources\ic_posisjon.svg" />
+    <BundleResource Include="Resources\ic_quattro.svg" />
+    <BundleResource Include="Resources\ic_rett.svg" />
+    <BundleResource Include="Resources\ic_sikkerhet.svg" />
+    <BundleResource Include="Resources\ic_skademekanikk.svg" />
+    <BundleResource Include="Resources\ic_skader.svg" />
+    <BundleResource Include="Resources\ic_evakuering.svg" />
   </ItemGroup>
   <Import Project="..\..\..\SNLA-app\SNLA.iOS\SNLA.iOS.projitems" Label="Shared" Condition="Exists('..\..\..\SNLA-app\SNLA.iOS\SNLA.iOS.projitems')" />
   <Import Project="..\..\..\SNLA-app\SNLA.Core\SNLA.Core.projitems" Label="Shared" Condition="Exists('..\..\..\SNLA-app\SNLA.Core\SNLA.Core.projitems')" />
