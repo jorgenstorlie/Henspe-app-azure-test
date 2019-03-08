@@ -69,6 +69,10 @@ GPS.UnknownPosition = "Ukjent posisjon";
 GPS.MyPosition = "Min posisjon er";
 GPS.Accuracy.Text = "Nøyaktighet";
 
+
+
+
+
 // Errors
 Error.NoResponse = "Ingen respons fra serveren";
 Error.InvalidResultFromServer = "Server svarte uventet.";
@@ -135,6 +139,11 @@ Structure.EksaktPosisjon.Adresse = "Nærmeste adresse";
 Structure.EksaktPosisjon.Oppmotested = "Oppmøtested";
 Structure.EksaktPosisjon.Ankomst = "Ankomst";
 Structure.EksaktPosisjon.Avreise = "Avreise";
+
+
+Structure.EksaktPosisjon.MapButton = "Kart";
+Structure.EksaktPosisjon.ShareButton = "Del";
+
 
 // Nivå
 Structure.Niva.Header = "Nivå"; 

@@ -61,7 +61,7 @@ namespace Henspe.iOS
 
             //    viewAnimation.BackgroundColor = UIColor.FromRGBA(50, 0, 0, 40);
 
-            if (UserUtil.Current.onboardingCompleted == true)
+            if (UserUtil.Current.onboardingCompleted == false)
             {
                 btnSkip.SetTitleColor(ColorConst.snlaRed, UIControlState.Normal);
                 btnSkip.SetTitle(LangUtil.Get("Initial.Skip"), UIControlState.Normal);
@@ -123,7 +123,7 @@ namespace Henspe.iOS
                     break;
                 case 2:
                     start = 199;
-                    stop = 386;
+                    stop = 318;
                     break;
             }
             //   animation.BackgroundColor = UIColor.FromRGBA(50, 50, 50, 40);

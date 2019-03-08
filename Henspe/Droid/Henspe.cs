@@ -4,8 +4,8 @@ using Android.Runtime;
 using Henspe.Core.Service;
 using Henspe.Core.Model.Dto;
 using Android.Locations;
-using Android.Gms.Location;
-using SNLA.Core.Const;
+using SNLA.Core.Service;
+using Henspe.Droid.Services;
 
 namespace Henspe.Droid
 {
@@ -16,21 +16,15 @@ namespace Henspe.Droid
 #endif
     class Henspe : Application
     {
-        public string mode = ModeConst.test;
-        protected const int RequestPermissionsRequestCode = 34;
         public static Henspe Current { get; private set; }
-
-        // GPS
-        //     public int coordinateFormat = CoordinateUtil.ddm; // Default coordinate format
-        public FusedLocationProviderClient mFusedLocationClient;
         public Location myLocation;
-
         public string unknownCoordinates = "";
         public string coordinatesText = "";
         public string unknownAddress = "";
         public string addressText = "";
         public StructureDto structure;
         public PositionFragment PositionFragment;
+        public ApplicationService ApplicationService { get; private set; }
         public CoordinateService CoordinateService = null;
 
         public Henspe(IntPtr handle, JniHandleOwnership transfer)
@@ -42,6 +36,8 @@ namespace Henspe.Droid
         public override void OnCreate()
         {
             base.OnCreate();
+
+            ApplicationService = new AndroidApplicationService("https://snla-apps.no/apps/henspe/");
             CoordinateService = new CoordinateService();
 
             CoordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_North, Resources.GetString(Resource.String.Location_Element_North_Text));
@@ -52,7 +48,6 @@ namespace Henspe.Droid
             CoordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_Minutes, Resources.GetString(Resource.String.Location_Element_Minutes_Text));
             CoordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_Seconds, Resources.GetString(Resource.String.Location_Element_Seconds_Text));
 
-            mFusedLocationClient = LocationServices.GetFusedLocationProviderClient(this);
             InitializeLocationText();
             SetupLocalData();
         }
@@ -114,6 +109,5 @@ namespace Henspe.Droid
             structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Evakuering_Kjeder), "ic_evakuering");
             structureEvakuering.AddStructureElement(StructureElementDto.ElementType.Normal, Resources.GetString(Resource.String.Structure_Evakuering_Rett), "ic_rett");
         }
-
     }
 }

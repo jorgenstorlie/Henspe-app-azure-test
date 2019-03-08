@@ -139,16 +139,14 @@ namespace Henspe.Droid
         private void CreateAddressTextAndRefreshAddressRow(Location location)
         {
             Geocoder geocoder = new Geocoder(this.Activity);
-
             IList<Address> addresses = geocoder.GetFromLocation(location.Latitude, location.Longitude, 1);
-
             string wholeAddress = "";
 
             try
             {
                 var dd = addresses[0];
                 wholeAddress = dd.Thoroughfare + " " + dd.SubThoroughfare;
-                wholeAddress = wholeAddress + System.Environment.NewLine  + dd.SubLocality + ", "+ dd.Locality;
+                wholeAddress = wholeAddress + System.Environment.NewLine  + (dd.SubLocality + ", " ?? string.Empty) + dd.Locality;
             }
             catch (System.ArgumentOutOfRangeException aoore)
             {

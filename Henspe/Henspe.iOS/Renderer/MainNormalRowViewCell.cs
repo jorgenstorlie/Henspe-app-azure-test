@@ -20,7 +20,7 @@ namespace Henspe.iOS
         internal void SetContent(StructureElementDto structureElement)
         {
             BackgroundColor = UIColor.Clear;
-
+            
             labLabel.TextColor = ColorConst.snlaText;
             labLabel.Text = structureElement.description;
             /*jls

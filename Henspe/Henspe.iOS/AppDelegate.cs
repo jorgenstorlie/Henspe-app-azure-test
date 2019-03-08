@@ -53,7 +53,7 @@ namespace Henspe.iOS
             current = this;
 
             window = new UIWindow(UIScreen.MainScreen.Bounds);
-            ApplicationService = new ApplicationService();
+            ApplicationService = new IOSApplicationService("https://snla-apps.no/apps/henspe/");
             SetupCustomNavigationBar();
             SetupSectionsWithElements();
 

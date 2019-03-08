@@ -56,7 +56,7 @@
     <CodesignKey>iPhone Developer: Jørgen Storlie (3A9PFKBHG2)</CodesignKey>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
     <MtouchLink>Full</MtouchLink>
-    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchArch>x86_64</MtouchArch>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <MtouchVerbosity></MtouchVerbosity>
     <CodesignProvision>VS: WildCard Development</CodesignProvision>
@@ -81,7 +81,7 @@
     <MtouchArch>ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <MtouchVerbosity></MtouchVerbosity>
-    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <CodesignProvision>HENSPEDevelopment</CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -328,25 +328,17 @@
     <BundleResource Include="Resources\ic_btn_traffic_down.svg" />
     <BundleResource Include="Resources\ic_btn_traffic.svg" />
     <BundleResource Include="Resources\ic_cluster.svg" />
-    <BundleResource Include="Resources\ic_e_adresse_given.svg" />
-    <BundleResource Include="Resources\ic_e_adresse_my.svg" />
-    <BundleResource Include="Resources\ic_e_my_position.svg" />
-    <BundleResource Include="Resources\ic_e_posisjon_given.svg" />
     <BundleResource Include="Resources\ic_gear_down.svg" />
     <BundleResource Include="Resources\ic_gear.svg" />
     <BundleResource Include="Resources\ic_info_down.svg" />
     <BundleResource Include="Resources\ic_info.svg" />
     <BundleResource Include="Resources\ic_logo_color_simple.svg" />
-    <BundleResource Include="Resources\ic_n_begrenset.svg" />
     <BundleResource Include="Resources\ic_poi_selected_position.svg" />
     <BundleResource Include="Resources\ic_road_camera_down.svg" />
     <BundleResource Include="Resources\ic_road_camera_up.svg" />
     <BundleResource Include="Resources\ic_snla_logo_white.svg" />
     <BundleResource Include="Resources\ic_text_henspe.svg" />
     <BundleResource Include="Resources\video480.mp4" />
-    <BundleResource Include="..\Henspe.Core\Translations\Translations_no.json">
-      <Link>Resources\Translations_no.json</Link>
-    </BundleResource>
     <BundleResource Include="Resources\btn_blue%402x.png" />
     <BundleResource Include="Resources\btn_blue%403x.png" />
     <BundleResource Include="Resources\btn_blue.png" />

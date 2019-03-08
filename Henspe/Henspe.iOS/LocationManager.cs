@@ -184,7 +184,7 @@ namespace Henspe.iOS
             {
                 locationManager.LocationsUpdated += HandleLocationsUpdated;
                 locationManager.RequestAlwaysAuthorization();
-                locationManager.AllowsBackgroundLocationUpdates = true;
+            //    locationManager.AllowsBackgroundLocationUpdates = true;
                 locationManager.StartUpdatingLocation();
 
                 AppDelegate.current.locationManager.gpsStarted = true;

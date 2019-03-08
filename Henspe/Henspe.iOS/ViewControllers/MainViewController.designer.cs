@@ -9,40 +9,43 @@ using System.CodeDom.Compiler;
 
 namespace Henspe.iOS
 {
-	[Register ("MainViewController")]
-	partial class MainViewController
-	{
-		[Outlet]
-		UIKit.UIButton btnConsent { get; set; }
+    [Register("MainViewController")]
+    partial class MainViewController
+    {
+        [Outlet]
+        UIKit.UIButton btnConsent { get; set; }
 
-		[Outlet]
-		UIKit.NSLayoutConstraint constraintAreaOverTable { get; set; }
+        [Outlet]
+        UIKit.NSLayoutConstraint constraintAreaOverTable { get; set; }
 
-		[Outlet]
-		UIKit.UITableView myTableView { get; set; }
+        [Outlet]
+        UIKit.UITableView myTableView { get; set; }
 
-		[Action ("OnConsentClicked:")]
-		partial void OnConsentClicked (Foundation.NSObject sender);
+        [Action("OnConsentClicked:")]
+        partial void OnConsentClicked(Foundation.NSObject sender);
 
-		[Action ("OnSettingsClicked:")]
-		partial void OnSettingsClicked (Foundation.NSObject sender);
-		
-		void ReleaseDesignerOutlets ()
-		{
-			if (btnConsent != null) {
-				btnConsent.Dispose ();
-				btnConsent = null;
-			}
+        [Action("OnSettingsClicked:")]
+        partial void OnSettingsClicked(Foundation.NSObject sender);
 
-			if (myTableView != null) {
-				myTableView.Dispose ();
-				myTableView = null;
-			}
+        void ReleaseDesignerOutlets()
+        {
+            if (btnConsent != null)
+            {
+                btnConsent.Dispose();
+                btnConsent = null;
+            }
 
-			if (constraintAreaOverTable != null) {
-				constraintAreaOverTable.Dispose ();
-				constraintAreaOverTable = null;
-			}
-		}
-	}
+            if (constraintAreaOverTable != null)
+            {
+                constraintAreaOverTable.Dispose();
+                constraintAreaOverTable = null;
+            }
+
+            if (myTableView != null)
+            {
+                myTableView.Dispose();
+                myTableView = null;
+            }
+        }
+    }
 }

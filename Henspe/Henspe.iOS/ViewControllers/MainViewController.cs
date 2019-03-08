@@ -4,6 +4,7 @@ using Henspe.Core.Model.Dto;
 using Henspe.iOS.Const;
 using SNLA.iOS.Util;
 using UIKit;
+using Xamarin.Essentials;
 
 namespace Henspe.iOS
 {
@@ -36,6 +37,8 @@ namespace Henspe.iOS
 
             // Events
             observerActivatedOccured = NSNotificationCenter.DefaultCenter.AddObserver(new NSString(EventConst.appActivated), HandleActivatedOccured);
+
+            AppDelegate.current.locationManager.StartGPSTracking();
         }
 
         public void HandleActivatedOccured(NSNotification notification)
@@ -120,6 +123,10 @@ namespace Henspe.iOS
             myTableView.RowHeight = UITableView.AutomaticDimension;
             myTableView.EstimatedRowHeight = 50;
 
+
+
+
+
             AutomaticallyAdjustsScrollViewInsets = false;
 
             UIEdgeInsets insets = new UIEdgeInsets(0, 0, 100, 0);
@@ -169,14 +176,36 @@ namespace Henspe.iOS
             });
         }
 
+
         public void RowSelected(NSIndexPath indexPath, bool selected)
         {
             if (indexPath.Section == MainListTableViewSource.exactPostitionSection && indexPath.Row == 0)
             {
+
+                if (AppDelegate.current.locationManager.locationManager.Location != null)
+                {
+                    var loc = AppDelegate.current.locationManager.gpsCurrentPositionObject;
+
+                    var location = new Location(AppDelegate.current.locationManager.lastKnownLocation.Coordinate.Latitude, AppDelegate.current.locationManager.lastKnownLocation.Coordinate.Longitude);
+
+                    NavigationMode mode = NavigationMode.None;
+                    string name = "HENSPE";
+                    var options = new MapLaunchOptions
+                    {
+                        Name = name,
+                        NavigationMode = mode
+                    };
+
+                    Map.OpenAsync(location);
+                }
+
+                /*
                 InvokeOnMainThread(delegate
                 {
                     this.PerformSegue("segueMap", this);
                 });
+                */
+
             }
         }
 
@@ -252,6 +281,58 @@ namespace Henspe.iOS
             }
         }
 
+
+
+        public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
+        {
+
+            const string normalCellIdentifier = "MainNormalCell";
+            const string positionIdentifier = "MainLocationCell";
+            const string addressIdentifier = "AddressCell";
+
+            int section = indexPath.Section;
+            int row = indexPath.Row;
+
+            string cellIdenifier;
+
+
+            StructureElementDto structureElement = null;
+
+            if (sectionsWithRows.structureSectionList != null && sectionsWithRows.structureSectionList.Count > 0)
+            {
+                StructureSectionDto structureSection = sectionsWithRows.structureSectionList[(int)section];
+
+                if (structureSection.structureElementList != null && structureSection.structureElementList.Count > 0)
+                {
+                    structureElement = structureSection.structureElementList[row];
+                }
+            }
+
+            if (structureElement == null)
+                cellIdenifier = null;
+
+            if (structureElement.elementType == StructureElementDto.ElementType.Normal)
+            {
+                cellIdenifier = normalCellIdentifier;
+            }
+            else if (structureElement.elementType == StructureElementDto.ElementType.Position)
+            {
+                cellIdenifier = positionIdentifier;
+            }
+            else if (structureElement.elementType == StructureElementDto.ElementType.Address)
+            {
+                cellIdenifier = addressIdentifier;
+            }
+            else
+            {
+                cellIdenifier = null;
+            }
+
+            var cell = tableView.DequeueReusableCell(cellIdenifier);
+            return cell.Bounds.Height;
+
+        }
+
         public override nfloat GetHeightForHeader(UITableView tableView, nint section)
         {
             if (sectionsWithRows.structureSectionList != null && sectionsWithRows.structureSectionList.Count > 0)
@@ -303,7 +384,6 @@ namespace Henspe.iOS
 
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
-
             UITableViewCell cell = null;
 
             const string normalCellIdentifier = "MainNormalCell";
@@ -358,9 +438,9 @@ namespace Henspe.iOS
             if (cell != null)
             {
                 if (IsOdd((int)section))
-                    cell.ContentView.BackgroundColor = ColorConst.oddBackgroundColor;
+                    cell.BackgroundColor = ColorConst.oddBackgroundColor;
                 else
-                    cell.ContentView.BackgroundColor = ColorConst.evenBackground;
+                    cell.BackgroundColor = ColorConst.evenBackground;
             }
             return cell;
         }
