@@ -340,6 +340,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kaq-04-YL5">
+                                <rect key="frame" x="41" y="507" width="293" height="98"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="98" id="xWT-RZ-1AM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkd-ga-UcR">
                                 <rect key="frame" x="242" y="630" width="117" height="28"/>
                                 <constraints>
@@ -375,24 +384,8 @@
                                 </constraints>
                                 <color key="pageIndicatorTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="fvw-Q9-Otf">
-                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="E4L-Sh-sxO"/>
-                                    <constraint firstAttribute="width" constant="20" id="i0e-De-BvK"/>
-                                </constraints>
-                            </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yVP-KS-jzq">
-                                <rect key="frame" x="0.0" y="133" width="375" height="472"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kaq-04-YL5">
-                                        <rect key="frame" x="61" y="369" width="252" height="95"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
+                                <rect key="frame" x="0.0" y="133" width="375" height="366"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_snla.png" translatesAutoresizingMaskIntoConstraints="NO" id="uLh-bG-Rvw">
                                 <rect key="frame" x="145" y="20" width="85" height="47"/>
@@ -415,27 +408,28 @@
                         <constraints>
                             <constraint firstItem="SJH-hk-fxF" firstAttribute="centerX" secondItem="pfI-bs-CBR" secondAttribute="centerX" id="2jC-Tr-RdG"/>
                             <constraint firstItem="nZZ-va-3Xp" firstAttribute="top" secondItem="7eI-B5-8dI" secondAttribute="bottom" constant="9" id="6br-5L-5Al"/>
+                            <constraint firstItem="Kaq-04-YL5" firstAttribute="top" secondItem="yVP-KS-jzq" secondAttribute="bottom" constant="8" id="6ov-lb-4ED"/>
                             <constraint firstAttribute="trailing" secondItem="FDn-uq-4VJ" secondAttribute="trailing" id="A9J-oA-Cpg"/>
                             <constraint firstItem="dkd-ga-UcR" firstAttribute="trailing" secondItem="pfI-bs-CBR" secondAttribute="trailingMargin" id="Au4-56-LQj"/>
                             <constraint firstAttribute="trailing" secondItem="yVP-KS-jzq" secondAttribute="trailing" id="DS7-bs-QDH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kaq-04-YL5" secondAttribute="trailing" constant="25" id="DSm-EC-iSe"/>
+                            <constraint firstItem="Kaq-04-YL5" firstAttribute="leading" secondItem="pfI-bs-CBR" secondAttribute="leadingMargin" constant="25" id="FUr-8D-mwO"/>
                             <constraint firstItem="7eI-B5-8dI" firstAttribute="leading" secondItem="pfI-bs-CBR" secondAttribute="leadingMargin" id="LGJ-3X-W9A"/>
                             <constraint firstItem="FDn-uq-4VJ" firstAttribute="top" secondItem="uLh-bG-Rvw" secondAttribute="bottom" constant="8" id="MwZ-CD-Jmk"/>
                             <constraint firstItem="nZZ-va-3Xp" firstAttribute="top" secondItem="dkd-ga-UcR" secondAttribute="bottom" constant="9" id="OSl-A8-BVR"/>
-                            <constraint firstItem="fvw-Q9-Otf" firstAttribute="centerY" secondItem="pfI-bs-CBR" secondAttribute="centerY" id="PVl-a9-J7J"/>
                             <constraint firstItem="uLh-bG-Rvw" firstAttribute="centerX" secondItem="pfI-bs-CBR" secondAttribute="centerX" id="RNt-c3-jY5"/>
                             <constraint firstItem="yVP-KS-jzq" firstAttribute="top" secondItem="FDn-uq-4VJ" secondAttribute="bottom" constant="8" id="VoA-PJ-oz3"/>
                             <constraint firstItem="FDn-uq-4VJ" firstAttribute="leading" secondItem="pfI-bs-CBR" secondAttribute="leading" id="Wwc-Id-ZLI"/>
                             <constraint firstItem="yVP-KS-jzq" firstAttribute="leading" secondItem="pfI-bs-CBR" secondAttribute="leading" id="a0b-qO-GbK"/>
-                            <constraint firstItem="fvw-Q9-Otf" firstAttribute="centerX" secondItem="pfI-bs-CBR" secondAttribute="centerX" id="bXp-Mb-R7G"/>
-                            <constraint firstItem="nZZ-va-3Xp" firstAttribute="top" secondItem="yVP-KS-jzq" secondAttribute="bottom" constant="62" id="cuI-Kk-pTG"/>
                             <constraint firstItem="nZZ-va-3Xp" firstAttribute="top" secondItem="SJH-hk-fxF" secondAttribute="bottom" constant="5" id="eVa-DW-ddn"/>
                             <constraint firstItem="uLh-bG-Rvw" firstAttribute="top" secondItem="M55-7v-hyU" secondAttribute="bottom" id="hV8-l5-dow"/>
+                            <constraint firstItem="SJH-hk-fxF" firstAttribute="top" secondItem="Kaq-04-YL5" secondAttribute="bottom" constant="20" id="lNm-rV-SFK"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="actActivityIndicator" destination="fvw-Q9-Otf" id="lc5-rr-Qp3"/>
                         <outlet property="btnNext" destination="dkd-ga-UcR" id="Vha-QA-C2I"/>
                         <outlet property="btnSkip" destination="7eI-B5-8dI" id="Hop-3U-7Qe"/>
+                        <outlet property="labDescription" destination="Kaq-04-YL5" id="AhT-O3-xSG"/>
                         <outlet property="labHeader" destination="FDn-uq-4VJ" id="GV0-qq-OBH"/>
                         <outlet property="pagPager" destination="SJH-hk-fxF" id="fvm-Wu-YK7"/>
                         <outlet property="viewAnimation" destination="yVP-KS-jzq" id="Ux7-K7-UT7"/>

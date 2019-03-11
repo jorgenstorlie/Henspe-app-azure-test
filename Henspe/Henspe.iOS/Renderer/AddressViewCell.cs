@@ -20,7 +20,7 @@ namespace Henspe.iOS
         {
             btnMap.SetTitle(LangUtil.Get("Structure.EksaktPosisjon.ShareButton"), UIControlState.Normal);
             btnMap.AddTarget(ButtonEventHandler, UIControlEvent.TouchUpInside);
-
+            btnMap.Font = FontConst.fontLarge;
             BackgroundColor = UIColor.Clear;
 
             SVGUtil.LoadSVGToImageView(imgImageView, "ic_adresse.svg", new System.Collections.Generic.Dictionary<string, string>());

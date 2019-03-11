@@ -13,6 +13,9 @@ using Android;
 using Android.Preferences;
 using Android.Support.V4.Content;
 using Android.Net;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace Henspe.Droid
 {
@@ -59,6 +62,7 @@ namespace Henspe.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            AppCenter.Start("ff65fe46-1505-497b-95b7-001ce1e74a6a", typeof(Analytics), typeof(Crashes));
 
             myReceiver = new MyReceiver { Context = this };
 
@@ -260,7 +264,7 @@ namespace Henspe.Droid
                     if ((Context as MainActivity).henspeFragment != null)
                         (Context as MainActivity).henspeFragment.UpdateLocation(location);
 
-               //     Toast.MakeText(Context, Utils.GetLocationText(location), ToastLength.Short).Show();
+                    //     Toast.MakeText(Context, Utils.GetLocationText(location), ToastLength.Short).Show();
                 }
             }
         }

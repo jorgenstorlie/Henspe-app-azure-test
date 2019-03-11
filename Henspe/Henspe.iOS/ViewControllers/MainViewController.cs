@@ -1,4 +1,5 @@
 using System;
+using CoreGraphics;
 using Foundation;
 using Henspe.Core.Model.Dto;
 using Henspe.iOS.Const;
@@ -57,10 +58,20 @@ namespace Henspe.iOS
             this.NavigationController.NavigationBar.SetBackgroundImage(emptyImage, UIBarMetrics.Default);
             this.NavigationController.NavigationBar.ShadowImage = emptyImage;
 
+            UINavigationBar navigationBar = NavigationController.NavigationBar;
+            var logoImageView = new UIImageView(UIImage.FromFile("ic_snla.png"));
+            double imageHeight = navigationBar.Bounds.Height * 0.8;
+            double computedImageWidth = (imageHeight * logoImageView.Image.CGImage.Width) / logoImageView.Image.CGImage.Height;
+            logoImageView.Frame = new CGRect((navigationBar.Bounds.Width / 2) - (computedImageWidth / 2), (navigationBar.Bounds.Height / 2) - (imageHeight / 2), computedImageWidth, imageHeight);
+            navigationBar.AddSubview(logoImageView);
+
+            /*
             // Logo
             UIImage imgLogo = UIImage.FromFile("ic_snla.png");
             UIImageView imgViewLogo = new UIImageView(imgLogo);
+ 
             this.NavigationItem.TitleView = imgViewLogo;
+            */
 
             NavigationItem.RightBarButtonItem.TintColor = ColorConst.snlaBlue;
         }
@@ -98,12 +109,14 @@ namespace Henspe.iOS
             }
 
             myTableView.ReloadData();
+
+            RefreshPositionRow();
+
         }
 
         public override void ViewDidAppear(bool animated)
         {
             //base.ViewDidAppear(animated);
-
         }
 
         public override void ViewWillDisappear(bool animated)
@@ -122,10 +135,6 @@ namespace Henspe.iOS
             myTableView.SeparatorStyle = UITableViewCellSeparatorStyle.None;
             myTableView.RowHeight = UITableView.AutomaticDimension;
             myTableView.EstimatedRowHeight = 50;
-
-
-
-
 
             AutomaticallyAdjustsScrollViewInsets = false;
 

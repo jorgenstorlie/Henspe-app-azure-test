@@ -343,7 +343,7 @@ namespace Henspe.iOS
         {
             swiEmail.On = value;
 
-            InvokeOnMainThread(delegate 
+            InvokeOnMainThread(delegate
             {
                 if (swiEmail.On)
                 {
@@ -500,8 +500,8 @@ namespace Henspe.iOS
             {
                 btnAccept.Enabled = false;
 
-				// ShowWaitSpinnerWithMessage(AppDelegate.current.mainViewController.View, LangUtil.Get("Spinner.PleaseWait"));
-				await SpinnerUtil.ShowWaitSpinner(AppDelegate.current.mainViewController.View, 10, LangUtil.Get("Spinner.PleaseWait"), SpinnerUtil.SpinnerType.text);// ShowWaitSpinnerWithMessage(AppDelegate.current.mainViewController.View, LangUtil.Get("Spinner.PleaseWait"));
+                // ShowWaitSpinnerWithMessage(AppDelegate.current.mainViewController.View, LangUtil.Get("Spinner.PleaseWait"));
+                await SpinnerUtil.ShowWaitSpinner(AppDelegate.current.mainViewController.View, 10, LangUtil.Get("Spinner.PleaseWait"), SpinnerUtil.SpinnerType.text);// ShowWaitSpinnerWithMessage(AppDelegate.current.mainViewController.View, LangUtil.Get("Spinner.PleaseWait"));
                 await Task.Delay(300);
 
                 if (regEmailSMSService == null)
@@ -587,8 +587,8 @@ namespace Henspe.iOS
 
         private async void ShowSuccessMessage()
         {
-			await SpinnerUtil.ShowWaitSpinner(AppDelegate.current.mainViewController.View, 2, LangUtil.Get("Consent.Thanks.Text"), SpinnerUtil.SpinnerType.text);
-			//await SpinnerUtil.ShowSpinnerMessage(this.View, LangUtil.Get("Consent.Thanks.Text"), 2, SpinnerUtil.IconType.Check);
+            await SpinnerUtil.ShowWaitSpinner(AppDelegate.current.mainViewController.View, 2, LangUtil.Get("Consent.Thanks.Text"), SpinnerUtil.SpinnerType.text);
+            //await SpinnerUtil.ShowSpinnerMessage(this.View, LangUtil.Get("Consent.Thanks.Text"), 2, SpinnerUtil.IconType.Check);
 
             NavigationController.PopViewController(true);
         }
@@ -602,8 +602,8 @@ namespace Henspe.iOS
         {
             UserUtil.Current.consentAgreed = ConsentAgreed.False;
 
-			await SpinnerUtil.ShowWaitSpinner(AppDelegate.current.mainViewController.View, 2, LangUtil.Get("Consent.ThanksForNoThanks.Text"), SpinnerUtil.SpinnerType.text);
-			//await SpinnerUtil.ShowSpinnerMessage(this.View, LangUtil.Get("Consent.ThanksForNoThanks.Text"), 2, SpinnerUtil.IconType.Check);
+            await SpinnerUtil.ShowWaitSpinner(AppDelegate.current.mainViewController.View, 2, LangUtil.Get("Consent.ThanksForNoThanks.Text"), SpinnerUtil.SpinnerType.text);
+            //await SpinnerUtil.ShowSpinnerMessage(this.View, LangUtil.Get("Consent.ThanksForNoThanks.Text"), 2, SpinnerUtil.IconType.Check);
 
             NavigationController.PopViewController(true);
         }

@@ -3,6 +3,7 @@ using Android.Animation;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
+using Android.Graphics;
 using Android.OS;
 using Android.Support.Design.Widget;
 using Android.Support.V4.View;
@@ -66,6 +67,19 @@ namespace Henspe.Droid
 
             this.animationView.AddAnimatorListener(this);
             this.animationView.AddAnimatorUpdateListener(this);
+
+            if (animationView.Animation == null)
+            {
+                animationView.SetScaleType(ImageView.ScaleType.CenterInside);
+                animationView.SetAnimation("intro.json");
+
+            //   animationView.CancelAnimation();
+            animationView.RepeatCount = 0;
+                animationView.PlayAnimation();
+
+            //    animationView.SetBackgroundColor(Color.Green);
+            }
+
         }
 
         private void OnViewPagerPageScrolled(object sender, ViewPager.PageScrolledEventArgs e)
@@ -129,38 +143,69 @@ namespace Henspe.Droid
 
         private void PlayAnimation(int position)
         {
+            HideLabel(position);
 
             if (pageIndex != position)
             {
                 pageIndex = position;
 
-                if (animationView.Animation == null)
-                    animationView.SetAnimation("intro.json");
+              
+                //     animationView.CancelAnimation();
 
-                //   animationView.CancelAnimation();
-                animationView.RepeatCount = 0;
+                float startFrame = 0;
+                float stopFrame = 0;
 
-                switch (position)
+                 switch (position)
                 {
                     case 0:
-                        animationView.SetMinFrame(0);
-                        animationView.SetMaxFrame(125);
-                        animationView.Frame = 0;
-                        break;
+                         startFrame = 0;
+                         stopFrame = 125;
+                     break;
                     case 1:
-                        animationView.SetMinFrame(125);
-                        animationView.SetMaxFrame(199);
-                        animationView.Frame = 125;
+                        startFrame = 125;
+                        stopFrame = 220;
                         break;
                     case 2:
-                        animationView.SetMinFrame(199);
-                        animationView.SetMaxFrame(386);
-                        animationView.Frame = 199;
+                        startFrame = 210;
+                        stopFrame = 311;
                         break;
 
                 }
 
-                animationView.PlayAnimation();// Loop = true;
+                stopFrame = (stopFrame / 310);
+                startFrame = (startFrame / 310);
+
+                //    animationView.SetMinFrame(startFrame);
+                //  animationView.SetMaxFrame(stopFrame);
+                //  animationView.Frame = startFrame;
+
+                //  animationView.SetMinProgress(startFrame);
+                //  animationView.SetMaxProgress(stopFrame);
+
+
+                switch (pageIndex)
+                {
+                    case 0:
+                        startFrame = 0.0f;
+                        break;
+                    case 1:
+                        startFrame = 0.31f;
+                        break;
+                    case 2:
+                        startFrame = 0.576f;
+                        break;
+
+                }
+
+
+                animationView.Progress = startFrame;
+
+
+
+
+                animationView.ResumeAnimation();// PlayAnimation();// Loop = true;
+
+
             }
         }
 
@@ -239,7 +284,44 @@ namespace Henspe.Droid
         #region ValueAnimator.IAnimatorUpdateListener
         public void OnAnimationUpdate(ValueAnimator animation)
         {
+            float stopFrame = 0;
+            switch (pageIndex)
+            {
+                case 0:
+                    stopFrame = 125;
+                    break;
+                case 1:
+                    stopFrame = 200;
+                    break;
+                case 2:
+                    stopFrame = 311;
+                    break;
 
+            }
+
+           stopFrame = (stopFrame/ 311 );
+
+            switch (pageIndex)
+            {
+                case 0:
+                    stopFrame = 0.31f;
+                    break;
+                case 1:
+                    stopFrame = 0.576f;
+                    break;
+                case 2:
+                    stopFrame = 1;
+                    break;
+            }
+
+            if (animationView.Progress >= stopFrame)
+                animationView.PauseAnimation();
+
+            //  var adapter2 = (_mPager.Adapter as ViewPagerAdapter);
+            //  (adapter2.GetItem(pageIndex) as OnboardingItemFragment).ShowLabelText(animationView.Progress.ToString());
+
+            if (animationView.Progress >= stopFrame)
+                ShowLabel(pageIndex);
         }
         #endregion
 

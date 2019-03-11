@@ -16,6 +16,13 @@ namespace Henspe.Droid
             mTextDescriptionTextView.Visibility = ViewStates.Visible;
         }
 
+        public void ShowLabelText(string value)
+        {
+            mTextDescriptionTextView.Visibility = ViewStates.Visible;
+            mTextDescriptionTextView.Text = value;
+        }
+
+
         public void HideLabel()
         {
             mTextDescriptionTextView.Visibility = ViewStates.Gone;

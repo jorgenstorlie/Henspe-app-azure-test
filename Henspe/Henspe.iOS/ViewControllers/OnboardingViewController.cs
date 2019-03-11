@@ -31,7 +31,6 @@ namespace Henspe.iOS
             base.ViewDidLoad();
             animation = LOTAnimationView.AnimationNamed("intro");
 
-
             this.viewAnimation.AddSubview(animation);
         }
 
@@ -54,11 +53,13 @@ namespace Henspe.iOS
 
         void SetupView()
         {
-            pagPager.PageIndicatorTintColor = UIColor.White;
+            pagPager.PageIndicatorTintColor = ColorConst.grayIndicator;
+            pagPager.UserInteractionEnabled = false;
             pagPager.CurrentPageIndicatorTintColor = ColorConst.snlaRed;
             labHeader.Text = LangUtil.Get("Initial.Header");
             labHeader.TextColor = ColorConst.snlaRed;
-
+            labDescription.TextColor = ColorConst.snlaText;
+            labDescription.Text = string.Empty;
             //    viewAnimation.BackgroundColor = UIColor.FromRGBA(50, 0, 0, 40);
 
             if (UserUtil.Current.onboardingCompleted == false)
@@ -88,10 +89,12 @@ namespace Henspe.iOS
 
             if (nextType == NextType.Next)
             {
+                btnSkip.Hidden = false;
                 btnNext.SetTitle(LangUtil.Get("Initial.Next") + " >", UIControlState.Normal);
             }
             else if (nextType == NextType.Finished)
             {
+                btnSkip.Hidden = true;
                 btnNext.SetTitle(LangUtil.Get("Initial.Finished"), UIControlState.Normal);
             }
         }
@@ -102,14 +105,27 @@ namespace Henspe.iOS
             pagPager.Pages = pages;
 
             var view = ChangeAnimationView(0);
-
-            //  view.Play();
         }
 
         private LOTAnimationView ChangeAnimationView(int index)
         {
             int start = 0;
             int stop = 0;
+
+            if (index == 2)
+                ShowActivityIndicatorForNext(NextType.Finished);
+            else
+                ShowActivityIndicatorForNext(NextType.Next);
+
+            InvokeOnMainThread(() =>
+            {
+                labDescription.Alpha = 1.0f;
+                UIView.AnimateAsync(0.2, () =>
+                {
+                    labDescription.Alpha = 0.0f;
+                    View.LayoutSubviews(); // <- Dette er moder-objektet til txtEmail
+                });
+            });
 
             switch (index)
             {
@@ -130,7 +146,28 @@ namespace Henspe.iOS
 
             animation.PlayFromFrame(start, stop, (animationFinished) =>
             {
-                // Do Something
+                switch (index)
+                {
+                    case 0:
+                        labDescription.Text = LangUtil.Get("Initial.PageOne.Text");
+                        break;
+                    case 1:
+                        labDescription.Text = LangUtil.Get("Initial.PageTwo.Text");
+                        break;
+                    case 2:
+                        labDescription.Text = LangUtil.Get("Initial.PageThree.Text");
+                        break;
+                }
+
+                InvokeOnMainThread(() =>
+                {
+                    labDescription.Alpha = 0.0f;
+                    UIView.AnimateAsync(0.2, () =>
+                    {
+                        labDescription.Alpha = 1.0f;
+                        View.LayoutSubviews(); // <- Dette er moder-objektet til txtEmail
+                    });
+                });
             });
 
             var newView = animation;

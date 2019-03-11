@@ -4,11 +4,6 @@ Alert.Title.Warning = "Advarsel";
 Alert.OK = "OK";
 Alert.Yes = "Ja";
 Alert.No = "Nei";
-Alert.NewVersion.Title = "Ny versjon";
-Alert.NewVersion.Message1 = "En ny versjon";
-Alert.NewVersion.Message2 = "av eSTROKE appen er nyere enn den du bruker";
-Alert.NewVersion.Message3 = "Ønsker du å oppdatere til den nye versjonen?";
-Alert.NewVersion.Message4 = "Lukk denne appen og åpne den nye versjonen av eSTROKE når den nye versjonen er ferdig installert.";
 
 // Format
 CoordinateFormatError = "Feil format";
@@ -46,7 +41,7 @@ SettingsViewController.Coordinates.Format.Title = "Koordinat format";
 SettingsViewController.Coordinates.Format.Header = "Velg hvordan du vil vise kartposisjonen din";
 //Location
 SettingsViewController.Location.Header = "Sted";
-SettingsViewController.Location.Info = "Velg alltid så appen kan sende oppdatert posisisjon under en nødsamtale for best mulig nøyaktighet.";
+SettingsViewController.Location.Info = "Velg alltid så appen kan vise din posisisjon.";
 SettingsViewController.Location.Text = "Stedstjenester";
 SettingsViewController.Location.Unset = "Ikke satt";
 SettingsViewController.Location.NotAllowed = "Ikke tillatt";
@@ -68,10 +63,6 @@ GPS.UnknownAddress = "Ukjent adresse";
 GPS.UnknownPosition = "Ukjent posisjon";
 GPS.MyPosition = "Min posisjon er";
 GPS.Accuracy.Text = "Nøyaktighet";
-
-
-
-
 
 // Errors
 Error.NoResponse = "Ingen respons fra serveren";
@@ -172,7 +163,7 @@ Structure.Evakuering.Rett = "Rett pasient til rett sykehus";
 
 // Info View
 Consent.Title.Text = "Hold deg oppdatert";
-Consent.Header.Text = "Hjelp 113 er utviklet ved hjelp av innsamlede midler. Vi ønsker å holde deg oppdatert med informasjon om vårt livsviktige arbeid (ca 1-2 ganger i måneden)";
+Consent.Header.Text = "HENSPE er utviklet ved hjelp av innsamlede midler. Vi ønsker å holde deg oppdatert med informasjon om vårt livsviktige arbeid";
 Consent.ReadMore.Text = "Les mer";
 Consent.Description.Text = "Stiftelsen Norsk Luftambulanse er en ideell organisasjon som fullt er finansiert av privat innsamlede midler fra enkeltpersoner og støttebedrifter.\n\nDin støtte gå til forskning og utvikling for at alle skal få raskere og riktigere avansert akuttmedisinsk behandling utenfor sykehus. Din støtte bidrar til å redde liv i hele Norge. Driften av luftambulansetjenesten er statlig finansiert.";
 Consent.Approval.Text = "Ja takk, jeg er over 18 år og vil motta informasjon på";

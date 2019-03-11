@@ -2,16 +2,9 @@
 using System;
 using Foundation;
 using UIKit;
-using Henspe.Core.Const;
 using Henspe.iOS.Util;
-using Henspe.Core.Util;
-using Ricardo.RMBProgressHUD.iOS;
-using System.Threading.Tasks;
 using Henspe.iOS.Const;
 using CoreGraphics;
-using System.Collections.Generic;
-using CoreLocation;
-using Henspe.iOS;
 using Henspe.Core.Service;
 using SNLA.Core.Util;
 using SNLA.iOS.Util;
@@ -29,7 +22,6 @@ namespace Henspe.iOS
     public partial class SettingsViewController : UIViewController
     {
         private UITextField activeField;
-
         private Core.Util.InfoUrl infoUrl = Core.Util.InfoUrl.Undefined;
 
         private bool keyboardHideDone = true;
@@ -227,7 +219,7 @@ namespace Henspe.iOS
     // Table view source
     public class SettingsViewSource : UITableViewSource
     {
-        private const int numberOfSections = 4;
+        private const int numberOfSections = 3;
         public int concentSection = 0;
         public int coordinatsSection = 1;
         public int locationSection = 2;

@@ -17,7 +17,7 @@ namespace Henspe.Core.Util
 
     public static class UrlUtil
     {
-        private const string UrlBase = "http://snla-apps.no/web/apps/hjelp113/3.70/";
+        private const string UrlBase = "https://snla-apps.no/web/apps/henspe/1.10/";
 
         private static readonly string[] AsNorwegian = { "no", "nb", "nn", "dk" };
 

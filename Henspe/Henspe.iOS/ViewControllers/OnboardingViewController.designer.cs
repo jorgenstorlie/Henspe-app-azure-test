@@ -22,6 +22,9 @@ namespace Henspe.iOS
 		UIKit.UIButton btnSkip { get; set; }
 
 		[Outlet]
+		UIKit.UILabel labDescription { get; set; }
+
+		[Outlet]
 		UIKit.UILabel labHeader { get; set; }
 
 		[Outlet]
@@ -53,6 +56,11 @@ namespace Henspe.iOS
 				btnSkip = null;
 			}
 
+			if (labHeader != null) {
+				labHeader.Dispose ();
+				labHeader = null;
+			}
+
 			if (pagPager != null) {
 				pagPager.Dispose ();
 				pagPager = null;
@@ -63,9 +71,9 @@ namespace Henspe.iOS
 				viewAnimation = null;
 			}
 
-			if (labHeader != null) {
-				labHeader.Dispose ();
-				labHeader = null;
+			if (labDescription != null) {
+				labDescription.Dispose ();
+				labDescription = null;
 			}
 		}
 	}
