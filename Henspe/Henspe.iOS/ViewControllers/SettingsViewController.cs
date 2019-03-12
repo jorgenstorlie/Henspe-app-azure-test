@@ -294,12 +294,18 @@ namespace Henspe.iOS
 
         private bool GetSectionVisible(nint section)
         {
-            return true;
+            if (section == 0)
+                return false;
+            else
+                return true;
         }
 
         private bool GetCellVisible(NSIndexPath indexPath)
         {
-            return true;
+            if (indexPath.Section == 0)
+                return false;
+            else
+                return true;
         }
 
         private string GetCellName(NSIndexPath indexPath)
@@ -383,8 +389,8 @@ namespace Henspe.iOS
                 else
                     settingsLocationTableCell.LabRight.Text = LangUtil.Get("SettingsViewController.Location.Unset");
 
-              //  if (locationServiceAccess == LocationServiceAccess.always)
-                    if (locationServiceAccess == LocationServiceAccess.onlyWhenInUse)
+                //  if (locationServiceAccess == LocationServiceAccess.always)
+                if (locationServiceAccess == LocationServiceAccess.onlyWhenInUse)
                 {
                     settingsLocationTableCell.LabInfo.TextColor = ColorConst.snlaText;
                     settingsLocationTableCell.LabInfo.Font = FontConst.fontSmall;

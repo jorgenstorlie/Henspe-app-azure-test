@@ -17,9 +17,9 @@
     <string name="Initial_PageOne_Header">VELKOMMEN TIL HENSPE</string>
     <string name="Initial_PageOne_Text">HENSPE gir personell i nødetatene hjelp til å sende gode, strukturerte tilbakemeldinger.</string>
     <string name="Initial_PageTwo_Header">DIGITAL VERSJON AV KORTET</string>
-    <string name="Initial_PageTwo_Text">Appen er en digital versjon av HENSPE-kortet og gir deg posisjonen der du er.</string>
+    <string name="Initial_PageTwo_Text">Appen er en digital versjon av HENSPE-kortet.</string>
     <string name="Initial_PageThree_Header">APPEN VISER DIN POSISJON</string>
-    <string name="Initial_PageThree_Text">Under innstillinger kan du velge hvilket format du ønsker på posisjonen din.</string>
+    <string name="Initial_PageThree_Text">Appen gir deg posisjonen der du er.</string>
     <!-- Permissions -->
     <string name="no_location_detected">Ingen stedstjenester funnet. Sjekk at stedstjenester er aktivert på mobilen din.</string>
     <string name="permission_rationale">Tilgang til stedstjenester er påkrevd for kjærnefunksjonaliteten.</string>
