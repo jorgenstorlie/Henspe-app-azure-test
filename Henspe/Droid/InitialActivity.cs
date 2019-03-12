@@ -24,7 +24,7 @@ namespace Henspe.Droid
             base.OnCreate(savedInstanceState);
             Intent intent = null;
             UserUtil.Current.onboardingCompleted = false;
-                       if (UserUtil.Current.onboardingCompleted)
+            if (UserUtil.Current.onboardingCompleted)
                 intent = new Intent(this, typeof(MainActivity));
             else
                 intent = new Intent(this, typeof(OnboardingActivity));

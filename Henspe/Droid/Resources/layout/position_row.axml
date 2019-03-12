@@ -8,50 +8,11 @@
    
     android:gravity="top">
  
-     <RelativeLayout
-           
-        android:id="@+id/buttons"
-android:layout_alignParentRight="true" 
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-        
-    android:paddingRight="@dimen/content_padding_cell_side"
-    android:paddingTop="@dimen/content_padding_cell_vertical"
-    android:paddingBottom="@dimen/content_padding_cell_vertical"        
-        >
-         <Button
-                android:id="@+id/shareposition"
-                 
-       style="@style/Widget.MaterialComponents.Button.TextButton"
-       
-                          android:layout_gravity="center"
-                        android:gravity="center"
-                        
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
-                android:text="@string/shareposition" />
-        
-        
-         <Button
-                android:id="@+id/showmap"
-                      android:layout_below="@id/shareposition"
-       style="@style/Widget.MaterialComponents.Button.TextButton"
-       
-                          android:layout_gravity="center"
-                        android:gravity="center"
-                        
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/showmap" />
-        
-               </RelativeLayout>
-    
+
     
           <RelativeLayout
          android:id="@+id/main"
-          android:layout_toLeftOf="@id/buttons"
+      
          android:layout_width="wrap_content"
    android:layout_height="wrap_content"
    
@@ -198,6 +159,46 @@ android:layout_alignParentRight="true"
     
     
     
+         <RelativeLayout
+           
+        android:id="@+id/buttons"
+            android:layout_below="@id/main"
+android:layout_alignParentRight="true" 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+        
+    android:paddingRight="@dimen/content_padding_cell_side"
+
+       
+        >
+         <Button
+                android:id="@+id/shareposition"
+                 
+       style="@style/Widget.MaterialComponents.Button.TextButton"
+       
+                          android:layout_gravity="center"
+                        android:gravity="center"
+                        
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/shareposition" />
+        
+        
+         <Button
+                android:id="@+id/showmap"
+                      android:layout_toRightOf="@id/shareposition"
+       style="@style/Widget.MaterialComponents.Button.TextButton"
+       
+                          android:layout_gravity="center"
+                        android:gravity="center"
+                        
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+       
+                android:text="@string/showmap" />
+        
+               </RelativeLayout>
     
     
 </RelativeLayout>

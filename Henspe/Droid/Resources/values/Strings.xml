@@ -15,11 +15,11 @@
     <string name="Initial_Next">Neste &gt;</string>
     <string name="Initial_Finished">Ferdig</string>
     <string name="Initial_PageOne_Header">VELKOMMEN TIL HENSPE</string>
-    <string name="Initial_PageOne_Text">Appen er laget for å gi personell i nødetatene hjelp til å sende gode strukturerte tilbakemeldinger over sambandet ved ulike hendelser.</string>
+    <string name="Initial_PageOne_Text">HENSPE gir personell i nødetatene hjelp til å sende gode, strukturerte tilbakemeldinger.</string>
     <string name="Initial_PageTwo_Header">DIGITAL VERSJON AV KORTET</string>
-    <string name="Initial_PageTwo_Text">Denne appen er en digital versjon av HENSPE kortet og vil også gi deg oppdatert informasjon om posisjonen der du er. </string>
+    <string name="Initial_PageTwo_Text">Appen er en digital versjon av HENSPE-kortet og gir deg posisjonen der du er.</string>
     <string name="Initial_PageThree_Header">APPEN VISER DIN POSISJON</string>
-    <string name="Initial_PageThree_Text">Du kan selv velge hvilket format du ønsker på posisjonen din i appen. Dette kan du endre fra innstillinger i appen. </string>
+    <string name="Initial_PageThree_Text">Under innstillinger kan du velge hvilket format du ønsker på posisjonen din.</string>
     <!-- Permissions -->
     <string name="no_location_detected">Ingen stedstjenester funnet. Sjekk at stedstjenester er aktivert på mobilen din.</string>
     <string name="permission_rationale">Tilgang til stedstjenester er påkrevd for kjærnefunksjonaliteten.</string>

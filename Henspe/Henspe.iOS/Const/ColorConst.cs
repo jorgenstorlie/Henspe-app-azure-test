@@ -1,6 +1,4 @@
-﻿using System;
-using Foundation;
-using UIKit;
+﻿using UIKit;
 
 namespace Henspe.iOS.Const
 {

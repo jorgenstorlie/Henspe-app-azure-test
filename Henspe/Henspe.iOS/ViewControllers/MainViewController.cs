@@ -22,6 +22,7 @@ namespace Henspe.iOS
             ForegroundColor = ColorConst.snlaText,
             Font = FontConst.fontMedium
         };
+        private UIImageView logoImageView;
 
         public MainViewController(IntPtr handle) : base(handle)
         {
@@ -32,8 +33,6 @@ namespace Henspe.iOS
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-
-            SetupNavigationBar();
             SetupView();
 
             // Events
@@ -59,7 +58,7 @@ namespace Henspe.iOS
             this.NavigationController.NavigationBar.ShadowImage = emptyImage;
 
             UINavigationBar navigationBar = NavigationController.NavigationBar;
-            var logoImageView = new UIImageView(UIImage.FromFile("ic_snla.png"));
+             logoImageView = new UIImageView(UIImage.FromFile("ic_snla.png"));
             double imageHeight = navigationBar.Bounds.Height * 0.8;
             double computedImageWidth = (imageHeight * logoImageView.Image.CGImage.Width) / logoImageView.Image.CGImage.Height;
             logoImageView.Frame = new CGRect((navigationBar.Bounds.Width / 2) - (computedImageWidth / 2), (navigationBar.Bounds.Height / 2) - (imageHeight / 2), computedImageWidth, imageHeight);
@@ -94,7 +93,7 @@ namespace Henspe.iOS
         public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
-
+            SetupNavigationBar();
             btnConsent.SetTitleColor(ColorConst.snlaBlue, UIControlState.Normal);
             btnConsent.Layer.BorderColor = btnConsent.TitleColor(UIControlState.Normal).CGColor;
             btnConsent.Layer.BorderWidth = 1;
@@ -121,8 +120,11 @@ namespace Henspe.iOS
 
         public override void ViewWillDisappear(bool animated)
         {
+            RemoveNavigationBarLogo();
             base.ViewWillDisappear(animated);
         }
+
+        private void RemoveNavigationBarLogo()         {             logoImageView.RemoveFromSuperview();         }
 
         private void SetupView()
         {

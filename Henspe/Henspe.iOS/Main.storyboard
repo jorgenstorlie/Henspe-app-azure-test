@@ -385,7 +385,10 @@
                                 <color key="pageIndicatorTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yVP-KS-jzq">
-                                <rect key="frame" x="0.0" y="133" width="375" height="366"/>
+                                <rect key="frame" x="-193.5" y="133" width="762" height="366"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="762" id="1rN-hq-EYb"/>
+                                </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_snla.png" translatesAutoresizingMaskIntoConstraints="NO" id="uLh-bG-Rvw">
                                 <rect key="frame" x="145" y="20" width="85" height="47"/>
@@ -411,7 +414,6 @@
                             <constraint firstItem="Kaq-04-YL5" firstAttribute="top" secondItem="yVP-KS-jzq" secondAttribute="bottom" constant="8" id="6ov-lb-4ED"/>
                             <constraint firstAttribute="trailing" secondItem="FDn-uq-4VJ" secondAttribute="trailing" id="A9J-oA-Cpg"/>
                             <constraint firstItem="dkd-ga-UcR" firstAttribute="trailing" secondItem="pfI-bs-CBR" secondAttribute="trailingMargin" id="Au4-56-LQj"/>
-                            <constraint firstAttribute="trailing" secondItem="yVP-KS-jzq" secondAttribute="trailing" id="DS7-bs-QDH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Kaq-04-YL5" secondAttribute="trailing" constant="25" id="DSm-EC-iSe"/>
                             <constraint firstItem="Kaq-04-YL5" firstAttribute="leading" secondItem="pfI-bs-CBR" secondAttribute="leadingMargin" constant="25" id="FUr-8D-mwO"/>
                             <constraint firstItem="7eI-B5-8dI" firstAttribute="leading" secondItem="pfI-bs-CBR" secondAttribute="leadingMargin" id="LGJ-3X-W9A"/>
@@ -420,8 +422,8 @@
                             <constraint firstItem="uLh-bG-Rvw" firstAttribute="centerX" secondItem="pfI-bs-CBR" secondAttribute="centerX" id="RNt-c3-jY5"/>
                             <constraint firstItem="yVP-KS-jzq" firstAttribute="top" secondItem="FDn-uq-4VJ" secondAttribute="bottom" constant="8" id="VoA-PJ-oz3"/>
                             <constraint firstItem="FDn-uq-4VJ" firstAttribute="leading" secondItem="pfI-bs-CBR" secondAttribute="leading" id="Wwc-Id-ZLI"/>
-                            <constraint firstItem="yVP-KS-jzq" firstAttribute="leading" secondItem="pfI-bs-CBR" secondAttribute="leading" id="a0b-qO-GbK"/>
                             <constraint firstItem="nZZ-va-3Xp" firstAttribute="top" secondItem="SJH-hk-fxF" secondAttribute="bottom" constant="5" id="eVa-DW-ddn"/>
+                            <constraint firstItem="yVP-KS-jzq" firstAttribute="centerX" secondItem="pfI-bs-CBR" secondAttribute="centerX" id="grC-bc-ePg"/>
                             <constraint firstItem="uLh-bG-Rvw" firstAttribute="top" secondItem="M55-7v-hyU" secondAttribute="bottom" id="hV8-l5-dow"/>
                             <constraint firstItem="SJH-hk-fxF" firstAttribute="top" secondItem="Kaq-04-YL5" secondAttribute="bottom" constant="20" id="lNm-rV-SFK"/>
                         </constraints>
@@ -1130,18 +1132,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo_snla.png" translatesAutoresizingMaskIntoConstraints="NO" id="UJZ-6Z-06h">
-                                <rect key="frame" x="133.5" y="20" width="108" height="72"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="108" id="8oi-ng-qk2"/>
-                                    <constraint firstAttribute="height" constant="72" id="DdP-On-3yg"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo_snla.png" translatesAutoresizingMaskIntoConstraints="NO" id="bxb-Aa-lkC">
+                                <rect key="frame" x="106" y="218.5" width="163" height="180"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.97254901959999995" green="0.96470588239999999" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="UJZ-6Z-06h" firstAttribute="centerX" secondItem="L5Y-mv-xTc" secondAttribute="centerX" id="ShJ-8f-8Iy"/>
-                            <constraint firstItem="UJZ-6Z-06h" firstAttribute="top" secondItem="vOR-0f-STo" secondAttribute="bottom" id="Xiv-6V-0in"/>
+                            <constraint firstItem="bxb-Aa-lkC" firstAttribute="width" secondItem="bxb-Aa-lkC" secondAttribute="height" multiplier="163:180" id="7R9-5r-oW1"/>
+                            <constraint firstItem="bxb-Aa-lkC" firstAttribute="width" secondItem="L5Y-mv-xTc" secondAttribute="width" multiplier="1:2.3" id="8uD-kH-aAc"/>
+                            <constraint firstItem="bxb-Aa-lkC" firstAttribute="centerX" secondItem="L5Y-mv-xTc" secondAttribute="centerX" id="BW7-vq-BqW"/>
+                            <constraint firstItem="bxb-Aa-lkC" firstAttribute="centerY" secondItem="L5Y-mv-xTc" secondAttribute="centerY" constant="-25" id="pye-gS-p9C"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1162,12 +1162,12 @@
         <image name="ic_btn_placeholder.png" width="42" height="42"/>
         <image name="ic_logo_snla.png" width="246" height="180"/>
         <image name="ic_settings.png" width="26" height="26"/>
-        <image name="ic_snla.png" width="71" height="36"/>
+        <image name="ic_snla.png" width="188" height="93"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Bsc-4C-pCi"/>
         <segue reference="CMK-0E-kTS"/>
-        <segue reference="EMM-9T-6Qk"/>
+        <segue reference="SI7-iJ-o9c"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.12233110517263412" green="0.091116435825824738" blue="0.27446338534355164" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

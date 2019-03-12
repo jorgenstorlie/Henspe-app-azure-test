@@ -3919,8 +3919,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d007f
 			public const int buttonPanel = 2131558527;
 			
-			// aapt resource value: 0x7f0d00ec
-			public const int buttons = 2131558636;
+			// aapt resource value: 0x7f0d00ee
+			public const int buttons = 2131558638;
 			
 			// aapt resource value: 0x7f0d0058
 			public const int center = 2131558488;
@@ -3961,8 +3961,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d00e5
 			public const int cur = 2131558629;
 			
-			// aapt resource value: 0x7f0d00f0
-			public const int cur2 = 2131558640;
+			// aapt resource value: 0x7f0d00ed
+			public const int cur2 = 2131558637;
 			
 			// aapt resource value: 0x7f0d0089
 			public const int custom = 2131558537;
@@ -4141,8 +4141,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d0024
 			public const int lottie_layer_name = 2131558436;
 			
-			// aapt resource value: 0x7f0d00ef
-			public const int main = 2131558639;
+			// aapt resource value: 0x7f0d00ec
+			public const int main = 2131558636;
 			
 			// aapt resource value: 0x7f0d00f4
 			public const int masked = 2131558644;
@@ -4336,8 +4336,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d005a
 			public const int selected = 2131558490;
 			
-			// aapt resource value: 0x7f0d00ed
-			public const int shareposition = 2131558637;
+			// aapt resource value: 0x7f0d00ef
+			public const int shareposition = 2131558639;
 			
 			// aapt resource value: 0x7f0d0090
 			public const int shortcut = 2131558544;
@@ -4351,8 +4351,8 @@ namespace Henspe.Droid
 			// aapt resource value: 0x7f0d0038
 			public const int showTitle = 2131558456;
 			
-			// aapt resource value: 0x7f0d00ee
-			public const int showmap = 2131558638;
+			// aapt resource value: 0x7f0d00f0
+			public const int showmap = 2131558640;
 			
 			// aapt resource value: 0x7f0d00f1
 			public const int sliding_tabs = 2131558641;

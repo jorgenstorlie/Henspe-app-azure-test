@@ -70,14 +70,15 @@ namespace Henspe.Droid
 
             if (animationView.Animation == null)
             {
+                animationView.EnableMergePathsForKitKatAndAbove(true);
                 animationView.SetScaleType(ImageView.ScaleType.CenterInside);
                 animationView.SetAnimation("intro.json");
 
-            //   animationView.CancelAnimation();
-            animationView.RepeatCount = 0;
+                //   animationView.CancelAnimation();
+                animationView.RepeatCount = 0;
                 animationView.PlayAnimation();
 
-            //    animationView.SetBackgroundColor(Color.Green);
+                //    animationView.SetBackgroundColor(Color.Green);
             }
 
         }
@@ -149,18 +150,18 @@ namespace Henspe.Droid
             {
                 pageIndex = position;
 
-              
+
                 //     animationView.CancelAnimation();
 
                 float startFrame = 0;
                 float stopFrame = 0;
 
-                 switch (position)
+                switch (position)
                 {
                     case 0:
-                         startFrame = 0;
-                         stopFrame = 125;
-                     break;
+                        startFrame = 0;
+                        stopFrame = 125;
+                        break;
                     case 1:
                         startFrame = 125;
                         stopFrame = 220;
@@ -179,9 +180,8 @@ namespace Henspe.Droid
                 //  animationView.SetMaxFrame(stopFrame);
                 //  animationView.Frame = startFrame;
 
-                //  animationView.SetMinProgress(startFrame);
+                animationView.SetMinProgress(startFrame);
                 //  animationView.SetMaxProgress(stopFrame);
-
 
                 switch (pageIndex)
                 {
@@ -198,12 +198,9 @@ namespace Henspe.Droid
                 }
 
 
-                animationView.Progress = startFrame;
+                //    animationView.Progress = startFrame;
 
-
-
-
-                animationView.ResumeAnimation();// PlayAnimation();// Loop = true;
+                animationView.PlayAnimation();// Loop = true;
 
 
             }
@@ -249,14 +246,19 @@ namespace Henspe.Droid
 
         public void ShowLabel(int position)
         {
-            var adapter2 = (_mPager.Adapter as ViewPagerAdapter);
-            (adapter2.GetItem(position) as OnboardingItemFragment).ShowLabel();
+            if (position != -1)
+            {
+                var adapter2 = (_mPager.Adapter as ViewPagerAdapter);
+                (adapter2.GetItem(position) as OnboardingItemFragment).ShowLabel();
+            }
         }
-
         public void HideLabel(int position)
         {
-            var adapter2 = (_mPager.Adapter as ViewPagerAdapter);
-            (adapter2.GetItem(position) as OnboardingItemFragment).HideLabel();
+            if (position != -1)
+            {
+                var adapter2 = (_mPager.Adapter as ViewPagerAdapter);
+                (adapter2.GetItem(position) as OnboardingItemFragment).HideLabel();
+            }
         }
 
         #region Animator.IAnimatorListener
@@ -299,7 +301,7 @@ namespace Henspe.Droid
 
             }
 
-           stopFrame = (stopFrame/ 311 );
+            stopFrame = (stopFrame / 311);
 
             switch (pageIndex)
             {
@@ -310,7 +312,7 @@ namespace Henspe.Droid
                     stopFrame = 0.576f;
                     break;
                 case 2:
-                    stopFrame = 1;
+                    stopFrame = 0.777f;
                     break;
             }
 

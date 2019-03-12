@@ -92,12 +92,9 @@ Initial.Header = "H E N S P E";
 Initial.Skip = "Hopp over";
 Initial.Next = "Neste";
 Initial.Finished = "Ferdig";
-Initial.PageOne.Header = "VELKOMMEN TIL HENSPE";
-Initial.PageOne.Text = "Appen er laget for å gi personell i nødetatene hjelp til å sende gode strukturerte tilbakemeldinger over sambandet ved ulike hendelser. ";
-Initial.PageTwo.Header = "DIGITAL VERSJON AV KORTET";
-Initial.PageTwo.Text = "Denne appen er en digital versjon av HENSPE kortet og vil også gi deg oppdatert informasjon om posisjonen der du er. ";
-Initial.PageThree.Header = "APPEN VISER DIN POSISJON";
-Initial.PageThree.Text = "Du kan selv velge hvilket format du ønsker på posisjonen din i appen. Dette kan du endre fra innstillinger i appen. ";
+Initial.PageOne.Text = "HENSPE gir personell i nødetatene hjelp til å sende gode, strukturerte tilbakemeldinger.";
+Initial.PageTwo.Text = "Appen er en digital versjon av HENSPE-kortet og gir deg posisjonen der du er.";
+Initial.PageThree.Text = "Under innstillinger kan du velge hvilket format du ønsker på posisjonen din.";
 
 // Location
 Location.Element.Degrees.Text = "grader";

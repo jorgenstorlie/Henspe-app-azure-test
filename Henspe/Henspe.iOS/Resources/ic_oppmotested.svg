@@ -1,15 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
-    <title>ic_oppmotested</title>
-    <desc>Created with Sketch.</desc>
-    <g id="ic_oppmotested" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group" transform="translate(1.500000, 1.500000)" fill="#4A4A4A">
-            <polygon id="Shape" stroke="#4A4A4A" stroke-width="0.5" fill-rule="nonzero" points="3.32767742 7.58219355 2.60031484 8.39665755 4.17818323 10.1753455 -4.40092407e-13 10.1753455 -4.40092407e-13 11.3250415 4.17818323 11.3250415 2.60031484 13.1037295 3.32767742 13.9181935 6.1316129 10.7501935"></polygon>
-            <polygon id="Shape" stroke="#4A4A4A" stroke-width="0.5" fill-rule="nonzero" transform="translate(10.545806, 3.168000) rotate(90.000000) translate(-10.545806, -3.168000) " points="10.8076774 3.4861003e-13 10.0803148 0.814464 11.6581832 2.593152 7.48 2.593152 7.48 3.742848 11.6581832 3.742848 10.0803148 5.521536 10.8076774 6.336 13.6116129 3.168"></polygon>
-            <polygon id="Shape" stroke="#4A4A4A" stroke-width="0.5" fill-rule="nonzero" transform="translate(18.025806, 10.750194) rotate(180.000000) translate(-18.025806, -10.750194) " points="18.2876774 7.58219355 17.5603148 8.39665755 19.1381832 10.1753455 14.96 10.1753455 14.96 11.3250415 19.1381832 11.3250415 17.5603148 13.1037295 18.2876774 13.9181935 21.0916129 10.7501935"></polygon>
-            <polygon id="Shape" stroke="#4A4A4A" stroke-width="0.5" fill-rule="nonzero" transform="translate(10.545806, 18.128000) rotate(-90.000000) translate(-10.545806, -18.128000) " points="10.8076774 14.96 10.0803148 15.774464 11.6581832 17.553152 7.48 17.553152 7.48 18.702848 11.6581832 18.702848 10.0803148 20.481536 10.8076774 21.296 13.6116129 18.128"></polygon>
-            <circle id="Oval" cx="10.56" cy="10.6621935" r="2.2"></circle>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#4A4A4A;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#4A4A4A;}
+</style>
+<title>ic_oppmotested</title>
+<g id="ic_oppmotested">
+	<g id="Group" transform="translate(0.500000, 0.500000)">
+		<polygon id="Path" class="st0" points="3.3,9.4 4.3,8.2 7.5,11.8 4.3,15.3 3.3,14.1 4.6,12.6 0.8,12.6 0.8,10.9 4.6,10.9 		"/>
+		<polygon class="st0" points="12.4,4.9 13.9,3.5 15.1,4.6 11.5,7.7 8,4.6 9.2,3.5 10.7,4.9 10.7,1 12.4,1 		"/>
+		<polygon id="Shape" class="st0" points="19.9,14.1 18.8,15.3 15.7,11.8 18.8,8.2 19.9,9.4 18.6,10.9 22.4,10.9 22.4,12.6 
+			18.6,12.6 		"/>
+		<polygon class="st0" points="9.2,20 8,18.9 11.6,15.8 15.1,18.9 13.9,20 12.4,18.6 12.4,22.5 10.8,22.5 10.8,18.6 		"/>
+		<circle id="Oval" class="st1" cx="11.6" cy="11.7" r="2.2"/>
+	</g>
+</g>
 </svg>

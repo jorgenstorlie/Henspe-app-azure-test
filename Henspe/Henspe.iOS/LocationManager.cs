@@ -3,7 +3,6 @@ using System.Diagnostics;
 using CoreLocation;
 using Foundation;
 using Henspe.Core.Const;
-using Henspe.Core.Util;
 using Henspe.iOS.AppModel;
 using Henspe.iOS.Const;
 using Henspe.iOS.Util;
@@ -79,8 +78,9 @@ namespace Henspe.iOS
         {
             if (UIDevice.CurrentDevice.CheckSystemVersion(10, 0))
             {
-                if (HasAllowAlways() || HasAllowWhenInUse())
-                    return true;
+             //jls  if (HasAllowAlways() || HasAllowWhenInUse())
+                    if ( HasAllowWhenInUse())
+                        return true;
                 else
                     return false;
             }
@@ -102,6 +102,7 @@ namespace Henspe.iOS
                 return false;
         }
 
+        /*
         public bool HasAllowAlways()
         {
             //GetLocationServiceAccess();
@@ -110,7 +111,7 @@ namespace Henspe.iOS
             else
                 return false;
         }
-
+        */
         public bool HasAllowWhenInUse()
         {
             //GetLocationServiceAccess();
@@ -119,7 +120,7 @@ namespace Henspe.iOS
             else
                 return false;
         }
-
+      
         public bool HasDenied()
         {
             //GetLocationServiceAccess();
@@ -145,8 +146,8 @@ namespace Henspe.iOS
         {
             if (HasAllowWhenInUse())
                 return LocationServiceAccess.onlyWhenInUse;
-            else if (HasAllowAlways())
-                return LocationServiceAccess.always;
+            //jls   else if (HasAllowAlways())
+            //jls     return LocationServiceAccess.always;
             else if (HasDenied())
                 return LocationServiceAccess.notAllowed;
             else
