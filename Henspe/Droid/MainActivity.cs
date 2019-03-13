@@ -16,6 +16,7 @@ using Android.Net;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using Android.Graphics;
 
 namespace Henspe.Droid
 {
@@ -194,6 +195,7 @@ namespace Henspe.Droid
                             FindViewById(Resource.Id.activity_main),
                             Resource.String.permission_denied_explanation,
                             Snackbar.LengthIndefinite)
+                            .SetActionTextColor(Color.White)
                             .SetAction(Resource.String.settings, (obj) =>
                             {
                                 // Build intent that displays the App settings screen.
