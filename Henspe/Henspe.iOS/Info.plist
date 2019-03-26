@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIdentifier</key>
-	<string>no.norskluftambulanse.henspe</string>
+	<string>no.snla-system.henspe</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.1</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
