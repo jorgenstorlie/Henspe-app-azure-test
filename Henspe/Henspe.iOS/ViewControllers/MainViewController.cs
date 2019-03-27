@@ -306,7 +306,6 @@ namespace Henspe.iOS
 
             string cellIdenifier;
 
-
             StructureElementDto structureElement = null;
 
             if (sectionsWithRows.structureSectionList != null && sectionsWithRows.structureSectionList.Count > 0)

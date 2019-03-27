@@ -156,6 +156,10 @@ namespace Henspe.iOS
 
         public void StartGPSTracking()
         {
+         //   LocationServiceAccess locationServiceAccess = GetLocationServiceAccess();
+         //   locationManager.RequestAlwaysAuthorization();
+            locationManager.RequestWhenInUseAuthorization();
+
             AppDelegate.current.mainViewController.InvokeOnMainThread(delegate
             {
                 AppDelegate.current.locationManager.lastPositionType = PositionTypeConst.finding;
