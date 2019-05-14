@@ -3,6 +3,9 @@
 #
 # Downloads the SNLA Core project so that it could be correctly linked at build time
 
-echo $(pwd)
+myVar = $(pwd)
+cd "../"
 
 git clone https://github.com/snla-system/SNLA-app
+
+cd $(myVar)
