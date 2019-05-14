@@ -1,5 +1,5 @@
 using System;
-using Henspe.Core.Util;
+using SNLA.Core.Util;
 using Xunit;
 
 namespace Henspe.Core.Test
