@@ -11,6 +11,7 @@ using Microsoft.AppCenter.Crashes;
 using SNLA.Core.Util;
 using SNLA.iOS.Util;
 using SNLA.Core.Service;
+using Henspe.Core.Const;
 
 namespace Henspe.iOS
 {

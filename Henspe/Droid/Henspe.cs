@@ -6,6 +6,7 @@ using Henspe.Core.Model.Dto;
 using Android.Locations;
 using SNLA.Core.Service;
 using Henspe.Droid.Services;
+using Henspe.Core.Const;
 
 namespace Henspe.Droid
 {
