@@ -6,6 +6,7 @@ using Henspe.Core.Model.Dto;
 using Android.Locations;
 using SNLA.Core.Service;
 using Henspe.Droid.Services;
+using Henspe.Core.Const;
 
 namespace Henspe.Droid
 {
@@ -27,7 +28,16 @@ namespace Henspe.Droid
         public ApplicationService ApplicationService { get; private set; }
         public CoordinateService CoordinateService = null;
 
-        public Henspe(IntPtr handle, JniHandleOwnership transfer)
+		//public string prodUrlString = "https://snla-apps.no/apps/henspe/";
+		//public string testUrlTest = "https://snla-apps.no/apps/henspetest/";
+
+		readonly string plistFile = "Henspe.plist";
+		readonly string appNameFTP = "henspe";
+#if DEBUG
+		private string testAppend = "testinternal";
+#endif
+
+		public Henspe(IntPtr handle, JniHandleOwnership transfer)
             : base(handle, transfer)
         {
             Current = this;
@@ -37,8 +47,16 @@ namespace Henspe.Droid
         {
             base.OnCreate();
 
-            ApplicationService = new AndroidApplicationService("https://snla-apps.no/apps/henspe/");
-            CoordinateService = new CoordinateService();
+			//ApplicationService = new AndroidApplicationService("https://snla-apps.no/apps/henspe/", , plistFile);
+
+#if DEBUG
+			var plistLocation = $"{appNameFTP}{testAppend}";
+#else
+			var plistLocation = $"{appNameFTP}";
+#endif
+			ApplicationService = new AndroidApplicationService(UrlConst.BaseUrl, plistLocation, plistFile);
+
+			CoordinateService = new CoordinateService();
 
             CoordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_North, Resources.GetString(Resource.String.Location_Element_North_Text));
             CoordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_South, Resources.GetString(Resource.String.Location_Element_South_Text));

@@ -11,6 +11,7 @@ using Microsoft.AppCenter.Crashes;
 using SNLA.Core.Util;
 using SNLA.iOS.Util;
 using SNLA.Core.Service;
+using Henspe.Core.Const;
 
 namespace Henspe.iOS
 {
@@ -27,8 +28,15 @@ namespace Henspe.iOS
         public CoordinateService coordinateService;
         public RegEmailSMSService regEmailSMSService;
 
-        // Main reference
-        public MainViewController mainViewController = null;
+		readonly string plistFile = "Henspe.plist";
+		readonly string appNameFTP = "henspe";
+		private string testAppend = "test";
+
+		//public string prodUrlString = "https://snla-apps.no/apps/henspe/";
+		//public string testUrlTest = "https://snla-apps.no/apps/henspetest/";
+
+		// Main reference
+		public MainViewController mainViewController = null;
 
         // Location manager
         public LocationManager locationManager;
@@ -53,8 +61,10 @@ namespace Henspe.iOS
             current = this;
 
             window = new UIWindow(UIScreen.MainScreen.Bounds);
-            ApplicationService = new IOSApplicationService("https://snla-apps.no/apps/henspe/");
-            SetupCustomNavigationBar();
+
+			ApplicationService = new IOSApplicationService(UrlConst.BaseUrl, $"{appNameFTP}{testAppend}", $"{plistFile}");
+
+			SetupCustomNavigationBar();
             SetupSectionsWithElements();
 
             if (UserUtil.Current.format == CoordinateFormat.Undefined)
