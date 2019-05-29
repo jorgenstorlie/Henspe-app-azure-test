@@ -40,7 +40,7 @@
     <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;HENSPE;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer: Jørgen Storlie (97DJ5826Y2)</CodesignKey>
+    <CodesignKey>iPhone Distribution: Stiftelsen Norsk Luftambulanse (CVYHAGEZ87)</CodesignKey>
     <MtouchFloat32>true</MtouchFloat32>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchLink>Full</MtouchLink>
@@ -48,7 +48,7 @@
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <MtouchVerbosity></MtouchVerbosity>
   
-    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <CodesignProvision>HenspeAppStore</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <Optimize>true</Optimize>

@@ -17,18 +17,24 @@ using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using Android.Graphics;
+using Android.Widget;
+using Xamarin.Essentials;
+using Location = Android.Locations.Location;
+using Android.Provider;
 
 namespace Henspe.Droid
 {
+
     [Activity(Label = "Main")]
     public class MainActivity : SinglePaneActivity, ISharedPreferencesOnSharedPreferenceChangeListener
     {
+        static readonly string TAG = "MainActivity";
         const string Tag = "MainActivity";
         // Used in checking for runtime permissions.
         const int RequestPermissionsRequestCode = 34;
 
         // The BroadcastReceiver used to listen from broadcasts from the service.
-        MyReceiver myReceiver;
+        LocastionReceiver myReceiver;
 
         // A reference to the service used to get location updates.
         LocationUpdatesService Service;
@@ -49,8 +55,8 @@ namespace Henspe.Droid
                 LocationUpdatesServiceBinder binder = (LocationUpdatesServiceBinder)service;
                 Activity.Service = binder.GetLocationUpdatesService();
                 Activity.Bound = true;
-
-                Activity.Service.RequestLocationUpdates();
+                Activity.Service.StartLocationUpdates(); //RequestLocationUpdates();
+                Activity.Service.Activity = Activity;
             }
 
             public void OnServiceDisconnected(ComponentName name)
@@ -60,12 +66,12 @@ namespace Henspe.Droid
             }
         }
 
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected override void OnCreate(Bundle bundle)
         {
-            base.OnCreate(savedInstanceState);
+            base.OnCreate(bundle);
             AppCenter.Start("ff65fe46-1505-497b-95b7-001ce1e74a6a", typeof(Analytics), typeof(Crashes));
 
-            myReceiver = new MyReceiver { Context = this };
+            myReceiver = new LocastionReceiver { Context = this };
 
             if (CheckPermissions())
                 ServiceConnection = new CustomServiceConnection { Activity = this };
@@ -164,6 +170,33 @@ namespace Henspe.Droid
             }
         }
 
+        protected const int REQUEST_CHECK_SETTINGS = 0x1;
+
+        protected override async void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+       
+
+            switch (requestCode)
+            {
+                case REQUEST_CHECK_SETTINGS:
+                    switch (resultCode)
+                    {
+                        case Result.Ok:
+                            Log.Debug(TAG, "User agreed to make required location settings changes.");
+                            //   await StartLocationUpdates();
+                            Service.StartLocationUpdates();// App.Current.LocationService.StartLocationUpdatesAsync();
+                                                           //        await Hjelp113.current.applicationService.locationUpdatesService.StartLocationUpdates();// App.Current.LocationService.StartLocationUpdatesAsync();
+                                                           //   App.StartLocationService();
+                            break;
+                        case Result.Canceled:
+                            Log.Debug(TAG, "User chose not to make required location settings changes.");
+                            ShowNoConnection();
+                            break;
+                    }
+                    break;
+            }
+        }
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions,
                          Android.Content.PM.Permission[] grantResults)
         {
@@ -232,6 +265,95 @@ namespace Henspe.Droid
         }
         */
 
+        public void OnConnectionSuspended(int cause)
+        {
+        }
+
+        public void HandleLocationServiceError(LocationErrors error)
+        {
+            Log.Debug(TAG, "ERROR: " + error.ToString());
+            bool showToast = false;
+
+            if (error == LocationErrors.GooglePlayServicesNotInstalled)
+            {
+                Log.Debug(TAG, "GooglePlay Services not installed");
+                if (showToast)
+                    Toast.MakeText(this, "GooglePlay Services not installed", ToastLength.Short).Show();
+            }
+            if (error == LocationErrors.MissingPermission)
+            {
+                Log.Debug(TAG, "MissingPermission");
+                if (showToast)
+                    Toast.MakeText(this, "MissingPermission", ToastLength.Short).Show();
+            }
+            if (error == LocationErrors.GooglePlayServicesFails)
+            {
+                Log.Debug(TAG, "GooglePlay Services fails");
+                if (showToast)
+                    Toast.MakeText(this, "GooglePlay Services fails", ToastLength.Short).Show();
+            }
+            if (IsAirplaneModeOn(ApplicationContext))
+            {
+                Log.Debug(TAG, "IsAirplaneModeOn");
+                if (showToast)
+                    Toast.MakeText(this, "AirplaneModeOn", ToastLength.Short).Show();
+            }
+            else
+            {
+                var current = Connectivity.NetworkAccess;
+                if (current != NetworkAccess.Internet)
+                {
+                    // Connection to internet is available
+                    if (showToast)
+                        Toast.MakeText(this, "NoInternet", ToastLength.Short).Show();
+                    Log.Debug(TAG, "NoInternet");
+                }
+            }
+            //   ShowLocationFragment(myLocation, LocationStatus.OK);
+            //    infoPanelVisible = InfoPanelVisible.False;
+            //   ShowinfoPanel(InfoPanelVisible.False);
+        }
+
+        bool IsAirplaneModeOn(Context context)
+        {
+            var isAirplaneModeOn = Settings.Global.GetInt(context.ContentResolver, Settings.Global.AirplaneModeOn);
+            return isAirplaneModeOn != 0;
+        }
+
+        public void HandleLocationAvailability(LocationIsLocationAvailable value)
+        {
+            RunOnUiThread(() =>
+            {
+                if (value == LocationIsLocationAvailable.Waiting)
+                {
+                    Log.Debug(TAG, "Waiting on Connection");
+                    //   ShowNoConnection();
+                }
+                else if (value == LocationIsLocationAvailable.OK)
+                {
+                    Log.Debug(TAG, "Connection available");
+                    //   ShowNoConnection()
+                }
+                else
+                {
+                    Log.Debug(TAG, "No Connection available");
+                    ShowNoConnection();
+                }
+            });
+        }
+
+        public void ShowNoConnection()
+        {
+        }
+
+        public void OnLocationChangedInternal(Location location)
+        {
+            Henspe.Current.myLocation = location;
+
+            if (henspeFragment != null)
+                henspeFragment.UpdateLocation(location);
+        }
+
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
             if (item.ItemId == 16908332)
@@ -241,7 +363,7 @@ namespace Henspe.Droid
             }
             if (item.ItemId == Resource.Id.menu_settings)
             {
-                Service.RequestLocationUpdates();
+                //     Service.RequestLocationUpdates();
                 //   SettingsClicked();
                 return true;
             }
@@ -252,21 +374,52 @@ namespace Henspe.Droid
         /**
                  * Receiver for broadcasts sent by {@link LocationUpdatesService}.
                  */
-        class MyReceiver : BroadcastReceiver
+        class LocastionReceiver : BroadcastReceiver
         {
             public Context Context { get; set; }
-
             public override void OnReceive(Context context, Intent intent)
             {
-                var location = intent.GetParcelableExtra(LocationUpdatesService.ExtraLocation) as Location;
-                if (location != null)
+                var locationEventType = (LocationEventType)intent.GetIntExtra(LocationUpdatesService.LocationType, (int)LocationEventType.Unnassigned);
+
+                switch (locationEventType)
                 {
-                    Henspe.Current.myLocation = location;
+                    case LocationEventType.Location:
+                        {
+                            var location = intent.GetParcelableExtra(LocationUpdatesService.ExtraLocation) as Location;
+                            if (location != null)
+                            {
 
-                    if ((Context as MainActivity).henspeFragment != null)
-                        (Context as MainActivity).henspeFragment.UpdateLocation(location);
-
-                    //     Toast.MakeText(Context, Utils.GetLocationText(location), ToastLength.Short).Show();
+                                if ((Context as MainActivity) != null)
+                                    (Context as MainActivity).OnLocationChangedInternal(location);
+                            }
+                            break;
+                        }
+                    case LocationEventType.Availability:
+                        {
+                            var value = (LocationIsLocationAvailable)intent.GetIntExtra(LocationUpdatesService.IsLocationAvailable, (int)LocationIsLocationAvailable.NotFound);
+                            (Context as MainActivity).HandleLocationAvailability(value);
+                            break;
+                        }
+                    case LocationEventType.ConnectionSuspended:
+                        {
+                            var value = intent.GetIntExtra(LocationUpdatesService.ConnectionSuspendedCause, -1);
+                            (Context as MainActivity).OnConnectionSuspended(value);
+                            break;
+                        }
+                    /*
+                case LocationEventType.RequestLocation:
+                    {
+                        var status = (Statuses)intent.GetIntExtra(LocationUpdatesService.RequestLocation, (int)Statuses.ResultCanceled);
+                        (Context as MainActivity).OnRequestLocation(status);
+                        break;
+                    }
+                    */
+                    case LocationEventType.ServiceError:
+                        {
+                            var locationErrors = (LocationErrors)intent.GetIntExtra(LocationUpdatesService.LocationError, (int)LocationErrors.OK);
+                            (Context as MainActivity).HandleLocationServiceError(locationErrors);
+                            break;
+                        }
                 }
             }
         }
