@@ -24,6 +24,5 @@ namespace SNLA.Core.Util
         {
             return false;
         }
-
     }
 }

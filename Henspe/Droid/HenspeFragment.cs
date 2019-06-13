@@ -131,7 +131,7 @@ namespace Henspe.Droid
 
         private void CreatePositionTextAndRefreshPositionRow(Location location)
         {
-            FormattedCoordinatesDto formattedCoordinatesDto = Henspe.Current.CoordinateService.GetFormattedCoordinateDescription(CoordinateFormat.DDM, location.Latitude, location.Longitude);
+            FormattedCoordinatesDto formattedCoordinatesDto = Henspe.Current.ApplicationService.CoordinateService.GetFormattedCoordinateDescription(CoordinateFormat.DDM, location.Latitude, location.Longitude);
             Henspe.Current.coordinatesText = formattedCoordinatesDto.latitudeDescription + "\n" + formattedCoordinatesDto.longitudeDescription;
             //    RefreshRow(4);
         }

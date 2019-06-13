@@ -6,7 +6,7 @@ using Henspe.Core.Model.Dto;
 using Android.Locations;
 using SNLA.Core.Service;
 using Henspe.Droid.Services;
-using Henspe.Core.Const;
+using SNLA.Core.Const;
 
 namespace Henspe.Droid
 {
@@ -25,17 +25,8 @@ namespace Henspe.Droid
         public string addressText = "";
         public StructureDto structure;
         public PositionFragment PositionFragment;
-        public ApplicationService ApplicationService { get; private set; }
-        public CoordinateService CoordinateService = null;
 
-		//public string prodUrlString = "https://snla-apps.no/apps/henspe/";
-		//public string testUrlTest = "https://snla-apps.no/apps/henspetest/";
-
-		readonly string plistFile = "Henspe.plist";
-		readonly string appNameFTP = "henspe";
-#if DEBUG
-		private string testAppend = "testinternal";
-#endif
+		public ApplicationService ApplicationService { get; private set; }
 
 		public Henspe(IntPtr handle, JniHandleOwnership transfer)
             : base(handle, transfer)
@@ -47,24 +38,9 @@ namespace Henspe.Droid
         {
             base.OnCreate();
 
-			//ApplicationService = new AndroidApplicationService("https://snla-apps.no/apps/henspe/", , plistFile);
+			ApplicationService = new AndroidApplicationService();
 
-#if DEBUG
-			var plistLocation = $"{appNameFTP}{testAppend}";
-#else
-			var plistLocation = $"{appNameFTP}";
-#endif
-			ApplicationService = new AndroidApplicationService(UrlConst.BaseUrl, plistLocation, plistFile);
-
-			CoordinateService = new CoordinateService();
-
-            CoordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_North, Resources.GetString(Resource.String.Location_Element_North_Text));
-            CoordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_South, Resources.GetString(Resource.String.Location_Element_South_Text));
-            CoordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_East, Resources.GetString(Resource.String.Location_Element_East_Text));
-            CoordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_West, Resources.GetString(Resource.String.Location_Element_West_Text));
-            CoordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_Degrees, Resources.GetString(Resource.String.Location_Element_Degrees_Text));
-            CoordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_Minutes, Resources.GetString(Resource.String.Location_Element_Minutes_Text));
-            CoordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_Seconds, Resources.GetString(Resource.String.Location_Element_Seconds_Text));
+			SetupCoordinates();
 
             InitializeLocationText();
             SetupLocalData();
@@ -83,6 +59,19 @@ namespace Henspe.Droid
             SetupSectionsWithElements();
             structure.currentStructureSectionId = 0;
         }
+
+		public void SetupCoordinates()
+		{
+			//SNLA.Core.Util.Logger.Info("Code", $"ApplicationService.CoordinateService == null? {ApplicationService.CoordinateService}");
+
+			ApplicationService.CoordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_North, Resources.GetString(Resource.String.Location_Element_North_Text));
+			ApplicationService.CoordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_South, Resources.GetString(Resource.String.Location_Element_South_Text));
+			ApplicationService.CoordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_East, Resources.GetString(Resource.String.Location_Element_East_Text));
+			ApplicationService.CoordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_West, Resources.GetString(Resource.String.Location_Element_West_Text));
+			ApplicationService.CoordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_Degrees, Resources.GetString(Resource.String.Location_Element_Degrees_Text));
+			ApplicationService.CoordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_Minutes, Resources.GetString(Resource.String.Location_Element_Minutes_Text));
+			ApplicationService.CoordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_Seconds, Resources.GetString(Resource.String.Location_Element_Seconds_Text));
+		}
 
         void SetupSectionsWithElements()
         {

@@ -11,7 +11,6 @@ using Microsoft.AppCenter.Crashes;
 using SNLA.Core.Util;
 using SNLA.iOS.Util;
 using SNLA.Core.Service;
-using Henspe.Core.Const;
 
 namespace Henspe.iOS
 {
@@ -27,13 +26,6 @@ namespace Henspe.iOS
         public bool servcicesInitialized = false;
         public CoordinateService coordinateService;
         public RegEmailSMSService regEmailSMSService;
-
-		readonly string plistFile = "Henspe.plist";
-		readonly string appNameFTP = "henspe";
-		private string testAppend = "test";
-
-		//public string prodUrlString = "https://snla-apps.no/apps/henspe/";
-		//public string testUrlTest = "https://snla-apps.no/apps/henspetest/";
 
 		// Main reference
 		public MainViewController mainViewController = null;
@@ -62,7 +54,7 @@ namespace Henspe.iOS
 
             window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-			ApplicationService = new IOSApplicationService(UrlConst.BaseUrl, $"{appNameFTP}{testAppend}", $"{plistFile}");
+			ApplicationService = new IOSApplicationService();
 
 			SetupCustomNavigationBar();
             SetupSectionsWithElements();
@@ -83,6 +75,11 @@ namespace Henspe.iOS
             return true;
         }
 
+		public void SetupCoordinates()
+		{
+			
+		}
+
         private void StartAppCenter()
         {
             AppCenter.Start("48ab726a-46ee-4762-ad50-51a2dcc928b4", typeof(Analytics), typeof(Crashes));
@@ -97,10 +94,10 @@ namespace Henspe.iOS
                 regEmailSMSService = new RegEmailSMSService();
 
                 coordinateService = new CoordinateService();
-                coordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_North, LangUtil.Get("Element.North.Text"));
-                coordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_South, LangUtil.Get("Element.South.Text"));
-                coordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_East, LangUtil.Get("Element.East.Text"));
-                coordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_West, LangUtil.Get("Element.West.Text"));
+                coordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_North,	LangUtil.Get("Element.North.Text"));
+                coordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_South,	LangUtil.Get("Element.South.Text"));
+                coordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_East,	LangUtil.Get("Element.East.Text"));
+                coordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_West,	LangUtil.Get("Element.West.Text"));
                 coordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_Degrees, LangUtil.Get("Element.Degrees.Text"));
                 coordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_Minutes, LangUtil.Get("Element.Minutes.Text"));
                 coordinateService.AddLanguageValue(CoordinateServiceLanguageKey.Coordinate_Seconds, LangUtil.Get("Element.Seconds.Text"));

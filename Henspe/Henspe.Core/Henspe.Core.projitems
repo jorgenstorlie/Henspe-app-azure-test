@@ -31,6 +31,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Util\Settings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\CoordinateService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\RegEmailSMSService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ApplicationService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Translations\Translations_no.json" />
