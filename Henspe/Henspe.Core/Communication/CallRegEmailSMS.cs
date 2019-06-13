@@ -7,7 +7,7 @@ using System.Text;
 using System.Net.Http;
 using System.Collections.Generic;
 using SNLA.Core.Communication;
-using Henspe.Core.Const;
+using SNLA.Core.Const;
 using SNLA.Core.Util;
 using Newtonsoft.Json;
 

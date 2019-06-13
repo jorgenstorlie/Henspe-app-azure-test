@@ -2,11 +2,11 @@
 using System.Diagnostics;
 using CoreLocation;
 using Foundation;
-using Henspe.Core.Const;
 using Henspe.iOS.AppModel;
 using Henspe.iOS.Const;
 using Henspe.iOS.Util;
 using SNLA.Core.Util;
+using SNLA.Core.Const;
 using UIKit;
 
 namespace Henspe.iOS

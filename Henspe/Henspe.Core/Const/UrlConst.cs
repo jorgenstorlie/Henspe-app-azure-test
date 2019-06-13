@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Henspe.Core.Const
+namespace SNLA.Core.Const
 {
 	public class UrlConst
 	{
