@@ -15,7 +15,7 @@ using SNLA.Core.Communication;
 using static SNLA.Core.Util.UserUtil;
 using Xamarin.Essentials;
 
-namespace Henspe.Core.Communication
+namespace Henspe.Core.Services
 {
     public class RegEmailSMSService : HttpClientBase
     {

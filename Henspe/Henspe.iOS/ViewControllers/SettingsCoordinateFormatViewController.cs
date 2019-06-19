@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UIKit;
 using Foundation;
 using CoreGraphics;
-using Henspe.Core.Service;
+using Henspe.Core.Services;
 using System.Linq;
 using Henspe.iOS.Const;
 using SNLA.Core.Util;

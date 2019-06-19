@@ -14,6 +14,7 @@ using UIKit;
 using SNLA.Core.Util;
 using SNLA.Core.Const;
 using SNLA.iOS.Util;
+using Henspe.Core.Services;
 
 namespace Henspe.iOS
 {

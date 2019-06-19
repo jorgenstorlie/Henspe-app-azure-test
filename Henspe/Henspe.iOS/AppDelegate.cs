@@ -4,13 +4,13 @@ using Foundation;
 using Henspe.Core.Communication;
 using Henspe.iOS.Const;
 using Henspe.Core.Model.Dto;
-using Henspe.Core.Service;
+using Henspe.Core.Services;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using SNLA.Core.Util;
 using SNLA.iOS.Util;
-using SNLA.Core.Service;
+using SNLA.Core.Services;
 
 namespace Henspe.iOS
 {

@@ -1,12 +1,10 @@
-﻿using SNLA.Core.Service;
-using Henspe.Core.Service;
+﻿using SNLA.Core.Services;
+using Henspe.Core.Services;
 using System;
 using Android.App;
 using Android.Runtime;
-using Henspe.Core.Service;
 using Henspe.Core.Model.Dto;
 using Android.Locations;
-using SNLA.Core.Service;
 using Henspe.Droid.Services;
 using SNLA.Core.Const;
 

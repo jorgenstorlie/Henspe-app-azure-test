@@ -8,7 +8,7 @@ using Android.Support.V7.Widget;
 using Android.Support.V7.App;
 using Fragment = Android.Support.V4.App.Fragment;
 using Android.Locations;
-using Henspe.Core.Service;
+using Henspe.Core.Services;
 
 namespace Henspe.Droid
 {

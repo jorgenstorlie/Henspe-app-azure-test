@@ -1,8 +1,8 @@
-﻿using Henspe.Core.Service;
+﻿using Henspe.Core.Services;
 using Xamarin.Essentials;
 using Newtonsoft.Json;
 using System.Security;
-using SNLA.Core.Service;
+using SNLA.Core.Services;
 
 namespace SNLA.Core.Util
 {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using Henspe.Core.Communication;
 
-namespace Henspe.Core.Service
+namespace Henspe.Core.Services
 {
     public enum CoordinateFormat
     {

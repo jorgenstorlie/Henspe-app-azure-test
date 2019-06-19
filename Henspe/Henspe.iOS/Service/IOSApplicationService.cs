@@ -1,5 +1,5 @@
-﻿using SNLA.Core.Service;
-using Henspe.Core.Service;
+﻿using SNLA.Core.Services;
+using Henspe.Core.Services;
 
 namespace Henspe.iOS
 {

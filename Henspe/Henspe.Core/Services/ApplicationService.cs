@@ -7,10 +7,10 @@ using Xamarin.Essentials;
 using SNLA.Core.Util;
 using SNLA.Core.Communication;
 using SNLA.Core.Storage;
-using SNLA.Core.Service;
+using SNLA.Core.Services;
 using Henspe.Core.Communication;
 
-namespace Henspe.Core.Service
+namespace Henspe.Core.Services
 {
 	public class ApplicationService : ApplicationServiceBase
 	{

@@ -4,7 +4,7 @@ using UIKit;
 using Henspe.iOS.Util;
 using Henspe.iOS.Const;
 using CoreGraphics;
-using Henspe.Core.Service;
+using Henspe.Core.Services;
 using SNLA.Core.Util;
 using SNLA.iOS.Util;
 
