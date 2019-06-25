@@ -10,10 +10,10 @@ using Foundation;
 using SNLA.Core.Communication;
 using Henspe.Core.Util;
 using Henspe.iOS.Const;
-using SNLA.iOS.Util;
 using UIKit;
 using Xamarin.Essentials;
 using Newtonsoft.Json;
+using SNLA.Core.Util;
 
 namespace Henspe.iOS
 {

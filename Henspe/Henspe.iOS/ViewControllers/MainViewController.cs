@@ -4,6 +4,7 @@ using Foundation;
 using Henspe.Core.Model.Dto;
 using Henspe.iOS.Const;
 using SNLA.iOS.Util;
+using SNLA.Core.Util;
 using UIKit;
 using Xamarin.Essentials;
 
