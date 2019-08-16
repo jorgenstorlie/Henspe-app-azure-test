@@ -3960,9 +3960,6 @@ namespace Henspe.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7F090059
-			public const int @fixed = 2131296345;
-			
 			// aapt resource value: 0x7F090006
 			public const int action0 = 2131296262;
 			
@@ -4217,6 +4214,9 @@ namespace Henspe.Droid
 			
 			// aapt resource value: 0x7F090057
 			public const int fill_vertical = 2131296343;
+			
+			// aapt resource value: 0x7F090059
+			public const int @fixed = 2131296345;
 			
 			// aapt resource value: 0x7F09005A
 			public const int forever = 2131296346;
