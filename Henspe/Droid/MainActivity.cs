@@ -6,7 +6,6 @@ using Android.Views;
 using Fragment = Android.Support.V4.App.Fragment;
 using Android.OS;
 using Java.Lang;
-using Android.Locations;
 using Android.Util;
 using Android.Support.V4.App;
 using Android;

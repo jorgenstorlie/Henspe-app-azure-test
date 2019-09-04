@@ -1,5 +1,4 @@
-﻿using System;
-using Android;
+﻿using Android;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
@@ -14,9 +13,7 @@ using Android.Support.V4.App;
 using Android.Support.V4.Content;
 using Android.Util;
 using Java.Lang;
-//using Task = System.Threading.Tasks.Task;
 using Task = Android.Gms.Tasks.Task;
-
 
 namespace Henspe.Droid
 {
@@ -202,18 +199,19 @@ GoogleApiClient.IOnConnectionFailedListener
             var queryResult = GoogleApiAvailability.Instance.IsGooglePlayServicesAvailable(this);
             if (queryResult == ConnectionResult.Success)
             {
-                OnLocationServiceError(LocationErrors.GooglePlayServicesNotInstalled);
-                Log.Info("MainActivity", "Google Play Services is installed on this device.");
+                Log.Debug("MainActivity", "Google Play Services is installed on this device.");
                 return true;
             }
 
             if (GoogleApiAvailability.Instance.IsUserResolvableError(queryResult))
-            {
                 OnLocationServiceError(LocationErrors.GooglePlayServicesFails);
-                var errorString = GoogleApiAvailability.Instance.GetErrorString(queryResult);
-                Log.Error("MainActivity", "There is a problem with Google Play Services on this device: {0} - {1}",
-                          queryResult, errorString);
-            }
+            else
+                OnLocationServiceError(LocationErrors.GooglePlayServicesNotInstalled);
+
+            var errorString = GoogleApiAvailability.Instance.GetErrorString(queryResult);
+            Log.Error("MainActivity", "There is a problem with Google Play Services on this device: {0} - {1}",
+                      queryResult, errorString);
+
             return false;
         }
 
