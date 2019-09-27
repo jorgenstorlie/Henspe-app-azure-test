@@ -269,6 +269,7 @@ namespace Henspe.iOS
         {
             if (segue.Identifier == "segueMain")
             {
+                segue.DestinationViewController.ModalPresentationStyle = UIModalPresentationStyle.FullScreen;
                 ClearAllBeforeDrawing();
             }
         }

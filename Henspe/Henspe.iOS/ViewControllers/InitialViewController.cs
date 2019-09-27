@@ -51,9 +51,11 @@ namespace Henspe.iOS
         {
             if (segue.Identifier == "segueOnboarding")
             {
+                segue.DestinationViewController.ModalPresentationStyle = UIModalPresentationStyle.FullScreen;
             }
             else if (segue.Identifier == "segueMain")
             {
+                segue.DestinationViewController.ModalPresentationStyle = UIModalPresentationStyle.FullScreen;
             }
         }
     }
