@@ -54,7 +54,6 @@
     <AndroidSigningKeyAlias>snla</AndroidSigningKeyAlias>
     <AndroidKeyStore>True</AndroidKeyStore>
     <AndroidSigningKeyPass>snlasolutions</AndroidSigningKeyPass>
-    <AndroidEnableMultiDex>false</AndroidEnableMultiDex>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidDexTool>d8</AndroidDexTool>
     <AndroidLinkTool>r8</AndroidLinkTool>
