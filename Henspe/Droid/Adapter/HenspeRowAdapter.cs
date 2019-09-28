@@ -11,7 +11,6 @@ using System;
 using Xamarin.Essentials;
 using Android.App;
 using AndroidX.Fragment.App;
-using AndroidX.RecyclerView.Widget;
 using AndroidX.ViewPager.Widget;
 using RecyclerView = AndroidX.RecyclerView.Widget.RecyclerView;
 using Fragment = AndroidX.Fragment.App.Fragment;

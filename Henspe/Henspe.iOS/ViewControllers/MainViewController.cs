@@ -59,19 +59,11 @@ namespace Henspe.iOS
             this.NavigationController.NavigationBar.ShadowImage = emptyImage;
 
             UINavigationBar navigationBar = NavigationController.NavigationBar;
-             logoImageView = new UIImageView(UIImage.FromFile("ic_snla.png"));
+            logoImageView = new UIImageView(UIImage.FromBundle("logo"));
             double imageHeight = navigationBar.Bounds.Height * 0.8;
             double computedImageWidth = (imageHeight * logoImageView.Image.CGImage.Width) / logoImageView.Image.CGImage.Height;
             logoImageView.Frame = new CGRect((navigationBar.Bounds.Width / 2) - (computedImageWidth / 2), (navigationBar.Bounds.Height / 2) - (imageHeight / 2), computedImageWidth, imageHeight);
             navigationBar.AddSubview(logoImageView);
-
-            /*
-            // Logo
-            UIImage imgLogo = UIImage.FromFile("ic_snla.png");
-            UIImageView imgViewLogo = new UIImageView(imgLogo);
- 
-            this.NavigationItem.TitleView = imgViewLogo;
-            */
 
             NavigationItem.RightBarButtonItem.TintColor = ColorConst.snlaBlue;
         }

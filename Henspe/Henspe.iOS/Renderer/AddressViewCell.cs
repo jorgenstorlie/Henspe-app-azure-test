@@ -2,8 +2,6 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Henspe.iOS.Const;
-using Henspe.iOS.Util;
-using SNLA.iOS.Util;
 using SNLA.Core.Util;
 using UIKit;
 using Xamarin.Essentials;
@@ -21,10 +19,10 @@ namespace Henspe.iOS
             btnMap.SetTitle(LangUtil.Get("Structure.EksaktPosisjon.ShareButton"), UIControlState.Normal);
             btnMap.AddTarget(ButtonEventHandler, UIControlEvent.TouchUpInside);
             btnMap.Font = FontConst.fontLarge;
-            btnMap.SetTitleColor(ColorConst.snlaBlue,UIControlState.Normal);
+            btnMap.SetTitleColor(ColorConst.snlaBlue, UIControlState.Normal);
             BackgroundColor = UIColor.Clear;
 
-            SVGUtil.LoadSVGToImageView(imgImageView, "ic_adresse.svg", new System.Collections.Generic.Dictionary<string, string>());
+            imgImageView.Image = UIImage.FromBundle("ic_adresse");
 
             labAddressLine1.TextColor = ColorConst.snlaText;
             labAddressLine2.TextColor = ColorConst.snlaText;

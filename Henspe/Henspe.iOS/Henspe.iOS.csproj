@@ -105,18 +105,6 @@
     <Reference Include="Lottie.iOS">
       <HintPath>..\packages\Com.Airbnb.iOS.Lottie.2.5.9\lib\xamarinios10\Lottie.iOS.dll</HintPath>
     </Reference>
-    <Reference Include="WebP.Touch">
-      <HintPath>..\packages\WebP.Touch.1.0.8\lib\Xamarin.iOS10\WebP.Touch.dll</HintPath>
-    </Reference>
-    <Reference Include="FFImageLoading">
-      <HintPath>..\packages\Xamarin.FFImageLoading.2.4.11.982\lib\Xamarin.iOS10\FFImageLoading.dll</HintPath>
-    </Reference>
-    <Reference Include="FFImageLoading.Platform">
-      <HintPath>..\packages\Xamarin.FFImageLoading.2.4.11.982\lib\Xamarin.iOS10\FFImageLoading.Platform.dll</HintPath>
-    </Reference>
-    <Reference Include="SkiaSharp">
-      <HintPath>..\packages\SkiaSharp.1.68.1-rc.147\lib\Xamarin.iOS\SkiaSharp.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Essentials">
       <HintPath>..\packages\Xamarin.Essentials.1.3.1\lib\xamarinios10\Xamarin.Essentials.dll</HintPath>
     </Reference>
@@ -147,10 +135,10 @@
     </Reference>
     <Reference Include="OpenTK-1.0" />
     <Reference Include="System.Buffers">
-      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Memory">
       <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
@@ -170,9 +158,6 @@
     <Reference Include="SQLite-net">
       <HintPath>..\packages\sqlite-net-pcl.1.7.302-beta\lib\netstandard2.0\SQLite-net.dll</HintPath>
     </Reference>
-    <Reference Include="FFImageLoading.Svg.Platform">
-      <HintPath>..\packages\Xamarin.FFImageLoading.Svg.2.4.11.982\lib\Xamarin.iOS10\FFImageLoading.Svg.Platform.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -190,6 +175,50 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-58.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-80.png" />
+    <ImageAsset Include="Assets.xcassets\ic_adresse.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_adresse.imageset\ic_adresse.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_posisjon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_posisjon.imageset\ic_posisjon.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_trafikk.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_trafikk.imageset\ic_trafikk.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_brann.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_brann.imageset\ic_brann.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_oppmotested.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_oppmotested.imageset\ic_oppmotested.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_ankomst.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_ankomst.imageset\ic_ankomst.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_avreise.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_avreise.imageset\ic_avreise.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_1.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_1.imageset\ic_1.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_2.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_2.imageset\ic_2.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_3.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_3.imageset\ic_3.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_quattro.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_quattro.imageset\ic_quattro.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_farer.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_farer.imageset\ic_farer.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_sikkerhet.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_sikkerhet.imageset\ic_sikkerhet.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_pasienter.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_pasienter.imageset\ic_pasienter.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_skader.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_skader.imageset\ic_skader.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_skademekanikk.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_skademekanikk.imageset\ic_skademekanikk.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_flaskehalser.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_flaskehalser.imageset\ic_flaskehalser.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_evakuering.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_evakuering.imageset\ic_evakuering.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_rett.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_rett.imageset\ic_rett.pdf" />
+    <ImageAsset Include="Assets.xcassets\logo_text.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\logo_text.imageset\SNLA_logo_midtstilt.pdf" />
+    <ImageAsset Include="Assets.xcassets\logo.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\logo.imageset\SNLA_Logo.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_settings.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_settings.imageset\ic_gear.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -203,6 +232,28 @@
     <Folder Include="Settings.bundle\Base.lproj\" />
     <Folder Include="ViewControllers\" />
     <Folder Include="Service\" />
+    <Folder Include="Assets.xcassets\ic_adresse.imageset\" />
+    <Folder Include="Assets.xcassets\ic_posisjon.imageset\" />
+    <Folder Include="Assets.xcassets\ic_trafikk.imageset\" />
+    <Folder Include="Assets.xcassets\ic_brann.imageset\" />
+    <Folder Include="Assets.xcassets\ic_oppmotested.imageset\" />
+    <Folder Include="Assets.xcassets\ic_ankomst.imageset\" />
+    <Folder Include="Assets.xcassets\ic_avreise.imageset\" />
+    <Folder Include="Assets.xcassets\ic_1.imageset\" />
+    <Folder Include="Assets.xcassets\ic_2.imageset\" />
+    <Folder Include="Assets.xcassets\ic_3.imageset\" />
+    <Folder Include="Assets.xcassets\ic_quattro.imageset\" />
+    <Folder Include="Assets.xcassets\ic_farer.imageset\" />
+    <Folder Include="Assets.xcassets\ic_sikkerhet.imageset\" />
+    <Folder Include="Assets.xcassets\ic_pasienter.imageset\" />
+    <Folder Include="Assets.xcassets\ic_skader.imageset\" />
+    <Folder Include="Assets.xcassets\ic_skademekanikk.imageset\" />
+    <Folder Include="Assets.xcassets\ic_flaskehalser.imageset\" />
+    <Folder Include="Assets.xcassets\ic_evakuering.imageset\" />
+    <Folder Include="Assets.xcassets\ic_rett.imageset\" />
+    <Folder Include="Assets.xcassets\logo_text.imageset\" />
+    <Folder Include="Assets.xcassets\logo.imageset\" />
+    <Folder Include="Assets.xcassets\ic_settings.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -212,6 +263,7 @@
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
     <None Include="packages.config" />
+    <None Include="readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -230,7 +282,6 @@
     <Compile Include="Renderer\MainNormalRowViewCell.designer.cs">
       <DependentUpon>MainNormalRowViewCell.cs</DependentUpon>
     </Compile>
-    <Compile Include="Util\SVGUtil.cs" />
     <Compile Include="Renderer\SettingsInfoTableCell.cs" />
     <Compile Include="Renderer\SettingsInfoTableCell.designer.cs">
       <DependentUpon>SettingsInfoTableCell.cs</DependentUpon>
@@ -260,10 +311,6 @@
     <Compile Include="Renderer\AddressViewCell.cs" />
     <Compile Include="Renderer\AddressViewCell.designer.cs">
       <DependentUpon>AddressViewCell.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewControllers\ConsentViewController.cs" />
-    <Compile Include="ViewControllers\ConsentViewController.designer.cs">
-      <DependentUpon>ConsentViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewControllers\InfoViewController.cs" />
     <Compile Include="ViewControllers\InfoViewController.designer.cs">
@@ -304,95 +351,14 @@
     <Compile Include="Service\IOSApplicationService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\ic_info.png" />
-    <BundleResource Include="Resources\ic_info%402x.png" />
-    <BundleResource Include="Resources\ic_info%403x.png" />
-    <BundleResource Include="Resources\ic_logo_snla.png" />
-    <BundleResource Include="Resources\ic_logo_snla%402x.png" />
-    <BundleResource Include="Resources\ic_logo_snla%403x.png" />
-    <BundleResource Include="Resources\ic_settings.png" />
-    <BundleResource Include="Resources\ic_settings%402x.png" />
-    <BundleResource Include="Resources\ic_settings%403x.png" />
-    <BundleResource Include="Resources\ic_snla.png" />
-    <BundleResource Include="Resources\ic_snla%402x.png" />
-    <BundleResource Include="Resources\ic_snla%403x.png" />
     <BundleResource Include="Resources\Montserrat-Light.ttf" />
     <BundleResource Include="Resources\Montserrat-Medium.ttf" />
     <BundleResource Include="Resources\Montserrat-Regular.ttf" />
     <BundleResource Include="Base.lproj\InfoPlist.strings" />
     <BundleResource Include="Base.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\ic_arrow_left_portrait.svg" />
-    <BundleResource Include="Resources\ic_arrow_right.svg" />
-    <BundleResource Include="Resources\ic_arrow_up.svg" />
-    <BundleResource Include="Resources\ic_btn_directions_down.svg" />
-    <BundleResource Include="Resources\ic_btn_directions.svg" />
-    <BundleResource Include="Resources\ic_btn_filled_down.svg" />
-    <BundleResource Include="Resources\ic_btn_filled_full_width_disabled.svg" />
-    <BundleResource Include="Resources\ic_btn_filled_full_width_down.svg" />
-    <BundleResource Include="Resources\ic_btn_filled_full_width_enabled.svg" />
-    <BundleResource Include="Resources\ic_btn_filled.svg" />
-    <BundleResource Include="Resources\ic_btn_map_center_down.svg" />
-    <BundleResource Include="Resources\ic_btn_map_center_up.svg" />
-    <BundleResource Include="Resources\ic_btn_map_toggle_down.svg" />
-    <BundleResource Include="Resources\ic_btn_map_toggle_up.svg" />
-    <BundleResource Include="Resources\ic_btn_rounded_outlined_down.svg" />
-    <BundleResource Include="Resources\ic_btn_rounded_outlined.svg" />
-    <BundleResource Include="Resources\ic_btn_set_position_down.svg" />
-    <BundleResource Include="Resources\ic_btn_set_position.svg" />
-    <BundleResource Include="Resources\ic_btn_traffic_down.svg" />
-    <BundleResource Include="Resources\ic_btn_traffic.svg" />
-    <BundleResource Include="Resources\ic_cluster.svg" />
-    <BundleResource Include="Resources\ic_gear_down.svg" />
-    <BundleResource Include="Resources\ic_gear.svg" />
-    <BundleResource Include="Resources\ic_info_down.svg" />
-    <BundleResource Include="Resources\ic_info.svg" />
-    <BundleResource Include="Resources\ic_logo_color_simple.svg" />
-    <BundleResource Include="Resources\ic_poi_selected_position.svg" />
-    <BundleResource Include="Resources\ic_road_camera_down.svg" />
-    <BundleResource Include="Resources\ic_road_camera_up.svg" />
-    <BundleResource Include="Resources\ic_snla_logo_white.svg" />
-    <BundleResource Include="Resources\ic_text_henspe.svg" />
-    <BundleResource Include="Resources\btn_blue%402x.png" />
-    <BundleResource Include="Resources\btn_blue%403x.png" />
-    <BundleResource Include="Resources\btn_blue.png" />
-    <BundleResource Include="Resources\btn_blue_disabled.png" />
-    <BundleResource Include="Resources\btn_blue_disabled%402x.png" />
-    <BundleResource Include="Resources\btn_blue_disabled%403x.png" />
-    <BundleResource Include="Resources\btn_blue_down.png" />
-    <BundleResource Include="Resources\btn_blue_down%402x.png" />
-    <BundleResource Include="Resources\btn_blue_down%403x.png" />
     <BundleResource Include="Resources\intro.json" />
     <BundleResource Include="Resources\Montserrat-ExtraLight.ttf" />
     <BundleResource Include="Resources\Montserrat-Thin.ttf" />
-    <BundleResource Include="Resources\btn_outlined_blue_down.png" />
-    <BundleResource Include="Resources\btn_outlined_blue_down%402x.png" />
-    <BundleResource Include="Resources\btn_outlined_blue_down%403x.png" />
-    <BundleResource Include="Resources\btn_outlined_blue.png" />
-    <BundleResource Include="Resources\btn_outlined_blue%402x.png" />
-    <BundleResource Include="Resources\btn_outlined_blue%403x.png" />
-    <BundleResource Include="Resources\ic_btn_placeholder.png" />
-    <BundleResource Include="Resources\ic_btn_placeholder%402x.png" />
-    <BundleResource Include="Resources\ic_btn_placeholder%403x.png" />
-    <BundleResource Include="Resources\ic_trafikk.svg" />
-    <BundleResource Include="Resources\ic_1.svg" />
-    <BundleResource Include="Resources\ic_2.svg" />
-    <BundleResource Include="Resources\ic_3.svg" />
-    <BundleResource Include="Resources\ic_adresse.svg" />
-    <BundleResource Include="Resources\ic_ankomst.svg" />
-    <BundleResource Include="Resources\ic_avreise.svg" />
-    <BundleResource Include="Resources\ic_brann.svg" />
-    <BundleResource Include="Resources\ic_farer.svg" />
-    <BundleResource Include="Resources\ic_flaskehalser.svg" />
-    <BundleResource Include="Resources\ic_oppmotested.svg" />
-    <BundleResource Include="Resources\ic_pasienter.svg" />
-    <BundleResource Include="Resources\ic_posisjon.svg" />
-    <BundleResource Include="Resources\ic_quattro.svg" />
-    <BundleResource Include="Resources\ic_rett.svg" />
-    <BundleResource Include="Resources\ic_sikkerhet.svg" />
-    <BundleResource Include="Resources\ic_skademekanikk.svg" />
-    <BundleResource Include="Resources\ic_skader.svg" />
-    <BundleResource Include="Resources\ic_evakuering.svg" />
-    <BundleResource Include="Resources\NLAInfo.mp4" />
   </ItemGroup>
   <Import Project="..\..\..\SNLA-app\SNLA.iOS\SNLA.iOS.projitems" Label="Shared" Condition="Exists('..\..\..\SNLA-app\SNLA.iOS\SNLA.iOS.projitems')" />
   <Import Project="..\..\..\SNLA-app\SNLA.Core\SNLA.Core.projitems" Label="Shared" Condition="Exists('..\..\..\SNLA-app\SNLA.Core\SNLA.Core.projitems')" />

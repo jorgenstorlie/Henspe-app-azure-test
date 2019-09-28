@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
-    <title>ic_sikkerhet</title>
-    <desc>Created with Sketch.</desc>
-    <g id="ic_sikkerhet" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M12,2.544 C14.5,4.349 16.554,4.836 19,4.96 L19,14.535 C19,17.577 17.313,18.362 12,21.642 C6.69,18.364 5,17.577 5,14.535 L5,4.96 C7.446,4.836 9.5,4.349 12,2.544 Z M12,0 C8.629,2.866 6.516,3 3,3 L3,14.535 C3,19.138 6.203,20.339 12,24 C17.797,20.339 21,19.138 21,14.535 L21,3 C17.484,3 15.371,2.866 12,0 Z" id="Shape" fill="#4A4A4A" fill-rule="nonzero"></path>
-    </g>
-</svg>

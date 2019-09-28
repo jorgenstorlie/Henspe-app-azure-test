@@ -1,7 +1,6 @@
 ﻿using System;
 using Foundation;
 using UIKit;
-using Henspe.iOS.Util;
 using Henspe.iOS.Const;
 using CoreGraphics;
 using Henspe.Core.Services;

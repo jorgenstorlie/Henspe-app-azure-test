@@ -5,7 +5,6 @@ using System;
 using Henspe.Core.Model.Dto;
 using Android.Locations;
 using Henspe.Core.Services;
-using AndroidX.Fragment.App;
 using AndroidX.RecyclerView.Widget;
 using Fragment = AndroidX.Fragment.App.Fragment;
 using AndroidX.AppCompat.App;
