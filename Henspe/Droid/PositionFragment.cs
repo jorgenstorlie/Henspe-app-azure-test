@@ -1,7 +1,7 @@
 ﻿using Android.OS;
 using Android.Views;
 using Android.Locations;
-using Fragment = Android.Support.V4.App.Fragment;
+using Fragment = AndroidX.Fragment.App.Fragment;
 
 namespace Henspe.Droid
 {

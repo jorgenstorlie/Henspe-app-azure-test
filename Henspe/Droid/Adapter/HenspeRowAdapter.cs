@@ -1,10 +1,4 @@
 using Android.Graphics;
-using Android.Support.Design.Widget;
-using Android.Support.V4.App;
-using Android.Support.V4.Content;
-using Android.Support.V4.View;
-using Android.Support.V7.App;
-using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
 using Henspe.Core.Model.Dto;
@@ -16,16 +10,24 @@ using SNLA.Droid.Util;
 using System;
 using Xamarin.Essentials;
 using Android.App;
+using AndroidX.Fragment.App;
+using AndroidX.RecyclerView.Widget;
+using AndroidX.ViewPager.Widget;
+using RecyclerView = AndroidX.RecyclerView.Widget.RecyclerView;
+using Fragment = AndroidX.Fragment.App.Fragment;
+using AndroidX.AppCompat.App;
+using AndroidX.Core.Content;
+using Google.Android.Material.Tabs;
 
 namespace Henspe.Droid
 {
 
     public class ViewPagerAdapter : FragmentPagerAdapter
     {
-        private List<Android.Support.V4.App.Fragment> mFragmentList = new List<Android.Support.V4.App.Fragment>();
+        private List<Fragment> mFragmentList = new List<Fragment>();
         private List<string> mFragmentTitleList = new List<string>();
 
-        public ViewPagerAdapter(Android.Support.V4.App.FragmentManager manager) : base(manager)
+        public ViewPagerAdapter(AndroidX.Fragment.App.FragmentManager manager) : base(manager)
         {
             //base.OnCreate(manager);
         }
@@ -37,7 +39,7 @@ namespace Henspe.Droid
                 return mFragmentList.Count;
             }
         }
-        public override Android.Support.V4.App.Fragment GetItem(int position)
+        public override Fragment GetItem(int position)
         {
             return mFragmentList[position];
         }
@@ -48,7 +50,7 @@ namespace Henspe.Droid
             //return null;// display only the icon
         }
 
-        public void addFragment(Android.Support.V4.App.Fragment fragment, string title)
+        public void addFragment(Fragment fragment, string title)
         {
             mFragmentList.Add(fragment);
             mFragmentTitleList.Add(title);
@@ -170,8 +172,6 @@ namespace Henspe.Droid
                 positionViewHolder.infoHelper2.Text = "";
                 positionViewHolder.infoHelper2.Visibility = ViewStates.Visible;
                 lastAddressText = FlashTextUtil.FlashChangedText(activity, activity.ApplicationContext, lastAddressText, Henspe.Current.addressText, positionViewHolder.infoHelper2, FlashTextUtil.Type.LatText, Resource.Animator.abc_fade_out);
-
-
 
                 positionViewHolder.image.SetImageResource(Resource.Drawable.ic_posisjon);
                 positionViewHolder.image2.SetImageResource(Resource.Drawable.ic_adresse);

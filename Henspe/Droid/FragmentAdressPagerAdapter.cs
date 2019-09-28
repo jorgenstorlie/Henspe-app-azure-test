@@ -2,7 +2,8 @@
 using Android.OS;
 using Android.Views;
 using Android.Widget;
-using Android.Support.V4.App;
+using AndroidX.Fragment.App;
+using Fragment = AndroidX.Fragment.App.Fragment;
 
 namespace Henspe.Droid
 {
@@ -33,10 +34,10 @@ namespace Henspe.Droid
         public string problem;
     }
 
-    public class FirstFragment : Android.Support.V4.App.Fragment
+    public class FirstFragment : Fragment
     {
         string text;
-        public global::Android.Views.View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             global::Android.Views.View v = inflater.Inflate(Resource.Layout.HenspeRow, container, false);
 
@@ -66,7 +67,7 @@ namespace Henspe.Droid
         public Adresses adresses;
 
         // Constructor accepts a deck of flash cards:
-        public AdressAdapter(Android.Support.V4.App.FragmentManager fm, Adresses adresses)
+        public AdressAdapter(FragmentManager fm, Adresses adresses)
             : base(fm)
         {
             this.adresses = adresses;
@@ -76,7 +77,7 @@ namespace Henspe.Droid
         public override int Count { get { return adresses.NumAdresses; } }
 
         // Returns a new fragment for the flash card at this position:
-        public override Android.Support.V4.App.Fragment GetItem(int position)
+        public override Fragment GetItem(int position)
         {
             return FirstFragment.newInstance("FirstFragment, Instance 1");
 

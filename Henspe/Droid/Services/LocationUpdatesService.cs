@@ -9,9 +9,9 @@ using Android.Gms.Location;
 using Android.Gms.Tasks;
 using Android.Locations;
 using Android.OS;
-using Android.Support.V4.App;
-using Android.Support.V4.Content;
 using Android.Util;
+using AndroidX.Core.App;
+using AndroidX.LocalBroadcastManager.Content;
 using Java.Lang;
 using Task = Android.Gms.Tasks.Task;
 

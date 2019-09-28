@@ -5,7 +5,7 @@ using Android.Graphics;
 
 namespace Henspe.Droid
 {
-    public class OnboardingItemFragment : global::Android.Support.V4.App.Fragment
+    public class OnboardingItemFragment : global::AndroidX.Fragment.App.Fragment
     {
         private TextView mTextDescriptionTextView;
         private int mCurrentPosition = -1;

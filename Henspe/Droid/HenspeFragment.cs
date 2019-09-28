@@ -1,14 +1,15 @@
 ﻿using Android.Views;
 using Android.OS;
-using NavUtils = Android.Support.V4.App.NavUtils;
 using System.Collections.Generic;
 using System;
 using Henspe.Core.Model.Dto;
-using Android.Support.V7.Widget;
-using Android.Support.V7.App;
-using Fragment = Android.Support.V4.App.Fragment;
 using Android.Locations;
 using Henspe.Core.Services;
+using AndroidX.Fragment.App;
+using AndroidX.RecyclerView.Widget;
+using Fragment = AndroidX.Fragment.App.Fragment;
+using AndroidX.AppCompat.App;
+using AndroidX.Core.App;
 
 namespace Henspe.Droid
 {

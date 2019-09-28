@@ -1,8 +1,8 @@
 using System;
 using System.ComponentModel;
 using System.Linq;
-using Android.Support.V7.Widget;
 using Android.Views;
+using AndroidX.RecyclerView.Widget;
 
 namespace Henspe.Droid.Adapters
 {

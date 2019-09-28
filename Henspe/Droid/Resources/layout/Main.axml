@@ -1,54 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-        android:id="@+id/activity_main"
-                                                
-    tools:context=".ui.MainActivity"
-    tools:ignore="ContentDescription">
-   
-    <android.support.design.widget.AppBarLayout
-    android:id="@+id/appBar"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:id="@+id/activity_main"
+	tools:context=".ui.MainActivity"
+	tools:ignore="ContentDescription">
+
+	<com.google.android.material.appbar.AppBarLayout
+		android:id="@+id/appBar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
 >
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorToolBar"
+		<androidx.appcompat.widget.Toolbar
+			android:id="@+id/toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			android:background="@color/colorToolBar"
           >
-            
-               <ImageView
-                android:id="@+id/toolbarImage"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentTop="true"
-                android:layout_marginBottom="@dimen/small_margin"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="@dimen/small_margin"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/drawable_logo_no_text"
+
+			<ImageView
+				android:id="@+id/toolbarImage"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_alignParentTop="true"
+				android:layout_marginBottom="@dimen/small_margin"
+				android:layout_marginRight="20dp"
+				android:layout_marginTop="@dimen/small_margin"
+				android:adjustViewBounds="true"
+				android:scaleType="fitCenter"
+				app:srcCompat="@drawable/drawable_logo_no_text"
                
                 />
-           
-      </android.support.v7.widget.Toolbar>
 
-   
-</android.support.design.widget.AppBarLayout>
+		</androidx.appcompat.widget.Toolbar>
 
-  <FrameLayout
-            android:background="@color/window_background"
-               app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:id="@+id/sample_content_fragment"
-     
-       
-      android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-    
- 
- </android.support.design.widget.CoordinatorLayout>
+	</com.google.android.material.appbar.AppBarLayout>
+
+	<FrameLayout
+		android:background="@color/window_background"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior"
+		android:id="@+id/sample_content_fragment"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

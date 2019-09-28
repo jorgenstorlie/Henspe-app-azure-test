@@ -4,11 +4,11 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.App;
-using Android.Support.V4.App;
-using Android.Support.V7.App;
-using Fragment = Android.Support.V4.App.Fragment;
-using Android.Support.V7.Widget;
-using Android.Support.Design.Widget;
+using Fragment = AndroidX.Fragment.App.Fragment;
+using AndroidX.AppCompat.App;
+using AndroidX.AppCompat.Widget;
+using Google.Android.Material.AppBar;
+using AndroidX.Core.App;
 
 namespace Henspe.Droid
 {

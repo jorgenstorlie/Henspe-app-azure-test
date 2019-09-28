@@ -1,16 +1,11 @@
 ﻿using Android.App;
 using Android.Content;
-using Android.Support.Design.Widget;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Views;
-using Fragment = Android.Support.V4.App.Fragment;
 using Android.OS;
 using Java.Lang;
 using Android.Util;
-using Android.Support.V4.App;
 using Android;
 using Android.Preferences;
-using Android.Support.V4.Content;
 using Android.Net;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
@@ -20,6 +15,12 @@ using Android.Widget;
 using Xamarin.Essentials;
 using Location = Android.Locations.Location;
 using Android.Provider;
+using Google.Android.Material.AppBar;
+using AndroidX.LocalBroadcastManager.Content;
+using AndroidX.Core.Content;
+using AndroidX.Core.App;
+using Fragment = AndroidX.Fragment.App.Fragment;
+using Google.Android.Material.Snackbar;
 
 namespace Henspe.Droid
 {

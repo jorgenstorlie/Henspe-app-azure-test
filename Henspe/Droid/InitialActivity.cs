@@ -1,9 +1,9 @@
 ﻿using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Content.PM;
 using SNLA.Core.Util;
+using AndroidX.AppCompat.App;
 
 namespace Henspe.Droid
 {
@@ -23,7 +23,7 @@ namespace Henspe.Droid
         {
             base.OnCreate(savedInstanceState);
             Intent intent = null;
-       //     UserUtil.Current.onboardingCompleted = false;
+            //     UserUtil.Current.onboardingCompleted = false;
             if (UserUtil.Current.onboardingCompleted)
                 intent = new Intent(this, typeof(MainActivity));
             else
