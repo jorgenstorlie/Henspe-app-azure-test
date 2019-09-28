@@ -1,5 +1,1 @@
 ﻿splash
-settingsikon
-
-
-pdffiler

@@ -254,6 +254,8 @@
     <Folder Include="Assets.xcassets\logo_text.imageset\" />
     <Folder Include="Assets.xcassets\logo.imageset\" />
     <Folder Include="Assets.xcassets\ic_settings.imageset\" />
+    <Folder Include="Assets.xcassets\logo_splash2.imageset\" />
+    <Folder Include="Assets.xcassets\logo_splash.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -359,6 +361,9 @@
     <BundleResource Include="Resources\intro.json" />
     <BundleResource Include="Resources\Montserrat-ExtraLight.ttf" />
     <BundleResource Include="Resources\Montserrat-Thin.ttf" />
+    <BundleResource Include="Resources\logo_splash~universal%403x.png" />
+    <BundleResource Include="Resources\logo_splash~universal%402x.png" />
+    <BundleResource Include="Resources\logo_splash~universal%401x.png" />
   </ItemGroup>
   <Import Project="..\..\..\SNLA-app\SNLA.iOS\SNLA.iOS.projitems" Label="Shared" Condition="Exists('..\..\..\SNLA-app\SNLA.iOS\SNLA.iOS.projitems')" />
   <Import Project="..\..\..\SNLA-app\SNLA.Core\SNLA.Core.projitems" Label="Shared" Condition="Exists('..\..\..\SNLA-app\SNLA.Core\SNLA.Core.projitems')" />

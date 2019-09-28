@@ -302,7 +302,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2gz-NO-E1J">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="ic_settings" id="Gpd-uZ-SzE">
+                        <barButtonItem key="rightBarButtonItem" image="ic_settings" id="Gpd-uZ-SzE">
                             <color key="tintColor" red="0.089262411099999994" green="0.32050007990000001" blue="0.97797292469999997" alpha="0.90148758559999997" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="OnSettingsClicked:" destination="39h-0T-6KN" id="pS2-vz-XEa"/>
@@ -916,15 +916,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_text" translatesAutoresizingMaskIntoConstraints="NO" id="bxb-Aa-lkC">
-                                <rect key="frame" x="106" y="218.5" width="163" height="180"/>
+                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Bx1-8F-8qj"/>
+                                    <constraint firstAttribute="height" constant="200" id="zaq-hW-VDN"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.97254901959999995" green="0.96470588239999999" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="bxb-Aa-lkC" firstAttribute="width" secondItem="bxb-Aa-lkC" secondAttribute="height" multiplier="163:180" id="7R9-5r-oW1"/>
-                            <constraint firstItem="bxb-Aa-lkC" firstAttribute="width" secondItem="L5Y-mv-xTc" secondAttribute="width" multiplier="1:2.3" id="8uD-kH-aAc"/>
-                            <constraint firstItem="bxb-Aa-lkC" firstAttribute="centerX" secondItem="L5Y-mv-xTc" secondAttribute="centerX" id="BW7-vq-BqW"/>
-                            <constraint firstItem="bxb-Aa-lkC" firstAttribute="centerY" secondItem="L5Y-mv-xTc" secondAttribute="centerY" constant="-25" id="pye-gS-p9C"/>
+                            <constraint firstItem="bxb-Aa-lkC" firstAttribute="centerY" secondItem="L5Y-mv-xTc" secondAttribute="centerY" id="Tch-Y6-tlW"/>
+                            <constraint firstItem="bxb-Aa-lkC" firstAttribute="centerX" secondItem="L5Y-mv-xTc" secondAttribute="centerX" id="XTQ-bH-QUd"/>
                         </constraints>
                     </view>
                     <connections>
