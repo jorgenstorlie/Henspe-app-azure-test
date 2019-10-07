@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_splash~universal.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kbl-MW-hFB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_text" translatesAutoresizingMaskIntoConstraints="NO" id="Kbl-MW-hFB">
                                 <rect key="frame" x="107" y="348" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="EMa-bU-ZzN"/>
@@ -40,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo_splash~universal.png" width="500" height="366"/>
+        <image name="logo_text" width="500" height="366"/>
     </resources>
 </document>
