@@ -138,18 +138,33 @@ namespace Henspe.Droid
 
         private void CreateAddressTextAndRefreshAddressRow(Location location)
         {
-            Geocoder geocoder = new Geocoder(this.Activity);
-            IList<Address> addresses = geocoder.GetFromLocation(location.Latitude, location.Longitude, 1);
-            string wholeAddress = "";
+            Geocoder geocoder = new Geocoder(Activity);
+            IList<Address> addresses = null;
 
             try
             {
-                var dd = addresses[0];
-                wholeAddress = dd.Thoroughfare + " " + dd.SubThoroughfare;
-                wholeAddress = wholeAddress + System.Environment.NewLine  + (dd.SubLocality + ", " ?? string.Empty) + dd.Locality;
+                addresses = geocoder.GetFromLocation(location.Latitude, location.Longitude, 1);
             }
-            catch (System.ArgumentOutOfRangeException aoore)
+            catch (Exception ex)
             {
+
+
+            }
+
+
+            string wholeAddress = "";
+
+            if (addresses != null)
+            {
+                try
+                {
+                    var dd = addresses[0];
+                    wholeAddress = dd.Thoroughfare + " " + dd.SubThoroughfare;
+                    wholeAddress = wholeAddress + System.Environment.NewLine + (dd.SubLocality + ", " ?? string.Empty) + dd.Locality;
+                }
+                catch (ArgumentOutOfRangeException aoore)
+                {
+                }
             }
 
             /*

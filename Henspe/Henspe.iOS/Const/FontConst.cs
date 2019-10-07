@@ -1,24 +1,20 @@
-﻿using System;
-using Foundation;
-using UIKit;
+﻿using UIKit;
 
 namespace Henspe.iOS.Const
 {
 	public class FontConst
 	{
-		static public UIFont fontSmall = UIFont.FromName("Montserrat-Light", 13f);
-		static public UIFont fontMedium = UIFont.FromName("Montserrat-Light", 15f);
-        static public UIFont fontMediumRegular = UIFont.FromName("Montserrat-Regular", 15f);
-        static public UIFont fontMediumLight = UIFont.FromName("Montserrat-Light", 13f);
-        static public UIFont fontLarge = UIFont.FromName("Montserrat-Light", 17f);
-        static public UIFont fontHeading = UIFont.FromName("Montserrat-Light", 17f);
+        static public UIFont fontSmall = UIFont.SystemFontOfSize(13f, UIFontWeight.Light);
+        static public UIFont fontMedium = UIFont.SystemFontOfSize(15f, UIFontWeight.Light);
+        static public UIFont fontMediumRegular = UIFont.SystemFontOfSize(15f, UIFontWeight.Regular);
+        static public UIFont fontMediumLight = UIFont.SystemFontOfSize(13f, UIFontWeight.Light);
+        static public UIFont fontLarge = UIFont.SystemFontOfSize(17f, UIFontWeight.Light);
+        static public UIFont fontHeading = UIFont.SystemFontOfSize(17f, UIFontWeight.Light);
+        static public UIFont fontHeadingDescription = UIFont.SystemFontOfSize(17f, UIFontWeight.Regular);
+        static public UIFont fontHeadingTitle = UIFont.SystemFontOfSize(42f, UIFontWeight.Medium);
+        static public UIFont fontHeadingTable = UIFont.SystemFontOfSize(16f, UIFontWeight.Regular);
 
-        static public UIFont fontHeadingDescription = UIFont.FromName("Montserrat-Regular", 17f);
-        static public UIFont fontHeadingTitle = UIFont.FromName("Montserrat-Medium", 42f);
-
-        static public UIFont fontHeadingTable = UIFont.FromName("Montserrat-Regular", 16f);
-
-		public FontConst ()
+        public FontConst ()
 		{
 		}
 	}

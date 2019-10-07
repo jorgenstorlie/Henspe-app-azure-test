@@ -6,20 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Montserrat-Light.ttf">
-            <string>Montserrat-Light</string>
-        </array>
-        <array key="Montserrat-Medium.ttf">
-            <string>Montserrat-Medium</string>
-        </array>
-        <array key="Montserrat-Regular.ttf">
-            <string>Montserrat-Regular</string>
-        </array>
-        <array key="Montserrat-Thin.ttf">
-            <string>Montserrat-Thin</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Main View Controller-->
         <scene sceneID="lLf-d9-Dvz">
@@ -57,17 +43,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-8" translatesAutoresizingMaskIntoConstraints="NO" id="svA-ky-xeV">
-                                                    <rect key="frame" x="165" y="16" width="45" height="68"/>
+                                                    <rect key="frame" x="167" y="16.5" width="41" height="67.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTe-4c-ikn">
-                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="55"/>
-                                                            <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="42"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="41" height="55"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="42"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1z-3e-oR8">
-                                                            <rect key="frame" x="0.0" y="47" width="45" height="21"/>
-                                                            <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="47" width="41" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -120,14 +106,14 @@
                                                             <rect key="frame" x="55" y="0.0" width="273.5" height="50"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hO-rK-0Lv">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="273.5" height="29"/>
-                                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="273.5" height="29.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhY-u1-XxC">
-                                                                    <rect key="frame" x="0.0" y="29" width="273.5" height="21"/>
-                                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
+                                                                    <rect key="frame" x="0.0" y="29.5" width="273.5" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -184,7 +170,7 @@
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrk-Rx-bgg">
                                                             <rect key="frame" x="55" y="0.0" width="300" height="44"/>
-                                                            <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -243,7 +229,7 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Zzj-Em-je9"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="16"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -252,7 +238,7 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Wnj-dz-SvG"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="16"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -341,7 +327,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="98" id="xWT-RZ-1AM"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -351,7 +337,7 @@
                                     <constraint firstAttribute="height" constant="28" id="9JZ-FA-Hfu"/>
                                     <constraint firstAttribute="width" constant="117" id="zad-aP-VRd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.0" green="0.17254901960784313" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -365,7 +351,7 @@
                                     <constraint firstAttribute="height" constant="28" id="otC-2w-7JW"/>
                                     <constraint firstAttribute="width" constant="117" id="xUf-q9-br5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.0" green="0.17254901960784313" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -398,7 +384,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Klo-om-l3f"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Montserrat-Thin" family="Montserrat" pointSize="44"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="44"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -602,7 +588,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18.5" id="Zeg-bX-Djd"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -611,7 +597,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18.5" id="sws-bw-8y0"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -620,7 +606,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18.5" id="BOA-3P-MQl"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -689,7 +675,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="weM-iq-PB2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -746,7 +732,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="P2P-2P-VdE"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -755,7 +741,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="27" id="UDA-GR-oxF"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -786,7 +772,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="29" id="G8B-vC-XXU"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -813,7 +799,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="r8c-gg-Ykh"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -823,7 +809,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="EfS-OS-3v9"/>
                                                         <constraint firstAttribute="width" constant="150" id="q2H-xA-Cu7"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -832,7 +818,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33" id="m8G-R8-4MD"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -866,7 +852,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="27" id="R9t-Xu-W6y"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -945,8 +931,8 @@
         <image name="logo_text" width="500" height="366"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="foj-wO-0TP"/>
-        <segue reference="SI7-iJ-o9c"/>
+        <segue reference="CMK-0E-kTS"/>
+        <segue reference="EMM-9T-6Qk"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.12233110517263412" green="0.091116435825824738" blue="0.27446338534355164" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

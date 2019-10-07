@@ -1,0 +1,1 @@
+﻿https://stackoverflow.com/questions/19691530/valid-values-for-androidfontfamily-and-what-they-map-to/19692166

@@ -409,6 +409,7 @@
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="packages.config" />
+    <None Include="readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -443,7 +444,6 @@
     <AndroidResource Include="Resources\menu\MenuBase.xml" />
     <AndroidResource Include="Resources\menu\MenuHome.xml" />
     <AndroidResource Include="Resources\menu\menu_main.xml" />
-    <AndroidResource Include="Resources\font\montserrat_light.ttf" />
     <AndroidResource Include="Resources\drawable\splash_screen.xml" />
     <AndroidResource Include="Resources\values-v19\styles.xml" />
     <AndroidResource Include="Resources\values-v21\styles.xml" />
@@ -485,11 +485,6 @@
                     <AndroidResource Include="Resources\drawable-xxxhdpi\img_splash_logo.png" />
                     <AndroidResource Include="Resources\animator\abc_fade_out.xml" />
                     <AndroidResource Include="Resources\layout\position_row.axml" />
-                    <AndroidResource Include="Resources\font\font_montserrat_regular.xml" />
-                    <AndroidResource Include="Resources\font\font_montserrat_medium.xml" />
-                    <AndroidResource Include="Resources\font\font_montserrat_light.xml" />
-                    <AndroidResource Include="Resources\font\montserrat_medium.ttf" />
-                    <AndroidResource Include="Resources\font\montserrat_regular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />
@@ -500,7 +495,6 @@
     <Folder Include="Resources\menu\" />
     <Folder Include="Model\" />
     <Folder Include="Resources\drawable\" />
-    <Folder Include="Resources\font\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\intro.json" />
