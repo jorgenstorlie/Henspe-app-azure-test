@@ -222,7 +222,14 @@
     <ImageAsset Include="Assets.xcassets\logo.imageset\SNLA_Logo.pdf" />
     <ImageAsset Include="Assets.xcassets\ic_settings.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\ic_settings.imageset\ic_gear.pdf" />
-  </ItemGroup>
+    <ImageAsset Include="Assets.xcassets\Color_BG.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Color_ImageTint.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ImageColor.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\OddRowColor.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\EvenRowColor.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\FontColor.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\BackgroundColor.colorset\Contents.json" />
+ </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="AppModel\" />
@@ -259,6 +266,16 @@
     <Folder Include="Assets.xcassets\ic_settings.imageset\" />
     <Folder Include="Assets.xcassets\logo_splash2.imageset\" />
     <Folder Include="Assets.xcassets\logo_splash.imageset\" />
+    <Folder Include="Assets.xcassets\Color_BG.colorset\" />
+    <Folder Include="Assets.xcassets\Color_ImageTint.colorset\" />
+    <Folder Include="Assets.xcassets\LightAndDarkHeaderColor.imageset\" />
+    <Folder Include="Assets.xcassets\LightAndDarkHeaderColor.colorset\" />
+    <Folder Include="Assets.xcassets\ImageColor.colorset\" />
+    <Folder Include="Assets.xcassets\OddRowColor.colorset\" />
+    <Folder Include="Assets.xcassets\EvenRowColor.colorset\" />
+    <Folder Include="Assets.xcassets\EvenRowFontColor.colorset\" />
+    <Folder Include="Assets.xcassets\FontColor.colorset\" />
+    <Folder Include="Assets.xcassets\BackgroundColor.colorset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />

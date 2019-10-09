@@ -20,7 +20,7 @@ namespace Henspe.iOS
 
         private UIStringAttributes normalText = new UIStringAttributes
         {
-            ForegroundColor = ColorConst.snlaText,
+            ForegroundColor = UIColor.FromName("FontColor"),
             Font = FontConst.fontMedium
         };
         private UIImageView logoImageView;
@@ -92,7 +92,7 @@ namespace Henspe.iOS
             btnConsent.Layer.BorderWidth = 1;
             btnConsent.Layer.CornerRadius = 5.0f;
 
-            View.BackgroundColor = ColorConst.snlaBackground;
+            View.BackgroundColor = UIColor.FromName("BackgroundColor");
 
             if (!showHelpUs)
             {
@@ -378,9 +378,9 @@ namespace Henspe.iOS
             cell.SetContent(structureSection.description);
 
             if (IsOdd((int)section))
-                cell.ContentView.BackgroundColor = ColorConst.oddBackgroundColor;
+                cell.ContentView.BackgroundColor = UIColor.FromName("OddRowColor"); 
             else
-                cell.ContentView.BackgroundColor = ColorConst.evenBackground;
+                cell.ContentView.BackgroundColor = UIColor.FromName("EvenRowColor"); 
 
             return cell.ContentView;
         }
@@ -441,9 +441,9 @@ namespace Henspe.iOS
             if (cell != null)
             {
                 if (IsOdd((int)section))
-                    cell.BackgroundColor = ColorConst.oddBackgroundColor;
+                    cell.BackgroundColor = UIColor.FromName("OddRowColor");
                 else
-                    cell.BackgroundColor = ColorConst.evenBackground;
+                    cell.BackgroundColor = UIColor.FromName("EvenRowColor");
             }
             return cell;
         }

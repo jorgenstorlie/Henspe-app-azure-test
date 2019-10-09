@@ -41,6 +41,9 @@ namespace Henspe.iOS
         public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
+
+            View.BackgroundColor = UIColor.FromName("BackgroundColor");
+
             ClearAllBeforeDrawing();
             SetupView();
             PopulateInitialPage();
@@ -58,7 +61,7 @@ namespace Henspe.iOS
             pagPager.CurrentPageIndicatorTintColor = ColorConst.snlaRed;
             labHeader.Text = LangUtil.Get("Initial.Header");
             labHeader.TextColor = ColorConst.snlaRed;
-            labDescription.TextColor = ColorConst.snlaText;
+            labDescription.TextColor = UIColor.FromName("FontColor");
             labDescription.Text = string.Empty;
             //  viewAnimation.BackgroundColor = UIColor.FromRGBA(50, 0, 0, 40);
 

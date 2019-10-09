@@ -14,9 +14,15 @@ namespace Henspe.iOS
         internal void SetContent(StructureElementDto structureElement)
         {
             BackgroundColor = UIColor.Clear;
-            labLabel.TextColor = ColorConst.snlaText;
+            labLabel.TextColor = UIColor.FromName("FontColor");
             labLabel.Text = structureElement.description;
-            imgImage.Image = UIImage.FromBundle(structureElement.image);
+
+            imgImage.Image = UIImage.FromBundle(structureElement.image).ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
+  imgImage.TintColor =  UIColor.FromName("ImageColor");
+
+            
+
+            //       imgImage.TintColor = UIColor.Red;
         }
     }
 }

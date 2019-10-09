@@ -22,10 +22,11 @@ namespace Henspe.iOS
             btnMap.SetTitleColor(ColorConst.snlaBlue, UIControlState.Normal);
             BackgroundColor = UIColor.Clear;
 
-            imgImageView.Image = UIImage.FromBundle("ic_adresse");
+            imgImageView.Image = UIImage.FromBundle("ic_adresse").ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
+            imgImageView.TintColor = UIColor.FromName("ImageColor");
 
-            labAddressLine1.TextColor = ColorConst.snlaText;
-            labAddressLine2.TextColor = ColorConst.snlaText;
+            labAddressLine1.TextColor = UIColor.FromName("FontColor");
+            labAddressLine2.TextColor = UIColor.FromName("FontColor");
 
             labAddressLine1.Font = FontConst.fontLarge;
             labAddressLine2.Font = FontConst.fontLarge;
