@@ -106,7 +106,7 @@
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Lottie.iOS">
-      <HintPath>..\packages\Com.Airbnb.iOS.Lottie.2.5.9\lib\xamarinios10\Lottie.iOS.dll</HintPath>
+      <HintPath>..\packages\Com.Airbnb.iOS.Lottie.2.5.10\lib\xamarinios10\Lottie.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Essentials">
       <HintPath>..\packages\Xamarin.Essentials.1.3.1\lib\xamarinios10\Xamarin.Essentials.dll</HintPath>
@@ -229,6 +229,13 @@
     <ImageAsset Include="Assets.xcassets\EvenRowColor.colorset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\FontColor.colorset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\BackgroundColor.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\TextButton.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\RedBackground.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\FontLight.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\HeaderText.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\HeaderLineBackground.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\TableSeparator.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ToolbarImage.colorset\Contents.json" />
  </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -276,6 +283,13 @@
     <Folder Include="Assets.xcassets\EvenRowFontColor.colorset\" />
     <Folder Include="Assets.xcassets\FontColor.colorset\" />
     <Folder Include="Assets.xcassets\BackgroundColor.colorset\" />
+    <Folder Include="Assets.xcassets\TextButton.colorset\" />
+    <Folder Include="Assets.xcassets\RedBackground.colorset\" />
+    <Folder Include="Assets.xcassets\FontLight.colorset\" />
+    <Folder Include="Assets.xcassets\HeaderText.colorset\" />
+    <Folder Include="Assets.xcassets\HeaderLineBackground.colorset\" />
+    <Folder Include="Assets.xcassets\TableSeparator.colorset\" />
+    <Folder Include="Assets.xcassets\ToolbarImage.colorset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />

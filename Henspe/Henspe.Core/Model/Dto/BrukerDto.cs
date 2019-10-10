@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
+﻿
 namespace Henspe.Core.Model.Dto
 {
 	public class BrukerDto

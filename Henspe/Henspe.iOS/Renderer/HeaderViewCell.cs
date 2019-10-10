@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using Henspe.iOS.Const;
+using SNLA.iOS.Util;
 using UIKit;
 
 namespace Henspe.iOS
@@ -17,7 +18,7 @@ namespace Henspe.iOS
             labHeadline.Text = header;
             labDescription.Text = title;
             labHeadline.TextColor =  ColorConst.largeTextColor;
-            labDescription.TextColor = UIColor.FromName("FontColor"); ;// ColorConst.headerDescriptionTextColor;
+            labDescription.TextColor = ColorHelper.FromType(ColorType.Font); ;// ColorConst.headerDescriptionTextColor;
 
             labHeadline.Font = FontConst.fontHeadingTitle;
             labDescription.Font = FontConst.fontHeadingDescription;

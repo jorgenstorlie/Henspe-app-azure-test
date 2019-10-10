@@ -20,7 +20,7 @@ namespace Henspe.iOS
 
         private UIStringAttributes normalText = new UIStringAttributes
         {
-            ForegroundColor = UIColor.FromName("FontColor"),
+            ForegroundColor = ColorHelper.FromType(ColorType.Font),
             Font = FontConst.fontMedium
         };
         private UIImageView logoImageView;
@@ -65,7 +65,7 @@ namespace Henspe.iOS
             logoImageView.Frame = new CGRect((navigationBar.Bounds.Width / 2) - (computedImageWidth / 2), (navigationBar.Bounds.Height / 2) - (imageHeight / 2), computedImageWidth, imageHeight);
             navigationBar.AddSubview(logoImageView);
 
-            NavigationItem.RightBarButtonItem.TintColor = ColorConst.snlaBlue;
+            NavigationItem.RightBarButtonItem.TintColor = ColorHelper.FromType(ColorType.ToolbarImage);
         }
 
         private void OnSettingsClicked()
@@ -92,7 +92,7 @@ namespace Henspe.iOS
             btnConsent.Layer.BorderWidth = 1;
             btnConsent.Layer.CornerRadius = 5.0f;
 
-            View.BackgroundColor = UIColor.FromName("BackgroundColor");
+            View.BackgroundColor = ColorHelper.FromType(ColorType.BackGround);
 
             if (!showHelpUs)
             {
@@ -378,9 +378,9 @@ namespace Henspe.iOS
             cell.SetContent(structureSection.description);
 
             if (IsOdd((int)section))
-                cell.ContentView.BackgroundColor = UIColor.FromName("OddRowColor"); 
+                cell.ContentView.BackgroundColor = ColorHelper.FromType(ColorType.OddRow);
             else
-                cell.ContentView.BackgroundColor = UIColor.FromName("EvenRowColor"); 
+                cell.ContentView.BackgroundColor = ColorHelper.FromType(ColorType.EvenRow);
 
             return cell.ContentView;
         }
@@ -441,9 +441,9 @@ namespace Henspe.iOS
             if (cell != null)
             {
                 if (IsOdd((int)section))
-                    cell.BackgroundColor = UIColor.FromName("OddRowColor");
+                    cell.BackgroundColor = ColorHelper.FromType(ColorType.OddRow);
                 else
-                    cell.BackgroundColor = UIColor.FromName("EvenRowColor");
+                    cell.BackgroundColor = ColorHelper.FromType(ColorType.EvenRow);
             }
             return cell;
         }

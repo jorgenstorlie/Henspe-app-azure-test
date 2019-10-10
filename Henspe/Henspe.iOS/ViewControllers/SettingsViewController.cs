@@ -63,7 +63,7 @@ namespace Henspe.iOS
         public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
-            this.NavigationController.SetNavigationBarHidden(false, false);
+       NavigationController.SetNavigationBarHidden(false, false);
 
             SetupEvents();
             SetupTouchGesture();
@@ -128,7 +128,7 @@ namespace Henspe.iOS
         #region navigation bar
         private void SetupNavigationBar()
         {
-            this.Title = LangUtil.Get("Settings.heading");
+       Title = LangUtil.Get("Settings.heading");
 
             // Back button
             /*
@@ -256,23 +256,23 @@ namespace Henspe.iOS
         {
             CGRect headerframe = new CGRect(0, 0, tableView.Bounds.Size.Width, headerHeight);
             UIView headerView = new UIView(headerframe);
-            headerView.BackgroundColor = ColorConst.tableSeparatorColor;
+            headerView.BackgroundColor = ColorHelper.FromType(ColorType.BackGround); 
 
             int lineThickness = 1;
             CGRect bottomLineframe = new CGRect(0, headerHeight - lineThickness, tableView.Bounds.Size.Width, lineThickness);
             UIView bottomLine = new UIView(bottomLineframe);
-            bottomLine.BackgroundColor = ColorConst.headerLineBackground;
+            bottomLine.BackgroundColor = ColorHelper.FromType(ColorType.HeaderLineBackground); 
 
             CGRect topLineframe = new CGRect(0, 0, tableView.Bounds.Size.Width, lineThickness);
             UIView topLine = new UIView(topLineframe);
-            topLine.BackgroundColor = ColorConst.headerLineBackground;
+            topLine.BackgroundColor = ColorHelper.FromType(ColorType.HeaderLineBackground);
 
             int labelHeight = 20;
 
             CGRect labelframe = new CGRect(15, headerHeight - labelHeight - 2, tableView.Bounds.Size.Width - 10, labelHeight);
             UILabel label = new UILabel(labelframe);
             label.Font = FontConst.fontHeadingTable;
-            label.TextColor = ColorConst.headerTextColor;
+            label.TextColor = ColorHelper.FromType(ColorType.HeaderText); 
 
             if (section == coordinatsSection)
                 label.Text = LangUtil.Get("SettingsViewController.Coordinates.Header").ToUpper();
@@ -345,7 +345,7 @@ namespace Henspe.iOS
             {
                 SettingsCoordinatesTableCell settingsCoordinatesTableCell = tableView.DequeueReusableCell(cellIdentifier) as SettingsCoordinatesTableCell;
                 settingsCoordinatesTableCell.BackgroundColor = UIColor.Clear;
-                settingsCoordinatesTableCell.LabInfo.TextColor = ColorConst.snlaText;
+                settingsCoordinatesTableCell.LabInfo.TextColor = ColorHelper.FromType(ColorType.Font);
                 settingsCoordinatesTableCell.LabInfo.Text = LangUtil.Get("SettingsViewController.Coordinates.Info");
                 settingsCoordinatesTableCell.LabInfo.Font = FontConst.fontSmall;
 
@@ -363,7 +363,7 @@ namespace Henspe.iOS
                 else
                     coordinateButtonText = LangUtil.Get("SettingsViewController.Coordinates.DDM");
 
-                settingsCoordinatesTableCell.LabValue.TextColor = ColorConst.snlaText;
+                settingsCoordinatesTableCell.LabValue.TextColor = ColorHelper.FromType(ColorType.Font);
                 settingsCoordinatesTableCell.LabValue.Text = coordinateButtonText;
                 settingsCoordinatesTableCell.LabValue.Font = FontConst.fontMediumRegular;
 
@@ -391,29 +391,29 @@ namespace Henspe.iOS
                 //  if (locationServiceAccess == LocationServiceAccess.always)
                 if (locationServiceAccess == LocationServiceAccess.onlyWhenInUse)
                 {
-                    settingsLocationTableCell.LabInfo.TextColor = ColorConst.snlaText;
+                    settingsLocationTableCell.LabInfo.TextColor = ColorHelper.FromType(ColorType.Font);
                     settingsLocationTableCell.LabInfo.Font = FontConst.fontSmall;
 
-                    settingsLocationTableCell.LabLeft.TextColor = ColorConst.snlaText;
+                    settingsLocationTableCell.LabLeft.TextColor = ColorHelper.FromType(ColorType.Font);
                     settingsLocationTableCell.LabLeft.Font = FontConst.fontMediumRegular;
 
-                    settingsLocationTableCell.LabRight.TextColor = ColorConst.snlaText;
+                    settingsLocationTableCell.LabRight.TextColor = ColorHelper.FromType(ColorType.Font);
                     settingsLocationTableCell.LabRight.Font = FontConst.fontMediumRegular;
 
                     settingsLocationTableCell.BackgroundColor = UIColor.Clear;
                 }
                 else
                 {
-                    settingsLocationTableCell.LabInfo.TextColor = ColorConst.snlaTextLight;
+                    settingsLocationTableCell.LabInfo.TextColor = ColorHelper.FromType(ColorType.FontLight); 
                     settingsLocationTableCell.LabInfo.Font = FontConst.fontSmall;
 
-                    settingsLocationTableCell.LabLeft.TextColor = ColorConst.snlaTextLight;
+                    settingsLocationTableCell.LabLeft.TextColor = ColorHelper.FromType(ColorType.FontLight);
                     settingsLocationTableCell.LabLeft.Font = FontConst.fontMediumRegular;
 
-                    settingsLocationTableCell.LabRight.TextColor = ColorConst.snlaTextLight;
+                    settingsLocationTableCell.LabRight.TextColor = ColorHelper.FromType(ColorType.FontLight);
                     settingsLocationTableCell.LabRight.Font = FontConst.fontMediumRegular;
 
-                    settingsLocationTableCell.BackgroundColor = ColorConst.snlaRed;
+                    settingsLocationTableCell.BackgroundColor = ColorHelper.FromType(ColorType.RedBackground);
                 }
                 return settingsLocationTableCell;
             }
@@ -421,7 +421,7 @@ namespace Henspe.iOS
             {
                 SettingsTopInfoTableCell settingsTopInfoTableCell = tableView.DequeueReusableCell(cellIdentifier) as SettingsTopInfoTableCell;
                 settingsTopInfoTableCell.BackgroundColor = UIColor.Clear;
-                settingsTopInfoTableCell.LabInfo.TextColor = ColorConst.snlaText;
+                settingsTopInfoTableCell.LabInfo.TextColor = ColorHelper.FromType(ColorType.Font);
                 settingsTopInfoTableCell.LabInfo.Font = FontConst.fontLarge;
 
                 if (indexPath.Section == concentSection)
@@ -432,12 +432,12 @@ namespace Henspe.iOS
                     if (UserUtil.Current.consentAgreed == ConsentAgreed.True)
                     {
                         settingsTopInfoTableCell.BackgroundColor = UIColor.Clear;
-                        settingsTopInfoTableCell.LabInfo.TextColor = ColorConst.snlaText;
+                        settingsTopInfoTableCell.LabInfo.TextColor = ColorHelper.FromType(ColorType.Font);
                     }
                     else
                     {
-                        settingsTopInfoTableCell.BackgroundColor = ColorConst.snlaRed;
-                        settingsTopInfoTableCell.LabInfo.TextColor = ColorConst.snlaTextLight;
+                        settingsTopInfoTableCell.BackgroundColor = ColorHelper.FromType(ColorType.RedBackground);
+                        settingsTopInfoTableCell.LabInfo.TextColor = ColorHelper.FromType(ColorType.FontLight);
                     }
                 }
 
@@ -462,7 +462,7 @@ namespace Henspe.iOS
             {
                 SettingsInfoTableCell settingsInfoTableCell = tableView.DequeueReusableCell(cellIdentifier) as SettingsInfoTableCell;
                 settingsInfoTableCell.BackgroundColor = UIColor.Clear;
-                settingsInfoTableCell.LabLabel.TextColor = ColorConst.snlaText;
+                settingsInfoTableCell.LabLabel.TextColor = ColorHelper.FromType(ColorType.Font);
                 settingsInfoTableCell.LabLabel.Font = FontConst.fontLarge;
 
                 if (indexPath.Section == concentSection)
@@ -473,12 +473,12 @@ namespace Henspe.iOS
                     if (UserUtil.Current.consentAgreed == ConsentAgreed.True)
                     {
                         settingsInfoTableCell.BackgroundColor = UIColor.Clear;
-                        settingsInfoTableCell.LabLabel.TextColor = ColorConst.snlaText;
+                        settingsInfoTableCell.LabLabel.TextColor = ColorHelper.FromType(ColorType.Font);
                     }
                     else
                     {
-                        settingsInfoTableCell.BackgroundColor = ColorConst.snlaRed;
-                        settingsInfoTableCell.LabLabel.TextColor = ColorConst.snlaTextLight;
+                        settingsInfoTableCell.BackgroundColor = ColorHelper.FromType(ColorType.RedBackground);
+                        settingsInfoTableCell.LabLabel.TextColor = ColorHelper.FromType(ColorType.FontLight);
                     }
                 }
 

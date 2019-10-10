@@ -2,6 +2,7 @@ using System;
 using Henspe.iOS.Const;
 using UIKit;
 using SNLA.Core.Util;
+using SNLA.iOS.Util;
 
 namespace Henspe.iOS
 {
@@ -15,9 +16,9 @@ namespace Henspe.iOS
         internal void SetContent()
         {
             this.BackgroundColor = UIColor.Clear;
-       
+
             imgImage.Image = UIImage.FromBundle("ic_posisjon").ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
-            imgImage.TintColor = UIColor.FromName("ImageColor");
+            imgImage.TintColor = ColorHelper.FromType(ColorType.Image);
 
 
             if (AppDelegate.current.locationManager.locationManager.Location != null)
@@ -36,8 +37,8 @@ namespace Henspe.iOS
                 labLabelBottom.Text = string.Empty;
             }
 
-            labLabelTop.TextColor = ColorConst.snlaBlue;
-            labLabelBottom.TextColor = ColorConst.snlaBlue;
+            labLabelTop.TextColor = ColorHelper.FromType(ColorType.TextButton);
+            labLabelBottom.TextColor = ColorHelper.FromType(ColorType.TextButton);
 
             labLabelTop.Font = FontConst.fontLarge;
             labLabelBottom.Font = FontConst.fontLarge;
