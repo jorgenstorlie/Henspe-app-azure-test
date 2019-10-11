@@ -20,7 +20,7 @@ namespace Henspe.iOS
             btnMap.SetTitle(LangUtil.Get("Structure.EksaktPosisjon.ShareButton"), UIControlState.Normal);
             btnMap.AddTarget(ButtonEventHandler, UIControlEvent.TouchUpInside);
             btnMap.Font = FontConst.fontLarge;
-            btnMap.SetTitleColor(ColorHelper.FromType(ColorType.TextButton) , UIControlState.Normal);
+            btnMap.SetTitleColor(ColorHelper.FromType(ColorType.Image) , UIControlState.Normal);
             BackgroundColor = UIColor.Clear;
 
             imgImageView.Image = UIImage.FromBundle("ic_adresse").ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);

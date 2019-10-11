@@ -65,7 +65,7 @@ namespace Henspe.iOS
             logoImageView.Frame = new CGRect((navigationBar.Bounds.Width / 2) - (computedImageWidth / 2), (navigationBar.Bounds.Height / 2) - (imageHeight / 2), computedImageWidth, imageHeight);
             navigationBar.AddSubview(logoImageView);
 
-            NavigationItem.RightBarButtonItem.TintColor = ColorHelper.FromType(ColorType.ToolbarImage);
+            NavigationItem.RightBarButtonItem.TintColor = ColorHelper.FromType(ColorType.Image);
         }
 
         private void OnSettingsClicked()
@@ -377,7 +377,7 @@ namespace Henspe.iOS
             var cell = (HeaderViewCell)tableView.DequeueReusableCell("HeaderCell");
             cell.SetContent(structureSection.description);
 
-            if (IsOdd((int)section))
+            if (IsOdd((int)section + 1))
                 cell.ContentView.BackgroundColor = ColorHelper.FromType(ColorType.OddRow);
             else
                 cell.ContentView.BackgroundColor = ColorHelper.FromType(ColorType.EvenRow);
@@ -440,7 +440,7 @@ namespace Henspe.iOS
 
             if (cell != null)
             {
-                if (IsOdd((int)section))
+                if (IsOdd((int)section + 1))
                     cell.BackgroundColor = ColorHelper.FromType(ColorType.OddRow);
                 else
                     cell.BackgroundColor = ColorHelper.FromType(ColorType.EvenRow);

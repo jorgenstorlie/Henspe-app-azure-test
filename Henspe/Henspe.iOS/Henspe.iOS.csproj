@@ -236,6 +236,8 @@
     <ImageAsset Include="Assets.xcassets\HeaderLineBackground.colorset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\TableSeparator.colorset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\ToolbarImage.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\GroupedBackgroundColor.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SecondaryGroupedBackgroundColor.colorset\Contents.json" />
  </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -290,6 +292,8 @@
     <Folder Include="Assets.xcassets\HeaderLineBackground.colorset\" />
     <Folder Include="Assets.xcassets\TableSeparator.colorset\" />
     <Folder Include="Assets.xcassets\ToolbarImage.colorset\" />
+    <Folder Include="Assets.xcassets\GroupedBackgroundColor.colorset\" />
+    <Folder Include="Assets.xcassets\SecondaryGroupedBackgroundColor.colorset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
