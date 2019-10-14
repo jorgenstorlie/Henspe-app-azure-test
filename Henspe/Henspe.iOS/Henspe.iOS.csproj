@@ -228,7 +228,6 @@
     <ImageAsset Include="Assets.xcassets\FontLight.colorset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\HeaderText.colorset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\HeaderLineBackground.colorset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\TableSeparator.colorset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\ToolbarImage.colorset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\SNLALink.colorset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\SNLASystemBackground.colorset\Contents.json" />
@@ -236,6 +235,7 @@
     <ImageAsset Include="Assets.xcassets\SNLASystemGroupedBackground.colorset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\SNLASecondarySystemGroupedBackground.colorset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\SNLAIcon.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SNLASeparator.colorset\Contents.json" />
  </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -299,6 +299,7 @@
     <Folder Include="Assets.xcassets\SNLASystemGroupedBackground.colorset\" />
     <Folder Include="Assets.xcassets\SNLASecondarySystemGroupedBackground.colorset\" />
     <Folder Include="Assets.xcassets\SNLAIcon.colorset\" />
+    <Folder Include="Assets.xcassets\SNLASeparator.colorset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />

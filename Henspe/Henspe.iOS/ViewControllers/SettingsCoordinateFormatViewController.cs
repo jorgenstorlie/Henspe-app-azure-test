@@ -32,7 +32,7 @@ namespace Henspe.iOS
             table.RowHeight = UITableView.AutomaticDimension;
             table.EstimatedRowHeight = 70;
             var footer = new UIView(CGRect.FromLTRB(0, 0, View.Frame.Width, 1));
-            footer.BackgroundColor = UIColor.LightGray;
+            footer.BackgroundColor = ColorHelper.FromType(ColorType.Separator);
             table.TableFooterView = footer;
 
             labHeader.TextColor = ColorHelper.FromType(ColorType.Label);
