@@ -18,7 +18,7 @@ namespace Henspe.iOS
             this.BackgroundColor = UIColor.Clear;
 
             imgImage.Image = UIImage.FromBundle("ic_posisjon").ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
-            imgImage.TintColor = ColorHelper.FromType(ColorType.Image);
+            imgImage.TintColor = ColorHelper.FromType(ColorType.Icon);
 
 
             if (AppDelegate.current.locationManager.locationManager.Location != null)
@@ -37,8 +37,8 @@ namespace Henspe.iOS
                 labLabelBottom.Text = string.Empty;
             }
 
-            labLabelTop.TextColor = ColorHelper.FromType(ColorType.TextButton);
-            labLabelBottom.TextColor = ColorHelper.FromType(ColorType.TextButton);
+            labLabelTop.TextColor = ColorHelper.FromType(ColorType.Link);
+            labLabelBottom.TextColor = ColorHelper.FromType(ColorType.Link);
 
             labLabelTop.Font = FontConst.fontLarge;
             labLabelBottom.Font = FontConst.fontLarge;

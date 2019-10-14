@@ -7,6 +7,7 @@ using Henspe.Core.Services;
 using System.Linq;
 using Henspe.iOS.Const;
 using SNLA.Core.Util;
+using SNLA.iOS.Util;
 
 namespace Henspe.iOS
 {
@@ -24,6 +25,8 @@ namespace Henspe.iOS
 
             this.Title = LangUtil.Get("SettingsViewController.Coordinates.Format.Title");
 
+            View.BackgroundColor = ColorHelper.FromType(ColorType.SystemBackground);
+
             table.BackgroundColor = UIColor.Clear;
 
             table.RowHeight = UITableView.AutomaticDimension;
@@ -32,7 +35,7 @@ namespace Henspe.iOS
             footer.BackgroundColor = UIColor.LightGray;
             table.TableFooterView = footer;
 
-            labHeader.TextColor = ColorConst.snlaText;
+            labHeader.TextColor = ColorHelper.FromType(ColorType.Label);
             labHeader.Font = FontConst.fontMediumRegular;
             labHeader.Text = LangUtil.Get("SettingsViewController.Coordinates.Format.Header");
 
@@ -156,7 +159,9 @@ namespace Henspe.iOS
                 var row = coordinateRows[indexPath.Row];
                 settingsCoordinateFormatTableCell.SetContent(row.Title, row.Sub1, row.Sub2);
 
-                return settingsCoordinateFormatTableCell;
+                settingsCoordinateFormatTableCell.BackgroundColor = ColorHelper.FromType(ColorType.SystemSecondaryGroupedBackground);
+
+ return settingsCoordinateFormatTableCell;
             }
 
             public override void RowSelected(UITableView tableView, NSIndexPath indexPath)

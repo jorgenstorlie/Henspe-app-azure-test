@@ -136,9 +136,10 @@ namespace Henspe.iOS
             
             };
 
-            NavigationController.NavigationBar.TintColor = ColorHelper.FromType(ColorType.Image);
+            NavigationController.NavigationBar.TintColor = ColorHelper.FromType(ColorType.Icon);
+            View.BackgroundColor = ColorHelper.FromType(ColorType.SystemBackground);
 
-        //    NavigationItem.BackBarButtonItem.TintColor = ColorHelper.FromType(ColorType.Image);
+            //    NavigationItem.BackBarButtonItem.TintColor = ColorHelper.FromType(ColorType.Image);
             //    NavigationItem. TintColor = ColorHelper.FromType(ColorType.Image);
 
             // Back button
@@ -267,7 +268,7 @@ namespace Henspe.iOS
         {
             CGRect headerframe = new CGRect(0, 0, tableView.Bounds.Size.Width, headerHeight);
             UIView headerView = new UIView(headerframe);
-            headerView.BackgroundColor = ColorHelper.FromType(ColorType.GroupedBackgroundColor); 
+            headerView.BackgroundColor = ColorHelper.FromType(ColorType.SystemGroupedBackground); 
 
             int lineThickness = 1;
             CGRect bottomLineframe = new CGRect(0, headerHeight - lineThickness, tableView.Bounds.Size.Width, lineThickness);
@@ -355,8 +356,8 @@ namespace Henspe.iOS
             if (indexPath.Section == coordinatsSection)
             {
                 SettingsCoordinatesTableCell settingsCoordinatesTableCell = tableView.DequeueReusableCell(cellIdentifier) as SettingsCoordinatesTableCell;
-                settingsCoordinatesTableCell.BackgroundColor = ColorHelper.FromType(ColorType.SecondaryGroupedBackgroundColor);
-                settingsCoordinatesTableCell.LabInfo.TextColor = ColorHelper.FromType(ColorType.Font);
+                settingsCoordinatesTableCell.BackgroundColor = ColorHelper.FromType(ColorType.SystemSecondaryGroupedBackground);
+                settingsCoordinatesTableCell.LabInfo.TextColor = ColorHelper.FromType(ColorType.Label);
                 settingsCoordinatesTableCell.LabInfo.Text = LangUtil.Get("SettingsViewController.Coordinates.Info");
                 settingsCoordinatesTableCell.LabInfo.Font = FontConst.fontSmall;
 
@@ -374,7 +375,7 @@ namespace Henspe.iOS
                 else
                     coordinateButtonText = LangUtil.Get("SettingsViewController.Coordinates.DDM");
 
-                settingsCoordinatesTableCell.LabValue.TextColor = ColorHelper.FromType(ColorType.Font);
+                settingsCoordinatesTableCell.LabValue.TextColor = ColorHelper.FromType(ColorType.Label);
                 settingsCoordinatesTableCell.LabValue.Text = coordinateButtonText;
                 settingsCoordinatesTableCell.LabValue.Font = FontConst.fontMediumRegular;
 
@@ -405,13 +406,13 @@ namespace Henspe.iOS
                 //  if (locationServiceAccess == LocationServiceAccess.always)
                 if (locationServiceAccess == LocationServiceAccess.onlyWhenInUse)
                 {
-                    settingsLocationTableCell.LabInfo.TextColor = ColorHelper.FromType(ColorType.Font);
+                    settingsLocationTableCell.LabInfo.TextColor = ColorHelper.FromType(ColorType.Label);
                     settingsLocationTableCell.LabInfo.Font = FontConst.fontSmall;
 
-                    settingsLocationTableCell.LabLeft.TextColor = ColorHelper.FromType(ColorType.Font);
+                    settingsLocationTableCell.LabLeft.TextColor = ColorHelper.FromType(ColorType.Label);
                     settingsLocationTableCell.LabLeft.Font = FontConst.fontMediumRegular;
 
-                    settingsLocationTableCell.LabRight.TextColor = ColorHelper.FromType(ColorType.Font);
+                    settingsLocationTableCell.LabRight.TextColor = ColorHelper.FromType(ColorType.Label);
                     settingsLocationTableCell.LabRight.Font = FontConst.fontMediumRegular;
 
                     settingsLocationTableCell.BackgroundColor = ColorHelper.FromType(ColorType.EvenRow);
@@ -435,7 +436,7 @@ namespace Henspe.iOS
             {
                 SettingsTopInfoTableCell settingsTopInfoTableCell = tableView.DequeueReusableCell(cellIdentifier) as SettingsTopInfoTableCell;
                 settingsTopInfoTableCell.BackgroundColor = UIColor.Clear;
-                settingsTopInfoTableCell.LabInfo.TextColor = ColorHelper.FromType(ColorType.Font);
+                settingsTopInfoTableCell.LabInfo.TextColor = ColorHelper.FromType(ColorType.Label);
                 settingsTopInfoTableCell.LabInfo.Font = FontConst.fontLarge;
 
                 if (indexPath.Section == concentSection)
@@ -445,8 +446,8 @@ namespace Henspe.iOS
 
                     if (UserUtil.Current.consentAgreed == ConsentAgreed.True)
                     {
-                        settingsTopInfoTableCell.BackgroundColor = ColorHelper.FromType(ColorType.SecondaryGroupedBackgroundColor);
-                        settingsTopInfoTableCell.LabInfo.TextColor = ColorHelper.FromType(ColorType.Font);
+                        settingsTopInfoTableCell.BackgroundColor = ColorHelper.FromType(ColorType.SystemSecondaryGroupedBackground);
+                        settingsTopInfoTableCell.LabInfo.TextColor = ColorHelper.FromType(ColorType.Label);
                     }
                     else
                     {
@@ -475,8 +476,8 @@ namespace Henspe.iOS
             else if (indexPath.Section == informationSection)
             {
                 SettingsInfoTableCell settingsInfoTableCell = tableView.DequeueReusableCell(cellIdentifier) as SettingsInfoTableCell;
-                settingsInfoTableCell.BackgroundColor = ColorHelper.FromType(ColorType.SecondaryGroupedBackgroundColor);
-                settingsInfoTableCell.LabLabel.TextColor = ColorHelper.FromType(ColorType.Font);
+                settingsInfoTableCell.BackgroundColor = ColorHelper.FromType(ColorType.SystemSecondaryGroupedBackground);
+                settingsInfoTableCell.LabLabel.TextColor = ColorHelper.FromType(ColorType.Label);
                 settingsInfoTableCell.LabLabel.Font = FontConst.fontLarge;
 
                 if (indexPath.Section == concentSection)
@@ -487,7 +488,7 @@ namespace Henspe.iOS
                     if (UserUtil.Current.consentAgreed == ConsentAgreed.True)
                     {
                         settingsInfoTableCell.BackgroundColor = UIColor.Clear;
-                        settingsInfoTableCell.LabLabel.TextColor = ColorHelper.FromType(ColorType.Font);
+                        settingsInfoTableCell.LabLabel.TextColor = ColorHelper.FromType(ColorType.Label);
                     }
                     else
                     {

@@ -18,7 +18,7 @@ namespace Henspe.iOS
             labHeadline.Text = header;
             labDescription.Text = title;
             labHeadline.TextColor =  ColorConst.largeTextColor;
-            labDescription.TextColor = ColorHelper.FromType(ColorType.Font); ;// ColorConst.headerDescriptionTextColor;
+            labDescription.TextColor = ColorHelper.FromType(ColorType.Label); ;// ColorConst.headerDescriptionTextColor;
 
             labHeadline.Font = FontConst.fontHeadingTitle;
             labDescription.Font = FontConst.fontHeadingDescription;

@@ -20,7 +20,7 @@ namespace Henspe.iOS
 
         private UIStringAttributes normalText = new UIStringAttributes
         {
-            ForegroundColor = ColorHelper.FromType(ColorType.Font),
+            ForegroundColor = ColorHelper.FromType(ColorType.Label),
             Font = FontConst.fontMedium
         };
         private UIImageView logoImageView;
@@ -65,7 +65,7 @@ namespace Henspe.iOS
             logoImageView.Frame = new CGRect((navigationBar.Bounds.Width / 2) - (computedImageWidth / 2), (navigationBar.Bounds.Height / 2) - (imageHeight / 2), computedImageWidth, imageHeight);
             navigationBar.AddSubview(logoImageView);
 
-            NavigationItem.RightBarButtonItem.TintColor = ColorHelper.FromType(ColorType.Image);
+            NavigationItem.RightBarButtonItem.TintColor = ColorHelper.FromType(ColorType.Icon);
         }
 
         private void OnSettingsClicked()
@@ -92,7 +92,7 @@ namespace Henspe.iOS
             btnConsent.Layer.BorderWidth = 1;
             btnConsent.Layer.CornerRadius = 5.0f;
 
-            View.BackgroundColor = ColorHelper.FromType(ColorType.BackGround);
+            View.BackgroundColor = ColorHelper.FromType(ColorType.SystemBackground);
 
             if (!showHelpUs)
             {

@@ -42,7 +42,7 @@ namespace Henspe.iOS
         {
             base.ViewWillAppear(animated);
 
-            View.BackgroundColor = ColorHelper.FromType(ColorType.BackGround);
+            View.BackgroundColor = ColorHelper.FromType(ColorType.SystemBackground);
 
             ClearAllBeforeDrawing();
             SetupView();
@@ -61,7 +61,7 @@ namespace Henspe.iOS
             pagPager.CurrentPageIndicatorTintColor = ColorConst.snlaRed;
             labHeader.Text = LangUtil.Get("Initial.Header");
             labHeader.TextColor = ColorConst.snlaRed;
-            labDescription.TextColor = ColorHelper.FromType(ColorType.Font);
+            labDescription.TextColor = ColorHelper.FromType(ColorType.Label);
             labDescription.Text = string.Empty;
             //  viewAnimation.BackgroundColor = UIColor.FromRGBA(50, 0, 0, 40);
 
