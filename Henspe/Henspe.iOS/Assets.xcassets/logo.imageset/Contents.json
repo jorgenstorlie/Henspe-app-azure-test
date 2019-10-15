@@ -4,6 +4,18 @@
       "idiom" : "universal",
   "filename" : "SNLA_Logo.pdf"
     }
+,
+{
+  "idiom" : "universal",
+"filename" : "SNLA_Logo_White.pdf",
+"appearances": [
+  {
+    "appearance": "luminosity",
+    "value": "dark"
+  }
+]
+}
+
   ],
   "info" : {
     "version" : 1,
@@ -13,3 +25,9 @@
     "preserves-vector-representation" : true
   }
 }
+
+
+
+
+
+

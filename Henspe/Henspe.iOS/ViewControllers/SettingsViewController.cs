@@ -63,7 +63,7 @@ namespace Henspe.iOS
         public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
-       NavigationController.SetNavigationBarHidden(false, false);
+            NavigationController.SetNavigationBarHidden(false, false);
 
             SetupEvents();
             SetupTouchGesture();
@@ -87,7 +87,7 @@ namespace Henspe.iOS
                 observerActivated.Dispose();
 
             if (tapGesture != null)
-                this.View.RemoveGestureRecognizer(tapGesture);
+                View.RemoveGestureRecognizer(tapGesture);
 
             base.ViewWillDisappear(animated);
         }
@@ -97,7 +97,7 @@ namespace Henspe.iOS
             tapGesture = new UITapGestureRecognizer(OnViewContentTouched);
             tapGesture.NumberOfTapsRequired = 1;
             tapGesture.CancelsTouchesInView = false;
-            this.View.AddGestureRecognizer(tapGesture);
+            View.AddGestureRecognizer(tapGesture);
         }
 
         private void OnViewContentTouched()
@@ -128,15 +128,14 @@ namespace Henspe.iOS
         #region navigation bar
         private void SetupNavigationBar()
         {
-       Title = LangUtil.Get("Settings.heading");
+            Title = LangUtil.Get("Settings.heading");
 
-        this.NavigationController.NavigationBar.TitleTextAttributes = new UIStringAttributes()
+            NavigationController.NavigationBar.TitleTextAttributes = new UIStringAttributes()
             {
-                ForegroundColor = UIColor.White,
-            
+                ForegroundColor = ColorHelper.FromType(ColorType.NavigationbarLabel),
             };
 
-            NavigationController.NavigationBar.TintColor = ColorHelper.FromType(ColorType.Icon);
+            NavigationController.NavigationBar.TintColor = ColorHelper.FromType(ColorType.NavigationbarTint);
             View.BackgroundColor = ColorHelper.FromType(ColorType.SystemBackground);
 
             //    NavigationItem.BackBarButtonItem.TintColor = ColorHelper.FromType(ColorType.Image);
@@ -268,23 +267,14 @@ namespace Henspe.iOS
         {
             CGRect headerframe = new CGRect(0, 0, tableView.Bounds.Size.Width, headerHeight);
             UIView headerView = new UIView(headerframe);
-            headerView.BackgroundColor = ColorHelper.FromType(ColorType.SystemGroupedBackground); 
-
-            int lineThickness = 1;
-            CGRect bottomLineframe = new CGRect(0, headerHeight - lineThickness, tableView.Bounds.Size.Width, lineThickness);
-            UIView bottomLine = new UIView(bottomLineframe);
-            bottomLine.BackgroundColor = ColorHelper.FromType(ColorType.HeaderLineBackground); 
-
-            CGRect topLineframe = new CGRect(0, 0, tableView.Bounds.Size.Width, lineThickness);
-            UIView topLine = new UIView(topLineframe);
-            topLine.BackgroundColor = ColorHelper.FromType(ColorType.HeaderLineBackground);
+            headerView.BackgroundColor = ColorHelper.FromType(ColorType.SystemGroupedBackground);
 
             int labelHeight = 20;
 
             CGRect labelframe = new CGRect(15, headerHeight - labelHeight - 2, tableView.Bounds.Size.Width - 10, labelHeight);
             UILabel label = new UILabel(labelframe);
             label.Font = FontConst.fontHeadingTable;
-            label.TextColor = ColorHelper.FromType(ColorType.HeaderText); 
+            label.TextColor = ColorHelper.FromType(ColorType.Label);
 
             if (section == coordinatsSection)
                 label.Text = LangUtil.Get("SettingsViewController.Coordinates.Header").ToUpper();
@@ -297,8 +287,6 @@ namespace Henspe.iOS
             else
                 label.Text = "";
 
-            headerView.AddSubview(topLine);
-            headerView.AddSubview(bottomLine);
             headerView.AddSubview(label);
             return headerView;
         }
@@ -350,13 +338,16 @@ namespace Henspe.iOS
 
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
+            UITableViewCell cell = null;
+
             string cellIdentifier;
             cellIdentifier = GetCellName(indexPath);
 
             if (indexPath.Section == coordinatsSection)
             {
                 SettingsCoordinatesTableCell settingsCoordinatesTableCell = tableView.DequeueReusableCell(cellIdentifier) as SettingsCoordinatesTableCell;
-                settingsCoordinatesTableCell.BackgroundColor = ColorHelper.FromType(ColorType.SystemSecondaryGroupedBackground);
+
+                settingsCoordinatesTableCell.BackgroundColor = ColorHelper.FromType(ColorType.SecondarySystemGroupedBackground);
                 settingsCoordinatesTableCell.LabInfo.TextColor = ColorHelper.FromType(ColorType.Label);
                 settingsCoordinatesTableCell.LabInfo.Text = LangUtil.Get("SettingsViewController.Coordinates.Info");
                 settingsCoordinatesTableCell.LabInfo.Font = FontConst.fontSmall;
@@ -380,9 +371,9 @@ namespace Henspe.iOS
                 settingsCoordinatesTableCell.LabValue.Font = FontConst.fontMediumRegular;
 
 
-                settingsCoordinatesTableCell.BackgroundColor = ColorHelper.FromType(ColorType.EvenRow);
+                settingsCoordinatesTableCell.BackgroundColor = ColorHelper.FromType(ColorType.SecondarySystemGroupedBackground);
 
-                return settingsCoordinatesTableCell;
+                cell = settingsCoordinatesTableCell;
             }
             else if (indexPath.Section == locationSection)
             {
@@ -419,18 +410,18 @@ namespace Henspe.iOS
                 }
                 else
                 {
-                    settingsLocationTableCell.LabInfo.TextColor = ColorHelper.FromType(ColorType.FontLight); 
+                    settingsLocationTableCell.LabInfo.TextColor = ColorHelper.FromType(ColorType.LightText);
                     settingsLocationTableCell.LabInfo.Font = FontConst.fontSmall;
 
-                    settingsLocationTableCell.LabLeft.TextColor = ColorHelper.FromType(ColorType.FontLight);
+                    settingsLocationTableCell.LabLeft.TextColor = ColorHelper.FromType(ColorType.LightText);
                     settingsLocationTableCell.LabLeft.Font = FontConst.fontMediumRegular;
 
-                    settingsLocationTableCell.LabRight.TextColor = ColorHelper.FromType(ColorType.FontLight);
+                    settingsLocationTableCell.LabRight.TextColor = ColorHelper.FromType(ColorType.LightText);
                     settingsLocationTableCell.LabRight.Font = FontConst.fontMediumRegular;
 
                     settingsLocationTableCell.BackgroundColor = ColorHelper.FromType(ColorType.RedBackground);
                 }
-                return settingsLocationTableCell;
+                cell = settingsLocationTableCell;
             }
             else if (indexPath.Section == concentSection)
             {
@@ -446,13 +437,13 @@ namespace Henspe.iOS
 
                     if (UserUtil.Current.consentAgreed == ConsentAgreed.True)
                     {
-                        settingsTopInfoTableCell.BackgroundColor = ColorHelper.FromType(ColorType.SystemSecondaryGroupedBackground);
+                        settingsTopInfoTableCell.BackgroundColor = ColorHelper.FromType(ColorType.SecondarySystemGroupedBackground);
                         settingsTopInfoTableCell.LabInfo.TextColor = ColorHelper.FromType(ColorType.Label);
                     }
                     else
                     {
                         settingsTopInfoTableCell.BackgroundColor = ColorHelper.FromType(ColorType.RedBackground);
-                        settingsTopInfoTableCell.LabInfo.TextColor = ColorHelper.FromType(ColorType.FontLight);
+                        settingsTopInfoTableCell.LabInfo.TextColor = ColorHelper.FromType(ColorType.LightText);
                     }
                 }
 
@@ -471,12 +462,12 @@ namespace Henspe.iOS
                 }
 
                 settingsTopInfoTableCell.LabInfo.Text = text;
-                return settingsTopInfoTableCell;
+                cell = settingsTopInfoTableCell;
             }
             else if (indexPath.Section == informationSection)
             {
                 SettingsInfoTableCell settingsInfoTableCell = tableView.DequeueReusableCell(cellIdentifier) as SettingsInfoTableCell;
-                settingsInfoTableCell.BackgroundColor = ColorHelper.FromType(ColorType.SystemSecondaryGroupedBackground);
+                settingsInfoTableCell.BackgroundColor = ColorHelper.FromType(ColorType.SecondarySystemGroupedBackground);
                 settingsInfoTableCell.LabLabel.TextColor = ColorHelper.FromType(ColorType.Label);
                 settingsInfoTableCell.LabLabel.Font = FontConst.fontLarge;
 
@@ -493,7 +484,7 @@ namespace Henspe.iOS
                     else
                     {
                         settingsInfoTableCell.BackgroundColor = ColorHelper.FromType(ColorType.RedBackground);
-                        settingsInfoTableCell.LabLabel.TextColor = ColorHelper.FromType(ColorType.FontLight);
+                        settingsInfoTableCell.LabLabel.TextColor = ColorHelper.FromType(ColorType.LightText);
                     }
                 }
 
@@ -512,10 +503,22 @@ namespace Henspe.iOS
                 }
 
                 settingsInfoTableCell.LabLabel.Text = text;
-                return settingsInfoTableCell;
+                cell = settingsInfoTableCell;
             }
 
-            return null;
+            int lineThickness = 1;
+            CGRect bottomLineframe = new CGRect(0, cell.Frame.Height - lineThickness, tableView.Bounds.Size.Width, lineThickness);
+            UIView bottomLine = new UIView(bottomLineframe);
+            bottomLine.BackgroundColor = ColorHelper.FromType(ColorType.Separator);
+
+            CGRect topLineframe = new CGRect(0, 0, tableView.Bounds.Size.Width, lineThickness);
+            UIView topLine = new UIView(topLineframe);
+            topLine.BackgroundColor = ColorHelper.FromType(ColorType.Separator);
+
+            cell.AddSubview(bottomLine);
+            cell.AddSubview(topLine);
+
+            return cell;
         }
 
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)

@@ -159,9 +159,9 @@ namespace Henspe.iOS
                 var row = coordinateRows[indexPath.Row];
                 settingsCoordinateFormatTableCell.SetContent(row.Title, row.Sub1, row.Sub2);
 
-                settingsCoordinateFormatTableCell.BackgroundColor = ColorHelper.FromType(ColorType.SystemSecondaryGroupedBackground);
+                settingsCoordinateFormatTableCell.BackgroundColor = ColorHelper.FromType(ColorType.SecondarySystemGroupedBackground);
 
- return settingsCoordinateFormatTableCell;
+                return settingsCoordinateFormatTableCell;
             }
 
             public override void RowSelected(UITableView tableView, NSIndexPath indexPath)

@@ -58,11 +58,13 @@ namespace Henspe.iOS
 
             SetupServicesIfNeeded();
 
+            /*
             var textAttributes = new UITextAttributes();
             textAttributes.TextColor = ColorConst.snlaBlue;
             textAttributes.Font = FontConst.fontMedium;
             UIBarButtonItem.Appearance.SetTitleTextAttributes(textAttributes, UIControlState.Normal);
             UINavigationBar.Appearance.SetTitleTextAttributes(textAttributes);
+            */
 
             StartAppCenter();
 
@@ -147,6 +149,7 @@ namespace Henspe.iOS
 
         private void SetupCustomNavigationBar()
         {
+            /*
             UITextAttributes attributes = new UITextAttributes
             {
                 Font = FontConst.fontHeadingTable,
@@ -157,6 +160,8 @@ namespace Henspe.iOS
             //UIApplication.SharedApplication.SetStatusBarStyle (UIStatusBarStyle.LightContent, false);
 
             UINavigationBar.Appearance.SetTitleTextAttributes(attributes);
+            */
+
         }
 
         public override void OnActivated(UIApplication application)

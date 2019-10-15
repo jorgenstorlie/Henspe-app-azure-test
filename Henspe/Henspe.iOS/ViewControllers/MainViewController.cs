@@ -54,18 +54,21 @@ namespace Henspe.iOS
         {
             // Transparent background
             UIImage emptyImage = new UIImage();
-            this.NavigationController.NavigationBar.Translucent = true;
-            this.NavigationController.NavigationBar.SetBackgroundImage(emptyImage, UIBarMetrics.Default);
-            this.NavigationController.NavigationBar.ShadowImage = emptyImage;
+            NavigationController.NavigationBar.Translucent = true;
+            NavigationController.NavigationBar.SetBackgroundImage(emptyImage, UIBarMetrics.Default);
+            NavigationController.NavigationBar.ShadowImage = emptyImage;
 
             UINavigationBar navigationBar = NavigationController.NavigationBar;
             logoImageView = new UIImageView(UIImage.FromBundle("logo"));
+
+       //     logoImageView.ContentMode = UIViewContentMode.ScaleAspectFit;
+
             double imageHeight = navigationBar.Bounds.Height * 0.8;
             double computedImageWidth = (imageHeight * logoImageView.Image.CGImage.Width) / logoImageView.Image.CGImage.Height;
             logoImageView.Frame = new CGRect((navigationBar.Bounds.Width / 2) - (computedImageWidth / 2), (navigationBar.Bounds.Height / 2) - (imageHeight / 2), computedImageWidth, imageHeight);
             navigationBar.AddSubview(logoImageView);
 
-            NavigationItem.RightBarButtonItem.TintColor = ColorHelper.FromType(ColorType.Icon);
+            NavigationItem.RightBarButtonItem.TintColor =  ColorHelper.FromType(ColorType.NavigationbarTint);
         }
 
         private void OnSettingsClicked()
@@ -87,7 +90,7 @@ namespace Henspe.iOS
         {
             base.ViewWillAppear(animated);
             SetupNavigationBar();
-            btnConsent.SetTitleColor(ColorConst.snlaBlue, UIControlState.Normal);
+     //       btnConsent.SetTitleColor(ColorConst.snlaBlue, UIControlState.Normal);
             btnConsent.Layer.BorderColor = btnConsent.TitleColor(UIControlState.Normal).CGColor;
             btnConsent.Layer.BorderWidth = 1;
             btnConsent.Layer.CornerRadius = 5.0f;
@@ -179,7 +182,6 @@ namespace Henspe.iOS
                 this.PerformSegue("segueSettings", this);
             });
         }
-
 
         public void RowSelected(NSIndexPath indexPath, bool selected)
         {
@@ -285,11 +287,8 @@ namespace Henspe.iOS
             }
         }
 
-
-
         public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
         {
-
             const string normalCellIdentifier = "MainNormalCell";
             const string positionIdentifier = "MainLocationCell";
             const string addressIdentifier = "AddressCell";
@@ -333,7 +332,6 @@ namespace Henspe.iOS
 
             var cell = tableView.DequeueReusableCell(cellIdenifier);
             return cell.Bounds.Height;
-
         }
 
         public override nfloat GetHeightForHeader(UITableView tableView, nint section)
@@ -388,7 +386,6 @@ namespace Henspe.iOS
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
             UITableViewCell cell = null;
-
             const string normalCellIdentifier = "MainNormalCell";
             const string positionIdentifier = "MainLocationCell";
             const string addressIdentifier = "AddressCell";

@@ -48,7 +48,7 @@ namespace Henspe.iOS
         {
             actIndicator.Hidden = false;
 
-            this.View.BackgroundColor = ColorConst.snlaBackground;
+            this.View.BackgroundColor = UIColor.Orange;
 
             webView.ShouldStartLoad = HandleShouldStartLoad;
             webView.Opaque = false;

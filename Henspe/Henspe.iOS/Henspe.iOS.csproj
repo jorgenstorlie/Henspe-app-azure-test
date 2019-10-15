@@ -222,13 +222,6 @@
     <ImageAsset Include="Assets.xcassets\logo.imageset\SNLA_Logo.pdf" />
     <ImageAsset Include="Assets.xcassets\ic_settings.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\ic_settings.imageset\ic_gear.pdf" />
-    <ImageAsset Include="Assets.xcassets\OddRowColor.colorset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\EvenRowColor.colorset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\RedBackground.colorset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\FontLight.colorset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\HeaderText.colorset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\HeaderLineBackground.colorset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ToolbarImage.colorset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\SNLALink.colorset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\SNLASystemBackground.colorset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\SNLALabel.colorset\Contents.json" />
@@ -236,6 +229,15 @@
     <ImageAsset Include="Assets.xcassets\SNLASecondarySystemGroupedBackground.colorset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\SNLAIcon.colorset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\SNLASeparator.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\logo.imageset\SNLA_Logo_White.pdf" />
+    <ImageAsset Include="Assets.xcassets\logo_text.imageset\SNLA_logo_midtstilt_White.pdf" />
+    <ImageAsset Include="Assets.xcassets\SNLANavigationbarTint.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SNLASecondarySystemBackground.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SNLANavigationbarLabel.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SNLALightText.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SNLADarkText.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SNLARedBackground.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SNLASecondaryRedBackground.colorset\Contents.json" />
  </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -278,18 +280,13 @@
     <Folder Include="Assets.xcassets\LightAndDarkHeaderColor.imageset\" />
     <Folder Include="Assets.xcassets\LightAndDarkHeaderColor.colorset\" />
     <Folder Include="Assets.xcassets\ImageColor.colorset\" />
-    <Folder Include="Assets.xcassets\OddRowColor.colorset\" />
-    <Folder Include="Assets.xcassets\EvenRowColor.colorset\" />
     <Folder Include="Assets.xcassets\EvenRowFontColor.colorset\" />
     <Folder Include="Assets.xcassets\FontColor.colorset\" />
     <Folder Include="Assets.xcassets\BackgroundColor.colorset\" />
     <Folder Include="Assets.xcassets\TextButton.colorset\" />
-    <Folder Include="Assets.xcassets\RedBackground.colorset\" />
-    <Folder Include="Assets.xcassets\FontLight.colorset\" />
     <Folder Include="Assets.xcassets\HeaderText.colorset\" />
     <Folder Include="Assets.xcassets\HeaderLineBackground.colorset\" />
     <Folder Include="Assets.xcassets\TableSeparator.colorset\" />
-    <Folder Include="Assets.xcassets\ToolbarImage.colorset\" />
     <Folder Include="Assets.xcassets\GroupedBackgroundColor.colorset\" />
     <Folder Include="Assets.xcassets\SecondaryGroupedBackgroundColor.colorset\" />
     <Folder Include="Assets.xcassets\SNLALink.colorset\" />
@@ -300,6 +297,14 @@
     <Folder Include="Assets.xcassets\SNLASecondarySystemGroupedBackground.colorset\" />
     <Folder Include="Assets.xcassets\SNLAIcon.colorset\" />
     <Folder Include="Assets.xcassets\SNLASeparator.colorset\" />
+    <Folder Include="Assets.xcassets\SNLANavigationbarTint.colorset\" />
+    <Folder Include="Assets.xcassets\SNLASecondarySystemBackground22.colorset\" />
+    <Folder Include="Assets.xcassets\SNLASecondarySystemBackground.colorset\" />
+    <Folder Include="Assets.xcassets\SNLANavigationbarLabel.colorset\" />
+    <Folder Include="Assets.xcassets\SNLALightText.colorset\" />
+    <Folder Include="Assets.xcassets\SNLADarkText.colorset\" />
+    <Folder Include="Assets.xcassets\SNLARedBackground.colorset\" />
+    <Folder Include="Assets.xcassets\SNLASecondaryRedBackground.colorset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -315,7 +320,6 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="AppModel\GPSObject.cs" />
-    <Compile Include="Const\ColorConst.cs" />
     <Compile Include="Const\EventConst.cs" />
     <Compile Include="Const\FontConst.cs" />
     <Compile Include="Const\PositionTypeConst.cs" />

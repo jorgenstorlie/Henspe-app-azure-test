@@ -4,6 +4,19 @@
       "idiom" : "universal",
   "filename" : "SNLA_logo_midtstilt.pdf"
     }
+
+    ,
+{
+  "idiom" : "universal",
+"filename" : "SNLA_logo_midtstilt_White.pdf",
+"appearances": [
+  {
+    "appearance": "luminosity",
+    "value": "dark"
+  }
+]
+}
+
   ],
   "info" : {
     "version" : 1,

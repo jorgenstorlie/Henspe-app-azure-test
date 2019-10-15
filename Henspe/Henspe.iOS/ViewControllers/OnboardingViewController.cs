@@ -56,24 +56,24 @@ namespace Henspe.iOS
 
         void SetupView()
         {
-            pagPager.PageIndicatorTintColor = ColorConst.grayIndicator;
+            pagPager.PageIndicatorTintColor = ColorHelper.FromType(ColorType.SecondaryRedBackground);
             pagPager.UserInteractionEnabled = false;
-            pagPager.CurrentPageIndicatorTintColor = ColorConst.snlaRed;
+            pagPager.CurrentPageIndicatorTintColor = ColorHelper.FromType(ColorType.RedBackground); 
             labHeader.Text = LangUtil.Get("Initial.Header");
-            labHeader.TextColor = ColorConst.snlaRed;
+            labHeader.TextColor = ColorHelper.FromType(ColorType.RedBackground);
             labDescription.TextColor = ColorHelper.FromType(ColorType.Label);
             labDescription.Text = string.Empty;
             //  viewAnimation.BackgroundColor = UIColor.FromRGBA(50, 0, 0, 40);
 
             if (UserUtil.Current.onboardingCompleted == false)
             {
-                btnSkip.SetTitleColor(ColorConst.snlaRed, UIControlState.Normal);
+                btnSkip.SetTitleColor(ColorHelper.FromType(ColorType.RedBackground) ,UIControlState.Normal);
                 btnSkip.SetTitle(LangUtil.Get("Initial.Skip"), UIControlState.Normal);
                 btnSkip.Hidden = false;
 
                 pagPager.Pages = totalPages;
 
-                btnNext.SetTitleColor(ColorConst.snlaRed, UIControlState.Normal);
+                btnNext.SetTitleColor(ColorHelper.FromType(ColorType.RedBackground), UIControlState.Normal);
                 btnNext.SetTitle(LangUtil.Get("Initial.Next") + " >", UIControlState.Normal);
             }
             else
