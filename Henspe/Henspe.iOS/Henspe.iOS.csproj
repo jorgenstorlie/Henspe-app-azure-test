@@ -404,6 +404,7 @@
     <BundleResource Include="Base.lproj\InfoPlist.strings" />
     <BundleResource Include="Base.lproj\Localizable.strings" />
     <BundleResource Include="Resources\intro.json" />
+    <BundleResource Include="Resources\introdm.json" />
   </ItemGroup>
   <Import Project="..\..\..\SNLA-app\SNLA.iOS\SNLA.iOS.projitems" Label="Shared" Condition="Exists('..\..\..\SNLA-app\SNLA.iOS\SNLA.iOS.projitems')" />
   <Import Project="..\..\..\SNLA-app\SNLA.Core\SNLA.Core.projitems" Label="Shared" Condition="Exists('..\..\..\SNLA-app\SNLA.Core\SNLA.Core.projitems')" />

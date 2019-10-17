@@ -1,7 +1,6 @@
 ﻿using System;
 using Airbnb.Lottie;
 using Foundation;
-using Henspe.iOS.Const;
 using SNLA.Core.Util;
 using SNLA.iOS.Util;
 using UIKit;
@@ -28,15 +27,24 @@ namespace Henspe.iOS
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            animation = LOTAnimationView.AnimationNamed("intro");
-            this.viewAnimation.AddSubview(animation);
+
+            var AnimationNamed = "intro";
+            if (UIDevice.CurrentDevice.CheckSystemVersion(12, 0))
+            {
+                var userInterfaceStyle = TraitCollection.UserInterfaceStyle;
+                if (userInterfaceStyle == UIUserInterfaceStyle.Dark)
+                    AnimationNamed = "introdm";
+            }
+
+            animation = LOTAnimationView.AnimationNamed(AnimationNamed);
+            viewAnimation.AddSubview(animation);
         }
 
         public override void ViewDidAppear(bool animated)
         {
             base.ViewDidAppear(animated);
             animation.ContentMode = UIViewContentMode.ScaleAspectFit;
-            animation.Frame = this.viewAnimation.Bounds;
+            animation.Frame = viewAnimation.Bounds;
         }
         public override void ViewWillAppear(bool animated)
         {
@@ -58,7 +66,7 @@ namespace Henspe.iOS
         {
             pagPager.PageIndicatorTintColor = ColorHelper.FromType(ColorType.SecondaryRedBackground);
             pagPager.UserInteractionEnabled = false;
-            pagPager.CurrentPageIndicatorTintColor = ColorHelper.FromType(ColorType.RedBackground); 
+            pagPager.CurrentPageIndicatorTintColor = ColorHelper.FromType(ColorType.RedBackground);
             labHeader.Text = LangUtil.Get("Initial.Header");
             labHeader.TextColor = ColorHelper.FromType(ColorType.RedBackground);
             labDescription.TextColor = ColorHelper.FromType(ColorType.Label);
@@ -67,7 +75,7 @@ namespace Henspe.iOS
 
             if (UserUtil.Current.onboardingCompleted == false)
             {
-                btnSkip.SetTitleColor(ColorHelper.FromType(ColorType.RedBackground) ,UIControlState.Normal);
+                btnSkip.SetTitleColor(ColorHelper.FromType(ColorType.RedBackground), UIControlState.Normal);
                 btnSkip.SetTitle(LangUtil.Get("Initial.Skip"), UIControlState.Normal);
                 btnSkip.Hidden = false;
 
@@ -107,7 +115,7 @@ namespace Henspe.iOS
             int pages = totalPages;
             pagPager.Pages = pages;
 
-            var view = ChangeAnimationView(0);
+            //     var view = ChangeAnimationView(0);
         }
 
         private LOTAnimationView ChangeAnimationView(int index)

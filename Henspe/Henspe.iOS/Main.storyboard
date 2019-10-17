@@ -375,7 +375,7 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="uLh-bG-Rvw">
-                                <rect key="frame" x="313.5" y="0.0" width="85.000000000000114" height="47"/>
+                                <rect key="frame" x="313.5" y="0.0" width="85" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="C9D-XC-VMy"/>
                                     <constraint firstAttribute="height" constant="47" id="MId-GI-7M1"/>
@@ -391,7 +391,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.97254901960784312" green="0.96470588235294119" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="SNLASystemBackground"/>
                         <constraints>
                             <constraint firstItem="SJH-hk-fxF" firstAttribute="centerX" secondItem="pfI-bs-CBR" secondAttribute="centerX" id="2jC-Tr-RdG"/>
                             <constraint firstItem="nZZ-va-3Xp" firstAttribute="top" secondItem="7eI-B5-8dI" secondAttribute="bottom" constant="9" id="6br-5L-5Al"/>
@@ -870,7 +870,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <color key="backgroundColor" name="SNLASystemBackground"/>
                         <constraints>
                             <constraint firstItem="LmN-ZC-1tP" firstAttribute="top" secondItem="NEb-bq-FDG" secondAttribute="top" id="8hN-Yh-UNc"/>
                             <constraint firstItem="LmN-ZC-1tP" firstAttribute="leading" secondItem="NEb-bq-FDG" secondAttribute="leading" id="Rur-pS-ApC"/>
@@ -901,7 +901,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_text" translatesAutoresizingMaskIntoConstraints="NO" id="bxb-Aa-lkC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="bxb-Aa-lkC">
                                 <rect key="frame" x="284" y="412" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Bx1-8F-8qj"/>
@@ -927,8 +927,7 @@
     </scenes>
     <resources>
         <image name="ic_settings" width="18" height="18"/>
-        <image name="logo" width="499" height="248"/>
-        <image name="logo_text" width="500" height="366"/>
+        <image name="logo" width="149" height="74"/>
         <namedColor name="BackgroundColor">
             <color red="0.97254997491836548" green="0.95293998718261719" blue="0.94510000944137573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -941,7 +940,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="CMK-0E-kTS"/>
-        <segue reference="SI7-iJ-o9c"/>
+        <segue reference="EMM-9T-6Qk"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.12233110517263412" green="0.091116435825824738" blue="0.27446338534355164" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

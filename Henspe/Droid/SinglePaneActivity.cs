@@ -30,11 +30,11 @@ namespace Henspe.Droid
         {
         }
 
-        protected override void OnCreate(Bundle bundle)
+        protected override void OnCreate(Bundle savedInstanceState)
         {
             SetTheme(Resource.Style.AppThemeDarkMaterial);
 
-            base.OnCreate(bundle);
+            base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.Main);
 
@@ -58,7 +58,7 @@ namespace Henspe.Droid
                 Title = Intent.GetStringExtra(Intent.ExtraTitle);
             }
 
-            if (bundle == null)
+            if (savedInstanceState == null)
             {
                 _mFragment = OnCreatePane();
                 //		_mFragment.Arguments = (IntentToFragmentArguments(Intent));

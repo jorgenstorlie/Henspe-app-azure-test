@@ -17,6 +17,7 @@ namespace Henspe.iOS
         {
             this.BackgroundColor = UIColor.Clear;
 
+   
             imgImage.Image = UIImage.FromBundle("ic_posisjon").ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
             imgImage.TintColor = ColorHelper.FromType(ColorType.Icon);
 
