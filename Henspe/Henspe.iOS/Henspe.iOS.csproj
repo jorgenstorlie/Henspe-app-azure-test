@@ -58,14 +58,14 @@
     <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;HENSPE;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer: Jørgen Storlie (97DJ5826Y2)</CodesignKey>
+    <CodesignKey>iPhone Distribution</CodesignKey>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
     <MtouchLink>Full</MtouchLink>
     <MtouchArch>x86_64</MtouchArch>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <MtouchVerbosity></MtouchVerbosity>
 
-    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <CodesignProvision>HenspeAppStore</CodesignProvision>
     <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
