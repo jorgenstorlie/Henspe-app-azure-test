@@ -26,8 +26,8 @@ namespace Henspe.iOS
             imgImageView.Image = UIImage.FromBundle("ic_adresse").ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
             imgImageView.TintColor = ColorHelper.FromType(ColorType.Icon);
 
-            labAddressLine1.TextColor = ColorHelper.FromType(ColorType.Label);
-            labAddressLine2.TextColor = ColorHelper.FromType(ColorType.Label);
+            labAddressLine1.TextColor = ColorHelper.FromType(ColorType.Link);
+            labAddressLine2.TextColor = ColorHelper.FromType(ColorType.Link);
 
             labAddressLine1.Font = FontConst.fontLarge;
             labAddressLine2.Font = FontConst.fontLarge;

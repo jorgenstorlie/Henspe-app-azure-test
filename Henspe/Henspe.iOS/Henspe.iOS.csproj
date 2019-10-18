@@ -239,6 +239,7 @@
     <ImageAsset Include="Assets.xcassets\SNLARedBackground.colorset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\SNLASecondaryRedBackground.colorset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\SNLANavigationbar.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SNLALogoColor.colorset\Contents.json" />
  </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -307,6 +308,7 @@
     <Folder Include="Assets.xcassets\SNLARedBackground.colorset\" />
     <Folder Include="Assets.xcassets\SNLASecondaryRedBackground.colorset\" />
     <Folder Include="Assets.xcassets\SNLANavigationbar.colorset\" />
+    <Folder Include="Assets.xcassets\SNLALogoColor.colorset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />

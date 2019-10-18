@@ -55,25 +55,25 @@ namespace Henspe.iOS
             // Transparent background
             UIImage emptyImage = new UIImage();
 
- NavigationController.NavigationBar.Translucent = true;
+            NavigationController.NavigationBar.Translucent = true;
 
             NavigationController.NavigationBar.BarTintColor = ColorHelper.FromType(ColorType.Navigationbar);
             //  NavigationController.NavigationBar.SetBackgroundImage(emptyImage, UIBarMetrics.Default);
             NavigationController.NavigationBar.ShadowImage = emptyImage;
             NavigationController.NavigationBar.BackgroundColor = UIColor.Red;
- 
 
             UINavigationBar navigationBar = NavigationController.NavigationBar;
-            logoImageView = new UIImageView(UIImage.FromBundle("logo"));
+            logoImageView = new UIImageView(UIImage.FromBundle("logo").ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate));
+            logoImageView.TintColor = ColorHelper.FromType(ColorType.Icon);
 
-       //     logoImageView.ContentMode = UIViewContentMode.ScaleAspectFit;
+            //     logoImageView.ContentMode = UIViewContentMode.ScaleAspectFit;
 
             double imageHeight = navigationBar.Bounds.Height * 0.7;
             double computedImageWidth = (imageHeight * logoImageView.Image.CGImage.Width) / logoImageView.Image.CGImage.Height;
             logoImageView.Frame = new CGRect((navigationBar.Bounds.Width / 2) - (computedImageWidth / 2), (navigationBar.Bounds.Height / 2) - (imageHeight / 2), computedImageWidth, imageHeight);
             navigationBar.AddSubview(logoImageView);
 
-            NavigationItem.RightBarButtonItem.TintColor =  ColorHelper.FromType(ColorType.NavigationbarTint);
+            NavigationItem.RightBarButtonItem.TintColor = ColorHelper.FromType(ColorType.NavigationbarTint);
         }
 
         private void OnSettingsClicked()
@@ -95,7 +95,7 @@ namespace Henspe.iOS
         {
             base.ViewWillAppear(animated);
             SetupNavigationBar();
-     //       btnConsent.SetTitleColor(ColorConst.snlaBlue, UIControlState.Normal);
+            //       btnConsent.SetTitleColor(ColorConst.snlaBlue, UIControlState.Normal);
             btnConsent.Layer.BorderColor = btnConsent.TitleColor(UIControlState.Normal).CGColor;
             btnConsent.Layer.BorderWidth = 1;
             btnConsent.Layer.CornerRadius = 5.0f;

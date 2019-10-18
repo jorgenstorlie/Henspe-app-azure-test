@@ -128,7 +128,6 @@ namespace Henspe.iOS
             else
                 ShowActivityIndicatorForNext(NextType.Next);
 
-            /*
             if (index != 3)
             {
                 InvokeOnMainThread(() =>
@@ -140,9 +139,8 @@ namespace Henspe.iOS
                     View.LayoutSubviews(); // <- Dette er moder-objektet til txtEmail
                 });
             });
-           
+
             }
-             */
 
             switch (index)
             {
@@ -185,17 +183,15 @@ namespace Henspe.iOS
                             break;
                     }
 
-                    /*
                     InvokeOnMainThread(() =>
-                    {
-                        labDescription.Alpha = 0.0f;
-                        UIView.AnimateAsync(0.2, () =>
-                        {
-                            labDescription.Alpha = 1.0f;
-                            View.LayoutSubviews(); // <- Dette er moder-objektet til txtEmail
+                                 {
+                                     labDescription.Alpha = 0.0f;
+                                     UIView.AnimateAsync(0.2, () =>
+                                     {
+                                         labDescription.Alpha = 1.0f;
+                                         View.LayoutSubviews(); // <- Dette er moder-objektet til txtEmail
                         });
-                    });
-                    */
+                                 });
                 }
             });
 
@@ -245,7 +241,7 @@ namespace Henspe.iOS
         {
             var view = ChangeAnimationView(gotoPage);
             pagPager.CurrentPage = gotoPage;
-            view.PlayAsync();
+            //      view.PlayAsync();
         }
 
         private void TellThatUserNeedNetworkAtFirstRun()
