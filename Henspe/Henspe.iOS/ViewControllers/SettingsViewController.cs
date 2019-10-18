@@ -130,6 +130,7 @@ namespace Henspe.iOS
         {
             Title = LangUtil.Get("Settings.heading");
 
+        NavigationController.NavigationBar.Translucent = true;
             NavigationController.NavigationBar.TitleTextAttributes = new UIStringAttributes()
             {
                 ForegroundColor = ColorHelper.FromType(ColorType.NavigationbarLabel),
@@ -164,6 +165,9 @@ namespace Henspe.iOS
             myTableView.Source = settingsViewSource;
             myTableView.BackgroundColor = UIColor.Clear;
             myTableView.SeparatorColor = UIColor.Clear;
+
+            myTableView.ContentInset  = new UIEdgeInsets(0f, 0f, 0f, 0f);
+
         }
 
         public void RowSelected(NSIndexPath indexPath, bool selected)
@@ -406,7 +410,7 @@ namespace Henspe.iOS
                     settingsLocationTableCell.LabRight.TextColor = ColorHelper.FromType(ColorType.Label);
                     settingsLocationTableCell.LabRight.Font = FontConst.fontMediumRegular;
 
-                    settingsLocationTableCell.BackgroundColor = ColorHelper.FromType(ColorType.EvenRow);
+                    settingsLocationTableCell.BackgroundColor = ColorHelper.FromType(ColorType.SecondarySystemGroupedBackground);
                 }
                 else
                 {

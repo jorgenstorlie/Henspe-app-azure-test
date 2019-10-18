@@ -54,9 +54,14 @@ namespace Henspe.iOS
         {
             // Transparent background
             UIImage emptyImage = new UIImage();
-            NavigationController.NavigationBar.Translucent = true;
-            NavigationController.NavigationBar.SetBackgroundImage(emptyImage, UIBarMetrics.Default);
+
+ NavigationController.NavigationBar.Translucent = true;
+
+            NavigationController.NavigationBar.BarTintColor = ColorHelper.FromType(ColorType.Navigationbar);
+            //  NavigationController.NavigationBar.SetBackgroundImage(emptyImage, UIBarMetrics.Default);
             NavigationController.NavigationBar.ShadowImage = emptyImage;
+            NavigationController.NavigationBar.BackgroundColor = UIColor.Red;
+ 
 
             UINavigationBar navigationBar = NavigationController.NavigationBar;
             logoImageView = new UIImageView(UIImage.FromBundle("logo"));
