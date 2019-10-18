@@ -82,7 +82,7 @@ namespace Henspe.iOS
                 pagPager.Pages = totalPages;
 
                 btnNext.SetTitleColor(ColorHelper.FromType(ColorType.RedBackground), UIControlState.Normal);
-                btnNext.SetTitle(LangUtil.Get("Initial.Next") + " >", UIControlState.Normal);
+                btnNext.SetTitle(LangUtil.Get("Initial.Next") + "", UIControlState.Normal);
             }
             else
             {
@@ -101,7 +101,7 @@ namespace Henspe.iOS
             if (nextType == NextType.Next)
             {
                 btnSkip.Hidden = false;
-                btnNext.SetTitle(LangUtil.Get("Initial.Next") + " >", UIControlState.Normal);
+                btnNext.SetTitle(LangUtil.Get("Initial.Next") + "", UIControlState.Normal);
             }
             else if (nextType == NextType.Finished)
             {
@@ -115,7 +115,7 @@ namespace Henspe.iOS
             int pages = totalPages;
             pagPager.Pages = pages;
 
-            //     var view = ChangeAnimationView(0);
+            var view = ChangeAnimationView(0);
         }
 
         private LOTAnimationView ChangeAnimationView(int index)
@@ -128,6 +128,7 @@ namespace Henspe.iOS
             else
                 ShowActivityIndicatorForNext(NextType.Next);
 
+            /*
             if (index != 3)
             {
                 InvokeOnMainThread(() =>
@@ -139,7 +140,10 @@ namespace Henspe.iOS
                     View.LayoutSubviews(); // <- Dette er moder-objektet til txtEmail
                 });
             });
+           
             }
+             */
+
             switch (index)
             {
                 case 0:
@@ -181,6 +185,7 @@ namespace Henspe.iOS
                             break;
                     }
 
+                    /*
                     InvokeOnMainThread(() =>
                     {
                         labDescription.Alpha = 0.0f;
@@ -190,6 +195,7 @@ namespace Henspe.iOS
                             View.LayoutSubviews(); // <- Dette er moder-objektet til txtEmail
                         });
                     });
+                    */
                 }
             });
 

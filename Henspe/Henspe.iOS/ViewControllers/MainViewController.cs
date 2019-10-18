@@ -68,7 +68,7 @@ namespace Henspe.iOS
 
        //     logoImageView.ContentMode = UIViewContentMode.ScaleAspectFit;
 
-            double imageHeight = navigationBar.Bounds.Height * 0.8;
+            double imageHeight = navigationBar.Bounds.Height * 0.7;
             double computedImageWidth = (imageHeight * logoImageView.Image.CGImage.Width) / logoImageView.Image.CGImage.Height;
             logoImageView.Frame = new CGRect((navigationBar.Bounds.Width / 2) - (computedImageWidth / 2), (navigationBar.Bounds.Height / 2) - (imageHeight / 2), computedImageWidth, imageHeight);
             navigationBar.AddSubview(logoImageView);
