@@ -25,7 +25,7 @@ namespace Henspe.iOS
 
             this.Title = LangUtil.Get("SettingsViewController.Coordinates.Format.Title");
 
-            View.BackgroundColor = ColorHelper.FromType(ColorType.SystemBackground);
+            View.BackgroundColor = ColorHelper.FromType(ColorType.SystemGroupedBackground);
 
             table.BackgroundColor = UIColor.Clear;
 

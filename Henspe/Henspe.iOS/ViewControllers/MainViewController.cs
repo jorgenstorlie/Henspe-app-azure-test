@@ -63,8 +63,20 @@ namespace Henspe.iOS
             NavigationController.NavigationBar.BackgroundColor = UIColor.Red;
 
             UINavigationBar navigationBar = NavigationController.NavigationBar;
-            logoImageView = new UIImageView(UIImage.FromBundle("logo").ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate));
-            logoImageView.TintColor = ColorHelper.FromType(ColorType.Icon);
+
+            if (UIDevice.CurrentDevice.CheckSystemVersion(12, 0))
+            {
+                var userInterfaceStyle = TraitCollection.UserInterfaceStyle;
+                if (userInterfaceStyle == UIUserInterfaceStyle.Dark)
+                {
+                    logoImageView = new UIImageView(UIImage.FromBundle("logo").ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate));
+                    logoImageView.TintColor = ColorHelper.FromType(ColorType.Logo);
+                }
+                else
+                {
+                    logoImageView = new UIImageView(UIImage.FromBundle("logo"));
+                }
+            }
 
             //     logoImageView.ContentMode = UIViewContentMode.ScaleAspectFit;
 

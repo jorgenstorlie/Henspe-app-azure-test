@@ -813,7 +813,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dette er en test på en del tekst bla bla bla bla bla bla og bla bla bla bla bla." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Di-Db-Mxf">
-                                                    <rect key="frame" x="16" y="11" width="670" height="33"/>
+                                                    <rect key="frame" x="11" y="11" width="675" height="33"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33" id="m8G-R8-4MD"/>
                                                     </constraints>
@@ -829,7 +829,7 @@
                                                 <constraint firstItem="2Di-Db-Mxf" firstAttribute="top" secondItem="kxT-ZR-8pa" secondAttribute="top" constant="11" id="W2A-qZ-IvW"/>
                                                 <constraint firstItem="u5j-uy-c94" firstAttribute="leading" secondItem="xed-UK-ddE" secondAttribute="trailing" constant="10" id="cJy-nW-Zpy"/>
                                                 <constraint firstItem="xed-UK-ddE" firstAttribute="top" secondItem="2Di-Db-Mxf" secondAttribute="bottom" constant="10" id="qbD-2D-moA"/>
-                                                <constraint firstItem="2Di-Db-Mxf" firstAttribute="leading" secondItem="kxT-ZR-8pa" secondAttribute="leading" constant="16" id="rgk-3e-I6c"/>
+                                                <constraint firstItem="2Di-Db-Mxf" firstAttribute="leading" secondItem="kxT-ZR-8pa" secondAttribute="leadingMargin" constant="-4" id="rgk-3e-I6c"/>
                                                 <constraint firstAttribute="trailing" secondItem="u5j-uy-c94" secondAttribute="trailing" constant="7" id="zBR-66-fHy"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -902,7 +902,6 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="bxb-Aa-lkC">
                                 <rect key="frame" x="284" y="412" width="200" height="200"/>
-                                <color key="tintColor" name="SNLALogoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Bx1-8F-8qj"/>
                                     <constraint firstAttribute="height" constant="200" id="zaq-hW-VDN"/>
@@ -940,7 +939,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="CMK-0E-kTS"/>
-        <segue reference="EMM-9T-6Qk"/>
+        <segue reference="SI7-iJ-o9c"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.12233110517263412" green="0.091116435825824738" blue="0.27446338534355164" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

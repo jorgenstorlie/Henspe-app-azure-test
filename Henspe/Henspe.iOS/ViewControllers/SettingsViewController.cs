@@ -130,7 +130,7 @@ namespace Henspe.iOS
         {
             Title = LangUtil.Get("Settings.heading");
 
-        NavigationController.NavigationBar.Translucent = true;
+            NavigationController.NavigationBar.Translucent = true;
             NavigationController.NavigationBar.TitleTextAttributes = new UIStringAttributes()
             {
                 ForegroundColor = ColorHelper.FromType(ColorType.NavigationbarLabel),
@@ -166,7 +166,7 @@ namespace Henspe.iOS
             myTableView.BackgroundColor = UIColor.Clear;
             myTableView.SeparatorColor = UIColor.Clear;
 
-            myTableView.ContentInset  = new UIEdgeInsets(0f, 0f, 0f, 0f);
+            myTableView.ContentInset = new UIEdgeInsets(0f, 0f, 0f, 0f);
 
         }
 
@@ -275,7 +275,7 @@ namespace Henspe.iOS
 
             int labelHeight = 20;
 
-            CGRect labelframe = new CGRect(15, headerHeight - labelHeight - 2, tableView.Bounds.Size.Width - 10, labelHeight);
+            CGRect labelframe = new CGRect(12, headerHeight - labelHeight - 2, tableView.Bounds.Size.Width - 10, labelHeight);
             UILabel label = new UILabel(labelframe);
             label.Font = FontConst.fontHeadingTable;
             label.TextColor = ColorHelper.FromType(ColorType.Label);
