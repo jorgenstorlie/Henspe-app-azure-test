@@ -6,8 +6,6 @@
 	<string>no.norskluftambulanse.henspe</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.6</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Appen trenger tilgang til posisjon for å vise den</string>
 	<key>MinimumOSVersion</key>
 	<string>11.0</string>
 	<key>UIDeviceFamily</key>
@@ -38,19 +36,11 @@
 	</array>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Montserrat-Medium.ttf</string>
-		<string>Montserrat-Regular.ttf</string>
-		<string>Montserrat-Light.ttf</string>
-		<string>Montserrat-Thin.ttf</string>
-		<string>Montserrat-ExtraLight.ttf</string>
-	</array>
 	<key>CFBundleName</key>
 	<string>HENSPE</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>CFBundleVersion</key>
-	<string>13</string>
+	<string>14</string>
 </dict>
 </plist>

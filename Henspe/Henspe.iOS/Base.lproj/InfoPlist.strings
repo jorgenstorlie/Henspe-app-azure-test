@@ -1,2 +1,5 @@
 "NSLocationUsageDescription" = "Appen trenger dette for å kunne vise posisjonen din og nærmeste adresse. Stedet blir ikke lagret eller sendt.";
 "NSLocationWhenInUseUsageDescription" = "Appen trenger dette for å kunne vise posisjonen din og nærmeste adresse. Stedet blir ikke lagret eller sendt.";
+"NSLocationAlwaysUsageDescription" = "Appen trenger dette for å kunne vise posisjonen din og nærmeste adresse. Stedet blir ikke lagret eller sendt.";
+
+ 
