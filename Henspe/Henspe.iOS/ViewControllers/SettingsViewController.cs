@@ -130,7 +130,7 @@ namespace Henspe.iOS
         {
             Title = LangUtil.Get("Settings.heading");
 
-            NavigationController.NavigationBar.Translucent = true;
+            NavigationController.NavigationBar.Translucent = false;
             NavigationController.NavigationBar.TitleTextAttributes = new UIStringAttributes()
             {
                 ForegroundColor = ColorHelper.FromType(ColorType.NavigationbarLabel),
