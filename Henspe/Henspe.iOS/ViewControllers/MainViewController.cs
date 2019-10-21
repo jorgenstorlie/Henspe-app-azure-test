@@ -55,7 +55,7 @@ namespace Henspe.iOS
             // Transparent background
             UIImage emptyImage = new UIImage();
 
-            NavigationController.NavigationBar.Translucent = true;
+            //    NavigationController.NavigationBar.Translucent = true;
 
             NavigationController.NavigationBar.BarTintColor = ColorHelper.FromType(ColorType.Navigationbar);
             //  NavigationController.NavigationBar.SetBackgroundImage(emptyImage, UIBarMetrics.Default);
@@ -204,7 +204,6 @@ namespace Henspe.iOS
         {
             if (indexPath.Section == MainListTableViewSource.exactPostitionSection && indexPath.Row == 0)
             {
-
                 if (AppDelegate.current.locationManager.locationManager.Location != null)
                 {
                     var loc = AppDelegate.current.locationManager.gpsCurrentPositionObject;

@@ -147,16 +147,16 @@
       <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="SQLitePCLRaw.core">
-      <HintPath>..\packages\SQLitePCLRaw.core.2.0.2-pre20191003102319\lib\netstandard2.0\SQLitePCLRaw.core.dll</HintPath>
+      <HintPath>..\packages\SQLitePCLRaw.core.2.0.2-pre20191018090318\lib\netstandard2.0\SQLitePCLRaw.core.dll</HintPath>
     </Reference>
     <Reference Include="SQLitePCLRaw.provider.dynamic_cdecl">
-      <HintPath>..\packages\SQLitePCLRaw.provider.dynamic_cdecl.2.0.2-pre20191003102319\lib\netstandard2.0\SQLitePCLRaw.provider.dynamic_cdecl.dll</HintPath>
+      <HintPath>..\packages\SQLitePCLRaw.provider.dynamic_cdecl.2.0.2-pre20191018090318\lib\netstandard2.0\SQLitePCLRaw.provider.dynamic_cdecl.dll</HintPath>
     </Reference>
     <Reference Include="SQLitePCLRaw.batteries_v2">
-      <HintPath>..\packages\SQLitePCLRaw.bundle_green.2.0.2-pre20191003102319\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_v2.dll</HintPath>
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.2.0.2-pre20191018090318\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_v2.dll</HintPath>
     </Reference>
     <Reference Include="SQLitePCLRaw.nativelibrary">
-      <HintPath>..\packages\SQLitePCLRaw.bundle_green.2.0.2-pre20191003102319\lib\Xamarin.iOS10\SQLitePCLRaw.nativelibrary.dll</HintPath>
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.2.0.2-pre20191018090318\lib\Xamarin.iOS10\SQLitePCLRaw.nativelibrary.dll</HintPath>
     </Reference>
     <Reference Include="SQLite-net">
       <HintPath>..\packages\sqlite-net-pcl.1.7.302-beta\lib\netstandard2.0\SQLite-net.dll</HintPath>

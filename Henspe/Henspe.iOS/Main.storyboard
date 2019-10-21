@@ -414,6 +414,7 @@
                     <connections>
                         <outlet property="btnNext" destination="dkd-ga-UcR" id="Vha-QA-C2I"/>
                         <outlet property="btnSkip" destination="7eI-B5-8dI" id="Hop-3U-7Qe"/>
+                        <outlet property="imgLogo" destination="uLh-bG-Rvw" id="F6a-VV-IXI"/>
                         <outlet property="labDescription" destination="Kaq-04-YL5" id="AhT-O3-xSG"/>
                         <outlet property="labHeader" destination="FDn-uq-4VJ" id="GV0-qq-OBH"/>
                         <outlet property="pagPager" destination="SJH-hk-fxF" id="fvm-Wu-YK7"/>
@@ -939,7 +940,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="CMK-0E-kTS"/>
-        <segue reference="SI7-iJ-o9c"/>
+        <segue reference="EMM-9T-6Qk"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.12233110517263412" green="0.091116435825824738" blue="0.27446338534355164" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

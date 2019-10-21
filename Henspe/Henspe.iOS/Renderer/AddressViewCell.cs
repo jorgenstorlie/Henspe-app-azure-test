@@ -18,12 +18,13 @@ namespace Henspe.iOS
         public void SetContent()
         {
             btnMap.SetTitle(LangUtil.Get("Structure.EksaktPosisjon.ShareButton"), UIControlState.Normal);
+            btnMap.RemoveTarget(ButtonEventHandler, UIControlEvent.TouchUpInside);
             btnMap.AddTarget(ButtonEventHandler, UIControlEvent.TouchUpInside);
             btnMap.Font = FontConst.fontLarge;
-            btnMap.SetTitleColor(ColorHelper.FromType(ColorType.Link) , UIControlState.Normal);
+            btnMap.SetTitleColor(ColorHelper.FromType(ColorType.Link), UIControlState.Normal);
             BackgroundColor = UIColor.Clear;
 
-            imgImageView.Image = UIImage.FromBundle("ic_adresse").ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
+            imgImageView.Image = UIImage.FromBundle("ic_adresse");
             imgImageView.TintColor = ColorHelper.FromType(ColorType.Icon);
 
             labAddressLine1.TextColor = ColorHelper.FromType(ColorType.Link);
@@ -61,7 +62,6 @@ namespace Henspe.iOS
                     var shareTextRequest = new ShareTextRequest(posString, "HENSPE");
                     Share.RequestAsync(shareTextRequest);
                 }
-
             }
         }
 

@@ -15,12 +15,10 @@ namespace Henspe.iOS
 
         internal void SetContent()
         {
-            this.BackgroundColor = UIColor.Clear;
+            BackgroundColor = UIColor.Clear;
 
-   
-            imgImage.Image = UIImage.FromBundle("ic_posisjon").ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
+            imgImage.Image = UIImage.FromBundle("ic_posisjon");
             imgImage.TintColor = ColorHelper.FromType(ColorType.Icon);
-
 
             if (AppDelegate.current.locationManager.locationManager.Location != null)
             {

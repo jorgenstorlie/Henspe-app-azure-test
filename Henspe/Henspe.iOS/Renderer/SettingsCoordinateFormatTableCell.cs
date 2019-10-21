@@ -1,5 +1,4 @@
 using System;
-using Foundation;
 using Henspe.iOS.Const;
 using SNLA.iOS.Util;
 using UIKit;

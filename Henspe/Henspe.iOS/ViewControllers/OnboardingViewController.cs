@@ -64,6 +64,9 @@ namespace Henspe.iOS
 
         void SetupView()
         {
+            imgLogo.Image = UIImage.FromBundle("logo").ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
+            imgLogo.TintColor = ColorHelper.FromType(ColorType.Logo);
+
             pagPager.PageIndicatorTintColor = ColorHelper.FromType(ColorType.SecondaryRedBackground);
             pagPager.UserInteractionEnabled = false;
             pagPager.CurrentPageIndicatorTintColor = ColorHelper.FromType(ColorType.RedBackground);
@@ -190,7 +193,7 @@ namespace Henspe.iOS
                                      {
                                          labDescription.Alpha = 1.0f;
                                          View.LayoutSubviews(); // <- Dette er moder-objektet til txtEmail
-                        });
+                                     });
                                  });
                 }
             });
