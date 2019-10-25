@@ -4,7 +4,7 @@ using CoreLocation;
 using Foundation;
 using Henspe.iOS.AppModel;
 using Henspe.iOS.Const;
-using Henspe.iOS.Util;
+using SNLA.iOS.Util;
 using SNLA.Core.Util;
 using SNLA.Core.Const;
 using UIKit;
@@ -46,8 +46,8 @@ namespace Henspe.iOS
         public bool gpsEventOccured = false;
         public bool gpsHeadingEventOccured = false;
         public bool gotReception = false;
-        public int gpsCoverage = GpsCoverageConst.none;
-        public int gpsStoredCoverage = GpsCoverageConst.none;
+        public GpsCoverage gpsCoverage = GpsCoverage.None;
+        public GpsCoverage gpsStoredCoverage = GpsCoverage.None;
         public bool storedLocation = false;
         public double northRad = 0;
         public bool gpsStarted = false;
@@ -224,13 +224,13 @@ namespace Henspe.iOS
             lastKnownLocation = newLocation;
             gpsPosFound = true;
 
-            int previousGpsCoverage = gpsCoverage;
-            int newGpsCoverage = GpsCoverageConst.none;
+			GpsCoverage previousGpsCoverage = gpsCoverage;
+			GpsCoverage newGpsCoverage = GpsCoverage.None;
 
-            newGpsCoverage = iOSMapUtil.GetAccuracyType(newLocation.HorizontalAccuracy,
+            newGpsCoverage = IOSMapUtil.GetAccuracyType(newLocation.HorizontalAccuracy,
                                                         highAndLowAccuracyDivider,
-                                                        GpsCoverageConst.low,
-                                                        GpsCoverageConst.high);
+                                                        GpsCoverage.Low,
+                                                        GpsCoverage.High);
 
             gpsCoverage = newGpsCoverage;
 
@@ -267,7 +267,7 @@ namespace Henspe.iOS
             double lat1 = newLocation.Coordinate.Latitude;
             double lon1 = newLocation.Coordinate.Longitude;
 
-            if (previousLocation == null || iOSMapUtil.Distance(lat1, lon1, previousLocation.Coordinate.Latitude, previousLocation.Coordinate.Longitude) > distanceToUpdateAddress)
+            if (previousLocation == null || MapUtil.Distance(lat1, lon1, previousLocation.Coordinate.Latitude, previousLocation.Coordinate.Longitude, MapUtil.UnitOfLength.Meters) > distanceToUpdateAddress)
             {
                 AppDelegate.current.mainViewController.InvokeOnMainThread(delegate
                 {

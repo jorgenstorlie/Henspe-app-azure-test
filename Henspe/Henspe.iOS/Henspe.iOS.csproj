@@ -327,7 +327,6 @@
     <Compile Include="Const\EventConst.cs" />
     <Compile Include="Const\FontConst.cs" />
     <Compile Include="Const\PositionTypeConst.cs" />
-    <Compile Include="Util\iOSMapUtil.cs" />
     <Compile Include="Renderer\MainLocationRowViewCell.cs" />
     <Compile Include="Renderer\MainLocationRowViewCell.designer.cs">
       <DependentUpon>MainLocationRowViewCell.cs</DependentUpon>
