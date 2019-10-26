@@ -141,7 +141,7 @@
       <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.0-preview1.19504.10\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Memory">
       <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
@@ -277,24 +277,10 @@
     <Folder Include="Assets.xcassets\ic_settings.imageset\" />
     <Folder Include="Assets.xcassets\logo_splash2.imageset\" />
     <Folder Include="Assets.xcassets\logo_splash.imageset\" />
-    <Folder Include="Assets.xcassets\Color_BG.colorset\" />
-    <Folder Include="Assets.xcassets\Color_ImageTint.colorset\" />
-    <Folder Include="Assets.xcassets\LightAndDarkHeaderColor.imageset\" />
-    <Folder Include="Assets.xcassets\LightAndDarkHeaderColor.colorset\" />
-    <Folder Include="Assets.xcassets\ImageColor.colorset\" />
-    <Folder Include="Assets.xcassets\EvenRowFontColor.colorset\" />
-    <Folder Include="Assets.xcassets\FontColor.colorset\" />
-    <Folder Include="Assets.xcassets\BackgroundColor.colorset\" />
-    <Folder Include="Assets.xcassets\TextButton.colorset\" />
-    <Folder Include="Assets.xcassets\HeaderText.colorset\" />
-    <Folder Include="Assets.xcassets\HeaderLineBackground.colorset\" />
-    <Folder Include="Assets.xcassets\TableSeparator.colorset\" />
-    <Folder Include="Assets.xcassets\GroupedBackgroundColor.colorset\" />
-    <Folder Include="Assets.xcassets\SecondaryGroupedBackgroundColor.colorset\" />
+
     <Folder Include="Assets.xcassets\SNLALink.colorset\" />
     <Folder Include="Assets.xcassets\SNLASystemBackground.colorset\" />
     <Folder Include="Assets.xcassets\SNLALabel.colorset\" />
-    <Folder Include="Assets.xcassets\SNLAIcon.imageset\" />
     <Folder Include="Assets.xcassets\SNLASystemGroupedBackground.colorset\" />
     <Folder Include="Assets.xcassets\SNLASecondarySystemGroupedBackground.colorset\" />
     <Folder Include="Assets.xcassets\SNLAIcon.colorset\" />

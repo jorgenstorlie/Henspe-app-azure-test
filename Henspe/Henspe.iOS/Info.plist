@@ -5,7 +5,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>no.norskluftambulanse.henspe</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.6</string>
+	<string>1.6.1</string>
 	<key>MinimumOSVersion</key>
 	<string>11.0</string>
 	<key>UIDeviceFamily</key>
@@ -41,6 +41,6 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>CFBundleVersion</key>
-	<string>15</string>
+	<string>1</string>
 </dict>
 </plist>
