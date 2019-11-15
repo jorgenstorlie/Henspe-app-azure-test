@@ -96,7 +96,7 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.3-beta2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="Microsoft.Threading.Tasks">
@@ -112,22 +112,22 @@
       <HintPath>..\packages\Xamarin.Essentials.1.3.1\lib\xamarinios10\Xamarin.Essentials.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AppCenter">
-      <HintPath>..\packages\Microsoft.AppCenter.2.5.0\lib\Xamarin.iOS10\Microsoft.AppCenter.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AppCenter.2.6.1\lib\Xamarin.iOS10\Microsoft.AppCenter.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AppCenter.iOS.Bindings">
-      <HintPath>..\packages\Microsoft.AppCenter.2.5.0\lib\Xamarin.iOS10\Microsoft.AppCenter.iOS.Bindings.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AppCenter.2.6.1\lib\Xamarin.iOS10\Microsoft.AppCenter.iOS.Bindings.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AppCenter.Crashes">
-      <HintPath>..\packages\Microsoft.AppCenter.Crashes.2.5.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AppCenter.Crashes.2.6.1\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AppCenter.Crashes.iOS.Bindings">
-      <HintPath>..\packages\Microsoft.AppCenter.Crashes.2.5.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.iOS.Bindings.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AppCenter.Crashes.2.6.1\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.iOS.Bindings.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AppCenter.Analytics">
-      <HintPath>..\packages\Microsoft.AppCenter.Analytics.2.5.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AppCenter.Analytics.2.6.1\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AppCenter.Analytics.iOS.Bindings">
-      <HintPath>..\packages\Microsoft.AppCenter.Analytics.2.5.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.iOS.Bindings.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AppCenter.Analytics.2.6.1\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.iOS.Bindings.dll</HintPath>
     </Reference>
     <Reference Include="System.Net" />
     <Reference Include="Ricardo.MBProgressHUD.iOS">
@@ -141,22 +141,22 @@
       <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.0-preview1.19504.10\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.0-preview3.19551.4\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Memory">
       <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="SQLitePCLRaw.core">
-      <HintPath>..\packages\SQLitePCLRaw.core.2.0.2-pre20191018090318\lib\netstandard2.0\SQLitePCLRaw.core.dll</HintPath>
+      <HintPath>..\packages\SQLitePCLRaw.core.2.0.2\lib\netstandard2.0\SQLitePCLRaw.core.dll</HintPath>
     </Reference>
     <Reference Include="SQLitePCLRaw.provider.dynamic_cdecl">
-      <HintPath>..\packages\SQLitePCLRaw.provider.dynamic_cdecl.2.0.2-pre20191018090318\lib\netstandard2.0\SQLitePCLRaw.provider.dynamic_cdecl.dll</HintPath>
+      <HintPath>..\packages\SQLitePCLRaw.provider.dynamic_cdecl.2.0.2\lib\netstandard2.0\SQLitePCLRaw.provider.dynamic_cdecl.dll</HintPath>
     </Reference>
     <Reference Include="SQLitePCLRaw.batteries_v2">
-      <HintPath>..\packages\SQLitePCLRaw.bundle_green.2.0.2-pre20191018090318\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_v2.dll</HintPath>
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.2.0.2\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_v2.dll</HintPath>
     </Reference>
     <Reference Include="SQLitePCLRaw.nativelibrary">
-      <HintPath>..\packages\SQLitePCLRaw.bundle_green.2.0.2-pre20191018090318\lib\Xamarin.iOS10\SQLitePCLRaw.nativelibrary.dll</HintPath>
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.2.0.2\lib\Xamarin.iOS10\SQLitePCLRaw.nativelibrary.dll</HintPath>
     </Reference>
     <Reference Include="SQLite-net">
       <HintPath>..\packages\sqlite-net-pcl.1.7.302-beta\lib\netstandard2.0\SQLite-net.dll</HintPath>
@@ -222,6 +222,10 @@
     <ImageAsset Include="Assets.xcassets\logo.imageset\SNLA_Logo.pdf" />
     <ImageAsset Include="Assets.xcassets\ic_settings.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\ic_settings.imageset\ic_gear.pdf" />
+    <ImageAsset Include="Assets.xcassets\logo.imageset\SNLA_Logo_White.pdf" />
+    <ImageAsset Include="Assets.xcassets\logo_text.imageset\SNLA_logo_midtstilt_White.pdf" />
+
+
     <ImageAsset Include="Assets.xcassets\SNLALink.colorset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\SNLASystemBackground.colorset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\SNLALabel.colorset\Contents.json" />
@@ -229,8 +233,6 @@
     <ImageAsset Include="Assets.xcassets\SNLASecondarySystemGroupedBackground.colorset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\SNLAIcon.colorset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\SNLASeparator.colorset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\logo.imageset\SNLA_Logo_White.pdf" />
-    <ImageAsset Include="Assets.xcassets\logo_text.imageset\SNLA_logo_midtstilt_White.pdf" />
     <ImageAsset Include="Assets.xcassets\SNLANavigationbarTint.colorset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\SNLASecondarySystemBackground.colorset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\SNLANavigationbarLabel.colorset\Contents.json" />
@@ -240,6 +242,25 @@
     <ImageAsset Include="Assets.xcassets\SNLASecondaryRedBackground.colorset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\SNLANavigationbar.colorset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\SNLALogo.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SNLAShadow.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SNLAButton.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SNLALightButton.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SNLAButtonTint.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SNLABlueBackground.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SNLALightLabel.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SNLAEditorBackground.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SNLADisabledBackground.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SNLADisabledLabel.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SNLARedBackgroundFocused.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SNLABlueBackgroundFocused.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SNLAButtonFocused.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SNLALightButtonFocused.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SNLAColoredButtonFocused.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SNLAColoredButton.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SNLALightTextFocused.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SNLASecondaryDisabledBackground.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SNLABorder.colorset\Contents.json" />
+
  </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -278,6 +299,7 @@
     <Folder Include="Assets.xcassets\logo_splash2.imageset\" />
     <Folder Include="Assets.xcassets\logo_splash.imageset\" />
 
+
     <Folder Include="Assets.xcassets\SNLALink.colorset\" />
     <Folder Include="Assets.xcassets\SNLASystemBackground.colorset\" />
     <Folder Include="Assets.xcassets\SNLALabel.colorset\" />
@@ -295,6 +317,24 @@
     <Folder Include="Assets.xcassets\SNLASecondaryRedBackground.colorset\" />
     <Folder Include="Assets.xcassets\SNLANavigationbar.colorset\" />
     <Folder Include="Assets.xcassets\SNLALogo.colorset\" />
+    <Folder Include="Assets.xcassets\SNLAShadow.colorset\" />
+    <Folder Include="Assets.xcassets\SNLAButton.colorset\" />
+    <Folder Include="Assets.xcassets\SNLALightButton.colorset\" />
+    <Folder Include="Assets.xcassets\SNLAButtonTint.colorset\" />
+    <Folder Include="Assets.xcassets\SNLABlueBackground.colorset\" />
+    <Folder Include="Assets.xcassets\SNLALightLabel.colorset\" />
+    <Folder Include="Assets.xcassets\SNLAEditorBackground.colorset\" />
+    <Folder Include="Assets.xcassets\SNLADisabledBackground.colorset\" />
+    <Folder Include="Assets.xcassets\SNLADisabledLabel.colorset\" />
+    <Folder Include="Assets.xcassets\SNLARedBackgroundFocused.colorset\" />
+    <Folder Include="Assets.xcassets\SNLABlueBackgroundFocused.colorset\" />
+    <Folder Include="Assets.xcassets\SNLAButtonFocused.colorset\" />
+    <Folder Include="Assets.xcassets\SNLALightButtonFocused.colorset\" />
+    <Folder Include="Assets.xcassets\SNLAColoredButtonFocused.colorset\" />
+    <Folder Include="Assets.xcassets\SNLAColoredButton.colorset\" />
+    <Folder Include="Assets.xcassets\SNLALightTextFocused.colorset\" />
+    <Folder Include="Assets.xcassets\SNLASecondaryDisabledBackground.colorset\" />
+
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />

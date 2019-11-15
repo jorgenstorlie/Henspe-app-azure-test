@@ -54,14 +54,14 @@ namespace Henspe.iOS
         {
             // Transparent background
             UIImage emptyImage = new UIImage();
-  //    NavigationController.NavigationBar.Translucent = true;
+            //    NavigationController.NavigationBar.Translucent = true;
 
             NavigationController.NavigationBar.Translucent = false;
 
-            NavigationController.NavigationBar.BarTintColor =  ColorHelper.FromType(ColorType.Navigationbar);
+            NavigationController.NavigationBar.BarTintColor = ColorHelper.FromType(ColorType.Navigationbar);
             //  NavigationController.NavigationBar.SetBackgroundImage(emptyImage, UIBarMetrics.Default);
             NavigationController.NavigationBar.ShadowImage = emptyImage;
-       //     NavigationController.NavigationBar.BackgroundColor = UIColor.Red;
+            //     NavigationController.NavigationBar.BackgroundColor = UIColor.Red;
 
             UINavigationBar navigationBar = NavigationController.NavigationBar;
 
@@ -78,6 +78,8 @@ namespace Henspe.iOS
                     logoImageView = new UIImageView(UIImage.FromBundle("logo"));
                 }
             }
+            else
+                logoImageView = new UIImageView(UIImage.FromBundle("logo"));
 
             //     logoImageView.ContentMode = UIViewContentMode.ScaleAspectFit;
 

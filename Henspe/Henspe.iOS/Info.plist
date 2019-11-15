@@ -5,7 +5,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>no.norskluftambulanse.henspe</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.6.1</string>
+	<string>1.6.2</string>
 	<key>MinimumOSVersion</key>
 	<string>11.0</string>
 	<key>UIDeviceFamily</key>
