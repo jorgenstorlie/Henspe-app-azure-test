@@ -60,10 +60,13 @@ namespace Henspe.iOS
 
             NavigationController.NavigationBar.BarTintColor = ColorHelper.FromType(ColorType.Navigationbar);
             //  NavigationController.NavigationBar.SetBackgroundImage(emptyImage, UIBarMetrics.Default);
-            NavigationController.NavigationBar.ShadowImage = emptyImage;
+       //     NavigationController.NavigationBar.ShadowImage = emptyImage;
             //     NavigationController.NavigationBar.BackgroundColor = UIColor.Red;
 
             UINavigationBar navigationBar = NavigationController.NavigationBar;
+
+       //     NSObject objValue = NSObject.FromObject(false);
+         //   NavigationController.NavigationBar.SetValueForKey(objValue, new NSString("hidesShadow"));
 
             if (UIDevice.CurrentDevice.CheckSystemVersion(12, 0))
             {
