@@ -42,5 +42,9 @@
 	<true/>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Appen bruker posisjon til og hente og vise din addresseinformasjon</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Appen bruker posisjon til og hente og vise din addresseinformasjon</string>
 </dict>
 </plist>

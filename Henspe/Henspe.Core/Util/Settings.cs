@@ -18,6 +18,7 @@ namespace SNLA.Core.Util
         public CoordinateFormat format { get; set; }
         public ConsentAgreed consentAgreed { get; set; }
         public bool onboardingCompleted { get; set; }
+
         public string cameraLastSyncId { get; set; }
 
         [JsonIgnore]
