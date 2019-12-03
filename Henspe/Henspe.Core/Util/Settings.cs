@@ -20,10 +20,8 @@ namespace SNLA.Core.Util
         public bool onboardingCompleted { get; set; }
         public string cameraLastSyncId { get; set; }
 
-        [JsonIgnore] //HACK
+        [JsonIgnore]
         public string mobilnr => phoneNumber;
-
-		public string mobilnr => string.Empty;
 
         public bool Upgrade()
         {
