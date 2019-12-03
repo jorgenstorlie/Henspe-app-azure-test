@@ -23,6 +23,8 @@ namespace SNLA.Core.Util
         [JsonIgnore] //HACK
         public string mobilnr => phoneNumber;
 
+		public string mobilnr => string.Empty;
+
         public bool Upgrade()
         {
             return false;
