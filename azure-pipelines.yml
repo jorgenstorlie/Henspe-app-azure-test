@@ -1,0 +1,29 @@
+trigger:
+  - master
+
+pool:
+  vmImage: 'macOS-10.14'
+
+variables:
+  - group: xamarin-full-pipeline
+  - template: templates/variables.yml
+
+stages:
+  - stage: Build_Xamarin_iOS
+    jobs:
+      - job:
+        displayName: 'Build Xamarin.iOS'
+        workspace:
+          clean: all
+        steps:
+          - template: templates/init_restore.yml
+            parameters:
+              solutionPath: '$(solutionPath)'
+
+          - template: templates/build_xamarin_ios_ipa.yml
+            parameters:
+              xamarinSdkVersion: '$(xamarinSdkVersion)'
+              solutionPath: '$(solutionPath)'
+              buildConfiguration: '$(buildConfiguration)'
+              signingIdentity: '$(APPLE_CERTIFICATE_SIGNING_IDENTITY)'
+              signingProvisioningProfileID: '$(APPLE_PROV_PROFILE_UUID)'
