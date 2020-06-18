@@ -18,5 +18,3 @@ steps:
       packageApp: true
       buildForSimulator: false
       runNugetRestore: false
-      signingIdentity: '${{ parameters.signingIdentity }}'
-      signingProvisioningProfileID: '${{ parameters.signingProvisioningProfileID }}'
