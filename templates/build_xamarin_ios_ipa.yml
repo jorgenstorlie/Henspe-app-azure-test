@@ -1,0 +1,22 @@
+
+parameters:
+  xamarinSdkVersion: ''
+  solutionPath: ''
+  buildConfiguration: ''
+  signingIdentity: ''
+  signingProvisioningProfileID: ''
+
+steps:
+  - script: sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh ${{ parameters.xamarinSdkVersion }}
+    displayName: 'Select the Xamarin SDK version'
+    enabled: true
+    
+  - task: XamariniOS@2
+    inputs:
+      solutionFile: '${{ parameters.solutionPath }}'
+      configuration: '${{ parameters.buildConfiguration }}'
+      packageApp: true
+      buildForSimulator: false
+      runNugetRestore: false
+      signingIdentity: '${{ parameters.signingIdentity }}'
+      signingProvisioningProfileID: '${{ parameters.signingProvisioningProfileID }}'
