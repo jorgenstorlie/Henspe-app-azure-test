@@ -16,6 +16,10 @@ stages:
         workspace:
           clean: all
         steps:
+            - template: templates/init_restore.yml
+              parameters:
+                solutionPath: '$(solutionPath)'
+                
           - template: templates/build_xamarin_ios_ipa.yml
             parameters:
               xamarinSdkVersion: '$(xamarinSdkVersion)'
