@@ -10,6 +10,7 @@ variables:
 
 stages:
   - stage: Build_Xamarin_iOS
+    dependsOn: Run_Unit_Tests
     jobs:
       - job:
         displayName: 'Build Xamarin.iOS'
@@ -23,6 +24,8 @@ stages:
           - template: templates/build_xamarin_ios_ipa.yml
             parameters:
               xamarinSdkVersion: '$(xamarinSdkVersion)'
+              p12FileName: '$(p12FileName)'
+              p12Password: '$(p12Password)'
               provisioningProfile: '$(provisioningProfile)'
               solutionPath: '$(solutionPath)'
               buildConfiguration: '$(buildConfiguration)'
