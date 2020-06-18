@@ -10,7 +10,6 @@ variables:
 
 stages:
   - stage: Build_Xamarin_iOS
-    dependsOn: Run_Unit_Tests
     jobs:
       - job:
         displayName: 'Build Xamarin.iOS'
