@@ -9,7 +9,7 @@ variables:
     value: 'Release'
 
 steps:
-- script: sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh 6_8_0
+- script: sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh 5_8_0
   displayName: 'Select the Xamarin SDK version'
   enabled: true
 
