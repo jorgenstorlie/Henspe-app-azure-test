@@ -32,6 +32,9 @@ steps:
   inputs:
    restoreSolution: '$(solutionPath)'
 
+- task: ShellScript@2
+  inputs:
+    scriptPath: 'Henspe/Henspe.iOS/appcenter-post-clone.sh'
 - task: XamariniOS@2
   inputs:
     projectFile: '$(Build.SourcesDirectory)/Henspe/Henspe.iOS/Henspe.iOS.csproj'
