@@ -34,6 +34,7 @@ steps:
 
 - task: XamariniOS@2
   inputs:
+    projectFile: '$(Build.SourcesDirectory)/Henspe/Henspe.iOS/Henspe.iOS.csproj'
     solutionFile: '$(solutionPath)'
     configuration: '$(configuration)'
     packageApp: true
@@ -41,7 +42,7 @@ steps:
     runNugetRestore: false
     signingIdentity: '$(APPLE_CERTIFICATE_SIGNING_IDENTITY)'
     signingProvisioningProfileID: '$(APPLE_PROV_PROFILE_UUID)'
-    projectFile: '$(Build.SourcesDirectory)/Henspe/Henspe.iOS/Henspe.iOS.csproj'
+
 
 - task: AppCenterDistribute@3
   inputs:
