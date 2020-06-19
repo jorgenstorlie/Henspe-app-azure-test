@@ -4,7 +4,7 @@ pool:
 variables:
   - group: xamarin-full-pipeline
   - name: solutionPath
-    value: '**/*.sln'
+    value: 'Henspe/Henspe.sln'
   - name: configuration
     value: 'Release'
 
