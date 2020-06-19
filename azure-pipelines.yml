@@ -2,7 +2,7 @@ pool:
   vmImage: 'macOS-10.14'
 
 variables:
-  - group: xamarin-ios-pipeline
+  - group: xamarin-full-pipeline
   - name: solutionPath
     value: '**/*.sln'
   - name: configuration
