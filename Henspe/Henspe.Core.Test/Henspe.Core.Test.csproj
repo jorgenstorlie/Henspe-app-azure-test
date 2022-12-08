@@ -24,7 +24,7 @@
     <PackageReference Include="RestSharp" Version="106.6.10" />
     <PackageReference Include="Microsoft.AppCenter.Analytics" Version="2.6.1" />
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="2.6.1" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
   </ItemGroup>
 
   <ItemGroup>
